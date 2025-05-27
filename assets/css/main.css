@@ -1,10 +1,109 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
 @import "tailwindcss";
 
-@theme {
+
+:root {
     --default-font-family: "Geist Mono", monospace;
-    --color-darkmode-bg: #18222A;
-    --color-darkmode-text: #CFF2DA; 
-    --color-lightmode-bg: #FAFAFA;
-    --color-lightmode-text: #18222A;
+    --color-primary-dark: #18222A;
+    --color-primary-light: #FAFAFA;
+    --color-secondary-dark: #CFF2DA;
+    --color-secondary-light: #18222A;
 }
+
+html {
+    @apply transition-colors duration-300 ease-linear;
+}
+
+.btn-solid {
+    @apply p-2 cursor-pointer;
+}
+
+@layer utilities {
+    .border-custom {
+        @apply border-2 border-[#464E55] border-dashed;
+    }
+
+    .border-custom-t {
+        @apply border-t-2 border-t-[#464E55] border-dashed;
+    }
+
+    .border-custom-b {
+        @apply border-b-2 border-b-[#464E55] border-dashed;
+    }
+
+    .border-custom-l {
+        @apply border-l-2 border-l-[#464E55] border-dashed;
+    }
+
+    .border-custom-r {
+        @apply border-r-2 border-r-[#464E55] border-dashed;
+    }
+
+    .border-corners::before,
+    .border-corners::after {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        box-sizing: border-box;
+        border: 2px solid var(--color-secondary-dark);
+    }
+
+    .border-corners::before {
+        top: 0;
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .border-corners::after {
+        top: 0;
+        right: 0;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .border-corners-bottom::before,
+    .border-corners-bottom::after {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        box-sizing: border-box;
+        border: 2px solid var(--color-secondary-dark);
+    }
+
+    .border-corners-bottom::before {
+        bottom: 0;
+        left: 0;
+        border-right: none;
+        border-top: none;
+    }
+
+    .border-corners-bottom::after {
+        bottom: 0;
+        right: 0;
+        border-left: none;
+        border-top: none;
+    }
+}
+
+@layer base {
+    .light-mode {
+        @apply bg-[var(--color-primary-light)] text-[var(--color-secondary-light)];
+
+        .btn-solid {
+            @apply bg-[var(--color-secondary-light)] text-[var(--color-primary-light)];
+        }
+    }
+
+    .dark-mode {
+        @apply bg-[var(--color-primary-dark)] text-[var(--color-secondary-dark)];
+
+        .btn-solid {
+            @apply bg-[var(--color-secondary-dark)] text-[var(--color-primary-dark)];
+        }
+    }
+}
+
+
