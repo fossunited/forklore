@@ -1,22 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark-mode, .dark-mode *));
 
-:root {
+@theme {
     --default-font-family: "Geist Mono", monospace;
     --color-primary-dark: #18222A;
     --color-primary-light: #FAFAFA;
     --color-secondary-dark: #CFF2DA;
     --color-secondary-light: #18222A;
+    --color-tertiary-dark: #3C4B4E;
+    --color-tertiary-light: #EEF0F1;
 }
 
 html {
     @apply transition-colors duration-300 ease-linear;
 }
 
-.btn-solid {
-    @apply p-2 cursor-pointer;
-}
 
 @layer utilities {
     .link {
@@ -90,23 +90,26 @@ html {
         border-left: none;
         border-top: none;
     }
+    
+    .btn-primary {
+        @apply p-2 cursor-pointer bg-secondary-light text-primary-light dark:bg-secondary-dark dark:text-primary-dark;
+    }
+
+    .btn-secondary {
+        @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
+        @apply bg-tertiary-light text-secondary-light border-secondary-light hover:bg-secondary-light hover:text-primary-light;  
+        @apply  dark:bg-tertiary-dark dark:text-secondary-dark dark:border-secondary-dark hover:dark:bg-secondary-dark hover:dark:text-primary-dark;
+    }
 }
 
 @layer base {
     .light-mode {
         @apply bg-[var(--color-primary-light)] text-[var(--color-secondary-light)];
-
-        .btn-solid {
-            @apply bg-[var(--color-secondary-light)] text-[var(--color-primary-light)];
-        }
     }
 
     .dark-mode {
         @apply bg-[var(--color-primary-dark)] text-[var(--color-secondary-dark)];
 
-        .btn-solid {
-            @apply bg-[var(--color-secondary-dark)] text-[var(--color-primary-dark)];
-        }
     }
 }
 
