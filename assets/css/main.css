@@ -19,6 +19,10 @@ html {
 }
 
 @layer utilities {
+    .link {
+        @apply hover:underline
+    }
+
     .border-custom {
         @apply border-2 border-[#464E55] border-dashed;
     }

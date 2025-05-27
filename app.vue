@@ -14,5 +14,7 @@ useHead({
 });
 </script>
 <template>
-  <BaseLayout></BaseLayout>
+  <BaseLayout>
+    <HomeHeader></HomeHeader>
+  </BaseLayout>
 </template>

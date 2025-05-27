@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Header from "@/components/Header.vue";
+import { Header, HomeHeader } from "#components";
 </script>
 <template>
   <div class="w-full place-items-center">
@@ -7,6 +7,7 @@ import Header from "@/components/Header.vue";
       class="max-w-screen-md w-full h-svh border-custom !border-t-0 !border-b-0"
     >
       <Header class="border-custom-b"></Header>
+      <slot></slot>
     </div>
   </div>
 </template>
