@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Header, HomeHeader } from "#components";
+import { Header } from "#components";
 </script>
 <template>
   <div class="w-full place-items-center">
