@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   app: {
-    baseURL: "/forklore/",
     head: {
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
     },
