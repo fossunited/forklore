@@ -26,7 +26,7 @@ const iconMapper = (label: string): IconComponent => {
   const key = label.toLowerCase() as keyof IconMap;
   const icon = icons[key];
   if (!icon) {
-    throw new Error(`Icon for label "${label}" not found.`);
+    return icons.web;
   }
   return icon;
 };
