@@ -1,0 +1,52 @@
+{
+  "username": "kovidgoyal",
+  "full_name": "Kovid Goyal",
+  "photo": "https://avatars.githubusercontent.com/u/1308621?v=4",
+  "designation": "Software Developer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/kovidgoyal"
+    },
+    {
+      "label": "Codeberg",
+      "link": "https://codeberg.org/kovidgoyal"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/kovidgoyal/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Kitty",
+      "project_link": "https://github.com/kovidgoyal/kitty",
+      "website_link": "https://sw.kovidgoyal.net/kitty/",
+      "logo": "https://sw.kovidgoyal.net/kitty/_static/kitty.svg",
+      "description": "A terminal emulator for the 21st century",
+      "short_description": "A terminal emulator for the 21st century"
+    },
+    {
+      "name": "Kitty",
+      "project_link": "https://github.com/kovidgoyal/kitty",
+      "website_link": "",
+      "logo": "https://sw.kovidgoyal.net/kitty/_static/kitty.svg",
+      "description": "A terminal emulator for the 21st century",
+      "short_description": "A terminal emulator for the 21st century"
+    }
+  ],
+  "form": [
+    {
+      "question": "What is your favorite color?",
+      "response": "Blue"
+    },
+    {
+      "question": "What was best about this conference?",
+      "response": "The speakers"
+    },
+    {
+      "question": "This is a question for a big answer",
+      "response": "This is a response for a big answer, I can go on and on and on and never stop about this answer as we have to test out the limitation"
+    }
+  ]
+}
