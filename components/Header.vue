@@ -5,12 +5,12 @@ const colorMode = useColorMode();
 
 const getLogoPath = () => {
   if (colorMode.value === "dark") {
-    return "logo/logo_light.svg";
+    return "/logo/logo_light.svg";
   } else if (colorMode.value === "light") {
-    return "logo/logo_dark.svg";
+    return "/logo/logo_dark.svg";
   }
 
-  return "logo/logo_light.svg";
+  return "/logo/logo_light.svg";
 };
 
 const getButtonIcon = () => {
@@ -48,9 +48,10 @@ const navbarItems = [
 </script>
 <template>
   <nav class="p-9 flex justify-between items-center">
-    <a href="/">
+    <nuxt-link to="/">
       <img :src="getLogoPath()" alt="forklore logo" />
-    </a>
+    </nuxt-link>
+
     <div class="flex gap-2">
       <ol class="flex">
         <li class="py-2 px-4" v-for="item in navbarItems" :key="item.label">
@@ -60,7 +61,7 @@ const navbarItems = [
         </li>
       </ol>
 
-      <button class="btn-primary" @click="toggleColorMode()">
+      <button class="btn-solid" @click="toggleColorMode()">
         <component :is="getButtonIcon()" />
       </button>
     </div>
