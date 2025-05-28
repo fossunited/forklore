@@ -1,0 +1,17 @@
+<script setup lang="ts">
+defineProps(["project"]);
+</script>
+<template>
+  <img
+    v-if="project.logo"
+    class="h-20 aspect-[3/2] object-contain p-3 bg-white"
+    :src="project.logo"
+    alt="Project Logo"
+  />
+  <div
+    v-else
+    class="h-20 aspect-[3/2] bg-white text-black uppercase items-center justify-center flex font-sans font-black"
+  >
+    <span>{{ project.name }}</span>
+  </div>
+</template>
