@@ -60,7 +60,7 @@ const navbarItems = [
         </li>
       </ol>
 
-      <button class="btn-solid" @click="toggleColorMode()">
+      <button class="btn-primary" @click="toggleColorMode()">
         <component :is="getButtonIcon()" />
       </button>
     </div>
