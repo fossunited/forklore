@@ -100,6 +100,15 @@ html {
         @apply bg-tertiary-light text-secondary-light border-secondary-light hover:bg-secondary-light hover:text-primary-light;  
         @apply  dark:bg-tertiary-dark dark:text-secondary-dark dark:border-secondary-dark hover:dark:bg-secondary-dark hover:dark:text-primary-dark;
     }
+
+    .divide-x-custom {
+        @apply divide-x-2 divide-secondary-light dark:divide-secondary-dark divide-dashed;
+    }
+
+
+    .divide-y-custom {
+        @apply divide-y-2 divide-secondary-light dark:divide-secondary-dark divide-dashed;
+    }
 }
 
 @layer base {
