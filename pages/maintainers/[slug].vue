@@ -8,6 +8,17 @@ const { data: maintainer, status: maintainerStatus } = await useAsyncData(
     return queryCollection("maintainers").path(route.path).first();
   }
 );
+
+useHead({
+  title: `${maintainer.value?.full_name} | Forklore`,
+});
+
+useSeoMeta({
+  title: `${maintainer.value?.full_name} | Forklore`,
+  ogTitle: `${maintainer.value?.full_name} | Forklore`,
+  description: `Get to know ${maintainer.value?.full_name} and their work.`,
+  ogDescription: `Get to know ${maintainer.value?.full_name} and their work.`,
+});
 </script>
 
 <template>
