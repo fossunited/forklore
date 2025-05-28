@@ -1,0 +1,15 @@
+{
+  "username": "harshtandiya",
+  "full_name": "Harsh Tandiya",
+  "designation": "Software Developer",
+  "projects": [
+    {
+      "name": "Ballot",
+      "project_link": "https://github.com/harshtandiya/ballot",
+      "website_link": "",
+      "logo": "",
+      "description": "An open source voting app built over Frappe Framework",
+      "short_description": "An open source voting app built over Frappe Framework"
+    }
+  ]
+}

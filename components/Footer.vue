@@ -1,0 +1,29 @@
+<template>
+  <div
+    class="bg-secondary-light dark:bg-primary-dark text-primary-light dark:text-secondary-dark border-t-2 w-full place-items-center"
+  >
+    <div class="max-w-screen-md w-full py-14 px-4 flex justify-between text-sm">
+      <div class="flex flex-col gap-4">
+        <p>
+          Built and Maintained by
+          <a
+            href="https://fossunited.org"
+            target="_blank"
+            class="font-bold link"
+          >
+            FOSS United
+          </a>
+        </p>
+        <a href="mailto:foundation@fossunited.org" class="link flex gap-2">
+          <IconsEmailIcon class="w-5 h-5" />
+          <span> foundation@fossunited.org </span>
+        </a>
+      </div>
+      <img
+        class="w-12"
+        src="/logo/fossunited_logo.svg"
+        alt="FOSS United Logo"
+      />
+    </div>
+  </div>
+</template>

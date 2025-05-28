@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark-mode, .dark-mode *));
+
+@theme {
+    --default-font-family: "Geist Mono", monospace;
+    --color-primary-dark: #18222A;
+    --color-primary-light: #FAFAFA;
+    --color-secondary-dark: #CFF2DA;
+    --color-secondary-light: #18222A;
+    --color-tertiary-dark: #3C4B4E;
+    --color-tertiary-light: #EEF0F1;
+}
+
+html {
+    @apply transition-colors duration-300 ease-linear;
+}
+
+
+@layer utilities {
+    .link {
+        @apply hover:underline
+    }
+
+    .border-custom {
+        @apply border-2 border-[#464E55] border-dashed;
+    }
+
+    .border-custom-t {
+        @apply border-t-2 border-t-[#464E55] border-dashed;
+    }
+
+    .border-custom-b {
+        @apply border-b-2 border-b-[#464E55] border-dashed;
+    }
+
+    .border-custom-l {
+        @apply border-l-2 border-l-[#464E55] border-dashed;
+    }
+
+    .border-custom-r {
+        @apply border-r-2 border-r-[#464E55] border-dashed;
+    }
+
+    .border-corners::before,
+    .border-corners::after {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        box-sizing: border-box;
+        border: 2px solid var(--color-secondary-dark);
+    }
+
+    .border-corners::before {
+        top: 0;
+        left: 0;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .border-corners::after {
+        top: 0;
+        right: 0;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .border-corners-bottom::before,
+    .border-corners-bottom::after {
+        content: '';
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        box-sizing: border-box;
+        border: 2px solid var(--color-secondary-dark);
+    }
+
+    .border-corners-bottom::before {
+        bottom: 0;
+        left: 0;
+        border-right: none;
+        border-top: none;
+    }
+
+    .border-corners-bottom::after {
+        bottom: 0;
+        right: 0;
+        border-left: none;
+        border-top: none;
+    }
+
+    
+    .btn-solid {
+        @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
+        @apply   bg-secondary-light text-primary-light hover:bg-secondary-light/80 ;
+        @apply dark:bg-secondary-dark dark:text-primary-dark hover:dark:bg-secondary-dark/80;
+    }
+
+    .btn-subtle {
+        @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
+        @apply bg-tertiary-light text-secondary-light border-secondary-light hover:bg-secondary-light/20;  
+        @apply  dark:bg-tertiary-dark dark:text-secondary-dark dark:border-secondary-dark hover:dark:bg-secondary-dark/40 ;
+    }
+
+    .btn-outline {
+        @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear outline;
+        @apply hover:bg-tertiary-light;  
+        @apply hover:dark:bg-tertiary-dark;
+
+    }
+
+    .divide-x-custom {
+        @apply divide-x-2 divide-secondary-light/60 dark:divide-tertiary-dark divide-dashed;
+    }
+
+
+    .divide-y-custom {
+        @apply divide-y-2 divide-secondary-light/60 dark:divide-tertiary-dark divide-dashed;
+    }
+}
+
+@layer base {
+    .light-mode {
+        @apply bg-[var(--color-primary-light)] text-[var(--color-secondary-light)];
+    }
+
+    .dark-mode {
+        @apply bg-[var(--color-primary-dark)] text-[var(--color-secondary-dark)];
+
+    }
+}
+
+
