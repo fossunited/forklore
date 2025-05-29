@@ -15,4 +15,19 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.svg" }],
     },
   },
+  nitro: {
+    prerender: {
+      // 1. Don’t crawl every <a>—only prerender exactly what you list here
+      crawlLinks: false,
+
+      // 2. Only prerender your homepage (or any other “safe” routes)
+      routes: ["/"],
+
+      // 3. If there *are* errors, don’t blow up your build
+      failOnError: false,
+
+      // 4. Explicitly ignore any problematic dynamic routes
+      // ignore: ["/maintainer",],
+    },
+  },
 });
