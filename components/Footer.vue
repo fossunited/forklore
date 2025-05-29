@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-secondary-light dark:bg-primary-dark text-primary-light dark:text-secondary-dark border-t-2 w-full place-items-center"
+    class="bg-secondary-light dark:bg-primary-dark text-primary-light dark:text-secondary-dark border-t-2 w-full place-items-center flex flex-col items-center"
   >
     <div class="max-w-screen-md w-full py-14 px-4 flex justify-between text-sm">
       <div class="flex flex-col gap-4">
