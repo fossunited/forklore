@@ -1,0 +1,48 @@
+{
+  "username": "fossunited",
+  "full_name": "FOSS United",
+  "photo": "https://avatars.githubusercontent.com/u/61445214?s=200&v=4",
+  "designation": "Software Developer at XYZ",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/fossunited"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/fossunited/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "FOSS United Platform",
+      "project_link": "https://github.com/fossunited/fossunited",
+      "website_link": "https://fossunited.org",
+      "logo": "https://fossunited.org/files/Foss%20United%20Logo%20Black.svg",
+      "description": "India is now a hub of startups, innovative consumer software, developer communities, and large scale technological infrastructure. However, somewhere along the lines, the spirit of FOSS and hacking seems to have been overshadowed. This is illustrated by the disproportionately low number of quality FOSS projects coming out of India given a thriving industry compared to the explosion of projects that has happened globally over the last decade. The foundation aims to provide grassroots support to FOSS projects and events, and evolve into a community-industry collaboration with a diverse group of members and patrons. ",
+      "short_description": "Platform for hosting Open Source events"
+    },
+    {
+      "name": "Project 2",
+      "project_link": "https://example.com",
+      "website_link": "https://example.com",
+      "logo": "https://example.com",
+      "description": "This is a usually a very long description",
+      "short_description": "Short description that is used in cards & meta."
+    }
+  ],
+  "form": [
+    {
+      "question": "What is your favorite color?",
+      "response": "Blue"
+    },
+    {
+      "question": "What was best about this conference?",
+      "response": "The speakers"
+    },
+    {
+      "question": "This is a question for a big answer",
+      "response": "This is a response for a big answer, I can go on and on and on and never stop about this answer as we have to test out the limitation"
+    }
+  ]
+}
