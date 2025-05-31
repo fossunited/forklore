@@ -35,35 +35,41 @@ const toggleColorMode = () => {
   }
 };
 
-const navbarItems = [
-  {
-    label: "Get featured",
-    href: "#",
-  },
-  {
-    label: "FOSS United Grants",
-    href: "#",
-  },
-];
+const showHeaderLinks = ref(false);
 </script>
 <template>
-  <nav class="p-9 flex justify-between items-center">
-    <nuxt-link to="/">
-      <img :src="getLogoPath()" alt="forklore logo" />
-    </nuxt-link>
+  <div>
+    <nav class="p-9 flex justify-between items-center">
+      <div class="flex gap-2 items-center">
+        <nuxt-link to="/">
+          <img :src="getLogoPath()" alt="forklore logo" />
+        </nuxt-link>
+      </div>
 
-    <div class="flex gap-2">
-      <ol class="flex">
-        <li class="py-2 px-4" v-for="item in navbarItems" :key="item.label">
-          <a :href="item.href">
-            {{ item.label }}
-          </a>
-        </li>
-      </ol>
-
-      <button class="btn-solid" @click="toggleColorMode()">
-        <component :is="getButtonIcon()" />
-      </button>
-    </div>
-  </nav>
+      <div class="flex gap-2">
+        <header-links class="hidden md:flex"></header-links>
+        <button class="btn-solid" @click="toggleColorMode()">
+          <component :is="getButtonIcon()" />
+        </button>
+        <button
+          class="btn-subtle block md:!hidden"
+          @click="showHeaderLinks = !showHeaderLinks"
+        >
+          <IconsMenu class="w-5 h-5" />
+        </button>
+      </div>
+    </nav>
+    <Transition
+      enter-active-class="transition-all duration-500 ease-in-out"
+      enter-from-class="opacity-0 -translate-y-2 max-h-0 overflow-hidden"
+      enter-to-class="opacity-100 translate-y-0 max-h-96"
+      leave-active-class="transition-all duration-500 ease-in-out"
+      leave-from-class="opacity-100 translate-y-0 max-h-96"
+      leave-to-class="opacity-0 -translate-y-2 max-h-0 overflow-hidden"
+    >
+      <div v-if="showHeaderLinks">
+        <header-links class="px-4 pb-2 -mt-2"></header-links>
+      </div>
+    </Transition>
+  </div>
 </template>
