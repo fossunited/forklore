@@ -6,7 +6,7 @@ const navbarItems = [
   },
   {
     label: "FOSS United Grants",
-    href: "#",
+    href: "https://fossunited.org/grants",
   },
 ];
 </script>
