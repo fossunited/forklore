@@ -1,75 +1,28 @@
-# Nuxt Minimal Starter
+<div align="center" markdown="1">
+<img src=".github/github_logo.png" />
+**Website for forklore, built on Nuxt**
+</div>
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## About Forklore
 
-## Setup
+Forklore is a data driven Open-Source website consisting of stories of maintainers from all over India.
 
-Make sure to install dependencies:
+## Contribute
 
-```bash
-# npm
-npm install
+See something you can fix or make better? In the true spirit of Open-Source, we welcome all contributions from our community.
 
-# pnpm
-pnpm install
+### Prequesites
 
-# yarn
-yarn install
-
-# bun
-bun install
+```
+- node 20+
+- yarn 1.22.22+
 ```
 
-## Development Server
+### Local Setup
 
-Start the development server on `http://localhost:3000`:
+To get started with local development, follow these steps:
 
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- Clone this repository
+- Open this directory in termial, and run `yarn install`
+- Start development server by running `yarn run dev`
+- The website should start running in `http://localhost:3000`
