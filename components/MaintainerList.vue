@@ -5,7 +5,7 @@ const { data: maintainers } = await useAsyncData("maintainers", () => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-8 p-10">
+  <div class="flex flex-col gap-8 px-8 py-10">
     <MaintainerCard
       v-for="maintainer in maintainers"
       :key="maintainer.id"
