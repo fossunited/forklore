@@ -11,6 +11,6 @@ import { Header } from "#components";
       <Header class="border-custom-b"></Header>
       <slot></slot>
     </div>
-    <Footer></Footer>
   </div>
+  <Footer></Footer>
 </template>
