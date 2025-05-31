@@ -17,7 +17,7 @@ useSeoMeta({
   ogDescription:
     "Confessions, quirks and occasional rants from India’s open source keepers",
   ogImage: {
-    url: "/og_image_main.png",
+    url: "https://forklore.in/og_image_main.png",
     width: 1200,
     height: 630,
     type: "image/png",
