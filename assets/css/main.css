@@ -43,55 +43,6 @@ html {
         @apply border-r-2 border-r-[#464E55] border-dashed;
     }
 
-    .border-corners::before,
-    .border-corners::after {
-        content: '';
-        position: absolute;
-        width: 1rem;
-        height: 1rem;
-        box-sizing: border-box;
-        border: 2px solid var(--color-secondary-dark);
-    }
-
-    .border-corners::before {
-        top: 0;
-        left: 0;
-        border-right: none;
-        border-bottom: none;
-    }
-
-    .border-corners::after {
-        top: 0;
-        right: 0;
-        border-left: none;
-        border-bottom: none;
-    }
-
-    .border-corners-bottom::before,
-    .border-corners-bottom::after {
-        content: '';
-        position: absolute;
-        width: 1rem;
-        height: 1rem;
-        box-sizing: border-box;
-        border: 2px solid var(--color-secondary-dark);
-    }
-
-    .border-corners-bottom::before {
-        bottom: 0;
-        left: 0;
-        border-right: none;
-        border-top: none;
-    }
-
-    .border-corners-bottom::after {
-        bottom: 0;
-        right: 0;
-        border-left: none;
-        border-top: none;
-    }
-
-    
     .btn-solid {
         @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
         @apply   bg-secondary-light text-primary-light hover:bg-secondary-light/80 ;
@@ -118,6 +69,16 @@ html {
 
     .divide-y-custom {
         @apply divide-y-2 divide-secondary-light/60 dark:divide-tertiary-dark divide-dashed;
+    }
+
+    .corner-only {
+        @apply border-2 border-solid border-secondary-light dark:border-secondary-dark;
+        background-clip:content-box;
+        --s: 1rem;
+        mask:
+            conic-gradient(#000 0 0) content-box,
+            conic-gradient(at var(--s) var(--s), #0000 75%, #000 0)
+            0 0/calc(100% - var(--s)) calc(100% - var(--s));
     }
 }
 
