@@ -1,8 +1,9 @@
 <div align="center" markdown="1">
     <img src=".github/github_logo.png" />
     <h1>Forklore</h1>
-    
-    **Website for forklore, built on Nuxt**
+
+**Website for forklore, built on Nuxt**
+
 </div>
 
 ## About Forklore
