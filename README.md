@@ -14,6 +14,8 @@ Forklore is a data driven Open-Source website consisting of stories of maintaine
 
 See something you can fix or make better? In the true spirit of Open-Source, we welcome all contributions from our community.
 
+Looking to get featured? Refer to [this document](/GET_FEATURED.md).
+
 ### Prequesites
 
 ```
