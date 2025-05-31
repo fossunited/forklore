@@ -25,14 +25,6 @@
       "logo": "https://sw.kovidgoyal.net/kitty/_static/kitty.svg",
       "description": "A terminal emulator for the 21st century",
       "short_description": "A terminal emulator for the 21st century"
-    },
-    {
-      "name": "Kitty",
-      "project_link": "https://github.com/kovidgoyal/kitty",
-      "website_link": "",
-      "logo": "https://sw.kovidgoyal.net/kitty/_static/kitty.svg",
-      "description": "A terminal emulator for the 21st century",
-      "short_description": "A terminal emulator for the 21st century"
     }
   ],
   "form": [
