@@ -19,26 +19,50 @@
   ],
   "projects": [
     {
-      "name": "Kitty",
-      "project_link": "https://github.com/kovidgoyal/kitty",
-      "website_link": "https://sw.kovidgoyal.net/kitty/",
-      "logo": "https://sw.kovidgoyal.net/kitty/_static/kitty.svg",
-      "description": "A terminal emulator for the 21st century",
-      "short_description": "A terminal emulator for the 21st century"
+      "name": "Calibre",
+      "project_link": "https://github.com/kovidgoyal/calibre",
+      "website_link": "https://calibre-ebook.com",
+      "logo": "https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png",
+      "description": "calibre is an e-book manager. It can view, convert, edit and catalog e-books in all of the major e-book formats. It can also talk to e-book reader devices. It can go out to the internet and fetch metadata for your books. It can download newspapers and convert them into e-books for convenient reading. It is cross platform, running on Linux, Windows and macOS.",
+      "short_description": "Open Source e-book manager"
     }
   ],
   "form": [
     {
-      "question": "What is your favorite color?",
-      "response": "Blue"
+      "question": "How to support",
+      "response": "https://calibre-ebook.com/donate or Github Sponsors."
     },
     {
-      "question": "What was best about this conference?",
-      "response": "The speakers"
+      "question": "A small brief about your project",
+      "response": "calibre is the leading solution for managing your ebooks\noutside all walled gardens. It can view, edit, convert dozens\nof ebook formats and is used by millions of people from around the\nworld."
     },
     {
-      "question": "This is a question for a big answer",
-      "response": "This is a response for a big answer, I can go on and on and on and never stop about this answer as we have to test out the limitation"
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Ignore the trolls and do not take it personally."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I love to code and open source is the way I can spend the largest\nfraction of my day, every day coding. And there is nothing quite like\nthe joy you get from building something used by millions of people to\nmake the world a very slightly better place."
+    },
+    {
+      "question": "What keeps you going?",
+      "response": ""
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": ""
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🧹"
     }
   ]
 }
