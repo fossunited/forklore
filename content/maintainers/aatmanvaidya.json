@@ -1,0 +1,64 @@
+{
+  "username": "aatmanvaidya",
+  "full_name": "Aatman Vaidya",
+  "photo": "https://avatars.githubusercontent.com/u/56875084?v=4",
+  "designation": "SDE/ Researcher",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/aatmanvaidya"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/aatmanvaidya/"
+    },
+    {
+        "label": "Web",
+        "link": "https://aatmanvaidya.github.io/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Feluda",
+      "project_link": "https://github.com/tattle-made/feluda",
+      "website_link": "https://tattle.co.in/products/feluda/",
+      "logo": "https://avatars.githubusercontent.com/u/47090898?s=48&v=4",
+      "description": "Feluda is a configurable engine for analyzing multi-lingual and multi-modal content. It allows researchers, factcheckers and journalists to explore and analyze large quantities of multimedia content. Feluda has a component called operators , which are built keeping in mind the need to process data in various modalities (text, audio, video, images, hybrid) and various languages",
+      "short_description": "A configurable engine for analysing multi-lingual and multi-modal content."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "GitHub Sponsors @ https://github.com/sponsors/tattle-made"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Feluda is a configurable engine for analyzing multi-lingual and multi-modal content. It allows researchers, factcheckers and journalists to explore and analyze large quantities of multimedia content. Feluda has a component called operators , which are built keeping in mind the need to process data in various modalities (text, audio, video, images, hybrid) and various languages"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "One thing I would tell my yonder self is - “you don’t have to feel the pressure to always reply immediately”. It’s easy to feel like you need to be constantly available, you want to be helpful, responsive, and keep the momentum going. But over time, I’ve learned that it’s okay to take a step back, take my time and only respond in the bandwidth I have with better clarity than speed."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I have always been drawn to understand how new technologies and practices shape the web, specifically social media, examine their impact on human lives, and the broader societal consequences of this interplay. I am interested in studying trends and behaviors on social media. Feluda is just the right tool which helps me do that, so maintenance of Feluda for me is just more than a chore, it makes my day to day work easy and I get to actively contribute to it. It gives me the opportunity to actively participate in conversations around what models, methods, and techniques should be prioritized for multimodal and multilingual analysis."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Jaane Jaan Dhoondta Phir Raha by Kishore Kumar & Asha Bhosle - https://youtu.be/V3tB5Wu2ifg. (side note), the background song for our repo would be The Pink Panther Theme - https://youtu.be/VyZiIuMufTA"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Since Python does not have any tool/action that can do semantic versioning for multiple packages in a monorepo, we wrote a custom script for it - https://github.com/tattle-made/feluda/blob/main/scripts/semantic_release_workflow.py. The code is very complicated and long, I always keep praying that this code should not break and it always keeps me on my toes. Hence, this is the file I would like to set on fire"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "We’ve noticed a growing number of contributions to the repository that appear to be entirely AI-generated. Unfortunately, many of these include incorrect or buggy code, and a lot of the times there is hallucinated code about things in the codebase that don’t exist at all. The amount of superficial contributions enabled by AI has increased. This is my open source villain origin story and I see my villain character being a super paranoid maintainer who pin points every code of line that is frivolous and hallucinated by AI. It's like how every housing society has that one person who is annoyed by children playing all the time — except in this case, it’s me and AI Slop PRs."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🎀"
+    }
+  ]
+}

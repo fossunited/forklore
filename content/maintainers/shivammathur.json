@@ -1,0 +1,60 @@
+{
+  "username": "shivammathur",
+  "full_name": "Shivam Mathur",
+  "photo": "https://avatars.githubusercontent.com/u/1571086?v=4",
+  "designation": "Principal Software Engineer, Creator of setup-php",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/shivammathur"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/shivammathur/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "setup-php",
+      "project_link": "https://github.com/shivammathur/setup-php",
+      "website_link": "https://setup-php.com",
+      "logo": "https://repository-images.githubusercontent.com/206578964/e0a18480-dc65-11e9-8dd3-b9ffbf5575fe",
+      "description": "Setup PHP with required extensions, php.ini configuration, code-coverage support and various tools like composer in GitHub Actions. This action gives you a cross-platform interface to set up the PHP environment you need to test your application.",
+      "short_description": "GitHub action to set up PHP with extensions, php.ini configuration, coverage drivers, and various tools."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "GitHub Sponsors - https://github.com/sponsors/shivammathur"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "GitHub action to set up PHP with extensions, php.ini configuration, coverage drivers, and various tools."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "“Ship early, ship often”: I do not like to wait for covering every edge case before publishing, rather I would invite real users in, learn from their feedback, and iterate."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Every thank-you comment, PR, or bug report reminds me that open source is a team sport—and that sense of community keeps me going."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Its is a bit dramatic, but Eminem - Lose Yourself"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://github.com/shivammathur/setup-php/blob/main/src/configs/tools.json. I would like to build a proper registry where projects can register their tools to add support in a standard way."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "It began with a burnout at a devops role implementing the same thing across different projects and it taking a long time due to how broken the tooling was before setup-php to implement PHP CI."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🎢"
+    }
+  ]
+}

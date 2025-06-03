@@ -1,0 +1,56 @@
+{
+  "username": "shijithkjayan",
+  "full_name": "Shijith Karumathil",
+  "photo": "https://avatars.githubusercontent.com/u/41006127?v=4",
+  "designation": "Product Engineer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/shijithkjayan"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/shijith-k/"
+    },
+    {
+      "label": "Web",
+      "link": "https://shijithkjayan.github.io/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Glific",
+      "project_link": "https://github.com/glific/",
+      "website_link": "https://glific.org/",
+      "logo": "https://glific.org/wp-content/uploads/2023/02/Logo-1.svg",
+      "description": "Glific is a WhatsApp based open source communication platform for NGOs to have conversations with their community. It is being developed under Project Tech4Dev initiative of Chintu Gudiya Foundation. Glific aims to empower social organisations to act decisively and quickly on grassroots information through a range of host of features ranging from automated responses to comprehensive analytics.",
+      "short_description": "Two Way Open Source Communication Platform"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "More contributions, Buy Me a Cofee, Github Sponsors, etc. Any support is welcome"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Glific is an open source platform built to cater to the needs of the social sector, enabling two-way communication. Non profits can use Glific to send high-quality, relevant and timely information to their communities at a low cost. Glific aims to empower social impact organisations to act decisively and quickly on grassroots information through a range of features ranging from automated responses to comprehensive analytics. Glific has been developed under Project Tech4Dev initiative of Chintu Gudiya Foundation, by multiple Tech4Dev partners in India working on the platform as core teams such as ColoredCow, Web Access, Soft Corner, and Think201 along with many contributors."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Don't try to build everything yourself, ask for help, ask people who are interested to contribute. The bigger the community, the better. Don't be attached to the code you write, or be stubborn on your solutions, the community will always give you better solutions so be ready to listen."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Because almost everything I build stands on the foundation of open source—languages, libraries, tools—all made possible by the work of others who chose to share. Giving back feels like the natural next step. The project I maintain is built for the social sector—organizations and individuals working on real-world challenges, often with limited resources. Open sourcing it makes it accessible to those who need it most. If my work can help them do their work better, that’s a win worth all the effort."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "One Love - Bob Marley"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🤩"
+    }
+  ]
+}
