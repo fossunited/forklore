@@ -1,0 +1,52 @@
+{
+  "username": "tachyons",
+  "full_name": "Aboobacker M K",
+  "photo": "https://media.licdn.com/dms/image/v2/C5103AQH2q2XBUReU4Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517361239769?e=1754524800&v=beta&t=pCvaHlU_nS9hL38zjnIB_qBnR1QKEo0blG-jn3ksdLA",
+  "designation": "Senior Software Engineer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/tachyons"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/aboobacker-m-k/"
+    },
+    {
+      "label": "Web",
+      "link": "https://aboobacker.in/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Circuitverse",
+      "project_link": "https://github.com/CircuitVerse",
+      "website_link": "https://circuitverse.org/",
+      "logo": "https://avatars.githubusercontent.com/u/42944450?s=200&v=4",
+      "description": "CircuitVerse is a digital circuit simulation platform. It aims to provide a platform where circuits can be designed and simulated using a graphical user interface. While users can design complete CPU implementations within the simulator, the software is designed primarily for educational use. CircuitVerse is an open-source project with an active community. Check out the contribute page for more details.",
+      "short_description": "CircuitVerse is a free, open-source platform which allows users to construct digital logic circuits online."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "You can make contributions as code, documentation, localization or money -https://opencollective.com/circuitverse"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "CircuitVerse is a free and open-source, web-based digital logic circuit simulator. 1 It provides an intuitive platform for users of all levels to create, simulate, and learn about digital circuits without the need for any software installation. 2 Beyond simulation, CircuitVerse fosters a collaborative environment where users can share their creations, learn from others, and even allows educators to create assignments and groups. 1 The project aims to build a strong community around digital logic education, making it accessible to students, professionals, and hobbyists worldwide"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Consistency is everything"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "It helped me to become who I am today"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🥱"
+    }
+  ]
+}

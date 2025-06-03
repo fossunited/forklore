@@ -1,0 +1,64 @@
+{
+  "username": "bodhish",
+  "full_name": "Bodhish Thomas",
+  "photo": "https://avatars.githubusercontent.com/u/14979190?v=4",
+  "designation": "Co-Founder, Open Healthcare Network",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/bodhish"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/bodhish/"
+    },
+    {
+        "label": "Web",
+        "link": "https://www.bodhish.in/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Open Healthcare Network - Care",
+      "project_link": "https://github.com/ohcnetwork/",
+      "website_link": "https://ohc.network/",
+      "logo": "https://avatars.githubusercontent.com/u/62014451?s=200&v=4",
+      "description": "Care's consultation module supports outpatient, inpatient, and home care scenarios. Clinicians can manage patient encounters in hospitals, clinics, or even virtual/home settings within one system. This comprehensive support means all types of care—routine check-ups, hospital admissions, or home visits—are documented and handled in a unified interface, improving efficiency across the continuum of care.",
+      "short_description": "Care is a Digital Public Good enabling TeleICU & Decentralised Administration of Healthcare Capacity across States."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "https://docs.ohc.network/docs/contributing"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Care is the flagship open-source healthcare platform developed by Open Healthcare Network (OHC). Originally launched during the COVID-19 pandemic as a crisis response tool, Care has evolved into a robust Digital Public Good (DPG) recognized by the United Nations. It is now a comprehensive Electronic Medical Records (EMR) system tailored for critical care, TeleICU, and palliative care, is fully integrated with India’s ABDM (Ayushman Bharat Digital Mission) and FHIR R5 compliant. Deployed in over 200+ hospitals across nine Indian states, Care supports real-time patient monitoring, medical device integration, and AI-powered tools like Care Scribe (voice-to-EMR) and Care Vision (automates medical readings). Today, Care is powering large-scale health programs like the 10BedICU project and Kerala’s Palliative Care Grid, supporting hundreds of thousands of patients, and helping scale compassionate, quality care to underserved regions."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "The community doesn’t grow on ideals, it grows on working code. Someone out there needs what you’re building, Don’t wait for perfect, ship what’s useful."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "It isn’t just code - it’s tools saving lives across India"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "If CARE had a soundtrack, that launch video would be track one https://youtu.be/ycVWqvZubiI?si=FJ6wcXnN_GQ4t7BK"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "A lot to be honest, we are not just a project its a lot of projects working together as one engine."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "It was March 2020. We were in shorts, hacking dashboards during a lockdown, with no roadmap, and no idea how many lives would depend on our code. We saw government systems running on Google Sheets and WhatsApp forwards. We didn’t choose the FOSS life. The FOSS life picked us."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "⭐️"
+    }
+  ]
+}
