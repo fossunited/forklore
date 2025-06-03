@@ -1,0 +1,64 @@
+{
+  "username": "prasunanand",
+  "full_name": "Prasun Anand",
+  "photo": "https://avatars.githubusercontent.com/u/4907510?v=4",
+  "designation": "Building Zasper",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/prasunanand"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/prasunanand/"
+    },
+    {
+        "label": "Web",
+        "link": "https://prasunanand.github.io/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Zasper",
+      "project_link": "https://github.com/zasper-io/zasper",
+      "website_link": "https://zasper.io/",
+      "logo": "https://zasper.io/static/images/logo.svg",
+      "description": "Zasper is an open-source High Performance IDE for working with Jupyter notebooks. It’s built from scratch to be blazing fast, highly concurrent, low on resource usage, crash-resistant, even under heavy loads. It is cross-platform - fully supported on macOS & Linux with limited support on Windows — for the best experience, use via WSL",
+      "short_description": "High Performace IDE for Jupyter Notebooks"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "GitHub Sponsors @ https://github.com/sponsors/prasunanand"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Zasper is a High Performance IDE for Jupyter Notebooks. It provides a minimal memory footprint, exceptional speed, and the ability to handle numerous concurrent connections. Its architecture thrives under load, delivering better throughput and stability at scale."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Do not get distracted by the bigger picture. Be opinionated. Be focused on small things. Welcome feedback but protect your project's vision."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I like building things that last and make someone’s day 10x smoother. It’s art, it’s engineering, and it’s legacy — all tangled together. \n\n Open source lets me:\n* Share my work without a gatekeeper, It helps me punch above my weight. \n* Learn from real-world feedback. \n* Build in public, with strangers who become friends\n* See code I wrote powering tools across the world\n\nWhat makes me keep going ?\n\n* Github stars\n* Pride in the work\n* Curiosity to keep leveling up\n* Gratitude when someone contributes back\n* Stubbornness to not let the thing rot"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Tokyo Drift (Fast & Furious)"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "The release file. Something always breaks - https://github.com/zasper-io/zasper/blob/main/.github/workflows/release.yml"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I don't have one. My interactions with OSS community have been mostly nice. Someone becomes a villain when they don't acknowledge the efforts of others which inspired their current craft."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🤹🏼"
+    }
+  ]
+}
