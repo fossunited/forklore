@@ -2,7 +2,7 @@
   "username": "kovidgoyal",
   "full_name": "Kovid Goyal",
   "photo": "https://avatars.githubusercontent.com/u/1308621?v=4",
-  "designation": "Software Developer",
+  "designation": "Principal developer of calibre and kitty",
   "socials": [
     {
       "label": "GitHub",
@@ -25,6 +25,14 @@
       "logo": "https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png",
       "description": "calibre is an e-book manager. It can view, convert, edit and catalog e-books in all of the major e-book formats. It can also talk to e-book reader devices. It can go out to the internet and fetch metadata for your books. It can download newspapers and convert them into e-books for convenient reading. It is cross platform, running on Linux, Windows and macOS.",
       "short_description": "Open Source e-book manager"
+    },
+    {
+      "name": "Kitty",
+      "project_link": "https://github.com/kovidgoyal/kitty",
+      "website_link": "https://sw.kovidgoyal.net/kitty/",
+      "logo": "https://sw.kovidgoyal.net/kitty/_static/kitty.svg",
+      "description": "kitty is designed for power keyboard users. To that end all its controls work with the keyboard (although it fully supports mouse interactions as well). Its configuration is a simple, human editable, single file for easy reproducibility (I like to store configuration in source control).",
+      "short_description": "The fast, feature-rich, GPU based terminal emulator"
     }
   ],
   "form": [
