@@ -1,0 +1,68 @@
+{
+  "username": "AyanSinhaMahapatra",
+  "full_name": "Ayan Sinha Mahapatra",
+  "photo": "https://avatars.githubusercontent.com/u/25746274?v=4",
+  "designation": "Software Developer/Analyst",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/AyanSinhaMahapatra"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/ayansinhaju/"
+    },
+    {
+      "label": "Web",
+      "link": "https://ayansinha.dev/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Scancode-toolkit",
+      "project_link": "https://github.com/aboutcode-org/scancode-toolkit",
+      "website_link": "https://aboutcode.org/scancode/",
+      "logo": "https://avatars.githubusercontent.com/u/95001295?s=48&v=4",
+      "description": "A typical software project often reuses hundreds of third-party packages. License, packages, dependencies and origin information is not always easy to find and not normalized: ScanCode discovers and normalizes this data for you. You can scan containers, binaries, source archives, code snippets/files or any code repository, or their dependencies, and look for software licensing issues, vulnerabilities, community health metrics, origin, other similar/matching FOSS code, and this is available as a CLI tool, python library, as a webapp with docker/k8s or as a GitHub action. Along with our FOSS projects to scan code, we also release open data to use with the tools and provide instances of these tools/APIs for public use.",
+      "short_description": "ScanCode detects licenses, copyrights, dependencies by \"scanning code\" to discover and inventory open source and third-party packages used in your code."
+    },
+    {
+      "name": "scancode.io",
+      "project_link": "https://github.com/aboutcode-org/scancode.io",
+      "website_link": "https://scancodeio.readthedocs.io/",
+      "logo": "https://avatars.githubusercontent.com/u/95001295?s=48&v=4",
+      "description": "A typical software project often reuses hundreds of third-party packages. License, packages, dependencies and origin information is not always easy to find and not normalized: ScanCode discovers and normalizes this data for you. You can scan containers, binaries, source archives, code snippets/files or any code repository, or their dependencies, and look for software licensing issues, vulnerabilities, community health metrics, origin, other similar/matching FOSS code, and this is available as a CLI tool, python library, as a webapp with docker/k8s or as a GitHub action. Along with our FOSS projects to scan code, we also release open data to use with the tools and provide instances of these tools/APIs for public use.",
+      "short_description": "ScanCode.io is a server to script and automate software composition analysis pipelines with ScanPipe pipelines."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Use our tool to scan your projects/dependencies, contribute with development, docs, issues and use cases, or help us sustain ourselves: https://github.com/sponsors/aboutcode-org"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "A typical software project often reuses hundreds of third-party packages. License, packages, dependencies and origin information is not always easy to find and not normalized: ScanCode discovers and normalizes this data for you. You can scan containers, binaries, source archives, code snippets/files or any code repository, or their dependencies, and look for software licensing issues, vulnerabilities, community health metrics, origin, other similar/matching FOSS code, and this is available as a CLI tool, python library, as a webapp with docker/k8s or as a GitHub action. Along with our FOSS projects to scan code, we also release open data to use with the tools and provide instances of these tools/APIs for public use."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Being extra kind to all other contributors (and yourself) goes a long way, and don't be afraid to say no or set clear expectations. And then docs, docs, docs!"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I've had the privilege of having an excellent mentor and very nice folks as co-maintainers so it is really nice to build something with them. And also lots of strangers online using our tools, helping us and letting us know that we’re building something useful is the best part."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "I'm not sure about a theme song, but a song which is the farthest from being our theme song would be: All iz well (in your code) from 3 Idiots"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://github.com/aboutcode-org/scancode-toolkit/blob/develop/.github/workflows/scancode-release.yml. It's usually always on fire anyways, with the many supported OSs, and python versions we test for, releasing as a container, CLI tool, python/OS libraries, with many non-pure-python dependencies (most of which we maintain) which needs wheels released for every combination of OS/python versions and our third party package repository (it's a small pypi index that we maintain, vetting each new package added here) used to build release archives, things are quite complicated on this release file. 😂"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🧑‍🚒👩‍🚒🚒"
+    }
+  ]
+}

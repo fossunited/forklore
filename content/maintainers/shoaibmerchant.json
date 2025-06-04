@@ -1,0 +1,72 @@
+{
+  "username": "shoaibmerchant",
+  "full_name": "Shoaib Merchant",
+  "photo": "https://avatars.githubusercontent.com/u/4598631?v=4",
+  "designation": "Founder, Mecha",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/shoaibmerchant"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/shoaibmerchant/"
+    },
+    {
+      "label": "Web",
+      "link": "https://mecha.so/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "mechanix-gui",
+      "project_link": "https://github.com/mecha-org/mechanix-gui",
+      "website_link": "https://github.com/mecha-org/mechanix-gui",
+      "logo": "https://mecha.so/mediakit/logos/mecha-icon-black.png",
+      "description": "Mono-repository for all Mechanix OS GUI components",
+      "short_description": "Mechanix OS GUI components"
+    },
+    {
+      "name": "mecha-make",
+      "project_link": "https://github.com/mecha-org/mecha-make",
+      "website_link": "https://github.com/mecha-org/mecha-make",
+      "logo": "https://mecha.so/mediakit/logos/mecha-icon-black.png",
+      "description": "Linux image build system for Mecha devices",
+      "short_description": "Linux image build system for Mecha devices"
+    },
+    {
+      "name": "bevy_mctk",
+      "project_link": "https://github.com/mecha-org/bevy_mctk",
+      "website_link": "https://github.com/mecha-org/bevy_mctk",
+      "logo": "https://mecha.so/mediakit/logos/mecha-icon-black.png",
+      "description": "Bevy MCTK",
+      "short_description": "Bevy MCTK"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "We are looking for pilot users who can contribute to our software and hardware platform across different areas such as building open hardware extensions, kernel development, low-level GUI development and cloud services. Everyone is welcome! Just let us know what interests you the most at mecha.so/pilot and we will reach out."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "At Mecha we are redefining computer hardware. Our first computer the Mecha Comet (mecha.so/comet) is a portable handheld Linux Computer built to be a swiss army knife for all portable computing needs. It has applications across enthusiasts, education, commercial and industrial use. The Comet runs on entirely FOSS and all of it is made available on our GitHub (github.com/mecha-org)"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Don't be afraid of being judged, better to do it bad than not do it at all."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I truly believe that FOSS helps push the boundaries of human civilization further in ways that you can never imagine. The amount of impact of what you end up building has no limit."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Renegades by X Ambassadors"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🧑‍🚀"
+    }
+  ]
+}

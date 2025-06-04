@@ -33,16 +33,35 @@
   ],
   "form": [
     {
-      "question": "What is your favorite color?",
-      "response": "Blue"
+      "question": "How to support",
+      "response": ""
     },
     {
-      "question": "What was best about this conference?",
-      "response": "The speakers"
+      "question": "A small brief about your project",
+      "response": ""
     },
     {
-      "question": "This is a question for a big answer",
-      "response": "This is a response for a big answer, I can go on and on and on and never stop about this answer as we have to test out the limitation"
-    }
-  ]
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": ""
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": ""
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": ""
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": ""
+    }  ]
 }
