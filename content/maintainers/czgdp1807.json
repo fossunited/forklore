@@ -1,0 +1,80 @@
+{
+  "username": "czgdp1807",
+  "full_name": "Gagandeep Singh",
+  "photo": "https://avatars.githubusercontent.com/u/36567889?v=4",
+  "designation": "Software Engineer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/czgdp1807"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/czgdp1807/"
+    },
+    {
+      "label": "Web",
+      "link": "https://czgdp1807.github.io/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "SciPy",
+      "project_link": "https://github.com/scipy/scipy",
+      "website_link": "https://scipy.org/",
+      "logo": "https://scipy.org/images/logo.svg",
+      "description": "SciPy (pronounced \"Sigh Pie\") is an open-source software for mathematics, science, and engineering. It includes modules for statistics, optimization, integration, linear algebra, Fourier transforms, signal and image processing, ODE solvers, and more.",
+      "short_description": "Fundamental algorithms for scientific computing in Python"
+    },
+    {
+      "name": "LFortran",
+      "project_link": "https://github.com/lfortran/lfortran",
+      "website_link": "https://lfortran.org/",
+      "logo": "https://docs.lfortran.org/en/_static/lfortran-logo.svg",
+      "description": "LFortran is a modern open-source (BSD licensed) interactive Fortran compiler built on top of LLVM. It can execute user’s code interactively to allow exploratory work (much like Python, MATLAB or Julia) as well as compile to binaries with the goal to run user’s code on modern architectures such as multi-core CPUs and GPUs.",
+      "short_description": "Modern interactive LLVM-based Fortran compiler"
+    },
+    {
+      "name": "PyDataStructs",
+      "project_link": "https://github.com/codezonediitj/pydatastructs",
+      "website_link": "https://pydatastructs.readthedocs.io/en/stable/",
+      "logo": "https://avatars.githubusercontent.com/u/50073448?s=48&v=4",
+      "description": "PyDataStructs aims to be a Python package for various data structures in computer science. We are also working on the development of algorithms including their parallel implementations. To the best of our knowledge, a well-designed library/package which has covered most of the data structures and algorithms doesn’t exist yet.",
+      "short_description": "A python package for data structures and algorithms"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Contributions are always welcome to any of the projects I work on. Financially you can sponser, 1. LFortran via https://opencollective.com/lfortran. 2. PyDataStructs via my personal account. I will manage the taxes for my self."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "SciPy - SciPy is an open-source Python library that extends the capabilities of NumPy to provide advanced scientific and technical computing tools. It offers modules for optimization, integration, interpolation, eigenvalue problems, algebraic equations, and more, making it a cornerstone for scientific research and engineering applications in Python. Built for performance and ease of use, SciPy enables users to solve complex mathematical problems with concise, readable code. The library is actively developed on GitHub, where its source code, documentation, and development discussions are maintained, and it remains a fundamental part of the scientific Python ecosystem. LFortran - LFortran is a modern, open-source interactive Fortran compiler built atop LLVM, designed to bring the exploratory and high-performance capabilities of languages like Python and Julia to Fortran programming. It supports interactive execution for rapid prototyping as well as ahead-of-time compilation targeting modern architectures, including multi-core CPUs and GPUs. LFortran features a full Fortran 2018 parser and offers partial support for Fortran 2023, with capabilities like OpenMP pragmas and `do concurrent` constructs, making it suitable for both legacy and cutting-edge scientific computing applications. The project is actively developed and hosted on GitHub. PyDataStructs - PyDataStructs is an open-source Python library that provides a comprehensive suite of data structures and algorithms, including their parallel implementations, aimed at both educational and high-performance computing applications. It offers a consistent and clean API for structures like arrays, linked lists, trees, heaps, graphs, and various algorithms, all thoroughly tested to ensure reliability. While primarily implemented in Python for rapid development and ease of testing, the project is also working on integrating a C++ backend via the Python C-API to enhance performance for computationally intensive tasks. This makes PyDataStructs a versatile tool for developers and researchers looking to prototype and deploy efficient algorithmic solutions in Python."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "If I could motivate my younger self, I would say, \"Believe in yourself more and have the courage to contribute to larger open-source projects, like PyTorch or TensorFlow\".I think when we start out, there's this fear that we’re not good enough to contribute to bigger, well-established projects. But true growth comes when we step out of our comfort zones and contribute to challenging projects. Working on such projects not only improves your coding skills but also gives you the opportunity to understand the project’s ecosystem, interact with the global community, and express your ideas more effectively. I’d also tell my younger self, \"Turn your doubts into strengths; you’ll learn something from every contribution, no matter how small or big.\". Contributing to large projects like PyTorch helps you improve not only your technical skills but also your understanding of real-world software engineering practices, debugging, code reviews, and collaboration skills. This bravery would not only help in technical growth but also boost your confidence and self-belief. Many times, we think we need years of experience to contribute to big projects, but once we start contributing, we learn and enhance our skills."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I initially started contributing to open-source for GSoC and to gain recognition within the community. At that time, it felt like a great opportunity to build my portfolio and get my name out there. However, over time, my perspective has shifted. Now, I contribute to open-source purely for the enjoyment it brings and the freedom it offers. I love the fact that I can work on the problems I’m genuinely passionate about, without any external pressure or expectation. The beauty of open-source is that I can keep all of my code open for everyone to see and contribute to. It’s no longer just about recognition; it's about the freedom to explore, learn, and grow through the projects I work on. In a way, my open-source contributions have become my CV, showcasing not only my technical abilities but also my dedication to creating meaningful, open, and accessible software."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "All three of my projects are related to Sciences so I would go for, \"Cornfield Chase – Hans Zimmer\" from \"Interstellar\". That's what I feel when I work on these projects. :-)."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "SciPy - All the Fortran code. LFortran - \"asr_utils.h\" PyDataStructs - \"setup.py\""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "In my first year of college, I proposed a project for GSoC to integrate complex functions into SciPy’s integrate module, specifically focusing on complex numbers since we were studying that topic in our second-semester course. However, the community rejected my proposal, so I took the same idea to SymPy. There, it was also rejected, but Aaron Meurer, SymPy's maintainer, encouraged me to try again the following year. So, I began contributing to SymPy. I worked on fixing a solver issue in SymPy, as far as I remember, and then I moved on to fix more issues. While working, I came across the idea of Markov chains in the stats module, and I really liked it. I started working on a proposal and ended up submitting several pull requests to the stats module. Eventually, three proposals came in for the same idea, so the mentor decided to test us. Luckily, two of us were selected. I was thrilled when the results came in at 11:30 PM, and the first thing I did was call my mom. She was also happy. It had been a long time since anyone from our college had cracked GSoC. :D Anyway, I worked on the project and learned a lot from my mentor—the math and algorithms I created for SymPy’s Markov chains were very fun. Then, GSoC turned into something bigger, and I started enjoying it more. Later, Ondrej (the founder of SymPy) reached out to me for another project, LFortran. This was last year, and I had my second GSoC there. In the meantime, Ondrej also recommended me to Quansight (where I started contributing to SciPy), and since then, I’ve been involved in these projects."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🚧 - Construction sign emoji. Open source is all about constructing in the open."
+    }
+  ]
+}

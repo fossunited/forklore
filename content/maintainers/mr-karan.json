@@ -1,0 +1,64 @@
+{
+  "username": "mr-karan",
+  "full_name": "Karan Sharma",
+  "photo": "https://avatars.githubusercontent.com/u/5689132?v=4",
+  "designation": "Tech @ Zerodha",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/mr-karan"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/mrkaran/"
+    },
+    {
+      "label": "Web",
+      "link": "https://mrkaran.dev/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Logchef",
+      "project_link": "https://github.com/mr-karan/logchef",
+      "website_link": "https://logchef.app/",
+      "logo": "",
+      "description": "Logchef is a lightweight, powerful log analytics platform designed for efficient log management and analysis. It operates as a single binary, utilizing ClickHouse for high-performance log storage and querying. Logchef provides an intuitive interface for exploring log data, making it suitable for development teams seeking a robust and scalable solution.",
+      "short_description": "Purpose-built log analytics UI for ClickHouse"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "GitHub Sponsors - https://github.com/sponsors/mr-karan/"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Logchef is a dedicated log query and visualization interface built specifically for ClickHouse. It fills a critical gap in the ClickHouse ecosystem, providing a powerful log explorer without reinventing log collection or storage."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Build what sparks your curiosity. Even if similar tools already exist, your unique perspective can add something valuable. Don’t wait for perfection - share your work with the world as it evolves."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "For me, open-sourcing the project brings in more eyes, suggestions, and issues - ultimately improving the software far more than if it were closed. I use a lot of self-hosted FOSS tools myself, and it would be incredibly fulfilling to see others using and benefiting from something I’ve built too."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Welcome to the Machine - Pink Floyd"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "✨"
+    }
+  ]
+}
