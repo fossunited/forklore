@@ -1,0 +1,64 @@
+{
+  "username": "helloanoop",
+  "full_name": "Anoop M D",
+  "photo": "https://avatars.githubusercontent.com/u/9350733?v=4",
+  "designation": "Founder and CEO, Bruno",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/helloanoop"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/anoop-m-d-868099100/"
+    },
+    {
+      "label": "Web",
+      "link": "https://www.helloanoop.com/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Bruno",
+      "project_link": "https://github.com/usebruno/bruno",
+      "website_link": "https://www.usebruno.com/",
+      "logo": "https://avatars.githubusercontent.com/u/114530840?s=200&v=4",
+      "description": "Bruno is a local-only, Git-friendly, and open-source API client built for modern developers. Unlike other tools that rely on cloud-based collaboration, Bruno leverages Git to enable seamless sharing and version control of API collections. We're rethinking the API client experience by focusing solely on what matters—providing a fast, lightweight, and focused tool without the unnecessary bloat that comes with bundled platforms.",
+      "short_description": "Bruno is a Git-integrated, fully offline, and open-source API client"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Give Bruno a spin and drop us your feedback. It’s the simplest and most impactful way to support the project."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Bruno is a local-only, Git-friendly, and open-source API client built for modern developers. Unlike other tools that rely on cloud-based collaboration, Bruno leverages Git to enable seamless sharing and version control of API collections. We're rethinking the API client experience by focusing solely on what matters—providing a fast, lightweight, and focused tool without the unnecessary bloat that comes with bundled platforms."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": ""
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I love building things. And with Bruno, it’s even more fulfilling to see developers love what we make."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "We don't talk about Bruno, no, no, no We don't talk about Bruno But it was my wedding day (it was our wedding day) We were getting ready, and there wasn't a cloud in the sky (No clouds allowed in the sky) Bruno walks in with a mischievous grin (thunder) You're telling this story, or am I? This is from the movie Encanto."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I was fed up with bloated API clients and their cloud-based approach to collaboration. All I wanted was something fast, minimal, and Git-native for managing API collections. So I built it myself."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🖖"
+    }
+  ]
+}

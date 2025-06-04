@@ -1,0 +1,72 @@
+{
+  "username": "eagledot",
+  "full_name": "Anubhav Nain",
+  "photo": "",
+  "designation": "",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/eagledot"
+    },
+    {
+      "label": "GitLab",
+      "link": "https://gitlab.com/eagledot"
+    },
+    {
+      "label": "Web",
+      "link": "https://eagledot.xyz/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "hachi",
+      "project_link": "https://github.com/eagledot/hachi",
+      "website_link": "https://github.com/eagledot/hachi",
+      "logo": "",
+      "description": "Hachi is a fast, end to end, self-hosted search engine to enable comprehensive search for all types of media, by extracting independent information channels/attributes and providing a unified interface to mix and match those attributes.",
+      "short_description": "An end to end semantic and meta-data search engine for personal data."
+    },
+    {
+      "name": "malhar",
+      "project_link": "https://github.com/eagledot/malhar",
+      "website_link": "https://github.com/eagledot/malhar",
+      "logo": "",
+      "description": "Fast, Minimal and generic Fuzzy Search Index. The library is written in Python along with some parts in Nim to speed up querying process, with no third party dependency. This makes it flexible enough to be embedded with an application or any script to provide a fuzzy search interface automatically!",
+      "short_description": "Fast, Minimal and generic Fuzzy Search Index"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Bug Reports are very welcomed. For financial contributions you can buy me a coffee at : https://buymeacoffee.com/eagledot"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Hachi is an end to end semantic and meta-data search engine for personal data. It enables a comprehensive search by extracting independent information channels/attributes and providing a unified interface to mix and match those attributes. It also supports a high quality and fast face-recognition pipeline to tag and search a person."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Reading code from high-quality projects more early on, as good ideas/concepts transcend all pseudo boundaries imposed by job-descriptions, curriculum etc !"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I find it to be satisfying and joyful. It is also a way for me improve my knowledge and hopefully contribute something useful back to the open-source ! Making improvements to a non-trivial problem by reading and experiments generally keeps me going."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "\"Two steps from Hell\" soundtrack may be!"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Community has been very helpful. i think its on me what to take in and what to ignore!"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "More like a gif: https://tenor.com/view/totoro-rain-rainy-day-good-morning-rainy-day-gif-3424596352008787858"
+    }
+  ]
+}
