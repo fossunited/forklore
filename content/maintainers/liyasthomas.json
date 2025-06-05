@@ -1,0 +1,64 @@
+{
+  "username": "liyasthomas",
+  "full_name": "Liyas Thomas",
+  "photo": "https://avatars.githubusercontent.com/u/10395817?v=4",
+  "designation": "Founder & CEO of Hoppscotch",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/liyasthomas"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/liyasthomas/"
+    },
+    {
+      "label": "Web",
+      "link": "https://liyasthomas.com/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Hoppscotch",
+      "project_link": "https://github.com/hoppscotch/hoppscotch",
+      "website_link": "https://hoppscotch.com/",
+      "logo": "https://avatars.githubusercontent.com/u/56705483?s=48&v=4",
+      "description": "Hoppscotch is a lightweight, web-based API development suite. It was built from the ground up with ease of use and accessibility in mind providing all the functionality needed for developers with minimalist, unobtrusive UI.",
+      "short_description": "Open Source API Development Ecosystem"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "GitHub Sponsors: https://github.com/sponsors/hoppscotch"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Hoppscotch is a free and open-source API development platform designed for building, testing, and documenting APIs. It's a web-based alternative to tools like Postman, Insomnia, and Paw, offering a user-friendly interface for sending requests and viewing responses. Hoppscotch emphasizes ease of use and accessibility, making it a suitable choice for developers of all skill levels."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Don’t try to do everything yourself.  In the early days of Hoppscotch, I took on way too much, code, issues, PRs, design, community, documentation, all solo. It felt like my baby, and I was scared to let go of control. But open source thrives when you trust the community. Delegate. Document things clearly. Welcome contributors early and often. Your project will grow faster, stronger, and you won’t burn out doing it alone."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Because Hoppscotch started as something I needed, and it turns out thousands of others needed it too.  When I built the first version, it was a simple idea: a lightweight, fast, browser-based alternative to API clients like Postman. I open-sourced it just to share it. Then the community showed up — not just with stars and likes, but with real contributions, feedback, and passion. That’s incredibly motivating. Knowing that thousands of developers use Hoppscotch every day to build better software is wild. That’s fuel."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Avengers assemble' theme is the energy I’d assign to the Hoppscotch GitHub repo during a big release or a major refactor sprint."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://github.com/hoppscotch/hoppscotch/blob/main/packages/hoppscotch-common/src/modules/i18n.ts"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🛸"
+    }
+  ]
+}

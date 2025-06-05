@@ -1,0 +1,60 @@
+{
+  "username": "pavish",
+  "full_name": " Pavish Kumar Ramani Gopal ",
+  "photo": "https://avatars.githubusercontent.com/u/11850603?v=4",
+  "designation": "Senior Engineer at Mathesar Foundation",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/pavish"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/pavishkumar/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Mathesar",
+      "project_link": "https://github.com/mathesar-foundation/mathesar",
+      "website_link": "https://mathesar.org/",
+      "logo": "https://avatars.githubusercontent.com/u/64070190?s=48&v=4",
+      "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. It empowers users of all technical skill levels to view, edit, query, and collaborate on data with a familiar spreadsheet-like interface—no code needed. It’s self hosted, can be deployed in minutes, and works directly with PostgreSQL databases, schemas, and tables without extra abstractions. The project is 100% open source and maintained by Mathesar Foundation, a 501(c)(3) nonprofit. Mathesar is as scalable as Postgres and supports any size or complexity of data, making it ideal for workflows involving production databases. It requires minimal setup, and integrates into your existing infrastructure. Because Mathesar is self-hosted, your data never leaves your servers, and access control based on Postgres roles and privileges keeps your database secure without adding unnecessary risk.",
+      "short_description": "An intuitive spreadsheet-like interface that lets users of all technical skill levels view, edit, query, and collaborate on Postgres data directly—100% open source and self hosted, with native Postgres access control."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Getting word out on the product, helping us gain users"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. It empowers users of all technical skill levels to view, edit, query, and collaborate on data with a familiar spreadsheet-like interface—no code needed. It’s self hosted, can be deployed in minutes, and works directly with PostgreSQL databases, schemas, and tables without extra abstractions. The project is 100% open source, GPLv3 licensed, and maintained by Mathesar Foundation, a 501(c)(3) nonprofit."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "You don't have to drop everything the moment someone asks for a new feature or bug fix, you can do it at your own pace and follow your own roadmap. People who value your FOSS will step up and contribute, or they'll wait for it."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "In my opinion, building software is an art, just like sketching or dancing. The sheer joy of sitting in your room as a teenager, building something just for fun, for yourself, and showing it to your friends, is a feeling I'd never forget. The reason I was able to get into building software, so easily, by myself, is entirely because of FOSS and the culture around it. This eventually lead to my career in software engineering.  It always fascinated me that people just built something and gave it to everyone, for free. I understand why. Just like a musicians playing in subway stations, artists drawing on deserted walls, we build software for everyone.  Maintaining a FOSS project is my way of giving back to everything the community has given me. The joy you feel when a random person around the world gets excited about something you built, is still surreal. I'm grateful for the fact that I'm able to do this full-time."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "The \"Moongil Kaadugale\" tamil song, from early 2000s.  The lyrics reflect the way I feel about Mathesar, from the freedom seeking sentiment that compares to Mathesar's open source nature, to the imagery given of a moongil (bamboo) which is resilient and evokes a growth sentiment that compares to Mathesar's aim to give non-technical people tools to adapt to the data-driven world."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Users expecting commercial level support & treatment. We give you what we build for free, if you need something, contribute, don't demand."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🤷🏽  Just a regular person. Most maintainers thanklessly maintain FOSS from their basement, for fun, which supports massive infrastructure in the real-world (like that xkcd comic)."
+    }
+  ]
+}

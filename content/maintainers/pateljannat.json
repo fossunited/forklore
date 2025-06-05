@@ -1,0 +1,60 @@
+{
+  "username": "pateljannat",
+  "full_name": "Jannat Patel",
+  "photo": "https://avatars.githubusercontent.com/u/31363128?v=4",
+  "designation": "Product Engineer @ frappe",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/pateljannat"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/jannat-patel/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Frappe Learning",
+      "project_link": "https://github.com/frappe/lms",
+      "website_link": "https://frappe.io/learning",
+      "logo": "https://github.com/frappe/lms/blob/bce45f44e419f0953f5f2fe96e85290ff8d57024/.github/lms-logo.png",
+      "description": "Frappe Learning is a 100% open-source platform that helps you create structured courses with videos, quizzes, and assignments—perfect for educators, businesses, and content creators. Run live batches, track progress, and build a learning experience that works for you.",
+      "short_description": "Frappe Learning is an easy-to-use learning system that helps you bring structure to your content."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "I would appreciate more contributions"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Frappe Learning is a learning management system that helps you create structured courses. Your lessons can have text content, videos, and embeds. You can also create and add quizzes and assignments of various forms. The major differentiator from other LMSs is that we have tried to keep it simple and not bloated like other alternatives (Moodle). Also, we don't enforce learning. Where other platforms allow instructors to add restrictions on how a student can move within the course, Frappe Learning has no such feature because we believe that learning can never be enforced."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "I would probably tell my younger self that patience and consistency are everything, and also to cultivate the habit of documenting regularly."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Working on this app feels very fulfilling. It feels like my way of contributing to society."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": ""
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "😅 - Exhausted but very happy and at peace on the inside"
+    }
+  ]
+}
