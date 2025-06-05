@@ -1,0 +1,64 @@
+{
+  "username": "DalgoT4D",
+  "full_name": "Project Tech4Dev",
+  "photo": "https://projecttech4dev.org/wp-content/uploads/2024/05/Logo.png",
+  "designation": "",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/DalgoT4D"
+    },
+    {
+      "label": "Web",
+      "link": "https://dalgo.org/"
+    },
+    {
+      "label": "Web",
+      "link": "https://projecttech4dev.org/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Dalgo",
+      "project_link": "https://github.com/DalgoT4D",
+      "website_link": "https://dalgo.org/",
+      "logo": "https://avatars.githubusercontent.com/u/113246504?s=200&v=4",
+      "description": "Imagine an AI-powered open-source data platform revolutionizing the way NGOs harness insights for social impact. By seamlessly ingesting data from diverse sources, Dalgo leverages advanced machine learning, generative AI, and natural language processing (NLP) to unlock outstanding program insights. Picture a future where NGOs effortlessly measure their impact, visualize complex data, and drive transformative outcomes using state-of-the-art visualization tools. This is the future of data-driven social change.",
+      "short_description": "Our open-source data platform enables NGOs to harness the power of data by automating data consolidation, transformation, storage and visualization on a unified platform."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "More contributions!"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Dalgo is an open-source data platform for the nonprofit sector"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Start collecting good first issues early! Don't knock them off just because you can"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "All our components are FOSS, we want our work to be public as well! It's all right if people don't run our platform, just having the code out there helps people too"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Something by Purple Disco Machine"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Probably the Jest tests"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "😌"
+    }
+  ]
+}
