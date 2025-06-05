@@ -1,0 +1,68 @@
+{
+  "username": "albonycal",
+  "full_name": "Shrirang Kahale",
+  "photo": "https://avatars.githubusercontent.com/u/67057319?v=4",
+  "designation": "Linux, Networking, and more",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/albonycal"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/shrirangkahale/"
+    },
+    {
+      "label": "Web",
+      "link": "https://shrirangkahale.com/"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://fosstodon.org/@albonycal"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Albony Mirror",
+      "project_link": "https://mirror.albony.in",
+      "website_link": "https://mirror.albony.in",
+      "logo": "https://shrirangkahale.com/avatar_hu541ebb739410f7346c04e5216ce5f153_17291_100x100_fill_q75_h2_box_smart1_3.webp",
+      "description": "mirror.albony.in provides CDN infra for various opensource projects and linux distributions, this is a student run service which serves 20TB+ traffic daily and thousands rely on it to get their latest opensource software.",
+      "short_description": "Distributed Mirror Network in India Maintained by Shrirang Kahale"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "https://mirror.albony.in/donate.html"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "mirror.albony.in provides CDN infra for various opensource projects and linux distributions, this is a student run service which serves 20TB+ traffic daily and thousands rely on it to get their latest opensource software.."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "You can only connect the dots while looking backwards."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I have an inner urge to contribute to FOSS in anyway I can, those traffic spikes on my servers keep me going :)"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": ""
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": ":}"
+    }
+  ]
+}
