@@ -1,0 +1,64 @@
+{
+  "username": "ravidwivedi",
+  "full_name": "Ravi Dwivedi",
+  "photo": "https://codeberg.org/avatars/3bf87b38aebb1d1c3d617e634aa9effb804de4743460da5d95082b4223ab3516?size=512",
+  "designation": "",
+  "socials": [
+    {
+      "label": "Codeberg",
+      "link": "https://codeberg.org/ravidwivedi"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://toot.io/@ravi"
+    },
+    {
+      "label": "Web",
+      "link": "https://ravidwivedi.in"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Prav",
+      "project_link": "https://codeberg.org/prav",
+      "website_link": "https://prav.app/",
+      "logo": "https://codeberg.org/avatars/056a100b5b6a4e816aa004559719a6e02ef06ef674025cc46e9c570dd51f6de9?size=200",
+      "description": "Popular messaging apps only allow you to talk to users using the same app. However, Prav allows you to talk to all the users on the same network even if they use other apps like Quicksy, Monocles Chat, Dino, Gajim, Monal, and many more. In other words, Prav has no vendor lock-in. Lastly, Prav is a cooperative (in the process of registration) which allows anyone to become a member and vote on decisions, such as the privacy policy or what features should be added.",
+      "short_description": "Prav is a messaging service which can be used to exchange messages, audio/video calls, files, images and videos over the Internet. Inspired by the Quicksy app, Prav provides the convenience of registering with a phone number."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "By installing Prav app (check https://prav.app),  sending donations https://prav.app/donate , volunteering (https://prav.app/get-involved/) or by becoming a member of the cooperative https://prav.app/become-a-member/"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Prav is a messaging service which can be used to exchange messages, audio/video calls, files, images and videos over the Internet.  Inspired by the Quicksy app, Prav provides the convenience of registering with a phone number. It is federated with other XMPP providers, while at the same time easy to use."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Help run community-run services instead of self-hosting a lot of services on your own."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I think Prav project is doing what no other project is doing - mass adoption of a federated XMPP service with convenient onboarding process. I also feel ownership and responsibility towards the project. Mass adoption of messaging services is important because messaging services are based on network effects. Otherwise, I would myself need to use proprietary services for chatting."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Frolic by Luciano Michelini"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🐦(Pigeon)"
+    }
+  ]
+}

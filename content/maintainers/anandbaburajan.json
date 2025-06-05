@@ -1,0 +1,80 @@
+{
+  "username": "anandbaburajan",
+  "full_name": "Anand Baburajan",
+  "photo": "https://avatars.githubusercontent.com/u/2698932?v=4",
+  "designation": "Marketing & Growth @ Ente",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/anandbaburajan"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/anandbaburajan/"
+    },
+    {
+      "label": "Web",
+      "link": "https://anandbaburajan.com/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Samay",
+      "project_link": "https://github.com/anandbaburajan/samay",
+      "website_link": "https://samay.app/",
+      "logo": "",
+      "description": "Samay is a free and open source group scheduling tool. Quickly find a time which works for everyone without the back-and-forth texts/emails! Create a Poll, Share the Poll, Book the meeting!",
+      "short_description": "Find a time which works for everyone"
+    },
+    {
+      "name": "CQ2",
+      "project_link": "https://github.com/anandbaburajan/cq2",
+      "website_link": "https://cq2.co/",
+      "logo": "https://github.com/anandbaburajan/cq2/blob/main/public/logos/cq2-social.png",
+      "description": "A tool for RFCs, designed for thoughtfulness and coherence.",
+      "short_description": "A tool for RFCs, designed for thoughtfulness and coherence."
+    },
+    {
+      "name": "Wordamour",
+      "project_link": "https://github.com/anandbaburajan/wordamour",
+      "website_link": "https://wordamour.com/",
+      "logo": "https://github.com/anandbaburajan/wordamour/blob/main/public/logo.png",
+      "description": "Personalised word search puzzle for your special someone",
+      "short_description": "Personalised word search puzzle for your special someone"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Wordamour - Surprise your special someone with a Wordamour and buy me a coffee (https://buymeacoffee.com/anandbaburajan) if they love it :D CQ2 - Share it with communities who might find it useful :D Samay - Use it to find a common time for a group meeting and buy me a coffee (https://buymeacoffee.com/anandbaburajan) if you found it useful :D"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Wordamour - Personalised word search puzzle for your special someone. CQ2 - Tool for RFCs, designed for thoughtfulness and coherence. Samay - Group scheduling tool"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Impact and rewards often show up in quiet, unexpected ways."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I find it joyful when people use my projects, and they do."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Get Lucky by Daft Punk https://www.youtube.com/watch?v=5NV6Rdv1a3I"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🧘"
+    }
+  ]
+}

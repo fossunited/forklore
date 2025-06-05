@@ -1,0 +1,64 @@
+{
+  "username": "vishnukvmd",
+  "full_name": "Vishnu Mohandas",
+  "photo": "https://avatars.githubusercontent.com/u/1161789?v=4",
+  "designation": "Building ente",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/vishnukvmd"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/vishnukvmd"
+    },
+    {
+      "label": "Web",
+      "link": "https://vishnu.tech/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Ente",
+      "project_link": "https://github.com/ente-io/ente",
+      "website_link": "https://ente.io/",
+      "logo": "https://github.com/ente-io/ente/raw/main/.github/assets/ente-rocketship.png",
+      "description": "Ente is a service that provides a fully open source, end-to-end encrypted platform for you to store your data in the cloud without needing to trust the service provider. On top of this platform, we have built two apps so far: Ente Photos (an alternative to Apple and Google Photos) and Ente Auth (a 2FA alternative to the deprecated Authy).",
+      "short_description": "✨ End-to-end encrypted cloud for photos, videos and 2FA secrets."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Github stars :)"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "FOSS, End-to-end encrypted cloud for photos, videos and more."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "You cannot keep everyone happy."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Ente is a project I started for myself, that grew into a financially sustainable company. So among other things, there's now a financial incentive to keep building. As for keeping things FOSS – we believe it's the best way to ensure that a project outlives its creators."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Speaking only for myself (and not rest of the maintainers): Manavyalakinchara – Agam."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ".gitmodules – submodules are terrible."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🥲"
+    }
+  ]
+}
