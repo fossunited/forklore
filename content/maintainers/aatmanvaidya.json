@@ -23,8 +23,8 @@
       "project_link": "https://github.com/tattle-made/feluda",
       "website_link": "https://tattle.co.in/products/feluda/",
       "logo": "https://avatars.githubusercontent.com/u/47090898?s=48&v=4",
-      "description": "Feluda is a configurable engine for analyzing multi-lingual and multi-modal content. It allows researchers, factcheckers and journalists to explore and analyze large quantities of multimedia content. Feluda has a component called operators , which are built keeping in mind the need to process data in various modalities (text, audio, video, images, hybrid) and various languages",
-      "short_description": "A configurable engine for analysing multi-lingual and multi-modal content."
+      "description": "Feluda is a configurable engine for analyzing multi-lingual and multi-modal content. It allows researchers, fact checkers and journalists to explore and analyze large quantities of multimedia content. Feluda has a component called operators , which are built keeping in mind the need to process data in various modalities (text, audio, video, images, hybrid) and various languages",
+      "short_description": "A configurable engine for analyzing multi-lingual and multi-modal content."
     }
   ],
   "form": [
@@ -34,7 +34,7 @@
     },
     {
       "question": "A small brief about your project",
-      "response": "Feluda is a configurable engine for analyzing multi-lingual and multi-modal content. It allows researchers, factcheckers and journalists to explore and analyze large quantities of multimedia content. Feluda has a component called operators , which are built keeping in mind the need to process data in various modalities (text, audio, video, images, hybrid) and various languages"
+      "response": "Feluda is a configurable engine for analyzing multi-lingual and multi-modal content. It allows researchers, fact checkers and journalists to explore and analyze large quantities of multimedia content. Feluda has a component called operators , which are built keeping in mind the need to process data in various modalities (text, audio, video, images, hybrid) and various languages"
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
@@ -42,7 +42,7 @@
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": "I have always been drawn to understand how new technologies and practices shape the web, specifically social media, examine their impact on human lives, and the broader societal consequences of this interplay. I am interested in studying trends and behaviors on social media. Feluda is just the right tool which helps me do that, so maintenance of Feluda for me is just more than a chore, it makes my day to day work easy and I get to actively contribute to it. It gives me the opportunity to actively participate in conversations around what models, methods, and techniques should be prioritized for multimodal and multilingual analysis."
+      "response": "I have always been drawn to understand how new technologies and practices shape the web, specifically social media, examine their impact on human lives, and the broader societal consequences of this interplay. I am interested in studying trends and behaviors on social media. Feluda is just the right tool which helps me do that, so maintenance of Feluda for me is just more than a chore, it makes my day to day work easy and I get to actively contribute to it. It gives me the opportunity to actively participate in conversations around what models, methods, and techniques should be prioritized for multi-modal and multilingual analysis."
     },
     {
       "question": "If your repo had a theme song, what would it be?",

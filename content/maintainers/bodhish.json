@@ -54,7 +54,7 @@
     },
     {
       "question": "What's your open-source villain origin story?",
-      "response": "It was March 2020. We were in shorts, hacking dashboards during a lockdown, with no roadmap, and no idea how many lives would depend on our code. We saw government systems running on Google Sheets and WhatsApp forwards. We didn’t choose the FOSS life. The FOSS life picked us."
+      "response": "It was March 2020. We were in shorts, hacking dashboards during a lock-down, with no roadmap, and no idea how many lives would depend on our code. We saw government systems running on Google Sheets and WhatsApp forwards. We didn’t choose the FOSS life. The FOSS life picked us."
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",

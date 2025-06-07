@@ -21,7 +21,7 @@ const getLogoPath = () => {
   </div>
   <div class="px-8 py-12 border-custom-b">
     <p class="font-semibold">
-      Like a slambook, but with fewer crushes and more commits
+      Like a slam book, but with fewer crushes and more commits
     </p>
     <br />
     <p>

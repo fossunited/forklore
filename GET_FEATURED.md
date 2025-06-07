@@ -4,7 +4,7 @@ Looking to get yourself up there along with others? It's easy!
 
 ### Prerequisites:
 
-- Be an open-source maintainer, who has atleast one open source project which they actively maintain.
+- Be an open-source maintainer, who has at-least one open source project which they actively maintain.
 
 ### Steps:
 
