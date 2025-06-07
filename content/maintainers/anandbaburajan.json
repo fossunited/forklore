@@ -39,8 +39,8 @@
       "project_link": "https://github.com/anandbaburajan/wordamour",
       "website_link": "https://wordamour.com/",
       "logo": "https://github.com/anandbaburajan/wordamour/blob/main/public/logo.png",
-      "description": "Personalised word search puzzle for your special someone",
-      "short_description": "Personalised word search puzzle for your special someone"
+      "description": "Personalized word search puzzle for your special someone",
+      "short_description": "Personalized word search puzzle for your special someone"
     }
   ],
   "form": [
@@ -50,7 +50,7 @@
     },
     {
       "question": "A small brief about your project",
-      "response": "Wordamour - Personalised word search puzzle for your special someone. CQ2 - Tool for RFCs, designed for thoughtfulness and coherence. Samay - Group scheduling tool"
+      "response": "Wordamour - Personalized word search puzzle for your special someone. CQ2 - Tool for RFCs, designed for thoughtfulness and coherence. Samay - Group scheduling tool"
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",

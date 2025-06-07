@@ -23,18 +23,18 @@
       "project_link": "https://github.com/glific/",
       "website_link": "https://glific.org/",
       "logo": "https://glific.org/wp-content/uploads/2023/02/Logo-1.svg",
-      "description": "Glific is a WhatsApp based open source communication platform for NGOs to have conversations with their community. It is being developed under Project Tech4Dev initiative of Chintu Gudiya Foundation. Glific aims to empower social organisations to act decisively and quickly on grassroots information through a range of host of features ranging from automated responses to comprehensive analytics.",
+      "description": "Glific is a WhatsApp based open source communication platform for NGOs to have conversations with their community. It is being developed under Project Tech4Dev initiative of Chintu Gudiya Foundation. Glific aims to empower social organizations to act decisively and quickly on grassroots information through a range of host of features ranging from automated responses to comprehensive analytics.",
       "short_description": "Two Way Open Source Communication Platform"
     }
   ],
   "form": [
     {
       "question": "How to support",
-      "response": "More contributions, Buy Me a Cofee, Github Sponsors, etc. Any support is welcome"
+      "response": "More contributions, Buy Me a Coffee, Github Sponsors, etc. Any support is welcome"
     },
     {
       "question": "A small brief about your project",
-      "response": "Glific is an open source platform built to cater to the needs of the social sector, enabling two-way communication. Non profits can use Glific to send high-quality, relevant and timely information to their communities at a low cost. Glific aims to empower social impact organisations to act decisively and quickly on grassroots information through a range of features ranging from automated responses to comprehensive analytics. Glific has been developed under Project Tech4Dev initiative of Chintu Gudiya Foundation, by multiple Tech4Dev partners in India working on the platform as core teams such as ColoredCow, Web Access, Soft Corner, and Think201 along with many contributors."
+      "response": "Glific is an open source platform built to cater to the needs of the social sector, enabling two-way communication. Non profits can use Glific to send high-quality, relevant and timely information to their communities at a low cost. Glific aims to empower social impact organizations to act decisively and quickly on grassroots information through a range of features ranging from automated responses to comprehensive analytics. Glific has been developed under Project Tech4Dev initiative of Chintu Gudiya Foundation, by multiple Tech4Dev partners in India working on the platform as core teams such as ColoredCow, Web Access, Soft Corner, and Think201 along with many contributors."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",

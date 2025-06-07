@@ -24,7 +24,7 @@
       "website_link": "https://zasper.io/",
       "logo": "https://zasper.io/static/images/logo.svg",
       "description": "Zasper is an open-source High Performance IDE for working with Jupyter notebooks. It’s built from scratch to be blazing fast, highly concurrent, low on resource usage, crash-resistant, even under heavy loads. It is cross-platform - fully supported on macOS & Linux with limited support on Windows — for the best experience, use via WSL",
-      "short_description": "High Performace IDE for Jupyter Notebooks"
+      "short_description": "High Performance IDE for Jupyter Notebooks"
     }
   ],
   "form": [

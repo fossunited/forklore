@@ -16,7 +16,7 @@ See something you can fix or make better? In the true spirit of Open-Source, we 
 
 Looking to get featured? Refer to [this document](/GET_FEATURED.md).
 
-### Prequesites
+### Prerequisites
 
 ```
 - node 20+
@@ -28,6 +28,6 @@ Looking to get featured? Refer to [this document](/GET_FEATURED.md).
 To get started with local development, follow these steps:
 
 - Clone this repository
-- Open this directory in termial, and run `yarn install`
+- Open this directory in terminal, and run `yarn install`
 - Start development server by running `yarn run dev`
 - The website should start running in `http://localhost:3000`
