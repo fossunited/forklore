@@ -1,21 +1,31 @@
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
-  "language": "en-US",
+  "language": "en-US,hi-IN",
   "version": "0.2",
+  "caseSensitive": false,
   "dictionaryDefinitions": [
     {
       "name": "project-words",
-      "path": "./.cspell/project-words.txt",
+      "path": ".cspell/project-words.txt",
+      "addWords": true
+    },
+    {
+      "name": "maintainer-words",
+      "path": ".cspell/maintainer-words.txt",
       "addWords": true
     }
   ],
-  "dictionaries": ["project-words"],
+  "dictionaries": ["project-words", "maintainer-words"],
   "ignorePaths": [
     "node_modules",
     ".cspell/project-words.txt",
     "dist",
     ".nuxt",
     ".output",
-    ".data"
+    ".data",
+    "**/*.svg",
+    "package.json",
+    "content/sample.json",
+    "**/*.ts"
   ]
 }
