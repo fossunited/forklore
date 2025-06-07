@@ -19,11 +19,10 @@ defineProps(["maintainer"]);
     </div>
     <div
       class="grid grid-cols-1"
-      :class="
-        maintainer.projects.length > 1
-          ? 'md:grid-cols-2 divide-x-custom'
-          : 'md:grid-cols-1'
-      "
+      :class="{
+        'md:grid-cols-2 divide-x-custom': maintainer.projects.length > 1,
+        'divide-y-custom': maintainer.projects.length > 2,
+      }"
     >
       <ProjectCard
         v-for="project in maintainer.projects"
