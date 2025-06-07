@@ -1,0 +1,26 @@
+name: cspell - Spell Check
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+
+jobs:
+  spellcheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install cspell globally
+        run: yarn global add cspell@latest
+
+      - name: Run cspell
+        run: yarn cspell
