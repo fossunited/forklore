@@ -15,13 +15,13 @@ const getMaintainerPlaceholderImage = () => {
 
 <template>
   <img
-    class="w-12 h-12 aspect-square"
+    class="w-14 h-14 aspect-square object-contain outline"
     v-if="maintainer.photo"
     :src="maintainer.photo"
   />
   <img
     v-else
-    class="w-12 h-12 aspect-square"
+    class="w-14 h-14 aspect-square"
     :src="getMaintainerPlaceholderImage()"
   />
 </template>
