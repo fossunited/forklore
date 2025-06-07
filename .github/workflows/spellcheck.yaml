@@ -17,3 +17,9 @@ jobs:
         with:
           config: "./cspell.json"
           incremental_files_only: false
+
+      - name: Show message on CSpell failure
+        if: failure() # This conditional makes the step run only on failure
+        run: |
+          echo "❌ Spell check failed."
+          echo "Is it a false error? Custom words can be added to ./.cspell/maintainer-words.txt"
