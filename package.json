@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate --no-prerender",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "cspell": "cspell ."
   },
   "dependencies": {
     "@nuxt/content": "^3.5.1",
