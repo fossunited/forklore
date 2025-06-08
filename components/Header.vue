@@ -60,7 +60,7 @@ const showHeaderLinks = ref(false);
           class="btn-subtle block md:!hidden"
           @click="showHeaderLinks = !showHeaderLinks"
           aria-label="Toggle Header Links"
-          :aria-expanded="showHeaderLinks.toString()"
+          :aria-expanded="showHeaderLinks"
         >
           <IconsMenu class="w-5 h-5" />
         </button>
