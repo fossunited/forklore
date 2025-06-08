@@ -18,10 +18,12 @@ const getMaintainerPlaceholderImage = () => {
     class="w-14 h-14 aspect-square object-contain outline"
     v-if="maintainer.photo"
     :src="maintainer.photo"
+    :alt="`Photo of ${maintainer.full_name}`"
   />
   <img
     v-else
     class="w-14 h-14 aspect-square"
     :src="getMaintainerPlaceholderImage()"
+    alt="Placeholder image for maintainer"
   />
 </template>

@@ -6,7 +6,7 @@ defineProps(["project"]);
     v-if="project.logo"
     class="h-20 aspect-[3/2] object-contain p-3 bg-white "
     :src="project.logo"
-    alt="Project Logo"
+    :alt="`Logo of ${project.name}`"
   />
   <div
     v-else
