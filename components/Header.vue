@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import LightModeIcon from "@/components/icons/LightModeIcon.vue";
 import DarkModeIcon from "@/components/icons/DarkModeIcon.vue";
 const colorMode = useColorMode();
@@ -35,6 +36,10 @@ const toggleColorMode = () => {
   }
 };
 
+const themeButtonLabel = computed(() => {
+  return colorMode.value === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+});
+
 const showHeaderLinks = ref(false);
 </script>
 <template>
@@ -48,12 +53,14 @@ const showHeaderLinks = ref(false);
 
       <div class="flex gap-2">
         <header-links class="hidden md:flex"></header-links>
-        <button class="btn-solid" @click="toggleColorMode()">
+        <button class="btn-solid" @click="toggleColorMode()" :aria-label="themeButtonLabel">
           <component :is="getButtonIcon()" />
         </button>
         <button
           class="btn-subtle block md:!hidden"
           @click="showHeaderLinks = !showHeaderLinks"
+          aria-label="Toggle Header Links"
+          :aria-expanded="showHeaderLinks.toString()"
         >
           <IconsMenu class="w-5 h-5" />
         </button>
