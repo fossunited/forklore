@@ -1,0 +1,40 @@
+{
+  "username": "BodduSriPavan-111",
+  "full_name": "Boddu Sri Pavan",
+  "photo": "https://avatars.githubusercontent.com/u/176265792?v=4",
+  "designation": "Data Scientist-I at Inductive Quotient Analytics",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/BodduSriPavan-111"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/boddusripavan/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "KitikiPlot",
+      "project_link": "https://github.com/BodduSriPavan-111/kitikiplot",
+      "website_link": "https://kitikiplot-documentation.vercel.app/",
+      "logo": "https://raw.githubusercontent.com/BodduSriPavan-111/kitikiplot-documentation/refs/heads/main/assets/logo.png",
+      "description": "ted by the disproportionately low number of quality FOSS projects coming out of India given a thriving industry compared to the explosion of projects that has happened globally over the last decade. The foundation aims to provide grassroots support to FOSS projects and events, and evolve into a community-industry collaboration with a diverse group of members and patrons. ",
+      "short_description": "A Python library to visualize categorical sliding window data."
+    }
+  ],
+  "form": [
+    {
+      "question": "What is your favorite color?",
+      "response": "Orange"
+    },
+    {
+      "question": "What was best about this conference?",
+      "response": "The Coffee"
+    },
+    {
+      "question": "This is a question for a big answer",
+      "response": "This is a response for a big answer, I can go on and on and on and never stop about this answer as we have to test out the limitation"
+    }
+  ]
+}
