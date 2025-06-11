@@ -19,22 +19,42 @@
       "project_link": "https://github.com/BodduSriPavan-111/kitikiplot",
       "website_link": "https://kitikiplot-documentation.vercel.app/",
       "logo": "https://raw.githubusercontent.com/BodduSriPavan-111/kitikiplot-documentation/refs/heads/main/assets/logo.png",
-      "description": "ted by the disproportionately low number of quality FOSS projects coming out of India given a thriving industry compared to the explosion of projects that has happened globally over the last decade. The foundation aims to provide grassroots support to FOSS projects and events, and evolve into a community-industry collaboration with a diverse group of members and patrons. ",
+      "description": "KitikiPlot is an open-source Python library designed for intuitive visualization of sequential categorical data using the sliding window technique. While Matplotlib excels at plotting continuous data, KitikiPlot fills the gap for categorical trends—making it ideal for researchers, data scientists, and analysts across genomics, electronics, weather forecasting, and more.",
       "short_description": "A Python library to visualize categorical sliding window data."
     }
   ],
   "form": [
     {
+      "question": "How to support?",
+      "response": "If you have ideas for applying KitikiPlot visualizations to your domain, feel free to raise an issue. If you're able to implement a feature or fix, go ahead and raise a PR! For documentation or other contributions, reach out to us via email—we’d be glad to receive your valuable input."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "KitikiPlot offers intuitive visualizations for categorical sliding window data, enabling users to set focus on sliding windows."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Sleep well. Health is wealth."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I see contributing to open source as a core responsibility. I benefit from open source, giving back is the least I can do!"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "DomainOutOfKnowledge Error Occurred !"
+    },
+    {
       "question": "What is your favorite color?",
       "response": "Orange"
     },
     {
-      "question": "What was best about this conference?",
-      "response": "The Coffee"
+      "question": "What was best about this FOSS Meetups?",
+      "response": "Coffee-time networking!"
     },
     {
-      "question": "This is a question for a big answer",
-      "response": "This is a response for a big answer, I can go on and on and on and never stop about this answer as we have to test out the limitation"
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🌐"
     }
   ]
 }
