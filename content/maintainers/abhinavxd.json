@@ -1,0 +1,60 @@
+{
+  "username": "abhinavxd",
+  "full_name": "Abhinav Raut",
+  "photo": "https://avatars.githubusercontent.com/u/48166553?v=4",
+  "designation": "Tech @ Zerodha",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/abhinavxd"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/abhinav-raut/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Libredesk",
+      "project_link": "https://github.com/abhinavxd/libredesk",
+      "website_link": "https://libredesk.io/",
+      "logo": "",
+      "description": "Open source, self-hosted customer support desk. Single binary app.",
+      "short_description": "Open source, self-hosted customer support desk. Single binary app."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "By using the project and contributing in any form code, documentation, feedback, or spreading the word."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Libredesk is a free, open-source, self-hosted customer support desk, a single-binary application built in Go with performance in mind."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Ship fast. Ship ugly. Ship again."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Why do you do it? For the joy of programming.  Why maintain a FOSS project? Because what I wanted, exactly how I wanted it, didn’t exist. So I built it.  What keeps you going? My mind is always racing with new ideas, I'm constantly excited, and writing code is the only way to keep up. Every day, I’m just waiting for the day to end so I can sit down and build that one feature / fix I’ve been thinking about."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Daft Punk - Harder, Better, Faster, Stronger"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "There’s no truly free, modern, high-performance open-source helpdesk, most are outdated, open-core with heavy limitations, or overly complex to manage and deploy."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🤹"
+    }
+  ]
+}
