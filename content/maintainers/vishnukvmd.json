@@ -22,7 +22,7 @@
       "name": "Ente",
       "project_link": "https://github.com/ente-io/ente",
       "website_link": "https://ente.io/",
-      "logo": "https://github.com/ente-io/ente/raw/main/.github/assets/ente-rocketship.png",
+      "logo": "https://rawcdn.githack.com/ente-io/ente/e1cb8e06a17093261443838d123407315b8ff542/.github/assets/ente-rocketship.png",
       "description": "Ente is a service that provides a fully open source, end-to-end encrypted platform for you to store your data in the cloud without needing to trust the service provider. On top of this platform, we have built two apps so far: Ente Photos (an alternative to Apple and Google Photos) and Ente Auth (a 2FA alternative to the deprecated Authy).",
       "short_description": "✨ End-to-end encrypted cloud for photos, videos and 2FA secrets."
     }

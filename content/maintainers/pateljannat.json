@@ -18,7 +18,7 @@
       "name": "Frappe Learning",
       "project_link": "https://github.com/frappe/lms",
       "website_link": "https://frappe.io/learning",
-      "logo": "https://github.com/frappe/lms/blob/bce45f44e419f0953f5f2fe96e85290ff8d57024/.github/lms-logo.png",
+      "logo": "https://rawcdn.githack.com/frappe/lms/bce45f44e419f0953f5f2fe96e85290ff8d57024/.github/lms-logo.png",
       "description": "Frappe Learning is a 100% open-source platform that helps you create structured courses with videos, quizzes, and assignments—perfect for educators, businesses, and content creators. Run live batches, track progress, and build a learning experience that works for you.",
       "short_description": "Frappe Learning is an easy-to-use learning system that helps you bring structure to your content."
     }

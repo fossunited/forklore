@@ -22,7 +22,7 @@
       "name": "Calibre",
       "project_link": "https://github.com/kovidgoyal/calibre",
       "website_link": "https://calibre-ebook.com",
-      "logo": "https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png",
+      "logo": "https://rawcdn.githack.com/kovidgoyal/calibre/37bb65087171dc7e9e0afa69b81b712e7b2b4df9/icons/calibre.png",
       "description": "calibre is an e-book manager. It can view, convert, edit and catalog e-books in all of the major e-book formats. It can also talk to e-book reader devices. It can go out to the internet and fetch metadata for your books. It can download newspapers and convert them into e-books for convenient reading. It is cross platform, running on Linux, Windows and macOS.",
       "short_description": "Open Source e-book manager"
     },
