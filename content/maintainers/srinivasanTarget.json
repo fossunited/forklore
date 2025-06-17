@@ -38,7 +38,7 @@
       "name": "WebDriverAgent MCP Server",
       "project_link": "https://github.com/AppiumTestDistribution/mcp-webdriveragent",
       "website_link": "",
-      "logo": "https://github.com/AppiumTestDistribution/mcp-webdriveragent/raw/main/assets/mcp-wdalogo.png",
+      "logo": "https://rawcdn.githack.com/AppiumTestDistribution/mcp-webdriveragent/862e0b8cb44cc3bf9a04c388b57a7acce0a411d0/assets/mcp-wdalogo.png",
       "description": "Model Context Protocol (MCP) server that provides tools for building and signing WebDriverAgent for iOS.",
       "short_description": "Model Context Protocol (MCP) server that provides tools for building and signing WebDriverAgent for iOS."
     },
