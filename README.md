@@ -10,6 +10,13 @@
 
 Forklore is a data driven Open-Source website consisting of stories of maintainers from all over India.
 
+## Social media campaign
+
+Everyone featured on Forklore was already or will be highlighted via the FOSS United Social media handles.
+
+| [Mastodon](https://mas.to/@fossunited)| [Blusky](https://bsky.app/profile/fossunited.mas.to.ap.brid.gy)| [LinkedIn](https://www.linkedin.com/company/fossunited/)| [Instagram](https://www.instagram.com/fossunited/) | [X/Twitter](https://x.com/fossunited)|
+|:--|:--|:--|:--|:--|
+
 ## Contribute
 
 See something you can fix or make better? In the true spirit of Open-Source, we welcome all contributions from our community.
