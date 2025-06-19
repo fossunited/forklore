@@ -2,7 +2,7 @@
 const navbarItems = [
   {
     label: "Get featured",
-    href: "https://github.com/fossunited/forklore/blob/292ea4717c37c5bcd9222d58e21cd957a1f46045/GET_FEATURED.md",
+    href: "https://github.com/fossunited/forklore/blob/develop/GET_FEATURED.md",
   },
   {
     label: "FOSS United Grants",
