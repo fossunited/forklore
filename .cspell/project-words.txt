@@ -7,3 +7,7 @@ fossunited
 prerender
 opensource
 Libredesk
+KitikiPlot
+Kitiki
+Blusky
+Vibinex
