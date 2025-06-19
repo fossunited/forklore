@@ -1,0 +1,52 @@
+{
+  "username": "BodduSriPavan-111",
+  "full_name": "Boddu Sri Pavan",
+  "photo": "https://avatars.githubusercontent.com/u/176265792?v=4",
+  "designation": "Data Scientist-I at Inductive Quotient Analytics",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/BodduSriPavan-111"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/boddusripavan/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "KitikiPlot",
+      "project_link": "https://github.com/BodduSriPavan-111/kitikiplot",
+      "website_link": "https://kitikiplot-documentation.vercel.app/",
+      "logo": "https://raw.githubusercontent.com/BodduSriPavan-111/kitikiplot-documentation/refs/heads/main/assets/logo.png",
+      "description": "KitikiPlot is an open-source Python library designed for intuitive visualization of sequential categorical data using the sliding window technique. While Matplotlib excels at plotting continuous data, KitikiPlot fills the gap for categorical trends—making it ideal for researchers, data scientists, and analysts across genomics, electronics, weather forecasting, and more.",
+      "short_description": "A Python library to visualize categorical sliding window data."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support?",
+      "response": "If you have ideas for applying KitikiPlot visualizations to your domain, feel free to raise an issue. If you're able to implement a feature or fix, go ahead and raise a PR! For documentation or other contributions, reach out to us via email—we’d be glad to receive your valuable input."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "KitikiPlot offers intuitive visualizations for categorical sliding window data, enabling users to set focus on sliding windows."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Sleep well. Health is wealth."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I see contributing to open source as a core responsibility. I benefit from open source, giving back is the least I can do!"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "DomainOutOfKnowledge Error Occurred !"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🌐"
+    }
+  ]
+}
