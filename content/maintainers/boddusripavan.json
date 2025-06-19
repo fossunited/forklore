@@ -45,14 +45,6 @@
       "response": "DomainOutOfKnowledge Error Occurred !"
     },
     {
-      "question": "What is your favorite color?",
-      "response": "Orange"
-    },
-    {
-      "question": "What was best about this FOSS Meetups?",
-      "response": "Coffee-time networking!"
-    },
-    {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
       "response": "🌐"
     }
