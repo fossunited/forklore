@@ -8,8 +8,5 @@ Looking to get yourself up there along with others? It's easy!
 
 ### Steps:
 
-- Start by forking this repository.
-- Create a `.json` file in the [`/content/maintainers`](/content/maintainers/) directory with your details.
-- Need reference? Check out the [sample json file](/content/sample.json) or explore other maintainers' json files for guidance.
-- Submit a pull request with your json file, and once it's merged, you'll be featured on the website!
-- You're all set—welcome aboard!
+- Open a "Get Featured" issue via https://github.com/fossunited/forklore/issues/new/choose
+- Add your information and responses to the questions in the issue template
