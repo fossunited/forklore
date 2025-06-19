@@ -22,7 +22,7 @@
       "name": "pyodide",
       "project_link": "https://github.com/pyodide/pyodide",
       "website_link": "https://pyodide.org/en/stable/",
-      "logo": "https://pyodide.org/en/stable/_static/pyodide-logo.png",
+      "logo": "https://rawcdn.githack.com/pyodide/pyodide/23a813c4003b91d4eb8b470e2665b93448fe1e3b/docs/_static/img/pyodide-logo.png",
       "description": "Pyodide makes it possible to install and run Python packages in the browser with micropip. Any pure Python package with a wheel available on PyPI is supported. Many packages with C extensions have also been ported for use with Pyodide. These include many general-purpose packages such as regex, pyyaml, lxml and scientific Python packages including numpy, pandas, scipy, matplotlib, and scikit-learn.",
       "short_description": "Pyodide is a Python distribution for the browser and Node.js based on WebAssembly"
     }
