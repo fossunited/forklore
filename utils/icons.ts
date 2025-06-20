@@ -4,34 +4,30 @@ import Codeberg from "~/components/icons/Codeberg.vue";
 import ArrowUpRight from "~/components/icons/ArrowUpRight.vue";
 import WebIcon from "~/components/icons/WebIcon.vue";
 import LinkedIn from "~/components/icons/LinkedIn.vue";
+import Twitter from "~/components/icons/Twitter.vue";
+import Mastodon from "~/components/icons/Mastodon.vue";
+import BlueSky from "~/components/icons/BlueSky.vue";
+import BitBucket from "~/components/icons/BitBucket.vue";
 
-type IconComponent = typeof Github | typeof Gitlab | typeof Codeberg;
-
-type IconMap = {
-  web: typeof WebIcon;
-  github: typeof Github;
-  gitlab: typeof Gitlab;
-  codeberg: typeof Codeberg;
-  "arrow-up-right": typeof ArrowUpRight;
-  linkedin: typeof LinkedIn;
-};
-
-const icons: IconMap = {
+const icons = {
   web: WebIcon,
   github: Github,
   gitlab: Gitlab,
   codeberg: Codeberg,
   linkedin: LinkedIn,
+  x: Twitter,
+  twitter: Twitter,
+  mastodon: Mastodon,
+  bluesky: BlueSky,
+  bitbucket: BitBucket,
   "arrow-up-right": ArrowUpRight,
-};
+} as const;
+
+type IconMap = typeof icons;
+type IconComponent = IconMap[keyof IconMap];
 
 const iconMapper = (label: string): IconComponent => {
-  const key = label.toLowerCase() as keyof IconMap;
-  const icon = icons[key];
-  if (!icon) {
-    return icons.web;
-  }
-  return icon;
+  return icons[label.toLowerCase() as keyof IconMap] || WebIcon;
 };
 
 export default iconMapper;
