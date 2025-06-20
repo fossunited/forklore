@@ -9,12 +9,11 @@ defineProps(["project"]);
       <div class="flex flex-col gap-3">
         <h5 class="font-semibold">{{ project.name }}</h5>
         <a
-          @click.stop
           class="btn-subtle text-sm"
           :href="project.project_link"
           target="_blank"
         >
-          <span>View Repository</span>
+          <span>View Source</span>
           <IconsArrowUpRight class="w-5 h-5"></IconsArrowUpRight>
         </a>
       </div>
