@@ -3,6 +3,7 @@ import Gitlab from "~/components/icons/Gitlab.vue";
 import Codeberg from "~/components/icons/Codeberg.vue";
 import ArrowUpRight from "~/components/icons/ArrowUpRight.vue";
 import WebIcon from "~/components/icons/WebIcon.vue";
+import LinkedIn from "~/components/icons/LinkedIn.vue";
 
 type IconComponent = typeof Github | typeof Gitlab | typeof Codeberg;
 
@@ -12,6 +13,7 @@ type IconMap = {
   gitlab: typeof Gitlab;
   codeberg: typeof Codeberg;
   "arrow-up-right": typeof ArrowUpRight;
+  linkedin: typeof LinkedIn;
 };
 
 const icons: IconMap = {
@@ -19,6 +21,7 @@ const icons: IconMap = {
   github: Github,
   gitlab: Gitlab,
   codeberg: Codeberg,
+  linkedin: LinkedIn,
   "arrow-up-right": ArrowUpRight,
 };
 
