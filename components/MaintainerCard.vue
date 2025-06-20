@@ -3,8 +3,12 @@ defineProps(["maintainer"]);
 </script>
 <template>
   <div
-    class="flex flex-col border outline-0 hover:outline-1 hover:cursor-pointer"
+    class="flex flex-col border outline-0 hover:outline-1 hover:cursor-pointer focus:outline-1"
+    tabindex="0"
+    role="button"
     @click="$router.push(maintainer.path)"
+    @keydown.enter="$router.push(maintainer.path)"
+    @keydown.space.prevent="$router.push(maintainer.path)"
   >
     <div
       class="p-8 flex gap-4 items-center bg-tertiary-light dark:bg-tertiary-dark"

@@ -14,7 +14,7 @@ defineProps(["project"]);
           :href="project.project_link"
           target="_blank"
         >
-          <span>View Repository</span>
+          <span>View Source</span>
           <IconsArrowUpRight class="w-5 h-5"></IconsArrowUpRight>
         </a>
       </div>
