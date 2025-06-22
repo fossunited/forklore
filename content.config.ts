@@ -27,6 +27,7 @@ const maintainerSchema = z.object({
       response: z.string(),
     })
   ),
+  projects_list: z.string(),
 });
 
 export default defineContentConfig({
