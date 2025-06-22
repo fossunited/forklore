@@ -16,6 +16,7 @@ const getMaintainerPlaceholderImage = () => {
 <template>
   <img
     class="w-14 h-14 aspect-square object-contain outline"
+    loading="lazy"
     v-if="maintainer.photo"
     :src="maintainer.photo"
     :alt="`Photo of ${maintainer.full_name}`"
