@@ -14,6 +14,7 @@ const normalizedMaintainers = computed(() =>
 );
 
 const query = ref("");
+const searchInputRef = ref<HTMLInputElement | null>(null);
 
 const miniSearch = new MiniSearch({
   fields: ["username", "full_name", "projects_list"],
@@ -36,17 +37,31 @@ const result = computed(() => {
     .map((hit) => maintainers.value!.find((m) => m.id === hit.id))
     .filter((m): m is MaintainersCollectionItem => m !== undefined);
 });
+
+onMounted(() => {
+  window.addEventListener("keydown", (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key == "k") {
+      e.preventDefault();
+      searchInputRef.value?.focus();
+    }
+  });
+});
 </script>
 
 <template>
   <div class="flex flex-col gap-8 px-8 py-10">
-    <UiSearchInput class=" max-w-90" v-model="query" placeholder="Search Maintainers" />
+    <UiSearchInput
+      ref="searchInputRef"
+      class="max-w-90"
+      v-model="query"
+      placeholder="Search Maintainers"
+    />
     <MaintainerCard
       v-for="maintainer in result"
       :key="maintainer.id"
       :maintainer="maintainer"
     />
-    <div v-if="!result.length" class="flex flex-col items-center gap-2">
+    <div v-if="!result.length" class="flex flex-col items-center gap-2 mt-12">
       <span>¯\_(ツ)_/¯</span>
       <h5 class="text-base uppercase">No Maintainers Found</h5>
     </div>
