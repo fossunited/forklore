@@ -10,7 +10,7 @@ const query = defineModel<string>();
       v-model="query"
       type="text"
       placeholder="Search"
-      class="input w-full text-sm focus:outline-none"
+      class="input w-full dark:placeholder:text-secondary-dark placeholder:text-secondary-light text-sm focus:outline-none"
     />
   </div>
 </template>
