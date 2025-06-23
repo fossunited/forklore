@@ -8,6 +8,6 @@ prerender
 opensource
 Libredesk
 KitikiPlot
-Kitiki
-Blusky
 Vibinex
+Hashnode
+minisearch

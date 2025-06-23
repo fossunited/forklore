@@ -14,7 +14,7 @@ Forklore is a data driven Open-Source website consisting of stories of maintaine
 
 Everyone featured on Forklore was already or will be highlighted via the FOSS United Social media handles.
 
-| [Mastodon](https://mas.to/@fossunited)| [Blusky](https://bsky.app/profile/fossunited.mas.to.ap.brid.gy)| [LinkedIn](https://www.linkedin.com/company/fossunited/)| [Instagram](https://www.instagram.com/fossunited/) | [X/Twitter](https://x.com/fossunited)|
+| [Mastodon](https://mas.to/@fossunited)| [Bluesky](https://bsky.app/profile/fossunited.mas.to.ap.brid.gy)| [LinkedIn](https://www.linkedin.com/company/fossunited/)| [Instagram](https://www.instagram.com/fossunited/) | [X/Twitter](https://x.com/fossunited)|
 |:--|:--|:--|:--|:--|
 
 ## Contribute
