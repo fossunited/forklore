@@ -677,10 +677,10 @@
     ufo "^1.6.1"
     youch "^4.1.0-beta.7"
 
-"@nuxt/content@^3.6.0":
-  version "3.6.0"
-  resolved "https://registry.npmjs.org/@nuxt/content/-/content-3.6.0.tgz"
-  integrity sha512-iqkcWf8M00fq7ZqF2qaHgcoKzRVOTMUp7dLkPCBrARmAKvV4kHdYyKjcf94kiNeKzIeqa73l3c1P8YMno/GgRQ==
+"@nuxt/content@^3.6.1":
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/@nuxt/content/-/content-3.6.1.tgz#b272124c3c0b12df43999ad2e44fc95f6c6d040b"
+  integrity sha512-uW0XBvlofPYhgBJajWvlsZpIUig4RfA8h5zaqcMbZdMYBtM+0NXyn/PDWuxMkdHd13vX6FPDobT3gC7mYq9bbQ==
   dependencies:
     "@nuxt/kit" "^3.17.5"
     "@nuxtjs/mdc" "0.17.0"
