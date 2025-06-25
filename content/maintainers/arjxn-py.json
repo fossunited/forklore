@@ -1,0 +1,64 @@
+{
+  "username": "arjxn-py",
+  "full_name": "Arjun Verma",
+  "photo": "https://avatars.githubusercontent.com/u/104268427?v=4",
+  "designation": "",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/arjxn-py"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/arjun-verma-758608226/"
+    },
+    {
+      "label": "Bluesky",
+      "link": "https://bsky.app/profile/arjxn-py.bsky.social"
+    }
+  ],
+  "projects": [
+    {
+      "name": "JupyterGIS",
+      "project_link": "https://github.com/geojupyter/jupytergis",
+      "website_link": "https://jupytergis.readthedocs.io",
+      "logo": "https://rawcdn.githack.com/geojupyter/jupytergis/830d5e3fea5d78576d6cc0932aa1bfbba7fba7fa/packages/base/style/icons/logo.svg",
+      "description": "JupyterGIS is a JupyterLab extension for collaborative GIS (Geographical Information System). It is designed to allow multiple people to work on the same geospatial project simultaneously, facilitating discussion and collaboration around map layers, spatial analyses, and other GIS data being developed.",
+      "short_description": "Collaborative GIS editor in Jupyter"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "We welcome and appreciate all forms of support for JupyterGIS. Whether you're interested in contributing code, reporting issues, improving documentation, or simply sharing feedback. To make it easier for new contributors to get started, we host bi-weekly hackathons focused on onboarding and collaboration. You can learn more about how to get involved by visiting: https://geojupyter.org/about.html"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "JupyterGIS is a JupyterLab extension designed for collaborative GIS (Geographical Information System) work, enabling multiple users to work on the same geospatial project in real-time. It facilitates teamwork by allowing shared editing, visualization, and annotation of map layers and spatial data directly within the JupyterLab environment.  The extension supports seamless import and export of QGIS project files, preserving styles, data sources, and project settings for smooth transitions between desktop GIS work and cloud-based collaboration. Users can also integrate Python geospatial libraries like GeoPandas, Xarray, and Rasterio to perform custom analyses and automate workflows, making JupyterGIS a robust platform for both collaborative mapping and advanced geospatial analysis."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Find what genuinely excites you, and once you’ve pursue it, commit to it — It might overwhelm you in the start but the challenges will shape you, the wins will motivate you, and over time, every bit of effort will prove to be worth it.  Don’t be afraid to ask questions or make mistakes. Stay humble, always be open to learning from anyone—regardless of their experience—and never hesitate to share your own knowledge. Open source thrives on collaboration and generosity, and so will you."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "There was no entry barrier, people were super supportive—that’s what drew me in. From not being able to afford proper meals while living away from home, to not having the means to buy a basic computer, to now being able to fulfill my responsibilities and see small dreams come to life—open source has given me a lot. I feel it's my duty to give back.  What keeps me going today is the opportunity to collaborate with people I’ve always looked up to. Seeing my work make a real-world impact brings me personal joy. And beyond that, it also helps me establish myself, as I get full credit for the work I do."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Around The World - Daft Punk  Quite Obvious, right? 🤧"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "UI-Tests/ - So flaky yet so critical"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🏄🏻‍♂️  It might feel scary at first, but once you're in, it’s one hell of a ride."
+    }
+  ]
+}
