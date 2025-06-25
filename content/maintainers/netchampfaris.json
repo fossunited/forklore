@@ -1,0 +1,60 @@
+{
+  "username": "netchampfaris",
+  "full_name": "Faris Ansari",
+  "photo": "https://avatars.githubusercontent.com/u/9355208?v=4",
+  "designation": "",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/netchampfaris"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/netchampfaris/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Frappe UI",
+      "project_link": "https://github.com/frappe/frappe-ui/",
+      "website_link": "https://ui.frappe.io/",
+      "logo": "https://rawcdn.githack.com/frappe/frappe-ui/6025cdae9779b2e6ca65862a619c23288e08e67f/public/frappe-ui-square.png",
+      "description": "Frappe UI is a set of components and utilities to build frontend apps based on the Frappe Framework. Along with generic components which are required to build a frontend like Button, Link, Dialog, etc., frappe-ui also contains utilities for handling server-side data fetching, directives and utilities.",
+      "short_description": " A set of components and utilities for rapid UI development in Frappe"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "If you are building a Vue-based frontend app on top of Frappe Framework, I would recommend using frappe-ui. If you are using frappe-ui, I would love to get feedback on developer experience of using it."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Frappe UI is an opinionated set of components and utilities for rapidly building Vue-based frontend apps on top of Frappe Framework. It not only ships with UI components, but also data fetching and managing utilities that are at the core of building apps."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Don't let users design solution to their problems, understand their problems and come up with your own solutions."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Honestly, I do this project because it makes my colleague's and my life easier. I am building Gameplan which is a frontend on top of Frappe Framework app. Since we are building a bunch of apps like these, it made sense to extract common code into a reusable package."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Adventure of a lifetime - Coldplay"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://github.com/frappe/frappe-ui/blob/main/src/components/Input.vue  Tries to do too many things"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🤷🏻‍♂️"
+    }
+  ]
+}

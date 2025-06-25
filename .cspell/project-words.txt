@@ -14,3 +14,9 @@ minisearch
 Magento
 Projekt
 Commoning
+geospatial
+hackathons
+QGIS
+Rasterio
+Xarray
+Gameplan
