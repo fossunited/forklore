@@ -13,7 +13,7 @@
   "dependencies": {
     "@nuxt/content": "^3.6.1",
     "@nuxtjs/color-mode": "3.5.2",
-    "@tailwindcss/vite": "^4.1.10",
+    "@tailwindcss/vite": "^4.1.11",
     "better-sqlite3": "^12.1.0",
     "minisearch": "^7.1.2",
     "nuxt": "^3.17.5",
