@@ -17,7 +17,7 @@
     "better-sqlite3": "^12.2.0",
     "feed": "^5.1.0",
     "minisearch": "^7.1.2",
-    "nuxt": "^3.17.5",
+    "nuxt": "^3.17.7",
     "tailwindcss": "^4.1.7",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1",
