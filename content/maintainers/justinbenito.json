@@ -1,0 +1,64 @@
+{
+  "username": "justinbenito",
+  "full_name": "Justin Benito",
+  "photo": "https://avatars.githubusercontent.com/u/83128918?v=4",
+  "designation": "Founder @ limegreen.studio | Student",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/justinbenito"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/justinbenito/"
+    },
+    {
+      "label": "Web",
+      "link": "https://justinbenito.com/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "tamilnadu.tech",
+      "project_link": "https://github.com/fossuchennai/communities",
+      "website_link": "https://tamilnadu.tech",
+      "logo": "",
+      "description": "Similar to blr.today, All the Tamil Nadu Tech Meetups are aggregated and displayed in one place, helping the tech ecosystem of tamil nadu to thrive.",
+      "short_description": "Get All your Tamil Nadu Tech Meetups in one place"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Follow me on linkedin, that's more than enough XD: https://www.linkedin.com/in/justinbenito/"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "All your Tamil Nadu Tech Meetups aggregated in one single place"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "open source is not that scary ( a bit yes 🥰 ) so just start building and launching and listening to the community 🚀"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I strongly believe that great products involve a lot of great minds, and the internet is just the right place to find some great minds. You get to learn a lot from them."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "vetti pasanga vela ithunu solluravanga vetu payaga ( song: aagasam ) from soorarai potru"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "event.d.ts 🥰 ( not a big fan of typescript )"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "nothing as of now, but maybe in the multiverse: if a company rejects me and out of pure spite I build an open source version of them, that's the level of villainy I can imagine 😈"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "💫"
+    }
+  ]
+}
