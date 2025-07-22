@@ -51,7 +51,7 @@ const colorMode = useColorMode();
                 </p>
                 <div class="flex items-center justify-center">
                   <div class="w-16 h-16 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center p-2"
-                       :class="colorMode.value === 'light' ? 'bg-gray-800' : 'bg-white'">
+                       :class="colorMode.value === 'light' ? 'bg-gray-800' : 'bg-gray-800'">
                     <img
                       class="w-full h-full object-contain"
                       src="/logo/fossunited_logo.svg"
