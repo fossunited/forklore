@@ -1,0 +1,68 @@
+{
+  "username": "marketcalls",
+  "full_name": "Rajandran R",
+  "photo": "",
+  "designation": "Creator, OpenAlgo",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/marketcalls"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/rajandranr/"
+    },
+    {
+      "label": "Web",
+      "link": "https://www.openalgo.in/"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://x.com/openalgoHQ"
+    }
+  ],
+  "projects": [
+    {
+      "name": "OpenAlgo",
+      "project_link": "https://github.com/marketcalls/openalgo",
+      "website_link": "https://www.openalgo.in/",
+      "logo": "https://www.openalgo.in/assets/images/android-chrome-192x192.png",
+      "description": " OpenAlgo is a self-hosted platform that makes automating trading orders easy and efficient. Designed with the flexibility to operate from your desktop, laptop, or on servers, OpenAlgo is built using the Python Flask Framework. Traders can connect their algo strategies seamlessly with top Indian brokers. Run your strategies from any platform - Amibroker, TradingView, Python, ChartInk, MetaTrader, Excel, N8N or Google Sheets.",
+      "short_description": "Self Hostable Personal Algo Trading Platform for Retail Traders."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Use OpenAlgo, report bugs, share feedback, and spread the word to fellow traders. Contributions like broker modules, documentation improvements, and feature ideas help the most. Even a GitHub star or a constructive issue can go a long way in making the platform better for everyone."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "OpenAlgo is a personal algo trading platform for retail traders. It removes the complexity of broker APIs and provides a unified way to execute trades across multiple brokers using your favorite tools like TradingView, Excel, Amibroker, nodejs or Python. Whether you're a hobbyist trader or an advanced quant, OpenAlgo makes it easier to automate your edge."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Don’t wait for perfect. Ship early, and build openly. The community will shape your project better than any solo roadmap. Also: Document everything, make tutorials and versioning save lives!"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I thought it was cool to build something openly. It’s even cooler to architect something complex from scratch and watch it evolve over time. I enjoy the process of shaping things gradually and, most of all, simplifying complexity - making powerful tools accessible to more people."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "\"Hall of Fame\" by The Script - because OpenAlgo was built not by big firms, but by regular traders building something that matters."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Let’s flip that. Instead of setting it on fire, I’d highlight the most interesting file: blueprints/strategy.py. This is where the magic happens — the core logic that routes strategy execution, handles trade flows, and connects the trader's intent to real-world execution. It’s been refactored so many times, you can see the evolution of OpenAlgo in that one file."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "There were no open-source algo trading platforms that supported multiple brokers and multiple platforms for Indian markets - stocks, commodities, currencies - nothing. Everything was locked behind vendor paywalls. Even the simplest logic flows were hidden or monetized. That’s what really annoyed me. So I decided to break the gate-keeping and build something open, flexible, and truly for traders."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🛠️ — because you're always tweaking, patching, and improving. It's more craft than code some days."
+    }
+  ]
+}
