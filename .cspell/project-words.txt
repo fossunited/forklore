@@ -32,3 +32,8 @@ payaga
 aagasam
 soorarai
 potru
+amibroker
+hostable
+NASSCOM
+Lakechain
+Graype
