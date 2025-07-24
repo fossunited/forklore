@@ -23,14 +23,14 @@
           Contribute
         </a>
 
-        <a
+        <!--<a
           class="flex text-sm gap-2 items-center btn-subtle w-fit"
           href="https://forklore.in/rss"
           target="_blank"
         >
           <IconsRSS class="w-5 h-5" />
           RSS
-        </a>
+        </a>-->
 
         <a href="mailto:foundation@fossunited.org" class="link flex gap-2">
           <IconsEmailIcon class="w-5 h-5" />
