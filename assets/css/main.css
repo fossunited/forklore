@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark-mode, .dark-mode *));
 
 @theme {
     --default-font-family: "Geist Mono", monospace;
+	--default-sans-family: "Inter", sans-serif;
     --color-primary-dark: #18222A;
     --color-primary-light: #FAFAFA;
     --color-secondary-dark: #CFF2DA;
@@ -80,6 +82,14 @@ html {
             conic-gradient(at var(--s) var(--s), #0000 75%, #000 0)
             0 0/calc(100% - var(--s)) calc(100% - var(--s));
     }
+	.sans-text {
+   		font-family: --default-sans-family;
+		line-height: 2;
+	
+	}
+	.sans-text a{
+		text-decoration: underline;
+	}
 }
 
 @layer base {
