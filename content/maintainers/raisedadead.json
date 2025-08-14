@@ -42,7 +42,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "You can support freeCodeCamp.org by donating to our nonprofit organization at https://freecodecamp.org/donate. Your contributions help us maintain and improve the platform, ensuring that we can continue to provide free coding education to millions of people around the world. You can also support me directly by sponsoring my work on GitHub at https://github.com/sponsors/raisedadead."
+      "response": "You can support freeCodeCamp.org by donating to our nonprofit organization at <a href='https://freecodecamp.org/donate.'>https://freecodecamp.org/donate.</a> Your contributions help us maintain and improve the platform, ensuring that we can continue to provide free coding education to millions of people around the world. You can also support me directly by sponsoring my work on GitHub at <a href='https://github.com/sponsors/raisedadead.'>https://github.com/sponsors/raisedadead.</a>"
     },
     {
       "question": "A small brief about your project",

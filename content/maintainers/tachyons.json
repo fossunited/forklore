@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "You can make contributions as code, documentation, localization or money -https://opencollective.com/circuitverse"
+      "response": "You can make contributions as code, documentation, localization or money -<a href='https://opencollective.com/circuitverse'>https://opencollective.com/circuitverse</a>"
     },
     {
       "question": "A small brief about your project",

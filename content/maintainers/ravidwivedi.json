@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "By installing Prav app (check https://prav.app),  sending donations https://prav.app/donate , volunteering (https://prav.app/get-involved/) or by becoming a member of the cooperative https://prav.app/become-a-member/"
+      "response": "By installing Prav app (check <a href='https://prav.app'>https://prav.app</a>),  sending donations <a href='https://prav.app/donate'>https://prav.app/donate</a> , volunteering (<a href='https://prav.app/get-involved/'>https://prav.app/get-involved/</a>) or by becoming a member of the cooperative <a href='https://prav.app/become-a-member/'>https://prav.app/become-a-member/</a>"
     },
     {
       "question": "A small brief about your project",

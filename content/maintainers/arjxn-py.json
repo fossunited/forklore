@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "We welcome and appreciate all forms of support for JupyterGIS. Whether you're interested in contributing code, reporting issues, improving documentation, or simply sharing feedback. To make it easier for new contributors to get started, we host bi-weekly hackathons focused on onboarding and collaboration. You can learn more about how to get involved by visiting: https://geojupyter.org/about.html"
+      "response": "We welcome and appreciate all forms of support for JupyterGIS. Whether you're interested in contributing code, reporting issues, improving documentation, or simply sharing feedback. To make it easier for new contributors to get started, we host bi-weekly hackathons focused on onboarding and collaboration. You can learn more about how to get involved by visiting: <a href='https://geojupyter.org/about.html'>https://geojupyter.org/about.html</a>"
     },
     {
       "question": "A small brief about your project",

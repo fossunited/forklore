@@ -34,7 +34,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "You can contribute to the projects by using them and giving feedback, resolving issues, fixing bugs, getting involved in the discussions. And you can also contribute financially as a GitHub sponsor: https://github.com/networkx . You can also hire me so that I can donate the time I spend on looking for opportunities into nx-parallel and networkx instead :)"
+      "response": "You can contribute to the projects by using them and giving feedback, resolving issues, fixing bugs, getting involved in the discussions. And you can also contribute financially as a GitHub sponsor: <a href='https://github.com/networkx'>https://github.com/networkx</a> . You can also hire me so that I can donate the time I spend on looking for opportunities into nx-parallel and networkx instead :)"
     },
     {
       "question": "A small brief about your project",
@@ -54,7 +54,7 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "Timing script: https://github.com/networkx/nx-parallel/blob/main/timing/timing_all_functions.py"
+      "response": "Timing script: <a href='https://github.com/networkx/nx-parallel/blob/main/timing/timing_all_functions.py'>https://github.com/networkx/nx-parallel/blob/main/timing/timing_all_functions.py</a>"
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",

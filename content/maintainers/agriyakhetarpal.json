@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Contributions for code, docs, community examples, and design work are welcome! 🤗 Also, if you have the privilege to contribute financially, please consider donating to us on our OpenCollective page at https://opencollective.com/pyodide or via GitHub Sponsors at https://github.com/sponsors/pyodide"
+      "response": "Contributions for code, docs, community examples, and design work are welcome! 🤗 Also, if you have the privilege to contribute financially, please consider donating to us on our OpenCollective page at <a href='https://opencollective.com/pyodide'>https://opencollective.com/pyodide</a> or via GitHub Sponsors at <a href='https://github.com/sponsors/pyodide'>https://github.com/sponsors/pyodide</a>"
     },
     {
       "question": "A small brief about your project",

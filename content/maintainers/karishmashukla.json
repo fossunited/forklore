@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-		"response": "Star the repository, contribute if you love what we’re building, or make a one-time donation: https://bit.ly/maxun-oss. Every little bit helps us keep the lights on and the robots running."
+      "response": "Star the repository, contribute if you love what we’re building, or make a one-time donation: <a href='https://bit.ly/maxun-oss.'>https://bit.ly/maxun-oss.</a> Every little bit helps us keep the lights on and the robots running."
     },
     {
       "question": "A small brief about your project",

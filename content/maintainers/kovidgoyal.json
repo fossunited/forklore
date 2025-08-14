@@ -38,11 +38,11 @@
   "form": [
     {
       "question": "How to support",
-      "response": "https://calibre-ebook.com/donate or Github Sponsors."
+      "response": "<a href='https://calibre-ebook.com/donate'>https://calibre-ebook.com/donate</a> or Github Sponsors."
     },
     {
       "question": "A small brief about your project",
-      "response": "calibre is the leading solution for managing your ebooks\noutside all walled gardens. It can view, edit, convert dozens\nof ebook formats and is used by millions of people from around the\nworld."
+      "response": "calibre is the leading solution for managing your ebooks<br>outside all walled gardens. It can view, edit, convert dozens<br>of ebook formats and is used by millions of people from around the<br>world."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
@@ -50,7 +50,7 @@
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": "I love to code and open source is the way I can spend the largest\nfraction of my day, every day coding. And there is nothing quite like\nthe joy you get from building something used by millions of people to\nmake the world a very slightly better place."
+      "response": "I love to code and open source is the way I can spend the largest<br>fraction of my day, every day coding. And there is nothing quite like<br>the joy you get from building something used by millions of people to<br>make the world a very slightly better place."
     },
     {
       "question": "What keeps you going?",

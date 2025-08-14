@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "GitHub Sponsors - https://github.com/sponsors/mr-karan/"
+      "response": "GitHub Sponsors - <a href='https://github.com/sponsors/mr-karan/'>https://github.com/sponsors/mr-karan/</a>"
     },
     {
       "question": "A small brief about your project",

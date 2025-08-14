@@ -26,7 +26,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "GitHub Sponsors - https://github.com/sponsors/shivammathur"
+      "response": "GitHub Sponsors - <a href='https://github.com/sponsors/shivammathur'>https://github.com/sponsors/shivammathur</a>"
     },
     {
       "question": "A small brief about your project",
@@ -46,7 +46,7 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "https://github.com/shivammathur/setup-php/blob/main/src/configs/tools.json. I would like to build a proper registry where projects can register their tools to add support in a standard way."
+      "response": "<a href='https://github.com/shivammathur/setup-php/blob/main/src/configs/tools.json.'>https://github.com/shivammathur/setup-php/blob/main/src/configs/tools.json.</a> I would like to build a proper registry where projects can register their tools to add support in a standard way."
     },
     {
       "question": "What's your open-source villain origin story?",

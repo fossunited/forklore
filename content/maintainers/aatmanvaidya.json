@@ -13,8 +13,8 @@
       "link": "https://www.linkedin.com/in/aatmanvaidya/"
     },
     {
-        "label": "Web",
-        "link": "https://aatmanvaidya.github.io/"
+      "label": "Web",
+      "link": "https://aatmanvaidya.github.io/"
     }
   ],
   "projects": [
@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "GitHub Sponsors @ https://github.com/sponsors/tattle-made"
+      "response": "GitHub Sponsors @ <a href='https://github.com/sponsors/tattle-made'>https://github.com/sponsors/tattle-made</a>"
     },
     {
       "question": "A small brief about your project",
@@ -46,11 +46,11 @@
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "Jaane Jaan Dhoondta Phir Raha by Kishore Kumar & Asha Bhosle - https://youtu.be/V3tB5Wu2ifg. (side note), the background song for our repo would be The Pink Panther Theme - https://youtu.be/VyZiIuMufTA"
+      "response": "Jaane Jaan Dhoondta Phir Raha by Kishore Kumar & Asha Bhosle - <a href='https://youtu.be/V3tB5Wu2ifg.'>https://youtu.be/V3tB5Wu2ifg.</a> (side note), the background song for our repo would be The Pink Panther Theme - <a href='https://youtu.be/VyZiIuMufTA'>https://youtu.be/VyZiIuMufTA</a>"
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "Since Python does not have any tool/action that can do semantic versioning for multiple packages in a monorepo, we wrote a custom script for it - https://github.com/tattle-made/feluda/blob/main/scripts/semantic_release_workflow.py. The code is very complicated and long, I always keep praying that this code should not break and it always keeps me on my toes. Hence, this is the file I would like to set on fire"
+      "response": "Since Python does not have any tool/action that can do semantic versioning for multiple packages in a monorepo, we wrote a custom script for it - <a href='https://github.com/tattle-made/feluda/blob/main/scripts/semantic_release_workflow.py.'>https://github.com/tattle-made/feluda/blob/main/scripts/semantic_release_workflow.py.</a> The code is very complicated and long, I always keep praying that this code should not break and it always keeps me on my toes. Hence, this is the file I would like to set on fire"
     },
     {
       "question": "What's your open-source villain origin story?",

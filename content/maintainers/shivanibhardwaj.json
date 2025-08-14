@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "There are several ways to support.\n 1. Become a consortium member and help financially. https://oisf.net/consortium \n 2. Contribute code, tickets, documentation and help others in the community. https://suricata.io/community \n 3. Take the word out about the project."
+      "response": "There are several ways to support.<br> 1. Become a consortium member and help financially. <a href='https://oisf.net/consortium'>https://oisf.net/consortium</a> <br> 2. Contribute code, tickets, documentation and help others in the community. <a href='https://suricata.io/community'>https://suricata.io/community</a> <br> 3. Take the word out about the project."
     },
     {
       "question": "A small brief about your project",
@@ -46,11 +46,11 @@
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "Approved unanimously by OISF: Mahna Mahna 😃  www.youtube.com/watch?v=zb47CstE7R4"
+      "response": "Approved unanimously by OISF: Mahna Mahna 😃  <a href='https://www.youtube.com/watch?v=zb47CstE7R4'>https://www.youtube.com/watch?v=zb47CstE7R4</a>"
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "https://i.programmerhumor.io/2023/09/programmerhumor-io-programming-memes-f1c903e48ba80e3.jpg. Hard to choose. 😛"
+      "response": "<img src='https://i.programmerhumor.io/2023/09/programmerhumor-io-programming-memes-f1c903e48ba80e3.jpg'/>Hard to choose. 😛"
     },
     {
       "question": "What's your open-source villain origin story?",

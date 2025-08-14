@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Please contribute to the compiler [1] and the wider ecosystem [2,3,4]. [1] https://github.com/ocaml/ocaml/blob/trunk/CONTRIBUTING.md [2] https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md [3] https://discuss.ocaml.org/t/call-for-volunteers-to-help-maintain-the-opam-repository/16476 [4] https://github.com/ocaml/opam-repository/blob/master/CONTRIBUTING.md"
+      "response": "Please contribute to the compiler [1] and the wider ecosystem [2,3,4]. [1] <a href='https://github.com/ocaml/ocaml/blob/trunk/CONTRIBUTING.md'>https://github.com/ocaml/ocaml/blob/trunk/CONTRIBUTING.md</a> [2] <a href='https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md'>https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md</a> [3] <a href='https://discuss.ocaml.org/t/call-for-volunteers-to-help-maintain-the-opam-repository/16476'>https://discuss.ocaml.org/t/call-for-volunteers-to-help-maintain-the-opam-repository/16476</a> [4] <a href='https://github.com/ocaml/opam-repository/blob/master/CONTRIBUTING.md'>https://github.com/ocaml/opam-repository/blob/master/CONTRIBUTING.md</a>"
     },
     {
       "question": "A small brief about your project",

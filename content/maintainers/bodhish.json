@@ -13,8 +13,8 @@
       "link": "https://www.linkedin.com/in/bodhish/"
     },
     {
-        "label": "Web",
-        "link": "https://www.bodhish.in/"
+      "label": "Web",
+      "link": "https://www.bodhish.in/"
     }
   ],
   "projects": [
@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "https://docs.ohc.network/docs/contributing"
+      "response": "<a href='https://docs.ohc.network/docs/contributing'>https://docs.ohc.network/docs/contributing</a>"
     },
     {
       "question": "A small brief about your project",
@@ -46,7 +46,7 @@
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "If CARE had a soundtrack, that launch video would be track one https://youtu.be/ycVWqvZubiI?si=FJ6wcXnN_GQ4t7BK"
+      "response": "If CARE had a soundtrack, that launch video would be track one <a href='https://youtu.be/ycVWqvZubiI?si=FJ6wcXnN_GQ4t7BK'>https://youtu.be/ycVWqvZubiI?si=FJ6wcXnN_GQ4t7BK</a>"
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
