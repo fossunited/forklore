@@ -37,3 +37,7 @@ hostable
 NASSCOM
 Lakechain
 Graype
+Suricata
+Maxun
+OISF
+Mahna

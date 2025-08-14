@@ -1,0 +1,64 @@
+{
+  "username": "amhsirak",
+  "full_name": "Karishma Shukla",
+  "photo": "https://ik.imagekit.io/0n6slgitv/karishma_2025.jpg",
+  "designation": "Founder, Maxun",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/amhsirak"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/karishmashukla"
+    },
+    {
+      "label": "X",
+      "link": "https://x.com/amhsirak_"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Maxun",
+      "project_link": "https://github.com/getmaxun/maxun",
+      "website_link": "https://maxun.dev",
+      "logo": "https://www.maxun.dev/maxun_logo.png",
+      "description": "Maxun is an open-source, truly no-code web data extraction platform. It records your interactions with a website and turns them into automated robots that pull live data, track changes over time, and transform messy content into clean, structured data ready for spreadsheets, APIs, or any application. Simple enough for anyone, powerful enough for complex data extraction.",
+      "short_description": "Open-source no code web data extraction platform. Instantly turn any website into API or spreadsheet."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+		"response": "Star the repository, contribute if you love what we’re building, or make a one-time donation: https://bit.ly/maxun-oss. Every little bit helps us keep the lights on and the robots running."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Maxun is an open-source, truly no-code web data extraction platform. It records your interactions with a website and turns them into automated robots that pull live data, track changes over time, and transform messy content into clean, structured data ready for spreadsheets, APIs, or any application. Simple enough for anyone, powerful enough for complex data extraction."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "You can’t please everyone and that’s okay. Take breaks before you burn out."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I believe everyone should have access to web data — not just those with technical skills or big budgets. I love building tools that solve real problems for people, and keeping Maxun open-source is part of that belief. We also run Maxun Cloud for those who prefer a hosted option, but the core platform will always remain free and open."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "High Hopes – Panic! At The Disco"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "server/src/workflow-management/selector.ts - universally despised."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "At my previous workplace, we needed a no-code extractor but existing tools were pricey, clunky, and code-heavy. I built one over a weekend, open-sourced it, and never looked back."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "💪 (patience + consistency)"
+    }
+  ]
+}
