@@ -1,0 +1,60 @@
+{
+  "username": "@inashivb",
+  "full_name": "Shivani Bhardwaj",
+  "photo": "https://suricata.io/wp-content/uploads/2021/01/bhardwaj.jpg",
+  "designation": "Software Developer",
+  "socials": [
+    {
+      "label": "Web",
+      "link": "https://shivanibhardwaj.com"
+    },
+    {
+      "label": "GitHub",
+      "link": "https://github.com/inashivb"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/shivan1"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Suricata",
+      "project_link": "https://github.com/OISF/suricata",
+      "website_link": "https://suricata.io",
+      "logo": "https://suricata.io/wp-content/uploads/2023/09/Logo-Suricata-vert-R.jpg",
+      "description": "Suricata is a high performance, open source network analysis and threat detection software used by most private and public organizations, and embedded by major vendors to protect their assets. ",
+      "short_description": "Fast and reliable IDS, IPS and NSM"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "There are several ways to support."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Suricata is an advanced Intrusion Detection and Prevention System with enriched logs and a wide variety of features making it a pioneer in keeping up with the modern network threats and security landscape. It is reliable, performant and very fast. Suricata is developed by the Open Information Security Foundation and community members from all around the world!"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Don't be afraid to ask stupid questions and breaking things. Remember: \"the master has failed more times than the beginner has even tried\""
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Firstly, because I get paid to do that. 😉  There are many reasons but my favorites are: being lucky enough to get to work on an impactful project that is not only used around the world but has entire businesses set up around it (Kudos to Victor Julien!) and, because I get to do it with an incredible team and community. ❤️ "
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Approved unanimously by OISF: Mahna Mahna 😃  www.youtube.com/watch?v=zb47CstE7R4"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://i.programmerhumor.io/2023/09/programmerhumor-io-programming-memes-f1c903e48ba80e3.jpg"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I was introduced to open-source in my college during Software Freedom Day celebrations. Soon after, Operating Systems class introduced us to Linux which was fascinating to me and led to learning and discovery of everything else open-source that I know of today."
+    }
+  ]
+}
