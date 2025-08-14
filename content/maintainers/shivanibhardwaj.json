@@ -50,15 +50,15 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-		"response": "https://i.programmerhumor.io/2023/09/programmerhumor-io-programming-memes-f1c903e48ba80e3.jpg. Hard to choose. 😛"
+      "response": "https://i.programmerhumor.io/2023/09/programmerhumor-io-programming-memes-f1c903e48ba80e3.jpg. Hard to choose. 😛"
     },
     {
       "question": "What's your open-source villain origin story?",
       "response": "I was introduced to open-source in my college during Software Freedom Day celebrations. Soon after, Operating Systems class introduced us to Linux which was fascinating to me and led to learning and discovery of everything else open-source that I know of today."
     },
-	{
-		"question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
-		"response": "🤝"
-	}
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🤝"
+    }
   ]
 }
