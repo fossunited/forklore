@@ -54,7 +54,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Welcome any potential first-time contributors who are curious, love open source, and have a passion to contribute to the community. Other means of contributions are also welcome through our GitHub sponsors (https://github.com/sponsors/AppiumTestDistribution) and via open-collective (https://opencollective.com/appium-device-farm)."
+      "response": "Welcome any potential first-time contributors who are curious, love open source, and have a passion to contribute to the community. Other means of contributions are also welcome through our GitHub sponsors (<a href='https://github.com/sponsors/AppiumTestDistribution'>https://github.com/sponsors/AppiumTestDistribution</a>) and via open-collective (<a href='https://opencollective.com/appium-device-farm'>https://opencollective.com/appium-device-farm</a>)."
     },
     {
       "question": "A small brief about your project",

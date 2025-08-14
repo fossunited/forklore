@@ -46,7 +46,7 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "https://github.com/frappe/frappe-ui/blob/main/src/components/Input.vue  Tries to do too many things"
+      "response": "<a href='https://github.com/frappe/frappe-ui/blob/main/src/components/Input.vue'>https://github.com/frappe/frappe-ui/blob/main/src/components/Input.vue</a>  Tries to do too many things"
     },
     {
       "question": "What's your open-source villain origin story?",

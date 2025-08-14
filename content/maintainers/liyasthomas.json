@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "GitHub Sponsors: https://github.com/sponsors/hoppscotch"
+      "response": "GitHub Sponsors: <a href='https://github.com/sponsors/hoppscotch'>https://github.com/sponsors/hoppscotch</a>"
     },
     {
       "question": "A small brief about your project",
@@ -50,7 +50,7 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "https://github.com/hoppscotch/hoppscotch/blob/main/packages/hoppscotch-common/src/modules/i18n.ts"
+      "response": "<a href='https://github.com/hoppscotch/hoppscotch/blob/main/packages/hoppscotch-common/src/modules/i18n.ts'>https://github.com/hoppscotch/hoppscotch/blob/main/packages/hoppscotch-common/src/modules/i18n.ts</a>"
     },
     {
       "question": "What's your open-source villain origin story?",

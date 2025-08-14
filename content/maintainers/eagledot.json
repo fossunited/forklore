@@ -38,7 +38,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Bug Reports are very welcomed. For financial contributions you can buy me a coffee at : https://buymeacoffee.com/eagledot"
+      "response": "Bug Reports are very welcomed. For financial contributions you can buy me a coffee at : <a href='https://buymeacoffee.com/eagledot'>https://buymeacoffee.com/eagledot</a>"
     },
     {
       "question": "A small brief about your project",
@@ -66,7 +66,7 @@
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
-      "response": "More like a gif: https://tenor.com/view/totoro-rain-rainy-day-good-morning-rainy-day-gif-3424596352008787858"
+      "response": "More like a gif: <a href='https://tenor.com/view/totoro-rain-rainy-day-good-morning-rainy-day-gif-3424596352008787858'>https://tenor.com/view/totoro-rain-rainy-day-good-morning-rainy-day-gif-3424596352008787858</a>"
     }
   ]
 }

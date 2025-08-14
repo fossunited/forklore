@@ -34,7 +34,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "https://mirror.albony.in/donate.html"
+      "response": "<a href='https://mirror.albony.in/donate.html'>https://mirror.albony.in/donate.html</a>"
     },
     {
       "question": "A small brief about your project",

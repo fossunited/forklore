@@ -46,7 +46,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Contributions are always welcome to any of the projects I work on. Financially you can sponser, 1. LFortran via https://opencollective.com/lfortran. 2. PyDataStructs via my personal account. I will manage the taxes for my self."
+      "response": "Contributions are always welcome to any of the projects I work on. Financially you can sponser, 1. LFortran via <a href='https://opencollective.com/lfortran.'>https://opencollective.com/lfortran.</a> 2. PyDataStructs via my personal account. I will manage the taxes for my self."
     },
     {
       "question": "A small brief about your project",

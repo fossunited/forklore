@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "GitHub sponsors - https://github.com/sponsors/adithya-s-k"
+      "response": "GitHub sponsors - <a href='https://github.com/sponsors/adithya-s-k'>https://github.com/sponsors/adithya-s-k</a>"
     },
     {
       "question": "A small brief about your project",

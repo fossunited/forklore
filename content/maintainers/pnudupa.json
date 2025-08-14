@@ -46,7 +46,7 @@
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "Not sure if this can be a theme song, but this is one song that got me through a lot of coding in Scrite. I have no idea why. Its my go-to song to unlock the mood to build long and elaborate stuff in the app: https://music.youtube.com/watch?v=jt96zlTUyLQ"
+      "response": "Not sure if this can be a theme song, but this is one song that got me through a lot of coding in Scrite. I have no idea why. Its my go-to song to unlock the mood to build long and elaborate stuff in the app: <a href='https://music.youtube.com/watch?v=jt96zlTUyLQ'>https://music.youtube.com/watch?v=jt96zlTUyLQ</a>"
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",

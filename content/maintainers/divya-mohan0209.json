@@ -13,8 +13,8 @@
       "link": "https://www.linkedin.com/in/divya-mohan0209/"
     },
     {
-        "label": "Web",
-        "link": "https://divyamohan.com/"
+      "label": "Web",
+      "link": "https://divyamohan.com/"
     }
   ],
   "projects": [
@@ -50,7 +50,7 @@
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
-      "response": "It'd be a custom emoji referring to the this is fine meme by web comic artist, KC Green. Reference: https://x.com/kcgreenn/status/1613583689870446592?s=20&t=YFqCjDn2I-3uLks9Ba4rew"
+      "response": "It'd be a custom emoji referring to the this is fine meme by web comic artist, KC Green. Reference: <a href='https://x.com/kcgreenn/status/1613583689870446592?s=20'>https://x.com/kcgreenn/status/1613583689870446592?s=20</a>&t=YFqCjDn2I-3uLks9Ba4rew"
     }
   ]
 }

@@ -13,8 +13,8 @@
       "link": "https://www.linkedin.com/in/prasunanand/"
     },
     {
-        "label": "Web",
-        "link": "https://prasunanand.github.io/"
+      "label": "Web",
+      "link": "https://prasunanand.github.io/"
     }
   ],
   "projects": [
@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "GitHub Sponsors @ https://github.com/sponsors/prasunanand"
+      "response": "GitHub Sponsors @ <a href='https://github.com/sponsors/prasunanand'>https://github.com/sponsors/prasunanand</a>"
     },
     {
       "question": "A small brief about your project",
@@ -42,7 +42,7 @@
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": "I like building things that last and make someone’s day 10x smoother. It’s art, it’s engineering, and it’s legacy — all tangled together. \n\n Open source lets me:\n* Share my work without a gatekeeper, It helps me punch above my weight. \n* Learn from real-world feedback. \n* Build in public, with strangers who become friends\n* See code I wrote powering tools across the world\n\nWhat makes me keep going ?\n\n* Github stars\n* Pride in the work\n* Curiosity to keep leveling up\n* Gratitude when someone contributes back\n* Stubbornness to not let the thing rot"
+      "response": "I like building things that last and make someone’s day 10x smoother. It’s art, it’s engineering, and it’s legacy — all tangled together. <br><br> Open source lets me:<br>* Share my work without a gatekeeper, It helps me punch above my weight. <br>* Learn from real-world feedback. <br>* Build in public, with strangers who become friends<br>* See code I wrote powering tools across the world<br><br>What makes me keep going ?<br><br>* Github stars<br>* Pride in the work<br>* Curiosity to keep leveling up<br>* Gratitude when someone contributes back<br>* Stubbornness to not let the thing rot"
     },
     {
       "question": "If your repo had a theme song, what would it be?",
@@ -50,7 +50,7 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "The release file. Something always breaks - https://github.com/zasper-io/zasper/blob/main/.github/workflows/release.yml"
+      "response": "The release file. Something always breaks - <a href='https://github.com/zasper-io/zasper/blob/main/.github/workflows/release.yml'>https://github.com/zasper-io/zasper/blob/main/.github/workflows/release.yml</a>"
     },
     {
       "question": "What's your open-source villain origin story?",

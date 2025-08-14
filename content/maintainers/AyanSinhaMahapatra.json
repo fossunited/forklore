@@ -38,7 +38,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Use our tool to scan your projects/dependencies, contribute with development, docs, issues and use cases, or help us sustain ourselves: https://github.com/sponsors/aboutcode-org"
+      "response": "Use our tool to scan your projects/dependencies, contribute with development, docs, issues and use cases, or help us sustain ourselves: <a href='https://github.com/sponsors/aboutcode-org'>https://github.com/sponsors/aboutcode-org</a>"
     },
     {
       "question": "A small brief about your project",
@@ -58,7 +58,7 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "https://github.com/aboutcode-org/scancode-toolkit/blob/develop/.github/workflows/scancode-release.yml. It's usually always on fire anyways, with the many supported OSs, and python versions we test for, releasing as a container, CLI tool, python/OS libraries, with many non-pure-python dependencies (most of which we maintain) which needs wheels released for every combination of OS/python versions and our third party package repository (it's a small pypi index that we maintain, vetting each new package added here) used to build release archives, things are quite complicated on this release file. 😂"
+      "response": "<a href='https://github.com/aboutcode-org/scancode-toolkit/blob/develop/.github/workflows/scancode-release.yml.'>https://github.com/aboutcode-org/scancode-toolkit/blob/develop/.github/workflows/scancode-release.yml.</a> It's usually always on fire anyways, with the many supported OSs, and python versions we test for, releasing as a container, CLI tool, python/OS libraries, with many non-pure-python dependencies (most of which we maintain) which needs wheels released for every combination of OS/python versions and our third party package repository (it's a small pypi index that we maintain, vetting each new package added here) used to build release archives, things are quite complicated on this release file. 😂"
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",

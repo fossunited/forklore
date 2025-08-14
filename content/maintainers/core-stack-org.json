@@ -26,7 +26,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "A number of ideas for new projects, extensions, and improvements are listed here: https://docs.google.com/document/d/1lPleJ45JUp0iD7NZOZXrLBoCpifkJTV4/edit?usp=sharing&ouid=116413035808485050246&rtpof=true&sd=true"
+      "response": "A number of ideas for new projects, extensions, and improvements are listed here: <a href='https://docs.google.com/document/d/1lPleJ45JUp0iD7NZOZXrLBoCpifkJTV4/edit?usp=sharing'>https://docs.google.com/document/d/1lPleJ45JUp0iD7NZOZXrLBoCpifkJTV4/edit?usp=sharing</a>&ouid=116413035808485050246&rtpof=true&sd=true"
     },
     {
       "question": "A small brief about your project",
@@ -34,7 +34,7 @@
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
-      "response": "Document extensively and think before writing DRY or WET code: https://en.wikipedia.org/wiki/Don't_repeat_yourself."
+      "response": "Document extensively and think before writing DRY or WET code: <a href='https://en.wikipedia.org/wiki/Don'>https://en.wikipedia.org/wiki/Don</a>'t_repeat_yourself."
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",

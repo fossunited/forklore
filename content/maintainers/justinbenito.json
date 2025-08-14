@@ -30,7 +30,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Follow me on linkedin, that's more than enough XD: https://www.linkedin.com/in/justinbenito/"
+      "response": "Follow me on linkedin, that's more than enough XD: <a href='https://www.linkedin.com/in/justinbenito/'>https://www.linkedin.com/in/justinbenito/</a>"
     },
     {
       "question": "A small brief about your project",

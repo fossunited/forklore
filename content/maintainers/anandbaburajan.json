@@ -46,7 +46,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "Wordamour - Surprise your special someone with a Wordamour and buy me a coffee (https://buymeacoffee.com/anandbaburajan) if they love it :D CQ2 - Share it with communities who might find it useful :D Samay - Use it to find a common time for a group meeting and buy me a coffee (https://buymeacoffee.com/anandbaburajan) if you found it useful :D"
+      "response": "Wordamour - Surprise your special someone with a Wordamour and buy me a coffee (<a href='https://buymeacoffee.com/anandbaburajan'>https://buymeacoffee.com/anandbaburajan</a>) if they love it :D CQ2 - Share it with communities who might find it useful :D Samay - Use it to find a common time for a group meeting and buy me a coffee (<a href='https://buymeacoffee.com/anandbaburajan'>https://buymeacoffee.com/anandbaburajan</a>) if you found it useful :D"
     },
     {
       "question": "A small brief about your project",
@@ -62,7 +62,7 @@
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "Get Lucky by Daft Punk https://www.youtube.com/watch?v=5NV6Rdv1a3I"
+      "response": "Get Lucky by Daft Punk <a href='https://www.youtube.com/watch?v=5NV6Rdv1a3I'>https://www.youtube.com/watch?v=5NV6Rdv1a3I</a>"
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
