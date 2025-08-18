@@ -41,3 +41,5 @@ Suricata
 Maxun
 OISF
 Mahna
+fontsource
+wght
