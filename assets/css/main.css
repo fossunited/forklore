@@ -1,106 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark-mode, .dark-mode *));
 
+@font-face {
+  font-family: "Geist Mono Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2)
+    format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(@fontsource-variable/inter/files/inter-latin-wght-normal.woff2)
+    format("woff2-variations");
+  unicode-range:
+    U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+    U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212,
+    U+2215, U+FEFF, U+FFFD;
+}
+
 @theme {
-    --default-font-family: "Geist Mono", monospace;
-	--default-sans-family: "Inter", sans-serif;
-    --color-primary-dark: #18222A;
-    --color-primary-light: #FAFAFA;
-    --color-secondary-dark: #CFF2DA;
-    --color-secondary-light: #18222A;
-    --color-tertiary-dark: #3C4B4E;
-    --color-tertiary-light: #EEF0F1;
+  --default-font-family: "Geist Mono Variable", monospace;
+  --color-primary-dark: #18222a;
+  --color-primary-light: #fafafa;
+  --color-secondary-dark: #cff2da;
+  --color-secondary-light: #18222a;
+  --color-tertiary-dark: #3c4b4e;
+  --color-tertiary-light: #eef0f1;
 }
 
 html {
-    @apply transition-colors duration-300 ease-linear;
+  @apply transition-colors duration-300 ease-linear;
 }
 
-
 @layer utilities {
-    .link {
-        @apply hover:underline
-    }
+  .link {
+    @apply hover:underline;
+  }
 
-    .border-custom {
-        @apply border-2 border-[#464E55] border-dashed;
-    }
+  .border-custom {
+    @apply border-2 border-[#464E55] border-dashed;
+  }
 
-    .border-custom-t {
-        @apply border-t-2 border-t-[#464E55] border-dashed;
-    }
+  .border-custom-t {
+    @apply border-t-2 border-t-[#464E55] border-dashed;
+  }
 
-    .border-custom-b {
-        @apply border-b-2 border-b-[#464E55] border-dashed;
-    }
+  .border-custom-b {
+    @apply border-b-2 border-b-[#464E55] border-dashed;
+  }
 
-    .border-custom-l {
-        @apply border-l-2 border-l-[#464E55] border-dashed;
-    }
+  .border-custom-l {
+    @apply border-l-2 border-l-[#464E55] border-dashed;
+  }
 
-    .border-custom-r {
-        @apply border-r-2 border-r-[#464E55] border-dashed;
-    }
+  .border-custom-r {
+    @apply border-r-2 border-r-[#464E55] border-dashed;
+  }
 
-    .btn-solid {
-        @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
-        @apply   bg-secondary-light text-primary-light hover:bg-secondary-light/80 ;
-        @apply dark:bg-secondary-dark dark:text-primary-dark hover:dark:bg-secondary-dark/80;
-    }
+  .btn-solid {
+    @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
+    @apply bg-secondary-light text-primary-light hover:bg-secondary-light/80;
+    @apply dark:bg-secondary-dark dark:text-primary-dark hover:dark:bg-secondary-dark/80;
+  }
 
-    .btn-subtle {
-        @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
-        @apply bg-tertiary-light text-secondary-light border-secondary-light hover:bg-secondary-light/20;  
-        @apply  dark:bg-tertiary-dark dark:text-secondary-dark dark:border-secondary-dark hover:dark:bg-secondary-dark/40 ;
-    }
+  .btn-subtle {
+    @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear;
+    @apply bg-tertiary-light text-secondary-light border-secondary-light hover:bg-tertiary-light/70;
+    @apply dark:bg-tertiary-dark dark:text-secondary-dark dark:border-secondary-dark hover:dark:bg-secondary-dark/40;
+  }
 
-    .btn-outline {
-        @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear outline;
-        @apply hover:bg-tertiary-light;  
-        @apply hover:dark:bg-tertiary-dark;
+  .btn-outline {
+    @apply flex gap-1 p-2 items-center cursor-pointer transition-colors duration-300 ease-linear outline;
+    @apply hover:bg-tertiary-light;
+    @apply hover:dark:bg-tertiary-dark;
+  }
 
-    }
+  .divide-x-custom {
+    @apply divide-x-2 divide-secondary-light/60 dark:divide-tertiary-dark divide-dashed;
+  }
 
-    .divide-x-custom {
-        @apply divide-x-2 divide-secondary-light/60 dark:divide-tertiary-dark divide-dashed;
-    }
+  .divide-y-custom {
+    @apply divide-y-2 divide-secondary-light/60 dark:divide-tertiary-dark divide-dashed;
+  }
 
-
-    .divide-y-custom {
-        @apply divide-y-2 divide-secondary-light/60 dark:divide-tertiary-dark divide-dashed;
-    }
-
-    .corner-only {
-        @apply border-2 border-solid border-secondary-light dark:border-secondary-dark;
-        background-clip:content-box;
-        --s: 1rem;
-        mask:
-            conic-gradient(#000 0 0) content-box,
-            conic-gradient(at var(--s) var(--s), #0000 75%, #000 0)
-            0 0/calc(100% - var(--s)) calc(100% - var(--s));
-    }
-	.sans-text {
-   		font-family: --default-sans-family;
-		line-height: 2;
-	
-	}
-	.sans-text a{
-		text-decoration: underline;
-	}
+  .corner-only {
+    @apply border-2 border-solid border-secondary-light dark:border-secondary-dark;
+    background-clip: content-box;
+    --s: 1rem;
+    mask:
+      conic-gradient(#000 0 0) content-box,
+      conic-gradient(at var(--s) var(--s), #0000 75%, #000 0) 0 0 /
+        calc(100% - var(--s)) calc(100% - var(--s));
+  }
+  .sans-text {
+    font-family: "Inter Variable", sans-serif;
+    line-height: 2;
+  }
+  .sans-text a {
+    text-decoration: underline;
+  }
 }
 
 @layer base {
-    .light-mode {
-        @apply bg-[var(--color-primary-light)] text-[var(--color-secondary-light)];
-    }
+  .light-mode {
+    @apply bg-[var(--color-primary-light)] text-[var(--color-secondary-light)];
+  }
 
-    .dark-mode {
-        @apply bg-[var(--color-primary-dark)] text-[var(--color-secondary-dark)];
-
-    }
+  .dark-mode {
+    @apply bg-[var(--color-primary-dark)] text-[var(--color-secondary-dark)];
+  }
 }
-
-
