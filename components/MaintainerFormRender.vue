@@ -14,7 +14,7 @@ defineProps(["maintainer"]);
           </p>
         </div>
         <div>
-          <p class="text-secondary-light dark:text-secondary-dark" v-html="item.response"></p>
+          <p class="text-secondary-light dark:text-secondary-dark break-words" v-html="item.response"></p>
         </div>
       </div>
     </template>
