@@ -5,7 +5,7 @@ import { Feed } from "feed";
 export default defineEventHandler(async () => {
   const contentDir = path.resolve("content/maintainers");
   const files = (await fs.readdir(contentDir)).filter((f) =>
-    f.endsWith(".json")
+    f.endsWith(".json"),
   );
 
   const feed = new Feed({
@@ -23,19 +23,73 @@ export default defineEventHandler(async () => {
     const raw = await fs.readFile(path.join(contentDir, file), "utf-8");
     const data = JSON.parse(raw);
 
-    const proj =
-      ((data.projects || []) as { name: string }[])
-        .map((p) => p.name)
-        .join(", ") || "No projects listed";
+    const userInfoHTML = `
+  <p><strong>${data.full_name}</strong> (@${data.username})</p>
+  ${data.designation ? `<p><em>${data.designation}</em></p>` : ""}
+`;
 
-        const filename = path.basename(file, ".json");
-        const url = `https://forklore.in/maintainers/${filename.toLowerCase()}`;
+    const socialsHTML =
+      (data.socials || [])
+        .map(
+          (s) => `<li><a href="${s.link}" target="_blank">${s.label}</a></li>`,
+        )
+        .join("") || "<li>No socials listed</li>";
+
+    const projectsHTML =
+      (data.projects || [])
+        .map((p) => {
+          const links = [];
+
+          if (p.project_link) {
+            links.push(`<a href="${p.project_link}" target="_blank">Repo</a>`);
+          }
+
+          if (p.website_link) {
+            links.push(
+              `<a href="${p.website_link}" target="_blank">Website</a>`,
+            );
+          }
+
+          const linkText = links.length > 0 ? ` (${links.join(" | ")})` : "";
+
+          return `
+        <li>
+          <strong>${p.name}</strong>${linkText}<br/>
+          ${p.short_description || p.description || "No description"}
+        </li>`;
+        })
+        .join("") || "<li>No projects listed</li>";
+
+    const responsesHTML =
+      (data.form || [])
+        .filter((entry) => entry.response && entry.response.trim() !== "")
+        .map(
+          (entry) =>
+            `<li><strong>${entry.question}</strong><br/>${entry.response}</li><br/>`,
+        )
+        .join("") || "<li>No responses provided</li>";
+
+    const filename = path.basename(file, ".json");
+    const url = `https://forklore.in/maintainers/${filename.toLowerCase()}`;
+
+    const description = `
+  ${userInfoHTML}
+
+  <p><strong>Social Links:</strong></p>
+  <ul>${socialsHTML}</ul>
+
+  <p><strong>Projects:</strong></p>
+  <ul>${projectsHTML}</ul>
+
+  <p><strong>Form Responses:</strong></p>
+  <ul>${responsesHTML}</ul>
+`;
 
     feed.addItem({
       title: data.full_name || data.username,
       id: url,
       link: url,
-      description: `Projects: ${proj}`,
+      description: description,
       date: new Date(),
     });
   }
