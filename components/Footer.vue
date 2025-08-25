@@ -39,8 +39,8 @@
       </div>
       <img
         class="w-12"
-        src="/logo/fossunited_logo.svg"
-        alt="FOSS United Logo"
+        src="/logo/unitedbyfoss.svg"
+        alt="United By FOSS Logo"
       />
     </div>
   </div>
