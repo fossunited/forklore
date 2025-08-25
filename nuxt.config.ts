@@ -10,6 +10,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  colorMode: {
+    storage: 'cookie',
+  },
   app: {
     head: {
       htmlAttrs: {
@@ -28,5 +31,10 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/": { prerender: false },
+  },
+  nitro: {
+    prerender: {
+      routes: ['/rss']
+    }
   },
 });
