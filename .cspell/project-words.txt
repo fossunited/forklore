@@ -43,3 +43,6 @@ OISF
 Mahna
 fontsource
 wght
+unicodes
+uigenkit
+Neumorphic
