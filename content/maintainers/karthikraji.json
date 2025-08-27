@@ -1,0 +1,60 @@
+{
+  "username": "karthikraji2020",
+  "full_name": "Karthik Raji",
+  "photo": "https://avatars.githubusercontent.com/u/51771000?v=4",
+  "designation": "software Engineer 2",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/karthikraji2020/"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/karthik-raji"
+    }
+  ],
+  "projects": [
+    {
+      "name": "uigenkit",
+      "project_link": "https://github.com/karthikraji2020/uigenkit",
+      "website_link": "https://uigenkit.in/neumorphism",
+      "logo": "https://uigenkit.in/images/ui-gen-kit_ico.ico",
+      "description": "UiGenKit is a productivity-focused tool for frontend developers and designers. It enables quick generation and copying of CSS for modern design elements—like color palettes, gradients, and Neumorphic (Soft UI) styles. Built for scalability, it includes a dynamic library of user-generated palettes to support fast prototyping and consistent theming.",
+      "short_description": "UiGenKit: From Palettes to Patterns css Generators - Faster, Beautiful UIs."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Star this uigenkit repository, Follow me on linkedin,  <a href=\"https://www.linkedin.com/in/karthik-raji\" target=\"_blank\">https://www.linkedin.com/in/karthik-raji</a>"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "UiGenKit: From Palettes to Patterns css Generators - Faster, Beautiful UIs."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "i should have started  earlier to tech talk / create a post about uigenkit ."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": ""
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "puthiya manidha from enthiran"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "<a href=\"https://uigenkit.in/neumorphism\" target=\"_blank\">https://uigenkit.in/neumorphism</a>"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "nothing as of now,"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "😎"
+    }
+  ]
+}
