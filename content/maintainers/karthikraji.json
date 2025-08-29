@@ -34,11 +34,11 @@
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
-      "response": "i should have started  earlier to tech talk / create a post about uigenkit ."
+      "response": "i should have started  earlier to tech talk / create a post about uigenkit."
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": ""
+      "response": "i try to add value to designers/engineers productivity by providing this uigenkit."
     },
     {
       "question": "If your repo had a theme song, what would it be?",
@@ -46,7 +46,8 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "<a href=\"https://uigenkit.in/neumorphism\" target=\"_blank\">https://uigenkit.in/neumorphism</a>"
+      "response": "<a href='https://uigenkit.in/neumorphism' target='_blank'>https://uigenkit.in/neumorphism</a><br> <a href='https://uigenkit.in/glassmorphism' target='_blank'>https://uigenkit.in/glassmorphism</a><br> <a href='https://uigenkit.in/lineargradient' target='_blank'>https://uigenkit.in/lineargradient</a><br> <a href='https://uigenkit.in/colorpalette' target='_blank'>https://uigenkit.in/colorpalette</a><br>"
+
     },
     {
       "question": "What's your open-source villain origin story?",
