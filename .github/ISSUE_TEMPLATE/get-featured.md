@@ -1,9 +1,9 @@
 ---
-name: FOSS Maintainer Profile
-about: Submit your profile to be listed as a FOSS maintainer
-title: "[FOSS PROFILE] Your Name or Project Name"
-labels: ["foss-profile"]
-assignees: []
+name: Get featured
+about: If you are a FOSS maintainer in India, get featured on forklore.in
+title: "[MAINT] Full name @ Project name"
+labels: ''
+assignees: ''
 ---
 
 <!-- Hey MAINTAINERS!
