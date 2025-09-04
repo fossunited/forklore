@@ -10,7 +10,7 @@ const normalizedMaintainers = computed(() =>
   maintainers.value?.map((m) => ({
     ...m,
     projects_list: m.projects.map((p) => p.name).join(", "),
-  }))
+  })),
 );
 
 const query = ref("");
@@ -51,11 +51,14 @@ onMounted(() => {
 <template>
   <div class="flex flex-col gap-8 px-8 py-10">
     <UiSearchInput
-      ref="searchInputRef"
-      class="max-w-90"
+      v-if="maintainers"
       v-model="query"
-      placeholder="Search Maintainers"
+      :maintainers="maintainers"
+      ref="searchInputRef"
+      class="max-w-100"
+      placeholder="Search"
     />
+
     <MaintainerCard
       v-for="maintainer in result"
       :key="maintainer.id"
