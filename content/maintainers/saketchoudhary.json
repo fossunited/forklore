@@ -31,7 +31,7 @@
       "project_link": "http://github.com/saketkc/pysradb",
       "website_link": "http://saket-choudhary.me/pysradb",
       "logo": "https://saket-choudhary.me/pysradb/_static/pysradb_v3.png",
-      "description": "The NCBI Sequence Read Archive (SRA) is the primary archive of next-generation sequencing datasets. SRA makes metadata and raw sequencing data available to the research community to encourage reproducibility and to provide avenues for testing novel hypotheses on publicly available data. However, methods to programmatically access this data are limited. Pysradb provides a collection of command line methods and python API to query and download metadata and data from SRA. --- ---",
+      "description": "The NCBI Sequence Read Archive (SRA) is the primary archive of next-generation sequencing datasets. SRA makes metadata and raw sequencing data available to the research community to encourage reproducibility and to provide avenues for testing novel hypotheses on publicly available data. However, methods to programmatically access this data are limited. Pysradb provides a collection of command line methods and python API to query and download metadata and data from SRA.",
       "short_description": "pysradb is a python package to fetch metadata associated with genome sequencing data deposited in the Sequence Read Archive (SRA) database at NCBI or European Nucleotide Archive (ENA)."
     }
   ],
@@ -42,7 +42,7 @@
     },
     {
       "question": "A small brief about your project",
-      "response": "Biological researchers worldwide generate petabytes of genomic sequencing data, but accessing it is a nightmare. Scientists spend weeks navigating the maze of NCBI's SRA, ENA, and GEO databases just to find and download the datasets they need. The identifiers are cryptic (SRP? GSE? SRR?), the APIs are complex, and downloading terabytes of data often fails midway or is incomplete without the associated metadata!<br>In an era where data drives medical breakthroughs, pysradb democratizes access to the world's largest repository of sequencing information. pysradb provides easy access to meta"
+      "response": "Biological researchers worldwide generate petabytes of genomic sequencing data, but accessing it is a nightmare. Scientists spend weeks navigating the maze of NCBI's SRA, ENA, and GEO databases just to find and download the datasets they need. The identifiers are cryptic (SRP? GSE? SRR?), the APIs are complex, and downloading terabytes of data often fails midway or is incomplete without the associated metadata! Pysradb democratizes access to the world's largest repository of sequencing information."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
