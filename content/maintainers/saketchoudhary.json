@@ -1,0 +1,72 @@
+{
+  "username": "sakekc",
+  "full_name": "Saket Choudhary",
+  "photo": "https://avatars.githubusercontent.com/u/682153?v=4",
+  "designation": "Assistant Professor, Koita Centre for Digital Health, IIT Bombay",
+  "socials": [
+    {
+      "label": "Github",
+      "link": "https://github.com/saketkc"
+    },
+    {
+      "label": "Linkedin",
+      "link": "http://linkedin.com/in/saket-choudhary/"
+    },
+    {
+      "label": "Substack",
+      "link": "https://substack.com/@genomeofindia"
+    },
+    {
+      "label": "BlueSky",
+      "link": "https://bsky.app/profile/saketkc.bsky.social"
+    },
+    {
+      "label": "X",
+      "link": "http://x.com/saketkc"
+    }
+  ],
+  "projects": [
+    {
+      "name": "pysradb",
+      "project_link": "http://github.com/saketkc/pysradb",
+      "website_link": "http://saket-choudhary.me/pysradb",
+      "logo": "https://saket-choudhary.me/pysradb/_static/pysradb_v3.png",
+      "description": "The NCBI Sequence Read Archive (SRA) is the primary archive of next-generation sequencing datasets. SRA makes metadata and raw sequencing data available to the research community to encourage reproducibility and to provide avenues for testing novel hypotheses on publicly available data. However, methods to programmatically access this data are limited. Pysradb provides a collection of command line methods and python API to query and download metadata and data from SRA.",
+      "short_description": "pysradb is a python package to fetch metadata associated with genome sequencing data deposited in the Sequence Read Archive (SRA) database at NCBI or European Nucleotide Archive (ENA)."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "pysradb repository has a set of open issues that we need help with. Anyone unfamiliar with the general world of bioinformatics or genomics can also contribute. The crux of pysradb operations happens through interaction with etuils API, so as long as you are comfortable working with APIs you can contribute to pysradb! Any contributions are welcome - PRs, issues, documentation fixes!"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Biological researchers worldwide generate petabytes of genomic sequencing data, but accessing it is a nightmare. Scientists spend weeks navigating the maze of NCBI's SRA, ENA, and GEO databases just to find and download the datasets they need. The identifiers are cryptic (SRP? GSE? SRR?), the APIs are complex, and downloading terabytes of data often fails midway or is incomplete without the associated metadata! Pysradb democratizes access to the world's largest repository of sequencing information."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "When I started, I just thought I need to be the best at coding to be a good maintainer. A good maintainer is not necessarily a good coder, but an all rounder - listens, provides feedback, documents and keeps the community together rather than forcing their ideology over everyone."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I maintain FOSS project to reduce the barrier that researchers like me face"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "It has to be \"Let me speak\" by Indian Ocean: <a href=\"https://youtu.be/4NbXG9i8uFg.\">https://youtu.be/4NbXG9i8uFg.</a> It is one song that I listened to in loop when I coded the first version of pysradb."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "It has to be <a href=\"https://github.com/saketkc/pysradb/blob/develop/pysradb/sradb.py\">sradb.py</a>. The name of the repo was inspired from a now defunct package and this file is the legacy I believe pysradb never needed."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I got exposed to open source during my internship at <a href=\"https://www.slideshare.net/slideshow/internship-slideshare-my-experiences/9043130\">SlideShare</a>. SlideShare team was open source aficionados. That is where I learned and used Ruby on Rails and web development which lef me to GSoC 2012 and contributing a slide importer for <a href=\"https://kefletcher.blogspot.com/2012/04/import-your-slides-into-lesson-on.html\">Connexions</a>. This was my entry point for <a href=\"https://galaxy-gsoc2013.blogspot.com/\">GSoC 2013</a> and <a href=\"https://statsmodels-mlm-gsoc2015.blogspot.com/\">GSoC 2014</a> and I just got hooked with all the cool stuff out there in open."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🧠 - Be curious, listen, empathise and work hard!"
+    }
+  ]
+}

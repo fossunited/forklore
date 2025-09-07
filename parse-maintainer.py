@@ -13,18 +13,41 @@ def is_image(url):
 def format_response(value: str) -> str:
     value = value.strip()
 
-    # Convert links and image URLs into HTML tags
+    # Convert Markdown image syntax ![alt](url)
+    value = re.sub(
+        r'!\[([^\]]*)\]\((https?://[^\)]+)\)',
+        r'<img src="\2" alt="\1" />',
+        value
+    )
+
+    # Convert Markdown link syntax [text](url)
+    value = re.sub(
+        r'\[([^\]]+)\]\((https?://[^\)]+)\)',
+        r'<a href="\2">\1</a>',
+        value
+    )
+
+    # skip existing tags to avoid breaking valid HTML
+    # this regex will ignore any URL already inside an HTML tag
     def convert_url(match):
         url = match.group(0)
+        # Only convert if not part of existing <a> or <img> tag
         if is_image(url):
             return f'<img src="{url}" alt="image" />'
         return f'<a href="{url}">{url}</a>'
 
-    value = re.sub(r'https?://\S+', convert_url, value)
+    # Find raw URLs that are NOT already part of a Markdown or HTML link
+    value = re.sub(
+        r'(?<!["\'=\(\]>])\bhttps?://[^\s<>()"\']+',  # negative lookbehind to avoid href/src attributes
+        convert_url,
+        value
+    )
 
-    # Convert newlines into <br>
+    # Convert newlines to <br>
     value = value.replace('\n', '<br>')
+
     return value
+
 
 def parse_multiline_field(lines, start_index):
     """Extract multiline field starting at start_index + 1 until next field or section."""

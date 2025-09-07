@@ -8,6 +8,7 @@ import Twitter from "~/components/icons/Twitter.vue";
 import Mastodon from "~/components/icons/Mastodon.vue";
 import BlueSky from "~/components/icons/BlueSky.vue";
 import BitBucket from "~/components/icons/BitBucket.vue";
+import Substack from "~/components/icons/Substack.vue";
 
 const icons = {
   web: WebIcon,
@@ -21,6 +22,7 @@ const icons = {
   bluesky: BlueSky,
   bitbucket: BitBucket,
   "arrow-up-right": ArrowUpRight,
+  substack: Substack,
 } as const;
 
 type IconMap = typeof icons;
