@@ -55,7 +55,6 @@ onMounted(() => {
       v-model="query"
       :maintainers="maintainers"
       ref="searchInputRef"
-      class="max-w-100"
       placeholder="Search"
     />
 

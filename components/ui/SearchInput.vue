@@ -28,7 +28,7 @@ const goToRandomMaintainer = () => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-[1fr_auto] gap-2 items-center">
+  <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-2 items-center">
     <div class="flex items-center px-4 py-2 gap-4 border transition-all">
       <IconsSearch class="w-4 h-4" />
       <input
@@ -51,5 +51,12 @@ const goToRandomMaintainer = () => {
     >
       Surprise Me!
     </button>
+
+    <NuxtLink
+      to="/commit-emoji"
+      class="flex text-sm gap-2 items-center btn-subtle"
+    >
+      Commit to Emoji!
+    </NuxtLink>
   </div>
 </template>
