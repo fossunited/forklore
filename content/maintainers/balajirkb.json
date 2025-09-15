@@ -1,0 +1,69 @@
+{
+    "username": "BalajiRKB",
+    "full_name": "Balaji R",
+    "photo": "https://github.com/user-attachments/assets/6b8f4755-8f38-4a13-a62e-3744bdb80c2e",
+    "designation": "Founder & Maintainer @ OpenLN",
+    "socials": [
+      {
+        "label": "LinkedIn",
+        "link": "https://linkedin.com/in/balaji-rkb"
+      },
+      {
+        "label": "GitHub",
+        "link": "https://github.com/balajirkb"
+      },
+      {
+        "label": "Mastodon",
+        "link": "https://mastodon.social/@balajirkb"
+      },
+      {
+        "label": "X",
+        "link": "https://x.com/BalajixRKB"
+      }
+    ],
+    "projects": [
+      {
+        "name": "OpenLN",
+        "project_link": "https://github.com/openln-git",
+        "website_link": "https://openln.pages.dev",
+        "logo": "https://github.com/user-attachments/assets/169f5889-5b61-40e3-80c2-4f6812a03140",
+        "short_description": "AI-driven personalized upskilling ecosystem",
+        "description": "OpenLN is an open-source education platform focused on personalized upskilling powered by AI. It offers a goal-based learning engine, a rubric-based evaluation system, and certification to empower learners worldwide. The project aims to revolutionize learning by enabling tailored skill development with transparent assessments and community-driven growth."
+      }
+    ],
+    "form": [
+      {
+        "question": "How to support",
+        "response": "You can support OpenLN by contributing code, reporting issues, suggesting new features, or spreading the word about personalized upskilling in open education communities. Donations and mentorship are also appreciated."
+      },
+      {
+        "question": "A small brief about your project",
+        "response": "Openln is an open-source, community-driven goal-based learning platform designed to help individuals achieve their dreams by providing personalized roadmaps, curated resources, and hands-on daily challenges."
+      },
+      {
+        "question": "One FOSS maintainer lesson for your younger self",
+        "response": "Start small but stay consistent, and don’t hesitate to ask the community for help early on. Documentation is as important as code."
+      },
+      {
+        "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+        "response": "I believe technology and education should be accessible to all. OpenLN reflects my vision to empower learners worldwide through open, transparent, and personalized upskilling tools."
+      },
+      {
+        "question": "If your repo had a theme song, what would it be?",
+        "response": "“Eye of the Tiger” by Survivor — it echoes perseverance and continuous improvement."
+      },
+      {
+        "question": "Which file in your project would you most like to set on fire?",
+        "response": "The legacy authentication module — it has been a headache but is now being refactored."
+      },
+      {
+        "question": "What's your open-source villain origin story?",
+        "response": "I started coding as a student eager to solve real-world learning challenges. Discovering open-source was a game changer that inspired me to build tools for a broader community."
+      },
+      {
+        "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+        "response": "🚀 (constant growth and taking off with community power)"
+      }
+    ]
+  }
+  
