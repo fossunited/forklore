@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@fontsource-variable/geist-mono": "^5.2.6",
-    "@fontsource-variable/inter": "^5.2.6",
+    "@fontsource-variable/inter": "^5.2.8",
     "@nuxt/content": "^3.6.3",
     "@nuxtjs/color-mode": "3.5.2",
     "@tailwindcss/vite": "^4.1.13",
