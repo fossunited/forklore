@@ -16,7 +16,7 @@
     "@nuxt/content": "^3.7.1",
     "@nuxtjs/color-mode": "3.5.2",
     "@tailwindcss/vite": "^4.1.13",
-    "better-sqlite3": "^12.3.0",
+    "better-sqlite3": "^12.4.1",
     "feed": "^5.1.0",
     "minisearch": "^7.2.0",
     "nuxt": "^4.1.2",
