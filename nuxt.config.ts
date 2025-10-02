@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
   compatibilityDate: "2025-05-15",
   devtools: { enabled: true },
   modules: ["@nuxt/content", "@nuxtjs/color-mode"],
@@ -15,6 +15,8 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      viewport: 'width=device-width, initial-scale=1',
+
       htmlAttrs: {
         lang: "en",
       },
