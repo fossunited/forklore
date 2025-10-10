@@ -1,0 +1,68 @@
+{
+  "username": "mujeebcpy",
+  "full_name": "Mujeeb Rahman K",
+  "photo": "https://2.gravatar.com/avatar/c3a1ff7f64d46178a023c65e8a9281834a6121540cd527451ae28eb697305ce1?size=256&d=initials",
+  "designation": "Freelance web developer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/mujeebcpy"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://aana.site/@mujeebcpy"
+    },
+    {
+      "label": "Gitlab",
+      "link": "https://gitlab.com/mujeebcpy/"
+    },
+    {
+      "label": "Website",
+      "link": "https://ibcomputing.com/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Poorna Extended Inscript/Remington Keyboard",
+      "project_link": "https://gitlab.com/smc/poorna/",
+      "website_link": "https://poorna.smc.org.in/",
+      "logo": "https://poorna.smc.org.in/images/logo.svg",
+      "description": "Poorna is an extended Inscript/Remington keyboard layout which is available in Windows, GNU/Linux, macOS, Android, iOS and Web. It contains all Malayalam Unicode Characters. Poorna Inscript is available by default in current Gnu/Linux systems and Keyman. and Poorna Remington is available in ibus m17n and Keyman. The core Malayalam Unicode block currently defines 118 distinct encoded character points. A significant shortcoming of most existing Malayalam keyboard layouts, including standard InScript and Remington methods, is their inability to access the complete character set. While basic Malayalam characters and numerals are typically present, users lack a fluid method to input critical characters like archaic letters, which are indispensable for historical linguistic research and documentation of ancient texts. Poorna is designed to eliminate this gap by being the first layout to offer comprehensive, integrated support for all 118 encoded Malayalam characters. It intelligently expands upon the familiar InScript/Remington layouts by mapping the entire extended character set to the 3rd and 4th levels of the keyboard, accessible via the Right Alt key and the Right Alt + Shift combination. Crucially, Poorna also ensures the essential formatting control characters, the Zero Width Joiner (ZWJ) and Zero Width Non-Joiner (ZWNJ), are placed in a familiar, convenient position consistent with the InScript 1 standard, allowing for precise control over consonant conjuncts and ligatures. This thoughtful extension provides a single, cohesive solution for both everyday typing and advanced research needs. Users can immediately experience the full functionality through a readily available <a href=\"https://poornaweb.smc.org.in/\">web-based</a> version Poorna is a group project by SMC Read more in Malayalam <a href=\"https://blog.smc.org.in/poorna-malayalam-keyboard-release/\">smc blog</a>.",
+      "short_description": "Malayalam Extended Inscript/Remington Keyboard"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "This project comes under smc. so you can use smc channels for support.<br><a href=\"https://smc.org.in/en/contact/\">https://smc.org.in/en/contact/</a>"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Poorna Ensure to type all Malayalam unicode encoded characters in two layouts. Inscript and Remington."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Test well before pushing to the repo."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I love FOSS. any chance to contribute to FOSS project is personal happiness for me.  I got the chance to develop Poorna for smc."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "<a href=\"https://www.youtube.com/watch?v=bX4iUZb3w78\">https://www.youtube.com/watch?v=bX4iUZb3w78</a>"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "There wasn't coding included in platform specific layouts. it was just text files with key input data. interesting thing was the web version. i had to create 3rd and 4th layer on top of the existing library.<br>so tweaking that was interesting and challenging it is all in index.js with the support of newly created layouts for poorna."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "So one day at work, I tried to dual-boot Ubuntu on my computer. Big mistake. It totally blew up. My friends had to help me fix my mess. But then I got obsessed with trying to make Linux do all the Windows stuff I was used to. That little project accidentally led to me starting a Telegram group, which is now helping a lot of people with their FOSS and Linux doubts.<br>From there, I got connected with other FOSS communities, met a ton of FOSS people, eventually i became a contributor to FOSS, beginning from localization to Poorna and so on."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "😎🤏"
+    }
+  ]
+}
