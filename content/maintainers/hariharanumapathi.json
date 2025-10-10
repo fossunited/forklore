@@ -1,0 +1,68 @@
+{
+  "username": "hariharanumapathi",
+  "full_name": "Hariharan Umapathi",
+  "photo": "https://avatars.githubusercontent.com/u/62648127?v=4",
+  "designation": "Software Developer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/HariharanUmapathi"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://mastodon.social/@itz_mr_evil"
+    },
+    {
+      "label": "Linkedin",
+      "link": "https://www.linkedin.com/in/hariharanu"
+    },
+    {
+      "label": "Blog",
+      "link": "https://programmerlife1.wordpress.com"
+    }
+  ],
+  "projects": [
+    {
+      "name": "open-tamil-php",
+      "project_link": "https://github.com/HariharanUmapathi/open-tamil-php",
+      "website_link": "",
+      "logo": "https://github.com/HariharanUmapathi/open-tamil-php/blob/19135ff36ab7f462325236cee06f7ff25e0458a5/open-tamil-php.png?raw=true",
+      "description": "Open Tamil PHP here to address character encoding support Tamil Characters rendering issues in PDF Generation and image generation and multiple encoding conversion support natively from PHP Idea Sparked from : <a href=\"https://github.com/tecnickcom/TCPDF/issues/609\">https://github.com/tecnickcom/TCPDF/issues/609</a>",
+      "short_description": "Open Tamil is PHP Port for https://github.com/Ezhil-Language-Foundation/open-tamil/"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "See it! something needed create a issue (or)<br>you are good at making improvisation in it raise a pr. (or)<br>interested in creating testcases<br>contribute where ever you want you are always welcome!"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Open Tamil PHP here to address character encoding support Tamil Characters rendering issues in PDF Generation and image generation and multiple encoding conversion support natively from PHP<br>Idea Sparked from : <a href=\"https://github.com/tecnickcom/TCPDF/issues/609\">https://github.com/tecnickcom/TCPDF/issues/609</a>"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "You have to wait for sometime for something. Same not applicable for everything."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "After waiting solution for a problem though have many of faced the problem. Let start addressing it by fixing (why can't you give a try at least!) kickstarted"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "<a href=\"https://www.youtube.com/watch?v=AJtDXIazrMo\">https://www.youtube.com/watch?v=AJtDXIazrMo</a>"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "unittest"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "While looking for forums, mailing group, wandering around all the github for a pdf rendering problem. Problem drove me to<br>create a solution."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🎮"
+    }
+  ]
+}
