@@ -30,17 +30,10 @@ export default defineNuxtConfig({
       ],
     },
   },
-  routeRules: {
-    "/": { prerender: false },
-  },
-  compatibilityDate: "2024-09-19",
+  compatibilityDate: "2025-05-15",
   nitro: {
-    preset: "cloudflare_module",
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true
-    },
-  prerender: {
+	prerender: {
+      crawlLinks: true,
       routes: ['/rss']
     }
   }
