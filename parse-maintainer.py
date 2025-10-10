@@ -3,6 +3,7 @@ Script to parse maintainers data for Forklore PR
 Intended for both Maintainer who want to self-contribute or simple anyone to help out!
 """
 
+import sys
 import re
 import json
 from html import escape
@@ -164,7 +165,7 @@ def parse_issue(markdown: str):
             "project_link": current_project.get("Project Link", ""),
             "website_link": current_project.get("Website Link", ""),
             "logo": current_project.get("Logo URL", ""),
-            "description": current_project.get("Full Description", ""),
+            "description": format_response(current_project.get("Full Description", "")),
             "short_description": current_project.get("Short Description", "")
         }
         data["projects"].append(project_json)
@@ -176,7 +177,6 @@ def parse_issue(markdown: str):
 
 
 if __name__ == "__main__":
-    import sys
 
     if len(sys.argv) < 2:
         print("Usage: python parse_issue.py <input_file.md>")
@@ -187,5 +187,13 @@ if __name__ == "__main__":
     with open(input_file, "r", encoding="utf-8") as f:
         md = f.read()
         result = parse_issue(md)
-        print(json.dumps(result, indent=2, ensure_ascii=False))
-        
+
+    json_output = json.dumps(result, indent=2, ensure_ascii=False)
+    print(json_output)
+
+    # Use username from result
+    file_username = result.get("username", "output") or "output"
+    output_file = f"{file_username}.json"
+    with open(output_file, "w", encoding="utf-8") as f_out:
+        f_out.write(json_output)
+    print(f"Output written to {output_file}")
