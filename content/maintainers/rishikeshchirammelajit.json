@@ -1,0 +1,64 @@
+{
+  "username": "RishikeshChirammelAjit",
+  "full_name": "Rishikesh Chirammel Ajit",
+  "photo": "https://avatars.githubusercontent.com/u/42419698?s=200&v=4",
+  "designation": "Founding Engineer/Staff AI Engineer at Jentic",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/rishikesh-jentic"
+    },
+    {
+      "label": "GitHub",
+      "link": "https://github.com/RishikeshChirammelAjit/"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/rishikesh-ajit-885041110/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Standard Agent",
+      "project_link": "https://github.com/jentic/standard-agent",
+      "website_link": "",
+      "logo": "",
+      "description": "Remember taking things apart as a kid? A mechanical clock, a radio—you could see the gears, trace the wires, understand cause and effect. It sparked curiosity. Crack open a modern smartphone and you see black chips—powerful, but opaque. Agents feel the same today.<br><br>Standard Agent is the mechanical radio of agent libraries—open it up and actually learn how it works. It’s a tiny, open source library with a composable core and plug‑in components, proving a simple point: LLMs are hard, tooling is hard, but the glue code doesn’t have to be. You can write an agent in a few hundred lines and truly understand it.<br><br><strong>The Three Design Principles</strong><ul><li>Deliberately simple: No black box, no magic. It should be faster to read the code than the docs, and you can see every decision the agent makes.</li><li>Fully composable: Swap any part—LLM, tools, memory, reasoning strategy. Mix-and-match like LEGO. No framework lock‑in.</li><li>Open source: Read it, modify it, deploy it, fork it—or replace it. Apache 2.0, by design.</li></ul><strong>What You Get</strong><ul><li>Four swappable parts: LLM (brain), Reasoner (thinking style), Memory (notepad), Tools (actions)</li><li>Single‑file reference reasoners (e.g., ReACT, ReWOO) you can inspect, compare, and customize</li><li>First‑class observability: structured logging and optional OpenTelemetry exports (e.g., to Langfuse)</li></ul><strong>Who It’s For</strong><br>Builders who value transparency over abstraction: researchers, tinkerers, and teams who want a readable reasoning loop they can understand, measure, and modify—without fighting a framework.<br><br><strong>Mission &amp; Goals</strong><br>The mission is to demystify agents: make the internals transparent, the pieces composable, and experimentation fast. The goals are a thriving, community‑driven reference library of reasoning strategies, tool providers (MCP, local scripts, remote APIs), and memory backends (e.g., Redis, vector stores)—with patterns that emerge organically, not enforced by a framework. Apache 2.0 licensed, no lock‑in, and welcoming to contributors. Small enough to understand, powerful enough to use, open enough to hack.",
+      "short_description": "The mechanical radio of agent libraries—deliberately simple, fully composable, open source."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "<br>- Contribute: new reasoners (LATS, ToT, Plan-Act), tool providers (MCP/local/your APIs), memory backends (Redis/vector).<br>- Improve docs/examples and prompt quality per model.<br>- Fork, extend—even replace: it’s Apache‑2.0. Swap any component, ship your own flavor, or replace the reasoner entirely. If it helps others, open a PR."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Tries to be mechanical radio of agent libraries—deliberately simple, fully composable, open source. Tries to demystify agent and encourage tinkering."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Less is more. Keep the core tiny, make seams obvious, add observability early, and let patterns emerge—don’t enforce them.<br>If you can keep asking the question \"What is the justification for your existence\" to each line of code, to each function, classes, modules. Strip things away. Make it as simple as you can."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Its a lot of fun and brings me a lot of joy"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": ""
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": ""
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "2AM, an opaque framework, runaway token spend, and intuitive way to understand what was going on. Next day: wanted to built the smallest possible agent loop you can read end‑to‑end."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": ""
+    }
+  ]
+}
