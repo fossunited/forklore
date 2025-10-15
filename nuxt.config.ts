@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
   modules: ["@nuxt/content", "@nuxtjs/color-mode"],
-  css: ["~/assets/css/main.css"],
+  css: ["/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
   },
