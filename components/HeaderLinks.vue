@@ -8,11 +8,15 @@ const navbarItems = [
     label: "FOSS United Grants",
     href: "https://fossunited.org/grants",
   },
+  {
+    label: "Discussion Forum",
+    href: "https://forum.fossunited.org/c/maintainers/",
+  },
 ];
 </script>
 <template>
-  <ol class="flex flex-col items-end md:flex-row">
-    <li class="py-2 px-4" v-for="item in navbarItems" :key="item.label">
+  <ol class="flex flex-col items-end md:flex-row text-sm">
+    <li class="py-2 px-3" v-for="item in navbarItems" :key="item.label">
       <a :href="item.href">
         {{ item.label }}
       </a>
