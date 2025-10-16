@@ -14,7 +14,7 @@
             FOSS United
           </a>
         </p>
-        <div class="flex flex-row gap-4">
+        <div class="flex flex-col sm:flex-row gap-4">
           <a
             class="flex text-sm gap-2 items-center btn-subtle w-fit"
             href="https://github.com/fossunited/forklore"
