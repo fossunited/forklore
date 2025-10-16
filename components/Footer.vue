@@ -26,6 +26,15 @@
 
           <a
             class="flex text-sm gap-2 items-center btn-subtle w-fit"
+            href="https://forum.fossunited.org/c/maintainers/"
+            target="_blank"
+          >
+            <IconsDiscourse class="w-5 h-5" />
+            Forum
+          </a>
+
+          <a
+            class="flex text-sm gap-2 items-center btn-subtle w-fit"
             href="https://forklore.in/rss"
             target="_blank"
           >
