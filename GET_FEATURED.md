@@ -23,7 +23,7 @@ You can submit a blog post by creating a pull request that adds a Markdown file 
 touch content/blog/<your-post-slug>.md
 ```
 
-2. Add frontmatter metadta to top of the file:
+2. Add front-matter metadata to top of the file:
 
 ```markdown
 ---
