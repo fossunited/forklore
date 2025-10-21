@@ -9,7 +9,11 @@ const navbarItems = [
     href: "https://fossunited.org/grants",
   },
   {
-    label: "Discussion Forum",
+    label: "Blog",
+      href: "/blog",
+  },
+  {
+    label: "Forum",
     href: "https://forum.fossunited.org/c/maintainers/",
   },
 ];
