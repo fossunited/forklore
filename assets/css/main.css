@@ -36,6 +36,8 @@
   --color-secondary-light: #18222a;
   --color-tertiary-dark: #3c4b4e;
   --color-tertiary-light: #eef0f1;
+  --color-quaternary-dark: #495B5F;
+  --color-quaternary-light: #DDE1E3;
 }
 
 html {
@@ -109,6 +111,31 @@ html {
   .sans-text a {
     text-decoration: underline;
   }
+
+  .tag-card {
+    @apply text-sm px-2 py-1;
+    background-color: var(--color-quaternary-light);
+    color: var(--color-secondary-light);
+  }
+
+  .dark-mode .tag-card {
+    background-color: var(--color-quaternary-dark);
+    color: var(--color-secondary-dark);
+  }
+
+  .prose h1 {
+    font-size: 1.6rem;
+  }
+
+  .prose h1 > a,
+  .prose h2 > a,
+  .prose h3 > a,
+  .prose h4 > a,
+  .prose h5 > a,
+  .prose h6 > a {
+    text-decoration: none !important;
+  }
+
 }
 
 @layer base {
