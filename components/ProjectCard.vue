@@ -19,7 +19,7 @@ defineProps(["project"]);
         </a>
       </div>
     </div>
-    <p class="text-sm">
+    <p class="text-sm sans-text">
       {{ project.short_description }}
     </p>
   </div>
