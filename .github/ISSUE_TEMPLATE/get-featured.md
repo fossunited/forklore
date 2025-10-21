@@ -13,7 +13,7 @@ Want to contribute this profile to the repo as PR itself?
 2. Clone the repo locally or download the parse-maintainer.py file
 3. Run the parser script to generate `profile.json`:
 
-   python parse_issue.py issue.md > <username>.json
+   python parse_maintainer.py issue.md > <username>.json
 
 4. Create a PR with the resulting JSON added to the appropriate folder (e.g. `/content/maintainers/<username>.json`)
 

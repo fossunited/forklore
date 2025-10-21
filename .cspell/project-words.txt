@@ -57,3 +57,5 @@ Inscript
 Poorna
 ibus
 ZWNJ
+Jentic
+Langfuse
