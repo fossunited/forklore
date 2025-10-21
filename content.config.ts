@@ -1,4 +1,5 @@
-import { defineCollection, defineContentConfig, z } from "@nuxt/content";
+import { defineCollection, defineContentConfig, property } from "@nuxt/content";
+import { z } from 'zod'
 
 const maintainerSchema = z.object({
   username: z.string(),
@@ -37,5 +38,21 @@ export default defineContentConfig({
       source: "maintainers/**.json",
       schema: maintainerSchema,
     }),
+    blog: defineCollection({
+      type: 'page',
+      source: 'blog/*.md',
+      schema: z.object({
+        title: z.string(),
+        author: z.string(),
+        description: z.optional(z.string()),
+        date: z.date(),
+        draft: z.optional(z.boolean()),
+        tags: z.optional(z.array(z.string())),
+        hero: z.object({
+          image: property(z.string()).editor({ input: 'media' }),
+          caption: z.optional(z.string())
+        })
+      })
+    })
   },
 });
