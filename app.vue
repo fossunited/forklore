@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import BaseLayout from "@/layout/BaseLayout.vue";
+import scrollTop from '@/components/scrollTop.vue'
 
 useHead({
   title: "Forklore",
@@ -27,6 +28,7 @@ useSeoMeta({
 </script>
 <template>
   <BaseLayout>
-    <NuxtPage> </NuxtPage>
+      <NuxtPage />
+      <scrollTop />
   </BaseLayout>
 </template>
