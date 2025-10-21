@@ -32,9 +32,8 @@ const positionClasses = computed(() => {
     'fixed',
     'bottom-6',
     'right-4',
-    'md:right-[30%]',
-  ]
-})
+  ];
+});
 
 onMounted(() => {
   window.addEventListener('scroll', toggleVisibility)
