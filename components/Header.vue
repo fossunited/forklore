@@ -25,8 +25,6 @@ const getButtonIcon = () => {
 };
 
 const toggleColorMode = () => {
-  colorMode.forced = true;
-
   if (colorMode.value === "dark") {
     colorMode.preference = "light";
     colorMode.value = "light";
