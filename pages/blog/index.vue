@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import AuthorLink from "@/components/AuthorLink.vue";
+
 const { data: posts } = await useAsyncData("blog", () => {
   return queryCollection("blog").order("date", "DESC").all();
 });
@@ -38,7 +40,7 @@ const router = useRouter();
             class="flex items-center justify-between flex-wrap gap-2 text-sm text-secondary-light dark:text-secondary-dark"
           >
             <div>
-              by <strong>{{ post.author }}</strong> •
+              by <AuthorLink :author="post.author" /> •
               {{ formatDate(post.date) }}
             </div>
 
