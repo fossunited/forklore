@@ -8,7 +8,10 @@ defineProps(["project"]);
   <div class="p-8 flex flex-col gap-6 items-start">
     <ProjectLogo :project="project" />
     <h2 class="text-xl font-bold">{{ project.name }}</h2>
-    <p class="text-base sans-text" v-html="project.description"></p>
+    <MDC
+      :value="project.description"
+      class="prose dark:prose-invert text-base sans-text break-words"
+    />
     <Link
       v-if="project.project_link"
       :link="project.project_link"
