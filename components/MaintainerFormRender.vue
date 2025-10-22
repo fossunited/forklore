@@ -13,9 +13,11 @@ defineProps(["maintainer"]);
             {{ item.question }}
           </p>
         </div>
-        <div>
-          <p class="text-secondary-light dark:text-secondary-dark break-words" v-html="item.response"></p>
-        </div>
+
+        <MDC
+          :value="item.response"
+          class="prose dark:prose-invert text-secondary-light dark:text-secondary-dark break-words"
+        />
       </div>
     </template>
   </div>
