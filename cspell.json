@@ -5,17 +5,12 @@
   "caseSensitive": false,
   "dictionaryDefinitions": [
     {
-      "name": "project-words",
-      "path": ".cspell/project-words.txt",
-      "addWords": true
-    },
-    {
-      "name": "maintainer-words",
-      "path": ".cspell/maintainer-words.txt",
+      "name": "accepted-words",
+      "path": ".cspell/accepted-words.txt",
       "addWords": true
     }
   ],
-  "dictionaries": ["project-words", "maintainer-words"],
+  "dictionaries": ["accepted-words"],
   "ignorePaths": [
     "node_modules",
     ".cspell/project-words.txt",
