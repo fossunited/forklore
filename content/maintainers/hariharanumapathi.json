@@ -27,18 +27,18 @@
       "project_link": "https://github.com/HariharanUmapathi/open-tamil-php",
       "website_link": "",
       "logo": "https://github.com/HariharanUmapathi/open-tamil-php/blob/19135ff36ab7f462325236cee06f7ff25e0458a5/open-tamil-php.png?raw=true",
-      "description": "Open Tamil PHP here to address character encoding support Tamil Characters rendering issues in PDF Generation and image generation and multiple encoding conversion support natively from PHP Idea Sparked from : <a href=\"https://github.com/tecnickcom/TCPDF/issues/609\">https://github.com/tecnickcom/TCPDF/issues/609</a>",
+      "description": "Open Tamil PHP is here to address character encoding support for Tamil characters, fixing rendering issues in PDF and image generation, natively in PHP. \nIdea Sparked from: https://github.com/tecnickcom/TCPDF/issues/609",
       "short_description": "Open Tamil is PHP Port for https://github.com/Ezhil-Language-Foundation/open-tamil/"
     }
   ],
   "form": [
     {
       "question": "How to support",
-      "response": "See it! something needed create a issue (or)<br>you are good at making improvisation in it raise a pr. (or)<br>interested in creating testcases<br>contribute where ever you want you are always welcome!"
+      "response": "- Check it out, if something is missing, create an issue\n - Raise a PR\n - Create testcases. \n\n All contributions are welcome."
     },
     {
       "question": "A small brief about your project",
-      "response": "Open Tamil PHP here to address character encoding support Tamil Characters rendering issues in PDF Generation and image generation and multiple encoding conversion support natively from PHP<br>Idea Sparked from : <a href=\"https://github.com/tecnickcom/TCPDF/issues/609\">https://github.com/tecnickcom/TCPDF/issues/609</a>"
+      "response": "Open Tamil PHP is here to address character encoding support for Tamil characters, fixing rendering issues in PDF and image generation, natively in PHP.\nIdea Sparked from : https://github.com/tecnickcom/TCPDF/issues/609"
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
@@ -46,7 +46,7 @@
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": "After waiting solution for a problem though have many of faced the problem. Let start addressing it by fixing (why can't you give a try at least!) kickstarted"
+      "response": "After waiting around for a solution for this problem that many faced, I decided to start addressing it by trying to fix it. One can always try at the least."
     },
     {
       "question": "If your repo had a theme song, what would it be?",
@@ -58,7 +58,7 @@
     },
     {
       "question": "What's your open-source villain origin story?",
-      "response": "While looking for forums, mailing group, wandering around all the github for a pdf rendering problem. Problem drove me to<br>create a solution."
+      "response": "After wandering all around the internet, through countless forums, mailing groups and github for a fix to this PDF rendering problem, it eventually drove me to create a solution."
     },
     {
       "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
