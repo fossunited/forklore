@@ -290,4 +290,11 @@ wordamour
 xkcd
 xmpp
 zasper
-
+Karthik
+kdqed
+Devan
+zaturn
+pkgs
+nixpkgs
+esbuild
+djlint
