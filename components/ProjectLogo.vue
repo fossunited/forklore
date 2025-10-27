@@ -4,7 +4,7 @@ defineProps(["project"]);
 <template>
   <img
     v-if="project.logo"
-    class="h-20 aspect-[3/2] object-contain p-3 bg-white "
+    class="h-20 aspect-[3/2] object-contain p-3 bg-white/90"
     :src="project.logo"
     :alt="`Logo of ${project.name}`"
   />
