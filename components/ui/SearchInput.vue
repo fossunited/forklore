@@ -28,35 +28,38 @@ const goToRandomMaintainer = () => {
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-2 items-center">
-    <div class="flex items-center px-4 py-2 gap-4 border transition-all">
-      <IconsSearch class="w-4 h-4" />
-      <input
-        :value="modelValue"
-        @input="emit('update:modelValue', $event.target.value)"
-        type="text"
-        :placeholder="placeholder || 'Search'"
-        class="input w-full dark:placeholder:text-secondary-dark placeholder:text-secondary-light text-sm focus:outline-none"
-      />
-      <span
-        class="text-xs border rounded px-2 hidden md:inline-block opacity-50"
-      >
-        ctrl+k
-      </span>
-    </div>
+<div class="flex flex-col sm:flex-row sm:items-center gap-2">
+  <!-- Search input -->
+  <div class="flex items-center px-4 py-2 gap-4 border transition-all w-full sm:w-[350px]">
+    <IconsSearch class="w-4 h-4" />
+    <input
+      :value="modelValue"
+      @input="emit('update:modelValue', $event.target.value)"
+      type="text"
+      :placeholder="placeholder || 'Search'"
+      class="input w-full dark:placeholder:text-secondary-dark placeholder:text-secondary-light text-sm focus:outline-none"
+    />
+    <span class="text-xs border rounded px-2 hidden md:inline-block opacity-50">
+      ctrl+k
+    </span>
+  </div>
 
+  <!-- Buttons -->
+  <div class="flex gap-2 sm:ml-auto text-sm">
     <button
       @click="goToRandomMaintainer"
-      class="ml-2 flex text-sm gap-2 items-center btn-subtle w-fit"
+      class="flex gap-2 items-center btn-subtle"
     >
-      Surprise Me!
+      Surprise Me
     </button>
 
     <NuxtLink
       to="/commit-emoji"
-      class="flex text-sm gap-2 items-center btn-subtle"
+      class="flex gap-2 items-center btn-subtle"
     >
-      Commit to Emoji!
+      Commit to Emoji
     </NuxtLink>
   </div>
+</div>
+
 </template>
