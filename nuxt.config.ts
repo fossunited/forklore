@@ -10,11 +10,11 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   colorMode: {
-    storage: 'cookie',
+    storage: "cookie",
   },
   app: {
     head: {
-      viewport: 'width=device-width, initial-scale=1',
+      viewport: "width=device-width, initial-scale=1",
 
       htmlAttrs: {
         lang: "en",
@@ -31,10 +31,13 @@ export default defineNuxtConfig({
     },
   },
   compatibilityDate: "2025-05-15",
+  experimental: {
+    extractAsyncDataHandlers: true,
+  },
   nitro: {
-	prerender: {
+    prerender: {
       crawlLinks: true,
-      routes: ['/rss']
-    }
-  }
+      routes: ["/rss"],
+    },
+  },
 });
