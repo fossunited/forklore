@@ -3,7 +3,7 @@
     <button
       v-if="visible"
       @click="scrollToTop"
-      class="z-50 p-3 rounded-full text-white text-xl btn-subtle"
+        class="z-50 p-3 text-white text-xl btn-subtle w-8 h-8 justify-center"
       :class="positionClasses"
       aria-label="Scroll to top"
     >
