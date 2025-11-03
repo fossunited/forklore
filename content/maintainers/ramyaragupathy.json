@@ -1,0 +1,76 @@
+{
+  "username": "ramyaragupathy",
+  "full_name": "Ramya Ragupathy",
+  "photo": "https://avatars.githubusercontent.com/u/12103383?v=4",
+  "designation": "Product Portfolio Manager @HOTOSM<br>Head of Product & Operations @MapLibre",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/ramyaragupathy"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/ramyaragupathy/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "HOT Tasking Manager",
+      "project_link": "https://github.com/hotosm/tasking-manager/",
+      "Website_link": "https://tasks.hotosm.org/",
+      "logo": "",
+      "short_description": "Open-source coordination platform for humanitarian and community mapping at scale.",
+      "description": "Tasking Manager powers coordinated OpenStreetMap mapping for disaster response, community projects, and data quality efforts. I focus on product strategy, roadmap, and user experience, bridging mappers, validators, and partner orgs, so that contributors can discover tasks easily, teams can manage campaigns reliably, and data flows where it’s needed quickly."
+    },
+    {
+      "name": "Field Tasking Manager (FieldTM)",
+      "project_link": "https://github.com/hotosm/field-tm/",
+      "website_link": "https://fmtm.hotosm.org/",
+      "logo": "",
+      "short_description": "Plan, run, and sync field data collection using open source tools.",
+      "Description": "FieldTM streamlines offline/online field mapping with integrations to tools like QField, ODK/Kobo, and the HOT ecosystem. I lead product direction and workflows (project setup, forms, sync, and data handling) to reduce friction for field teams operating with limited connectivity and diverse device constraints."
+    },
+    {
+      "name": "MapLibre (GL JS & Native ecosystem – community & operations)",
+      "project_link": "https://github.com/maplibre",
+      "website_link": "https://maplibre.org",
+      "logo": "",
+      "description": "MapLibre maintains high-performance map rendering libraries for web and mobile. I support community operations, sponsorships, governance, and comms (elections, newsletters, roadmap coordination) so maintainers can focus on code while the project stays sustainable, transparent, and welcoming.",
+      "short_description": "Open map rendering stack that is vendor-neutral and community-governed."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Contribute issues/PRs, share real-world user stories, help with docs and testing, and introduce potential sponsors/partners. If you run trainings or mapathons, tell us what’s hard so we turn that feedback into roadmap changes."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "We build the rails for humanitarian and community mapping from remote coordination (Tasking Manager) to boots-on-the-ground data collection (FieldTM), and an open, sustainable map rendering stack (MapLibre)."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Show, don’t just tell"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Because while proprietary tools aren’t always accessible, affordable, or adaptable for the communities who need them the most, especially when budgets end or connectivity is limited. Open source gives transparency, local control, and a future where mapping tools don’t disappear just because funding does. It lets technology do good and keep doing good long after we step away."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "[A sky full of stars](https://www.youtube.com/watch?v=VPRjCeoBqrI)"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Dependency of a dependency of a dependency"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I stepped away from full-time roles (twice!), but open source kept pulling me back to places where tech can do real good. My villain origin? I just won’t quit."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🧭 because of constant navigation between users, contributors, and reality."
+    }
+  ]
+}
