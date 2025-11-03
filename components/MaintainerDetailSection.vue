@@ -11,9 +11,9 @@ defineProps(["maintainer"]);
       <MaintainerImage :maintainer="maintainer" />
       <div class="flex flex-col gap-2">
         <h1 class="font-bold text-xl">{{ maintainer.full_name }}</h1>
-        <p class="text-base">
-          {{ maintainer.designation }}
-        </p>
+        <MDC
+          :value="maintainer.designation"
+        />
         <div class="flex gap-3 items-center">
           <a
             v-for="social in maintainer.socials"

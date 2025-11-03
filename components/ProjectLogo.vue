@@ -12,6 +12,6 @@ defineProps(["project"]);
     v-else
     class="h-20 aspect-[3/2] bg-white text-black uppercase border border-tertiary-light dark:border-tertiary-dark items-center justify-center flex font-sans font-black"
   >
-    <span>{{ project.name }}</span>
+    <span>{{ project.name.slice(0, 20) }}...</span>
   </div>
 </template>
