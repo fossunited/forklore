@@ -1,5 +1,10 @@
 # Forklore Highlights
 
+## November 2025
+
+### Maintainers
+- Ramya ragupathy @ HOTOSM & MapLibre: https://forklore.in/maintainers/ramyaragupathy
+
 ## October 2025
 
 ### Maintainers

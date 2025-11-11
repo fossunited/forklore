@@ -47,6 +47,7 @@ const goToRandomMaintainer = () => {
   <!-- Buttons -->
   <div class="flex gap-2 sm:ml-auto text-sm">
     <button
+      v-if="maintainers && maintainers.length > 0"
       @click="goToRandomMaintainer"
       class="flex gap-2 items-center btn-subtle"
     >

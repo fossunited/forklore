@@ -1,6 +1,14 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
 
+const { data: maintainers } = await useAsyncData("maintainers", () => {
+  return queryCollection("maintainers").all();
+});
+
+const maintainerCount = computed(() => {
+  return maintainers.value?.length || 0;
+});
+
 const getLogoPath = () => {
   if (colorMode.value === "dark") {
     return "logo/logo_light.svg";
@@ -14,10 +22,19 @@ const getLogoPath = () => {
 
 <template>
   <div class="px-8 pt-40 pb-8 border-custom-b space-y-6">
-    <img :src="getLogoPath()" alt="forklore logo" class="h-10" />
-    <p>
-      by <a href="https://fossunited.org" class="font-bold link">FOSS United</a>
-    </p>
+    <div class="flex items-center gap-4">
+      <img :src="getLogoPath()" alt="forklore logo" class="h-10" />
+    </div>
+    <div class="flex justify-between">
+      <p>
+        by
+        <a href="https://fossunited.org" class="font-bold link">FOSS United</a>
+      </p>
+      <span class="text-md font-bold" v-if="maintainerCount > 0">
+        {{ maintainerCount }}
+        {{ maintainerCount === 1 ? "maintainer" : "maintainers" }}
+      </span>
+    </div>
   </div>
   <div class="px-8 py-12 border-custom-b">
     <p class="font-semibold">
