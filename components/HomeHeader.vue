@@ -25,11 +25,12 @@ const getLogoPath = () => {
     <div class="flex items-center gap-4">
       <img :src="getLogoPath()" alt="forklore logo" class="h-10" />
     </div>
-    <div class="flex justify-between">
+    <div class="flex flex-col sm:flex-row justify-between">
       <p>
         by
         <a href="https://fossunited.org" class="font-bold link">FOSS United</a>
       </p>
+
       <span class="text-md font-bold" v-if="maintainerCount > 0">
         {{ maintainerCount }}
         {{ maintainerCount === 1 ? "maintainer" : "maintainers" }}
