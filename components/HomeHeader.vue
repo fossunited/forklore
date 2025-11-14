@@ -9,7 +9,7 @@ const maintainerCount = computed(() => {
   return maintainers.value?.length || 0;
 });
 
-const getLogoPath = () => {
+const getLogoPath = computed(() => {
   if (colorMode.value === "dark") {
     return "logo/logo_light.svg";
   } else if (colorMode.value === "light") {
@@ -17,13 +17,13 @@ const getLogoPath = () => {
   }
 
   return "logo/logo_light.svg";
-};
+});
 </script>
 
 <template>
   <div class="px-8 pt-40 pb-8 border-custom-b space-y-6">
     <div class="flex items-center gap-4">
-      <img :src="getLogoPath()" alt="forklore logo" class="h-10" />
+      <img :src="getLogoPath" alt="forklore logo" class="h-10" />
     </div>
     <div class="flex flex-col sm:flex-row justify-between">
       <p>
