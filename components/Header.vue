@@ -11,7 +11,7 @@ const getLogoPath = computed(() => {
     return "/logo/logo_dark.svg";
   }
 
-  return "/logo/logo_light.svg";
+  return "/logo/logo_dark.svg";
 });
 
 const getButtonIcon = computed(() => {
@@ -21,7 +21,7 @@ const getButtonIcon = computed(() => {
     return DarkModeIcon;
   }
 
-  return LightModeIcon;
+  return DarkModeIcon;
 });
 
 const toggleColorMode = () => {

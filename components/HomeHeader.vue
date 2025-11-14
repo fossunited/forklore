@@ -16,7 +16,7 @@ const getLogoPath = computed(() => {
     return "logo/logo_dark.svg";
   }
 
-  return "logo/logo_light.svg";
+  return "logo/logo_dark.svg";
 });
 </script>
 
