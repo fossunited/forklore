@@ -23,7 +23,7 @@
       "project_link": "https://github.com/safedep/vet",
       "website_link": "https://safedep.io",
       "logo": "https://raw.githubusercontent.com/safedep/.github/refs/heads/main/assets/logo/safedep-logo.svg",
-      "description": "vet is an open source software supply chain security tool built for developers and security engineers for enforcing policy driven guardrails against risky open source packages. vet has inbuilt code analysis engine to identify risky open source packages that actually impacts an application. vet leverage SafeDep's malicious package scanning infrastructure to provide near real-time protection against malicious open source packages.",
+      "description": "vet is an open source software supply chain security tool built for developers and security engineers for enforcing policy driven guardrails against risky open source packages. vet has a built-in code analysis engine to identify risky open source packages that actually impacts an application. vet leverage SafeDep's malicious package scanning infrastructure to provide near real-time protection against malicious open source packages.",
       "short_description": "Protect against malicious open source packages"
     },
     {
