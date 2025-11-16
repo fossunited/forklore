@@ -50,7 +50,7 @@
     },
     {
       "question": "A small brief about your project",
-      "response": "SafeDep develop and maintain open source tools to safeguard an organization's open source software supply chain. vet for CI/CD and AI IDEs, pmg for developer tooling, xBOM for 3rd party code capability identification. Together they are built to help an organization protect against open source software supply chain attacks."
+      "response": "SafeDep develops and maintains open source tools to safeguard an organization's open source software supply chain. vet for CI/CD and AI IDEs, pmg for developer tooling, xBOM for 3rd party code capability identification. Together they are built to help an organization protect against open source software supply chain attacks."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
