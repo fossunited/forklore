@@ -11,9 +11,9 @@ const maintainerCount = computed(() => {
 });
 
 const getLogoPath = computed(() => {
-  if (colorMode.preference === "dark") {
+  if (colorMode.value === "dark") {
     return "/logo/logo_light.svg";
-  } else {
+  } else if (colorMode.value === "light") {
     return "/logo/logo_dark.svg";
   }
 });

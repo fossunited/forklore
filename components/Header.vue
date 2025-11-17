@@ -5,31 +5,31 @@ import DarkModeIcon from "@/components/icons/DarkModeIcon.vue";
 const colorMode = useColorMode();
 
 const getLogoPath = computed(() => {
-  if (colorMode.preference === "dark") {
+  if (colorMode.value === "dark") {
     return "/logo/logo_light.svg";
-  } else {
+  } else if (colorMode.value === "light") {
     return "/logo/logo_dark.svg";
   }
 });
 
 const getButtonIcon = computed(() => {
-  if (colorMode.preference === "dark") {
+  if (colorMode.value === "dark") {
     return LightModeIcon;
-  } else {
+  } else if (colorMode.value === "light") {
     return DarkModeIcon;
   }
 });
 
 const toggleColorMode = () => {
-  if (colorMode.preference === "dark") {
+  if (colorMode.value === "dark") {
     colorMode.preference = "light";
-  } else {
+  } else if (colorMode.value === "light") {
     colorMode.preference = "dark";
   }
 };
 
 const themeButtonLabel = computed(() => {
-  return colorMode.preference === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+  return colorMode.value === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
 });
 
 const showHeaderLinks = ref(false);

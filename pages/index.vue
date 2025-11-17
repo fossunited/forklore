@@ -1,4 +1,6 @@
 <template>
-  <HomeHeader></HomeHeader>
+  <ClientOnly>
+      <HomeHeader></HomeHeader>
+  </ClientOnly>
   <MaintainerList></MaintainerList>
 </template>
