@@ -3,9 +3,9 @@ const colorMode = useColorMode();
 
 defineProps(["maintainer"]);
 const getMaintainerPlaceholderImage = () => {
-  if (colorMode.value === "dark") {
+  if (colorMode.preference === "dark") {
     return "/maintainer_photo_dark.svg";
-  } else if (colorMode.value === "light") {
+  } else if (colorMode.preference === "light") {
     return "/maintainer_photo_light.svg";
   }
 

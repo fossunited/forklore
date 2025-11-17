@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from "vue";
 const colorMode = useColorMode();
 
 const { data: maintainers } = await useAsyncData("maintainers", () => {
@@ -10,14 +11,13 @@ const maintainerCount = computed(() => {
 });
 
 const getLogoPath = computed(() => {
-  if (colorMode.value === "dark") {
-    return "logo/logo_light.svg";
-  } else if (colorMode.value === "light") {
-    return "logo/logo_dark.svg";
+  if (colorMode.preference === "dark") {
+    return "/logo/logo_light.svg";
+  } else {
+    return "/logo/logo_dark.svg";
   }
-
-  return "logo/logo_dark.svg";
 });
+
 </script>
 
 <template>
