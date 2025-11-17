@@ -1,0 +1,80 @@
+{
+  "username": "abhisek",
+  "full_name": "Abhisek Datta",
+  "photo": "https://avatars.githubusercontent.com/u/31844?s=200&v=4",
+  "designation": "Co-Founder at [SafeDep](https://safedep.io)",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/abhisek"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/abh1sek/"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://x.com/abh1sek"
+    }
+  ],
+  "projects": [
+    {
+      "name": "vet",
+      "project_link": "https://github.com/safedep/vet",
+      "website_link": "https://safedep.io",
+      "logo": "https://raw.githubusercontent.com/safedep/.github/refs/heads/main/assets/logo/safedep-logo.svg",
+      "description": "vet is an open source software supply chain security tool built for developers and security engineers for enforcing policy driven guardrails against risky open source packages. vet has a built-in code analysis engine to identify risky open source packages that actually impacts an application. vet leverage SafeDep's malicious package scanning infrastructure to provide near real-time protection against malicious open source packages.",
+      "short_description": "Protect against malicious open source packages"
+    },
+    {
+      "name": "pmg",
+      "project_link": "https://github.com/safedep/pmg",
+      "website_link": "https://safedep.io",
+      "logo": "https://raw.githubusercontent.com/safedep/.github/refs/heads/main/assets/logo/safedep-logo.svg",
+      "short_description": "PMG protects developers from getting hacked due to malicious open source packages.",
+      "description": "Package Manager Guard (PMG) wraps popular package managers such as npm, pnpm, yarn, pip and more to proactively detect and prevent installation of malicious open source packages in developer machines."
+    },
+    {
+      "name": "xbom",
+      "project_link": "https://github.com/safedep/xbom",
+      "website_link": "https://safedep.io",
+      "logo": "https://raw.githubusercontent.com/safedep/.github/refs/heads/main/assets/logo/safedep-logo.svg",
+      "short_description": "xBOM builds AI, Crypto and more usage inventory (bill of materials) for a code repository through static code analysis.",
+      "description": "xBOM is designed to build contextual bill of materials for a given software through static code analysis. While software composition analysis (SCA) tools build SBOM for 3rd party OSS usage in an application, xBOM augments them with information about AI / Crypto / SaaS BOM."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Advocate the need for safeguarding the open source software supply chain.<br>Driving adoption among OSS maintainers, contributing code, documentation and roadmap."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "SafeDep develops and maintains open source tools to safeguard an organization's open source software supply chain. vet for CI/CD and AI IDEs, pmg for developer tooling, xBOM for 3rd party code capability identification. Together they are built to help an organization protect against open source software supply chain attacks."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Keep things simple. Clear documentation for users and contributors. Software needs to be designed to enable easy community contribution. Without community, the project will die."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Started as a hobby project to solve a problem at work. Eventually saw traction outside immediate circle. Now the usage, asks and community participation keeps me going."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Paranoid by Black Sabbath."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "./api"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Let me reverse engineer that and build OSS"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "😮"
+    }
+  ]
+}
