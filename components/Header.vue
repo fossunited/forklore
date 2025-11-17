@@ -4,25 +4,25 @@ import LightModeIcon from "@/components/icons/LightModeIcon.vue";
 import DarkModeIcon from "@/components/icons/DarkModeIcon.vue";
 const colorMode = useColorMode();
 
-const getLogoPath = () => {
+const getLogoPath = computed(() => {
   if (colorMode.value === "dark") {
     return "/logo/logo_light.svg";
   } else if (colorMode.value === "light") {
     return "/logo/logo_dark.svg";
   }
 
-  return "/logo/logo_light.svg";
-};
+  return "/logo/logo_dark.svg";
+});
 
-const getButtonIcon = () => {
+const getButtonIcon = computed(() => {
   if (colorMode.value === "dark") {
     return LightModeIcon;
   } else if (colorMode.value === "light") {
     return DarkModeIcon;
   }
 
-  return LightModeIcon;
-};
+  return DarkModeIcon;
+});
 
 const toggleColorMode = () => {
   if (colorMode.value === "dark") {
@@ -45,14 +45,14 @@ const showHeaderLinks = ref(false);
     <nav class="p-9 flex justify-between items-center">
       <div class="flex gap-2 items-center">
         <nuxt-link to="/">
-          <img :src="getLogoPath()" alt="forklore logo" />
+          <img :src="getLogoPath" alt="forklore logo" />
         </nuxt-link>
       </div>
 
       <div class="flex gap-2">
         <header-links class="hidden md:flex"></header-links>
         <button class="btn-solid" @click="toggleColorMode()" :aria-label="themeButtonLabel">
-          <component :is="getButtonIcon()" />
+          <component :is="getButtonIcon" />
         </button>
         <button
           class="btn-subtle block md:!hidden"

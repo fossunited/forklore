@@ -10,6 +10,8 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
   colorMode: {
+    preference: "dark",
+    fallback: "light",
     storage: "cookie",
   },
   app: {
