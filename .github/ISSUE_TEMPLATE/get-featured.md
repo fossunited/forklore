@@ -1,19 +1,17 @@
 ---
 name: Get featured
-about: If you are a FOSS maintainer in India, get featured on forklore.in
-title: "[MAINT] Full name @ Project name"
-labels: ''
-assignees: ''
+about: FOSS maintainer profile submission
+title: "[MAINT] Your Name"
 ---
 
-<!-- Hey MAINTAINERS!
-Want to contribute this profile to the repo as PR itself?
+<!-- Hey maintainers!
+Want to contribute this profile to the repo as PR itself? This will help us to reduce intervention
 
-1. Save this issue as `issue.md`
+1. Save this issue as `username.md`
 2. Clone the repo locally or download the parse-maintainer.py file
-3. Run the parser script to generate `profile.json`:
+3. Run the parser script to generate `username.json`:
 
-   python parse_maintainer.py issue.md > <username>.json
+   python parse_maintainer.py username.md > <username>.json
 
 4. Create a PR with the resulting JSON added to the appropriate folder (e.g. `/content/maintainers/<username>.json`)
 
@@ -21,105 +19,70 @@ Make sure to rename the file using your GitHub username for uniqueness.
 -->
 
 
-## 🧑 Your Details
+## Your Details
 
-**Username:**  
-<!-- Example: fossunited -->
-<!-- your GitHub username -->
-<!-- Required -->
- 
+**username:** your-github-username
 
-**Full Name:**  
-<!-- Example: FOSS United -->
-<!-- Required -->
- 
+**full_name:** Your Full Name
 
-**Photo URL:**  
-<!-- Example: https://avatars.githubusercontent.com/u/61445214?s=200&v=4 -->
-<!-- Should be a direct image link -->
- 
+**photo:** https://your-photo-url.com/image.jpg
 
-**Designation / Role:**  
-<!-- Example: Software Developer at XYZ -->
- 
+**designation:** Your Role/Title
 
-**Social Profiles:**  
-<!-- Add one per line like: Label: https://link -->
-<!-- Example:
-GitHub: https://github.com/fossunited  
-LinkedIn: https://linkedin.com/in/fossunited
-Mastodon: ....
-Others: ...
--->
-GitHub: https://github.com/
-Mastodon: 
+**socials:**
+<!-- options: github, gitlab, codeberg, mastodon, bluesky, substack, twitter, linkedin -->
+- GitHub: https://github.com/yourusername
+- Codeberg: https://codeberg.org/username
+- Mastodon: https://fosstodon.org/yourhandle
 
 ---
 
-## 🧪 Projects
+## Projects
 
-### Project 1
+**project:**
+- name: Project Name
+- project_link: https://github.com/user/repo
+- website_link: https://yourproject.com
+- logo: https://yourproject.com/logo.svg
+- short_description: Brief one-liner about the project
+- description: Longer description that can span multiple lines.
+    Just indent with 4 spaces for continuation.
 
-**Name:**  
-<!-- Example: FOSS United Platform -->
-
-
-**Project Link:**  
-<!-- Example: https://github.com/fossunited/fossunited -->
-
-
-**Website Link:**  
-<!-- Example: https://fossunited.org -->
-
-
-**Logo URL:**  
-<!-- Example: https://fossunited.org/files/Foss%20United%20Logo%20Black.svg -->
-
-
-**Short Description:**  
-<!-- One-line summary shown in cards/meta -->
-
-
-**Full Description:**  
-<!-- Longer paragraph, mission, goals, background -->
-
+**project:**
+- name: Another Project
+- project_link: https://github.com/user/repo2
+- website_link: https://example.com
+- logo: https://example.com/logo.png
+- short_description: Another brief description
+- description: Another longer description
 
 ---
 
-<!-- You can copy-paste the block above to add more projects -->
+## Questions
 
----
+**How to support:**
+Your answer here. Can use multiple lines.
 
-## 📝 Fun Maintainer Questions
+**A small brief about your project:**
+Your answer here.
 
-**1. How to support**  
-<!-- How can the community help? (donate, contribute, advocate, etc.) -->
+**One FOSS maintainer lesson for your younger self:**
+Your answer here.
 
+**Why do you do it? Why do you bother maintaining a FOSS project?:**
+Your answer here.
 
-**2. A small brief about your project**  
-<!-- Elevator pitch -->
-
-
-**3. One FOSS maintainer lesson for your younger self**  
-<!-- Advice to past you -->
-
-
-**4. Why do you do it? Why do you bother maintaining a FOSS project?**  
-<!-- The "why" behind the work -->
-
-
-**5. If your repo had a theme song, what would it be?**  
+**If your repo had a theme song, what would it be?:**
 <!-- YouTube/Spotify link or just the song name -->
+Your answer here.
 
 
-**6. Which file in your project would you most like to set on fire?**  
-<!-- Be honest, we all have one 😅 -->
+**Which file in your project would you most like to set on fire?:**
+Your answer here.
 
+**What's your open-source villain origin story?:**
+Your answer here.
 
-**7. What's your open-source villain origin story?**  
-<!-- Tell us how you got here -->
-
-
-**8. If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?**  
+**If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?:**
 <!-- Example: 🔥 🧠 💀 😅 -->
-
+Your answer here.
