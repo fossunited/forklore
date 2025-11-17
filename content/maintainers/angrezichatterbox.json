@@ -1,0 +1,60 @@
+{
+  "username": "@angrezichatterbox",
+  "full_name": "Gautham Mohanraj",
+  "photo": "https://github.com/user-attachments/assets/8e0d0a9d-ae00-4914-9dee-9f247076e96a",
+  "designation": "Mentor [@amfoss](https://github.com/amfoss)",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/angrezichatterbox"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://linkedin.com/in/gauthammohanraj"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Scribe-Android",
+      "project_link": "http://github.com/scribe-org/Scribe-Android",
+      "website_link": "http://scri.be",
+      "logo": "https://raw.githack.com/scribe-org/Organization/refs/heads/main/logo/ScribeLogo.png",
+      "description": "Scribe mobile keyboards  are tailored to help language learners communicate in their second language. Scribe keyboards can be used in any app and help users with translation, verb conjugation, noun genders and much more!",
+      "short_description": "Scribe-Android is a pack of Android keyboards for language learners."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "You can contribute by testing new features , submitting issues , helping in localization and also suggestion use how to make the overall keyboard experience more better."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Scribe-Android turns your phone into a mini language-learning assistant by integrating helpful tools directly into the keyboard translation, conjugation, hints, and smart suggestions all offline and open-source and ad-free."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Take small steps. Start with minor contributions and slowly fall in love with the project before jumping into big changes. When you genuinely care about what you're building, every contribution becomes satisfying."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I started as an amateur in Android development, and FOSS projects played a huge role in helping me grow. Now, maintaining a FOSS project feels meaningful because I get to give others the same opportunity to learn, improve, and become better developers—just like I did."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "I don’t have a specific theme song for the repository, but if I had to choose one, it would be “Baatein Kuch Ankahee Si” from Life in a… Metro.\n\nThe song’s actual meaning is different, but it beautifully captures the idea of communication."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://github.com/scribe-org/Scribe-Android/blob/main/app/src/main/java/be/scri/services/GeneralKeyboardIME.kt\n\nIf I had a chance to rewrite this mess of a file I would do by all means."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🧯 constantly putting out fires, but still loving it."
+    }
+  ]
+}
