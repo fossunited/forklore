@@ -13,7 +13,7 @@
 
 ### Website
 - Fixed some theming issue on svg logo based on ColorMode
-   Thanks to @agriyakherarpal on [#162](https://github.com/fossunited/forklore/pull/162)
+   Thanks to @agriyakhetarpal on [#162](https://github.com/fossunited/forklore/pull/162)
    ref: https://color-mode.nuxtjs.org/usage/basic
 
 ## October 2025
