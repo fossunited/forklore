@@ -3,14 +3,15 @@ import { useRouter } from "vue-router";
 import type { MaintainersCollectionItem } from "@nuxt/content";
 
 const props = defineProps<{
-  modelValue: string;
   maintainers?: MaintainersCollectionItem[];
   placeholder?: string;
 }>();
 
-const emit = defineEmits(["update:modelValue"]);
-
 const router = useRouter();
+const query = defineModel<string>();
+const inputRef = ref<HTMLInputElement | null>(null);
+
+defineExpose({ focus: () => inputRef.value?.focus?.() });
 
 const goToRandomMaintainer = () => {
   const list = props.maintainers || [];
@@ -28,39 +29,39 @@ const goToRandomMaintainer = () => {
 </script>
 
 <template>
-<div class="flex flex-col sm:flex-row sm:items-center gap-2">
-  <!-- Search input -->
-  <div class="flex items-center px-4 py-2 gap-4 border transition-all w-full sm:w-[350px]">
-    <IconsSearch class="w-4 h-4" />
-    <input
-      :value="modelValue"
-      @input="emit('update:modelValue', $event.target.value)"
-      type="text"
-      :placeholder="placeholder || 'Search'"
-      class="input w-full dark:placeholder:text-secondary-dark placeholder:text-secondary-light text-sm focus:outline-none"
-    />
-    <span class="text-xs border rounded px-2 hidden md:inline-block opacity-50">
-      ctrl+k
-    </span>
-  </div>
-
-  <!-- Buttons -->
-  <div class="flex gap-2 sm:ml-auto text-sm">
-    <button
-      v-if="maintainers && maintainers.length > 0"
-      @click="goToRandomMaintainer"
-      class="flex gap-2 items-center btn-subtle"
+  <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+    <!-- Search input -->
+    <div
+      class="flex items-center px-4 py-2 gap-4 border transition-all w-full sm:w-[350px]"
     >
-      Surprise Me
-    </button>
+      <IconsSearch class="w-4 h-4" />
+      <input
+        ref="inputRef"
+        v-model="query"
+        type="text"
+        :placeholder="placeholder || 'Search'"
+        class="input w-full dark:placeholder:text-secondary-dark placeholder:text-secondary-light text-sm focus:outline-none"
+      />
+      <span
+        class="text-xs border rounded px-2 hidden md:inline-block opacity-50"
+      >
+        ctrl+k
+      </span>
+    </div>
 
-    <NuxtLink
-      to="/commit-emoji"
-      class="flex gap-2 items-center btn-subtle"
-    >
-      Commit to Emoji
-    </NuxtLink>
+    <!-- Buttons -->
+    <div class="flex gap-2 sm:ml-auto text-sm">
+      <button
+        v-if="maintainers && maintainers.length > 0"
+        @click="goToRandomMaintainer"
+        class="flex gap-2 items-center btn-subtle"
+      >
+        Surprise Me
+      </button>
+
+      <NuxtLink to="/commit-emoji" class="flex gap-2 items-center btn-subtle">
+        Commit to Emoji
+      </NuxtLink>
+    </div>
   </div>
-</div>
-
 </template>
