@@ -62,7 +62,7 @@
     },
     {
       "question": "What's your open-source villain origin story?",
-      "response": "My first contribution to Frappe Framework was a spelling correction from \"Submitting\" to \"Submitting\": https://github.com/frappe/frappe/pull/16638. Yes, I am a stickler for good grammar."
+      "response": "My first contribution to Frappe Framework was a spelling correction from \"Submiting\" to \"Submitting\": https://github.com/frappe/frappe/pull/16638. Yes, I am a stickler for good grammar."
     },
     {
       "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
