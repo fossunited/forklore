@@ -14,6 +14,7 @@ const normalizedMaintainers = computed(() =>
 );
 
 const query = ref("");
+const sortBy = ref("newest");
 const searchInputRef = ref<HTMLInputElement | null>(null);
 
 const miniSearch = new MiniSearch({
@@ -31,11 +32,34 @@ if (normalizedMaintainers.value) {
 
 const result = computed(() => {
   const q = toValue(query).trim();
-  if (!q) return maintainers.value || [];
-  return miniSearch
-    .search(q)
-    .map((hit) => maintainers.value!.find((m) => m.id === hit.id))
-    .filter((m): m is MaintainersCollectionItem => m !== undefined);
+  let items = !q
+    ? maintainers.value || []
+    : miniSearch
+        .search(q)
+        .map((hit) => maintainers.value!.find((m) => m.id === hit.id))
+        .filter((m): m is MaintainersCollectionItem => m !== undefined);
+
+  // Apply sorting
+  const sorted = [...items];
+  if (sortBy.value === "a-z") {
+    sorted.sort((a, b) => a.full_name.localeCompare(b.full_name));
+  } else if (sortBy.value === "z-a") {
+    sorted.sort((a, b) => b.full_name.localeCompare(a.full_name));
+  } else if (sortBy.value === "newest") {
+    sorted.sort((a, b) => {
+      const dateA = new Date(a.body.created_on).getTime();
+      const dateB = new Date(b.body.created_on).getTime();
+      return dateB - dateA;
+    });
+  } else if (sortBy.value === "oldest") {
+    sorted.sort((a, b) => {
+      const dateA = new Date(a.body.created_on).getTime();
+      const dateB = new Date(b.body.created_on).getTime();
+      return dateA - dateB;
+    });
+  }
+
+  return sorted;
 });
 
 onMounted(() => {
@@ -53,6 +77,7 @@ onMounted(() => {
     <UiSearchInput
       v-if="maintainers"
       v-model="query"
+      v-model:sort-by="sortBy"
       :maintainers="maintainers"
       ref="searchInputRef"
       placeholder="Search"
