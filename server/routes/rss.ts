@@ -90,7 +90,7 @@ export default defineEventHandler(async () => {
       id: url,
       link: url,
       description: description,
-      date: new Date(),
+      date: data.created_on ? new Date(data.created_on) : new Date(),
     });
   }
 

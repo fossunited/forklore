@@ -3,6 +3,7 @@
 import sys
 import json
 import re
+from datetime import datetime
 
 def parse_issue(md):
     # Remove HTML comments
@@ -15,7 +16,8 @@ def parse_issue(md):
         "designation": "",
         "socials": [],
         "projects": [],
-        "form": []
+        "form": [],
+        "created_on": datetime.today().isoformat(),
     }
     
     # Parse basic fields (username, full_name, photo, designation)
