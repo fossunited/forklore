@@ -1,6 +1,6 @@
 {
   "username": "pavish",
-  "full_name": " Pavish Kumar Ramani Gopal ",
+  "full_name": "Pavish Kumar Ramani Gopal",
   "photo": "https://avatars.githubusercontent.com/u/11850603?v=4",
   "designation": "Senior Engineer at Mathesar Foundation",
   "socials": [
@@ -56,5 +56,6 @@
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
       "response": "🤷🏽  Just a regular person. Most maintainers thanklessly maintain FOSS from their basement, for fun, which supports massive infrastructure in the real-world (like that xkcd comic)."
     }
-  ]
+  ],
+  "created_on": "2025-06-05T07:53:26+05:30"
 }

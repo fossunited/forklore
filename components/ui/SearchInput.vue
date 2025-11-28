@@ -9,6 +9,7 @@ const props = defineProps<{
 
 const router = useRouter();
 const query = defineModel<string>();
+const sortBy = defineModel<string>("sortBy"); // new
 const inputRef = ref<HTMLInputElement | null>(null);
 
 defineExpose({ focus: () => inputRef.value?.focus?.() });
@@ -29,37 +30,51 @@ const goToRandomMaintainer = () => {
 </script>
 
 <template>
-  <div class="flex flex-col sm:flex-row sm:items-center gap-2">
-    <!-- Search input -->
-    <div
-      class="flex items-center px-4 py-2 gap-4 border transition-all w-full sm:w-[350px]"
-    >
-      <IconsSearch class="w-4 h-4" />
-      <input
-        ref="inputRef"
-        v-model="query"
-        type="text"
-        :placeholder="placeholder || 'Search'"
-        class="input w-full dark:placeholder:text-secondary-dark placeholder:text-secondary-light text-sm focus:outline-none"
-      />
-      <span
-        class="text-xs border rounded px-2 hidden md:inline-block opacity-50"
+  <div
+    class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5"
+  >
+    <div class="flex flex-row gap-2 text-sm">
+      <div
+        class="flex items-center px-4 py-2 gap-4 border w-full sm:w-[300px] transition-all rounded-md"
       >
-        ctrl+k
-      </span>
+        <IconsSearch class="w-4 h-4" />
+
+        <input
+          ref="inputRef"
+          v-model="query"
+          type="text"
+          :placeholder="placeholder || 'Search'"
+          class="input w-full dark:placeholder:text-secondary-dark placeholder:text-secondary-light text-sm focus:outline-none"
+        />
+
+        <span
+          class="text-xs border rounded px-2 hidden md:inline-block opacity-50"
+        >
+          ctrl+k
+        </span>
+      </div>
+
+      <select
+        v-model="sortBy"
+        class="border cursor-pointer p-2 items-center rounded-md"
+      >
+        <option value="a-z">A → Z</option>
+        <option value="z-a">Z → A</option>
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+      </select>
     </div>
 
-    <!-- Buttons -->
-    <div class="flex gap-2 sm:ml-auto text-sm">
+    <div class="flex gap-2 text-sm sm:ml-4">
       <button
         v-if="maintainers && maintainers.length > 0"
         @click="goToRandomMaintainer"
-        class="flex gap-2 items-center btn-subtle"
+        class="btn-subtle flex gap-2 items-center"
       >
         Surprise Me
       </button>
 
-      <NuxtLink to="/commit-emoji" class="flex gap-2 items-center btn-subtle">
+      <NuxtLink to="/commit-emoji" class="btn-subtle flex gap-2 items-center">
         Commit to Emoji
       </NuxtLink>
     </div>
