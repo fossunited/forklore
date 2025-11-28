@@ -1,6 +1,6 @@
 # Forklore Highlights
 
-> maintainers are in ascending order as they do they arrive (older at top)
+> maintainers are in ascending order (older at top)
 
 ## November 2025
 
@@ -15,6 +15,9 @@
 - Fixed some theming issue on svg logo based on ColorMode
    Thanks to @agriyakhetarpal on [#162](https://github.com/fossunited/forklore/pull/162)
    ref: https://color-mode.nuxtjs.org/usage/basic
+
+- [#176](https://github.com/fossunited/forklore/pull/176): Added sort by feature to the page and by default make newest on top
+
 
 ## October 2025
 
