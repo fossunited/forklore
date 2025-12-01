@@ -1,3 +1,13 @@
+<script setup lang="ts">
+const colorMode = useColorMode();
+
+const logo = computed(() => {
+  return colorMode.value === "dark"
+    ? "/logo/unitedbyfoss_dark.svg"
+    : "/logo/unitedbyfoss_light.svg";
+});
+</script>
+
 <template>
   <div
     class="bg-secondary-light dark:bg-primary-dark text-primary-light dark:text-secondary-dark border-t-2 w-full place-items-center flex flex-col items-center"
@@ -50,7 +60,7 @@
       </div>
       <img
         class="w-12"
-        src="/logo/unitedbyfoss.svg"
+        :src="logo"
         alt="United By FOSS Logo"
       />
     </div>
