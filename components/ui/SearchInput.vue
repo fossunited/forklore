@@ -55,7 +55,8 @@ const goToRandomMaintainer = () => {
       </div>
 
       <select
-        v-model="sortBy" class="border cursor-pointer p-2 items-center rounded-md bg-primary-light dark:bg-primary-dark text-secondary-light dark:text-secondary-dark transition-colors duration-300 ease-linear"
+        v-model="sortBy"
+        class="appearance-none border cursor-pointer p-2 items-center rounded-md bg-primary-light dark:bg-primary-dark text-secondary-light dark:text-secondary-dark transition-colors duration-300 ease-linear"
       >
         <option value="a-z">A → Z</option>
         <option value="z-a">Z → A</option>
