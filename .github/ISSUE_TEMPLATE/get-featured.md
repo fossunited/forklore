@@ -30,7 +30,7 @@ Make sure to rename the file using your GitHub username for uniqueness.
 **designation:** Your Role/Title
 
 **socials:**
-<!-- options: github, gitlab, codeberg, mastodon, bluesky, substack, twitter, linkedin -->
+<!-- options: web, github, gitlab, codeberg, mastodon, bluesky, substack, twitter, linkedin, reddit, arrow-up-right-->
 - GitHub: https://github.com/yourusername
 - Codeberg: https://codeberg.org/username
 - Mastodon: https://fosstodon.org/yourhandle
