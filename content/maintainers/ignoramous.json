@@ -1,0 +1,81 @@
+{
+  "username": "ignoramous",
+  "full_name": "Murtaza Aliakbar",
+  "photo": "https://avatars.githubusercontent.com/u/852289?v=4",
+  "designation": "Customer Service",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/ignoramous"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://twitter.com/aliakbarmurtaza"
+    },
+    {
+      "label": "Reddit",
+      "link": "https://reddit.com/u/celzero"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Rethink DNS + Firewall",
+      "project_link": "https://github.com/celzero/rethink-app",
+      "website_link": "https://rethinkdns.com/app",
+      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "short_description": "Network security app for Android",
+      "description": "A [WireGuard](https://github.com/wireguard/wireguard-go) client, an [OpenSnitch](https://github.com/evilsocket/opensnitch)-inspired firewall and network monitor + a [pi-hole](https://github.com/pi-hole/pi-hole)-inspired DNS over HTTPS, DNS over TLS, DNSCrypt client with blocklists."
+    },
+    {
+      "name": "Firestack",
+      "project_link": "https://github.com/celzero/firestack",
+      "website_link": "https://rethinkdns.com/app",
+      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "short_description": "Userspace network filter and proxifier.",
+      "description": "Firestack is a userspace TCP/UDP monitor, firewall, DNS resolver, and WireGuard client for Android. [gVisor/netstack](https://gvisor.dev/docs/user_guide/networking/) provides a SOCKS-like interface for TCP and UDP over a TUN device. Firestack supports DNS-over-HTTPS, DNS-over-TLS, Oblivious DNS-over-HTTPS, DNS over WireGuard / SOCKS5 / Tor, DNSCrypt, and plain old DNS upstreams."
+    },
+    {
+      "name": "Serverless DNS",
+      "project_link": "https://github.com/serverless-dns/serverless-dns",
+      "website_link": "https://rethinkdns.com/configure",
+      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "short_description": "The RethinkDNS resolver that deploys to Cloudflare Workers, Deno Deploy, Fastly, and Fly.io.",
+      "description": "Serverless DNS is a Pi-Hole esque [content-blocking](https://github.com/serverless-dns/blocklists), serverless, stub DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) resolver. Runs out-of-the-box on [Cloudflare Workers](https://workers.dev/), [Deno Deploy](https://deno.com/deploy), [Fastly Compute@Edge](https://www.fastly.com/products/edge-compute), and [Fly.io](https://fly.io/). Free tiers of all these services should be enough to cover 10 to 20 devices worth of DNS traffic per month."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "If you're a developer, I welcome security-focused commits: Integrating Indicators of Compromise or improving supply chain security or app/component security or implementing new user facing network security features or writing fuzzers or integrating runtime hardware attestations... that kind of stuff.\n\nIf you're good with content and multimedia, then I'd really like your help with audio/video/text docs, guides, and tutorials for the Rethink DNS + Firewall app.\n\nIf you are too busy to spend all that time, but still want to contribute, please consider sponsoring: https://svc.rethinkdns.com/r/sponsor"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Anti-censorship & anti-surveillance tools for 3 billion Android users."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Buy the best ~~laptop~~ AI you can afford."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I wanted the software for myself. It needed to exist. Thanks to ~~God~~ Copilot, now it does."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "- *Azadi*, Dub Sharma, https://youtu.be/TCRHm1pmzCI"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "- Costs a lot of money: [`server-node.js`](https://github.com/serverless-dns/serverless-dns/blob/14f4e9668c/src/server-node.js).\n- Causes a lot of pain: [`alg.go`](https://github.com/celzero/firestack/blob/9fc2c8a5d6/intra/dnsx/alg.go).\n- Unconditionally, every single YAML & TOML file! God dammit."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "1. Be me.\n2. Be jobless.\n3. [Make grand plans](https://news.ycombinator.com/item?id=19546159).\n4. Realize you can't build it all.\n5. But (like a famous Syrian Arab once said) [start poking at it](https://youtube.com/watch?v=kYfNvmF0Bqw), anyway."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "[🎁](https://apenwarr.ca/log/20211229)"
+    }
+  ],
+  "created_on": "2025-12-03T14:15:10.539011"
+}

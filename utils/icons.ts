@@ -9,6 +9,7 @@ import Mastodon from "~/components/icons/Mastodon.vue";
 import BlueSky from "~/components/icons/BlueSky.vue";
 import BitBucket from "~/components/icons/BitBucket.vue";
 import Substack from "~/components/icons/Substack.vue";
+import Reddit from "~/components/icons/Reddit.vue";
 
 const icons = {
   web: WebIcon,
@@ -19,6 +20,7 @@ const icons = {
   x: Twitter,
   twitter: Twitter,
   mastodon: Mastodon,
+  reddit: Reddit,
   bluesky: BlueSky,
   bitbucket: BitBucket,
   "arrow-up-right": ArrowUpRight,
