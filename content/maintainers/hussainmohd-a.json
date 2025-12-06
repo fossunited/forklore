@@ -1,0 +1,81 @@
+{
+  "username": "hussainmohd-a",
+  "full_name": "Mohammed Hussain",
+  "photo": "https://avatars.githubusercontent.com/u/56958445?s=400&v=4",
+  "designation": "Developer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/hussainmohd-a"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "www.linkedin.com/in/hussainmohda"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://mastodon.social/@hussainmohd"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Rethink DNS + Firewall",
+      "project_link": "https://github.com/celzero/rethink-app",
+      "website_link": "https://rethinkdns.com/app",
+      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "short_description": "Network security app for Android",
+      "description": "A [WireGuard](https://github.com/wireguard/wireguard-go) client, an [OpenSnitch](https://github.com/evilsocket/opensnitch)-inspired firewall and network monitor + a [pi-hole](https://github.com/pi-hole/pi-hole)-inspired DNS over HTTPS, DNS over TLS, DNSCrypt client with blocklists.."
+    },
+    {
+      "name": "Firestack",
+      "project_link": "https://github.com/celzero/firestack",
+      "website_link": "https://rethinkdns.com/app",
+      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "short_description": "Userspace network filter and proxifier.",
+      "description": "Firestack is a userspace TCP/UDP monitor, firewall, DNS resolver, and WireGuard client for Android. [gVisor/netstack](https://gvisor.dev/docs/user_guide/networking/) provides a SOCKS-like interface for TCP and UDP over a TUN device. Firestack supports DNS-over-HTTPS, DNS-over-TLS, Oblivious DNS-over-HTTPS, DNS over WireGuard / SOCKS5 / Tor, DNSCrypt, and plain old DNS upstreams."
+    },
+    {
+      "name": "Serverless DNS",
+      "project_link": "https://github.com/serverless-dns/serverless-dns",
+      "website_link": "https://rethinkdns.com/configure",
+      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "short_description": "The RethinkDNS resolver that deploys to Cloudflare Workers, Deno Deploy, Fastly, and Fly.io.",
+      "description": "Serverless DNS is a Pi-Hole esque [content-blocking](https://github.com/serverless-dns/blocklists), serverless, stub DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) resolver. Runs out-of-the-box on [Cloudflare Workers](https://workers.dev/), [Deno Deploy](https://deno.com/deploy), [Fastly Compute@Edge](https://www.fastly.com/products/edge-compute), and [Fly.io](https://fly.io/). Free tiers of all these services should be enough to cover 10 to 20 devices worth of DNS traffic per month."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "If UI/UX is your strength, you are very welcome to jump in reworking fragment layouts, cleaning up XML, improving/adding animations, adding Material You touches, refining typography, fixing visual inconsistencies, or proposing cleaner navigation flows. All good design ideas make a big difference.<br><br>If you're good with content and multimedia, then I'd really like your help with audio/video/text docs, guides, and tutorials for the Rethink DNS + Firewall app.<br><br>If you are too busy to spend all that time, but still want to contribute, please consider sponsoring: https://svc.rethinkdns.com/r/sponsor<br>"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Anti-censorship & anti-surveillance tools for 3 billion Android users.<br>"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Every release fixes bugs and creates new ones. The circle of life.<br>"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Because someone out there relies on it, and that's enough.<br>"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=GaUvFt6F0j8<br>"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "BraveVpnService.kt - I open it only when the stars align and logs are kind.<br>"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "My co-founder had an inspiring idea. I just stepped in… and never stepped out.<br>"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🤝<br>"
+    }
+  ],
+  "created_on": "2025-12-05T15:57:47.924154"
+}
