@@ -1,0 +1,10 @@
+# See https://pre-commit.com for more information
+# Install: pip install pre-commit && pre-commit install
+repos:
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.29.4
+    hooks:
+      - id: check-jsonschema
+        name: Validate maintainer JSON files
+        files: ^content/maintainers/.*\.json$
+        args: ["--schemafile", "maintainer.schema.json"]
