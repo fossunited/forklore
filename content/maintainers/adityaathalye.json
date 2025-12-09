@@ -2,7 +2,7 @@
   "username": "adityaathalye",
   "full_name": "Aditya Athalye",
   "photo": "https://avatars.githubusercontent.com/u/2195435",
-  "designation": "Owner and Prinicpal at evalapply.org",
+  "designation": "Owner and Principal at evalapply.org",
   "socials": [
     {
       "label": "Web",
@@ -84,5 +84,6 @@
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
       "response": "☯️"
     }
-  ]
+  ],
+  "created_on": "2025-12-09T16:07:28.300474"
 }
