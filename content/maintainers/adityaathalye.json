@@ -1,0 +1,88 @@
+{
+  "username": "adityaathalye",
+  "full_name": "Aditya Athalye",
+  "photo": "https://avatars.githubusercontent.com/u/2195435",
+  "designation": "Owner and Prinicpal at evalapply.org",
+  "socials": [
+    {
+      "label": "Web",
+      "link": "https://www.evalapply.org"
+    },
+    {
+      "label": "GitHub",
+      "link": "https://github.com/adityaathalye"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/adityaathalye/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "shite",
+      "project_link": "https://github.com/adityaathalye/shite",
+      "website_link": "https://www.evalapply.org/posts/shite-the-static-sites-from-shell-part-1/",
+      "logo": "https://avatars.githubusercontent.com/u/85818243",
+      "short_description": "The little hot-reloadin' static site maker from shell.",
+      "description": "shite's job is to help me make my website (https://evalapply.org). Thus, shite's scope, (mis)feature set, polish will always be production-grade, where production is 'works on my machine(s)' :)"
+    },
+    {
+      "name": "Clojure 'Multiproject'",
+      "project_link": "https://github.com/adityaathalye/clojure-multiproject-example/",
+      "website_link": "https://www.evalapply.org/tags/web_development/",
+      "logo": "https://avatars.githubusercontent.com/u/85818243",
+      "short_description": "Layout and tooling to conveniently develop many Clojure projects in a single source repo.",
+      "description": "See the 'Concept' section in the README. Basically, 'multiproject' addresses my own specific requirements; viz. indie and hobby SaaS apps of my own; RAD for outcomes-driven customers (like me) who want long-lived, stable software; and to benefit from the Clojure ecosystem's creativity, reach, stewardship, and software stability. Polylith (https://polylith.gitbook.io/) is the (far) more sophisticated alternative to my approach."
+    },
+    {
+      "name": "Clojure By Example",
+      "project_link": "https://github.com/adityaathalye/clojure-by-example",
+      "website_link": "https://www.evalapply.org/tags/clojure",
+      "logo": "https://avatars.githubusercontent.com/u/85818243",
+      "short_description": "Workshop for programmers who are new to Clojure.",
+      "description": "This workshop aims to get your brain and fingers accustomed to just enough of the Clojure programming language to start doing useful things with it. In other words, 'What could one do with just a little bit of Clojure?'."
+    },
+    {
+      "name": "usermanager-first-principles",
+      "project_link": "https://github.com/adityaathalye/usermanager-first-principles",
+      "website_link": "https://www.evalapply.org/posts/clojure-web-app-from-scratch/",
+      "logo": "https://avatars.githubusercontent.com/u/85818243",
+      "short_description": "A 'from first principles' variant of 'usermanager-example', the tutorial Clojure web application by Sean Corfield.",
+      "description": "Sean's original 'User Manager' example project and its variants (including this one), aim to demystify 'How to construct a Clojure web application using only libraries?'. 'Composition over inheritance', 'Libraries over frameworks', and 'Data orientation' feature prominently in the Clojure world's canonical mental model of programming, including programming the web. Absent some of these key intuitions, even experienced developers who are new to Clojure tend to struggle to build apps using libraries. The 'User Manager' collective of demos aim to address this specific challenge."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "GOTO [evalapply.org](https://www.evalapply.org) && do that 'like, share, subscribe, sponsor' thing :)"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Typically, I release software for programmer education and instruction, developer workflow / experience ('DevX'), and personal software for fun and utility (see: https://justforfunnoreally.dev and 'houseplant programming': https://www.hannahilea.com/blog/houseplant-programming ."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Be license-savvy. Pick one that protects your own time, interests, and goals as maintainer, first and foremost."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "'Learn Generously' is the guiding principle behind everything I open source to the Wild Wild Web."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Why one? Here are one zero songs... Because the lone open source 'artist's way' feels like any (or all) of that in any given week. \n  - *Giorgio by Moroder* - Daft Punk \n  - *It's a Long Way to the Top (If You Wanna Rock'N'Roll)* - AC/DC \n  - *Daydream* - Lily Meola \n  - *Another One Bites the Dust* - Queen \n  - *Poison* - Alice Cooper \n  - *Levitating* - Dua Lipa \n  - *Hell You Call A Dream* - The Warning \n  - *Lose Yourself* - Eminem \n  - *Break Stuff* - Limp Bizkit. \n And song no. 10, for when Big Cloud co-opts your work into a money-machine (giving nothing back)... *Hot Dog* - Limp Bizkit."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "templating.sh in shite, because of this gawdawful case statement: https://github.com/adityaathalye/shite/blob/6d30eb1df29d65945e445287798ca1ce4c987a51/bin/templating.sh#L188."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Small crimes, er, commits led to bigger commits... and now there's not going back."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "☯️"
+    }
+  ]
+}
