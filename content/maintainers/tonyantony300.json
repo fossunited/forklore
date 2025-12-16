@@ -1,0 +1,61 @@
+{
+  "username": "tonyantony300",
+  "full_name": "Tony Antony",
+  "photo": "https://github.com/user-attachments/assets/d69f8fb1-529d-4fd9-a995-394cf65c3de4",
+  "designation": "Tinkerer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/tonyantony300"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/tonyantony300"
+    }
+  ],
+  "projects": [
+    {
+      "name": "AltSendme",
+      "project_link": "https://github.com/tonyantony300/alt-sendme",
+      "website_link": "https://altsendme.com",
+      "logo": "https://github.com/user-attachments/assets/f61de421-1422-4062-ad45-5e68ee778e37",
+      "short_description": "Peer-to-peer file transfer utility",
+      "description": "Send files and folders anywhere in the world without storing in cloud - any size, any format, no accounts, no restrictions. QUIC based encrypted connections for faster private p2p."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Right now there is no public roadmap but a lot can be done, You can reach out to me at tnyantny@protonmail.com and we will take it from there! <br><br>You can also [Sponsor my work](https://github.com/sponsors/tonyantony300)"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "It's a simple yet revolutionary p2p file transfer tool. Direct open-source alternative to MKBHD endorsed blip.net. Uses Iroh networking stack, does hole-punching and can saturate gigabit connections in future. Users could use this tool instead of weTransfer, Dropbox and google drive for real-time transfers."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "It's not scary as you think it is."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I saw the gap, thought I should fill. I have a history of volunteering and helping others whenever I can, when I got into software FOSS was kind of natural. <br>"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=54hoKbTWon4"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://github.com/tonyantony300/alt-sendme/blob/main/src/core/send.rs"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "When I posted my project across a few subreddits and the same people kept showing up just to yell “spam!” like they were trying to stop it from reaching people who might actually find it useful. In my head, I thought for a moment to monetize and push ads just for them. Not gonna do it but it definitely fueled my inner cartoon villain for a minute."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🥰"
+    }
+  ],
+  "created_on": "2025-12-12T10:58:12.759745"
+}
