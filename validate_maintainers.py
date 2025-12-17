@@ -30,7 +30,7 @@ LABEL_FIXES = {
     "linkedin": "LinkedIn",
     "Linkedin": "LinkedIn",
     "bluesky": "Bluesky",
-    "bitbucket": "BitBucket",
+    "bitbucket": "Bitbucket",
     "mastodon": "Mastodon",
     "substack": "Substack",
     "codeberg": "Codeberg",
