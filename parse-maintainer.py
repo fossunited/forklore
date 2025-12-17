@@ -22,7 +22,7 @@ LABEL_NORMALIZATION = {
     "bitbucket": "BitBucket",
     "linkedin": "LinkedIn",
     "mastodon": "Mastodon",
-    "bluesky": "BlueSky",
+    "bluesky": "Bluesky",
     "substack": "Substack",
     "discourse": "Discourse",
     "twitter": "Twitter",
@@ -34,7 +34,7 @@ LABEL_NORMALIZATION = {
     "Github": "GitHub",
     "Gitlab": "GitLab",
     "Linkedin": "LinkedIn",
-    "Bluesky": "BlueSky",
+    "Bluesky": "Bluesky",
     "Bitbucket": "BitBucket",
     # Common aliases
     "Website": "Web",
@@ -50,7 +50,7 @@ LABEL_NORMALIZATION = {
 # Valid labels as per schema
 VALID_LABELS = {
     "GitHub", "GitLab", "Gitlab", "Codeberg", "BitBucket", "LinkedIn",
-    "X", "Twitter", "Mastodon", "Bluesky", "BlueSky", "Substack",
+    "X", "Twitter", "Mastodon", "Bluesky", "Substack",
     "Discourse", "Email", "RSS", "Web"
 }
 
@@ -204,7 +204,7 @@ if __name__ == "__main__":
     output_file = f"{username}.json"
     with open(output_file, 'w', encoding='utf-8') as f:
         f.write(json_output)
-        f.write("\n")  # Add trailing newline
+        f.write("\n")
     
     print(f"\nSaved to {output_file}", file=sys.stderr)
     
