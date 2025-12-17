@@ -17,9 +17,8 @@ from pathlib import Path
 
 try:
     import jsonschema
-except ImportError:
-    print("Error: jsonschema not installed. Run: pip install jsonschema")
-    sys.exit(1)
+except ImportError as e:
+    sys.exit(f"Error: jsonschema not installed. Run: pip install jsonschema. Error: {e}")
 
 
 # Mapping of incorrect/variant labels to correct ones
