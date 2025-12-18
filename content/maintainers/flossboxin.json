@@ -1,0 +1,97 @@
+{
+  "username": "vdbhb59",
+  "full_name": "FLOSSbOxIN",
+  "photo": "https://avatars.githubusercontent.com/u/60728004?v=4",
+  "designation": "Principal Tech Advocate",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/vdbhb59"
+    },
+	    {
+      "label": "Blog",
+      "link": "https://blog.bakhai.co.in/"
+    },
+    {
+      "label": "Web",
+      "link": "https://flossboxin.org.in/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Hosts",
+      "project_link": "https://git.flossboxin.org.in/vdbhb59/hosts",
+      "website_link": "https://host.flossboxin.org.in/",
+      "logo": "https://host.flossboxin.org.in/images/favicon.ico",
+      "description": "POSIX-compliant shell script that gets a list of domains that serve ads, tracking scripts and malware from multiple sources and creates a hosts file, that prevents your system from connecting to them. Based on hBlock, but with a lot of my curated lists and personalized blocking.",
+      "short_description": "Curated hosts file with various domain blocks"
+    },
+    {
+      "name": "4G",
+      "project_link": "https://git.flossboxin.org.in/FbIN/4Get",
+      "website_link": "https://4g.flossboxin.org.in/",
+      "logo": "https://4g.flossboxin.org.in/favicon.ico",
+      "description": "A metasearch engine which retrieves search results from other well known search engines and then strips away all of the tracking parameters to give you a clean and private result.",
+      "short_description": "Fast, privacy-first search for open source users"
+    },
+    {
+      "name": "LibreY",
+      "project_link": "https://git.flossboxin.org.in/FbIN/LibreY",
+      "website_link": "https://link.flossboxin.org.in/",
+      "logo": "https://link.flossboxin.org.in/favicon.ico",
+      "description": "LibreY is a fork of LibreX, a framework-less and javascript-free privacy respecting meta search engine originally created by hnhx, and now maintained by Ahwxorg. This is my instance.",
+      "short_description": "Magnet link and general search in one place"
+    },
+    {
+      "name": "LibreQR",
+      "project_link": "https://git.flossboxin.org.in/FbIN/libreqr",
+      "website_link": "https://qr.flossboxin.org.in/",
+      "logo": "https://qr.flossboxin.org.in/themes/libreqr/icons/128.png",
+      "description": "PHP Web interface for generating QR codes. Liberated & fully awesome.",
+      "short_description": "Generate QR & Wi-Fi QR codes instantly"
+    },
+    {
+      "name": "Paste",
+      "project_link": "https://git.flossboxin.org.in/FbIN/PrivateBin",
+      "website_link": "https://pb.flossboxin.org.in/",
+      "logo": "https://pb.flossboxin.org.in/img/favicon.ico",
+      "description": "Secure, encrypted pastes for sensitive texts.",
+      "short_description": "Private Bin – Encrypted Paste"
+    },
+    {
+      "name": "Git",
+      "project_link": "https://git.flossboxin.org.in/",
+      "website_link": "https://git.flossboxin.org.in/",
+      "logo": "https://git.flossboxin.org.in/favicon.ico",
+      "description": "My public instance of the Forgejo version control system. I have no other words to describe, how cool it is.",
+      "short_description": "Host and manage your open source projects with Forgejo"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "I am looking for opportunities to network and share my projects to a broader audience so they can be utilized effectively (Note - automated bots get restricted). I would greatly appreciate any feedback or suggestions. Additionally, I welcome donations to help support the ongoing operations and maintenance of the servers."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "FLOSSbOxIN started in 2021 with the main aim to get free of the clutches of the bigger conglomerates, amap. The project currently maintains the above mentioned instances in India, hosted in Germany"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "I may not fully meet the criteria, but I believe this moment will not last forever - making it important to act now rather than wait."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Honestly, my motivation is to enjoy my freedom, my privacy and my data. It has helped me learn a lot - and I continue to learn every day. It allows me to do meaningful work and, more importantly, to give back to the community. My motto is - My data is my own, and it is no one else’s business. Everyone deserves access to FOSS/FLOSS projects and apps, and I am grateful for the opportunity to help make that possible."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Mabel – Disco Disco (Paolo Ferrali; Italian Euro House)"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "The Raising Hands 🙌 that expresses my excitement Or the Upside-Down Smiley Face 🙃 that shows happy to be a part of it."
+    }
+  ],
+  "created_on": "2025-12-18T20:22:32+05:30"
+}
