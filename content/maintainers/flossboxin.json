@@ -27,10 +27,10 @@
       "short_description": "Curated hosts file with various domain blocks"
     },
     {
-      "name": "4G",
-      "project_link": "https://git.flossboxin.org.in/FbIN/4Get",
-      "website_link": "https://4g.flossboxin.org.in/",
-      "logo": "https://4g.flossboxin.org.in/favicon.ico",
+      "name": "FOSS-Q",
+      "project_link": "https://git.flossboxin.org.in/FbIN/fossq",
+      "website_link": "https://fossq.com/",
+      "logo": "https://fossq.com/favicon.ico",
       "description": "A metasearch engine which retrieves search results from other well known search engines and then strips away all of the tracking parameters to give you a clean and private result.",
       "short_description": "Fast, privacy-first search for open source users"
     },
