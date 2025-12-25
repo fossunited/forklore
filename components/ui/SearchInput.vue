@@ -53,7 +53,7 @@ const goToRandomMaintainer = () => {
         />
 
         <span
-          class="text-xs border rounded px-2 hidden md:inline-block opacity-50"
+          class="text-xs border rounded px-2 hidden md:inline-block whitespace-nowrap opacity-80"
         >
           {{ isMac ? '⌘+k' : 'ctrl+k' }}
         </span>
