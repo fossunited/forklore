@@ -11,6 +11,11 @@ const router = useRouter();
 const query = defineModel<string>();
 const sortBy = defineModel<string>("sortBy"); // new
 const inputRef = ref<HTMLInputElement | null>(null);
+const isMac = ref(false);
+
+onMounted(() => {
+  isMac.value = /(Mac|iPhone|iPod|iPad)/i.test(navigator.userAgent);
+});
 
 defineExpose({ focus: () => inputRef.value?.focus?.() });
 
@@ -50,7 +55,7 @@ const goToRandomMaintainer = () => {
         <span
           class="text-xs border rounded px-2 hidden md:inline-block opacity-50"
         >
-          ctrl+k
+          {{ isMac ? '⌘+k' : 'ctrl+k' }}
         </span>
       </div>
 
