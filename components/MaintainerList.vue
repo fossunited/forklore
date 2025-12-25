@@ -68,6 +68,16 @@ onMounted(() => {
       e.preventDefault();
       searchInputRef.value?.focus();
     }
+    if (
+      e.key === "/" &&
+      !(
+        e.target instanceof HTMLInputElement ||
+        e.target instanceof HTMLTextAreaElement
+      )
+    ) {
+      e.preventDefault();
+      searchInputRef.value?.focus();
+    }
   });
 });
 </script>
