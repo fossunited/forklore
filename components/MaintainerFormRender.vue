@@ -16,7 +16,7 @@ defineProps(["maintainer"]);
 
         <MDC
           :value="item.response"
-          class="prose dark:prose-invert text-secondary-light dark:text-secondary-dark break-words"
+          class="content prose dark:prose-invert whitespace-pre-wrap text-secondary-light dark:text-secondary-dark break-words"
         />
       </div>
     </template>

@@ -119,3 +119,19 @@ html {
     @apply bg-[var(--color-primary-dark)] text-[var(--color-secondary-dark)];
   }
 }
+
+@layer components {
+  .content ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+  }
+
+  .content ol {
+    list-style: decimal;
+    padding-left: 1.5rem;
+  }
+
+  .content li {
+    margin-top: 0.25rem;
+  }
+}
