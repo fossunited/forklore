@@ -1,0 +1,65 @@
+{
+  "username": "workdone0",
+  "full_name": "Shubham Kumar",
+  "photo": "https://rawcdn.githack.com/workdone0/workdone0.github.io/8592394b80ed8b91e8386289ae54d1b79b7e6922/public/images/sikkim_.jpg",
+  "designation": "Software Engineer",
+  "socials": [
+    {
+      "label": "Web",
+      "link": "https://workdone0.dev/"
+    },
+    {
+      "label": "GitHub",
+      "link": "https://github.com/workdone0"
+    },
+    {
+      "label": "Substack",
+      "link": "https://workdone0.substack.com/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Twig",
+      "project_link": "https://github.com/workdone0/twig",
+      "website_link": "https://twig.wtf/",
+      "logo": "https://rawcdn.githack.com/workdone0/twig/0fe15b856828ab15fa0f4be0777a6e70a131d64d/asset/logo.png",
+      "short_description": "Terminal-based JSON & YAML viewer for fast, interactive exploration of large files.",
+      "description": "Twig is a terminal-based viewer for JSON and YAML that makes navigating deeply nested data fast and intuitive. Instead of scrolling through raw text, you can move through the structure like a file tree, search instantly, and stay oriented even in large files. It runs fully locally, is read-only by design, and is built to handle real-world data sizes, making it well suited for logs, API responses, and configuration files in SSH or headless environments."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Star the repo, try it on real data, and open issues when something feels off.<br>Bug reports, UX feedback, and performance edge cases are especially valuable.<br>If you’d like to support the project financially, you can also do so here: https://buymeacoffee.com/workdone0"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Twig is a terminal UI for exploring JSON and YAML files locally.<br>It lets you navigate deeply nested data interactively, search instantly, and stay oriented in large files without pasting anything into a browser.<br>It’s built for developers who live in the terminal, work over SSH, and deal with real-world data sizes."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Users don’t know what’s in your head, and future you won’t remember why that weird workaround exists."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I build and maintain it because it scratches a very personal itch.<br>I wanted a tool that respected the terminal, worked over SSH, handled large files, and didn’t force me into a browser.<br>Once other developers started using it and finding value in it, maintaining it stopped being optional and started feeling like a responsibility."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Do You Feel It? – Chaos Chaos"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "The original core data-handling file from the early versions.<br>It grew organically, solved problems just in time, and now exists purely to remind me why refactors are inevitable."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Copy-pasting sensitive JSON into a web-based viewer over SSH, watching the browser struggle, and realizing the “free” tool had a hard file size limit.<br>That was the moment I decided I’d rather build something locally than keep compromising."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "👾"
+    }
+  ],
+  "created_on": "2025-12-30T14:27:11.887021"
+}
