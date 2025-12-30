@@ -47,14 +47,14 @@ const result = computed(() => {
     sorted.sort((a, b) => b.full_name.localeCompare(a.full_name));
   } else if (sortBy.value === "newest") {
     sorted.sort((a, b) => {
-      const dateA = new Date(a.body.created_on).getTime();
-      const dateB = new Date(b.body.created_on).getTime();
+      const dateA = new Date(a.created_on).getTime();
+      const dateB = new Date(b.created_on).getTime();
       return dateB - dateA;
     });
   } else if (sortBy.value === "oldest") {
     sorted.sort((a, b) => {
-      const dateA = new Date(a.body.created_on).getTime();
-      const dateB = new Date(b.body.created_on).getTime();
+      const dateA = new Date(a.created_on).getTime();
+      const dateB = new Date(b.created_on).getTime();
       return dateA - dateB;
     });
   }
