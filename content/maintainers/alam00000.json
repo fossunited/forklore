@@ -1,0 +1,57 @@
+{
+  "username": "alam00000",
+  "full_name": "Alam",
+  "photo": "https://avatars.githubusercontent.com/u/50314772?s=400&u=a8d7e5eb09cf8bca3528fd6711d90b2cafe96979&v=4",
+  "designation": "Maintainer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/alam00000"
+    }
+  ],
+  "projects": [
+    {
+      "name": "BentoPDF",
+      "project_link": "https://github.com/alam00000/bentopdf",
+      "website_link": "https://www.bentopdf.com/",
+      "logo": "https://www.bentopdf.com/favicon-512x512.png",
+      "short_description": "The Privacy First PDF Toolkit",
+      "description": "BentoPDF is a powerful, privacy first PDF toolkit that runs entirely in your browser. It's self hostable and allows you to manipulate, edit, merge, and process PDF files without any server-side processing. This means your files never leave your device, ensuring complete privacy and security. You can work with as many PDF files as you want, as often as you want. There are no artificial restrictions, usage limits, or file size caps."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "You can help us out by giving us a star and sharing it with others. Even better, reporting any issues you find or by raising a PR. If you feel like sponsoring the project, you can do so here:<br>https://ko-fi.com/alio01"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "BentoPDF is a powerful, privacy first PDF toolkit that runs entirely in your browser. It's self hostable and allows you to manipulate, edit, merge, and process PDF files without any server-side processing. This means your files never leave your device, ensuring complete privacy and security. You can work with as many PDF files as you want, as often as you want. There are no artificial restrictions, usage limits, or file size caps. In just 3 months of launch we have crossed 10k stars and have been downloaded over 400k+ times on Docker."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "A lot of open issues in your project is a good thing. That just shows people are using it 🙂"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "It just started as a small personal project. Over time it turned out to be something a lot of people rely on, so that keeps me motivated."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "JOJO Pillar Man Theme"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "bookmark-pdf.ts (Way too complex to debug)"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "The moment Adobe asked me to pay just to rotate a PDF 🤣"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🥷🏻"
+    }
+  ],
+  "created_on": "2026-01-13T13:45:37.007639"
+}
