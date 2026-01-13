@@ -81,7 +81,7 @@ def parse_issue(md):
         for question, response in question_blocks:
             data['form'].append({
                 "question": question.strip(),
-                "response": response.replace("\n", "<br>").strip()
+                "response": response.rstrip("\n").replace("\n", "<br>")
             })
     
     return data

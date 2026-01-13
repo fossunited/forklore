@@ -372,3 +372,6 @@ deepl
 duckduckgo
 Chowkidar
 Crowdsourced
+Alam
+Bento
+JOJO
