@@ -22,7 +22,7 @@
           <!-- Count badge -->
           <span
             v-if="group.length > 1"
-              class="absolute top-1 right-1 md:top-2 md:right-2 bg-primary-light dark:bg-secondary-dark text-black text-[10px] md:text-xs font-bold rounded-full px-1.5 py-0.5"
+            class="absolute top-1 right-1 md:top-2 md:right-2 bg-primary-light dark:bg-secondary-dark text-black text-[10px] md:text-xs font-bold rounded-full px-1.5 py-0.5"
           >
             {{ group.length }}
           </span>
@@ -57,31 +57,26 @@ const { data: maintainers } = await useAsyncData("maintainers", () => {
   return queryCollection("maintainers").all();
 });
 
-const emojiMaintainers = ref<MaintainersCollectionItem[]>([]);
-
-onMounted(() => {
-  if (!maintainers.value) return;
+const emojiMaintainers = computed(() => {
+  if (!maintainers.value) return [];
 
   const segmenter = new Intl.Segmenter("en", { granularity: "grapheme" });
 
-  maintainers.value.forEach((maintainer: MaintainersCollectionItem) => {
-    const form = maintainer.body?.form || [];
+  return maintainers.value.flatMap((maintainer) => {
+    const form = maintainer.form || [];
 
-    const emojiAnswer = form.find((entry: any) =>
+    const emojiAnswer = form.find((entry) =>
       entry.question?.includes("one emoji"),
     );
 
-    if (emojiAnswer?.response) {
-      const segments = Array.from(segmenter.segment(emojiAnswer.response));
-      const firstEmoji = segments[0]?.segment;
+    if (!emojiAnswer?.response) return [];
 
-      if (firstEmoji) {
-        emojiMaintainers.value.push({
-          ...maintainer,
-          emoji: firstEmoji,
-        });
-      }
-    }
+    const segments = Array.from(segmenter.segment(emojiAnswer.response));
+    const firstEmoji =
+      segments.find((s) => s.segment !== "[" && s.segment.trim() !== "")
+        ?.segment ?? "";
+
+    return firstEmoji ? [{ ...maintainer, emoji: firstEmoji }] : [];
   });
 });
 
