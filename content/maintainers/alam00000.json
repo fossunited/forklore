@@ -14,7 +14,7 @@
       "name": "BentoPDF",
       "project_link": "https://github.com/alam00000/bentopdf",
       "website_link": "https://www.bentopdf.com/",
-      "logo": "https://www.bentopdf.com/favicon-512x512.png",
+      "logo": "https://www.bentopdf.com/images/favicon-512x512.png",
       "short_description": "The Privacy First PDF Toolkit",
       "description": "BentoPDF is a powerful, privacy first PDF toolkit that runs entirely in your browser. It's self hostable and allows you to manipulate, edit, merge, and process PDF files without any server-side processing. This means your files never leave your device, ensuring complete privacy and security. You can work with as many PDF files as you want, as often as you want. There are no artificial restrictions, usage limits, or file size caps."
     }
