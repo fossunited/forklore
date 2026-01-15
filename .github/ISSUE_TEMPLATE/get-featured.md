@@ -18,6 +18,7 @@ Want to contribute this profile to the repo as PR itself? This will help us to r
 Make sure to rename the file using your GitHub username for uniqueness.
 -->
 
+- [ ] Would you like to be added to our maintainer community mailing group?
 
 ## Your Details
 
