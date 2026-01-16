@@ -5,6 +5,8 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "check-jsonschema>=0.36.0",
+    "jsonschema>=4.26.0",
     "markdown2>=2.5.4",
     "requests>=2.32.5",
 ]

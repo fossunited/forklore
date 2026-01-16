@@ -84,6 +84,6 @@ Your answer here.
 **What's your open-source villain origin story?:**
 Your answer here.
 
-**If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?:**
+**If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?:**
 <!-- Example: 🔥 🧠 💀 😅 -->
 Your answer here.
