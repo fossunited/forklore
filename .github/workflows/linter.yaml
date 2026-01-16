@@ -27,15 +27,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install pre-commit
 
-      - name: Run pre-commit on PR diff only
-        if: github.event_name == 'pull_request'
+      - name: Run pre-commit (changed files only)
         run: |
-          pre-commit run \
-            --from-ref origin/${{ github.base_ref }} \
-            --to-ref HEAD \
-            --show-diff-on-failure
-
-      - name: Run pre-commit on push (all files)
-        if: github.event_name == 'push'
-        run: |
-          pre-commit run --all-files --show-diff-on-failure
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            pre-commit run \
+              --from-ref ${{ github.event.pull_request.base.sha }} \
+              --to-ref ${{ github.sha }} \
+              --show-diff-on-failure
+          else
+            pre-commit run \
+              --from-ref ${{ github.event.before }} \
+              --to-ref ${{ github.sha }} \
+              --show-diff-on-failure
+          fi
