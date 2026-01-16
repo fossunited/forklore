@@ -13,6 +13,7 @@ import Reddit from "~/components/icons/Reddit.vue";
 
 const icons = {
   web: WebIcon,
+  website: WebIcon,
   github: Github,
   gitlab: Gitlab,
   codeberg: Codeberg,

@@ -22,7 +22,7 @@
       "type": "string",
       "description": "URL to the maintainer's photo",
       "format": "uri",
-      "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$|https://avatars\\.githubusercontent\\.com/.+)"
+      "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico).*|https?://.*avatar.*|https?://.*assets.*)"
     },
     "designation": {
       "type": "string",
@@ -47,7 +47,7 @@
               "Gitlab",
               "Codeberg",
               "BitBucket",
-              "LinkedIn",
+              "LinkedIn", "Linkedin",
               "X",
               "Twitter",
               "Mastodon",
@@ -56,7 +56,7 @@
               "Discourse",
               "Email",
               "RSS",
-              "Web",
+              "Web", "Website", "Blog",
               "Reddit"
             ]
           },
@@ -81,7 +81,7 @@
           "name": {
             "type": "string",
             "description": "Name of the project",
-            "minLength": 5
+            "minLength": 4
           },
           "project_link": {
             "type": "string",
@@ -99,7 +99,7 @@
             "type": "string",
             "description": "URL to the project logo",
             "format": "uri",
-            "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$|https://avatars\\.githubusercontent\\.com/.+)"
+            "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico).*|https?://.*avatar.*|https?://.*assets.*)"
           },
           "description": {
             "type": "string",

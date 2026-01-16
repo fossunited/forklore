@@ -51,8 +51,8 @@ LABEL_NORMALIZATION = {
     "Bitbucket": "BitBucket",
     "Reddit": "Reddit",
     # Common aliases
-    "Website": "Web",
-    "website": "Web",
+    "website": "Website",
+    "web": "Web",
     "Blog": "Web",
     "blog": "Web",
     "Mail": "Email",
