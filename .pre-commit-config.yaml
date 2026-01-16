@@ -1,10 +1,43 @@
-# See https://pre-commit.com for more information
-# Install: pip install pre-commit && pre-commit install
+# Install: uv add pre-commit && pre-commit install
 repos:
+  # Validate JSON files against schema using check-jsonschema
   - repo: https://github.com/python-jsonschema/check-jsonschema
-    rev: 0.29.4
+    rev: 0.36.0
     hooks:
       - id: check-jsonschema
         name: Validate maintainer JSON files
         files: ^content/maintainers/.*\.json$
         args: ["--schemafile", "maintainer.schema.json"]
+
+  # cspell
+  - repo: https://github.com/streetsidesoftware/cspell-cli
+    rev: v9.4.0
+    hooks:
+      - id: cspell
+        name: Spell check markdown files
+        files: \.md$  # Only check .md files
+        args:
+          - --config
+          - cspell.json
+      - id: cspell
+        name: check commit message spelling
+        args:
+          - --config
+          - cspell.json
+          - --no-must-find-files
+          - --no-progress
+          - --no-summary
+          - --files
+          - .git/COMMIT_EDITMSG
+        stages: [commit-msg]
+        always_run: true
+
+  # Custom validator using parser
+  - repo: local
+    hooks:
+      - id: validate-maintainer-json
+        name: Validate maintainer JSON with parser
+        entry: uv run python3 parse-maintainer.py --validate
+        language: system
+        files: ^content/maintainers/.*\.json$
+        pass_filenames: true
