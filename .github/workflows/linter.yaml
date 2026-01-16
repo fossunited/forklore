@@ -12,12 +12,30 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # required for diff
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install and Run Pre-commit
-        uses: pre-commit/action@v3.0.1
+      - name: Install pre-commit
+        run: |
+          python -m pip install --upgrade pip
+          pip install pre-commit
+
+      - name: Run pre-commit on PR diff only
+        if: github.event_name == 'pull_request'
+        run: |
+          pre-commit run \
+            --from-ref origin/${{ github.base_ref }} \
+            --to-ref HEAD \
+            --show-diff-on-failure
+
+      - name: Run pre-commit on push (all files)
+        if: github.event_name == 'push'
+        run: |
+          pre-commit run --all-files --show-diff-on-failure
