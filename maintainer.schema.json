@@ -4,31 +4,35 @@
   "title": "Maintainer",
   "description": "Schema for validating maintainer JSON files",
   "type": "object",
-  "required": ["username", "full_name", "photo", "socials", "projects", "form"],
+  "required": ["username", "full_name", "photo", "socials", "projects", "form", "created_on"],
   "additionalProperties": false,
   "properties": {
     "username": {
       "type": "string",
       "description": "Unique identifier for the maintainer",
-      "minLength": 1
+      "minLength": 4,
+      "pattern": "^[a-zA-Z0-9_-]+$"
     },
     "full_name": {
       "type": "string",
       "description": "Full name of the maintainer",
-      "minLength": 1
+      "minLength": 4
     },
     "photo": {
       "type": "string",
       "description": "URL to the maintainer's photo",
-      "format": "uri"
+      "format": "uri",
+      "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$|https://avatars\\.githubusercontent\\.com/.+)"
     },
     "designation": {
       "type": "string",
-      "description": "Job title or role description"
+      "description": "Job title or role description",
+      "minLength": 5
     },
     "socials": {
       "type": "array",
       "description": "List of social media links",
+      "minItems": 1,
       "items": {
         "type": "object",
         "required": ["label", "link"],
@@ -52,13 +56,15 @@
               "Discourse",
               "Email",
               "RSS",
-              "Web"
+              "Web",
+              "Reddit"
             ]
           },
           "link": {
             "type": "string",
             "description": "URL to the social media profile",
-            "format": "uri"
+            "format": "uri",
+            "pattern": "^https?://.+"
           }
         }
       }
@@ -66,60 +72,176 @@
     "projects": {
       "type": "array",
       "description": "List of projects maintained",
+      "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["name", "project_link", "description", "short_description"],
+        "required": ["name", "project_link", "website_link", "logo", "description", "short_description"],
         "additionalProperties": false,
         "properties": {
           "name": {
             "type": "string",
             "description": "Name of the project",
-            "minLength": 1
+            "minLength": 5
           },
           "project_link": {
             "type": "string",
             "description": "URL to the project repository",
-            "format": "uri"
+            "format": "uri",
+            "pattern": "^https?://.+"
           },
           "website_link": {
             "type": "string",
             "description": "URL to the project website",
-            "format": "uri"
+            "format": "uri",
+            "pattern": "^https?://.+"
           },
           "logo": {
             "type": "string",
             "description": "URL to the project logo",
-            "format": "uri"
+            "format": "uri",
+            "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$|https://avatars\\.githubusercontent\\.com/.+)"
           },
           "description": {
             "type": "string",
-            "description": "Full description of the project"
+            "description": "Full description of the project",
+            "minLength": 20
           },
           "short_description": {
             "type": "string",
-            "description": "Short description used in cards and meta"
+            "description": "Short description used in cards and meta",
+            "minLength": 10,
+            "maxLength": 200
           }
         }
       }
     },
     "form": {
       "type": "array",
-      "description": "Q&A form responses",
-      "items": {
-        "type": "object",
-        "required": ["question", "response"],
-        "additionalProperties": false,
-        "properties": {
-          "question": {
-            "type": "string",
-            "description": "The question text"
-          },
-          "response": {
-            "type": "string",
-            "description": "The maintainer's response"
+      "description": "Q&A form responses with exact questions",
+      "minItems": 8,
+      "maxItems": 8,
+      "items": [
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "How to support"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "A small brief about your project"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "One FOSS maintainer lesson for your younger self"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "Why do you do it? Why do you bother maintaining a FOSS project?"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "If your repo had a theme song, what would it be?"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "Which file in your project would you most like to set on fire?"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "What's your open-source villain origin story?"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "type": "object",
+          "required": ["question", "response"],
+          "additionalProperties": false,
+          "properties": {
+            "question": {
+              "type": "string",
+              "const": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?"
+            },
+            "response": {
+              "type": "string",
+              "minLength": 1
+            }
           }
         }
-      }
+      ]
     },
     "created_on": {
       "type": "string",
