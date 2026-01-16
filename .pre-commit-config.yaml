@@ -6,6 +6,7 @@ repos:
     hooks:
       - id: check-jsonschema
         name: Validate maintainer JSON files
+        stages: [commit]
         files: ^content/maintainers/.*\.json$
         args: ["--schemafile", "maintainer.schema.json"]
 
@@ -39,5 +40,6 @@ repos:
         name: Validate maintainer JSON with parser
         entry: uv run python3 parse-maintainer.py --validate
         language: system
+        stages: [commit]
         files: ^content/maintainers/.*\.json$
         pass_filenames: true
