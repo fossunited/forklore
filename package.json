@@ -13,7 +13,7 @@
   "dependencies": {
     "@fontsource-variable/geist-mono": "^5.2.7",
     "@fontsource-variable/inter": "^5.2.8",
-    "@nuxt/content": "^3.10.0",
+    "@nuxt/content": "^3.11.0",
     "@nuxtjs/color-mode": "4.0.0",
     "@tailwindcss/vite": "^4.1.18",
     "better-sqlite3": "^12.6.2",
