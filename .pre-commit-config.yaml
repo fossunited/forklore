@@ -6,7 +6,7 @@ repos:
     hooks:
       - id: check-jsonschema
         name: Validate maintainer JSON files
-        stages: [commit]
+        stages: [pre-commit]
         files: ^content/maintainers/.*\.json$
         args: ["--schemafile", "maintainer.schema.json"]
 
@@ -16,7 +16,7 @@ repos:
     hooks:
       - id: cspell
         name: Spell check markdown files
-        files: \.md$  # Only check .md files
+        files: \.(md|json)$
         args:
           - --config
           - cspell.json
@@ -40,6 +40,6 @@ repos:
         name: Validate maintainer JSON with parser
         entry: uv run python3 parse-maintainer.py --validate
         language: system
-        stages: [commit]
+        stages: [pre-commit]
         files: ^content/maintainers/.*\.json$
         pass_filenames: true

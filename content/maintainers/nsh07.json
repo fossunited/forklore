@@ -1,0 +1,93 @@
+{
+  "username": "nsh07",
+  "full_name": "Nishant Mishra",
+  "photo": "https://github.com/nsh07.png",
+  "designation": "Student",
+  "socials": [
+    {
+      "label": "Web",
+      "link": "https://nsh07.github.io"
+    },
+    {
+      "label": "GitHub",
+      "link": "https://github.com/nsh07"
+    },
+    {
+      "label": "GitLab",
+      "link": "https://gitlab.com/nsh07"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://x.com/nsh_zero7"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/nsh07/"
+    },
+    {
+      "label": "Reddit",
+      "link": "https://www.reddit.com/user/nsh07/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Tomato",
+      "project_link": "https://github.com/nsh07/Tomato",
+      "website_link": "https://f-droid.org/packages/org.nsh07.pomodoro/",
+      "logo": "https://raw.githubusercontent.com/nsh07/Tomato/refs/heads/main/app/src/main/ic_launcher-playstore.png",
+      "short_description": "Minimalist, data-oriented pomodoro timer for Android",
+      "description": "Tomato is a minimalist, data-oriented pomodoro timer app for Android with deep insights about your productivity"
+    },
+    {
+      "name": "Wikireader",
+      "project_link": "https://github.com/nsh07/WikiReader",
+      "website_link": "https://github.com/nsh07/WikiReader",
+      "logo": "https://raw.githubusercontent.com/nsh07/WikiReader/refs/heads/main/fastlane/metadata/android/en-US/images/icon.png",
+      "short_description": "Android app for reading Wikipedia pages distraction-free",
+      "description": "A lightweight Android app for reading Wikipedia articles distraction-free. Supports light mode, dark mode, Material You dynamic colors and 300+ Wikipedia languages"
+    },
+    {
+      "name": "SimplyGraph",
+      "project_link": "https://github.com/nsh07/SimplyGraph",
+      "website_link": "https://github.com/nsh07/SimplyGraph",
+      "logo": "https://raw.githubusercontent.com/nsh07/SimplyGraph/refs/heads/main/app/src/main/ic_launcher-playstore.png",
+      "short_description": "A graphing calculator for Android",
+      "description": "SimplyGraph is a simple, fast graphing calculator for Android with support for explicit functions, implicit relations, polar functions and parametric relations"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "You can support me on BuyMeACoffee at https://coff.ee/nsh07 and on GitHub Sponsors at https://github.com/sponsors/nsh07 . Or, you can contribute code or translations on my projects."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "- Tomato: Minimalist, data-oriented pomodoro timer for Android\n- Wikireader: Android app for reading Wikipedia pages distraction-free\n- SimplyGraph: A graphing calculator for Android"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Learn Git/VCS in general, in-depth. It will save you a lot of time later."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "FOSS has helped me a lot in my computer and programming journey. Writing and maintaining FOSS projects is my way of giving back to the open-source community what it has provided me with."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "[Daft Punk - Voyager](https://youtu.be/INbgG9M0WYE?si=WKUNdLX1jpvmDV-0), I'm Just vibing along"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "README.md"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I fixed a typo in [btop](https://github.com/aristocratos/btop), and now I'm in their contributor list 😈"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "✏️"
+    }
+  ],
+  "created_on": "2026-01-19T12:09:02.229950+05:30"
+}
