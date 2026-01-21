@@ -38,8 +38,11 @@ repos:
     hooks:
       - id: validate-maintainer-json
         name: Validate maintainer JSON with parser
-        entry: uv run python3 parse-maintainer.py --validate
+        entry: python3 parse-maintainer.py --validate
         language: system
         stages: [pre-commit]
         files: ^content/maintainers/.*\.json$
         pass_filenames: true
+        env:
+          CI: "false"
+
