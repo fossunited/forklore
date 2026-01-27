@@ -381,3 +381,6 @@ pomodoro
 Wikireader
 vibing
 btop
+jsonschema
+schemafile
+EDITMSG
