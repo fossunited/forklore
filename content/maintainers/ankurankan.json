@@ -1,0 +1,61 @@
+{
+  "username": "ankurankan",
+  "full_name": "Ankur Ankan",
+  "photo": "https://avatars.githubusercontent.com/u/1461453?v=4",
+  "designation": "Postdoctoral Researcher",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/ankurankan"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/aankan/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "pgmpy",
+      "project_link": "https://github.com/pgmpy",
+      "website_link": "https://pgmpy.org",
+      "logo": "https://raw.githubusercontent.com/pgmpy/pgmpy/refs/heads/dev/logo/logo_color.png",
+      "short_description": "pgmpy is a Python library for Causal AI",
+      "description": "pgmpy is a Python library for causal and probabilistic modeling using graphical models. It provides a uniform API for building, learning, and analyzing models, such as Bayesian Networks, Dynamic Bayesian Networks, Directed Acyclic Graphs (DAGs), and Structural Equation Models (SEMs). By integrating tools from both probabilistic inference and causal inference, pgmpy enables users to seamlessly transition between predictive and causal analyses."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Spread the word, contribute code/documentation, report issues, and help others in the community. Financial support is also welcome via GitHub Sponsors."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "With pgmpy we aim to bring the state-of-the-art algorithms in probabilistic graphical models and causal inference to the Python data-science community."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Be selective on feature requests. Don't try to do everything."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "It's fun, it's good for the community, and I get to keep learning while doing it."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=GBIIQ0kP15E"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "\"DAG.py\". Just look at the size of that file!"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Reviewing fully LLM-generated PRs."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🧑💻"
+    }
+  ],
+  "created_on": "2026-01-27T13:33:47.440205+01:00"
+}
