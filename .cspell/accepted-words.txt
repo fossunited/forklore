@@ -384,3 +384,8 @@ btop
 jsonschema
 schemafile
 EDITMSG
+Praneel
+Ankur
+Kiran
+pgmpy
+Altsendme
