@@ -20,6 +20,7 @@ repos:
         args:
           - --config
           - cspell.json
+          - --no-must-find-files
       - id: cspell
         name: check commit message spelling
         args:
