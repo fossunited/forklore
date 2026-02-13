@@ -1,0 +1,65 @@
+{
+  "username": "ritoban23",
+  "full_name": "Ritoban Dutta",
+  "photo": "https://avatars.githubusercontent.com/u/124308320?v=4",
+  "designation": "Computer Science Student & Full-stack Developer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/ritoban23"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/ritoban-dutta/"
+    },
+    {
+      "label": "Web",
+      "link": "https://ritobandutta.vercel.app/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "gh-showcase",
+      "project_link": "https://github.com/ritoban23/gh-showcase",
+      "website_link": "https://www.npmjs.com/package/gh-showcase",
+      "logo": "https://raw.githubusercontent.com/ritoban23/gh-showcase/main/public/gh-showcase-logo.png",
+      "short_description": "A beautiful React component to showcase GitHub profiles with bio, contribution graphs, and stats.",
+      "description": "gh-showcase is a drop-in React library designed to help developers visualize their GitHub activity effortlessly. It provides a comprehensive profile view, including personal bio, interactive contribution graphs, and detailed pull request analytics. Built with TypeScript and Tailwind CSS, it is perfect for portfolios and documentation sites."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Use gh-showcase in your portfolios and websites, suggest improvements or new features you'd like to see, star the project, and share it with others. Some future work is already on the roadmap!"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "gh-showcase is a beautiful React library designed to help developers visualize their GitHub activity effortlessly. It provides a comprehensive profile view with real-time stats and categorized pull request analytics."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Master version control early on. Use Git for far more than just staging, committing, and pushing — learning its advanced features will make you a much more effective collaborator and maintainer."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Open source is a beautiful cycle of learning and giving back. Once you start gaining from the community, it feels natural to start contributing your own work to help others grow too."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "\"Missing\" (Todd Terry Remix) - Everything But The Girl."
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "src/lib/useGitHubPRs.ts. The PR categorization logic relies on complex regex patterns that feel like they're held together by magic and luck."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I used to envy developers who received cool swag from companies. Cut to 2025, and I've received over 10 kits — from tees and caps to a MacBook — all thanks to my open-source contributions!"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🥂"
+    }
+  ],
+  "created_on": "2026-02-13T18:37:45.141568+05:30"
+}
