@@ -1,0 +1,109 @@
+{
+  "username": "aravindavk",
+  "full_name": "Aravinda VK",
+  "photo": "https://avatars.githubusercontent.com/u/338230?v=4",
+  "designation": "Partner at Kadalu Investments",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/aravindavk"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://x.com/aravindavk"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/aravindavk"
+    },
+    {
+      "label": "Web",
+      "link": "https://aravindavk.in"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Chitra",
+      "project_link": "https://github.com/aravindavk/chitra-d",
+      "website_link": "https://github.com/aravindavk/chitra-d",
+      "logo": "https://aravindavk.in/images/chitra-logo.png",
+      "short_description": "2D graphics library",
+      "description": "Chitra (Chitra means Drawing in Kannada language) is a 2D graphics library that lets you write simple https://dlang.org/[D] code to generate 2D graphics. WIP Lua bindings helps to integrate Chitra with other programming languages very easily. This is based on Cairo graphics and Pango libraries. The syntax is inspired by Drawbot (https://www.drawbot.com) and Processing (https://processing.org). The library is not only limited to D language apps, but it can be used with other programming languages or CLI using the Lua bindings. Lua bindings, curve support, and many other feature development work is in progress."
+    },
+    {
+      "name": "Sanka",
+      "project_link": "https://github.com/aravindavk/kannada",
+      "website_link": "https://aravindavk.in/sanka",
+      "logo": "https://aravindavk.in/sanka/static/logo.png",
+      "short_description": "Kannada language tools and encoding converter.",
+      "description": "Collection of tools to analyze the Kannada language text and encoding conversions. ASCII to Unicode Conversion tool is used by many organizations, and government offices and it is also used in the Alar dictionary from Zerodha (ASCII to Unicode project link mentioned in https://zerodha.tech/blog/alar-the-making-of-an-open-source-dictionary). This project also focuses on developing/maintaining fonts for the Kannada language."
+    },
+    {
+      "name": "Dataframes (D)",
+      "project_link": "https://github.com/aravindavk/dataframes-d",
+      "website_link": "https://github.com/aravindavk/dataframes-d",
+      "logo": "https://raw.githubusercontent.com/aravindavk/aravindavk.github.com_archive/refs/heads/master/theme/img/fav.png",
+      "short_description": "DataFrame for D programming language",
+      "description": "This project aims to provide DataFrame to D programming similar to Python Pandas. DataFrame library helps organizations to use D programming language for analysing financial market data or other data sources."
+    },
+    {
+      "name": "Binnacle",
+      "project_link": "https://github.com/aravindavk/binnacle-python",
+      "website_link": "https://github.com/aravindavk/binnacle-python",
+      "logo": "https://raw.githubusercontent.com/aravindavk/aravindavk.github.com_archive/refs/heads/master/theme/img/fav.png",
+      "short_description": "A simple imperative tool for Tests and Infra automation.",
+      "description": "Binnacle is a simple imperative tool for infrastructure and test automation. Its modern, intuitive syntax helps the admins or test case writers to get started in minutes. Use this for testing ReST APIs, command line applications or others. Binnacle also helps to write easy scripts to deploy applications or other server automation."
+    },
+    {
+      "name": "Gluster Metrics Exporter",
+      "project_link": "https://github.com/kadalu/gluster-metrics-exporter",
+      "website_link": "https://github.com/kadalu/gluster-metrics-exporter",
+      "logo": "https://raw.githubusercontent.com/kadalu/gdash/refs/heads/main/ui/public/logo.png",
+      "short_description": "Lightweight and efficient Prometheus(and JSON) exporter for Gluster metrics.",
+      "description": "[GlusterFS](https://github.com/gluster/glusterfs) is a software defined distributed storage that can scale to several petabytes. Gluster Metrics exporter project exports the metrics in Prometheus and JSON format."
+    },
+    {
+      "name": "Gdash",
+      "project_link": "https://github.com/kadalu/gdash",
+      "website_link": "https://github.com/kadalu/gdash",
+      "logo": "https://raw.githubusercontent.com/kadalu/gdash/refs/heads/main/ui/public/logo.png",
+      "short_description": "Lightweight GlusterFS dashboard.",
+      "description": "Lightweight dashboard to view the status of the [GlusterFS](https://github.com/gluster/glusterfs) cluster."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "You can use the projects and share with others, report bugs or request for new features. PRs are welcome.<br><br>If you use any of these projects or are interested in helping these projects, a contribution would mean A LOT to me. With your help, continuing my work can be sustainable. Thanks in advance.<br><br>[Sponsor](https://github.com/sponsors/aravindavk)<br>"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "I maintain and contribute to many Open source projects along with the ones listed here. Please do visit my [Github profile](https://github.com/aravindavk) for libraries and the projects related to Kannada, Finance, D programming language and GlusterFS.<br>"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "First write the documentation of your future project and then start working on it.<br>"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I was introduced to FOSS when I joined local Linux user groups and participated in Linux install fests from 2006. I was very amazed by the idea of publishing our code for others to use and contribute. Since then, I have been contributing and maintaining many open-source projects.<br>"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=gH_RYRwVrVM<br>"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Documentation in code and the test cases.<br>"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Don't have any!<br>"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "response": "🐧🐧<br>"
+    }
+  ],
+  "created_on": "2026-02-23T19:16:50.408936"
+}
