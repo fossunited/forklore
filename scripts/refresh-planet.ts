@@ -3,213 +3,176 @@ import { promises as fs } from "fs";
 import path from "path";
 import crypto from "crypto";
 
-interface StoredPost {
-  id: string;
-  slug: string;
-  title: string;
-  link: string;
-  pubDate: string;
-  author: string;
-  content: string;
-  contentSnippet: string;
-  tags: string[];
-  guid: string;
-}
+const parser = new Parser({ timeout: 10000 });
 
-interface MaintainerPosts {
-  maintainerName: string;
-  maintainerUsername: string;
-  maintainerPath: string;
-  feedUrl: string;
-  lastFetched: string;
-  posts: StoredPost[];
-}
-
-// Content processors
-function processPostContent(content: string, originalUrl: string): string {
-  let processed = content;
-
-  // Get base URL from the post link
-  const urlObj = new URL(originalUrl);
-  const baseUrl = `${urlObj.protocol}//${urlObj.host}`;
-
-  // 1. Fix relative image paths
-  processed = processed.replace(/src=["']\/(?!\/)/g, `src="${baseUrl}/`);
-
-  // 2. Fix relative link hrefs
-  processed = processed.replace(/href=["']\/(?!\/)/g, `href="${baseUrl}/`);
-
-  // 3. Add target="_blank" to external links
-  processed = processed.replace(
-    /<a\s+href=/g,
-    '<a target="_blank" rel="noopener noreferrer" href=',
-  );
-
-  // 4. Strip any dangerous scripts (security)
-  processed = processed.replace(/<script[\s\S]*?<\/script>/gi, "");
-
-  // 5. Strip style tags (optional - keeps inline styles)
-  processed = processed.replace(/<style[\s\S]*?<\/style>/gi, "");
-
-  // Add more processors here as needed
-  // 6. Example: Add loading="lazy" to images
-  // processed = processed.replace(
-  //   /<img /g,
-  //   '<img loading="lazy" '
-  // );
-
-  return processed;
-}
-
-export default defineEventHandler(async (event) => {
-  const parser = new Parser({
-    timeout: 10000,
-    headers: {
-      "User-Agent": "Forklore-Planet/1.0",
-    },
-  });
-
+// Simple content cleanup
+function cleanContent(content: string, postUrl: string): string {
   try {
-    // Setup directories
-    const contentDir = path.resolve("content/maintainers");
-    const planetDir = path.resolve("content/planet");
-    await fs.mkdir(planetDir, { recursive: true });
+    const url = new URL(postUrl);
+    const base = `${url.protocol}//${url.host}`;
+    return content
+      .replace(/src=["']\/(?!\/)/g, `src="${base}/`)
+      .replace(/href=["']\/(?!\/)/g, `href="${base}/`)
+      .replace(/<script[\s\S]*?<\/script>/gi, "");
+  } catch {
+    return content;
+  }
+}
 
-    // Read maintainers
-    const files = (await fs.readdir(contentDir)).filter((f) =>
+async function main() {
+  const args = process.argv.slice(2);
+  const planetDir = path.resolve("content/planet");
+  await fs.mkdir(planetDir, { recursive: true });
+
+  let feeds = [];
+
+  if (args.length > 0) {
+    // Check if first arg is a username
+    const potentialUsername = args[0];
+    const maintainerFile = path.resolve(
+      `content/maintainers/${potentialUsername}.json`,
+    );
+
+    try {
+      await fs.access(maintainerFile);
+      // It's a username - refresh only this maintainer
+      const m = JSON.parse(await fs.readFile(maintainerFile, "utf-8"));
+      if (!m.rssfeed) {
+        console.error(`Error: ${potentialUsername} has no rssfeed field`);
+        process.exit(1);
+      }
+      feeds = [
+        {
+          username: m.username,
+          name: m.full_name,
+          path: m.path,
+          url: m.rssfeed,
+        },
+      ];
+      console.log(`Refreshing only: ${potentialUsername}`);
+    } catch {
+      // Not a username - treat as RSS URLs
+      feeds = args.map((url) => {
+        // Extract username from URL if possible
+        const urlParts = url.match(/\/\/([^.\/]+)/);
+        const username = urlParts
+          ? `test-${urlParts[1]}`
+          : `test-${Date.now()}`;
+        return { username, name: username, path: `/test/${username}`, url };
+      });
+      console.log(`Testing with ${feeds.length} external URLs`);
+    }
+  } else {
+    // No args - refresh all maintainers
+    const files = (await fs.readdir("content/maintainers")).filter((f) =>
       f.endsWith(".json"),
     );
     const maintainers = await Promise.all(
-      files.map(async (file) => {
-        const raw = await fs.readFile(path.join(contentDir, file), "utf-8");
-        return JSON.parse(raw);
-      }),
+      files.map(async (f) =>
+        JSON.parse(await fs.readFile(`content/maintainers/${f}`, "utf-8")),
+      ),
     );
-
-    const maintainersWithFeeds = maintainers.filter((m) => m.rssfeed);
-
-    let newPostsCount = 0;
-    let updatedPostsCount = 0;
-    const errors: string[] = [];
-
-    // Fetch each maintainer's RSS feed
-    for (const maintainer of maintainersWithFeeds) {
-      try {
-        console.log(`Fetching feed for ${maintainer.username}...`);
-        const feed = await parser.parseURL(maintainer.rssfeed);
-
-        // Load existing posts for this maintainer
-        const maintainerFile = path.join(
-          planetDir,
-          `${maintainer.username}.json`,
-        );
-        let existingData: MaintainerPosts = {
-          maintainerName: maintainer.full_name,
-          maintainerUsername: maintainer.username,
-          maintainerPath: maintainer.path,
-          feedUrl: maintainer.rssfeed,
-          lastFetched: new Date().toISOString(),
-          posts: [],
-        };
-
-        try {
-          const existing = await fs.readFile(maintainerFile, "utf-8");
-          existingData = JSON.parse(existing);
-          existingData.lastFetched = new Date().toISOString();
-        } catch {
-          // File doesn't exist yet
-        }
-
-        const existingGuids = new Set(existingData.posts.map((p) => p.guid));
-
-        // Process each post from the feed
-        for (const item of feed.items) {
-          const uniqueId = item.guid || item.link || item.title;
-          const postId = crypto
-            .createHash("md5")
-            .update(uniqueId)
-            .digest("hex");
-
-          // Create slug from title
-          const slug = (item.title || "untitled")
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-|-$/g, "")
-            .substring(0, 100);
-
-          const postSlug = `${maintainer.username}-${postId.substring(0, 8)}-${slug}`;
-
-          const rawContent =
-            item.content || item["content:encoded"] || item.summary || "";
-          const processedContent = processPostContent(
-            rawContent,
-            item.link || "",
-          );
-
-          const storedPost: StoredPost = {
-            id: postId,
-            slug: postSlug,
-            title: item.title || "Untitled",
-            link: item.link || "",
-            pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
-            author: item.creator || item.author || maintainer.full_name,
-            content: processedContent,
-            contentSnippet: item.contentSnippet || item.summary || "",
-            tags: item.categories || [],
-            guid: item.guid || item.link || "",
-          };
-
-          // Check if post already exists
-          const existingPostIndex = existingData.posts.findIndex(
-            (p) => p.guid === storedPost.guid,
-          );
-
-          if (existingPostIndex === -1) {
-            // New post
-            existingData.posts.push(storedPost);
-            newPostsCount++;
-          } else {
-            // Update existing post (in case content changed)
-            existingData.posts[existingPostIndex] = storedPost;
-            updatedPostsCount++;
-          }
-        }
-
-        // Sort posts by date (newest first)
-        existingData.posts.sort(
-          (a, b) =>
-            new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
-        );
-
-        // Write maintainer's posts file
-        await fs.writeFile(
-          maintainerFile,
-          JSON.stringify(existingData, null, 2),
-          "utf-8",
-        );
-
-        console.log(
-          `✓ Processed ${feed.items.length} posts from ${maintainer.username}`,
-        );
-      } catch (error) {
-        const errorMsg = `Error fetching feed for ${maintainer.username}: ${error}`;
-        console.error(errorMsg);
-        errors.push(errorMsg);
-      }
-    }
-
-    return {
-      success: true,
-      newPosts: newPostsCount,
-      updatedPosts: updatedPostsCount,
-      totalFeeds: maintainersWithFeeds.length,
-      errors: errors.length > 0 ? errors : undefined,
-    };
-  } catch (error) {
-    console.error("Error in planet refresh:", error);
-    throw createError({
-      statusCode: 500,
-      message: "Failed to refresh planet posts",
-    });
+    feeds = maintainers
+      .filter((m) => m.rssfeed)
+      .map((m) => ({
+        username: m.username,
+        name: m.full_name,
+        path: m.path,
+        url: m.rssfeed,
+      }));
+    console.log(`Refreshing all ${feeds.length} maintainers`);
   }
+  console.log(`Fetching ${feeds.length} feeds in parallel...`);
+
+  // Fetch all in parallel
+  const results = await Promise.allSettled(
+    feeds.map(async (feed) => {
+      const rss = await parser.parseURL(feed.url);
+      const file = path.join(planetDir, `${feed.username}.json`);
+
+      // Load existing or create new
+      let data = {
+        maintainerName: feed.name,
+        maintainerUsername: feed.username,
+        maintainerPath: feed.path,
+        feedUrl: feed.url,
+        lastFetched: new Date().toISOString(),
+        posts: [],
+      };
+      try {
+        data = JSON.parse(await fs.readFile(file, "utf-8"));
+        data.lastFetched = new Date().toISOString();
+      } catch {}
+
+      const existingGuids = new Set(data.posts.map((p) => p.guid));
+      let newCount = 0;
+
+      // Add new posts
+      for (const item of rss.items) {
+        const guid = item.guid || item.link || item.title || "";
+        if (existingGuids.has(guid)) continue;
+
+        const id = crypto.createHash("md5").update(guid).digest("hex");
+        const slug = `${feed.username}-${id.slice(0, 8)}-${(
+          item.title || "post"
+        )
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .slice(0, 80)}`;
+
+        data.posts.push({
+          id,
+          slug,
+          guid,
+          title: item.title || "Untitled",
+          link: item.link || "",
+          pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
+          author: item.creator || item.author || feed.name,
+          content: cleanContent(
+            item.content || item["content:encoded"] || item.summary || "",
+            item.link || "",
+          ),
+          contentSnippet: item.contentSnippet || item.summary || "",
+          tags: item.categories || [],
+        });
+        newCount++;
+      }
+
+      // Sort by date, save
+      data.posts.sort(
+        (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
+      );
+      await fs.writeFile(file, JSON.stringify(data, null, 2));
+
+      return {
+        username: feed.username,
+        new: newCount,
+        total: rss.items.length,
+      };
+    }),
+  );
+
+  // Summary
+  let totalNew = 0;
+  let success = 0;
+  results.forEach((r) => {
+    if (r.status === "fulfilled") {
+      totalNew += r.value.new;
+      success++;
+      console.log(
+        `✓ ${r.value.username}: ${r.value.new} new / ${r.value.total} total`,
+      );
+    } else {
+      console.error(`✗ Error: ${r.reason}`);
+    }
+  });
+
+  console.log(
+    `\nDone! ${totalNew} new posts from ${success}/${feeds.length} feeds`,
+  );
+}
+
+main().catch((e) => {
+  console.error(e);
+  process.exit(1);
 });

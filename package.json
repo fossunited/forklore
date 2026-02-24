@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "cspell": "cspell ."
+    "cspell": "cspell .",
+    "planet:refresh": "node scripts/refresh-planet.ts"
   },
   "dependencies": {
     "@nuxt/content": "^3.12.0",
