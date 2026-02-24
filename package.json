@@ -29,6 +29,7 @@
     "yarn": "^1.22.22"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.19",
     "@types/rss": "^0.0.32",
     "cspell": "^9.7.0"
   },

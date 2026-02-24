@@ -3,6 +3,7 @@
   "full_name": "Aravinda VK",
   "photo": "/images/aravindavk_photo.jpg",
   "designation": "Partner at Kadalu Investments",
+  "rssfeed": "http://foss.localhost/rss.xml",
   "socials": [
     {
       "label": "GitHub",
