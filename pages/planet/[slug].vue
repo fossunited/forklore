@@ -25,7 +25,6 @@ const { data: post, status } = await useFetch<StoredPost>(
   `/api/planet/post/${slug}`,
 );
 
-
 const formatDate = (dateString: string) => {
   const date = new Date(dateString);
   return date.toLocaleDateString("en-US", {
@@ -121,9 +120,9 @@ useSeoMeta({
     </div>
 
     <!-- Post Content -->
-<article class="prose prose-lg max-w-none dark:prose-invert prose-headings:font-bold prose-a:text-blue-600 prose-a:underline prose-img:rounded-lg prose-pre:bg-gray-100 dark:prose-pre:bg-gray-800">
-  <div v-html="post.content" class="break-words" />
-</article>
+                <article class="prose prose-lg max-w-none">
+      <div v-html="post.content" class="break-words" />
+    </article>
 
     <!-- Footer -->
     <div class="flex flex-col gap-4 pt-8 border-custom-t">
