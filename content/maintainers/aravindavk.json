@@ -74,36 +74,36 @@
   "form": [
     {
       "question": "How to support",
-      "response": "You can use the projects and share with others, report bugs or request for new features. PRs are welcome.<br><br>If you use any of these projects or are interested in helping these projects, a contribution would mean A LOT to me. With your help, continuing my work can be sustainable. Thanks in advance.<br><br>[Sponsor](https://github.com/sponsors/aravindavk)<br>"
+      "response": "You can use the projects and share with others, report bugs or request for new features. PRs are welcome.<br><br>If you use any of these projects or are interested in helping these projects, a contribution would mean A LOT to me. With your help, continuing my work can be sustainable. Thanks in advance.<br><br>[Sponsor](https://github.com/sponsors/aravindavk)"
     },
     {
       "question": "A small brief about your project",
-      "response": "I maintain and contribute to many Open source projects along with the ones listed here. Please do visit my [Github profile](https://github.com/aravindavk) for libraries and the projects related to Kannada, Finance, D programming language and GlusterFS.<br>"
+      "response": "I maintain and contribute to many Open source projects along with the ones listed here. Please do visit my [Github profile](https://github.com/aravindavk) for libraries and the projects related to Kannada, Finance, D programming language and GlusterFS."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
-      "response": "First write the documentation of your future project and then start working on it.<br>"
+      "response": "First write the documentation of your future project and then start working on it."
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": "I was introduced to FOSS when I joined local Linux user groups and participated in Linux install fests from 2006. I was very amazed by the idea of publishing our code for others to use and contribute. Since then, I have been contributing and maintaining many open-source projects.<br>"
+      "response": "I was introduced to FOSS when I joined local Linux user groups and participated in Linux install fests from 2006. I was very amazed by the idea of publishing our code for others to use and contribute. Since then, I have been contributing and maintaining many open-source projects."
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "https://www.youtube.com/watch?v=gH_RYRwVrVM<br>"
+      "response": "https://www.youtube.com/watch?v=gH_RYRwVrVM"
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "Documentation in code and the test cases.<br>"
+      "response": "Documentation in code and the test cases."
     },
     {
       "question": "What's your open-source villain origin story?",
-      "response": "Don't have any!<br>"
+      "response": "Don't have any!"
     },
     {
-      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
-      "response": "🐧🐧<br>"
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🐧🐧"
     }
   ],
-  "created_on": "2026-02-23T19:16:50.408936"
+  "created_on": "2026-02-23T19:16:50+05:30"
 }
