@@ -4,13 +4,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxtjs/color-mode"],
+  modules: ["@nuxt/content", "@nuxtjs/color-mode", "nuxt-og-image"],
   css: ["/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
   },
   colorMode: {
-    classSuffix: '-mode',
+    classSuffix: "-mode",
     preference: "dark",
   },
   app: {
@@ -38,7 +38,11 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/rss"],
+      routes: ["/rss", "/maintainers/"],
     },
+  },
+  ogImage: {
+    tailwindCss: '~/assets/css/main.css',
+    zeroRuntime: true,
   },
 });
