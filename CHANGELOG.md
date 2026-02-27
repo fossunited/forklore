@@ -2,6 +2,11 @@
 
 > maintainers are in ascending order (older at top)
 
+## February 2026
+
+### Maintainers
+- [Aravinda VK @ Kadalu](https://forklore.in/maintainers/aravindavk)
+
 ## January 2026
 
 ### Maintainers
