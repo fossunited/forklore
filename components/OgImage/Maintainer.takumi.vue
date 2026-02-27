@@ -61,7 +61,7 @@ defineProps<{
           <div
             v-for="(project, idx) in maintainer.projects?.slice(0, 4)"
             :key="idx"
-            class="w-18 h-18 flex items-center justify-center bg-[#eef0f1] outline outline-[#cff2da]"
+            class="w-24 h-24 flex items-center justify-center bg-[#eef0f1] outline outline-[#cff2da]"
           >
             <img
               v-if="project.logo"
