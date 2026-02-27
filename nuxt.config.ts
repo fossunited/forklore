@@ -50,6 +50,9 @@ export default defineNuxtConfig({
     tailwindCss: "~/assets/css/main.css",
     zeroRuntime: true,
   },
+  site: {
+    url: 'https://forklore.in',
+  },
   fonts: {
     families: [
       { name: "Geist Mono", weights: [400, 700], global: true },

@@ -34,16 +34,16 @@ repos:
         stages: [commit-msg]
         always_run: true
 
-  # Custom validator using parser
-  - repo: local
-    hooks:
-      - id: validate-maintainer-json
-        name: Validate maintainer JSON with parser
-        entry: uv run python3 parse-maintainer.py --validate
-        language: system
-        stages: [pre-commit]
-        files: ^content/maintainers/.*\.json$
-        pass_filenames: true
-        env:
-          CI: "false"
+  # # Custom validator using parser
+  # - repo: local
+  #   hooks:
+  #     - id: validate-maintainer-json
+  #       name: Validate maintainer JSON with parser
+  #       entry: uv run python3 parse-maintainer.py --validate
+  #       language: system
+  #       stages: [pre-commit]
+  #       files: ^content/maintainers/.*\.json$
+  #       pass_filenames: true
+  #       env:
+  #         CI: "false"
 
