@@ -13,10 +13,6 @@ useHead({
   title: `${maintainer.value?.full_name} | Forklore`,
 });
 
-defineOgImage("Maintainer", {
-  maintainer: maintainer.value,
-});
-
 useSeoMeta({
   title: `${maintainer.value?.full_name} | Forklore`,
   ogTitle: `${maintainer.value?.full_name} | Forklore`,
