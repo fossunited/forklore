@@ -43,12 +43,8 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/rss", "/"],
+      routes: ["/rss"],
     },
-  },
-  ogImage: {
-    tailwindCss: "~/assets/css/main.css",
-    zeroRuntime: true,
   },
   site: {
     url: 'https://forklore.in',
