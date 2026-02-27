@@ -5,6 +5,11 @@ import MiniSearch from "minisearch";
 const { data: maintainers } = await useAsyncData("maintainers", () => {
   return queryCollection("maintainers").all();
 });
+if (import.meta.prerender && maintainers.value) {
+  prerenderRoutes(
+    maintainers.value.map(m => m.path)
+  )
+}
 
 const normalizedMaintainers = computed(() =>
   maintainers.value?.map((m) => ({

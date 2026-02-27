@@ -10,7 +10,7 @@
     },
     {
       "label": "LinkedIn",
-      "link": "www.linkedin.com/in/nikkothari22"
+      "link": "https://www.linkedin.com/in/nikkothari22"
     },
     {
       "label": "X",
@@ -65,7 +65,7 @@
       "response": "My first contribution to Frappe Framework was a spelling correction from \"Submiting\" to \"Submitting\": https://github.com/frappe/frappe/pull/16638. Yes, I am a stickler for good grammar."
     },
     {
-      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
       "response": "💀"
     }
   ],

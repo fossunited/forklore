@@ -10,7 +10,7 @@
     },
     {
       "label": "LinkedIn",
-      "link": "www.linkedin.com/in/hussainmohda"
+      "link": "https://www.linkedin.com/in/hussainmohda"
     },
     {
       "label": "Mastodon",
@@ -73,9 +73,9 @@
       "response": "My co-founder had an inspiring idea. I just stepped in… and never stepped out.<br>"
     },
     {
-      "question": "If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?",
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
       "response": "🤝<br>"
     }
   ],
-  "created_on": "2025-12-05T15:57:47.924154"
+  "created_on": "2025-12-05T15:57:47+05:30"
 }
