@@ -4,7 +4,12 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   ssr: true,
   devtools: { enabled: true },
-  modules: ["@nuxt/content", "@nuxtjs/color-mode", "nuxt-og-image"],
+  modules: [
+    "@nuxt/content",
+    "@nuxtjs/color-mode",
+    "nuxt-og-image",
+    "@nuxt/fonts",
+  ],
   css: ["/assets/css/main.css"],
   vite: {
     plugins: [tailwindcss()],
@@ -42,7 +47,13 @@ export default defineNuxtConfig({
     },
   },
   ogImage: {
-    tailwindCss: '~/assets/css/main.css',
+    tailwindCss: "~/assets/css/main.css",
     zeroRuntime: true,
+  },
+  fonts: {
+    families: [
+      { name: "Geist Mono", weights: [400, 700], global: true },
+      { name: "Inter", weights: [400, 700], global: true },
+    ],
   },
 });
