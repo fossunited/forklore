@@ -6,7 +6,6 @@ defineProps<{
     photo?: string;
     projects: Array<{
       name: string;
-      short_description: string;
       logo?: string;
     }>;
   };
@@ -14,65 +13,66 @@ defineProps<{
 </script>
 
 <template>
-  <div class="w-full h-full flex items-center justify-center p-12 bg-[#18222a]">
-    <div class="flex flex-col w-full max-w-6xl border border-[#3c4b4e]">
-      <!-- Header -->
-      <div class="p-12 flex gap-4 items-center bg-[#3c4b4e]">
+  <div class="relative w-full h-full">
+    <!-- Background Image -->
+    <img
+      src="/og_maintainer_bg.png"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    <!-- Content Overlay -->
+    <div class="absolute inset-0 flex flex-col justify-between p-26 mr-8">
+      <!-- Maintainer Info -->
+      <div class="flex gap-8 items-center justify-end">
+        <div class="flex flex-col items-end gap-10 mr-5 font-['Geist_Mono']">
+          <h1
+            class="text-[60px] font-bold text-[#CFF2DA] text-right tracking-[2px]"
+          >
+            {{ maintainer.full_name }}
+          </h1>
+
+          <p
+            class="text-3xl font-medium text-[#CFF2DA] text-right mt-2 leading-[100%] tracking-[-1.04px]"
+          >
+            {{ maintainer.designation }}
+          </p>
+        </div>
+
         <!-- Photo -->
         <img
           :src="maintainer.photo || '/maintainer_photo_dark.svg'"
-          :alt="`Photo of ${maintainer.full_name}`"
-          class="w-24 h-24 object-contain outline outline-[#cff2da]"
+          :alt="maintainer.full_name"
+          class="w-45 h-45 object-cover bg-[#eef0f1] outline outline-[#cff2da]"
         />
-
-        <!-- Name -->
-        <div class="flex flex-col gap-2 ml-4">
-          <h4 class="font-normal text-5xl text-[#cff2da]">
-            {{ maintainer.full_name }}
-          </h4>
-          <div class="text-2xl text-[#cff2da]">
-            {{ maintainer.designation }}
-          </div>
-        </div>
       </div>
 
-      <!-- Projects -->
-      <div
-        class="grid"
-        :class="maintainer.projects?.length > 1 ? 'grid-cols-2' : 'grid-cols-1'"
-      >
-        <div
-          v-for="(project, idx) in maintainer.projects?.slice(0, 4)"
-          :key="idx"
-          class="p-8 flex flex-col gap-4 bg-[#18222a] border-t border-[#3c4b4e]"
-          :class="{
-            'border-r border-[#3c4b4e]':
-              idx % 2 === 0 && maintainer.projects.length > 1,
-          }"
-        >
-          <div class="flex gap-6 items-start">
-            <!-- Logo -->
+      <!-- Project Icons -->
+      <div class="flex justify-center ml-[50%]">
+        <div class="flex gap-50 p-8 items-center">
+          <!-- Show project name if only 1 project -->
+          <h2
+            v-if="maintainer.projects?.length === 1"
+            class="text-4xl font-semibold text-[#cff2da]"
+          >
+            {{ maintainer.projects[0].name }}
+          </h2>
+
+          <!-- Project Icons -->
+          <div
+            v-for="(project, idx) in maintainer.projects?.slice(0, 4)"
+            :key="idx"
+            class="w-18 h-18 flex items-center justify-center bg-[#eef0f1] outline outline-[#cff2da]"
+          >
             <img
               v-if="project.logo"
               :src="project.logo"
-              :alt="`Logo of ${project.name}`"
-              class="h-20 aspect-[3/2] object-contain p-3 bg-white/96"
+              :alt="project.name"
+              class="w-full h-full object-contain p-2"
             />
-            <div
-              v-else
-              class="h-20 aspect-[3/2] flex items-center justify-center p-3 bg-white text-black uppercase font-black text-sm border border-[#eef0f1]"
-            >
-              <span>{{ project.name.slice(0, 20) }}...</span>
-            </div>
-
-            <h5 class="font-normal text-3xl ml-2 text-[#cff2da]">
-              {{ project.name }}
-            </h5>
+            <span v-else class="text-2xl font-bold text-[#18222a]">
+              {{ project.name.charAt(0) }}
+            </span>
           </div>
-
-          <p class="text-xl leading-relaxed text-[#cff2da]">
-            {{ project.short_description }}
-          </p>
         </div>
       </div>
     </div>
