@@ -6,11 +6,15 @@ const { data: maintainer, status: maintainerStatus } = await useAsyncData(
   route.path,
   () => {
     return queryCollection("maintainers").path(route.path).first();
-  }
+  },
 );
 
 useHead({
   title: `${maintainer.value?.full_name} | Forklore`,
+});
+
+defineOgImage("Maintainer", {
+  maintainer: maintainer.value,
 });
 
 useSeoMeta({
@@ -18,6 +22,7 @@ useSeoMeta({
   ogTitle: `${maintainer.value?.full_name} | Forklore`,
   description: `Get to know ${maintainer.value?.full_name} and their work.`,
   ogDescription: `Get to know ${maintainer.value?.full_name} and their work.`,
+  twitterCard: "summary_large_image",
 });
 </script>
 
