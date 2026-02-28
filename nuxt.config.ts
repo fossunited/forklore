@@ -49,6 +49,7 @@ export default defineNuxtConfig({
   ogImage: {
     tailwindCss: "~/assets/css/main.css",
     zeroRuntime: true,
+    buildCache: true,
   },
   site: {
     url: 'https://forklore.in',

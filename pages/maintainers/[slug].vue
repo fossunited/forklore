@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import MaintainerPageLayout from "@/layout/MaintainerPageLayout.vue";
 const route = useRoute();
+const slug = route.params.slug as string;
 
 const { data: maintainer, status: maintainerStatus } = await useAsyncData(
-  route.path,
+  `maintainer-${slug}`,
   () => {
-    return queryCollection("maintainers").path(route.path).first();
+    return queryCollection("maintainers").path(`/maintainers/${slug}`).first();
   },
 );
 
