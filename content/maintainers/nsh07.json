@@ -34,7 +34,7 @@
       "name": "Tomato",
       "project_link": "https://github.com/nsh07/Tomato",
       "website_link": "https://f-droid.org/packages/org.nsh07.pomodoro/",
-      "logo": "https://raw.githubusercontent.com/nsh07/Tomato/refs/heads/main/app/src/main/ic_launcher-playstore.png",
+      "logo": "https://raw.githubusercontent.com/nsh07/Tomato/refs/heads/main/androidApp/src/main/ic_launcher-playstore.png",
       "short_description": "Minimalist, data-oriented pomodoro timer for Android",
       "description": "Tomato is a minimalist, data-oriented pomodoro timer app for Android with deep insights about your productivity"
     },
