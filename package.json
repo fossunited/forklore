@@ -11,7 +11,7 @@
     "cspell": "cspell ."
   },
   "dependencies": {
-    "@nuxt/content": "^3.11.2",
+    "@nuxt/content": "^3.12.0",
     "@nuxt/fonts": "0.14.0",
     "@nuxtjs/color-mode": "4.0.0",
     "@tailwindcss/vite": "^4.2.1",
