@@ -22,7 +22,7 @@
     "nuxt": "^4.3.1",
     "nuxt-og-image": "^6.0.0-beta.39",
     "tailwindcss": "^4.2.1",
-    "vue": "^3.5.28",
+    "vue": "^3.5.29",
     "vue-router": "^5.0.3",
     "yarn": "^1.22.22"
   },
