@@ -364,14 +364,6 @@
   dependencies:
     fontkitten "^1.0.0"
 
-"@clack/core@1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@clack/core/-/core-1.0.0.tgz#7ff31271eba8255f8171a5b607bbc9c46cb3cc8c"
-  integrity sha512-Orf9Ltr5NeiEuVJS8Rk2XTw3IxNC2Bic3ash7GgYeA8LJ/zmSNpSQ/m5UAhe03lA6KFgklzZ5KTHs4OAMA/SAQ==
-  dependencies:
-    picocolors "^1.0.0"
-    sisteransi "^1.0.5"
-
 "@clack/core@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@clack/core/-/core-1.0.1.tgz#23c4520dc9190a3411005ee64fca64a077a347fa"
@@ -380,16 +372,7 @@
     picocolors "^1.0.0"
     sisteransi "^1.0.5"
 
-"@clack/prompts@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@clack/prompts/-/prompts-1.0.0.tgz#18eb9cfce6cd91a63cdea67fde5a384980a3313c"
-  integrity sha512-rWPXg9UaCFqErJVQ+MecOaWsozjaxol4yjnmYcGNipAWzdaWa2x+VJmKfGq7L0APwBohQOYdHC+9RO4qRXej+A==
-  dependencies:
-    "@clack/core" "1.0.0"
-    picocolors "^1.0.0"
-    sisteransi "^1.0.5"
-
-"@clack/prompts@^1.0.1":
+"@clack/prompts@^1.0.0", "@clack/prompts@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@clack/prompts/-/prompts-1.0.1.tgz#ef9463c4cb3a027da41314dfcac0655a56e3f114"
   integrity sha512-/42G73JkuYdyWZ6m8d/CJtBrGl1Hegyc7Fy78m5Ob+jF85TOUmLR5XLce/U3LxYAw0kJ8CT5aI99RIvPHcGp/Q==
@@ -1532,7 +1515,7 @@
     "@nuxt/kit" "^4.2.1"
     execa "^8.0.1"
 
-"@nuxt/devtools-kit@^3.2.1":
+"@nuxt/devtools-kit@^3.2.1", "@nuxt/devtools-kit@^3.2.2":
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/@nuxt/devtools-kit/-/devtools-kit-3.2.2.tgz#7967ceb9b0df921117782540209c59d9f647690c"
   integrity sha512-07E1phqoVPNlexlkrYuOMPhTzLIRjcl9iEqyc/vZLH2zWeH/T1X3v+RLTVW5Oio40f/XBp9yQuyihmX34ddjgQ==
@@ -5797,16 +5780,7 @@ magic-string@^0.30.12, magic-string@^0.30.19, magic-string@^0.30.21, magic-strin
   dependencies:
     "@jridgewell/sourcemap-codec" "^1.5.5"
 
-magicast@^0.5.1:
-  version "0.5.1"
-  resolved "https://registry.yarnpkg.com/magicast/-/magicast-0.5.1.tgz#518959aea78851cd35d4bb0da92f780db3f606d3"
-  integrity sha512-xrHS24IxaLrvuo613F719wvOIv9xPHFWQHuvGUBmPnCA/3MQxKI3b+r7n1jAoDHmsbC5bRhTZYR77invLAxVnw==
-  dependencies:
-    "@babel/parser" "^7.28.5"
-    "@babel/types" "^7.28.5"
-    source-map-js "^1.2.1"
-
-magicast@^0.5.2:
+magicast@^0.5.1, magicast@^0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/magicast/-/magicast-0.5.2.tgz#70cea9df729c164485049ea5df85a390281dfb9d"
   integrity sha512-E3ZJh4J3S9KfwdjZhe2afj6R9lGIN5Pher1pF39UGrXRqq/VDaGVIGN13BjHd2u8B61hArAGOnso7nBOouW3TQ==
@@ -6604,13 +6578,13 @@ nuxt-component-meta@0.17.2:
     ufo "^1.6.2"
     vue-component-meta "^3.2.2"
 
-nuxt-og-image@^6.0.0-beta.39:
-  version "6.0.0-beta.39"
-  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.0.0-beta.39.tgz#44374bc189efb30e7ad86c11e4e1ced4120dcf31"
-  integrity sha512-uwo+8E2UtFNVQ8R7QTYwdJdVbm0znPW95CONenGZo+hXIgOWL3M9BZ3NJvpERrIKhcwtV2QjppUa5y9QAC6JLQ==
+nuxt-og-image@^6.0.0-beta.46:
+  version "6.0.0-beta.46"
+  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.0.0-beta.46.tgz#25d27c014a00095998a16949db95405fb8124cf0"
+  integrity sha512-SIBecg+kZLJx4Q2MpXjHEcoN+Y4Xd+gwCUJ25mAxdalJAlipDgffwFNjPYMHA42G62DDyQHjKJ54OLIuG74JuQ==
   dependencies:
     "@clack/prompts" "^1.0.1"
-    "@nuxt/devtools-kit" "^3.2.1"
+    "@nuxt/devtools-kit" "^3.2.2"
     "@nuxt/kit" "^4.3.1"
     "@vue/compiler-sfc" "^3.5.29"
     chrome-launcher "^1.2.1"
@@ -7921,16 +7895,7 @@ simple-git@^3.30.0:
     "@kwsites/promise-deferred" "^1.1.1"
     debug "^4.4.0"
 
-sirv@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.npmjs.org/sirv/-/sirv-3.0.1.tgz"
-  integrity sha512-FoqMu0NCGBLCcAkS1qA+XJIQTR6/JHfQXl+uGteNCQ76T91DMUjPa9xfmeqMY3z80nLSg9yQmNjK0Px6RWsH/A==
-  dependencies:
-    "@polka/url" "^1.0.0-next.24"
-    mrmime "^2.0.0"
-    totalist "^3.0.0"
-
-sirv@^3.0.2:
+sirv@^3.0.1, sirv@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/sirv/-/sirv-3.0.2.tgz#f775fccf10e22a40832684848d636346f41cd970"
   integrity sha512-2wcC/oGxHis/BoHkkPwldgiPSYcpZK3JU28WoMVv55yHJgcZ8rlXvuG9iZggz+sU1d4bRgIGASwyWqjxu3FM0g==
