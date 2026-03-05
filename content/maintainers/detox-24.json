@@ -2,7 +2,7 @@
   "username": "detox-24",
   "full_name": "Sathiya Moorthi Periasamy Thuran",
   "photo": "https://raw.githubusercontent.com/detox-24/stuff/main/tehee.png",
-  "designation": "Student | I void warranties",
+  "designation": "Maintainer @Webi | I void warranties",
   "socials": [
     {
       "label": "GitHub",
@@ -24,7 +24,7 @@
       "website_link": "https://webinstall.dev",
       "logo": "https://raw.githubusercontent.com/detox-24/stuff/main/webi.png",
       "short_description": "Effortlessly install developer tools with easy-to-remember URLs.",
-      "description": "Install (mostly) cross-platform tools, from official builds quickly without sudo or Admin, without a package manager, without changing system file permissions"
+      "description": "Originally created by Alvin (AJ) ONeal, Webi installs cross-platform tools, from latest official builds quickly. Webi provides hassle-free, predictable installs for quick dev environment setups. No file-permissions or package manager fiascos."
     }
   ],
   "form": [
@@ -34,7 +34,7 @@
     },
     {
       "question": "A small brief about your project",
-      "response": "Webi is intended to provide easy-to-use, cross-platform, hassle-free installation process for tools that developers use day-to-day. Installation of a tool is as simple as running 'curl https://webinstall.dev/[tool_name] | {sh/ps}'. Our arsenal of supported tools include 'node','python',git','caddy' and many more! Webi is also available as a CLI-tool. You can just do 'webi node@stable' and boom! Installation done! No package manager and no permission issues. "
+      "response": "Webi is intended to provide easy-to-use, cross-platform, hassle-free installation process for tools that developers use day-to-day. Installation of a tool is as simple as running 'curl https://webinstall.dev/[tool_name] | {sh/ps}'. Our arsenal of supported tools include 'node','python','git','caddy' and many more! Webi is also available as a CLI-tool. You can just do 'webi node@stable' and boom! Installation done! No package manager and no permission issues. "
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
@@ -50,15 +50,15 @@
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "test.js"
+      "response": "test.js. The amount of pain this file put me through in dryruns is pure evil!"
     },
     {
       "question": "What's your open-source villain origin story?",
-      "response": "Tux kidnapped me and dropped me into a terminal. Send Help."
+      "response": "Tried to swat a spam bot on the webi repo. The maintainer said 'cool, fix this fish installer issue instead.' Never left."
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
-      "response": "🛠️"
+      "response": "🧘"
     }
   ],
   "created_on": "2026-03-05T19:19:29.943923+05:30"
