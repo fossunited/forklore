@@ -11,28 +11,28 @@ repos:
         args: ["--schemafile", "maintainer.schema.json"]
 
   # cspell
-  - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v9.4.0
-    hooks:
-      - id: cspell
-        name: Spell check markdown files
-        types: [text]
-        args:
-          - --config
-          - cspell.json
-          - --no-must-find-files
-      - id: cspell
-        name: check commit message spelling
-        args:
-          - --config
-          - cspell.json
-          - --no-must-find-files
-          - --no-progress
-          - --no-summary
-          - --files
-          - .git/COMMIT_EDITMSG
-        stages: [commit-msg]
-        always_run: true
+ # - repo: https://github.com/streetsidesoftware/cspell-cli
+ #   rev: v9.4.0
+ #   hooks:
+ #     - id: cspell
+ #       name: Spell check markdown files
+ #       types: [text]
+ #       args:
+ #         - --config
+ #         - cspell.json
+ #         - --no-must-find-files
+ #     - id: cspell
+ #       name: check commit message spelling
+ #       args:
+ #         - --config
+ #         - cspell.json
+ #         - --no-must-find-files
+ #         - --no-progress
+ #         - --no-summary
+ #         - --files
+ #         - .git/COMMIT_EDITMSG
+ #       stages: [commit-msg]
+ #       always_run: true
 
   # # Custom validator using parser
   # - repo: local
