@@ -1,7 +1,7 @@
 {
   "username": "sanjayaksaxena",
   "full_name": "Sanjaya Kumar Saxena",
-  "photo": "https://avatars.githubusercontent.com/u/29990?s=400&u=e3736bc57babdff833af555e5b98b4087c94485c&v=4",
+  "photo": "/images/sanjayaksaxena_photo.jpg",
   "designation": "",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "winkNLP",
       "project_link": "https://github.com/winkjs/wink-nlp",
       "website_link": "https://winkjs.org/wink-nlp/",
-      "logo": "https://avatars.githubusercontent.com/u/31098993?s=400&u=a01ce0274268659a9d0afab8c29f6c06c8c55cc7&v=4",
+      "logo": "/images/sanjayaksaxena_winknlp.png",
       "description": "WinkNLP is a JavaScript library for Natural Language Processing (NLP). Designed specifically to make development of NLP applications easier and faster, winkNLP is optimized for the right balance of performance and accuracy.",
       "short_description": "Developer friendly Natural Language Processing"
     },
@@ -30,7 +30,7 @@
       "name": "winkComposer",
       "project_link": "https://github.com/winkjs/wink-composer",
       "website_link": "https://winkjs.org/wink-composer/",
-      "logo": "https://avatars.githubusercontent.com/u/31098993?s=400&u=a01ce0274268659a9d0afab8c29f6c06c8c55cc7&v=4",
+      "logo": "/images/sanjayaksaxena_winkcomposer.png",
       "description": "WinkComposer is an upcoming open-source framework that makes building streaming intelligence playfully simple. Connect intuitive nodes, experiment freely, perfect it in an iteration or two. From edge-ready AI algorithms to built-in resilience, everything you need for production comes standard.",
       "short_description": "Composable Streaming Intelligence."
     }

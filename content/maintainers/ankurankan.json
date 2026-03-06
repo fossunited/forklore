@@ -1,7 +1,7 @@
 {
   "username": "ankurankan",
   "full_name": "Ankur Ankan",
-  "photo": "https://avatars.githubusercontent.com/u/1461453?v=4",
+  "photo": "/images/ankurankan_photo.jpg",
   "designation": "Postdoctoral Researcher",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "pgmpy",
       "project_link": "https://github.com/pgmpy",
       "website_link": "https://pgmpy.org",
-      "logo": "https://raw.githubusercontent.com/pgmpy/pgmpy/refs/heads/dev/logo/logo_color.png",
+      "logo": "/images/ankurankan_pgmpy.png",
       "short_description": "pgmpy is a Python library for Causal AI",
       "description": "pgmpy is a Python library for causal and probabilistic modeling using graphical models. It provides a uniform API for building, learning, and analyzing models, such as Bayesian Networks, Dynamic Bayesian Networks, Directed Acyclic Graphs (DAGs), and Structural Equation Models (SEMs). By integrating tools from both probabilistic inference and causal inference, pgmpy enables users to seamlessly transition between predictive and causal analyses."
     }

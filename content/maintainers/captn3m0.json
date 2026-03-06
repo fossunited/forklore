@@ -1,7 +1,7 @@
 {
   "username": "captn3m0",
   "full_name": "Nemo",
-  "photo": "https://avatars.githubusercontent.com/u/584253?v=4",
+  "photo": "/images/captn3m0_photo.jpg",
   "designation": "Making and Breaking things, sometimes intentionally",
   "socials": [
     {
@@ -26,7 +26,7 @@
       "name": "endoflife.date",
       "project_link": "https://github.com/endoflife-date",
       "website_link": "https://endoflife.date/",
-      "logo": "https://avatars.githubusercontent.com/u/62706925?s=200&v=4",
+      "logo": "/images/captn3m0_endoflife.date.png",
       "description": "End-of-life (EOL) and support information is often hard to track, or very badly presented. endoflife.date documents EOL dates and support lifecycles for various products.",
       "short_description": "Informative site with EoL dates of everything"
     },
@@ -34,7 +34,7 @@
       "name": "blr.today",
       "project_link": "https://github.com/blr-today",
       "website_link": "https://blr.today/",
-      "logo": "https://blr.today/img/apple-touch-icon.png",
+      "logo": "/images/captn3m0_blr.today.png",
       "description": "blr.today is an open-source project by Nemo that curates events happening in Bangalore.\n\nIt curates events from multiple sources, cleans them up, then curates them further by tagging them nicely, and makes all event data available as calendars you can subscribe to.",
       "short_description": "This is an open-source semi-curated event calendar for Bangalore."
     }

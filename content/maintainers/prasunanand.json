@@ -1,7 +1,7 @@
 {
   "username": "prasunanand",
   "full_name": "Prasun Anand",
-  "photo": "https://avatars.githubusercontent.com/u/4907510?v=4",
+  "photo": "/images/prasunanand_photo.jpg",
   "designation": "Building Zasper",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Zasper",
       "project_link": "https://github.com/zasper-io/zasper",
       "website_link": "https://zasper.io/",
-      "logo": "https://zasper.io/static/images/logo.svg",
+      "logo": "/images/prasunanand_zasper.svg",
       "description": "Zasper is an open-source High Performance IDE for working with Jupyter notebooks. It’s built from scratch to be blazing fast, highly concurrent, low on resource usage, crash-resistant, even under heavy loads. It is cross-platform - fully supported on macOS & Linux with limited support on Windows — for the best experience, use via WSL",
       "short_description": "High Performance IDE for Jupyter Notebooks"
     }

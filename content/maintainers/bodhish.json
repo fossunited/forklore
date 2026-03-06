@@ -1,7 +1,7 @@
 {
   "username": "bodhish",
   "full_name": "Bodhish Thomas",
-  "photo": "https://avatars.githubusercontent.com/u/14979190?v=4",
+  "photo": "/images/bodhish_photo.jpg",
   "designation": "Co-Founder, Open Healthcare Network",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Open Healthcare Network - Care",
       "project_link": "https://github.com/ohcnetwork/",
       "website_link": "https://ohc.network/",
-      "logo": "https://avatars.githubusercontent.com/u/62014451?s=200&v=4",
+      "logo": "/images/bodhish_open_healthcare_network_-_care.png",
       "description": "Care's consultation module supports outpatient, inpatient, and home care scenarios. Clinicians can manage patient encounters in hospitals, clinics, or even virtual/home settings within one system. This comprehensive support means all types of care—routine check-ups, hospital admissions, or home visits—are documented and handled in a unified interface, improving efficiency across the continuum of care.",
       "short_description": "Care is a Digital Public Good enabling TeleICU & Decentralised Administration of Healthcare Capacity across States."
     }

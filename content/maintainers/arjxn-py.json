@@ -1,7 +1,7 @@
 {
   "username": "arjxn-py",
   "full_name": "Arjun Verma",
-  "photo": "https://avatars.githubusercontent.com/u/104268427?v=4",
+  "photo": "/images/arjxn-py_photo.png",
   "designation": "",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "JupyterGIS",
       "project_link": "https://github.com/geojupyter/jupytergis",
       "website_link": "https://jupytergis.readthedocs.io",
-      "logo": "https://rawcdn.githack.com/geojupyter/jupytergis/830d5e3fea5d78576d6cc0932aa1bfbba7fba7fa/packages/base/style/icons/logo.svg",
+      "logo": "/images/arjxn-py_jupytergis.svg",
       "description": "JupyterGIS is a JupyterLab extension for collaborative GIS (Geographical Information System). It is designed to allow multiple people to work on the same geospatial project simultaneously, facilitating discussion and collaboration around map layers, spatial analyses, and other GIS data being developed.",
       "short_description": "Collaborative GIS editor in Jupyter"
     }

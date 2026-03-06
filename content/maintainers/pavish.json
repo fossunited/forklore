@@ -1,7 +1,7 @@
 {
   "username": "pavish",
   "full_name": "Pavish Kumar Ramani Gopal",
-  "photo": "https://avatars.githubusercontent.com/u/11850603?v=4",
+  "photo": "/images/pavish_photo.jpg",
   "designation": "Senior Engineer at Mathesar Foundation",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "Mathesar",
       "project_link": "https://github.com/mathesar-foundation/mathesar",
       "website_link": "https://mathesar.org/",
-      "logo": "https://avatars.githubusercontent.com/u/64070190?s=48&v=4",
+      "logo": "/images/pavish_mathesar.png",
       "description": "Mathesar is a web application that makes working with PostgreSQL databases both simple and powerful. It empowers users of all technical skill levels to view, edit, query, and collaborate on data with a familiar spreadsheet-like interface—no code needed. It’s self hosted, can be deployed in minutes, and works directly with PostgreSQL databases, schemas, and tables without extra abstractions. The project is 100% open source and maintained by Mathesar Foundation, a 501(c)(3) nonprofit. Mathesar is as scalable as Postgres and supports any size or complexity of data, making it ideal for workflows involving production databases. It requires minimal setup, and integrates into your existing infrastructure. Because Mathesar is self-hosted, your data never leaves your servers, and access control based on Postgres roles and privileges keeps your database secure without adding unnecessary risk.",
       "short_description": "An intuitive spreadsheet-like interface that lets users of all technical skill levels view, edit, query, and collaborate on Postgres data directly—100% open source and self hosted, with native Postgres access control."
     }

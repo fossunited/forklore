@@ -1,7 +1,7 @@
 {
   "username": "divya-mohan0209",
   "full_name": "Divya Mohan",
-  "photo": "https://avatars.githubusercontent.com/u/21279125?v=4",
+  "photo": "/images/divya-mohan0209_photo.png",
   "designation": "Principal Tech Advocate",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Kubernetes",
       "project_link": "https://github.com/kubernetes",
       "website_link": "https://kubernetes.io/",
-      "logo": "https://avatars.githubusercontent.com/u/13629408?s=200&v=4",
+      "logo": "/images/divya-mohan0209_kubernetes.png",
       "description": "Kubernetes, also known as K8s, is an open source system for automating deployment, scaling, and management of containerized applications.",
       "short_description": "Production-Grade Container Scheduling and Management"
     }

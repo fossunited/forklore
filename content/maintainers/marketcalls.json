@@ -26,7 +26,7 @@
       "name": "OpenAlgo",
       "project_link": "https://github.com/marketcalls/openalgo",
       "website_link": "https://www.openalgo.in/",
-      "logo": "https://www.openalgo.in/assets/images/android-chrome-192x192.png",
+      "logo": "/images/marketcalls_openalgo.png",
       "description": " OpenAlgo is a self-hosted platform that makes automating trading orders easy and efficient. Designed with the flexibility to operate from your desktop, laptop, or on servers, OpenAlgo is built using the Python Flask Framework. Traders can connect their algo strategies seamlessly with top Indian brokers. Run your strategies from any platform - Amibroker, TradingView, Python, ChartInk, MetaTrader, Excel, N8N or Google Sheets.",
       "short_description": "Self Hostable Personal Algo Trading Platform for Retail Traders."
     }

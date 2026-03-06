@@ -1,7 +1,7 @@
 {
   "username": "raisedadead",
   "full_name": "Mrugesh Mohapatra",
-  "photo": "https://avatars.githubusercontent.com/u/1884376?s=200&v=4",
+  "photo": "/images/raisedadead_photo.png",
   "designation": "Principal Maintainer—Cloud Infrastructure & Open Source at freeCodeCamp.org",
   "socials": [
     {
@@ -26,7 +26,7 @@
       "name": "freeCodeCamp",
       "project_link": "https://github.com/freeCodeCamp/freeCodeCamp",
       "website_link": "https://www.freecodecamp.org/",
-      "logo": "https://avatars.githubusercontent.com/u/9892522?s=200&v=4",
+      "logo": "/images/raisedadead_freecodecamp.jpg",
       "description": "freeCodeCamp.org is a friendly community where you can learn to code for free. It is run by a donor-supported 501(c)(3) nonprofit to help millions of busy adults transition into tech. Our full-stack web development and machine learning curriculum is completely free and self-paced.",
       "short_description": "Free coding education platform with interactive curriculum"
     },

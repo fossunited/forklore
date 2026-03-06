@@ -1,7 +1,7 @@
 {
   "username": "@angrezichatterbox",
   "full_name": "Gautham Mohanraj",
-  "photo": "https://github.com/user-attachments/assets/8e0d0a9d-ae00-4914-9dee-9f247076e96a",
+  "photo": "/images/angrezichatterbox_photo.jpg",
   "designation": "Mentor [@amfoss](https://github.com/amfoss)",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "Scribe-Android",
       "project_link": "http://github.com/scribe-org/Scribe-Android",
       "website_link": "http://scri.be",
-      "logo": "https://raw.githack.com/scribe-org/Organization/refs/heads/main/logo/ScribeLogo.png",
+      "logo": "/images/angrezichatterbox_scribe-android.png",
       "description": "Scribe mobile keyboards  are tailored to help language learners communicate in their second language. Scribe keyboards can be used in any app and help users with translation, verb conjugation, noun genders and much more!",
       "short_description": "Scribe-Android is a pack of Android keyboards for language learners."
     }

@@ -1,7 +1,7 @@
 {
   "username": "shivammathur",
   "full_name": "Shivam Mathur",
-  "photo": "https://avatars.githubusercontent.com/u/1571086?v=4",
+  "photo": "/images/shivammathur_photo.png",
   "designation": "Principal Software Engineer, Creator of setup-php",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "setup-php",
       "project_link": "https://github.com/shivammathur/setup-php",
       "website_link": "https://setup-php.com",
-      "logo": "https://repository-images.githubusercontent.com/206578964/e0a18480-dc65-11e9-8dd3-b9ffbf5575fe",
+      "logo": "/images/shivammathur_setup-php.png",
       "description": "Setup PHP with required extensions, php.ini configuration, code-coverage support and various tools like composer in GitHub Actions. This action gives you a cross-platform interface to set up the PHP environment you need to test your application.",
       "short_description": "GitHub action to set up PHP with extensions, php.ini configuration, coverage drivers, and various tools."
     }

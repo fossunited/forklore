@@ -1,7 +1,7 @@
 {
   "username": "knadh",
   "full_name": "Kailash Nadh",
-  "photo": "https://avatars.githubusercontent.com/u/547147?v=4",
+  "photo": "/images/knadh_photo.jpg",
   "designation": "Hobbyist developer, CTO",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "DictPress",
       "project_link": "https://github.com/knadh/dictpress",
       "website_link": "https://dict.press/",
-      "logo": "https://dict.press/static/logo.svg",
+      "logo": "/images/knadh_dictpress.svg",
       "description": "Build dictionaries for any language - dictpress is a free and open source, single binary webserver application for building and publishing fast, searchable dictionaries for any language.",
       "short_description": "A stand-alone web server application for building and publishing full fledged dictionary websites and APIs for any language."
     },
@@ -30,7 +30,7 @@
       "name": "listmonk",
       "project_link": "https://github.com/knadh/listmonk",
       "website_link": "https://listmonk.app/",
-      "logo": "https://listmonk.app/static/images/logo.svg",
+      "logo": "/images/knadh_listmonk.svg",
       "description": "listmonk is a self-hosted, high performance one-way mailing list and newsletter manager. It comes as a standalone binary and the only dependency is a Postgres database.",
       "short_description": "High performance, self-hosted, newsletter and mailing list manager with a modern dashboard. Single binary app."
     }

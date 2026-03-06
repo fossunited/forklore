@@ -1,7 +1,7 @@
 {
   "username": "czgdp1807",
   "full_name": "Gagandeep Singh",
-  "photo": "https://avatars.githubusercontent.com/u/36567889?v=4",
+  "photo": "/images/czgdp1807_photo.png",
   "designation": "Software Engineer",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "SciPy",
       "project_link": "https://github.com/scipy/scipy",
       "website_link": "https://scipy.org/",
-      "logo": "https://scipy.org/images/logo.svg",
+      "logo": "/images/czgdp1807_scipy.svg",
       "description": "SciPy (pronounced \"Sigh Pie\") is an open-source software for mathematics, science, and engineering. It includes modules for statistics, optimization, integration, linear algebra, Fourier transforms, signal and image processing, ODE solvers, and more.",
       "short_description": "Fundamental algorithms for scientific computing in Python"
     },
@@ -30,7 +30,7 @@
       "name": "LFortran",
       "project_link": "https://github.com/lfortran/lfortran",
       "website_link": "https://lfortran.org/",
-      "logo": "https://docs.lfortran.org/en/_static/lfortran-logo.svg",
+      "logo": "/images/czgdp1807_lfortran.svg",
       "description": "LFortran is a modern open-source (BSD licensed) interactive Fortran compiler built on top of LLVM. It can execute user’s code interactively to allow exploratory work (much like Python, MATLAB or Julia) as well as compile to binaries with the goal to run user’s code on modern architectures such as multi-core CPUs and GPUs.",
       "short_description": "Modern interactive LLVM-based Fortran compiler"
     },
@@ -38,7 +38,7 @@
       "name": "PyDataStructs",
       "project_link": "https://github.com/codezonediitj/pydatastructs",
       "website_link": "https://pydatastructs.readthedocs.io/en/stable/",
-      "logo": "https://avatars.githubusercontent.com/u/50073448?s=48&v=4",
+      "logo": "/images/czgdp1807_pydatastructs.png",
       "description": "PyDataStructs aims to be a Python package for various data structures in computer science. We are also working on the development of algorithms including their parallel implementations. To the best of our knowledge, a well-designed library/package which has covered most of the data structures and algorithms doesn’t exist yet.",
       "short_description": "A python package for data structures and algorithms"
     }

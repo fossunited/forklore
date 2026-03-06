@@ -1,7 +1,7 @@
 {
   "username": "aryak",
   "full_name": "Arya K.",
-  "photo": "https://codeberg.org/avatars/686f03647ec1aa6eeee5a1be980ec4b5?size=512",
+  "photo": "/images/aryak_photo.png",
   "designation": "Student",
   "socials": [
     {
@@ -26,7 +26,7 @@
       "name": "Project Segfault",
       "project_link": "https://psf.lt",
       "website_link": "https://psf.lt",
-      "logo": "https://psf.lt/logo.svg",
+      "logo": "/images/aryak_project_segfault.svg",
       "short_description": "Open Source Development and Hosted Services",
       "description": "We have been hosting free, privacy-respecting services for the public since 2022\nWe also have a pubnix, which allows people to experiment and learn more about hosting services and interaction with a linux shell/server."
     },
@@ -34,7 +34,7 @@
       "name": "Mozhi",
       "project_link": "https://codeberg.org/aryak/mozhi",
       "website_link": "https://codeberg.org/aryak/mozhi",
-      "logo": "https://codeberg.org/aryak/mozhi/media/branch/master/public/assets/mozhi.png",
+      "logo": "/images/aryak_mozhi.png",
       "short_description": "An alternative-frontend for many translation engines",
       "description": "Initially a rewrite of simplytranslate, we are a privacy frontend that supports multiple engines including google, deepl, yandex, and duckduckgo/bing.\nThis allows you to perform translations and gain other language-related information like synonyms without being tracked."
     },
@@ -42,7 +42,7 @@
       "name": "Internet Chowkidar",
       "project_link": "https://github.com/gnulinuxindia/internet-chowkidar",
       "website_link": "https://inet.watch",
-      "logo": "https://raw.githubusercontent.com/gnulinuxindia/internet-chowkidar/52b7d012703d398ddcade3cbeeb5c40fa2ccb8bf/logo.jpg",
+      "logo": "/images/aryak_internet_chowkidar.jpg",
       "short_description": "Crowdsourced internet-blockage monitoring.",
       "description": "Internet Chowkidar helps mitigate the problem of transparency for lakhs of activists across India, who have been trying to gain access to accurate statistics regarding the illegal blockages and censorship of websites in the country.\nBy gathering site-block information from common people, we can accurately show the spread of internet-blockages by region and by-ISP across the country."
     }

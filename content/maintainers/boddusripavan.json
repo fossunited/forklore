@@ -1,7 +1,7 @@
 {
   "username": "BodduSriPavan-111",
   "full_name": "Boddu Sri Pavan",
-  "photo": "https://avatars.githubusercontent.com/u/176265792?v=4",
+  "photo": "/images/boddusripavan_photo.png",
   "designation": "Data Scientist-I at Inductive Quotient Analytics",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "KitikiPlot",
       "project_link": "https://github.com/BodduSriPavan-111/kitikiplot",
       "website_link": "https://kitikiplot-documentation.vercel.app/",
-      "logo": "https://raw.githubusercontent.com/BodduSriPavan-111/kitikiplot-documentation/refs/heads/main/assets/logo.png",
+      "logo": "/images/boddusripavan_kitikiplot.png",
       "description": "KitikiPlot is an open-source Python library designed for intuitive visualization of sequential categorical data using the sliding window technique. While Matplotlib excels at plotting continuous data, KitikiPlot fills the gap for categorical trends—making it ideal for researchers, data scientists, and analysts across genomics, electronics, weather forecasting, and more.",
       "short_description": "A Python library to visualize categorical sliding window data."
     }

@@ -1,7 +1,7 @@
 {
   "username": "albonycal",
   "full_name": "Shrirang Kahale",
-  "photo": "https://avatars.githubusercontent.com/u/67057319?v=4",
+  "photo": "/images/albonycal_photo.png",
   "designation": "Linux, Networking, and more",
   "socials": [
     {
@@ -26,7 +26,7 @@
       "name": "Albony Mirror",
       "project_link": "https://mirror.albony.in",
       "website_link": "https://mirror.albony.in",
-      "logo": "https://shrirangkahale.com/avatar_hu541ebb739410f7346c04e5216ce5f153_17291_100x100_fill_q75_h2_box_smart1_3.webp",
+      "logo": "/images/albonycal_albony_mirror.webp",
       "description": "mirror.albony.in provides CDN infra for various opensource projects and linux distributions, this is a student run service which serves 20TB+ traffic daily and thousands rely on it to get their latest opensource software.",
       "short_description": "Distributed Mirror Network in India Maintained by Shrirang Kahale"
     }

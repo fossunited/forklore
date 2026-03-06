@@ -1,7 +1,7 @@
 {
   "username": "inashivb",
   "full_name": "Shivani Bhardwaj",
-  "photo": "https://suricata.io/wp-content/uploads/2021/01/bhardwaj.jpg",
+  "photo": "/images/shivanibhardwaj_photo.jpg",
   "designation": "Software Developer",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Suricata",
       "project_link": "https://github.com/OISF/suricata",
       "website_link": "https://suricata.io",
-      "logo": "https://suricata.io/wp-content/uploads/2023/09/Logo-Suricata-vert-R.jpg",
+      "logo": "/images/shivanibhardwaj_suricata.jpg",
       "description": "Suricata is a high performance, open source network analysis and threat detection software used by most private and public organizations, and embedded by major vendors to protect their assets. ",
       "short_description": "Fast and reliable IDS, IPS and NSM."
     }

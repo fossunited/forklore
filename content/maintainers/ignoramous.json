@@ -1,7 +1,7 @@
 {
   "username": "ignoramous",
   "full_name": "Murtaza Aliakbar",
-  "photo": "https://avatars.githubusercontent.com/u/852289?v=4",
+  "photo": "/images/ignoramous_photo.jpg",
   "designation": "Customer Service",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Rethink DNS + Firewall",
       "project_link": "https://github.com/celzero/rethink-app",
       "website_link": "https://rethinkdns.com/app",
-      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "logo": "/images/ignoramous_rethink_dns_+_firewall.png",
       "short_description": "Network security app for Android",
       "description": "A [WireGuard](https://github.com/wireguard/wireguard-go) client, an [OpenSnitch](https://github.com/evilsocket/opensnitch)-inspired firewall and network monitor + a [pi-hole](https://github.com/pi-hole/pi-hole)-inspired DNS over HTTPS, DNS over TLS, DNSCrypt client with blocklists."
     },
@@ -30,7 +30,7 @@
       "name": "Firestack",
       "project_link": "https://github.com/celzero/firestack",
       "website_link": "https://rethinkdns.com/app",
-      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "logo": "/images/ignoramous_firestack.png",
       "short_description": "Userspace network filter and proxifier.",
       "description": "Firestack is a userspace TCP/UDP monitor, firewall, DNS resolver, and WireGuard client for Android. [gVisor/netstack](https://gvisor.dev/docs/user_guide/networking/) provides a SOCKS-like interface for TCP and UDP over a TUN device. Firestack supports DNS-over-HTTPS, DNS-over-TLS, Oblivious DNS-over-HTTPS, DNS over WireGuard / SOCKS5 / Tor, DNSCrypt, and plain old DNS upstreams."
     },
@@ -38,7 +38,7 @@
       "name": "Serverless DNS",
       "project_link": "https://github.com/serverless-dns/serverless-dns",
       "website_link": "https://rethinkdns.com/configure",
-      "logo": "https://avatars.githubusercontent.com/u/68689239?s=100&v=4",
+      "logo": "/images/ignoramous_serverless_dns.png",
       "short_description": "The RethinkDNS resolver that deploys to Cloudflare Workers, Deno Deploy, Fastly, and Fly.io.",
       "description": "Serverless DNS is a Pi-Hole esque [content-blocking](https://github.com/serverless-dns/blocklists), serverless, stub DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) resolver. Runs out-of-the-box on [Cloudflare Workers](https://workers.dev/), [Deno Deploy](https://deno.com/deploy), [Fastly Compute@Edge](https://www.fastly.com/products/edge-compute), and [Fly.io](https://fly.io/). Free tiers of all these services should be enough to cover 10 to 20 devices worth of DNS traffic per month."
     }
