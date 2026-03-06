@@ -1,7 +1,7 @@
 {
   "username": "shikhamis11",
   "full_name": "Shikha Mishra",
-  "photo": "https://avatars.githubusercontent.com/u/25526037",
+  "photo": "/images/shikhamis11_photo.jpg",
   "designation": "Community Contributor & Maintainer, Magento",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Magento Open Source",
       "project_link": "https://github.com/magento/magento2",
       "website_link": "https://developer.adobe.com/open/magento",
-      "logo": "https://avatars.githubusercontent.com/u/168457?s=48&v=4",
+      "logo": "/images/shikhamis11_magento_open_source.png",
       "description": "Magento is an open-source e-commerce platform written in PHP. It provides online merchants with a flexible shopping cart system and control over the look, content, and functionality of their online store. Magento offers powerful tools for marketing, search engine optimization, and catalog management. It is widely used by businesses of all sizes to create scalable and customizable online stores.",
       "short_description": "Magento is a PHP-based e-commerce platform for building and managing online stores."
     }

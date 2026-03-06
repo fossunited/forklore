@@ -1,7 +1,7 @@
 {
   "username": "netchampfaris",
   "full_name": "Faris Ansari",
-  "photo": "https://avatars.githubusercontent.com/u/9355208?v=4",
+  "photo": "/images/netchampfaris_photo.jpg",
   "designation": "",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "Frappe UI",
       "project_link": "https://github.com/frappe/frappe-ui/",
       "website_link": "https://ui.frappe.io/",
-      "logo": "https://rawcdn.githack.com/frappe/frappe-ui/6025cdae9779b2e6ca65862a619c23288e08e67f/public/frappe-ui-square.png",
+      "logo": "/images/netchampfaris_frappe_ui.png",
       "description": "Frappe UI is a set of components and utilities to build frontend apps based on the Frappe Framework. Along with generic components which are required to build a frontend like Button, Link, Dialog, etc., frappe-ui also contains utilities for handling server-side data fetching, directives and utilities.",
       "short_description": " A set of components and utilities for rapid UI development in Frappe"
     }

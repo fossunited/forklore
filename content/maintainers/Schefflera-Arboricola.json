@@ -1,7 +1,7 @@
 {
   "username": "Schefflera-Arboricola",
   "full_name": "Aditi Juneja",
-  "photo": "https://avatars.githubusercontent.com/u/91629733?v=4",
+  "photo": "/images/Schefflera-Arboricola_photo.png",
   "designation": "Contributing to Scientific open-source",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "nx-parallel",
       "project_link": "https://github.com/networkx/nx-parallel",
       "website_link": "https://github.com/networkx/nx-parallel",
-      "logo": "https://networkx.org/_static/networkx_logo.svg",
+      "logo": "/images/Schefflera-Arboricola_nx-parallel.svg",
       "description": "NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.",
       "short_description": "Network Analysis in Python"
     },
@@ -26,7 +26,7 @@
       "name": "networkx",
       "project_link": "https://github.com/networkx/networkx",
       "website_link": "https://networkx.org/",
-      "logo": "https://networkx.org/_static/networkx_logo.svg",
+      "logo": "/images/Schefflera-Arboricola_networkx.svg",
       "description": "nx-parallel is a NetworkX backend that uses joblib for parallelization. This project aims to provide parallelized implementations of various NetworkX functions to improve performance",
       "short_description": "A networkx backend that uses joblib to run graph algorithms in parallel."
     }

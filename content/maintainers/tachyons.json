@@ -22,7 +22,7 @@
       "name": "Circuitverse",
       "project_link": "https://github.com/CircuitVerse",
       "website_link": "https://circuitverse.org/",
-      "logo": "https://avatars.githubusercontent.com/u/42944450?s=200&v=4",
+      "logo": "/images/tachyons_circuitverse.png",
       "description": "CircuitVerse is a digital circuit simulation platform. It aims to provide a platform where circuits can be designed and simulated using a graphical user interface. While users can design complete CPU implementations within the simulator, the software is designed primarily for educational use. CircuitVerse is an open-source project with an active community. Check out the contribute page for more details.",
       "short_description": "CircuitVerse is a free, open-source platform which allows users to construct digital logic circuits online."
     }

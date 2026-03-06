@@ -1,7 +1,7 @@
 {
   "username": "kayceesrk",
   "full_name": "KC Sivaramakrishnan",
-  "photo": "https://avatars.githubusercontent.com/u/410484?v=4",
+  "photo": "/images/kayceesrk_photo.jpg",
   "designation": "CS Prof @ IITM, CTO @ Tarides",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "OCaml",
       "project_link": "https://github.com/ocaml/ocaml",
       "website_link": "https://ocaml.org/",
-      "logo": "https://ocaml.org/_/MDBjN2M4YjIxY2Y1YWExZWE3Njk4M2FiZTg1NWZjNTM/logo-with-name.svg",
+      "logo": "/images/kayceesrk_ocaml.svg",
       "description": "OCaml is a functional, statically-typed programming language from the ML family, offering a powerful module system extending that of Standard ML and a feature-rich, class-based object system.",
       "short_description": "An industrial-strength functional programming language with an emphasis on expressiveness and safety"
     }

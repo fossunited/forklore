@@ -1,7 +1,7 @@
 {
   "username": "workdone0",
   "full_name": "Shubham Kumar",
-  "photo": "https://rawcdn.githack.com/workdone0/workdone0.github.io/8592394b80ed8b91e8386289ae54d1b79b7e6922/public/images/sikkim_.jpg",
+  "photo": "/images/workdone0_photo.jpg",
   "designation": "Software Engineer",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Twig",
       "project_link": "https://github.com/workdone0/twig",
       "website_link": "https://twig.wtf/",
-      "logo": "https://rawcdn.githack.com/workdone0/twig/0fe15b856828ab15fa0f4be0777a6e70a131d64d/asset/logo.png",
+      "logo": "/images/workdone0_twig.png",
       "short_description": "Terminal-based JSON & YAML viewer for fast, interactive exploration of large files.",
       "description": "Twig is a terminal-based viewer for JSON and YAML that makes navigating deeply nested data fast and intuitive. Instead of scrolling through raw text, you can move through the structure like a file tree, search instantly, and stay oriented even in large files. It runs fully locally, is read-only by design, and is built to handle real-world data sizes, making it well suited for logs, API responses, and configuration files in SSH or headless environments."
     }

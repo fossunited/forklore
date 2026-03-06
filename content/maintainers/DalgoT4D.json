@@ -1,7 +1,7 @@
 {
   "username": "DalgoT4D",
   "full_name": "Project Tech4Dev",
-  "photo": "https://projecttech4dev.org/wp-content/uploads/2024/05/Logo.png",
+  "photo": "/images/DalgoT4D_photo.png",
   "designation": "",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Dalgo",
       "project_link": "https://github.com/DalgoT4D",
       "website_link": "https://dalgo.org/",
-      "logo": "https://avatars.githubusercontent.com/u/113246504?s=200&v=4",
+      "logo": "/images/DalgoT4D_dalgo.png",
       "description": "Imagine an AI-powered open-source data platform revolutionizing the way NGOs harness insights for social impact. By seamlessly ingesting data from diverse sources, Dalgo leverages advanced machine learning, generative AI, and natural language processing (NLP) to unlock outstanding program insights. Picture a future where NGOs effortlessly measure their impact, visualize complex data, and drive transformative outcomes using state-of-the-art visualization tools. This is the future of data-driven social change.",
       "short_description": "Our open-source data platform enables NGOs to harness the power of data by automating data consolidation, transformation, storage and visualization on a unified platform."
     }

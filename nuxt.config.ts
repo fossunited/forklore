@@ -52,7 +52,12 @@ export default defineNuxtConfig({
     buildCache: true,
   },
   site: {
-    url: 'https://forklore.in',
+    url: "https://forklore.in",
+  },
+  routeRules: {
+    "/maintainers": {
+      redirect: "/",
+    },
   },
   fonts: {
     families: [

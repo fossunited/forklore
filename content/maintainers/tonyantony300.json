@@ -1,7 +1,7 @@
 {
   "username": "tonyantony300",
   "full_name": "Tony Antony",
-  "photo": "https://github.com/user-attachments/assets/d69f8fb1-529d-4fd9-a995-394cf65c3de4",
+  "photo": "/images/tonyantony300_photo.png",
   "designation": "Tinkerer",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "AltSendme",
       "project_link": "https://github.com/tonyantony300/alt-sendme",
       "website_link": "https://altsendme.com",
-      "logo": "https://github.com/user-attachments/assets/f61de421-1422-4062-ad45-5e68ee778e37",
+      "logo": "/images/tonyantony300_altsendme.png",
       "short_description": "Peer-to-peer file transfer utility",
       "description": "Send files and folders anywhere in the world without storing in cloud - any size, any format, no accounts, no restrictions. QUIC based encrypted connections for faster private p2p."
     }

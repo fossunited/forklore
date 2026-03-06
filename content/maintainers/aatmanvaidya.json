@@ -1,7 +1,7 @@
 {
   "username": "aatmanvaidya",
   "full_name": "Aatman Vaidya",
-  "photo": "https://avatars.githubusercontent.com/u/56875084?v=4",
+  "photo": "/images/aatmanvaidya_photo.jpg",
   "designation": "SDE/ Researcher",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Feluda",
       "project_link": "https://github.com/tattle-made/feluda",
       "website_link": "https://tattle.co.in/products/feluda/",
-      "logo": "https://avatars.githubusercontent.com/u/47090898?s=48&v=4",
+      "logo": "/images/aatmanvaidya_feluda.png",
       "description": "Feluda is a configurable engine for analyzing multi-lingual and multi-modal content. It allows researchers, fact checkers and journalists to explore and analyze large quantities of multimedia content. Feluda has a component called operators , which are built keeping in mind the need to process data in various modalities (text, audio, video, images, hybrid) and various languages",
       "short_description": "A configurable engine for analyzing multi-lingual and multi-modal content."
     }

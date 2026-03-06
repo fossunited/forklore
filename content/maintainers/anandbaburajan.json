@@ -1,7 +1,7 @@
 {
   "username": "anandbaburajan",
   "full_name": "Anand Baburajan",
-  "photo": "https://avatars.githubusercontent.com/u/2698932?v=4",
+  "photo": "/images/anandbaburajan_photo.jpg",
   "designation": "Marketing & Growth @ Ente",
   "socials": [
     {
@@ -30,7 +30,7 @@
       "name": "CQ2",
       "project_link": "https://github.com/anandbaburajan/cq2",
       "website_link": "https://cq2.co/",
-      "logo": "https://rawcdn.githack.com/anandbaburajan/cq2/837852f9484d8aa1c3bd3de636750f278f0138b7/public/logos/cq2-social.png",
+      "logo": "/images/anandbaburajan_cq2.png",
       "description": "A tool for RFCs, designed for thoughtfulness and coherence.",
       "short_description": "A tool for RFCs, designed for thoughtfulness and coherence."
     },
@@ -38,7 +38,7 @@
       "name": "Wordamour",
       "project_link": "https://github.com/anandbaburajan/wordamour",
       "website_link": "https://wordamour.com/",
-      "logo": "https://rawcdn.githack.com/anandbaburajan/wordamour/81ceb45dea08ee752e13e10529b76c87d62ea624/public/logo.png",
+      "logo": "/images/anandbaburajan_wordamour.png",
       "description": "Personalized word search puzzle for your special someone",
       "short_description": "Personalized word search puzzle for your special someone"
     }

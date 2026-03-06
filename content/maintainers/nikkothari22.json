@@ -1,7 +1,7 @@
 {
   "username": "nikkothari22",
   "full_name": "Nikhil Kothari",
-  "photo": "https://avatars.githubusercontent.com/u/19825455?v=4",
+  "photo": "/images/nikkothari22_photo.jpg",
   "designation": "Founder, CEO at The Commit Company",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Raven",
       "project_link": "https://github.com/The-Commit-Company/raven",
       "website_link": "https://www.ravenchat.ai",
-      "logo": "https://github.com/The-Commit-Company/raven/raw/develop/raven_logo.png",
+      "logo": "/images/nikkothari22_raven.png",
       "short_description": "Enterprise-first team messaging platform that seamlessly integrates with your ERP.",
       "description": "Raven is an open-source messaging platform that brings your team's conversations and information into one centralized place, enhancing collaboration and productivity. Raven helps you build AI Agents to offload boring repetitive tasks to agents via a chat interface."
     },
@@ -30,7 +30,7 @@
       "name": "Mint",
       "project_link": "https://github.com/The-Commit-Company/mint",
       "website_link": "https://cloud.frappe.io/marketplace/apps/mint",
-      "logo": "https://cloud.frappe.io/files/mint-logo-modified.webp",
+      "logo": "/images/nikkothari22_mint.webp",
       "description": "Mint is an open-source tool to help users of [ERPNext](https://frappe.io/erpnext) reconcile their bank account and credit card statements easily with a slick UX, automation rules, and more. ---",
       "short_description": "Bank reconciliation made simple for ERPNext"
     }

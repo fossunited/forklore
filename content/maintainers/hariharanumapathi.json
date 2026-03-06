@@ -1,7 +1,7 @@
 {
   "username": "hariharanumapathi",
   "full_name": "Hariharan Umapathi",
-  "photo": "https://avatars.githubusercontent.com/u/62648127?v=4",
+  "photo": "/images/hariharanumapathi_photo.png",
   "designation": "Software Developer",
   "socials": [
     {
@@ -26,7 +26,7 @@
       "name": "open-tamil-php",
       "project_link": "https://github.com/HariharanUmapathi/open-tamil-php",
       "website_link": "",
-      "logo": "https://github.com/HariharanUmapathi/open-tamil-php/blob/19135ff36ab7f462325236cee06f7ff25e0458a5/open-tamil-php.png?raw=true",
+      "logo": "/images/hariharanumapathi_open-tamil-php.png",
       "description": "Open Tamil PHP is here to address character encoding support for Tamil characters, fixing rendering issues in PDF and image generation, natively in PHP. \nIdea Sparked from: https://github.com/tecnickcom/TCPDF/issues/609",
       "short_description": "Open Tamil is PHP Port for https://github.com/Ezhil-Language-Foundation/open-tamil/"
     }

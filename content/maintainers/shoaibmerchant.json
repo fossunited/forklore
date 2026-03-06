@@ -1,7 +1,7 @@
 {
   "username": "shoaibmerchant",
   "full_name": "Shoaib Merchant",
-  "photo": "https://avatars.githubusercontent.com/u/4598631?v=4",
+  "photo": "/images/shoaibmerchant_photo.jpg",
   "designation": "Founder, Mecha",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "mechanix-gui",
       "project_link": "https://github.com/mecha-org/mechanix-gui",
       "website_link": "https://github.com/mecha-org/mechanix-gui",
-      "logo": "https://mecha.so/mediakit/logos/mecha-icon-black.png",
+      "logo": "/images/shoaibmerchant_mechanix-gui.png",
       "description": "Mono-repository for all Mechanix OS GUI components",
       "short_description": "Mechanix OS GUI components"
     },
@@ -30,7 +30,7 @@
       "name": "mecha-make",
       "project_link": "https://github.com/mecha-org/mecha-make",
       "website_link": "https://github.com/mecha-org/mecha-make",
-      "logo": "https://mecha.so/mediakit/logos/mecha-icon-black.png",
+      "logo": "/images/shoaibmerchant_mecha-make.png",
       "description": "Linux image build system for Mecha devices",
       "short_description": "Linux image build system for Mecha devices"
     },
@@ -38,7 +38,7 @@
       "name": "bevy_mctk",
       "project_link": "https://github.com/mecha-org/bevy_mctk",
       "website_link": "https://github.com/mecha-org/bevy_mctk",
-      "logo": "https://mecha.so/mediakit/logos/mecha-icon-black.png",
+      "logo": "/images/shoaibmerchant_bevy_mctk.png",
       "description": "Bevy MCTK",
       "short_description": "Bevy MCTK"
     }

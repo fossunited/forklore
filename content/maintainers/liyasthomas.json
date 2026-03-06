@@ -1,7 +1,7 @@
 {
   "username": "liyasthomas",
   "full_name": "Liyas Thomas",
-  "photo": "https://avatars.githubusercontent.com/u/10395817?v=4",
+  "photo": "/images/liyasthomas_photo.jpg",
   "designation": "Founder & CEO of Hoppscotch",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Hoppscotch",
       "project_link": "https://github.com/hoppscotch/hoppscotch",
       "website_link": "https://hoppscotch.com/",
-      "logo": "https://avatars.githubusercontent.com/u/56705483?s=48&v=4",
+      "logo": "/images/liyasthomas_hoppscotch.png",
       "description": "Hoppscotch is a lightweight, web-based API development suite. It was built from the ground up with ease of use and accessibility in mind providing all the functionality needed for developers with minimalist, unobtrusive UI.",
       "short_description": "Open Source API Development Ecosystem"
     }

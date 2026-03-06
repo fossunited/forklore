@@ -1,7 +1,7 @@
 {
   "username": "srinivasanTarget",
   "full_name": "Srinivasan Sekar",
-  "photo": "https://avatars.githubusercontent.com/u/8896549?v=4",
+  "photo": "/images/srinivasanTarget_photo.jpg",
   "designation": "Director of Engineering @LambdaTest",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Appium",
       "project_link": "https://github.com/appium/appium",
       "website_link": "http://appium.io/",
-      "logo": "https://appium.io/docs/en/latest/assets/images/appium-logo-horiz.png",
+      "logo": "/images/srinivasanTarget_appium.png",
       "description": "Appium is an open-source project and ecosystem of related software, designed to facilitate UI automation of many app platforms, including mobile (iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, Windows), TV (Roku, tvOS, Android TV, Samsung), and more!",
       "short_description": "Appium is an open-source project and ecosystem of related software, designed to facilitate UI automation of many app platforms, including mobile (iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, Windows), TV (Roku, tvOS, Android TV, Samsung), and more!"
     },
@@ -30,7 +30,7 @@
       "name": "Appium device farm",
       "project_link": "https://github.com/AppiumTestDistribution/appium-device-farm",
       "website_link": "https://devicefarm.org/",
-      "logo": "https://devicefarm.org/assets/images/DeviceFarm-Logo.jpg",
+      "logo": "/images/srinivasanTarget_appium_device_farm.jpg",
       "description": "Appium 2.0 plugin designed to manage and create driver sessions on available devices.",
       "short_description": "Appium 2.0 plugin designed to manage and create driver sessions on available devices."
     },
@@ -38,7 +38,7 @@
       "name": "WebDriverAgent MCP Server",
       "project_link": "https://github.com/AppiumTestDistribution/mcp-webdriveragent",
       "website_link": "",
-      "logo": "https://rawcdn.githack.com/AppiumTestDistribution/mcp-webdriveragent/862e0b8cb44cc3bf9a04c388b57a7acce0a411d0/assets/mcp-wdalogo.png",
+      "logo": "/images/srinivasanTarget_webdriveragent_mcp_server.png",
       "description": "Model Context Protocol (MCP) server that provides tools for building and signing WebDriverAgent for iOS.",
       "short_description": "Model Context Protocol (MCP) server that provides tools for building and signing WebDriverAgent for iOS."
     },

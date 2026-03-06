@@ -1,7 +1,7 @@
 {
   "username": "sakekc",
   "full_name": "Saket Choudhary",
-  "photo": "https://avatars.githubusercontent.com/u/682153?v=4",
+  "photo": "/images/saketchoudhary_photo.jpg",
   "designation": "Assistant Professor, Koita Centre for Digital Health, IIT Bombay",
   "socials": [
     {
@@ -30,7 +30,7 @@
       "name": "pysradb",
       "project_link": "http://github.com/saketkc/pysradb",
       "website_link": "http://saket-choudhary.me/pysradb",
-      "logo": "https://saket-choudhary.me/pysradb/_static/pysradb_v3.png",
+      "logo": "/images/saketchoudhary_pysradb.png",
       "description": "The NCBI Sequence Read Archive (SRA) is the primary archive of next-generation sequencing datasets. SRA makes metadata and raw sequencing data available to the research community to encourage reproducibility and to provide avenues for testing novel hypotheses on publicly available data. However, methods to programmatically access this data are limited. Pysradb provides a collection of command line methods and python API to query and download metadata and data from SRA.",
       "short_description": "pysradb is a python package to fetch metadata associated with genome sequencing data deposited in the Sequence Read Archive (SRA) database at NCBI or European Nucleotide Archive (ENA)."
     }

@@ -1,7 +1,7 @@
 {
   "username": "nsh07",
   "full_name": "Nishant Mishra",
-  "photo": "https://github.com/nsh07.png",
+  "photo": "/images/nsh07_photo.png",
   "designation": "Student",
   "socials": [
     {
@@ -34,7 +34,7 @@
       "name": "Tomato",
       "project_link": "https://github.com/nsh07/Tomato",
       "website_link": "https://f-droid.org/packages/org.nsh07.pomodoro/",
-      "logo": "https://raw.githubusercontent.com/nsh07/Tomato/refs/heads/main/androidApp/src/main/ic_launcher-playstore.png",
+      "logo": "/images/nsh07_tomato.png",
       "short_description": "Minimalist, data-oriented pomodoro timer for Android",
       "description": "Tomato is a minimalist, data-oriented pomodoro timer app for Android with deep insights about your productivity"
     },
@@ -42,7 +42,7 @@
       "name": "Wikireader",
       "project_link": "https://github.com/nsh07/WikiReader",
       "website_link": "https://github.com/nsh07/WikiReader",
-      "logo": "https://raw.githubusercontent.com/nsh07/WikiReader/refs/heads/main/fastlane/metadata/android/en-US/images/icon.png",
+      "logo": "/images/nsh07_wikireader.png",
       "short_description": "Android app for reading Wikipedia pages distraction-free",
       "description": "A lightweight Android app for reading Wikipedia articles distraction-free. Supports light mode, dark mode, Material You dynamic colors and 300+ Wikipedia languages"
     },
@@ -50,7 +50,7 @@
       "name": "SimplyGraph",
       "project_link": "https://github.com/nsh07/SimplyGraph",
       "website_link": "https://github.com/nsh07/SimplyGraph",
-      "logo": "https://raw.githubusercontent.com/nsh07/SimplyGraph/refs/heads/main/app/src/main/ic_launcher-playstore.png",
+      "logo": "/images/nsh07_simplygraph.png",
       "short_description": "A graphing calculator for Android",
       "description": "SimplyGraph is a simple, fast graphing calculator for Android with support for explicit functions, implicit relations, polar functions and parametric relations"
     }

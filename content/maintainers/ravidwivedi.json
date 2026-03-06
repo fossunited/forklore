@@ -1,7 +1,7 @@
 {
   "username": "ravidwivedi",
   "full_name": "Ravi Dwivedi",
-  "photo": "https://codeberg.org/avatars/3bf87b38aebb1d1c3d617e634aa9effb804de4743460da5d95082b4223ab3516?size=512",
+  "photo": "/images/ravidwivedi_photo.jpg",
   "designation": "",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Prav",
       "project_link": "https://codeberg.org/prav",
       "website_link": "https://prav.app/",
-      "logo": "https://codeberg.org/avatars/056a100b5b6a4e816aa004559719a6e02ef06ef674025cc46e9c570dd51f6de9?size=200",
+      "logo": "/images/ravidwivedi_prav.png",
       "description": "Popular messaging apps only allow you to talk to users using the same app. However, Prav allows you to talk to all the users on the same network even if they use other apps like Quicksy, Monocles Chat, Dino, Gajim, Monal, and many more. In other words, Prav has no vendor lock-in. Lastly, Prav is a cooperative (in the process of registration) which allows anyone to become a member and vote on decisions, such as the privacy policy or what features should be added.",
       "short_description": "Prav is a messaging service which can be used to exchange messages, audio/video calls, files, images and videos over the Internet. Inspired by the Quicksy app, Prav provides the convenience of registering with a phone number."
     }

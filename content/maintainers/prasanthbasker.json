@@ -1,7 +1,7 @@
 {
   "username": "bupd",
   "full_name": "Prasanth Baskar",
-  "photo": "https://avatars.githubusercontent.com/u/89722848?v=4",
+  "photo": "/images/prasanthbasker_photo.jpg",
   "designation": "Software Engineer at 8gears",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Harbor",
       "project_link": "https://github.com/goharbor/harbor",
       "website_link": "https://goharbor.io",
-      "logo": "https://raw.githubusercontent.com/cncf/artwork/refs/heads/main/projects/harbor/icon/color/harbor-icon-color.png",
+      "logo": "/images/prasanthbasker_harbor.png",
       "description": "Harbor is an open source registry that secures artifacts with policies and role-based access control, ensures images are scanned and free from vulnerabilities, and signs images as trusted. Harbor, a CNCF Graduated project, delivers compliance, performance, and interoperability to help you consistently and securely manage artifacts across cloud native compute platforms like Kubernetes and Docker.",
       "short_description": "An open source trusted cloud native registry project that stores, signs, and scans content."
     }

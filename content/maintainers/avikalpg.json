@@ -1,7 +1,7 @@
 {
   "username": "avikalpg",
   "full_name": "Avikalp Kumar Gupta",
-  "photo": "https://avatars.githubusercontent.com/u/7858932?v=4",
+  "photo": "/images/avikalpg_photo.jpg",
   "designation": "Founder, Vibinex Code Review",
   "socials": [
     {
@@ -26,7 +26,7 @@
       "name": "Vibinex Code Review",
       "project_link": "https://github.com/vibinex/vibinex",
       "website_link": "https://vibinex.com/",
-      "logo": "https://rawcdn.githack.com/vibinex/chrome-extension/52bd6e8cffd8fd254305c79adf4b218acb593660/resources/vibinex-logo.png",
+      "logo": "/images/avikalpg_vibinex_code_review.png",
       "description": "Vibinex modifies the UX for code-hosting websites like GitHub and Bitbucket to make it easier to perform high-quality code reviews. If you spend a significant part of your day reviewing pull requests, try our tool out.",
       "short_description": "Vibinex modifies the UX for code-hosting websites like GitHub and Bitbucket to make it easier to perform high-quality code reviews. If you spend a significant part of your day reviewing pull requests, try our tool out."
     }

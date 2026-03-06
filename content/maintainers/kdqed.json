@@ -1,7 +1,7 @@
 {
   "username": "kdqed",
   "full_name": "Karthik Devan",
-  "photo": "https://kdqed.com/assets/brand/dp.jpg",
+  "photo": "/images/kdqed_photo.jpg",
   "designation": "Self Employed Engineer",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Zaturn",
       "project_link": "https://github.com/kdqed/zaturn",
       "website_link": "https://zaturn.pro",
-      "logo": "https://zaturn.pro/assets/logo.png",
+      "logo": "/images/kdqed_zaturn.png",
       "description": "Zaturn provides tools that enable AI models to run SQL, so you don't have to. It can be used as an MCP or as a web interface similar to Jupyter Notebook. It can connect to multiple types of data sources and also make visualizations, all through chat.",
       "short_description": "Open source, AI-powered data analysis co-pilot"
     }

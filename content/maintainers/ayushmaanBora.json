@@ -1,7 +1,7 @@
 {
   "username": "ayushmaanBora",
   "full_name": "Ayushmaan Bora",
-  "photo": "https://i.postimg.cc/nVQfVDqz/ayushmaan.jpg",
+  "photo": "/images/ayushmaanBora_photo.jpg",
   "designation": "CEO & Co Founder",
   "socials": [
     {
@@ -18,7 +18,7 @@
       "name": "XenevaOS",
       "project_link": "https://github.com/manaskamal/XenevaOS",
       "website_link": "https://getxeneva.com/",
-      "logo": "https://i.postimg.cc/QC72f2j7/Xeneva-Logo.png",
+      "logo": "/images/ayushmaanBora_xenevaos.png",
       "description": "XenevaOS is an XR Native Open Source Operating System built on top of a custom kernel written from scratch. The kernel architecture has been designed with modern applications in mind such as XR(AR/VR), Robotics etc. The kernel currently has support for both x86_64 and ARM architecture and we have future plans for RISC-V implementation as well. The main motive of our custom kernel is to derive most optimal performance from minimal hardware resources thus laying an emphasis on efficiency.",
       "short_description": "An Open Source Operating System written with a Custom kernel from Scratch."
     }

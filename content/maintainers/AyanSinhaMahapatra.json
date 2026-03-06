@@ -1,7 +1,7 @@
 {
   "username": "AyanSinhaMahapatra",
   "full_name": "Ayan Sinha Mahapatra",
-  "photo": "https://avatars.githubusercontent.com/u/25746274?v=4",
+  "photo": "/images/AyanSinhaMahapatra_photo.jpg",
   "designation": "Software Developer/Analyst",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Scancode-toolkit",
       "project_link": "https://github.com/aboutcode-org/scancode-toolkit",
       "website_link": "https://aboutcode.org/scancode/",
-      "logo": "https://avatars.githubusercontent.com/u/95001295?s=48&v=4",
+      "logo": "/images/AyanSinhaMahapatra_scancode-toolkit.png",
       "description": "A typical software project often reuses hundreds of third-party packages. License, packages, dependencies and origin information is not always easy to find and not normalized: ScanCode discovers and normalizes this data for you. You can scan containers, binaries, source archives, code snippets/files or any code repository, or their dependencies, and look for software licensing issues, vulnerabilities, community health metrics, origin, other similar/matching FOSS code, and this is available as a CLI tool, python library, as a webapp with docker/k8s or as a GitHub action. Along with our FOSS projects to scan code, we also release open data to use with the tools and provide instances of these tools/APIs for public use.",
       "short_description": "ScanCode detects licenses, copyrights, dependencies by \"scanning code\" to discover and inventory open source and third-party packages used in your code."
     },
@@ -30,7 +30,7 @@
       "name": "scancode.io",
       "project_link": "https://github.com/aboutcode-org/scancode.io",
       "website_link": "https://scancodeio.readthedocs.io/",
-      "logo": "https://avatars.githubusercontent.com/u/95001295?s=48&v=4",
+      "logo": "/images/AyanSinhaMahapatra_scancode.io.png",
       "description": "A typical software project often reuses hundreds of third-party packages. License, packages, dependencies and origin information is not always easy to find and not normalized: ScanCode discovers and normalizes this data for you. You can scan containers, binaries, source archives, code snippets/files or any code repository, or their dependencies, and look for software licensing issues, vulnerabilities, community health metrics, origin, other similar/matching FOSS code, and this is available as a CLI tool, python library, as a webapp with docker/k8s or as a GitHub action. Along with our FOSS projects to scan code, we also release open data to use with the tools and provide instances of these tools/APIs for public use.",
       "short_description": "ScanCode.io is a server to script and automate software composition analysis pipelines with ScanPipe pipelines."
     }

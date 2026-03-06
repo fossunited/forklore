@@ -1,7 +1,7 @@
 {
   "username": "pnudupa",
   "full_name": "Prashanth N Udupa",
-  "photo": "https://avatars.githubusercontent.com/u/8263701?v=4",
+  "photo": "/images/pnudupa_photo.jpg",
   "designation": "Creator, Scrite",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Scrite",
       "project_link": "https://github.com/teriflix/scrite",
       "website_link": "https://www.scrite.io/",
-      "logo": "https://avatars.githubusercontent.com/u/63646106?v=4",
+      "logo": "/images/pnudupa_scrite.png",
       "description": "Scrite is open-source multi-lingual screenwriting app, that lets you write your films better. With support for industry standard formatting, visual mapping of screenplay structures, elaborate research & note-taking features and a comprehensive set of pre-production reports, Scrite is a great place to start writing your next screenplay, or even import & continue working on your existing ones.",
       "short_description": "Multilingual Screenwriting App for Mac and PC"
     }
