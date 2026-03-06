@@ -18,7 +18,7 @@
       "name": "CoRE stack",
       "project_link": "https://github.com/core-stack-org",
       "website_link": "https://core-stack.org/",
-      "logo": "/images/core-stack-org_core_stack.png",
+      "logo": "/images/core-stack-org_photo.png",
       "description": "The CoRE Stack (Commoning for Resilience and Equality) is a community-based digital public infrastructure consisting of datasets, pre-computed landscape level indicators, and tools, that can be used by rural communities and other stakeholders to improve the sustainability and resilience of their local landscapes. The CoRE stack broadly consists of four layers. First, using ML on satellite imagery we are producing novel geo-spatial layers on changes over the years in cropping intensity, water-table levels, health of water bodies, forests and plantations, and welfare fund allocation, among others. Second, these help generate rich analytics on diverse social-ecological indicators. Third, tools that use these underlying datasets and analytics enable communities to build a shared understanding about their landscape, align on informed action to improve the resilience and sustainability of their landscape, monitor its progress, and report insights. Fourth, these tools have relevant plugs to integrate their outputs, including community demands, for public and private landscape funding mechanisms that can especially support community stewardship of landscapes.",
       "short_description": "A community-based digital public infrastructure for climate change adaptation."
     }
