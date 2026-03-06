@@ -1,7 +1,7 @@
 {
   "username": "detox-24",
   "full_name": "Sathiya Moorthi Periasamy Thuran",
-  "photo": "https://raw.githubusercontent.com/detox-24/stuff/main/tehee.png",
+  "photo": "/images/detox-24_photo.png",
   "designation": "Maintainer @Webi | I void warranties",
   "socials": [
     {
@@ -22,7 +22,7 @@
       "name": "Webi",
       "project_link": "https://github.com/webinstall/webi-installers",
       "website_link": "https://webinstall.dev",
-      "logo": "https://raw.githubusercontent.com/detox-24/stuff/main/webi.png",
+      "logo": "/images/detox-24_webi.png",
       "short_description": "Effortlessly install developer tools with easy-to-remember URLs.",
       "description": "Originally created by Alvin (AJ) ONeal, Webi installs cross-platform tools, from latest official builds quickly. Webi provides hassle-free, predictable installs for quick dev environment setups. No file-permissions or package manager fiascos."
     }
