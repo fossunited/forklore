@@ -340,9 +340,19 @@ if __name__ == "__main__":
 
     # Write to file
     username = result.get("username", "output") or "output"
-    output_file = f"{username}.json"
+    output_file = f"content/maintainers/{username}.json"
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(json_output)
         f.write("\n")
 
     print(f"\n✓ Validation passed - Saved to {output_file}", file=sys.stderr)
+
+    # sync images to local public dir
+    import subprocess
+    import os
+
+    json_filename = os.path.basename(output_file)
+    try:
+        subprocess.run(["python3", "sync-image.py", json_filename], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"[WARN] Image sync failed: {e}", file=sys.stderr)
