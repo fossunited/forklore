@@ -22,7 +22,7 @@
       "type": "string",
       "description": "URL to the maintainer's photo",
       "format": "uri",
-      "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico).*|https?://.*avatar.*|https?://.*assets.*)"
+      "pattern": "^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$"
     },
     "designation": {
       "type": "string",
@@ -99,7 +99,7 @@
             "type": "string",
             "description": "URL to the project logo",
             "format": "uri",
-            "pattern": "^(https?://.+\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico).*|https?://.*avatar.*|https?://.*assets.*)"
+            "pattern": "^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$"
           },
           "description": {
             "type": "string",

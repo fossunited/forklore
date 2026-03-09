@@ -518,5 +518,13 @@
   "https://rawcdn.githack.com/aaditeshwar/core-stack-logo-and-desc/5143f091744f844f031f802f15259d3be54b69a1/core-stack-colour-name.png": {
     "hash": "fc997f47dd6d7111fbc97b8f135276431b230b678c99850a04c291239ab7dd14",
     "filename": "core-stack-org_core_stack.png"
+  },
+  "https://ajbura.github.io/public/logo.png": {
+    "hash": "b1769b22224c8d826620a80147429d835fb367a99c22667cd843ac64c256696c",
+    "filename": "ajbura_photo.png"
+  },
+  "https://cinny.in/assets/cinny.svg": {
+    "hash": "9e5180a431f07c88fc203b6f0460527ab4d352acf03f003dbaa10b0ee75bc56e",
+    "filename": "ajbura_cinny.svg"
   }
 }
