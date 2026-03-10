@@ -364,21 +364,19 @@
   dependencies:
     fontkitten "^1.0.0"
 
-"@clack/core@1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@clack/core/-/core-1.0.1.tgz#23c4520dc9190a3411005ee64fca64a077a347fa"
-  integrity sha512-WKeyK3NOBwDOzagPR5H08rFk9D/WuN705yEbuZvKqlkmoLM2woKtXb10OO2k1NoSU4SFG947i2/SCYh+2u5e4g==
+"@clack/core@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@clack/core/-/core-1.1.0.tgz#8f10d868cacf9424d96b1ce328e02bfd3167d77f"
+  integrity sha512-SVcm4Dqm2ukn64/8Gub2wnlA5nS2iWJyCkdNHcvNHPIeBTGojpdJ+9cZKwLfmqy7irD4N5qLteSilJlE0WLAtA==
   dependencies:
-    picocolors "^1.0.0"
     sisteransi "^1.0.5"
 
-"@clack/prompts@^1.0.0", "@clack/prompts@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@clack/prompts/-/prompts-1.0.1.tgz#ef9463c4cb3a027da41314dfcac0655a56e3f114"
-  integrity sha512-/42G73JkuYdyWZ6m8d/CJtBrGl1Hegyc7Fy78m5Ob+jF85TOUmLR5XLce/U3LxYAw0kJ8CT5aI99RIvPHcGp/Q==
+"@clack/prompts@^1.0.0", "@clack/prompts@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@clack/prompts/-/prompts-1.1.0.tgz#f0dff2bcc48d68394f9ce4777651a8faed5714fa"
+  integrity sha512-pkqbPGtohJAvm4Dphs2M8xE29ggupihHdy1x84HNojZuMtFsHiUlRvqD24tM2+XmI+61LlfNceM3Wr7U5QES5g==
   dependencies:
-    "@clack/core" "1.0.1"
-    picocolors "^1.0.0"
+    "@clack/core" "1.1.0"
     sisteransi "^1.0.5"
 
 "@cloudflare/kv-asset-handler@^0.4.2":
@@ -6578,12 +6576,12 @@ nuxt-component-meta@0.17.2:
     ufo "^1.6.2"
     vue-component-meta "^3.2.2"
 
-nuxt-og-image@^6.0.0-beta.46:
-  version "6.0.0-beta.46"
-  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.0.0-beta.46.tgz#25d27c014a00095998a16949db95405fb8124cf0"
-  integrity sha512-SIBecg+kZLJx4Q2MpXjHEcoN+Y4Xd+gwCUJ25mAxdalJAlipDgffwFNjPYMHA42G62DDyQHjKJ54OLIuG74JuQ==
+nuxt-og-image@^6.0.0-beta.47:
+  version "6.0.0-beta.47"
+  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.0.0-beta.47.tgz#ff9b0364802732a393ad8442410eeb3191e34550"
+  integrity sha512-TTVDvB1okazMGDfBw2+TpXRWjElLX4eVMwHENDCa+Ha3O5kMWkDft5JEOwBKsQSCmUd5AKqib8alVbj7gJgHgA==
   dependencies:
-    "@clack/prompts" "^1.0.1"
+    "@clack/prompts" "^1.1.0"
     "@nuxt/devtools-kit" "^3.2.2"
     "@nuxt/kit" "^4.3.1"
     "@vue/compiler-sfc" "^3.5.29"
@@ -7003,7 +7001,7 @@ perfect-debounce@^2.0.0, perfect-debounce@^2.1.0:
   resolved "https://registry.yarnpkg.com/perfect-debounce/-/perfect-debounce-2.1.0.tgz#e7078e38f231cb191855c3136a4423aef725d261"
   integrity sha512-LjgdTytVFXeUgtHZr9WYViYSM/g8MkcTPYDlPa3cDqMirHjKiSZPYd6DoL7pK8AJQr+uWkQvCjHNdiMqsrJs+g==
 
-picocolors@^1.0.0, picocolors@^1.1.1:
+picocolors@^1.1.1:
   version "1.1.1"
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.1.1.tgz"
   integrity sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==
