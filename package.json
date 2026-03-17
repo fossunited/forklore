@@ -15,7 +15,7 @@
     "@nuxt/fonts": "0.14.0",
     "@nuxtjs/color-mode": "4.0.0",
     "@tailwindcss/vite": "^4.2.1",
-    "@takumi-rs/core": "^0.70.3",
+    "@takumi-rs/core": "^0.73.1",
     "better-sqlite3": "^12.8.0",
     "feed": "^5.2.0",
     "minisearch": "^7.2.0",
