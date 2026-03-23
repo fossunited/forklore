@@ -65,13 +65,14 @@ LABEL_NORMALIZATION = {
     "mail": "Email",
     "X/Twitter": "X",
     "Twitter/X": "X",
+    "YouTube": "Youtube"
 }
 
 # Valid labels as per schema
 VALID_LABELS = {
     "GitHub", "GitLab", "Gitlab", "Codeberg", "BitBucket", "LinkedIn",
     "X", "Twitter", "Mastodon", "Bluesky", "Substack",
-    "Discourse", "Email", "RSS", "Web", "Reddit"
+    "Discourse", "Email", "RSS", "Web", "Reddit", "Youtube"
 }
 
 

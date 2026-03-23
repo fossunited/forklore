@@ -10,6 +10,7 @@ import BlueSky from "~/components/icons/BlueSky.vue";
 import BitBucket from "~/components/icons/BitBucket.vue";
 import Substack from "~/components/icons/Substack.vue";
 import Reddit from "~/components/icons/Reddit.vue";
+import Youtube from "~/components/icons/Youtube.vue";
 
 const icons = {
   web: WebIcon,
@@ -26,6 +27,7 @@ const icons = {
   bitbucket: BitBucket,
   "arrow-up-right": ArrowUpRight,
   substack: Substack,
+  youtube: Youtube
 } as const;
 
 type IconMap = typeof icons;
