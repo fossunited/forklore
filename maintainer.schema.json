@@ -22,7 +22,7 @@
       "type": "string",
       "description": "URL to the maintainer's photo",
       "format": "uri",
-      "pattern": "^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$"
+      "pattern": "^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico|avif)$"
     },
     "designation": {
       "type": "string",
@@ -57,7 +57,8 @@
               "Email",
               "RSS",
               "Web", "Website", "Blog",
-              "Reddit"
+              "Reddit",
+              "Youtube"
             ]
           },
           "link": {
@@ -99,7 +100,7 @@
             "type": "string",
             "description": "URL to the project logo",
             "format": "uri",
-            "pattern": "^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico)$"
+            "pattern": "^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico|avif)$"
           },
           "description": {
             "type": "string",
