@@ -26,7 +26,7 @@ defineProps<{
       <div class="flex gap-8 items-center justify-end">
         <div class="flex flex-col items-end gap-10 mr-5 font-['Geist_Mono']">
           <h1
-            class="text-[60px] font-bold text-[#CFF2DA] text-right tracking-[2px]"
+            class="text-[50px] font-bold text-[#CFF2DA] text-right tracking-[2px]"
           >
             {{ maintainer.full_name }}
           </h1>
