@@ -21,7 +21,7 @@
     "minisearch": "^7.2.0",
     "nuxt": "^4.4.2",
     "nuxt-og-image": "^6.0.1",
-    "tailwindcss": "^4.2.1",
+    "tailwindcss": "^4.2.2",
     "vue": "^3.5.30",
     "vue-router": "^5.0.3",
     "yarn": "^1.22.22"
