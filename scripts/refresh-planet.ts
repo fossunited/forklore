@@ -174,7 +174,7 @@ async function main() {
 
   let totalNew = 0;
   let success = 0;
-  results.forEach((r) => {
+  results.forEach((r, i) => {
     if (r.status === "fulfilled") {
       totalNew += r.value.new;
       success++;
@@ -182,11 +182,14 @@ async function main() {
         `✓ ${r.value.username}: ${r.value.new} new / ${r.value.total} total`,
       );
     } else {
-      console.error(`✗ Error: ${r.reason}`);
+      const feed = feeds[i];
+      const code = r.reason?.code || r.reason?.status || "";
+      console.error(`✗ ${feed.username} (${feed.url})${code ? ` [${code}]` : ""}: ${r.reason?.message || r.reason}`);
     }
   });
 
   console.log(`\nDone! ${totalNew} new posts from ${success}/${feeds.length} feeds`);
+  process.exit(success < feeds.length ? 1 : 0);
 }
 
 main().catch((e) => {
