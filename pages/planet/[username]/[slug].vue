@@ -11,7 +11,8 @@ const isGlobal = computed(() => planetNav.value === "planet");
 
 interface PostNav { slug: string; title: string; maintainerUsername: string }
 
-const { data: rawData, status } = await useAsyncData("planet-all", async () => {
+// Load metadata for all posts (no content) — shared key with PlanetList
+const { data: metaData, status } = await useAsyncData("planet-meta", async () => {
   const [planetDocs, maintainerDocs] = await Promise.all([
     queryCollection("planet").all(),
     queryCollection("maintainers").all(),
@@ -24,12 +25,16 @@ const { data: rawData, status } = await useAsyncData("planet-all", async () => {
 
   const posts = planetDocs.flatMap((md) =>
     (md.posts || []).map((post: any) => ({
-      ...post,
+      slug: post.slug,
+      title: post.title,
+      link: post.link,
+      pubDate: post.pubDate,
+      contentSnippet: post.contentSnippet,
+      tags: post.tags || [],
       maintainerName: md.maintainerName,
       maintainerUsername: md.maintainerUsername,
       maintainerPhoto: photoMap[md.maintainerUsername],
       feedUrl: md.feedUrl,
-      maintainerPath: `/maintainers/${md.maintainerUsername}`,
     })),
   );
   posts.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
@@ -48,8 +53,14 @@ const { data: rawData, status } = await useAsyncData("planet-all", async () => {
   return { posts, authors: Array.from(authorMap.values()) };
 });
 
+// Load full content for this maintainer only — much smaller than all posts
+const { data: planetDoc } = await useAsyncData(
+  `planet-doc-${username}`,
+  () => queryCollection("planet").path(`/planet/${username}`).first(),
+);
+
 const post = computed(() => {
-  const allPosts = rawData.value?.posts || [];
+  const allPosts = metaData.value?.posts || [];
   const ordered = isGlobal.value
     ? allPosts
     : allPosts.filter((p) => p.maintainerUsername.toLowerCase() === username.toLowerCase());
@@ -59,10 +70,13 @@ const post = computed(() => {
   );
   if (idx === -1) return null;
 
-  const cur = ordered[idx];
+  const meta = ordered[idx];
+  const fullPost = planetDoc.value?.posts?.find((p: any) => p.slug === slug);
+
   const toNav = (p: any): PostNav => ({ slug: p.slug, title: p.title, maintainerUsername: p.maintainerUsername });
   return {
-    ...cur,
+    ...meta,
+    content: fullPost?.content || "",
     newer: idx > 0 ? toNav(ordered[idx - 1]) : null,
     older: idx < ordered.length - 1 ? toNav(ordered[idx + 1]) : null,
   };

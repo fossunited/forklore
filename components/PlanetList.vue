@@ -28,7 +28,7 @@ const searchInput = ref(!props.username ? (route.query.search as string) || "" :
 
 const PER_PAGE = 20;
 
-const { data: rawData, status, error } = await useAsyncData("planet-all", async () => {
+const { data: rawData, status, error } = await useAsyncData("planet-meta", async () => {
   const [planetDocs, maintainerDocs] = await Promise.all([
     queryCollection("planet").all(),
     queryCollection("maintainers").all(),
@@ -41,7 +41,13 @@ const { data: rawData, status, error } = await useAsyncData("planet-all", async 
 
   const posts: Post[] = planetDocs.flatMap((md) =>
     (md.posts || []).map((post: any) => ({
-      ...post,
+      slug: post.slug,
+      title: post.title,
+      link: post.link,
+      pubDate: post.pubDate,
+      contentSnippet: post.contentSnippet,
+      tags: post.tags || [],
+      // content intentionally excluded — not needed for list view
       maintainerName: md.maintainerName,
       maintainerUsername: md.maintainerUsername,
       maintainerPhoto: photoMap[md.maintainerUsername],
