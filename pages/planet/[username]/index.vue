@@ -31,12 +31,12 @@ if (maintainer.value) {
       </nuxt-link>
 
       <div class="flex items-center gap-4">
-        <MaintainerImage :maintainer="maintainer" />
+        <MaintainerImage v-if="maintainer" :maintainer="maintainer" />
         <div class="flex flex-col gap-1">
           <nuxt-link :to="`/maintainers/${username}`" class="text-xl font-bold hover:underline">
-            {{ maintainer.full_name }}
+            {{ maintainer?.full_name || username }}
           </nuxt-link>
-          <p class="text-sm opacity-60">{{ maintainer.designation }}</p>
+          <p v-if="maintainer?.designation" class="text-sm opacity-60">{{ maintainer.designation }}</p>
         </div>
       </div>
 
@@ -45,8 +45,8 @@ if (maintainer.value) {
           View Profile →
         </nuxt-link>
         <a
-          v-if="maintainer.socials?.find(s => s.label === 'RSS')"
-          :href="maintainer.socials.find(s => s.label === 'RSS').link"
+          v-if="maintainer?.socials?.find(s => s.label === 'RSS')"
+          :href="maintainer.socials.find(s => s.label === 'RSS')!.link"
           target="_blank"
           rel="noopener noreferrer"
           class="btn-subtle text-xs px-3 py-1"

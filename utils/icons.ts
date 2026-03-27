@@ -36,7 +36,7 @@ type IconMap = typeof icons;
 type IconComponent = IconMap[keyof IconMap];
 
 const iconMapper = (label: string): IconComponent => {
-  return icons[label.toLowerCase() as keyof IconMap] || WebIcon;
+  return (label && icons[label.toLowerCase() as keyof IconMap]) || WebIcon;
 };
 
 export default iconMapper;
