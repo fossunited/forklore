@@ -27,15 +27,10 @@ export default defineEventHandler(async (event) => {
     const newer = index > 0 ? posts[index - 1] : null;
     const older = index < posts.length - 1 ? posts[index + 1] : null;
 
-    let maintainerPhoto: string | undefined;
-    try {
-      const mFile = path.join(
-        path.resolve("content/maintainers"),
-        `${username}.json`,
-      );
-      const mData = JSON.parse(await fs.readFile(mFile, "utf-8"));
-      maintainerPhoto = mData.photo;
-    } catch {}
+    const mData = await queryCollection(event, "maintainers")
+      .path(`/maintainers/${username}`)
+      .first();
+    const maintainerPhoto = mData?.photo;
 
     return {
       ...post,

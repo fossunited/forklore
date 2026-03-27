@@ -1,4 +1,3 @@
-import Parser from "rss-parser";
 import { Feed } from "feed";
 import { promises as fs } from "fs";
 import path from "path";
@@ -7,95 +6,61 @@ export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
   const BASE_URL = config.public.siteUrl || "https://forklore.in";
 
+  const feed = new Feed({
+    title: "Forklore Planet - Aggregated Blog Posts",
+    description: "Aggregated blog posts from India's open source maintainers",
+    id: `${BASE_URL}/planet`,
+    link: `${BASE_URL}/planet`,
+    language: "en",
+    feedLinks: { rss: `${BASE_URL}/planet/rss` },
+    author: { name: "Forklore", link: BASE_URL },
+    copyright: `All rights reserved ${new Date().getFullYear()}, Forklore`,
+    updated: new Date(),
+  });
+
+  const planetDir = path.resolve("content/planet");
+  const allEntries: Array<{ name: string; username: string; post: any }> = [];
+
   try {
-    // Create the aggregated feed using the same Feed package you already use
-    const feed = new Feed({
-      title: "Forklore Planet - Aggregated Blog Posts",
-      description: "Aggregated blog posts from India's open source maintainers",
-      id: `${BASE_URL}/planet`,
-      link: `${BASE_URL}/planet`,
-      language: "en",
-      feedLinks: {
-        rss: `${BASE_URL}/planet/rss`,
-        atom: `${BASE_URL}/planet/atom`,
-      },
-      author: { name: "Forklore", link: BASE_URL },
-      copyright: `All rights reserved ${new Date().getFullYear()}, Forklore`,
-      updated: new Date(),
-      ttl: 60, // Cache for 60 minutes
-    });
-
-    const parser = new Parser({
-      timeout: 10000,
-      headers: {
-        "User-Agent": "Forklore-Planet/1.0",
-      },
-    });
-
-    const contentDir = path.resolve("content/maintainers");
-    const files = (await fs.readdir(contentDir)).filter((f) =>
-      f.endsWith(".json"),
-    );
-
-    const maintainers = await Promise.all(
+    const files = (await fs.readdir(planetDir)).filter((f) => f.endsWith(".json"));
+    await Promise.all(
       files.map(async (file) => {
-        const raw = await fs.readFile(path.join(contentDir, file), "utf-8");
-        return JSON.parse(raw);
+        try {
+          const data = JSON.parse(
+            await fs.readFile(path.join(planetDir, file), "utf-8"),
+          );
+          for (const post of data.posts || []) {
+            allEntries.push({
+              name: data.maintainerName,
+              username: data.maintainerUsername,
+              post,
+            });
+          }
+        } catch {}
       }),
     );
-    // Filter maintainers with RSS feeds
-    const maintainersWithFeeds = maintainers
-      .map((m) => ({ ...m, rssfeed: m.socials?.find((s: any) => s.label === "RSS")?.link }))
-      .filter((m) => m.rssfeed);
+  } catch {}
 
-    // Fetch all RSS feeds
-    const feedPromises = maintainersWithFeeds.map(async (maintainer) => {
-      try {
-        const rssFeed = await parser.parseURL(maintainer.rssfeed);
+  allEntries.sort(
+    (a, b) =>
+      new Date(b.post.pubDate).getTime() - new Date(a.post.pubDate).getTime(),
+  );
 
-        return rssFeed.items.map((item) => ({
-          title: item.title || "Untitled",
-          id: item.link || item.guid || "",
-          link: item.link || "",
-          description: item.contentSnippet || item.summary || "",
-          content:
-            item.content || item["content:encoded"] || item.summary || "",
-          date: new Date(item.pubDate || item.isoDate || Date.now()),
-          author: [
-            {
-              name: `${maintainer.full_name} (${maintainer.username})`,
-              link: `https://forklore.in${maintainer.path}`,
-            },
-          ],
-          category: item.categories?.map((cat) => ({ name: cat })) || [],
-        }));
-      } catch (error) {
-        console.error(`Error fetching feed for ${maintainer.username}:`, error);
-        return [];
-      }
-    });
-
-    const allPostsArrays = await Promise.all(feedPromises);
-    const allPosts = allPostsArrays
-      .flat()
-      .sort((a, b) => b.date.getTime() - a.date.getTime());
-
-    // Add all posts to the feed
-    allPosts.forEach((post) => {
-      feed.addItem(post);
-    });
-
-    const feedString = feed.rss2();
-
-    setHeader(event, "Content-Type", "application/rss+xml; charset=utf-8");
-    setHeader(event, "Cache-Control", "public, max-age=3600"); // Cache for 1 hour
-
-    return feedString;
-  } catch (error) {
-    console.error("Error generating planet RSS feed:", error);
-    throw createError({
-      statusCode: 500,
-      message: "Failed to generate planet RSS feed",
+  for (const { name, username, post } of allEntries) {
+    feed.addItem({
+      title: post.title,
+      id: post.link || post.guid || post.slug,
+      link: post.link,
+      description: post.contentSnippet,
+      content: post.content,
+      date: new Date(post.pubDate),
+      author: [{ name, link: `${BASE_URL}/maintainers/${username}` }],
+      category: (post.tags || []).map((t: string) => ({ name: t })),
     });
   }
+
+  setHeader(event, "Content-Type", "application/rss+xml; charset=utf-8");
+  setHeader(event, "Cache-Control", "public, max-age=3600");
+
+  return feed.rss2();
 });

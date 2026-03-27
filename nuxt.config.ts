@@ -43,7 +43,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: ["/rss", "/","/planet/rss"],
+      routes: ["/rss", "/", "/planet", "/planet/rss"],
     },
   },
   ogImage: {

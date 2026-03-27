@@ -32,25 +32,15 @@ export default defineEventHandler(async (event) => {
     const search = query.search as string | undefined;
 
     // Load maintainer data for photos and feed URLs
-    const maintainersDir = path.resolve("content/maintainers");
     const photoMap: Record<string, string | undefined> = {};
     const feedUrlMap: Record<string, string | undefined> = {};
-    try {
-      const mFiles = (await fs.readdir(maintainersDir)).filter((f) =>
-        f.endsWith(".json"),
-      );
-      const mData = await Promise.all(
-        mFiles.map(async (file) =>
-          JSON.parse(
-            await fs.readFile(path.join(maintainersDir, file), "utf-8"),
-          ),
-        ),
-      );
-      for (const m of mData) {
-        photoMap[m.username] = m.photo;
-        feedUrlMap[m.username] = m.socials?.find((s: any) => s.label === "RSS")?.link;
-      }
-    } catch {}
+    const maintainerList = await queryCollection(event, "maintainers").all();
+    for (const m of maintainerList) {
+      photoMap[m.username] = m.photo;
+      feedUrlMap[m.username] = (m.socials as any[])?.find(
+        (s) => s.label === "RSS",
+      )?.link;
+    }
 
     // Read all maintainer post files
     const planetDir = path.resolve("content/planet");
