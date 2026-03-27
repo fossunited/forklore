@@ -1,0 +1,88 @@
+{
+  "maintainerName": "Shubham Kumar",
+  "maintainerUsername": "workdone0",
+  "feedUrl": "https://workdone0.substack.com/feed",
+  "lastFetched": "2026-03-27T10:19:01.485Z",
+  "posts": [
+    {
+      "slug": "binary-or-linear-the-hidden-math",
+      "guid": "https://workdone0.substack.com/p/binary-or-linear-the-hidden-math",
+      "title": "Binary or Linear? The Hidden Math Behind Faster Code",
+      "link": "https://workdone0.substack.com/p/binary-or-linear-the-hidden-math",
+      "pubDate": "Mon, 29 Sep 2025 14:58:34 GMT",
+      "content": "Follow a simple search problem to understand the power of Big O notation.",
+      "contentSnippet": "Follow a simple search problem to understand the power of Big O notation.",
+      "tags": []
+    },
+    {
+      "slug": "national-anthem",
+      "guid": "https://workdone0.substack.com/p/national-anthem",
+      "title": "What the National Anthem?",
+      "link": "https://workdone0.substack.com/p/national-anthem",
+      "pubDate": "Sat, 24 May 2025 00:00:00 GMT",
+      "content": "In the final episode of Game of Thrones, Tyrion Lannister asks a powerful question:",
+      "contentSnippet": "In the final episode of Game of Thrones, Tyrion Lannister asks a powerful question:",
+      "tags": []
+    },
+    {
+      "slug": "motorcycle-engines",
+      "guid": "https://workdone0.substack.com/p/motorcycle-engines",
+      "title": "Inside the Machine: A Look at Motorcycle Engines",
+      "link": "https://workdone0.substack.com/p/motorcycle-engines",
+      "pubDate": "Sun, 27 Apr 2025 00:00:00 GMT",
+      "content": "Peek under the hood as we explore how motorcycle engines work, what makes them tick, and why their engineering is so thrilling &#8212; from cylinders to spark plugs.",
+      "contentSnippet": "Peek under the hood as we explore how motorcycle engines work, what makes them tick, and why their engineering is so thrilling — from cylinders to spark plugs.",
+      "tags": []
+    },
+    {
+      "slug": "cost-of-lies",
+      "guid": "https://workdone0.substack.com/p/cost-of-lies",
+      "title": "The Cost of Lies",
+      "link": "https://workdone0.substack.com/p/cost-of-lies",
+      "pubDate": "Wed, 23 Apr 2025 00:00:00 GMT",
+      "content": "Every lie we tell ourselves&#8212;about our history, our neighbours, our ideals&#8212;demands a hidden tribute. This essay unpacks the stakes of self-deception in politics, society, and memory.",
+      "contentSnippet": "Every lie we tell ourselves—about our history, our neighbours, our ideals—demands a hidden tribute. This essay unpacks the stakes of self-deception in politics, society, and memory.",
+      "tags": []
+    },
+    {
+      "slug": "feynman-letter",
+      "guid": "https://workdone0.substack.com/p/feynman-letter",
+      "title": "You, Still",
+      "link": "https://workdone0.substack.com/p/feynman-letter",
+      "pubDate": "Tue, 22 Apr 2025 00:00:00 GMT",
+      "content": "A moving look at Richard Feynman&#8217;s letter to his late wife, revealing how love can persist in absence &#8212; raw, quiet, and deeply true.",
+      "contentSnippet": "A moving look at Richard Feynman’s letter to his late wife, revealing how love can persist in absence — raw, quiet, and deeply true.",
+      "tags": []
+    },
+    {
+      "slug": "deep-learning-intro",
+      "guid": "https://workdone0.substack.com/p/deep-learning-intro",
+      "title": "Getting Started with Deep Learning: A Hands-On Introduction",
+      "link": "https://workdone0.substack.com/p/deep-learning-intro",
+      "pubDate": "Tue, 15 Apr 2025 00:00:00 GMT",
+      "content": "Learn how to build a working deep learning image classifier in just a few lines of code &#8212; and peek behind the scenes to understand what really happens under the hood.",
+      "contentSnippet": "Learn how to build a working deep learning image classifier in just a few lines of code — and peek behind the scenes to understand what really happens under the hood.",
+      "tags": []
+    },
+    {
+      "slug": "python-decorator",
+      "guid": "https://workdone0.substack.com/p/python_decorator",
+      "title": "Mastering Python Decorators: A Practical Guide",
+      "link": "https://workdone0.substack.com/p/python_decorator",
+      "pubDate": "Sat, 22 Mar 2025 00:00:00 GMT",
+      "content": "Dive into decorators &#8212; learn how they wrap and enhance functionality with a timing example, best practices, and clear code you can use today.",
+      "contentSnippet": "Dive into decorators — learn how they wrap and enhance functionality with a timing example, best practices, and clear code you can use today.",
+      "tags": []
+    },
+    {
+      "slug": "cosmos",
+      "guid": "https://workdone0.substack.com/p/cosmos",
+      "title": "Shores of the cosmic ocean",
+      "link": "https://workdone0.substack.com/p/cosmos",
+      "pubDate": "Fri, 15 Sep 2023 00:00:00 GMT",
+      "content": "In this piece, I reflect on our place in the vast universe &#8212; Earth as a tiny &#8220;shore&#8221; in the ocean of the cosmos, and how human curiosity drives us to explore what lies beyond our horizon.",
+      "contentSnippet": "In this piece, I reflect on our place in the vast universe — Earth as a tiny “shore” in the ocean of the cosmos, and how human curiosity drives us to explore what lies beyond our horizon.",
+      "tags": []
+    }
+  ]
+}
