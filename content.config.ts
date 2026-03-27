@@ -31,12 +31,36 @@ const maintainerSchema = z.object({
   created_on: z.string(),
 });
 
+const planetSchema = z.object({
+  maintainerName: z.string(),
+  maintainerUsername: z.string(),
+  feedUrl: z.string().optional(),
+  lastFetched: z.string().optional(),
+  posts: z.array(
+    z.object({
+      slug: z.string(),
+      guid: z.string().optional(),
+      title: z.string(),
+      link: z.string(),
+      pubDate: z.string(),
+      content: z.string(),
+      contentSnippet: z.string(),
+      tags: z.array(z.string()),
+    })
+  ),
+});
+
 export default defineContentConfig({
   collections: {
     maintainers: defineCollection({
       type: "page",
       source: "maintainers/**.json",
       schema: maintainerSchema,
+    }),
+    planet: defineCollection({
+      type: "page",
+      source: "planet/**.json",
+      schema: planetSchema,
     }),
   },
 });
