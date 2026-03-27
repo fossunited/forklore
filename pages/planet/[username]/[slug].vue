@@ -110,22 +110,22 @@ useSeoMeta({
       <!-- Prev / Next -->
       <div class="grid grid-cols-2 gap-4">
         <nuxt-link
-          v-if="post.older"
-          :to="`/planet/${post.maintainerUsername}/${post.older.slug}`"
+          v-if="post.newer"
+          :to="`/planet/${post.maintainerUsername}/${post.newer.slug}`"
           class="flex flex-col gap-1 p-4 bg-tertiary-light dark:bg-tertiary-dark hover:opacity-80 transition-opacity"
         >
-          <span class="text-xs opacity-60">← Older</span>
-          <span class="text-sm font-bold line-clamp-2">{{ post.older.title }}</span>
+          <span class="text-xs opacity-60">← Newer</span>
+          <span class="text-sm font-bold line-clamp-2">{{ post.newer.title }}</span>
         </nuxt-link>
         <div v-else />
 
         <nuxt-link
-          v-if="post.newer"
-          :to="`/planet/${post.maintainerUsername}/${post.newer.slug}`"
+          v-if="post.older"
+          :to="`/planet/${post.maintainerUsername}/${post.older.slug}`"
           class="flex flex-col gap-1 p-4 bg-tertiary-light dark:bg-tertiary-dark hover:opacity-80 transition-opacity text-right"
         >
-          <span class="text-xs opacity-60">Newer →</span>
-          <span class="text-sm font-bold line-clamp-2">{{ post.newer.title }}</span>
+          <span class="text-xs opacity-60">Older →</span>
+          <span class="text-sm font-bold line-clamp-2">{{ post.older.title }}</span>
         </nuxt-link>
         <div v-else />
       </div>
