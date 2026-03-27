@@ -48,7 +48,7 @@ export default defineEventHandler(async (event) => {
       );
       for (const m of mData) {
         photoMap[m.username] = m.photo;
-        feedUrlMap[m.username] = m.rssfeed;
+        feedUrlMap[m.username] = m.socials?.find((s: any) => s.label === "RSS")?.link;
       }
     } catch {}
 

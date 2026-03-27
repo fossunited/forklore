@@ -44,7 +44,9 @@ export default defineEventHandler(async (event) => {
       }),
     );
     // Filter maintainers with RSS feeds
-    const maintainersWithFeeds = maintainers.filter((m) => m.rssfeed);
+    const maintainersWithFeeds = maintainers
+      .map((m) => ({ ...m, rssfeed: m.socials?.find((s: any) => s.label === "RSS")?.link }))
+      .filter((m) => m.rssfeed);
 
     // Fetch all RSS feeds
     const feedPromises = maintainersWithFeeds.map(async (maintainer) => {

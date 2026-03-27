@@ -59,8 +59,9 @@ async function main() {
     try {
       await fs.access(maintainerFile);
       const m = JSON.parse(await fs.readFile(maintainerFile, "utf-8"));
-      if (!m.rssfeed) {
-        console.error(`Error: ${potentialUsername} has no rssfeed field`);
+      const rssfeed = m.socials?.find((s: any) => s.label === "RSS")?.link;
+      if (!rssfeed) {
+        console.error(`Error: ${potentialUsername} has no RSS entry in socials`);
         process.exit(1);
       }
       feeds = [
@@ -68,7 +69,7 @@ async function main() {
           username: m.username,
           name: m.full_name,
           path: `/maintainers/${m.username}`,
-          url: m.rssfeed,
+          url: rssfeed,
         },
       ];
       console.log(`Refreshing only: ${potentialUsername}`);
@@ -91,12 +92,12 @@ async function main() {
       ),
     );
     feeds = maintainers
-      .filter((m) => m.rssfeed)
+      .filter((m) => m.socials?.some((s: any) => s.label === "RSS"))
       .map((m) => ({
         username: m.username,
         name: m.full_name,
         path: `/maintainers/${m.username}`,
-        url: m.rssfeed,
+        url: m.socials.find((s: any) => s.label === "RSS").link,
       }));
     console.log(`Refreshing all ${feeds.length} maintainers`);
   }
