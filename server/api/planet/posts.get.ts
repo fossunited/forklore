@@ -17,7 +17,6 @@ interface StoredPost {
 interface MaintainerPosts {
   maintainerName: string;
   maintainerUsername: string;
-  maintainerPath: string;
   feedUrl: string;
   lastFetched: string;
   posts: StoredPost[];
@@ -32,14 +31,36 @@ export default defineEventHandler(async (event) => {
     const tag = query.tag as string | undefined;
     const search = query.search as string | undefined;
 
+    // Load maintainer data for photos and feed URLs
+    const maintainersDir = path.resolve("content/maintainers");
+    const photoMap: Record<string, string | undefined> = {};
+    const feedUrlMap: Record<string, string | undefined> = {};
+    try {
+      const mFiles = (await fs.readdir(maintainersDir)).filter((f) =>
+        f.endsWith(".json"),
+      );
+      const mData = await Promise.all(
+        mFiles.map(async (file) =>
+          JSON.parse(
+            await fs.readFile(path.join(maintainersDir, file), "utf-8"),
+          ),
+        ),
+      );
+      for (const m of mData) {
+        photoMap[m.username] = m.photo;
+        feedUrlMap[m.username] = m.rssfeed;
+      }
+    } catch {}
+
     // Read all maintainer post files
     const planetDir = path.resolve("content/planet");
-    
+
     let maintainerFiles: string[] = [];
     try {
-      maintainerFiles = (await fs.readdir(planetDir)).filter(f => f.endsWith(".json"));
-    } catch (error) {
-      // Planet directory doesn't exist yet
+      maintainerFiles = (await fs.readdir(planetDir)).filter((f) =>
+        f.endsWith(".json"),
+      );
+    } catch {
       return {
         posts: [],
         totalPosts: 0,
@@ -56,59 +77,78 @@ export default defineEventHandler(async (event) => {
       maintainerFiles.map(async (file) => {
         const raw = await fs.readFile(path.join(planetDir, file), "utf-8");
         return JSON.parse(raw);
-      })
+      }),
     );
 
     // Flatten all posts and add maintainer info
-    const allPosts = allMaintainerData.flatMap(maintainerData =>
-      (maintainerData.posts || []).map(post => ({
+    const allPosts = allMaintainerData.flatMap((maintainerData) =>
+      (maintainerData.posts || []).map((post) => ({
         ...post,
         maintainerName: maintainerData.maintainerName,
         maintainerUsername: maintainerData.maintainerUsername,
-        maintainerPath: maintainerData.maintainerPath,
+        maintainerPath: `/maintainers/${maintainerData.maintainerUsername}`,
         feedUrl: maintainerData.feedUrl,
-      }))
+        maintainerPhoto: photoMap[maintainerData.maintainerUsername],
+      })),
     );
 
     // Sort by date (newest first)
-    allPosts.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+    allPosts.sort(
+      (a, b) =>
+        new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
+    );
 
     // Filter posts
     let filteredPosts = allPosts;
 
     if (author) {
       filteredPosts = filteredPosts.filter(
-        p => p.maintainerUsername.toLowerCase() === author.toLowerCase()
+        (p) => p.maintainerUsername.toLowerCase() === author.toLowerCase(),
       );
     }
 
     if (tag) {
-      filteredPosts = filteredPosts.filter(
-        p => p.tags.some(t => t.toLowerCase() === tag.toLowerCase())
+      filteredPosts = filteredPosts.filter((p) =>
+        p.tags.some((t) => t.toLowerCase() === tag.toLowerCase()),
       );
     }
 
     if (search) {
       const searchLower = search.toLowerCase();
       filteredPosts = filteredPosts.filter(
-        p => p.title.toLowerCase().includes(searchLower) ||
-             p.contentSnippet.toLowerCase().includes(searchLower) ||
-             p.author.toLowerCase().includes(searchLower)
+        (p) =>
+          p.title.toLowerCase().includes(searchLower) ||
+          p.contentSnippet.toLowerCase().includes(searchLower) ||
+          p.author.toLowerCase().includes(searchLower),
       );
     }
 
-    // Get unique authors and tags for filters
-    const authors = [...new Set(allPosts.map(p => ({
-      username: p.maintainerUsername,
-      name: p.maintainerName,
-      path: p.maintainerPath,
-    })))];
+    // Get unique authors using a Map to deduplicate by username
+    const authorMap = new Map<
+      string,
+      { username: string; name: string; path: string; photo?: string; feedUrl?: string }
+    >();
+    for (const post of allPosts) {
+      if (!authorMap.has(post.maintainerUsername)) {
+        authorMap.set(post.maintainerUsername, {
+          username: post.maintainerUsername,
+          name: post.maintainerName,
+          path: `/maintainers/${post.maintainerUsername}`,
+          photo: photoMap[post.maintainerUsername],
+          feedUrl: feedUrlMap[post.maintainerUsername],
+        });
+      }
+    }
+    const authors = Array.from(authorMap.values());
 
-    const allTags = allPosts.flatMap(p => p.tags);
-    const tagCounts = allTags.reduce((acc, tag) => {
-      acc[tag] = (acc[tag] || 0) + 1;
-      return acc;
-    }, {} as Record<string, number>);
+    const allTags = allPosts.flatMap((p) => p.tags);
+    const tagCounts = allTags.reduce(
+      (acc, tag) => {
+        acc[tag] = (acc[tag] || 0) + 1;
+        return acc;
+      },
+      {} as Record<string, number>,
+    );
     const tags = Object.entries(tagCounts)
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
@@ -129,10 +169,10 @@ export default defineEventHandler(async (event) => {
       tags,
     };
   } catch (error) {
-    console.error('Error in planet posts API:', error);
+    console.error("Error in planet posts API:", error);
     throw createError({
       statusCode: 500,
-      message: 'Failed to fetch planet posts'
+      message: "Failed to fetch planet posts",
     });
   }
 });
