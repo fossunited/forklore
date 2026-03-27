@@ -1,4 +1,5 @@
 <script setup lang="ts">
+definePageMeta({ keepalive: true });
 useHead({ title: "Planet | Forklore" });
 useSeoMeta({
   title: "Planet | Forklore",

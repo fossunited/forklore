@@ -1,4 +1,6 @@
 <script setup lang="ts">
+definePageMeta({ keepalive: true });
+
 const route = useRoute();
 const username = route.params.username as string;
 
