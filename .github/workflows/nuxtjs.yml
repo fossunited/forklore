@@ -5,8 +5,13 @@ on:
   push:
     branches:
       - develop
+  workflow_run:
+    workflows: ["Refresh Planet Feeds"]
+    types: [completed]
+    branches: [develop]
 jobs:
   build:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
