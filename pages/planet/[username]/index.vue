@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import RSS from "~/components/icons/RSS.vue";
 definePageMeta({ keepalive: true });
 
 const route = useRoute();
@@ -9,16 +10,16 @@ const { data: maintainer } = await useAsyncData(
   () => queryCollection("maintainers").path(`/maintainers/${username}`).first(),
 );
 
-if (!maintainer.value) {
-  throw createError({ statusCode: 404, message: "Maintainer not found" });
-}
+const displayName = maintainer.value?.full_name || username;
 
-useHead({ title: `${maintainer.value.full_name} · Planet | Forklore` });
+useHead({ title: `${displayName} · Planet | Forklore` });
 useSeoMeta({
-  title: `${maintainer.value.full_name} · Planet | Forklore`,
-  description: `Blog posts by ${maintainer.value.full_name} on Forklore Planet`,
+  title: `${displayName} · Planet | Forklore`,
+  description: `Blog posts by ${displayName} on Forklore Planet`,
 });
-defineOgImage("Maintainer", { maintainer: maintainer.value });
+if (maintainer.value) {
+  defineOgImage("Maintainer", { maintainer: maintainer.value });
+}
 </script>
 
 <template>
@@ -49,7 +50,7 @@ defineOgImage("Maintainer", { maintainer: maintainer.value });
           target="_blank"
           rel="noopener noreferrer"
           class="btn-subtle text-xs px-3 py-1"
-        >Subscribe to RSS ↗</a>
+        ><RSS /></a>
       </div>
     </div>
 

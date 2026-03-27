@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import RSS from "~/components/icons/RSS.vue";
-
 interface StoredPost {
   slug: string;
   title: string;
@@ -217,17 +215,10 @@ const truncate = (text: string, max = 200) => {
             {{ post.maintainerName }}
           </nuxt-link>
           <span class="opacity-40">·</span>
-          <time :datetime="post.pubDate" class="opacity-60 text-xs">{{ formatRelativeTime(post.pubDate) }}</time>
-          <span v-if="post.feedUrl" class="opacity-40">·</span>
-          <a v-if="post.feedUrl" :href="post.feedUrl" target="_blank" rel="noopener noreferrer"
-              class="text-xs opacity-50 hover:opacity-100 hover:underline"><RSS /></a>
+          <time :datetime="post.pubDate" class="opacity-60 text-sm">{{ formatRelativeTime(post.pubDate) }}</time>
         </div>
-        <!-- Date only (username page) -->
-        <div v-else class="flex items-center gap-2 text-xs opacity-60">
+        <div v-else class="flex items-center gap-2 text-sm opacity-60">
           <time :datetime="post.pubDate">{{ formatRelativeTime(post.pubDate) }}</time>
-          <span v-if="post.feedUrl" class="opacity-40">·</span>
-          <a v-if="post.feedUrl" :href="post.feedUrl" target="_blank" rel="noopener noreferrer"
-              class="hover:underline hover:opacity-100"><RSS /></a>
         </div>
 
         <!-- Tags -->
