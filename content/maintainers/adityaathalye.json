@@ -15,6 +15,9 @@
     {
       "label": "LinkedIn",
       "link": "https://www.linkedin.com/in/adityaathalye/"
+    },
+    {  "label": "RSS",
+      "link": "https://www.evalapply.org/index.xml"
     }
   ],
   "projects": [

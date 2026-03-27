@@ -15,6 +15,10 @@
     {
       "label": "Web",
       "link": "https://kcsrk.info/"
+    },
+    {
+      "label": "RSS",
+      "link": "https://kcsrk.info/atom.xml"
     }
   ],
   "projects": [

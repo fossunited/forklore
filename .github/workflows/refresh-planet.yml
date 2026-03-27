@@ -1,0 +1,41 @@
+name: Refresh Planet Feeds
+
+on:
+  workflow_dispatch:
+  # Daily at 06:00 UTC: https://crontab.guru
+  # schedule:
+  #  - cron: "0 6 * * *"
+  # Weekly on Monday at 06:00 UTC
+  schedule:
+    - cron: "0 6 * * 1"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - run: corepack enable
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "yarn"
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Refresh planet feeds
+        run: yarn planet:refresh
+
+      - name: Commit updated feed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/planet/
+          git diff --staged --quiet || git commit -m "chore: refresh planet feeds"
+          git push

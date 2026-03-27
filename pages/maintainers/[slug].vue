@@ -44,6 +44,20 @@ useSeoMeta({
     <template #maintainer>
       <div class="flex flex-col divide-y-custom">
         <MaintainerDetailSection :maintainer="maintainer" />
+
+        <!-- Planet & RSS links (only for maintainers with RSS feed) -->
+        <div
+          v-if="maintainer?.socials?.find(s => s.label === 'RSS')"
+          class="flex flex-col gap-4 px-8 pb-4 bg-tertiary-light dark:bg-tertiary-dark"
+        >
+          <nuxt-link
+            :to="`/planet/${maintainer?.username}`"
+            class="btn-outline text-sm font-bold"
+          >
+            View posts on Planet →
+          </nuxt-link>
+        </div>
+
         <MaintainerFormRender :maintainer="maintainer" />
       </div>
     </template>

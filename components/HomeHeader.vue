@@ -46,5 +46,9 @@ const getLogoPath = computed(() => {
       Forklore brings you confessions, quirks, and the occasional rant from
       India's open source keepers.
     </p>
+    <br />
+    <nuxt-link to="/planet" class="btn-outline text-sm font-bold">
+      Read Planet →
+    </nuxt-link>
   </div>
 </template>

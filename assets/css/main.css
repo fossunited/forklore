@@ -10,6 +10,16 @@
   --color-secondary-light: #18222a;
   --color-tertiary-dark: #3c4b4e;
   --color-tertiary-light: #eef0f1;
+
+  /* Prose/Typography styling */
+  --prose-body: var(--color-secondary-light);
+  --prose-headings: var(--color-secondary-light);
+  --prose-links: var(--color-secondary-light);
+  --prose-bold: var(--color-secondary-light);
+  --prose-code: var(--color-secondary-light);
+  --prose-pre-bg: var(--color-tertiary-light);
+  --prose-quotes: var(--color-secondary-light);
+  --prose-quote-borders: var(--color-secondary-light);
 }
 
 html {
@@ -92,6 +102,129 @@ html {
 
   .dark-mode {
     @apply bg-[var(--color-primary-dark)] text-[var(--color-secondary-dark)];
+
+    --prose-body: var(--color-secondary-dark);
+    --prose-headings: var(--color-secondary-dark);
+    --prose-links: var(--color-secondary-dark);
+    --prose-bold: var(--color-secondary-dark);
+    --prose-code: var(--color-secondary-dark);
+    --prose-pre-bg: var(--color-tertiary-dark);
+    --prose-quotes: var(--color-secondary-dark);
+    --prose-quote-borders: var(--color-secondary-dark);
+  }
+  /* Markdown/Prose Styling */
+  .prose {
+    @apply text-secondary-light dark:text-secondary-dark;
+  }
+
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6 {
+    @apply font-bold mt-8 mb-4;
+    @apply text-secondary-light dark:text-secondary-dark;
+  }
+
+  .prose h1 {
+    @apply text-3xl;
+  }
+
+  .prose h2 {
+    @apply text-2xl;
+  }
+
+  .prose h3 {
+    @apply text-xl;
+  }
+
+  .prose h4 {
+    @apply text-lg;
+  }
+
+  .prose p {
+    @apply mb-4;
+  }
+
+  .prose a {
+    @apply text-secondary-light dark:text-secondary-dark;
+    @apply underline hover:no-underline;
+    @apply transition-all duration-300;
+  }
+
+  .prose strong {
+    @apply font-bold;
+  }
+
+  .prose em {
+    @apply italic;
+  }
+
+  .prose ul,
+  .prose ol {
+    @apply mb-4 ml-6;
+  }
+
+  .prose ul {
+    @apply list-disc;
+  }
+
+  .prose ol {
+    @apply list-decimal;
+  }
+
+  .prose li {
+    @apply mb-2;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-secondary-light/60 dark:border-secondary-dark/60;
+    @apply pl-4 py-2 my-4 italic;
+    @apply bg-tertiary-light/50 dark:bg-tertiary-dark/50;
+  }
+
+  .prose code {
+    @apply bg-tertiary-light dark:bg-tertiary-dark;
+    @apply px-1.5 py-0.5 rounded;
+    @apply text-sm font-mono;
+    @apply text-secondary-light dark:text-secondary-dark;
+  }
+
+  .prose pre {
+    @apply bg-tertiary-light dark:bg-tertiary-dark;
+    @apply p-4 rounded-lg my-4 overflow-x-auto;
+    @apply border border-secondary-light/20 dark:border-secondary-dark/20;
+  }
+
+  .prose pre code {
+    @apply bg-transparent p-0;
+    @apply text-sm;
+  }
+
+  .prose hr {
+    @apply border-t-2 border-secondary-light/60 dark:border-secondary-dark/60;
+    @apply border-dashed my-8;
+  }
+
+  .prose img {
+    @apply rounded-lg my-4;
+    @apply border border-secondary-light/20 dark:border-secondary-dark/20;
+  }
+
+  .prose table {
+    @apply w-full my-4 border-collapse;
+  }
+
+  .prose th,
+  .prose td {
+    @apply border border-secondary-light/30 dark:border-secondary-dark/30;
+    @apply px-4 py-2;
+  }
+
+  .prose th {
+    @apply bg-tertiary-light dark:bg-tertiary-dark;
+    @apply font-bold;
   }
 }
 

@@ -11,6 +11,7 @@ import BitBucket from "~/components/icons/BitBucket.vue";
 import Substack from "~/components/icons/Substack.vue";
 import Reddit from "~/components/icons/Reddit.vue";
 import Youtube from "~/components/icons/Youtube.vue";
+import RSS from "~/components/icons/RSS.vue";
 
 const icons = {
   web: WebIcon,
@@ -27,14 +28,15 @@ const icons = {
   bitbucket: BitBucket,
   "arrow-up-right": ArrowUpRight,
   substack: Substack,
-  youtube: Youtube
+  youtube: Youtube,
+  rss: RSS
 } as const;
 
 type IconMap = typeof icons;
 type IconComponent = IconMap[keyof IconMap];
 
 const iconMapper = (label: string): IconComponent => {
-  return icons[label.toLowerCase() as keyof IconMap] || WebIcon;
+  return (label && icons[label.toLowerCase() as keyof IconMap]) || WebIcon;
 };
 
 export default iconMapper;

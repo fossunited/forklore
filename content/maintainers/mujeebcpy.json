@@ -19,6 +19,10 @@
     {
       "label": "Website",
       "link": "https://ibcomputing.com/"
+    },
+    {
+      "label": "RSS",
+      "link": "https://ibcomputing.com/feed"
     }
   ],
   "projects": [

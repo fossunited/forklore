@@ -23,6 +23,10 @@
     {
       "label": "X",
       "link": "http://x.com/saketkc"
+    },
+    {
+      "label": "RSS",
+      "link": "https://saket-choudhary.me/feed.xml"
     }
   ],
   "projects": [

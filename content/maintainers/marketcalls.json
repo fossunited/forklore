@@ -19,6 +19,10 @@
     {
       "label": "Twitter",
       "link": "https://x.com/openalgoHQ"
+    },
+    {
+      "label": "RSS",
+      "link": "https://medium.com/feed/@openalgo"
     }
   ],
   "projects": [
