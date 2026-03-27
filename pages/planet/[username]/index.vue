@@ -16,6 +16,7 @@ useSeoMeta({
   title: `${maintainer.value.full_name} · Planet | Forklore`,
   description: `Blog posts by ${maintainer.value.full_name} on Forklore Planet`,
 });
+defineOgImage("Maintainer", { maintainer: maintainer.value });
 </script>
 
 <template>
