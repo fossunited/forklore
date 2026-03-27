@@ -154,6 +154,15 @@ useSeoMeta({
         ><RSS /></a>
       </div>
 
+      <a
+        :href="post.link"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-outline text-xs self-start"
+      >
+        View Original ↗
+      </a>
+
       <!-- Tags -->
       <div v-if="Array.isArray(post.tags) && post.tags.length" class="flex flex-wrap gap-2">
         <nuxt-link
