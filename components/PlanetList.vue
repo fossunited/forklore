@@ -26,6 +26,11 @@ interface PlanetData {
 
 const props = defineProps<{ username?: string }>();
 
+const planetNav = usePlanetNav();
+const setNavContext = () => {
+  planetNav.value = props.username ? "user" : "planet";
+};
+
 const route = useRoute();
 const router = useRouter();
 
@@ -188,6 +193,7 @@ const truncate = (text: string, max = 200) => {
       <div class="px-8 py-6 bg-tertiary-light dark:bg-tertiary-dark border-custom-b">
         <nuxt-link
           :to="`/planet/${post.maintainerUsername}/${post.slug}`"
+          @click="setNavContext()"
           class="text-xl font-bold hover:underline"
         >
           {{ post.title }}
@@ -241,7 +247,7 @@ const truncate = (text: string, max = 200) => {
 
         <!-- Links -->
         <div class="flex gap-4 text-sm">
-          <nuxt-link :to="`/planet/${post.maintainerUsername}/${post.slug}`" class="font-bold hover:underline">
+          <nuxt-link :to="`/planet/${post.maintainerUsername}/${post.slug}`" @click="setNavContext()" class="font-bold hover:underline">
             Read more →
           </nuxt-link>
           <a :href="post.link" target="_blank" rel="noopener noreferrer"
