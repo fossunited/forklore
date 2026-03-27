@@ -2,10 +2,14 @@
 import RSS from "~/components/icons/RSS.vue";
 
 const route = useRoute();
+const router = useRouter();
 const username = route.params.username as string;
 const slug = route.params.slug as string;
 
-interface PostNav { slug: string; title: string }
+const planetNav = usePlanetNav();
+const isGlobal = computed(() => planetNav.value === "planet");
+
+interface PostNav { slug: string; title: string; maintainerUsername: string }
 
 interface StoredPost {
   slug: string;
@@ -25,7 +29,7 @@ interface StoredPost {
 }
 
 const { data: post, status } = await useFetch<StoredPost>(
-  `/api/planet/post/${username}/${slug}`,
+  () => `/api/planet/post/${username}/${slug}${isGlobal.value ? "?context=planet" : ""}`,
 );
 
 const formatDate = (dateString: string) =>
@@ -34,6 +38,20 @@ const formatDate = (dateString: string) =>
     month: "long",
     day: "numeric",
   });
+
+const postPath = (nav: PostNav) =>
+  `/planet/${nav.maintainerUsername}/${nav.slug}`;
+
+const goNewer = () => post.value?.newer && router.push(postPath(post.value.newer));
+const goOlder = () => post.value?.older && router.push(postPath(post.value.older));
+
+const onKey = (e: KeyboardEvent) => {
+  if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
+  if (e.key === "k" || e.key === "p") goNewer();
+  if (e.key === "j" || e.key === "n") goOlder();
+};
+onMounted(() => window.addEventListener("keydown", onKey));
+onUnmounted(() => window.removeEventListener("keydown", onKey));
 
 useHead({ title: `${post.value?.title || "Post"} | Forklore Planet` });
 useSeoMeta({
@@ -53,10 +71,10 @@ useSeoMeta({
     <!-- Post header -->
     <div class="flex flex-col gap-4 p-8 bg-tertiary-light dark:bg-tertiary-dark border-custom-b">
       <nuxt-link
-        :to="`/planet/${post.maintainerUsername}`"
+        :to="isGlobal ? '/planet' : `/planet/${post.maintainerUsername}`"
         class="text-xs opacity-60 hover:opacity-100 hover:underline"
       >
-        ← {{ post.maintainerName }}'s posts
+        ← {{ isGlobal ? "All Posts" : `${post.maintainerName}'s posts` }}
       </nuxt-link>
 
       <h1 class="text-3xl font-bold">{{ post.title }}</h1>
@@ -105,13 +123,12 @@ useSeoMeta({
       <div v-html="post.content" class="break-words" />
     </article>
 
-    <!-- Footer: prev/next + single original link -->
+    <!-- Footer: prev/next + original link -->
     <div class="flex flex-col gap-4 p-8 border-custom-t">
-      <!-- Prev / Next -->
       <div class="grid grid-cols-2 gap-4">
         <nuxt-link
           v-if="post.newer"
-          :to="`/planet/${post.maintainerUsername}/${post.newer.slug}`"
+          :to="postPath(post.newer)"
           class="flex flex-col gap-1 p-4 bg-tertiary-light dark:bg-tertiary-dark hover:opacity-80 transition-opacity"
         >
           <span class="text-xs opacity-60">← Newer</span>
@@ -121,7 +138,7 @@ useSeoMeta({
 
         <nuxt-link
           v-if="post.older"
-          :to="`/planet/${post.maintainerUsername}/${post.older.slug}`"
+          :to="postPath(post.older)"
           class="flex flex-col gap-1 p-4 bg-tertiary-light dark:bg-tertiary-dark hover:opacity-80 transition-opacity text-right"
         >
           <span class="text-xs opacity-60">Older →</span>
@@ -130,7 +147,6 @@ useSeoMeta({
         <div v-else />
       </div>
 
-      <!-- Original source credit -->
       <p class="text-xs opacity-50 sans-text">
         Originally published on
         <a :href="post.link" target="_blank" rel="noopener noreferrer" class="hover:underline">
