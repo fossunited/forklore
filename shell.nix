@@ -5,6 +5,7 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
 	prettier eslint esbuild pre-commit
 	uv yarn html-tidy djlint
+	python3 gcc gnumake
   ];
 
  }
