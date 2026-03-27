@@ -76,8 +76,7 @@ export default defineEventHandler(async (event) => {
     const allPostsArrays = await Promise.all(feedPromises);
     const allPosts = allPostsArrays
       .flat()
-      .sort((a, b) => b.date.getTime() - a.date.getTime())
-      .slice(0, 50); // Limit to 50 most recent posts
+      .sort((a, b) => b.date.getTime() - a.date.getTime());
 
     // Add all posts to the feed
     allPosts.forEach((post) => {
