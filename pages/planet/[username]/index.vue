@@ -15,7 +15,7 @@ const displayName = maintainer.value?.full_name || username;
 useHead({ title: `${displayName} · Planet | Forklore` });
 useSeoMeta({
   title: `${displayName} · Planet | Forklore`,
-  description: `Blog posts by ${displayName} on Forklore Planet`,
+  description: `Blog posts by ${displayName} on Planet Forklore`,
 });
 if (maintainer.value) {
   defineOgImage("Maintainer", { maintainer: maintainer.value });

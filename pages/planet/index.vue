@@ -21,7 +21,7 @@ useSeoMeta({
 <template>
   <div class="flex flex-col">
     <div class="flex flex-col gap-4 p-8 border-custom-b bg-tertiary-light dark:bg-tertiary-dark">
-      <h1 class="text-4xl font-bold">Forklore Planet</h1>
+      <h1 class="text-4xl font-bold">Planet Forklore</h1>
       <p class="sans-text text-sm">Aggregated blog posts from India's open source maintainers.</p>
       <div v-if="stats" class="flex gap-4 text-xs opacity-60">
         <span>{{ stats.authors }} maintainers</span>

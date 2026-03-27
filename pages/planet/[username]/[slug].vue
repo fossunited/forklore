@@ -102,12 +102,12 @@ const onKey = (e: KeyboardEvent) => {
 onMounted(() => window.addEventListener("keydown", onKey));
 onUnmounted(() => window.removeEventListener("keydown", onKey));
 
-useHead({ title: `${post.value?.title || "Post"} | Forklore Planet` });
+useHead({ title: `${post.value?.title || "Post"} | Planet Forklore` });
 useSeoMeta({
-  title: `${post.value?.title || "Post"} | Forklore Planet`,
-  ogTitle: `${post.value?.title || "Post"} | Forklore Planet`,
-  description: post.value?.contentSnippet || "Read this post on Forklore Planet",
-  ogDescription: post.value?.contentSnippet || "Read this post on Forklore Planet",
+  title: `${post.value?.title || "Post"} | Planet Forklore`,
+  ogTitle: `${post.value?.title || "Post"} | Planet Forklore`,
+  description: post.value?.contentSnippet || "Read this post on Planet Forklore",
+  ogDescription: post.value?.contentSnippet || "Read this post on Planet Forklore",
 });
 </script>
 

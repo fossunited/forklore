@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
   const BASE_URL = config.public.siteUrl || "https://forklore.in";
 
   const feed = new Feed({
-    title: "Forklore Planet - Aggregated Blog Posts",
+    title: "Planet Forklore - Aggregated Blog Posts",
     description: "Aggregated blog posts from India's open source maintainers",
     id: `${BASE_URL}/planet`,
     link: `${BASE_URL}/planet`,
