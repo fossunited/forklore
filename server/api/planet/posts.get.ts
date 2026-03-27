@@ -70,8 +70,8 @@ export default defineEventHandler(async (event) => {
       const searchLower = search.toLowerCase();
       filteredPosts = filteredPosts.filter(
         (p) =>
-          p.title.toLowerCase().includes(searchLower) ||
-          p.contentSnippet.toLowerCase().includes(searchLower),
+          (p.title || "").toLowerCase().includes(searchLower) ||
+          (p.contentSnippet || "").toLowerCase().includes(searchLower),
       );
     }
 
