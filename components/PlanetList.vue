@@ -1,5 +1,5 @@
 <script setup lang="ts">
-interface StoredPost {
+interface Post {
   slug: string;
   title: string;
   link: string;
@@ -8,18 +8,8 @@ interface StoredPost {
   maintainerName: string;
   maintainerUsername: string;
   maintainerPhoto?: string;
-  feedUrl: string;
+  feedUrl?: string;
   tags: string[];
-}
-
-interface PlanetData {
-  posts: StoredPost[];
-  totalPosts: number;
-  totalPages: number;
-  currentPage: number;
-  perPage: number;
-  authors: Array<{ username: string; name: string; photo?: string }>;
-  tags: Array<{ name: string; count: number }>;
 }
 
 const props = defineProps<{ username?: string }>();
@@ -36,19 +26,99 @@ const currentPage = computed(() => parseInt(route.query.page as string) || 1);
 const selectedTag = computed(() => route.query.tag as string | undefined);
 const searchInput = ref(!props.username ? (route.query.search as string) || "" : "");
 
-const apiQuery = computed(() => {
-  const p = new URLSearchParams();
-  p.set("page", currentPage.value.toString());
-  if (props.username) p.set("author", props.username);
-  if (selectedTag.value) p.set("tag", selectedTag.value);
-  if (!props.username && searchInput.value) p.set("search", searchInput.value);
-  return p.toString();
+const PER_PAGE = 20;
+
+const { data: rawData, status, error } = await useAsyncData("planet-all", async () => {
+  const [planetDocs, maintainerDocs] = await Promise.all([
+    queryCollection("planet").all(),
+    queryCollection("maintainers").all(),
+  ]);
+
+  const photoMap: Record<string, string | undefined> = {};
+  for (const m of maintainerDocs) {
+    photoMap[m.username] = m.photo;
+  }
+
+  const posts: Post[] = planetDocs.flatMap((md) =>
+    (md.posts || []).map((post: any) => ({
+      ...post,
+      maintainerName: md.maintainerName,
+      maintainerUsername: md.maintainerUsername,
+      maintainerPhoto: photoMap[md.maintainerUsername],
+      feedUrl: md.feedUrl,
+    })),
+  );
+  posts.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
+  const authorMap = new Map<string, { username: string; name: string; photo?: string }>();
+  for (const post of posts) {
+    if (!authorMap.has(post.maintainerUsername)) {
+      authorMap.set(post.maintainerUsername, {
+        username: post.maintainerUsername,
+        name: post.maintainerName,
+        photo: photoMap[post.maintainerUsername],
+      });
+    }
+  }
+
+  return { posts, authors: Array.from(authorMap.values()) };
 });
 
-const { data, status, error } = useFetch<PlanetData>(
-  () => `/api/planet/posts?${apiQuery.value}`,
-  { watch: [apiQuery] },
-);
+const filteredPosts = computed(() => {
+  let posts = rawData.value?.posts || [];
+
+  if (props.username) {
+    posts = posts.filter(
+      (p) => p.maintainerUsername.toLowerCase() === props.username!.toLowerCase(),
+    );
+  }
+  if (selectedTag.value) {
+    posts = posts.filter((p) =>
+      p.tags.some((t: string) => t.toLowerCase() === selectedTag.value!.toLowerCase()),
+    );
+  }
+  if (!props.username && searchInput.value) {
+    const s = searchInput.value.toLowerCase();
+    posts = posts.filter(
+      (p) =>
+        (p.title || "").toLowerCase().includes(s) ||
+        (p.contentSnippet || "").toLowerCase().includes(s),
+    );
+  }
+  return posts;
+});
+
+const tags = computed(() => {
+  // For username page, tags from that user's posts only (ignoring tag filter)
+  const source = props.username
+    ? (rawData.value?.posts || []).filter(
+        (p) => p.maintainerUsername.toLowerCase() === props.username!.toLowerCase(),
+      )
+    : (rawData.value?.posts || []);
+  const counts = source.flatMap((p) => p.tags as string[]).reduce(
+    (acc, t) => { acc[t] = (acc[t] || 0) + 1; return acc; },
+    {} as Record<string, number>,
+  );
+  return Object.entries(counts)
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count);
+});
+
+const data = computed(() => {
+  if (!rawData.value) return null;
+  const total = filteredPosts.value.length;
+  const totalPages = Math.ceil(total / PER_PAGE);
+  const start = (currentPage.value - 1) * PER_PAGE;
+  return {
+    posts: filteredPosts.value.slice(start, start + PER_PAGE),
+    totalPosts: total,
+    totalPages,
+    currentPage: currentPage.value,
+    perPage: PER_PAGE,
+    authors: rawData.value.authors,
+    tags: tags.value,
+  };
+});
 
 let debounce: ReturnType<typeof setTimeout> | null = null;
 watch(searchInput, (val) => {

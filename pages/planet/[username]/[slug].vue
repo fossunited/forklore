@@ -11,26 +11,62 @@ const isGlobal = computed(() => planetNav.value === "planet");
 
 interface PostNav { slug: string; title: string; maintainerUsername: string }
 
-interface StoredPost {
-  slug: string;
-  title: string;
-  link: string;
-  pubDate: string;
-  content: string;
-  contentSnippet: string;
-  tags: string[];
-  maintainerName: string;
-  maintainerUsername: string;
-  maintainerPath: string;
-  maintainerPhoto?: string;
-  feedUrl: string;
-  newer: PostNav | null;
-  older: PostNav | null;
-}
+const { data: rawData, status } = await useAsyncData("planet-all", async () => {
+  const [planetDocs, maintainerDocs] = await Promise.all([
+    queryCollection("planet").all(),
+    queryCollection("maintainers").all(),
+  ]);
 
-const { data: post, status } = await useFetch<StoredPost>(
-  () => `/api/planet/post/${username}/${slug}${isGlobal.value ? "?context=planet" : ""}`,
-);
+  const photoMap: Record<string, string | undefined> = {};
+  for (const m of maintainerDocs) {
+    photoMap[m.username] = m.photo;
+  }
+
+  const posts = planetDocs.flatMap((md) =>
+    (md.posts || []).map((post: any) => ({
+      ...post,
+      maintainerName: md.maintainerName,
+      maintainerUsername: md.maintainerUsername,
+      maintainerPhoto: photoMap[md.maintainerUsername],
+      feedUrl: md.feedUrl,
+      maintainerPath: `/maintainers/${md.maintainerUsername}`,
+    })),
+  );
+  posts.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
+
+  const authorMap = new Map<string, { username: string; name: string; photo?: string }>();
+  for (const post of posts) {
+    if (!authorMap.has(post.maintainerUsername)) {
+      authorMap.set(post.maintainerUsername, {
+        username: post.maintainerUsername,
+        name: post.maintainerName,
+        photo: photoMap[post.maintainerUsername],
+      });
+    }
+  }
+
+  return { posts, authors: Array.from(authorMap.values()) };
+});
+
+const post = computed(() => {
+  const allPosts = rawData.value?.posts || [];
+  const ordered = isGlobal.value
+    ? allPosts
+    : allPosts.filter((p) => p.maintainerUsername.toLowerCase() === username.toLowerCase());
+
+  const idx = ordered.findIndex(
+    (p) => p.slug === slug && p.maintainerUsername.toLowerCase() === username.toLowerCase(),
+  );
+  if (idx === -1) return null;
+
+  const cur = ordered[idx];
+  const toNav = (p: any): PostNav => ({ slug: p.slug, title: p.title, maintainerUsername: p.maintainerUsername });
+  return {
+    ...cur,
+    newer: idx > 0 ? toNav(ordered[idx - 1]) : null,
+    older: idx < ordered.length - 1 ? toNav(ordered[idx + 1]) : null,
+  };
+});
 
 const formatDate = (dateString: string) =>
   new Date(dateString).toLocaleDateString("en-US", {
@@ -39,8 +75,7 @@ const formatDate = (dateString: string) =>
     day: "numeric",
   });
 
-const postPath = (nav: PostNav) =>
-  `/planet/${nav.maintainerUsername}/${nav.slug}`;
+const postPath = (nav: PostNav) => `/planet/${nav.maintainerUsername}/${nav.slug}`;
 
 const goNewer = () => post.value?.newer && router.push(postPath(post.value.newer));
 const goOlder = () => post.value?.older && router.push(postPath(post.value.older));
