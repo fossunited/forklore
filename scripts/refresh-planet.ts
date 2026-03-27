@@ -1,7 +1,6 @@
 import Parser from "rss-parser";
 import { promises as fs } from "fs";
 import path from "path";
-import crypto from "crypto";
 
 const parser = new Parser({ timeout: 10000 });
 
@@ -19,15 +18,39 @@ function cleanContent(content: string, postUrl: string): string {
   }
 }
 
+// Derive a readable slug from the RSS item's GUID/link
+function getSlugFromGuid(guid: string): string {
+  try {
+    const url = new URL(guid);
+    const parts = url.pathname.replace(/\/$/, "").split("/").filter(Boolean);
+    if (parts.length > 0) {
+      const last = parts[parts.length - 1];
+      const clean = last
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "")
+        .slice(0, 100);
+      if (clean) return clean;
+    }
+  } catch {}
+  // GUID is not a URL — clean it directly
+  return (
+    guid
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .slice(0, 100) || "post"
+  );
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const planetDir = path.resolve("content/planet");
   await fs.mkdir(planetDir, { recursive: true });
 
-  let feeds = [];
+  let feeds: Array<{ username: string; name: string; path: string; url: string }> = [];
 
   if (args.length > 0) {
-    // Check if first arg is a username
     const potentialUsername = args[0];
     const maintainerFile = path.resolve(
       `content/maintainers/${potentialUsername}.json`,
@@ -35,7 +58,6 @@ async function main() {
 
     try {
       await fs.access(maintainerFile);
-      // It's a username - refresh only this maintainer
       const m = JSON.parse(await fs.readFile(maintainerFile, "utf-8"));
       if (!m.rssfeed) {
         console.error(`Error: ${potentialUsername} has no rssfeed field`);
@@ -45,25 +67,21 @@ async function main() {
         {
           username: m.username,
           name: m.full_name,
-          path: m.path,
+          path: `/maintainers/${m.username}`,
           url: m.rssfeed,
         },
       ];
       console.log(`Refreshing only: ${potentialUsername}`);
     } catch {
-      // Not a username - treat as RSS URLs
+      // Not a username — treat as RSS URLs
       feeds = args.map((url) => {
-        // Extract username from URL if possible
-        const urlParts = url.match(/\/\/([^.\/]+)/);
-        const username = urlParts
-          ? `test-${urlParts[1]}`
-          : `test-${Date.now()}`;
+        const urlParts = url.match(/\/\/([^./]+)/);
+        const username = urlParts ? `test-${urlParts[1]}` : `test-${Date.now()}`;
         return { username, name: username, path: `/test/${username}`, url };
       });
       console.log(`Testing with ${feeds.length} external URLs`);
     }
   } else {
-    // No args - refresh all maintainers
     const files = (await fs.readdir("content/maintainers")).filter((f) =>
       f.endsWith(".json"),
     );
@@ -77,24 +95,28 @@ async function main() {
       .map((m) => ({
         username: m.username,
         name: m.full_name,
-        path: m.path,
+        path: `/maintainers/${m.username}`,
         url: m.rssfeed,
       }));
     console.log(`Refreshing all ${feeds.length} maintainers`);
   }
+
   console.log(`Fetching ${feeds.length} feeds in parallel...`);
 
-  // Fetch all in parallel
   const results = await Promise.allSettled(
     feeds.map(async (feed) => {
       const rss = await parser.parseURL(feed.url);
       const file = path.join(planetDir, `${feed.username}.json`);
 
-      // Load existing or create new
-      let data = {
+      let data: {
+        maintainerName: string;
+        maintainerUsername: string;
+        feedUrl: string;
+        lastFetched: string;
+        posts: Array<Record<string, any>>;
+      } = {
         maintainerName: feed.name,
         maintainerUsername: feed.username,
-        maintainerPath: feed.path,
         feedUrl: feed.url,
         lastFetched: new Date().toISOString(),
         posts: [],
@@ -105,29 +127,28 @@ async function main() {
       } catch {}
 
       const existingGuids = new Set(data.posts.map((p) => p.guid));
+      const existingSlugs = new Set(data.posts.map((p) => p.slug));
       let newCount = 0;
 
-      // Add new posts
       for (const item of rss.items) {
         const guid = item.guid || item.link || item.title || "";
         if (existingGuids.has(guid)) continue;
 
-        const id = crypto.createHash("md5").update(guid).digest("hex");
-        const slug = `${feed.username}-${id.slice(0, 8)}-${(
-          item.title || "post"
-        )
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, "-")
-          .slice(0, 80)}`;
+        // Generate a clean, readable slug from the GUID/link
+        const baseSlug = getSlugFromGuid(item.link || guid);
+        let slug = baseSlug;
+        let suffix = 1;
+        while (existingSlugs.has(slug)) {
+          slug = `${baseSlug}-${suffix++}`;
+        }
+        existingSlugs.add(slug);
 
         data.posts.push({
-          id,
           slug,
           guid,
           title: item.title || "Untitled",
           link: item.link || "",
           pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
-          author: item.creator || item.author || feed.name,
           content: cleanContent(
             item.content || item["content:encoded"] || item.summary || "",
             item.link || "",
@@ -138,21 +159,16 @@ async function main() {
         newCount++;
       }
 
-      // Sort by date, save
       data.posts.sort(
-        (a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
+        (a, b) =>
+          new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime(),
       );
       await fs.writeFile(file, JSON.stringify(data, null, 2));
 
-      return {
-        username: feed.username,
-        new: newCount,
-        total: rss.items.length,
-      };
+      return { username: feed.username, new: newCount, total: rss.items.length };
     }),
   );
 
-  // Summary
   let totalNew = 0;
   let success = 0;
   results.forEach((r) => {
@@ -167,9 +183,7 @@ async function main() {
     }
   });
 
-  console.log(
-    `\nDone! ${totalNew} new posts from ${success}/${feeds.length} feeds`,
-  );
+  console.log(`\nDone! ${totalNew} new posts from ${success}/${feeds.length} feeds`);
 }
 
 main().catch((e) => {
