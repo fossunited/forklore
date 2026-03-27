@@ -154,7 +154,9 @@ async function main() {
             item.link || "",
           ),
           contentSnippet: item.contentSnippet || item.summary || "",
-          tags: item.categories || [],
+          tags: (item.categories || [])
+            .map((c: any) => (typeof c === "string" ? c : c?._ || ""))
+            .filter(Boolean),
         });
         newCount++;
       }
