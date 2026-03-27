@@ -1,27 +1,3 @@
-import { promises as fs } from "fs";
-import path from "path";
-
-interface StoredPost {
-  id: string;
-  slug: string;
-  title: string;
-  link: string;
-  pubDate: string;
-  author: string;
-  content: string;
-  contentSnippet: string;
-  tags: string[];
-  guid: string;
-}
-
-interface MaintainerPosts {
-  maintainerName: string;
-  maintainerUsername: string;
-  feedUrl: string;
-  lastFetched: string;
-  posts: StoredPost[];
-}
-
 export default defineEventHandler(async (event) => {
   try {
     const query = getQuery(event);
@@ -31,7 +7,7 @@ export default defineEventHandler(async (event) => {
     const tag = query.tag as string | undefined;
     const search = query.search as string | undefined;
 
-    // Load maintainer data for photos and feed URLs
+    // Load maintainer photos and feed URLs
     const photoMap: Record<string, string | undefined> = {};
     const feedUrlMap: Record<string, string | undefined> = {};
     const maintainerList = await queryCollection(event, "maintainers").all();
@@ -42,43 +18,30 @@ export default defineEventHandler(async (event) => {
       )?.link;
     }
 
-    // Read all maintainer post files
-    const planetDir = path.resolve("content/planet");
+    // Load all planet data
+    const allMaintainerData = await queryCollection(event, "planet").all();
 
-    let maintainerFiles: string[] = [];
-    try {
-      maintainerFiles = (await fs.readdir(planetDir)).filter((f) =>
-        f.endsWith(".json"),
-      );
-    } catch {
+    if (!allMaintainerData.length) {
       return {
         posts: [],
         totalPosts: 0,
         totalPages: 0,
         currentPage: page,
-        perPage: perPage,
+        perPage,
         authors: [],
         tags: [],
       };
     }
 
-    // Load all posts from all maintainers
-    const allMaintainerData: MaintainerPosts[] = await Promise.all(
-      maintainerFiles.map(async (file) => {
-        const raw = await fs.readFile(path.join(planetDir, file), "utf-8");
-        return JSON.parse(raw);
-      }),
-    );
-
-    // Flatten all posts and add maintainer info
-    const allPosts = allMaintainerData.flatMap((maintainerData) =>
-      (maintainerData.posts || []).map((post) => ({
+    // Flatten all posts
+    const allPosts = allMaintainerData.flatMap((md) =>
+      (md.posts || []).map((post: any) => ({
         ...post,
-        maintainerName: maintainerData.maintainerName,
-        maintainerUsername: maintainerData.maintainerUsername,
-        maintainerPath: `/maintainers/${maintainerData.maintainerUsername}`,
-        feedUrl: maintainerData.feedUrl,
-        maintainerPhoto: photoMap[maintainerData.maintainerUsername],
+        maintainerName: md.maintainerName,
+        maintainerUsername: md.maintainerUsername,
+        maintainerPath: `/maintainers/${md.maintainerUsername}`,
+        feedUrl: md.feedUrl,
+        maintainerPhoto: photoMap[md.maintainerUsername],
       })),
     );
 
@@ -99,7 +62,7 @@ export default defineEventHandler(async (event) => {
 
     if (tag) {
       filteredPosts = filteredPosts.filter((p) =>
-        p.tags.some((t) => t.toLowerCase() === tag.toLowerCase()),
+        p.tags.some((t: string) => t.toLowerCase() === tag.toLowerCase()),
       );
     }
 
@@ -108,12 +71,11 @@ export default defineEventHandler(async (event) => {
       filteredPosts = filteredPosts.filter(
         (p) =>
           p.title.toLowerCase().includes(searchLower) ||
-          p.contentSnippet.toLowerCase().includes(searchLower) ||
-          p.author.toLowerCase().includes(searchLower),
+          p.contentSnippet.toLowerCase().includes(searchLower),
       );
     }
 
-    // Get unique authors using a Map to deduplicate by username
+    // Unique authors
     const authorMap = new Map<
       string,
       { username: string; name: string; path: string; photo?: string; feedUrl?: string }
@@ -131,19 +93,19 @@ export default defineEventHandler(async (event) => {
     }
     const authors = Array.from(authorMap.values());
 
-    const allTags = allPosts.flatMap((p) => p.tags);
-    const tagCounts = allTags.reduce(
-      (acc, tag) => {
-        acc[tag] = (acc[tag] || 0) + 1;
-        return acc;
-      },
-      {} as Record<string, number>,
-    );
+    const tagCounts = allPosts
+      .flatMap((p) => p.tags as string[])
+      .reduce(
+        (acc, t) => {
+          acc[t] = (acc[t] || 0) + 1;
+          return acc;
+        },
+        {} as Record<string, number>,
+      );
     const tags = Object.entries(tagCounts)
       .map(([name, count]) => ({ name, count }))
       .sort((a, b) => b.count - a.count);
 
-    // Paginate
     const totalPosts = filteredPosts.length;
     const totalPages = Math.ceil(totalPosts / perPage);
     const start = (page - 1) * perPage;

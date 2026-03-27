@@ -1,6 +1,4 @@
 import { Feed } from "feed";
-import { promises as fs } from "fs";
-import path from "path";
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig();
@@ -18,28 +16,15 @@ export default defineEventHandler(async (event) => {
     updated: new Date(),
   });
 
-  const planetDir = path.resolve("content/planet");
-  const allEntries: Array<{ name: string; username: string; post: any }> = [];
+  const allMaintainerData = await queryCollection(event, "planet").all();
 
-  try {
-    const files = (await fs.readdir(planetDir)).filter((f) => f.endsWith(".json"));
-    await Promise.all(
-      files.map(async (file) => {
-        try {
-          const data = JSON.parse(
-            await fs.readFile(path.join(planetDir, file), "utf-8"),
-          );
-          for (const post of data.posts || []) {
-            allEntries.push({
-              name: data.maintainerName,
-              username: data.maintainerUsername,
-              post,
-            });
-          }
-        } catch {}
-      }),
-    );
-  } catch {}
+  type Entry = { name: string; username: string; post: any };
+  const allEntries: Entry[] = [];
+  for (const md of allMaintainerData) {
+    for (const post of md.posts || []) {
+      allEntries.push({ name: md.maintainerName, username: md.maintainerUsername, post });
+    }
+  }
 
   allEntries.sort(
     (a, b) =>
