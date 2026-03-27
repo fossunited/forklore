@@ -41,9 +41,19 @@ export default defineNuxtConfig({
     extractAsyncDataHandlers: true,
   },
   nitro: {
+    devStorage: {
+      // Payload cache key starts with "cache:" prefix; /planet (file) conflicts
+      // with /planet/username (needs directory). Target the exact namespace.
+      "cache:nuxt:payload": { driver: "memory" },
+    },
     prerender: {
       crawlLinks: true,
       routes: ["/rss", "/", "/planet", "/planet/rss"],
+      failOnError: false,
+      ignore: [
+        // Relative URLs in post HTML content get followed by crawlLinks
+        /^\/planet\/[^/]+\/[^/]*\.[^/]/,
+      ],
     },
   },
   ogImage: {
