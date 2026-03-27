@@ -2,7 +2,7 @@ import Parser from "rss-parser";
 import { promises as fs } from "fs";
 import path from "path";
 
-const parser = new Parser({ timeout: 10000 });
+const parser = new Parser({ timeout: 30000 });
 
 // Simple content cleanup
 function cleanContent(content: string, postUrl: string): string {
