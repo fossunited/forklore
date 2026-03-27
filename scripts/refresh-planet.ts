@@ -2,7 +2,12 @@ import Parser from "rss-parser";
 import { promises as fs } from "fs";
 import path from "path";
 
-const parser = new Parser({ timeout: 30000 });
+const parser = new Parser({
+  timeout: 30000,
+  headers: {
+    "User-Agent": "Mozilla/5.0 (compatible; Forklore/1.0; +https://forklore.in)",
+  },
+});
 
 // Simple content cleanup
 function cleanContent(content: string, postUrl: string): string {
@@ -189,7 +194,7 @@ async function main() {
   });
 
   console.log(`\nDone! ${totalNew} new posts from ${success}/${feeds.length} feeds`);
-  process.exit(success < feeds.length ? 1 : 0);
+  process.exit(success === 0 ? 1 : 0);
 }
 
 main().catch((e) => {
