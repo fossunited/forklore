@@ -53,15 +53,6 @@ useSeoMeta({
           >
             View posts on Planet →
           </nuxt-link>
-          <a
-            v-if="maintainer?.socials?.find(s => s.label === 'RSS')"
-            :href="maintainer.socials.find(s => s.label === 'RSS').link"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn-subtle text-sm"
-          >
-            Subscribe to RSS Feed ↗
-          </a>
         </div>
 
         <MaintainerFormRender :maintainer="maintainer" />
