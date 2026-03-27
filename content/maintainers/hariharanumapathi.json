@@ -19,6 +19,10 @@
     {
       "label": "Blog",
       "link": "https://programmerlife1.wordpress.com"
+    },
+    {
+      "label": "RSS",
+      "link": "https://programmerlife1.wordpress.com/feed/"
     }
   ],
   "projects": [

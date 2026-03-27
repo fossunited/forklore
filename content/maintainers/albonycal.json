@@ -19,6 +19,10 @@
     {
       "label": "Mastodon",
       "link": "https://fosstodon.org/@albonycal"
+    },
+    {
+      "label": "RSS",
+      "link": "https://shrirangkahale.com/index.xml"
     }
   ],
   "projects": [

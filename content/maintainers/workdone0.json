@@ -15,6 +15,10 @@
     {
       "label": "Substack",
       "link": "https://workdone0.substack.com/"
+    },
+    {
+      "label": "RSS",
+      "link": "https://workdone0.substack.com/feed"
     }
   ],
   "projects": [

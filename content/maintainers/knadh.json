@@ -3,7 +3,6 @@
   "full_name": "Kailash Nadh",
   "photo": "/images/knadh_photo.jpg",
   "designation": "Hobbyist developer, CTO",
-  "rssfeed": "https://idlip.in/index.xml",
   "socials": [
     {
       "label": "GitHub",
@@ -16,6 +15,10 @@
     {
       "label": "Web",
       "link": "https://nadh.in/"
+    },
+    {
+      "label": "RSS",
+      "link": "https://nadh.in/index.xml"
     }
   ],
   "projects": [

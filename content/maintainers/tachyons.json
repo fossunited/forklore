@@ -15,7 +15,11 @@
     {
       "label": "Web",
       "link": "https://aboobacker.in/"
-    }
+    },
+    {
+      "label": "RSS",
+      "link": "https://aboobacker.in/feed.xml"
+    }   
   ],
   "projects": [
     {

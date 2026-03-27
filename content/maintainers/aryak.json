@@ -19,6 +19,10 @@
     {
       "label": "linkedin",
       "link": "https://www.linkedin.com/in/arya-kiran"
+    },
+    {
+      "label": "RSS",
+      "link": "https://aryak.me/rss.xml"
     }
   ],
   "projects": [
