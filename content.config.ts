@@ -28,6 +28,7 @@ const maintainerSchema = z.object({
     })
   ),
   projects_list: z.string(),
+  rssfeed: z.string().optional(),
   created_on: z.string(),
 });
 
