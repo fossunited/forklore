@@ -1,0 +1,720 @@
+{
+  "maintainerName": "Aditya Athalye",
+  "maintainerUsername": "adityaathalye",
+  "feedUrl": "https://www.evalapply.org/index.xml",
+  "lastFetched": "2026-03-27T10:09:06.677Z",
+  "posts": [
+    {
+      "slug": "index-html",
+      "guid": "https://www.evalapply.org/posts/side-step-secretary-problem-hiring/",
+      "title": "Side-stepping the Secretary Problem, unwittingly.",
+      "link": "https://www.evalapply.org/posts/side-step-secretary-problem-hiring/index.html",
+      "pubDate": "Fri, 20 Mar 2026 00:00:00 +0000",
+      "content": "Having played both parts in the kabuki play that is employee-employer matchmaking, I feel the way we play it is a zero-sum game. I wish it were not so. When this post started life in 2024, as a wall of text chat message, it was brutal out there, on both sides of the software industry interview table. The ZIRP had ended. As of 2026, post-ZIRP reality has properly set in and remains bad (\"AI\" is a Fig Leaf (Enterprise Edition) for structural damage they self-inflicted, and if you look at Hyperscaler GPU depreciation schedules, they are making it order-of-magnitude worse). Set to that backdrop, here is a hopefully hopeful hiring anecdote where I think we avoided the so-called \"Secretary Problem\", framed within Optimal Stopping Theory. It can be done. Non-zero-sum hiring ought to be default-mode for any industry, AI or no AI.",
+      "contentSnippet": "Having played both parts in the kabuki play that is employee-employer matchmaking, I feel the way we play it is a zero-sum game. I wish it were not so. When this post started life in 2024, as a wall of text chat message, it was brutal out there, on both sides of the software industry interview table. The ZIRP had ended. As of 2026, post-ZIRP reality has properly set in and remains bad (\"AI\" is a Fig Leaf (Enterprise Edition) for structural damage they self-inflicted, and if you look at Hyperscaler GPU depreciation schedules, they are making it order-of-magnitude worse). Set to that backdrop, here is a hopefully hopeful hiring anecdote where I think we avoided the so-called \"Secretary Problem\", framed within Optimal Stopping Theory. It can be done. Non-zero-sum hiring ought to be default-mode for any industry, AI or no AI.",
+      "tags": [
+        "riff",
+        "organisation_design",
+        "hiring",
+        "clojure",
+        "culture",
+        "whyto",
+        "meta"
+      ]
+    },
+    {
+      "slug": "index-html-1",
+      "guid": "https://www.evalapply.org/posts/consciousness-lives-in-a-dedekind-cut/",
+      "title": "A Consciousness is A Dedekind Cut",
+      "link": "https://www.evalapply.org/posts/consciousness-lives-in-a-dedekind-cut/index.html",
+      "pubDate": "Fri, 16 Jan 2026 00:00:00 +0000",
+      "content": "Aiming for last place at the 2025 Berggruen Prize Open Essay Contest, on the theme of consciousness, intelligence, and the nature of mind in an age of advancing artificial systems.",
+      "contentSnippet": "Aiming for last place at the 2025 Berggruen Prize Open Essay Contest, on the theme of consciousness, intelligence, and the nature of mind in an age of advancing artificial systems.",
+      "tags": [
+        "meta",
+        "writing",
+        "ai",
+        "intelligence_augmentation",
+        "tools_for_thought"
+      ]
+    },
+    {
+      "slug": "index-html-2",
+      "guid": "https://www.evalapply.org/posts/after-ai/",
+      "title": "After \"AI\": Anticipating a post-LLM science & technology revolution",
+      "link": "https://www.evalapply.org/posts/after-ai/index.html",
+      "pubDate": "Mon, 29 Dec 2025 00:00:00 +0000",
+      "content": "I, for one, welcome the coming age of the post-LLM-datacenter-overinvestment-bust-fueled backyard GPU supercomputer revolution.",
+      "contentSnippet": "I, for one, welcome the coming age of the post-LLM-datacenter-overinvestment-bust-fueled backyard GPU supercomputer revolution.",
+      "tags": [
+        "meta",
+        "riff",
+        "ai",
+        "intelligence_augmentation",
+        "tools_for_thought"
+      ]
+    },
+    {
+      "slug": "index-html-3",
+      "guid": "https://www.evalapply.org/posts/lessons-from-reimplementing-clojure-comp-function/",
+      "title": "Understanding not just Clojure's comp function by re-implementing it",
+      "link": "https://www.evalapply.org/posts/lessons-from-reimplementing-clojure-comp-function/index.html",
+      "pubDate": "Fri, 08 Aug 2025 00:00:00 +0000",
+      "content": "Because I realised thinking like this is not obvious to Clojure newcomers, especially those having non-FP first languages. Because I was there too, all those moons ago! Feat. a salty footnote about the misdirected rancour popularly heaped upon CSS (yes, Cascading Style Sheets), triggered by that fact that 'comp' is a combinator, and I think they should have called it Combinatory Styling System.",
+      "contentSnippet": "Because I realised thinking like this is not obvious to Clojure newcomers, especially those having non-FP first languages. Because I was there too, all those moons ago! Feat. a salty footnote about the misdirected rancour popularly heaped upon CSS (yes, Cascading Style Sheets), triggered by that fact that 'comp' is a combinator, and I think they should have called it Combinatory Styling System.",
+      "tags": [
+        "clojure",
+        "functional_programming",
+        "howto",
+        "riff"
+      ]
+    },
+    {
+      "slug": "index-html-4",
+      "guid": "https://www.evalapply.org/posts/poor-mans-time-oriented-data-system/",
+      "title": "Poor man's bitemporal data system in SQLite and Clojure",
+      "link": "https://www.evalapply.org/posts/poor-mans-time-oriented-data-system/index.html",
+      "pubDate": "Mon, 14 Jul 2025 00:00:00 +0000",
+      "content": "On trying to mash up SQLite with ideas stolen from Accountants, Clojure, Datomic, XTDB, Rama, and Local-first-ers, to satisfy Henderson's Tenth Law. Viz., to make a sufficiently complicated data system containing an ad-hoc, informally-specified, bug-ridden, slow implementation of half of a bitemporal database. Because? Because laying about on a hammock, contemplating hopelessly complected objects like Current Databases isn't just for the Rich man.",
+      "contentSnippet": "On trying to mash up SQLite with ideas stolen from Accountants, Clojure, Datomic, XTDB, Rama, and Local-first-ers, to satisfy Henderson's Tenth Law. Viz., to make a sufficiently complicated data system containing an ad-hoc, informally-specified, bug-ridden, slow implementation of half of a bitemporal database. Because? Because laying about on a hammock, contemplating hopelessly complected objects like Current Databases isn't just for the Rich man.",
+      "tags": [
+        "functional_programming",
+        "clojure",
+        "databases",
+        "architecture",
+        "software_design",
+        "local_first",
+        "programming",
+        "web_development"
+      ]
+    },
+    {
+      "slug": "index-html-5",
+      "guid": "https://www.evalapply.org/posts/llms-are-diamonds/",
+      "title": "Riff: LLMs are Software Diamonds",
+      "link": "https://www.evalapply.org/posts/llms-are-diamonds/index.html",
+      "pubDate": "Tue, 01 Jul 2025 00:00:00 +0000",
+      "content": "The making of a diamond is a repeatable, but naturally non-reproducible process. The exact same input of carbon subject to the exact same configuration of pressure, temperature, forge, time, process control will never produce the exact same diamond twice. Once made, a diamond is unique. And once made, a diamond is forever.",
+      "contentSnippet": "The making of a diamond is a repeatable, but naturally non-reproducible process. The exact same input of carbon subject to the exact same configuration of pressure, temperature, forge, time, process control will never produce the exact same diamond twice. Once made, a diamond is unique. And once made, a diamond is forever.",
+      "tags": [
+        "meta",
+        "riff",
+        "ai",
+        "intelligence_augmentation",
+        "tools_for_thought"
+      ]
+    },
+    {
+      "slug": "index-html-6",
+      "guid": "https://www.evalapply.org/posts/demo-clojure-workflow-scicloj/",
+      "title": "Keeping it Old-Tool: REPL habits of a grug-brained Clojure programmer",
+      "link": "https://www.evalapply.org/posts/demo-clojure-workflow-scicloj/index.html",
+      "pubDate": "Fri, 28 Mar 2025 00:00:00 +0000",
+      "content": "Is demo of Grug Clojure code vibe. He no catch onto cloud LLM magics for some reason. Still prefer program with only brain-muscles. Prefer use Grug language standard library and standard dev tools. Prefer make and use all byte on local disk. Maybe luddite, maybe obsolete. Grug no mind. Fine with how he code. Besides, Grug like muscles. Hope maybe you see tip, trick, tactic to steal. Take what can use, no take what no can use.",
+      "contentSnippet": "Is demo of Grug Clojure code vibe. He no catch onto cloud LLM magics for some reason. Still prefer program with only brain-muscles. Prefer use Grug language standard library and standard dev tools. Prefer make and use all byte on local disk. Maybe luddite, maybe obsolete. Grug no mind. Fine with how he code. Besides, Grug like muscles. Hope maybe you see tip, trick, tactic to steal. Take what can use, no take what no can use.",
+      "tags": [
+        "meta",
+        "riff",
+        "howto",
+        "whyto",
+        "clojure",
+        "tools_for_thought",
+        "programming",
+        "ai",
+        "intelligence_augmentation"
+      ]
+    },
+    {
+      "slug": "index-html-7",
+      "guid": "https://www.evalapply.org/posts/writing-practices-to-10x-engineering/",
+      "title": "Becoming a software A-Team via writing culture",
+      "link": "https://www.evalapply.org/posts/writing-practices-to-10x-engineering/index.html",
+      "pubDate": "Fri, 28 Feb 2025 00:00:00 +0000",
+      "content": "Strong writing culture transforms merely competent software teams into elite ones; those proverbial 10x product builders. Although creating high-leverage  writing culture requries mindful effort, it is not rocket science and one can start small. So... why, when, and how to do it? Personal opinions ahead. Take what is useful, discard the rest.",
+      "contentSnippet": "Strong writing culture transforms merely competent software teams into elite ones; those proverbial 10x product builders. Although creating high-leverage  writing culture requries mindful effort, it is not rocket science and one can start small. So... why, when, and how to do it? Personal opinions ahead. Take what is useful, discard the rest.",
+      "tags": [
+        "meta",
+        "whyto",
+        "howto",
+        "writing",
+        "systems",
+        "culture",
+        "tools_for_thought",
+        "programming"
+      ]
+    },
+    {
+      "slug": "index-html-8",
+      "guid": "https://www.evalapply.org/posts/systems-approach-to-infrastructure-as-code/",
+      "title": "Systematically Terraforming a Brownfield of Cloud Infrastructure",
+      "link": "https://www.evalapply.org/posts/systems-approach-to-infrastructure-as-code/index.html",
+      "pubDate": "Tue, 18 Feb 2025 00:00:00 +0000",
+      "content": "Some thinking, trade-offs, theory building, and method-making one might ended up doing, in the course of bringing Infrastructure as Code (IaC) discipline to brownfield (and greenfield) services, at a small regulated fintech company, having a smaller engineering team that serves several business units, including one of India's largest national tax gateways. Only somewhat easier than reading a long compound sentence without pausing for breath. Phew.",
+      "contentSnippet": "Some thinking, trade-offs, theory building, and method-making one might ended up doing, in the course of bringing Infrastructure as Code (IaC) discipline to brownfield (and greenfield) services, at a small regulated fintech company, having a smaller engineering team that serves several business units, including one of India's largest national tax gateways. Only somewhat easier than reading a long compound sentence without pausing for breath. Phew.",
+      "tags": [
+        "howto",
+        "systems",
+        "infrastructure",
+        "devops",
+        "architecture"
+      ]
+    },
+    {
+      "slug": "index-html-9",
+      "guid": "https://www.evalapply.org/posts/hello-quarter-two-of-the-21st-century/",
+      "title": "Here's to Quarter Two of the 21st century",
+      "link": "https://www.evalapply.org/posts/hello-quarter-two-of-the-21st-century/index.html",
+      "pubDate": "Wed, 01 Jan 2025 00:00:00 +0000",
+      "content": "The first quarter elapsed. Much happened. Much didn’t. We-who-are-reading-this-right-now are perhaps a bit bruised, disheveled, a little worse for the wear, and horribly hung over. But alive. Except you, Mx. LLM. Who knows what’s next?",
+      "contentSnippet": "The first quarter elapsed. Much happened. Much didn’t. We-who-are-reading-this-right-now are perhaps a bit bruised, disheveled, a little worse for the wear, and horribly hung over. But alive. Except you, Mx. LLM. Who knows what’s next?",
+      "tags": [
+        "meta",
+        "riff"
+      ]
+    },
+    {
+      "slug": "index-html-10",
+      "guid": "https://www.evalapply.org/posts/clojure-web-app-from-scratch/",
+      "title": "Clojuring the web application stack: Meditation One",
+      "link": "https://www.evalapply.org/posts/clojure-web-app-from-scratch/index.html",
+      "pubDate": "Sat, 24 Aug 2024 00:00:00 +0000",
+      "content": "In a land bereft of a canonical \"killer app\" web framework or two, one must think about the what, why, how, where of all the moving parts. Out here, one must become a student of web framework architecture in addition to web application architecture. For here, in Clojure-land, the two are one. ☯",
+      "contentSnippet": "In a land bereft of a canonical \"killer app\" web framework or two, one must think about the what, why, how, where of all the moving parts. Out here, one must become a student of web framework architecture in addition to web application architecture. For here, in Clojure-land, the two are one. ☯",
+      "tags": [
+        "clojure",
+        "web_development",
+        "websites",
+        "functional_programming",
+        "software_design",
+        "architecture",
+        "howto",
+        "whyto"
+      ]
+    },
+    {
+      "slug": "index-html-11",
+      "guid": "https://www.evalapply.org/posts/poor-mans-job-runner-clojure-agents/",
+      "title": "Poor man's job runner with Clojure Agents",
+      "link": "https://www.evalapply.org/posts/poor-mans-job-runner-clojure-agents/index.html",
+      "pubDate": "Sun, 14 Jul 2024 00:00:00 +0000",
+      "content": "On (mis)using Clojure's concurrency features to make an in-memory job runner, because I needed an excuse to use more than atoms for once. Definitely not Rich Hickey's \"Ants\" demo.",
+      "contentSnippet": "On (mis)using Clojure's concurrency features to make an in-memory job runner, because I needed an excuse to use more than atoms for once. Definitely not Rich Hickey's \"Ants\" demo.",
+      "tags": [
+        "riff",
+        "functional_programming",
+        "clojure",
+        "web_development"
+      ]
+    },
+    {
+      "slug": "index-html-12",
+      "guid": "https://www.evalapply.org/posts/writing-maketh-the-10x-developer/",
+      "title": "Writing maketh the 10x Developer. More so the 10x development team.",
+      "link": "https://www.evalapply.org/posts/writing-maketh-the-10x-developer/index.html",
+      "pubDate": "Fri, 05 Apr 2024 00:00:00 +0000",
+      "content": "Writing is thinking. Software is peoples' thoughts on repeat. Developers who can pen their thoughts clearly multiply their impact. This matters even more in group work. Common sense rules; no literature major necessary.",
+      "contentSnippet": "Writing is thinking. Software is peoples' thoughts on repeat. Developers who can pen their thoughts clearly multiply their impact. This matters even more in group work. Common sense rules; no literature major necessary.",
+      "tags": [
+        "riff",
+        "meta",
+        "whyto",
+        "writing",
+        "culture",
+        "tools_for_thought",
+        "programming"
+      ]
+    },
+    {
+      "slug": "index-html-13",
+      "guid": "https://www.evalapply.org/posts/halting-ai/",
+      "title": "Halting AI",
+      "link": "https://www.evalapply.org/posts/halting-ai/index.html",
+      "pubDate": "Wed, 13 Mar 2024 00:00:00 +0000",
+      "content": "The current wave of AI tools is incredibly cool. I hope more people get distracted by the incredible coolness and bet on this wave of AI, because I'm betting the other way, on the hot mess of human general intelligence.",
+      "contentSnippet": "The current wave of AI tools is incredibly cool. I hope more people get distracted by the incredible coolness and bet on this wave of AI, because I'm betting the other way, on the hot mess of human general intelligence.",
+      "tags": [
+        "meta",
+        "riff",
+        "ai",
+        "intelligence_augmentation",
+        "tools_for_thought"
+      ]
+    },
+    {
+      "slug": "index-html-14",
+      "guid": "https://www.evalapply.org/posts/mycelium-clj/",
+      "title": "Riff: A \"mycelium-clj\" for the Clojure ecosystem?",
+      "link": "https://www.evalapply.org/posts/mycelium-clj/index.html",
+      "pubDate": "Thu, 19 Oct 2023 00:00:00 +0000",
+      "content": "In a world of concrete objects, steel frameworks bring sense and order. In a forest of composable tools, libraries and open-ended schemas, it would be the mycelia. A frustrated yet optimistic man muses \"Might such a thing come to be?\".",
+      "contentSnippet": "In a world of concrete objects, steel frameworks bring sense and order. In a forest of composable tools, libraries and open-ended schemas, it would be the mycelia. A frustrated yet optimistic man muses \"Might such a thing come to be?\".",
+      "tags": [
+        "riff",
+        "clojure",
+        "systems",
+        "architecture",
+        "recurse_center"
+      ]
+    },
+    {
+      "slug": "index-html-15",
+      "guid": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-ide-experience/",
+      "title": "Emerging from dotemacs bankruptcy the hard way: integrating the IDE (feat. Clojure(Script))",
+      "link": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-ide-experience/index.html",
+      "pubDate": "Thu, 07 Sep 2023 00:00:00 +0000",
+      "content": "The one in which we design a rich Integrated Development Environment (IDE) experience, using Clojure as our muse. Featuring Language Server Protocol (lsp-mode + clojure-lsp), clojure-mode, cider, and more! Buckle up and get a coffee.",
+      "contentSnippet": "The one in which we design a rich Integrated Development Environment (IDE) experience, using Clojure as our muse. Featuring Language Server Protocol (lsp-mode + clojure-lsp), clojure-mode, cider, and more! Buckle up and get a coffee.",
+      "tags": [
+        "programming",
+        "emacs",
+        "howto",
+        "recurse_center",
+        "clojure"
+      ]
+    },
+    {
+      "slug": "index-html-16",
+      "guid": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-getting-about/",
+      "title": "Emerging from dotemacs bankruptcy the hard way: getting about",
+      "link": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-getting-about/index.html",
+      "pubDate": "Wed, 02 Aug 2023 00:00:00 +0000",
+      "content": "We want to maximize our ability to \"stay in The Zone\". So the aim is to create the fastest, smoothest, tightly integrated, and unobtrusive mechanism to get things done using the keyboard alone.",
+      "contentSnippet": "We want to maximize our ability to \"stay in The Zone\". So the aim is to create the fastest, smoothest, tightly integrated, and unobtrusive mechanism to get things done using the keyboard alone.",
+      "tags": [
+        "programming",
+        "emacs",
+        "howto",
+        "recurse_center"
+      ]
+    },
+    {
+      "slug": "index-html-17",
+      "guid": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-midway-refactor/",
+      "title": "Emerging from dotemacs bankruptcy the hard way: the midway refactor",
+      "link": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-midway-refactor/index.html",
+      "pubDate": "Sun, 23 Jul 2023 00:00:00 +0000",
+      "content": "Or the one in which we confront our elisp n00bishness and try to be better at using it. And we learn new habits to understand our Emacs better. Better late than never.",
+      "contentSnippet": "Or the one in which we confront our elisp n00bishness and try to be better at using it. And we learn new habits to understand our Emacs better. Better late than never.",
+      "tags": [
+        "programming",
+        "emacs",
+        "howto",
+        "recurse_center"
+      ]
+    },
+    {
+      "slug": "index-html-18",
+      "guid": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-packages/",
+      "title": "Emerging from dotemacs bankruptcy the hard way: package management",
+      "link": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-packages/index.html",
+      "pubDate": "Thu, 06 Jul 2023 00:00:00 +0000",
+      "content": "Elpa, Melpa, git repo. Vendor package straight from source. It compiled? Fetch some more! Elpa, Melpa, git repo. In more adult terms, we learn to use use-package to fetch, install, initialise, configure useful packages that enhance our Emacs experience.",
+      "contentSnippet": "Elpa, Melpa, git repo. Vendor package straight from source. It compiled? Fetch some more! Elpa, Melpa, git repo. In more adult terms, we learn to use use-package to fetch, install, initialise, configure useful packages that enhance our Emacs experience.",
+      "tags": [
+        "programming",
+        "emacs",
+        "howto",
+        "recurse_center"
+      ]
+    },
+    {
+      "slug": "index-html-19",
+      "guid": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-init-begins/",
+      "title": "Emerging from dotemacs bankruptcy the hard way: init begins",
+      "link": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy-init-begins/index.html",
+      "pubDate": "Tue, 04 Jul 2023 00:00:00 +0000",
+      "content": "The first action must, of course, be to colour the bikeshed and set some decent defaults.",
+      "contentSnippet": "The first action must, of course, be to colour the bikeshed and set some decent defaults.",
+      "tags": [
+        "programming",
+        "emacs",
+        "howto",
+        "recurse_center"
+      ]
+    },
+    {
+      "slug": "index-html-20",
+      "guid": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy/",
+      "title": "Emerging from dotemacs bankruptcy the hard way: Prelude",
+      "link": "https://www.evalapply.org/posts/emerging-from-dotemacs-bankruptcy/index.html",
+      "pubDate": "Thu, 29 Jun 2023 00:00:00 +0000",
+      "content": "Or, finally biting the bullet to redesigning my developerly and writerly experience, from the ground up, with Emacs.",
+      "contentSnippet": "Or, finally biting the bullet to redesigning my developerly and writerly experience, from the ground up, with Emacs.",
+      "tags": [
+        "programming",
+        "emacs",
+        "howto",
+        "recurse_center"
+      ]
+    },
+    {
+      "slug": "index-html-21",
+      "guid": "https://www.evalapply.org/posts/what-have-you-been-curious-about/",
+      "title": "What have you been curious about?",
+      "link": "https://www.evalapply.org/posts/what-have-you-been-curious-about/index.html",
+      "pubDate": "Wed, 21 Jun 2023 00:00:00 +0000",
+      "content": "Arguably a more interesting, revealing, and kinder question than \"What are you curious about?\"",
+      "contentSnippet": "Arguably a more interesting, revealing, and kinder question than \"What are you curious about?\"",
+      "tags": [
+        "meta",
+        "riff"
+      ]
+    },
+    {
+      "slug": "index-html-22",
+      "guid": "https://www.evalapply.org/posts/software-demos/",
+      "title": "Software demos as deliberate acts of serious play",
+      "link": "https://www.evalapply.org/posts/software-demos/index.html",
+      "pubDate": "Sun, 04 Jun 2023 00:00:00 +0000",
+      "content": "Making a software demo is a form of deliberate, serious play. An act that feeds our curiosity, inventiveness, and drive. It enlivens. It enriches. It entertains. And as we asymptotically approach the A.G.I. that's just around the corner, the capacity for deliberate, serious play will remain distinctively, deeply, deliciously human. Career software people like yours truly may please take note!",
+      "contentSnippet": "Making a software demo is a form of deliberate, serious play. An act that feeds our curiosity, inventiveness, and drive. It enlivens. It enriches. It entertains. And as we asymptotically approach the A.G.I. that's just around the corner, the capacity for deliberate, serious play will remain distinctively, deeply, deliciously human. Career software people like yours truly may please take note!",
+      "tags": [
+        "programming",
+        "culture",
+        "whyto",
+        "software_design",
+        "meta"
+      ]
+    },
+    {
+      "slug": "index-html-23",
+      "guid": "https://www.evalapply.org/posts/cold-restart-total-outage/",
+      "title": "Cold restart whole system after total outage",
+      "link": "https://www.evalapply.org/posts/cold-restart-total-outage/index.html",
+      "pubDate": "Fri, 07 Apr 2023 00:00:00 +0000",
+      "content": "\"What are folks’ views on systems so large where cold-starting the whole system is almost impossible?\"... — M'colleague, Shivam, In A Slackroom Next Door.",
+      "contentSnippet": "\"What are folks’ views on systems so large where cold-starting the whole system is almost impossible?\"... — M'colleague, Shivam, In A Slackroom Next Door.",
+      "tags": [
+        "riff",
+        "systems",
+        "complexity",
+        "meta"
+      ]
+    },
+    {
+      "slug": "index-html-24",
+      "guid": "https://www.evalapply.org/posts/bad-matrix/",
+      "title": "Bad Matrix",
+      "link": "https://www.evalapply.org/posts/bad-matrix/index.html",
+      "pubDate": "Tue, 14 Feb 2023 00:00:00 +0000",
+      "content": "A while ago, someone in the Recurse Center nerdiverse decided we needed a \"Bad Print\". They made one. Things escalated. Bad Matrix happened.",
+      "contentSnippet": "A while ago, someone in the Recurse Center nerdiverse decided we needed a \"Bad Print\". They made one. Things escalated. Bad Matrix happened.",
+      "tags": [
+        "riff",
+        "bash"
+      ]
+    },
+    {
+      "slug": "index-html-25",
+      "guid": "https://www.evalapply.org/posts/tools-for-thought/",
+      "title": "Riff: Classifying Tools for Thought",
+      "link": "https://www.evalapply.org/posts/tools-for-thought/index.html",
+      "pubDate": "Thu, 19 Jan 2023 00:00:00 +0000",
+      "content": "Trying out a classification for \"Tools for Thought\" as a means of augmenting the human intellect, hot on the heels of recent community conversations about ChatGPT, CoPilot, Stable Diffusion etc...",
+      "contentSnippet": "Trying out a classification for \"Tools for Thought\" as a means of augmenting the human intellect, hot on the heels of recent community conversations about ChatGPT, CoPilot, Stable Diffusion etc...",
+      "tags": [
+        "meta",
+        "riff",
+        "ai",
+        "intelligence_augmentation",
+        "tools_for_thought"
+      ]
+    },
+    {
+      "slug": "index-html-26",
+      "guid": "https://www.evalapply.org/posts/animate-text-art-javascript/",
+      "title": "Animating Text Art in JavaScript",
+      "link": "https://www.evalapply.org/posts/animate-text-art-javascript/index.html",
+      "pubDate": "Mon, 16 Jan 2023 00:00:00 +0000",
+      "content": "It is with no small thanks to MDN, StackOverflow, Firefox's support for countless open tabs, JavaScript's support for first-class functions, and first-class supportive colleagues, I learned it is possible for a web front end novice to program \"text art animations\". Whatever that is even. Because I thoroughly enjoyed doing just that for Hanukkah of Data 2022. Here's how it went down.",
+      "contentSnippet": "It is with no small thanks to MDN, StackOverflow, Firefox's support for countless open tabs, JavaScript's support for first-class functions, and first-class supportive colleagues, I learned it is possible for a web front end novice to program \"text art animations\". Whatever that is even. Because I thoroughly enjoyed doing just that for Hanukkah of Data 2022. Here's how it went down.",
+      "tags": [
+        "hanukkah_of_data",
+        "text_art",
+        "design",
+        "websites",
+        "frontend",
+        "javascript",
+        "functional_programming",
+        "web_development",
+        "howto"
+      ]
+    },
+    {
+      "slug": "index-html-27",
+      "guid": "https://www.evalapply.org/posts/clojure-mars-rover/",
+      "title": "A Clojure view of \"Mars Rover\"",
+      "link": "https://www.evalapply.org/posts/clojure-mars-rover/index.html",
+      "pubDate": "Wed, 19 Oct 2022 00:00:00 +0000",
+      "content": "Here I illustrate how Clojurists (including Yours Truly) like to solve problems and model things using hammocks, pure functions, and the \"it's just data\" ideology. Also, while the *problem* focuses on \"design in the small\" of application logic, many ideas in the *solution* can—and do—scale all the way to \"design in the large\" of whole systems.",
+      "contentSnippet": "Here I illustrate how Clojurists (including Yours Truly) like to solve problems and model things using hammocks, pure functions, and the \"it's just data\" ideology. Also, while the *problem* focuses on \"design in the small\" of application logic, many ideas in the *solution* can—and do—scale all the way to \"design in the large\" of whole systems.",
+      "tags": [
+        "clojure",
+        "functional_programming",
+        "software_design",
+        "architecture"
+      ]
+    },
+    {
+      "slug": "index-html-28",
+      "guid": "https://www.evalapply.org/posts/which-clojure-codebases-to-read-how-and-why/",
+      "title": "Which Clojure codebases should I read? How and why?",
+      "link": "https://www.evalapply.org/posts/which-clojure-codebases-to-read-how-and-why/index.html",
+      "pubDate": "Fri, 29 Apr 2022 00:00:00 +0000",
+      "content": "Newcomers to Clojure so frequently ask this question that an FAQ/Guide is being discussed, to add to the Clojure website. I struggled a lot with the question too, when starting off in Clojureland. Here are my notes and opinions.",
+      "contentSnippet": "Newcomers to Clojure so frequently ask this question that an FAQ/Guide is being discussed, to add to the Clojure website. I struggled a lot with the question too, when starting off in Clojureland. Here are my notes and opinions.",
+      "tags": [
+        "clojure",
+        "howto",
+        "whyto"
+      ]
+    },
+    {
+      "slug": "index-html-29",
+      "guid": "https://www.evalapply.org/posts/shell-aint-a-bad-place-to-fp-part-2-functions-as-unix-tools/",
+      "title": "Shell ain't a bad place to FP: part 2/N: Functions as Unix Tools",
+      "link": "https://www.evalapply.org/posts/shell-aint-a-bad-place-to-fp-part-2-functions-as-unix-tools/index.html",
+      "pubDate": "Wed, 27 Apr 2022 00:00:00 +0000",
+      "content": "Or, the one in which we hand-craft nano Unix tools using Bash functions.",
+      "contentSnippet": "Or, the one in which we hand-craft nano Unix tools using Bash functions.",
+      "tags": [
+        "bash",
+        "unix",
+        "functional_programming",
+        "architecture"
+      ]
+    },
+    {
+      "slug": "index-html-30",
+      "guid": "https://www.evalapply.org/posts/why-and-how-i-use-org-mode/",
+      "title": "Why and How I use \"Org Mode\" for my writing and more",
+      "link": "https://www.evalapply.org/posts/why-and-how-i-use-org-mode/index.html",
+      "pubDate": "Tue, 19 Apr 2022 00:00:00 +0000",
+      "content": "I find myself telling people that they will have to pry org-mode from my cold dead hands. Which befuddles me. Why, as an ingrate software nerd who has soured on software technology — talk about biting the hand that feeds — do I evince such strong sentiment about a software program?!",
+      "contentSnippet": "I find myself telling people that they will have to pry org-mode from my cold dead hands. Which befuddles me. Why, as an ingrate software nerd who has soured on software technology — talk about biting the hand that feeds — do I evince such strong sentiment about a software program?!",
+      "tags": [
+        "howto",
+        "whyto",
+        "writing",
+        "emacs",
+        "org_mode",
+        "local_first",
+        "notebooks",
+        "knowledge_management",
+        "tools_for_thought"
+      ]
+    },
+    {
+      "slug": "index-html-31",
+      "guid": "https://www.evalapply.org/posts/n-ways-to-fizzbuzz-in-clojure/",
+      "title": "n ways to FizzBuzz in Clojure",
+      "link": "https://www.evalapply.org/posts/n-ways-to-fizzbuzz-in-clojure/index.html",
+      "pubDate": "Fri, 25 Mar 2022 00:00:00 +0000",
+      "content": "FizzBuzz is everywhere. Every programmer passes through its rite of passage, or at least bears witness to another. Over the years, many gentlenerds have taken it upon themselves to discover ever new ways to incant those hoary symbols. I hereby enjoin these few drops of Clojure to that roiling ocean of FizzBuzzery.",
+      "contentSnippet": "FizzBuzz is everywhere. Every programmer passes through its rite of passage, or at least bears witness to another. Over the years, many gentlenerds have taken it upon themselves to discover ever new ways to incant those hoary symbols. I hereby enjoin these few drops of Clojure to that roiling ocean of FizzBuzzery.",
+      "tags": [
+        "clojure",
+        "functional_programming",
+        "howto",
+        "riff"
+      ]
+    },
+    {
+      "slug": "index-html-32",
+      "guid": "https://www.evalapply.org/posts/shell-aint-a-bad-place-to-fp-part-1-doug-mcilroys-pipeline/",
+      "title": "Shell ain't a bad place to FP: part 1/N: McIlroy's Pipeline",
+      "link": "https://www.evalapply.org/posts/shell-aint-a-bad-place-to-fp-part-1-doug-mcilroys-pipeline/index.html",
+      "pubDate": "Fri, 11 Mar 2022 00:00:00 +0000",
+      "content": "Or, the one in which we \"take apart\" Douglas McIlroy's pipeline from 1986. Doing so teaches an object lesson about the essence of modular, composable, functional architecture.",
+      "contentSnippet": "Or, the one in which we \"take apart\" Douglas McIlroy's pipeline from 1986. Doing so teaches an object lesson about the essence of modular, composable, functional architecture.",
+      "tags": [
+        "bash",
+        "unix",
+        "functional_programming",
+        "architecture"
+      ]
+    },
+    {
+      "slug": "index-html-33",
+      "guid": "https://www.evalapply.org/posts/shite-the-static-sites-from-shell-part-1/",
+      "title": "shite: static sites from shell (part 1/2) — feeling the html.energy",
+      "link": "https://www.evalapply.org/posts/shite-the-static-sites-from-shell-part-1/index.html",
+      "pubDate": "Tue, 08 Mar 2022 00:00:00 +0000",
+      "content": "This primer is for people like me, who long dreamed of lovingly hand-crafting our own home on the Internet. We begin our quest by seeing, feeling, and harnessing pure HTML.energy.",
+      "contentSnippet": "This primer is for people like me, who long dreamed of lovingly hand-crafting our own home on the Internet. We begin our quest by seeing, feeling, and harnessing pure HTML.energy.",
+      "tags": [
+        "design",
+        "websites",
+        "frontend",
+        "web_development",
+        "bash",
+        "howto",
+        "whyto"
+      ]
+    },
+    {
+      "slug": "index-html-34",
+      "guid": "https://www.evalapply.org/posts/dismal-arithmetic-dyalog-apl-clojure/",
+      "title": "Dismal Arithmetic in Dyalog APL and Clojure",
+      "link": "https://www.evalapply.org/posts/dismal-arithmetic-dyalog-apl-clojure/index.html",
+      "pubDate": "Fri, 25 Feb 2022 00:00:00 +0000",
+      "content": "Dismal arithmetic is just like the arithmetic you learned in school, only simpler: there are no carries, when you add digits you just take the largest, and when you multiply digits you take the smallest. How does code look in the two languages I like a lot; Clojure and APL?",
+      "contentSnippet": "Dismal arithmetic is just like the arithmetic you learned in school, only simpler: there are no carries, when you add digits you just take the largest, and when you multiply digits you take the smallest. How does code look in the two languages I like a lot; Clojure and APL?",
+      "tags": [
+        "clojure",
+        "apl",
+        "functional_programming",
+        "riff"
+      ]
+    },
+    {
+      "slug": "index-html-35",
+      "guid": "https://www.evalapply.org/posts/shell-aint-a-bad-place-to-fp-part-0-intro/",
+      "title": "Shell ain't a bad place to FP: part 0/N: Introduction",
+      "link": "https://www.evalapply.org/posts/shell-aint-a-bad-place-to-fp-part-0-intro/index.html",
+      "pubDate": "Wed, 23 Feb 2022 00:00:00 +0000",
+      "content": "Or, *Supremely Functional Bash Programming*, an exploration in N parts...",
+      "contentSnippet": "Or, *Supremely Functional Bash Programming*, an exploration in N parts...",
+      "tags": [
+        "bash",
+        "unix",
+        "functional_programming",
+        "architecture"
+      ]
+    },
+    {
+      "slug": "index-html-36",
+      "guid": "https://www.evalapply.org/posts/what-makes-functional-programming-systems-functional/",
+      "title": "What makes Functional Programs and Systems \"Functional\"?",
+      "link": "https://www.evalapply.org/posts/what-makes-functional-programming-systems-functional/index.html",
+      "pubDate": "Tue, 22 Feb 2022 00:00:00 +0000",
+      "content": "In which we ponder the Functional Nature of Life, The Universe, and Everything. Please feel free to follow through the weeds, or jump straight to the bottom for my 2 nano BTC on the matter. (Or my current state of mind, at any rate.)",
+      "contentSnippet": "In which we ponder the Functional Nature of Life, The Universe, and Everything. Please feel free to follow through the weeds, or jump straight to the bottom for my 2 nano BTC on the matter. (Or my current state of mind, at any rate.)",
+      "tags": [
+        "meta",
+        "functional_programming",
+        "architecture",
+        "systems"
+      ]
+    },
+    {
+      "slug": "index-html-37",
+      "guid": "https://www.evalapply.org/posts/dont-hurry-dont-stop-sad-version/",
+      "title": "Baby don't hurry, don't stop (feat. Melancholy)",
+      "link": "https://www.evalapply.org/posts/dont-hurry-dont-stop-sad-version/index.html",
+      "pubDate": "Mon, 14 Feb 2022 00:00:00 +0000",
+      "content": "Here lies melancholy that I put to paper from a particularly deep hole, not too long ago. It may ruin your day, or it may make you feel a little bit understood about your dark moments. Your mileage will vary.",
+      "contentSnippet": "Here lies melancholy that I put to paper from a particularly deep hole, not too long ago. It may ruin your day, or it may make you feel a little bit understood about your dark moments. Your mileage will vary.",
+      "tags": [
+        "meta",
+        "mentalhealth"
+      ]
+    },
+    {
+      "slug": "index-html-38",
+      "guid": "https://www.evalapply.org/posts/people-culture-values-strategy-technology/",
+      "title": "people > culture > values > strategy > technology",
+      "link": "https://www.evalapply.org/posts/people-culture-values-strategy-technology/index.html",
+      "pubDate": "Fri, 11 Feb 2022 00:00:00 +0000",
+      "content": "Technology is—and ought to be—the /byproduct/ of far more important, powerful, and deep-rooted aspects of organisations — including wholesale societies. The pandemic of technology-solutionism gleefully embraced and amplified by all and sundry makes me believe that people seem to have decided it's the other way around.",
+      "contentSnippet": "Technology is—and ought to be—the /byproduct/ of far more important, powerful, and deep-rooted aspects of organisations — including wholesale societies. The pandemic of technology-solutionism gleefully embraced and amplified by all and sundry makes me believe that people seem to have decided it's the other way around.",
+      "tags": [
+        "organisation_design",
+        "systems",
+        "culture"
+      ]
+    },
+    {
+      "slug": "index-html-39",
+      "guid": "https://www.evalapply.org/posts/reader-app-pandoc-bash/",
+      "title": "Poor man's Reader App with Pandoc & Bash",
+      "link": "https://www.evalapply.org/posts/reader-app-pandoc-bash/index.html",
+      "pubDate": "Thu, 10 Feb 2022 00:00:00 +0000",
+      "content": "Every so often, I want to avoid opening a website in a browser, for ... reasons.",
+      "contentSnippet": "Every so often, I want to avoid opening a website in a browser, for ... reasons.",
+      "tags": [
+        "functional_programming",
+        "bash",
+        "unix",
+        "riff"
+      ]
+    },
+    {
+      "slug": "index-html-40",
+      "guid": "https://www.evalapply.org/posts/how-to-give-a-conference-talk/",
+      "title": "How To Be a Totally Natural Conference Speaker?",
+      "link": "https://www.evalapply.org/posts/how-to-give-a-conference-talk/index.html",
+      "pubDate": "Thu, 03 Feb 2022 00:00:00 +0000",
+      "content": "Spurred by a conversation with a whip-smart friend and fellow gentlenerd, who unreasonably believed (believes?) they have nothing worth speaking about at the software conferences we like (IN/Clojure, FunctionalConf, local meetups etc).",
+      "contentSnippet": "Spurred by a conversation with a whip-smart friend and fellow gentlenerd, who unreasonably believed (believes?) they have nothing worth speaking about at the software conferences we like (IN/Clojure, FunctionalConf, local meetups etc).",
+      "tags": [
+        "meta",
+        "writing",
+        "speaking"
+      ]
+    },
+    {
+      "slug": "index-html-41",
+      "guid": "https://www.evalapply.org/posts/software-debt/",
+      "title": "Reframe Technical Debt as Software Debt. Treat it like a AAA-rated CDO.",
+      "link": "https://www.evalapply.org/posts/software-debt/index.html",
+      "pubDate": "Thu, 20 Jan 2022 00:00:00 +0000",
+      "content": "I've long struggled with the *Technical* Debt metaphor. It was immediately useful when I first heard it. I still think it is useful, albeit as a starting point. The more I worked with software, the more infuriatingly incomplete it started to feel. So I've reframed it as *Software* Debt, for myself. Here's what I'm thinking.",
+      "contentSnippet": "I've long struggled with the *Technical* Debt metaphor. It was immediately useful when I first heard it. I still think it is useful, albeit as a starting point. The more I worked with software, the more infuriatingly incomplete it started to feel. So I've reframed it as *Software* Debt, for myself. Here's what I'm thinking.",
+      "tags": [
+        "risk",
+        "complexity",
+        "bias",
+        "systems",
+        "programming",
+        "architecture",
+        "culture",
+        "quality",
+        "software_design",
+        "scale"
+      ]
+    },
+    {
+      "slug": "index-html-42",
+      "guid": "https://www.evalapply.org/posts/how-to-not-die-by-a-thousand-cuts/",
+      "title": "How To Not Die By A Thousand Cuts. Or, How To Think About Software Quality.",
+      "link": "https://www.evalapply.org/posts/how-to-not-die-by-a-thousand-cuts/index.html",
+      "pubDate": "Thu, 20 Jan 2022 00:00:00 +0000",
+      "content": "Not a weighty meandering 300 page Zen dialogue on Motorcycle Maintenance. Merely a meandering blog post in which one contemplates /Quality/ of software products.",
+      "contentSnippet": "Not a weighty meandering 300 page Zen dialogue on Motorcycle Maintenance. Merely a meandering blog post in which one contemplates /Quality/ of software products.",
+      "tags": [
+        "quality",
+        "risk",
+        "systems"
+      ]
+    },
+    {
+      "slug": "index-html-43",
+      "guid": "https://www.evalapply.org/posts/systems-scale-value/",
+      "title": "Systems, Scale, Value",
+      "link": "https://www.evalapply.org/posts/systems-scale-value/index.html",
+      "pubDate": "Sat, 13 Nov 2021 00:00:00 +0000",
+      "content": "Creating things is a delicate endeavour, fraught with peril. People struggle forward through crazy marketplace and environmental complexities just to get from one day to the other. Yet I can't shake off the feeling that we make it harder for ourselves than it should be. I've been trying to work out why. There's a lot to unpack. This post is a start at thinking about it in public.",
+      "contentSnippet": "Creating things is a delicate endeavour, fraught with peril. People struggle forward through crazy marketplace and environmental complexities just to get from one day to the other. Yet I can't shake off the feeling that we make it harder for ourselves than it should be. I've been trying to work out why. There's a lot to unpack. This post is a start at thinking about it in public.",
+      "tags": [
+        "systems",
+        "scale",
+        "complexity"
+      ]
+    },
+    {
+      "slug": "index-html-44",
+      "guid": "https://www.evalapply.org/posts/hello-world/",
+      "title": "In the beginning, was the domain name",
+      "link": "https://www.evalapply.org/posts/hello-world/index.html",
+      "pubDate": "Wed, 10 Nov 2021 00:00:00 +0000",
+      "content": "How this blog came to be is a minor miracle. Long story short, I conned myself into believing nobody will find /and/ read it. But you're here, aren't you? And you're reading this. Aren't You? Confucamus. Well, here's how you got here.",
+      "contentSnippet": "How this blog came to be is a minor miracle. Long story short, I conned myself into believing nobody will find /and/ read it. But you're here, aren't you? And you're reading this. Aren't You? Confucamus. Well, here's how you got here.",
+      "tags": [
+        "hello_world",
+        "howto",
+        "whyto"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "maintainerName": "Divya Mohan",
+  "maintainerUsername": "divya-mohan0209",
+  "feedUrl": "https://www.divyamohan.com/rss",
+  "lastFetched": "2026-03-27T10:09:07.091Z",
+  "posts": [
+    {
+      "slug": "submission-dtf-bill-2026",
+      "guid": "699e55beb7efd80001dab2af",
+      "title": "Technical Submission on India’s Digital Trade Facilitation Bill, 2026",
+      "link": "https://www.divyamohan.com/submission-dtf-bill-2026/",
+      "pubDate": "Wed, 25 Feb 2026 03:08:48 GMT",
+      "content": "<h2 id=\"introduction\"><strong>Introduction</strong></h2><p>A sizeable portion of the Indian and global tech ecosystem was gathered at the&#xA0;<a href=\"https://impact.indiaai.gov.in/\" rel=\"noreferrer\">India AI Impact Summit</a> in New Delhi last week. While I missed attending it due to personal reasons, as an&#xA0;open source maintainer and an alumnus of <a href=\"https://school.takshashila.org.in/gcpp\" rel=\"noreferrer\">The Takshashila Institution&apos;s GCPP</a></p>",
+      "contentSnippet": "Introduction\nA sizeable portion of the Indian and global tech ecosystem was gathered at the India AI Impact Summit in New Delhi last week. While I missed attending it due to personal reasons, as an open source maintainer and an alumnus of The Takshashila Institution's GCPP",
+      "tags": []
+    },
+    {
+      "slug": "riscing-it",
+      "guid": "67c98a547ba4680001b5d1e2",
+      "title": "RISC-ing It: An incoming landscape shift?",
+      "link": "https://www.divyamohan.com/riscing-it/",
+      "pubDate": "Thu, 06 Mar 2025 14:27:33 GMT",
+      "content": "The implications of China's RISC-V strategy on global semiconductor and open source ecosystems.",
+      "contentSnippet": "The implications of China's RISC-V strategy on global semiconductor and open source ecosystems.",
+      "tags": [
+        "policy",
+        "tech",
+        "Open Source"
+      ]
+    },
+    {
+      "slug": "open-source-security",
+      "guid": "67c1329c68de0600017a641f",
+      "title": "Open Source Security: The Good, The Bad, The Vulnerable",
+      "link": "https://www.divyamohan.com/open-source-security/",
+      "pubDate": "Fri, 28 Feb 2025 04:51:07 GMT",
+      "content": "Open source is the backbone of nearly every application in every industry! As great as this may seem for the movement, it raises important questions about our progress. This panel discussion at the State of Open Conference 2025 explores some of these q's and discusses future implications.",
+      "contentSnippet": "Open source is the backbone of nearly every application in every industry! As great as this may seem for the movement, it raises important questions about our progress. This panel discussion at the State of Open Conference 2025 explores some of these q's and discusses future implications.",
+      "tags": [
+        "Open Source",
+        "tech",
+        "policy"
+      ]
+    },
+    {
+      "slug": "blog-bts-community-event-part-2",
+      "guid": "64a167f5c09a0a0001dfda6e",
+      "title": "Behind the scenes of organising a community-driven event - part 2",
+      "link": "https://www.divyamohan.com/blog-bts-community-event-part-2/",
+      "pubDate": "Fri, 07 Jul 2023 08:05:48 GMT",
+      "content": "<p>In the first part of the series, I discussed our why behind organizing a community-driven event that was also the very first edition of Kubernetes Community Days in Mumbai. In this post, we&apos;ll dive into the juicy bits of <strong>how</strong> we went about setting the stage (very literally)</p>",
+      "contentSnippet": "In the first part of the series, I discussed our why behind organizing a community-driven event that was also the very first edition of Kubernetes Community Days in Mumbai. In this post, we'll dive into the juicy bits of how we went about setting the stage (very literally)",
+      "tags": [
+        "Open Source",
+        "KCD Mumbai",
+        "Community",
+        "Blog"
+      ]
+    },
+    {
+      "slug": "blog-bts-community-event",
+      "guid": "6493b203d69407000167e75a",
+      "title": "Behind the scenes of organising a community-driven event - part 1",
+      "link": "https://www.divyamohan.com/blog-bts-community-event/",
+      "pubDate": "Thu, 22 Jun 2023 06:14:32 GMT",
+      "content": "<p>I&apos;ll be the first one to admit - I had absolutely no plans of writing anything about organizing community-driven events. After all, organizing one (and helping co-organize another, as a volunteer) didn&apos;t make me an expert. </p><figure class=\"kg-card kg-image-card\"><img src=\"https://www.divyamohan.com/content/images/2023/06/image-1-1.png\" class=\"kg-image\" alt loading=\"lazy\" width=\"1080\" height=\"1080\" srcset=\"https://www.divyamohan.com/content/images/size/w600/2023/06/image-1-1.png 600w, https://www.divyamohan.com/content/images/size/w1000/2023/06/image-1-1.png 1000w, https://www.divyamohan.com/content/images/2023/06/image-1-1.png 1080w\" sizes=\"(min-width: 720px) 720px\"></figure><p>Additionally, as far as I was concerned, there was nothing</p>",
+      "contentSnippet": "I'll be the first one to admit - I had absolutely no plans of writing anything about organizing community-driven events. After all, organizing one (and helping co-organize another, as a volunteer) didn't make me an expert. \n\nAdditionally, as far as I was concerned, there was nothing",
+      "tags": [
+        "Open Source",
+        "KCD Mumbai",
+        "Community"
+      ]
+    },
+    {
+      "slug": "blog-open-source-sustainability",
+      "guid": "63f08b5bc8e3c4003d397b78",
+      "title": "The complicated road to Open Source Sustainability",
+      "link": "https://www.divyamohan.com/blog-open-source-sustainability/",
+      "pubDate": "Sat, 18 Feb 2023 13:55:22 GMT",
+      "content": "Overworked maintainers & understaffed projects are the foundations that open source and, thereby, most of your daily drivers are built on. Corporate open source customers need to be better citizens in order to move towards a more sustainable model of open source.",
+      "contentSnippet": "Overworked maintainers & understaffed projects are the foundations that open source and, thereby, most of your daily drivers are built on. Corporate open source customers need to be better citizens in order to move towards a more sustainable model of open source.",
+      "tags": [
+        "Open Source",
+        "Blog"
+      ]
+    }
+  ]
+}

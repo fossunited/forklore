@@ -1,0 +1,188 @@
+{
+  "maintainerName": "Kailash Nadh",
+  "maintainerUsername": "knadh",
+  "feedUrl": "https://nadh.in/index.xml",
+  "lastFetched": "2026-03-27T10:09:07.073Z",
+  "posts": [
+    {
+      "slug": "code-is-cheap",
+      "guid": "https://nadh.in/blog/code-is-cheap/",
+      "title": "Code is cheap. Show me the talk.",
+      "link": "https://nadh.in/blog/code-is-cheap/",
+      "pubDate": "Fri, 30 Jan 2026 00:00:00 +0000",
+      "content": "<p>TLDR; <em>Software development, as it has been done for decades, is over. LLM coding tools have changed it fundamentally for the better or worse.</em></p>\n<hr>\n<blockquote>\n<p>&ldquo;Talk is cheap. Show me the code.&rdquo; — Linus Torvalds, August 2000</p>",
+      "contentSnippet": "TLDR; Software development, as it has been done for decades, is over. LLM coding tools have changed it fundamentally for the better or worse.\n“Talk is cheap. Show me the code.” — Linus Torvalds, August 2000",
+      "tags": []
+    },
+    {
+      "slug": "mcp-seems-viral",
+      "guid": "https://nadh.in/blog/mcp-seems-viral/",
+      "title": "MCP seems viral",
+      "link": "https://nadh.in/blog/mcp-seems-viral/",
+      "pubDate": "Mon, 19 May 2025 00:00:00 +0000",
+      "content": "<p>MCP (Model Context Protocol)<sup><a href=\"https://modelcontextprotocol.io\" rel=\"noopener\">[1]</a></sup>\n is all the rage now. Introduced by Anthropic about four months ago, it has already been accepted as an open standard and has seen widespread adoption, including by major AI companies and prominent AI tool makers. There is even a directory<sup><a href=\"https://mcp.so\" rel=\"noopener\">[2]</a></sup>\n listing over 13,000 MCP implementations. Technically, it is a very simple API spec that facilitates RPC-like (Remote procedure call) communication between an AI and an external system. It enables any external system to advertise its capabilities&mdash;returning information or performing various actions&mdash;allowing AI systems to dynamically and &ldquo;automagically&rdquo; use those capabilities via API calls.</p>",
+      "contentSnippet": "MCP (Model Context Protocol)[1]\n is all the rage now. Introduced by Anthropic about four months ago, it has already been accepted as an open standard and has seen widespread adoption, including by major AI companies and prominent AI tool makers. There is even a directory[2]\n listing over 13,000 MCP implementations. Technically, it is a very simple API spec that facilitates RPC-like (Remote procedure call) communication between an AI and an external system. It enables any external system to advertise its capabilities—returning information or performing various actions—allowing AI systems to dynamically and “automagically” use those capabilities via API calls.",
+      "tags": []
+    },
+    {
+      "slug": "deepseek-ai-sovereignty-india",
+      "guid": "https://nadh.in/blog/deepseek-ai-sovereignty-india/",
+      "title": "DeepSeek, AI sovereignty, and India",
+      "link": "https://nadh.in/blog/deepseek-ai-sovereignty-india/",
+      "pubDate": "Wed, 29 Jan 2025 00:00:00 +0000",
+      "content": "<p>Along came DeepSeek-R1<sup><a href=\"https://techcrunch.com/2025/01/26/deepseek-gets-silicon-valley-talking/\">[1]</a></sup> last week, an open-source large language model (LLM) reportedly rivaling OpenAI&rsquo;s top offerings, sending shockwaves through the industry and generating much excitement in the tech world. It apparently started as a side project at a Chinese hedge fund before being spun out. Its efficacy, combined with claims of being built at a fraction of the cost and hardware requirements, has seriously challenged BigAI&rsquo;s notion that “foundation models” demand astronomical investments. I have personally been playing around with R1 and have found it to be excellent at writing code. Speaking of foundation models, one rarely hears that term anymore; unsurprising, given that <em>foundation</em> is now commodity. Building a foundation-level LLM was once touted as the cornerstone of AI sovereignty, but that rhetoric has also waned. Much has changed regarding the idea of AI sovereignty.</p>",
+      "contentSnippet": "Along came DeepSeek-R1[1] last week, an open-source large language model (LLM) reportedly rivaling OpenAI’s top offerings, sending shockwaves through the industry and generating much excitement in the tech world. It apparently started as a side project at a Chinese hedge fund before being spun out. Its efficacy, combined with claims of being built at a fraction of the cost and hardware requirements, has seriously challenged BigAI’s notion that “foundation models” demand astronomical investments. I have personally been playing around with R1 and have found it to be excellent at writing code. Speaking of foundation models, one rarely hears that term anymore; unsurprising, given that foundation is now commodity. Building a foundation-level LLM was once touted as the cornerstone of AI sovereignty, but that rhetoric has also waned. Much has changed regarding the idea of AI sovereignty.",
+      "tags": []
+    },
+    {
+      "slug": "decentralised-open-indexes",
+      "guid": "https://nadh.in/blog/decentralised-open-indexes/",
+      "title": "Decentralised Open Indexes for Discovery (DOID)",
+      "link": "https://nadh.in/blog/decentralised-open-indexes/",
+      "pubDate": "Wed, 02 Oct 2024 00:00:00 +0000",
+      "content": "<p>TLDR; A conceptual and technical framework for resource discovery on the WWW using decentralised, open, machine-readable indexes as the building block, free of eroding quality and gatekeeping by <em>BigSearch™</em> and <em>BigPlatform™</em>, whose goals are not quality, but revenue.</p>",
+      "contentSnippet": "TLDR; A conceptual and technical framework for resource discovery on the WWW using decentralised, open, machine-readable indexes as the building block, free of eroding quality and gatekeeping by BigSearch™ and BigPlatform™, whose goals are not quality, but revenue.",
+      "tags": []
+    },
+    {
+      "slug": "on-software-as-an-indiscipline",
+      "guid": "https://nadh.in/blog/on-software-as-an-indiscipline/",
+      "title": "On software as an \"in-discipline\"",
+      "link": "https://nadh.in/blog/on-software-as-an-indiscipline/",
+      "pubDate": "Wed, 24 Jul 2024 00:00:00 +0000",
+      "content": "<p>The nth-order effects of the recent CrowdStrike fiasco <sup><a href=\"https://en.wikipedia.org/wiki/2024_CrowdStrike_incident\">[1]</a><a href=\"https://www.bbc.com/news/live/cn056371561t\">[2]</a><a href=\"https://news.ycombinator.com/item?id=41002195\">[3]</a></sup> will unfold over time. As it stands, it is apparently the single biggest global &ldquo;tech outage&rdquo; ever, which has already disrupted everything from airlines to railways to hospitals to financial systems amongst numerous others—globally.</p>",
+      "contentSnippet": "The nth-order effects of the recent CrowdStrike fiasco [1][2][3] will unfold over time. As it stands, it is apparently the single biggest global “tech outage” ever, which has already disrupted everything from airlines to railways to hospitals to financial systems amongst numerous others—globally.",
+      "tags": []
+    },
+    {
+      "slug": "this-time-it-feels-different",
+      "guid": "https://nadh.in/blog/this-time-it-feels-different/",
+      "title": "This time, it feels different",
+      "link": "https://nadh.in/blog/this-time-it-feels-different/",
+      "pubDate": "Sat, 13 May 2023 00:00:00 +0000",
+      "content": "<p>In an <a href=\"https://nadh.in/blog/on-powered-by-ai-marketing/\">earlier post</a> (2021) , I argued that much of the &ldquo;powered by AI / ML&rdquo; labelling and marketing out there was bogus and disingenuous. That AI / ML technologies were getting commoditised to the point of being as simple as <code>pip install</code>, where most organisations would not need to do any serious R&amp;D to be able to use these technologies, enough to warrant the claim &ldquo;Powered by AI / ML&rdquo;. Excerpt from the post:</p>",
+      "contentSnippet": "In an earlier post (2021) , I argued that much of the “powered by AI / ML” labelling and marketing out there was bogus and disingenuous. That AI / ML technologies were getting commoditised to the point of being as simple as pip install, where most organisations would not need to do any serious R&D to be able to use these technologies, enough to warrant the claim “Powered by AI / ML”. Excerpt from the post:",
+      "tags": []
+    },
+    {
+      "slug": "web2-web3",
+      "guid": "https://nadh.in/blog/web2-web3/",
+      "title": "But, aren't you folks web2?",
+      "link": "https://nadh.in/blog/web2-web3/",
+      "pubDate": "Tue, 15 Nov 2022 00:00:00 +0000",
+      "content": "<p>It took me several seconds to parse the casual quip <em>&ldquo;But, aren&rsquo;t you folks web2?&rdquo;</em>. I probed further and they continued—<em>&ldquo;Isn&rsquo;t Zerodha<sup><a href=\"https://zerodha.com/\">[1]</a></sup> web2? Why don&rsquo;t you convert it to web3?&rdquo;</em>. For the next few minutes, I struggled to explain how technologies, processes, people, regulations, laws, industry, and the entire legal and societal foundation that underlie an organisation, no matter how imperfect, aren&rsquo;t &ldquo;web2&rdquo;, and that they can&rsquo;t just be converted to &ldquo;web3&rdquo;, whatever that meant. To my question as to why they called a whole bunch of things web2 and why they think it should be converted to web3, they didn&rsquo;t have an answer. This interaction happened a few months ago with a young developer in their early twenties working for an American web3 startup. Since then, I have had a few more interactions including a few startup pitches, all eerily similar. All young people in their early twenties right out of college working on web3 things, all dismissive of everything non-web3 as web2. This conversation came up again this week in light of the new meltdowns unraveling<sup><a href=\"https://news.bloombergtax.com/securities-law/matt-levines-money-stuff-ftx-had-a-death-spiral\">[2]</a></sup> in the crypto world.</p>",
+      "contentSnippet": "It took me several seconds to parse the casual quip “But, aren’t you folks web2?”. I probed further and they continued—“Isn’t Zerodha[1] web2? Why don’t you convert it to web3?”. For the next few minutes, I struggled to explain how technologies, processes, people, regulations, laws, industry, and the entire legal and societal foundation that underlie an organisation, no matter how imperfect, aren’t “web2”, and that they can’t just be converted to “web3”, whatever that meant. To my question as to why they called a whole bunch of things web2 and why they think it should be converted to web3, they didn’t have an answer. This interaction happened a few months ago with a young developer in their early twenties working for an American web3 startup. Since then, I have had a few more interactions including a few startup pitches, all eerily similar. All young people in their early twenties right out of college working on web3 things, all dismissive of everything non-web3 as web2. This conversation came up again this week in light of the new meltdowns unraveling[2] in the crypto world.",
+      "tags": []
+    },
+    {
+      "slug": "triangle-of-fulfilment",
+      "guid": "https://nadh.in/blog/triangle-of-fulfilment/",
+      "title": "The triangle of fulfilment",
+      "link": "https://nadh.in/blog/triangle-of-fulfilment/",
+      "pubDate": "Mon, 22 Aug 2022 00:00:00 +0000",
+      "content": "<p><em>&ldquo;It&rsquo;s 2022. Why hasn&rsquo;t someone done it already!?&rdquo;</em>, I find exclaiming  frequently when stumbling upon things and ideas that are relatively simple and so obvious that they should exist, but for some reason, don&rsquo;t. It is frequently about software, occasionally about physical things, and once in a while, about an organisation that focuses on a certain cause that really ought to exist. It is of course not about hard problems like cold fusion or disease and poverty eradication, but things like &hellip; a mailing list manager.</p>",
+      "contentSnippet": "“It’s 2022. Why hasn’t someone done it already!?”, I find exclaiming  frequently when stumbling upon things and ideas that are relatively simple and so obvious that they should exist, but for some reason, don’t. It is frequently about software, occasionally about physical things, and once in a while, about an organisation that focuses on a certain cause that really ought to exist. It is of course not about hard problems like cold fusion or disease and poverty eradication, but things like … a mailing list manager.",
+      "tags": []
+    },
+    {
+      "slug": "reflections-on-indiafoss-2022",
+      "guid": "https://nadh.in/blog/reflections-on-indiafoss-2022/",
+      "title": "Reflections on IndiaFOSS 2.0",
+      "link": "https://nadh.in/blog/reflections-on-indiafoss-2022/",
+      "pubDate": "Mon, 01 Aug 2022 00:00:00 +0000",
+      "content": "<p><em>IndiaFOSS 2.0</em><sup><a href=\"https://indiafoss.net\">[1]</a></sup>, the second edition of the conference organised by the FOSS United Foundation, of which I am a part of, was held in Bengaluru on the 23rd and 24th of July. Previously named <em>IndiaOS</em>, the first edition that ran in January 2020 was an experiment that turned out to be a small, nice gathering of ~100 people in a small hall in a corner of JP Nagar, a residential area in South Bengaluru. There were talks, discussions, and food. It was nice. The conference was meant to be a yearly affair, which the COVID fiasco stalled, like a billion other human affairs.</p>",
+      "contentSnippet": "IndiaFOSS 2.0[1], the second edition of the conference organised by the FOSS United Foundation, of which I am a part of, was held in Bengaluru on the 23rd and 24th of July. Previously named IndiaOS, the first edition that ran in January 2020 was an experiment that turned out to be a small, nice gathering of ~100 people in a small hall in a corner of JP Nagar, a residential area in South Bengaluru. There were talks, discussions, and food. It was nice. The conference was meant to be a yearly affair, which the COVID fiasco stalled, like a billion other human affairs.",
+      "tags": []
+    },
+    {
+      "slug": "fomo-yamo",
+      "guid": "https://nadh.in/blog/fomo-yamo/",
+      "title": "FOMO? YAMO.",
+      "link": "https://nadh.in/blog/fomo-yamo/",
+      "pubDate": "Wed, 02 Mar 2022 00:00:00 +0000",
+      "content": "<p>A whole new way of seamlessly &ldquo;hydrating&rdquo; and building &ldquo;reactive&rdquo; webpages, proclaim the dozen new Javascript frameworks that offer slightly different ways of manipulating DOM; new stacks for generating static webpages from templates; new ways of deploying &ldquo;no-code&rdquo; apps to &ldquo;serverless edges&rdquo;; memory-safe languages that enable error-free programs; NoSQL databases that offer unlimited scalability; CSS frameworks that forever change how webpages are styled; new paradigms of visualizing programs as containers and not processes, container orchestration and not process management; functional programming over imperative over object oriented; &ldquo;AI/ML&rdquo; for whatever one pleases &hellip; magic bullets for everything.</p>",
+      "contentSnippet": "A whole new way of seamlessly “hydrating” and building “reactive” webpages, proclaim the dozen new Javascript frameworks that offer slightly different ways of manipulating DOM; new stacks for generating static webpages from templates; new ways of deploying “no-code” apps to “serverless edges”; memory-safe languages that enable error-free programs; NoSQL databases that offer unlimited scalability; CSS frameworks that forever change how webpages are styled; new paradigms of visualizing programs as containers and not processes, container orchestration and not process management; functional programming over imperative over object oriented; “AI/ML” for whatever one pleases … magic bullets for everything.",
+      "tags": []
+    },
+    {
+      "slug": "open-source-is-not-broken",
+      "guid": "https://nadh.in/blog/open-source-is-not-broken/",
+      "title": "\"Open source\" is not broken",
+      "link": "https://nadh.in/blog/open-source-is-not-broken/",
+      "pubDate": "Sun, 12 Dec 2021 00:00:00 +0000",
+      "content": "<p>I read <a href=\"https://christine.website/blog/open-source-broken-2021-12-11\">this article</a> (<em>&ldquo;Open Source&rdquo; is Broken</em> by Xe) written in the aftermath of the unfortunate <a href=\"https://en.wikipedia.org/wiki/Log4j#Log4Shell_vulnerability\"><code>log4j2</code> fiasco</a>. The author discusses a pertinent problem that has plagued the FOSS (Free and Open Source) world ever since large for-profit corporations started their widespread consumption of FOSS, ever since countless &ldquo;unicorns&rdquo; raised infinite amounts of funding on valuations built pretty much entirely on FOSS, ever since FOSS got co-opted into corporatisation and capitalisation. And yet, countless maintainers of critical and widely used FOSS struggle to make a living.</p>",
+      "contentSnippet": "I read this article (“Open Source” is Broken by Xe) written in the aftermath of the unfortunate log4j2 fiasco. The author discusses a pertinent problem that has plagued the FOSS (Free and Open Source) world ever since large for-profit corporations started their widespread consumption of FOSS, ever since countless “unicorns” raised infinite amounts of funding on valuations built pretty much entirely on FOSS, ever since FOSS got co-opted into corporatisation and capitalisation. And yet, countless maintainers of critical and widely used FOSS struggle to make a living.",
+      "tags": []
+    },
+    {
+      "slug": "on-powered-by-ai-marketing",
+      "guid": "https://nadh.in/blog/on-powered-by-ai-marketing/",
+      "title": "On \"Powered by AI / ML\" marketing",
+      "link": "https://nadh.in/blog/on-powered-by-ai-marketing/",
+      "pubDate": "Fri, 26 Nov 2021 00:00:00 +0000",
+      "content": "<p>An email I had sent in response to a survey on the use of &ldquo;AI / ML&rdquo; and the &ldquo;AI-first mindset&rdquo; in our organisation and in the industry was shared on social media<sup><a href=\"https://twitter.com/Nithin0dha/status/1463764077210062853\">[1]</a> <a href=\"https://www.linkedin.com/feed/update/urn:li:activity:6869531616264495104\">[2]</a></sup> sparking surprising amounts of interest. I did candidly state the simple fact that we haven&rsquo;t come across any big problems that warrant any specific &ldquo;AI / ML&rdquo; solutions in our organisation yet (<a href=\"https://zerodha.com\">Zerodha</a> - stock broker that offers online investment and trading platforms), and that the bulk of the &ldquo;powered by AI&rdquo; claims we have seen across industries and in the numerous startup pitches that we receive, have been cases of hollow marketing. There is also a general expectation (delusion) that any sufficiently large technology company should be using &ldquo;AI / ML&rdquo; somehow, somewhere, for some reason.</p>",
+      "contentSnippet": "An email I had sent in response to a survey on the use of “AI / ML” and the “AI-first mindset” in our organisation and in the industry was shared on social media[1] [2] sparking surprising amounts of interest. I did candidly state the simple fact that we haven’t come across any big problems that warrant any specific “AI / ML” solutions in our organisation yet (Zerodha - stock broker that offers online investment and trading platforms), and that the bulk of the “powered by AI” claims we have seen across industries and in the numerous startup pitches that we receive, have been cases of hollow marketing. There is also a general expectation (delusion) that any sufficiently large technology company should be using “AI / ML” somehow, somewhere, for some reason.",
+      "tags": []
+    },
+    {
+      "slug": "javascript-ecosystem-software-development-are-a-hot-mess",
+      "guid": "https://nadh.in/blog/javascript-ecosystem-software-development-are-a-hot-mess/",
+      "title": "The Javascript \"ecosystem\" is a hot mess and so is software development in general",
+      "link": "https://nadh.in/blog/javascript-ecosystem-software-development-are-a-hot-mess/",
+      "pubDate": "Sat, 16 Oct 2021 00:00:00 +0000",
+      "content": "<p>I have a small Vue 2 project (an <a href=\"https://github.com/knadh/dictmaker/issues/14\">admin UI</a> for dictmaker) that I created with <code>vue cli</code> six months ago. Today, I picked it up again to finish it, and started out by doing a <code>yarn upgrade</code>. Of course, blindly upgrading all dependencies is never a good idea, but this is a tiny WIP project with just one dependency that I added, and there is a constant stream of GitHub dependabot alerts every month forcing me to upgrade some dependency or another, so what is the worst that could happen? At least that is what I thought.</p>",
+      "contentSnippet": "I have a small Vue 2 project (an admin UI for dictmaker) that I created with vue cli six months ago. Today, I picked it up again to finish it, and started out by doing a yarn upgrade. Of course, blindly upgrading all dependencies is never a good idea, but this is a tiny WIP project with just one dependency that I added, and there is a constant stream of GitHub dependabot alerts every month forcing me to upgrade some dependency or another, so what is the worst that could happen? At least that is what I thought.",
+      "tags": []
+    },
+    {
+      "slug": "the-atmanirbhartha-of-open-source-software",
+      "guid": "https://nadh.in/blog/the-atmanirbhartha-of-open-source-software/",
+      "title": "The \"Atmanirbharta\" of open source software",
+      "link": "https://nadh.in/blog/the-atmanirbhartha-of-open-source-software/",
+      "pubDate": "Sat, 30 Jan 2021 00:00:00 +0000",
+      "content": "<p>In the Indian startup circles, <em>Atmanirbhar</em> (self-reliance) is the word of the year. Technology startups of all shapes and sizes, “unicorns” and non-unicorns have incorporated the tri colour and the Made in India label into their brand messaging and advertising campaigns—marketing prowess and valuations built on top of rapid innovation enabled by Free and Open Source Software (FOSS) created all over the world by countless programmers volunteering their time and effort writing code for everyone to solve problems and build enterprises. Linux, the quintessential example of FOSS, if quantified, would turn out to have created trillions of dollars in value for humanity.</p>",
+      "contentSnippet": "In the Indian startup circles, Atmanirbhar (self-reliance) is the word of the year. Technology startups of all shapes and sizes, “unicorns” and non-unicorns have incorporated the tri colour and the Made in India label into their brand messaging and advertising campaigns—marketing prowess and valuations built on top of rapid innovation enabled by Free and Open Source Software (FOSS) created all over the world by countless programmers volunteering their time and effort writing code for everyone to solve problems and build enterprises. Linux, the quintessential example of FOSS, if quantified, would turn out to have created trillions of dollars in value for humanity.",
+      "tags": []
+    },
+    {
+      "slug": "the-absurdity-of-clubbing-ai-blockchain",
+      "guid": "https://nadh.in/blog/the-absurdity-of-clubbing-ai-blockchain/",
+      "title": "The absurdity of clubbing AI with blockchain",
+      "link": "https://nadh.in/blog/the-absurdity-of-clubbing-ai-blockchain/",
+      "pubDate": "Mon, 18 Mar 2019 00:00:00 +0000",
+      "content": "<p>AI is a contentious term whose mainstream interpretation refers to not one particular thing, but to a broad category encompassing a wide variety of concepts, techniques, and technologies—all eventually working towards the common goal of eliciting “intelligent&quot; behaviour in computers.</p>",
+      "contentSnippet": "AI is a contentious term whose mainstream interpretation refers to not one particular thing, but to a broad category encompassing a wide variety of concepts, techniques, and technologies—all eventually working towards the common goal of eliciting “intelligent\" behaviour in computers.",
+      "tags": []
+    },
+    {
+      "slug": "fear-of-success-grounds-failure",
+      "guid": "https://nadh.in/blog/fear-of-success-grounds-failure/",
+      "title": "Indian startups ecosystem: Fear of failure grounds our success story",
+      "link": "https://nadh.in/blog/fear-of-success-grounds-failure/",
+      "pubDate": "Sat, 26 Dec 2015 00:00:00 +0000",
+      "content": "<p>The Indian startup ecosystem has taken shape and exploded in the last few years, and so have the countless stories surrounding them. Unsurprisingly, lessons of unsuccessful ideas and attempts haven’t gotten as much precedence as successful counterparts.</p>",
+      "contentSnippet": "The Indian startup ecosystem has taken shape and exploded in the last few years, and so have the countless stories surrounding them. Unsurprisingly, lessons of unsuccessful ideas and attempts haven’t gotten as much precedence as successful counterparts.",
+      "tags": []
+    },
+    {
+      "slug": "parallels",
+      "guid": "https://nadh.in/blog/parallels/",
+      "title": "Parallels",
+      "link": "https://nadh.in/blog/parallels/",
+      "pubDate": "Tue, 18 Dec 2012 00:00:00 +0000",
+      "content": "<p><em>A sci-fi short story inspired by Isaac Asimov&rsquo;s “<a href=\"http://en.wikipedia.org/wiki/The_Last_Question\">The Last Question</a>”.</em></p>\n<p>Munic hurried along the dimly lit corridors of the C-wing of the Neutrino lab. It was past midnight, and he had received an alert on his phone sent by one of the monitoring terminals. His palms and brows were trickling sweat despite the unusually cold night. His off-white Oxford shirt was unevenly buttoned and lazily tucked in, but he didn&rsquo;t seem to notice, or for that matter, care.</p>",
+      "contentSnippet": "A sci-fi short story inspired by Isaac Asimov’s “The Last Question”.\nMunic hurried along the dimly lit corridors of the C-wing of the Neutrino lab. It was past midnight, and he had received an alert on his phone sent by one of the monitoring terminals. His palms and brows were trickling sweat despite the unusually cold night. His off-white Oxford shirt was unevenly buttoned and lazily tucked in, but he didn’t seem to notice, or for that matter, care.",
+      "tags": []
+    },
+    {
+      "slug": "e0-b4-85-e0-b4-a3-e0-b5-8d-e0-b4-a3-e0-b4-be-e0-b4-b0-e0-b4-95-e0-b5-8d-e0-b4-95-e0-b4-a3-e0-b5-8d-e",
+      "guid": "https://nadh.in/blog/%E0%B4%85%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B4%BE%E0%B4%B0%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B4%A8%E0%B5%8D%E0%B4%AE%E0%B4%BE%E0%B4%B0%E0%B5%8D/",
+      "title": "അണ്ണാരക്കണ്ണന്‍മാര്‍",
+      "link": "https://nadh.in/blog/%E0%B4%85%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B4%BE%E0%B4%B0%E0%B4%95%E0%B5%8D%E0%B4%95%E0%B4%A3%E0%B5%8D%E0%B4%A3%E0%B4%A8%E0%B5%8D%E0%B4%AE%E0%B4%BE%E0%B4%B0%E0%B5%8D/",
+      "pubDate": "Wed, 15 Aug 2012 00:00:00 +0000",
+      "content": "<p>കഴിഞ്ഞ മൂന്നു വര്‍ഷങ്ങളില്‍ എണ്ണം 80-ശതമാനത്തിലധികം\nകുറഞ്ഞ അണ്ണാരക്കണ്ണന്‍മാര്‍ ഇപ്പോള്‍ വംശനാശ ഭീഷണി\nനേരിടുകയാണ് (മാതൃഭൂമി, 15 ഓഗസ്റ്റ്). കേരളത്തിലെമ്പാടും\nഒരു കാലത്ത് പതിവ് കാഴ്ച്ചയായിരുന്ന അണ്ണാന്‍ ഇല്ലാതാകുന്നു\nഎന്ന് കേള്‍ക്കുമ്പോള്‍ ആദ്യം നടുക്കം, പിന്നെ സങ്കടം :(</p>",
+      "contentSnippet": "കഴിഞ്ഞ മൂന്നു വര്‍ഷങ്ങളില്‍ എണ്ണം 80-ശതമാനത്തിലധികം\nകുറഞ്ഞ അണ്ണാരക്കണ്ണന്‍മാര്‍ ഇപ്പോള്‍ വംശനാശ ഭീഷണി\nനേരിടുകയാണ് (മാതൃഭൂമി, 15 ഓഗസ്റ്റ്). കേരളത്തിലെമ്പാടും\nഒരു കാലത്ത് പതിവ് കാഴ്ച്ചയായിരുന്ന അണ്ണാന്‍ ഇല്ലാതാകുന്നു\nഎന്ന് കേള്‍ക്കുമ്പോള്‍ ആദ്യം നടുക്കം, പിന്നെ സങ്കടം :(",
+      "tags": []
+    }
+  ]
+}
