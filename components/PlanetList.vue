@@ -28,47 +28,7 @@ const searchInput = ref(!props.username ? (route.query.search as string) || "" :
 
 const PER_PAGE = 20;
 
-const { data: rawData, status, error } = await useAsyncData("planet-meta", async () => {
-  const [planetDocs, maintainerDocs] = await Promise.all([
-    queryCollection("planet").all(),
-    queryCollection("maintainers").all(),
-  ]);
-
-  const photoMap: Record<string, string | undefined> = {};
-  for (const m of maintainerDocs) {
-    photoMap[m.username] = m.photo;
-  }
-
-  const posts: Post[] = planetDocs.flatMap((md) =>
-    (md.posts || []).map((post: any) => ({
-      slug: post.slug,
-      title: post.title,
-      link: post.link,
-      pubDate: post.pubDate,
-      contentSnippet: post.contentSnippet,
-      tags: post.tags || [],
-      // content intentionally excluded — not needed for list view
-      maintainerName: md.maintainerName,
-      maintainerUsername: md.maintainerUsername,
-      maintainerPhoto: photoMap[md.maintainerUsername],
-      feedUrl: md.feedUrl,
-    })),
-  );
-  posts.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
-
-  const authorMap = new Map<string, { username: string; name: string; photo?: string }>();
-  for (const post of posts) {
-    if (!authorMap.has(post.maintainerUsername)) {
-      authorMap.set(post.maintainerUsername, {
-        username: post.maintainerUsername,
-        name: post.maintainerName,
-        photo: photoMap[post.maintainerUsername],
-      });
-    }
-  }
-
-  return { posts, authors: Array.from(authorMap.values()) };
-});
+const { data: rawData, status, error } = await usePlanetMetaData();
 
 const filteredPosts = computed(() => {
   let posts = rawData.value?.posts || [];
@@ -150,21 +110,6 @@ const goToPage = (page: number) => {
   router.push({ query: { ...route.query, page: page.toString() } });
 };
 
-const formatRelativeTime = (dateString: string) => {
-  const date = new Date(dateString);
-  const diff = Math.floor((Date.now() - date.getTime()) / 1000);
-  if (diff < 60) return "just now";
-  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
-  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
-  if (diff < 604800) return `${Math.floor(diff / 86400)}d ago`;
-  return date.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
-};
-
-const truncate = (text: string, max = 200) => {
-  if (!text) return "";
-  const s = text.replace(/<[^>]*>/g, "");
-  return s.length <= max ? s : s.slice(0, max).trim() + "…";
-};
 </script>
 
 <template>
@@ -293,14 +238,7 @@ const truncate = (text: string, max = 200) => {
         </div>
 
         <!-- Tags -->
-        <div v-if="post.tags?.length" class="flex flex-wrap gap-1.5">
-          <button
-            v-for="tag in post.tags.slice(0, 6)"
-            :key="tag"
-            @click="updateTag(tag)"
-            class="px-2 py-0.5 text-xs bg-tertiary-light dark:bg-tertiary-dark hover:opacity-80"
-          >{{ tag }}</button>
-        </div>
+        <PostTagsList :tags="post.tags" mode="button" :max="6" @tag-click="updateTag" />
 
         <!-- Snippet -->
         <p v-if="post.contentSnippet" class="sans-text text-sm opacity-80">

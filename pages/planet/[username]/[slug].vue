@@ -12,46 +12,7 @@ const isGlobal = computed(() => planetNav.value === "planet");
 interface PostNav { slug: string; title: string; maintainerUsername: string }
 
 // Load metadata for all posts (no content) — shared key with PlanetList
-const { data: metaData, status } = await useAsyncData("planet-meta", async () => {
-  const [planetDocs, maintainerDocs] = await Promise.all([
-    queryCollection("planet").all(),
-    queryCollection("maintainers").all(),
-  ]);
-
-  const photoMap: Record<string, string | undefined> = {};
-  for (const m of maintainerDocs) {
-    photoMap[m.username] = m.photo;
-  }
-
-  const posts = planetDocs.flatMap((md) =>
-    (md.posts || []).map((post: any) => ({
-      slug: post.slug,
-      title: post.title,
-      link: post.link,
-      pubDate: post.pubDate,
-      contentSnippet: post.contentSnippet,
-      tags: post.tags || [],
-      maintainerName: md.maintainerName,
-      maintainerUsername: md.maintainerUsername,
-      maintainerPhoto: photoMap[md.maintainerUsername],
-      feedUrl: md.feedUrl,
-    })),
-  );
-  posts.sort((a, b) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
-
-  const authorMap = new Map<string, { username: string; name: string; photo?: string }>();
-  for (const post of posts) {
-    if (!authorMap.has(post.maintainerUsername)) {
-      authorMap.set(post.maintainerUsername, {
-        username: post.maintainerUsername,
-        name: post.maintainerName,
-        photo: photoMap[post.maintainerUsername],
-      });
-    }
-  }
-
-  return { posts, authors: Array.from(authorMap.values()) };
-});
+const { data: metaData, status } = await usePlanetMetaData();
 
 // Load full content for this maintainer only — much smaller than all posts
 const { data: planetDoc } = await useAsyncData(
@@ -81,13 +42,6 @@ const post = computed(() => {
     older: idx < ordered.length - 1 ? toNav(ordered[idx + 1]) : null,
   };
 });
-
-const formatDate = (dateString: string) =>
-  new Date(dateString).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
 
 const postPath = (nav: PostNav) => `/planet/${nav.maintainerUsername}/${nav.slug}`;
 
@@ -126,7 +80,7 @@ useSeoMeta({
         ← {{ isGlobal ? "All Posts" : `${post.maintainerName}'s posts` }}
       </nuxt-link>
 
-      <h1 class="text-3xl font-bold">{{ post.title }}</h1>
+      <h1 class="text-xl md:text-3xl font-bold">{{ post.title }}</h1>
 
       <!-- Maintainer + date -->
       <div class="flex flex-wrap items-center gap-3 text-sm">
@@ -159,16 +113,7 @@ useSeoMeta({
       </a>
 
       <!-- Tags -->
-      <div v-if="Array.isArray(post.tags) && post.tags.length" class="flex flex-wrap gap-2">
-        <nuxt-link
-          v-for="tag in post.tags"
-          :key="tag"
-          :to="`/planet?tag=${encodeURIComponent(tag)}`"
-          class="px-2 py-0.5 text-xs bg-secondary-light/20 dark:bg-secondary-dark/20 hover:opacity-80 transition-opacity"
-        >
-          {{ tag }}
-        </nuxt-link>
-      </div>
+      <PostTagsList :tags="post.tags" mode="link" />
     </div>
 
     <!-- Content -->
