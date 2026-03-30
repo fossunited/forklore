@@ -11,7 +11,7 @@ defineProps(["maintainer"]);
     @keydown.space.prevent="$router.push(maintainer.path)"
   >
     <div
-      class="p-8 flex gap-4 items-center bg-tertiary-light dark:bg-tertiary-dark"
+      class="p-4 md:p-8 flex gap-4 items-center bg-tertiary-light dark:bg-tertiary-dark"
     >
       <MaintainerImage :maintainer="maintainer" />
       <div class="flex flex-col">

@@ -6,9 +6,7 @@ const { data: maintainers } = await useAsyncData("maintainers", () => {
   return queryCollection("maintainers").all();
 });
 if (import.meta.prerender && maintainers.value) {
-  prerenderRoutes(
-    maintainers.value.map(m => m.path)
-  )
+  prerenderRoutes(maintainers.value.map((m) => m.path));
 }
 
 const normalizedMaintainers = computed(() =>
@@ -88,7 +86,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-8 px-8 py-10">
+  <div class="flex flex-col gap-8 px-2 md:px-8 py-10">
     <UiSearchInput
       v-if="maintainers"
       v-model="query"

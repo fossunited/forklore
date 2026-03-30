@@ -118,7 +118,7 @@ useSeoMeta({
 
   <div v-else-if="post" class="flex flex-col">
     <!-- Post header -->
-    <div class="flex flex-col gap-4 p-8 bg-tertiary-light dark:bg-tertiary-dark border-custom-b">
+    <div class="flex flex-col gap-4 p-4 md:p-8 bg-tertiary-light dark:bg-tertiary-dark border-custom-b">
       <nuxt-link
         :to="isGlobal ? '/planet' : `/planet/${post.maintainerUsername}`"
         class="text-xs opacity-60 hover:opacity-100 hover:underline"
@@ -177,12 +177,12 @@ useSeoMeta({
     </div>
 
     <!-- Content -->
-    <article class="prose dark:prose-invert max-w-none p-8">
+    <article class="prose dark:prose-invert max-w-none p-4 md:p-8">
       <div v-html="post.content" class="break-words" />
     </article>
 
     <!-- Footer: prev/next + original link -->
-    <div class="flex flex-col gap-4 p-8 border-custom-t">
+    <div class="flex flex-col gap-4 p-4 md:p-8 border-custom-t">
       <div class="grid grid-cols-2 gap-4">
         <nuxt-link
           v-if="post.newer"

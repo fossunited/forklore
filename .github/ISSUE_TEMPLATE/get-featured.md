@@ -20,6 +20,8 @@ Make sure to rename the file using your GitHub username for uniqueness.
 
 - [ ] Would you like to be added to our maintainer community mailing group?
 
+- [ ] If you write blogs and have RSS feed, would you like to join Planet Forklore (https://forklore.in/planet) ?
+
 ## Your Details
 
 **username:** your-github-username
@@ -31,11 +33,12 @@ Make sure to rename the file using your GitHub username for uniqueness.
 **designation:** Your Role/Title
 
 **socials:**
-<!-- options: web, github, gitlab, codeberg, mastodon, bluesky, substack, twitter, linkedin, reddit, arrow-up-right-->
+<!-- options: web, rss, github, gitlab, codeberg, mastodon, bluesky, substack, twitter, linkedin, reddit, arrow-up-right-->
 - GitHub: https://github.com/yourusername
 - Codeberg: https://codeberg.org/username
 - Mastodon: https://fosstodon.org/yourhandle
-
+- RSS: https://i-blog.in/rss.xml
+<!-- ^ You'll be added to Planet Forklore (https://forklore.in/planet) -->
 ---
 
 ## Projects

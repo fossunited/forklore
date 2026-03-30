@@ -25,7 +25,7 @@ if (maintainer.value) {
 <template>
   <div class="flex flex-col">
     <!-- Maintainer header -->
-    <div class="flex flex-col gap-4 p-8 border-custom-b bg-tertiary-light dark:bg-tertiary-dark">
+    <div class="flex flex-col gap-4 p-4 md:p-8 border-custom-b bg-tertiary-light dark:bg-tertiary-dark">
       <nuxt-link to="/planet" class="text-xs opacity-60 hover:opacity-100 hover:underline">
         ← All Posts
       </nuxt-link>

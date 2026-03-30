@@ -169,7 +169,7 @@ const truncate = (text: string, max = 200) => {
 
 <template>
   <!-- Search + filters (global only) -->
-  <div v-if="!username && data" class="flex flex-col gap-4 p-8 border-custom-b">
+  <div v-if="!username && data" class="flex flex-col gap-4 p-4 md:p-8 border-custom-b">
     <input
       v-model="searchInput"
       type="text"
@@ -229,7 +229,7 @@ const truncate = (text: string, max = 200) => {
   </div>
 
   <!-- Tag filter (username page: compact, no accordion) -->
-  <div v-if="username && data?.tags?.length" class="flex flex-wrap gap-2 p-8 border-custom-b">
+  <div v-if="username && data?.tags?.length" class="flex flex-wrap gap-2 p-4 md:p-8 border-custom-b">
     <span class="text-xs font-bold opacity-60 w-full">Filter by tag</span>
     <button
       v-for="tag in data.tags"
@@ -264,7 +264,7 @@ const truncate = (text: string, max = 200) => {
   <div v-else-if="data?.posts?.length" class="flex flex-col gap-6 py-6">
     <article v-for="post in data.posts" :key="post.slug" class="flex flex-col">
       <!-- Title -->
-      <div class="px-8 py-6 bg-tertiary-light dark:bg-tertiary-dark border-custom-b">
+      <div class="px-4 md:px-8 py-6 bg-tertiary-light dark:bg-tertiary-dark border-custom-b">
         <nuxt-link
           :to="`/planet/${post.maintainerUsername}/${post.slug}`"
           @click="setNavContext()"
@@ -275,7 +275,7 @@ const truncate = (text: string, max = 200) => {
       </div>
 
       <!-- Body -->
-      <div class="flex flex-col gap-3 px-8 py-6">
+      <div class="flex flex-col gap-3 px-4 md:px-8 py-6">
         <!-- Maintainer row (global only — redundant on username page since header shows it) -->
         <div v-if="!username" class="flex flex-wrap items-center gap-2 text-sm">
           <nuxt-link

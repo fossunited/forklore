@@ -17,11 +17,10 @@ const getLogoPath = computed(() => {
     return "/logo/logo_dark.svg";
   }
 });
-
 </script>
 
 <template>
-  <div class="px-8 pt-40 pb-8 border-custom-b space-y-6">
+  <div class="px-8 pt-10 md:pt-30 pb-8 border-custom-b space-y-6">
     <div class="flex items-center gap-4">
       <img :src="getLogoPath" alt="forklore logo" class="h-10" />
     </div>
@@ -37,7 +36,7 @@ const getLogoPath = computed(() => {
       </span>
     </div>
   </div>
-  <div class="px-8 py-12 border-custom-b">
+  <div class="px-4 md:px-8 py-12 border-custom-b">
     <p class="font-semibold">
       Like a slam book, but with fewer crushes and more commits
     </p>
