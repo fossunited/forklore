@@ -33,9 +33,7 @@ if (maintainer.value) {
       <div class="flex items-center gap-4">
         <MaintainerImage v-if="maintainer" :maintainer="maintainer" />
         <div class="flex flex-col gap-1">
-          <nuxt-link :to="`/maintainers/${username}`" class="text-xl font-bold hover:underline">
-            {{ maintainer?.full_name || username }}
-          </nuxt-link>
+          <span class="text-lg md:text-xl font-bold">{{ maintainer?.full_name || username }}</span>
           <p v-if="maintainer?.designation" class="text-sm opacity-60">{{ maintainer.designation }}</p>
         </div>
       </div>

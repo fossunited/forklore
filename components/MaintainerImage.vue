@@ -1,7 +1,13 @@
 <script setup lang="ts">
 const colorMode = useColorMode();
 
-defineProps(["maintainer"]);
+const props = defineProps<{
+  maintainer: { photo?: string; full_name: string };
+  size?: string;
+}>();
+
+const sizeClass = computed(() => props.size || "w-14 h-14");
+
 const getMaintainerPlaceholderImage = () => {
   if (colorMode.value === "dark") {
     return "/maintainer_photo_dark.svg";
@@ -14,7 +20,7 @@ const getMaintainerPlaceholderImage = () => {
 <template>
   <ClientOnly>
     <img
-      class="w-14 h-14 aspect-square object-contain outline"
+      :class="[sizeClass, 'aspect-square object-contain outline']"
       loading="lazy"
       v-if="maintainer.photo"
       :src="maintainer.photo"
@@ -22,7 +28,7 @@ const getMaintainerPlaceholderImage = () => {
     />
     <img
       v-else
-      class="w-14 h-14 aspect-square"
+      :class="[sizeClass, 'aspect-square']"
       :src="getMaintainerPlaceholderImage()"
       alt="Placeholder image for maintainer"
     />

@@ -200,7 +200,7 @@ const truncate = (text: string, max = 200) => {
               :to="`/planet/${author.username}`"
               class="flex items-center gap-2 px-3 py-1 text-sm bg-tertiary-light dark:bg-tertiary-dark hover:opacity-80 transition-opacity"
             >
-              <img v-if="author.photo" :src="author.photo" :alt="author.name" class="w-5 h-5 object-contain" />
+              <MaintainerImage :maintainer="{ photo: author.photo, full_name: author.name }" size="w-5 h-5" />
               {{ author.name }}
             </nuxt-link>
           </div>
@@ -268,7 +268,7 @@ const truncate = (text: string, max = 200) => {
         <nuxt-link
           :to="`/planet/${post.maintainerUsername}/${post.slug}`"
           @click="setNavContext()"
-          class="text-xl font-bold hover:underline"
+          class="text-lg md:text-xl font-bold hover:underline"
         >
           {{ post.title }}
         </nuxt-link>
@@ -282,12 +282,7 @@ const truncate = (text: string, max = 200) => {
             :to="`/planet/${post.maintainerUsername}`"
             class="flex items-center gap-2 font-bold hover:underline"
           >
-            <img
-              v-if="post.maintainerPhoto"
-              :src="post.maintainerPhoto"
-              :alt="post.maintainerName"
-              class="w-6 h-6 aspect-square object-contain outline"
-            />
+            <MaintainerImage :maintainer="{ photo: post.maintainerPhoto, full_name: post.maintainerName }" size="w-6 h-6" />
             {{ post.maintainerName }}
           </nuxt-link>
           <span class="opacity-40">·</span>

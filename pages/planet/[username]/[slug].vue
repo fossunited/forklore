@@ -134,12 +134,7 @@ useSeoMeta({
           :to="`/maintainers/${post.maintainerUsername}`"
           class="flex items-center gap-2 font-bold hover:underline"
         >
-          <img
-            v-if="post.maintainerPhoto"
-            :src="post.maintainerPhoto"
-            :alt="`Photo of ${post.maintainerName}`"
-            class="w-8 h-8 aspect-square object-contain outline"
-          />
+          <MaintainerImage :maintainer="{ photo: post.maintainerPhoto, full_name: post.maintainerName }" size="w-8 h-8" />
           {{ post.maintainerName }}
         </nuxt-link>
         <span class="opacity-40">·</span>
