@@ -3,6 +3,8 @@ import { computed } from "vue";
 import LightModeIcon from "@/components/icons/LightModeIcon.vue";
 import DarkModeIcon from "@/components/icons/DarkModeIcon.vue";
 const colorMode = useColorMode();
+const route = useRoute();
+const isPlanet = computed(() => route.path.startsWith("/planet"));
 
 const getLogoPath = computed(() => {
   if (colorMode.value === "dark") {
@@ -29,7 +31,9 @@ const toggleColorMode = () => {
 };
 
 const themeButtonLabel = computed(() => {
-  return colorMode.value === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode";
+  return colorMode.value === "dark"
+    ? "Switch to Light Mode"
+    : "Switch to Dark Mode";
 });
 
 const showHeaderLinks = ref(false);
@@ -38,14 +42,19 @@ const showHeaderLinks = ref(false);
   <div>
     <nav class="p-9 flex justify-between items-center">
       <div class="flex gap-2 items-center">
-        <nuxt-link to="/">
+          <nuxt-link :to="isPlanet ? '/planet' : '/'">
+          <span v-if="isPlanet" class="text-xl font-bold">Planet</span>
           <img :src="getLogoPath" alt="forklore logo" />
         </nuxt-link>
       </div>
 
       <div class="flex gap-2">
         <header-links class="hidden md:flex"></header-links>
-        <button class="btn-solid" @click="toggleColorMode()" :aria-label="themeButtonLabel">
+        <button
+          class="btn-solid"
+          @click="toggleColorMode()"
+          :aria-label="themeButtonLabel"
+        >
           <component :is="getButtonIcon" />
         </button>
         <button
