@@ -2,6 +2,18 @@
 
 > maintainers are in ascending order (older at top)
 
+## March 2026
+
+### Maintainers
+- [Sathiya Moorthi @ Webi](https://forklore.in/maintainers/detox-24)
+- [Ajay Bura @ Cinny](https://forklore.in/maintainers/ajbura)
+- [Mohammed Zubair @ Mattermost](https://forklore.in/maintainers/m-zubairahmed)
+
+### Website
+- OG Image preview for all Maintainer pages using `nuxt-og-image` and `takumi-render`
+- Move all Image urls to local storage of those files
+- [Planet Forklore](https://forklore.in/planet) - Aggregate all `RSS` feeds from maintainers into Json for community to read.
+
 ## February 2026
 
 ### Maintainers
