@@ -530,5 +530,13 @@
   "https://mzubairahmed.com/avatar.avif": {
     "hash": "7aaf977cc85cdb050732e87e466dc2d5dcd15b970536e880b9c107a02412fe07",
     "filename": "m-zubairahmed_photo.jpg"
+  },
+  "https://cdn.prod.website-files.com/61ee7c3b937e8a7570a6a11d/66ac6475cf6dfb756421c7cc_622b594486571a68ebdde40b_Sonal.Goyal-removebg-preview.png": {
+    "hash": "dc51497e57c8ba0fa7c38a5f170d006fac76356b6583956ad847738bac544499",
+    "filename": "sonalgoyal_photo.png"
+  },
+  "https://github.com/zinggAI/zingg/blob/main/assets/zinggtransparent.svg": {
+    "hash": "f4f5d61da42d6d93b2bb86b9a20d261bc8d41494d41d45df1992d006bc7006bd",
+    "filename": "sonalgoyal_zingg.svg"
   }
 }
