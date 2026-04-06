@@ -1,0 +1,65 @@
+{
+  "username": "junaid2005p",
+  "full_name": "Junaid Islam",
+  "photo": "/images/junaid2005p_photo.png",
+  "designation": "Student",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/junaid2005p"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/junaid-islam-897143283/"
+    },
+    {
+      "label": "Reddit",
+      "link": "https://www.reddit.com/user/Rich_Cranberry6688/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Surge",
+      "project_link": "https://github.com/surge-downloader/Surge",
+      "website_link": "https://surge-downloader.github.io/surge-website/",
+      "logo": "/images/junaid2005p_surge.png",
+      "short_description": "TUI Download Manager",
+      "description": "Longer description that can span multiple lines.\nSurge is a download manager that runs in local TUI, remote TUI, and headless daemon modes."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "You can support by opening issues, creating PRs, suggesting improvements or engaging with the project in any way really. <br>If you would like to sponsor us you can do so using github sponsors on our github page."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Surge is a high-performance, open-source download manager built for power users, combining multi-connection and multi-mirror acceleration, smart chunking, failover handling, resumable downloads, and live progress tracking for much faster and more reliable file transfers. It also offers a polished terminal UI, headless server mode, CLI automation, and browser extension support, making it easy to manage downloads interactively or integrate them into automated workflows."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Reading, understanding, and debugging code matters as much as writing it."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I couldn't find a download manager that worked the way I wanted, so I built one, so no one else has to deal with what I did. And honestly, maintaining it has taught me more than any course or tutorial ever could."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://open.spotify.com/track/69yfbpvmkIaB10msnKT7Q5?si=648c908b637b42b5"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "internal/tui/view.go"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Every download manager I tried was either paywalled, abandoned, or drowning in UI clutter. So I stopped complaining and built my own."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "💀 "
+    }
+  ],
+  "created_on": "2026-04-06T12:20:10.639536+05:30"
+}

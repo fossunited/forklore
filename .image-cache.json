@@ -542,5 +542,13 @@
   "https://github.com/zinggAI/zingg/blob/main/assets/zinggWhite.png?raw=true": {
     "hash": "7a7f5b341960839e7f17285c1e416ad7df42dc0d07fd9cfffb2f01c5af12ffc8",
     "filename": "sonalgoyal_zingg.png"
+  },
+  "https://github.com/junaid2005p.png": {
+    "hash": "163b6a08f60be7e2cd51848bcc9f8e1701c27b1636f1db0f80ce7642ba5bc824",
+    "filename": "junaid2005p_photo.png"
+  },
+  "https://raw.githubusercontent.com/surge-downloader/Surge/main/assets/logo.png": {
+    "hash": "b89bc97a467b5ea4a6292d4a097b93ec3c43f8e6bb33b4ceb6932305aae4937a",
+    "filename": "junaid2005p_surge.png"
   }
 }
