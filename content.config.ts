@@ -45,6 +45,8 @@ const planetSchema = z.object({
       pubDate: z.string(),
       content: z.string(),
       contentSnippet: z.string(),
+      image: z.string().optional(),
+      author: z.string().optional(),
       tags: z.array(z.string()),
     })
   ),

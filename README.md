@@ -15,6 +15,8 @@ Forklore is a data driven Open-Source website consisting of stories of maintaine
 - [Planet Forklore](https://forkore.in/planet "Planet Forklore") is introduced as on [2026-03-27 Fri] to aggregate all maintainers blog posts into a [Planet](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators "Planet Feed Aggregator")
 - If you are a maintainer and would like to be part of it, then please submit "RSS" field in the Issue template to get featured.
 
+Implementation is based on [Planet Ubuntu's Terra](https://github.com/Ubuntu-Community-Team/terra/)
+
 ## Social media campaign
 
 Everyone featured on Forklore was already or will be highlighted via the FOSS United Social media handles.

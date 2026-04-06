@@ -39,8 +39,10 @@ export default defineEventHandler(async (event) => {
       description: post.contentSnippet,
       content: post.content,
       date: new Date(post.pubDate),
-      author: [{ name, link: `${BASE_URL}/maintainers/${username}` }],
+      author: [{ name: post.author || name, link: `${BASE_URL}/maintainers/${username}` }],
       category: (post.tags || []).map((t: string) => ({ name: t })),
+      ...(post.image && { image: post.image }),
+      ...(post.image && { enclosure: { url: post.image, type: "image/jpeg", length: 0 } }),
     });
   }
 

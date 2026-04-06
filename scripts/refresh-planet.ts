@@ -4,8 +4,17 @@ import path from "path";
 
 const parser = new Parser({
   timeout: 30000,
+  maxRedirects: 10,
   headers: {
     "User-Agent": "Mozilla/5.0 (compatible; Forklore/1.0; +https://forklore.in)",
+  },
+  customFields: {
+    item: [
+      ["content:encoded", "contentEncoded"],
+      ["media:content", "mediaContent"],
+      ["media:thumbnail", "mediaThumbnail"],
+      ["dc:creator", "dcCreator"],
+    ],
   },
 });
 
@@ -17,7 +26,8 @@ function cleanContent(content: string, postUrl: string): string {
     return content
       .replace(/src=["']\/(?!\/)/g, `src="${base}/`)
       .replace(/href=["']\/(?!\/)/g, `href="${base}/`)
-      .replace(/<script[\s\S]*?<\/script>/gi, "");
+      .replace(/<script[\s\S]*?<\/script>/gi, "")
+      .replace(/<style[\s\S]*?<\/style>/gi, "");
   } catch {
     return content;
   }
@@ -132,15 +142,48 @@ async function main() {
         data.lastFetched = new Date().toISOString();
       } catch {}
 
-      const existingGuids = new Set(data.posts.map((p) => p.guid));
+      const existingByGuid = new Map(data.posts.map((p) => [p.guid, p]));
       const existingSlugs = new Set(data.posts.map((p) => p.slug));
       let newCount = 0;
+      let updatedCount = 0;
 
       for (const item of rss.items) {
         const guid = item.guid || item.link || item.title || "";
-        if (existingGuids.has(guid)) continue;
+        const fullContent =
+          (item as any).contentEncoded ||
+          item.content ||
+          item.summary ||
+          (item as any).description ||
+          "";
+        const image =
+          item.enclosure?.url ||
+          (item as any).mediaContent?.$.url ||
+          (item as any).mediaThumbnail?.$.url ||
+          undefined;
+        const author =
+          (item as any).dcCreator ||
+          (item as any).creator ||
+          (Array.isArray((item as any).authors)
+            ? (item as any).authors.join(", ")
+            : undefined);
+        const tags = (item.categories || [])
+          .map((c: any) => (typeof c === "string" ? c : c?._ || ""))
+          .filter(Boolean);
 
-        // Generate a clean, readable slug from the GUID/link
+        const existing = existingByGuid.get(guid);
+        if (existing) {
+          // Update mutable fields in case the post was edited
+          existing.title = item.title || existing.title;
+          existing.content = cleanContent(fullContent, item.link || "");
+          existing.contentSnippet = item.contentSnippet || existing.contentSnippet;
+          existing.tags = tags.length ? tags : existing.tags;
+          if (image) existing.image = image;
+          if (author) existing.author = author;
+          updatedCount++;
+          continue;
+        }
+
+        // New post — generate slug
         const baseSlug = getSlugFromGuid(item.link || guid);
         let slug = baseSlug;
         let suffix = 1;
@@ -155,14 +198,11 @@ async function main() {
           title: item.title || "Untitled",
           link: item.link || "",
           pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
-          content: cleanContent(
-            item.content || item["content:encoded"] || item.summary || "",
-            item.link || "",
-          ),
-          contentSnippet: item.contentSnippet || item.summary || "",
-          tags: (item.categories || [])
-            .map((c: any) => (typeof c === "string" ? c : c?._ || ""))
-            .filter(Boolean),
+          content: cleanContent(fullContent, item.link || ""),
+          contentSnippet: item.contentSnippet || "",
+          ...(image && { image }),
+          ...(author && { author }),
+          tags,
         });
         newCount++;
       }
@@ -173,7 +213,7 @@ async function main() {
       );
       await fs.writeFile(file, JSON.stringify(data, null, 2));
 
-      return { username: feed.username, new: newCount, total: rss.items.length };
+      return { username: feed.username, new: newCount, updated: updatedCount, total: rss.items.length };
     }),
   );
 
@@ -184,7 +224,7 @@ async function main() {
       totalNew += r.value.new;
       success++;
       console.log(
-        `✓ ${r.value.username}: ${r.value.new} new / ${r.value.total} total`,
+        `✓ ${r.value.username}: ${r.value.new} new, ${r.value.updated} updated / ${r.value.total} total`,
       );
     } else {
       const feed = feeds[i];
