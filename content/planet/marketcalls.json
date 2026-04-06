@@ -2,7 +2,7 @@
   "maintainerName": "Rajandran R",
   "maintainerUsername": "marketcalls",
   "feedUrl": "https://medium.com/feed/@openalgo",
-  "lastFetched": "2026-04-06T07:46:01.639Z",
+  "lastFetched": "2026-04-06T08:19:04.879Z",
   "posts": [
     {
       "slug": "understanding-stock-market-seasonality-a-python-guide-using-openalgo-cc63a7fa0f40",
@@ -18,7 +18,8 @@
         "investing",
         "python",
         "seasonality"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "event-driven-architecture-in-algo-trading-platform-3a2957ff11a6",
@@ -34,7 +35,8 @@
         "openalgo",
         "python",
         "open-source"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "vectorbt-ai-skills-to-build-and-backtest-trading-strategies-faster-without-writing-a-single-line-of-",
@@ -50,7 +52,8 @@
         "yfinance",
         "vectorbt",
         "backtesting"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "signal-half-life-the-missing-piece-in-most-trading-systems-24824b102799",
@@ -66,7 +69,8 @@
         "market-timing",
         "trading-signals",
         "trading-psychology"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "automating-trading-with-openalgo-and-openclaw-de55cc2b2d63",
@@ -82,7 +86,8 @@
         "openclaw",
         "python",
         "automated-trading"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "busting-the-common-misconception-faster-languages-alone-dont-guarantee-faster-trade-execution-1fc197",
@@ -98,7 +103,8 @@
         "trading",
         "openalgo",
         "python"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "how-openalgo-websocket-works-8c5e61b71d06",
@@ -114,7 +120,8 @@
         "algorithmic-trading",
         "openalgo",
         "python"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "white-box-vs-black-box-algorithms-6eacc52cc2fc",
@@ -130,7 +137,8 @@
         "black-box",
         "white-box",
         "trading-algorithms"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "claude-opus-4-5-nano-banana-the-ai-stack-that-turned-my-github-repo-into-a-pitch-deck-cd39f294dead",
@@ -146,7 +154,8 @@
         "openalgo",
         "claude-code",
         "powerpoint"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "self-hosting-openais-gpt-oss-a-complete-guide-for-traders-1e85ec2a46ad",
@@ -162,7 +171,8 @@
         "self-hosting",
         "vllm",
         "open-source"
-      ]
+      ],
+      "author": "Rajandran R (Creator - OpenAlgo)"
     },
     {
       "slug": "building-an-agentic-trader-from-scratch-a-beginners-guide-bb74b10438b4",
