@@ -2,8 +2,20 @@
   "maintainerName": "Prashanth N Udupa",
   "maintainerUsername": "pnudupa",
   "feedUrl": "https://www.prashanthudupa.com/feed",
-  "lastFetched": "2026-03-30T07:44:14.553Z",
+  "lastFetched": "2026-04-06T07:46:03.822Z",
   "posts": [
+    {
+      "slug": "agentic-and-ai-assisted-coding",
+      "guid": "https://www.prashanthudupa.com/?p=5049",
+      "title": "Agentic and AI Assisted Coding",
+      "link": "https://www.prashanthudupa.com/agentic-and-ai-assisted-coding/",
+      "pubDate": "Mon, 30 Mar 2026 15:46:19 +0000",
+      "content": "For as long as I remember, coding has always been an activity that brings an idea that only exists in imagination to reality. As such no imagination exists in isolation &#8211; they are all dependent on one or more things I have already seen.&#160; My first GUI app mimicked the gold old MS Paint app, [&#8230;]",
+      "contentSnippet": "For as long as I remember, coding has always been an activity that brings an idea that only exists in imagination to reality. As such no imagination exists in isolation – they are all dependent on one or more things I have already seen.  My first GUI app mimicked the gold old MS Paint app, […]",
+      "tags": [
+        "Technical"
+      ]
+    },
     {
       "slug": "your-true-nature",
       "guid": "https://www.prashanthudupa.com/?p=4996",
