@@ -1,0 +1,53 @@
+{
+  "username": "sonalgoyal",
+  "full_name": "Sonal Goyal",
+  "photo": "/images/sonalgoyal_photo.png",
+  "designation": "Founder CEO at Zingg.AI",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/sonalgoyal"
+    },
+    {
+      "label": "substack",
+      "link": "https://www.learningfromdata.zingg.ai/"
+    },
+    {
+      "label": "RSS",
+      "link": "https://www.learningfromdata.zingg.ai/feed"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Zingg",
+      "project_link": "https://github.com/zinggAI/zingg",
+      "website_link": "https://www.zingg.ai",
+      "logo": "/images/sonalgoyal_zingg.svg",
+      "short_description": "Master Data Management and Entity Resolution At Scale using AI",
+      "description": "Real world data contains multiple records belonging to the same customer. These records can be in      single or multiple systems and they have variations across fields, which makes it hard to combine them together, especially with growing data volumes. This hurts customer analytics - establishing lifetime value, loyalty programs, or marketing channels is impossible when the base data is not linked. No AI algorithm for segmentation can produce the right results when there are multiple copies of the same customer lurking in the data. No warehouse can live up to its promise if the dimension tables have duplicates. With a modern data stack and DataOps, we have established patterns for E and L in ELT for building data warehouses, datalakes and deltalakes. However, the T - getting data ready for analytics still needs a lot of effort. Modern tools like dbt are actively and successfully addressing this. What is also needed is a quick and scalable way to build the single source of truth of core business entities post Extraction and pre or post Loading. With Zingg, the analytics engineer and the data scientist can quickly integrate data silos and build unified views at scale!"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "More visibility would help. "
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Dont have one"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Labeller.java"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Dont have one"
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🔥"
+    }
+  ],
+  "created_on": "2026-04-06T10:47:56.521376+05:30"
+}
