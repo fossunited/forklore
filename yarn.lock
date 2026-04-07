@@ -7309,10 +7309,10 @@ nuxt-component-meta@0.17.2:
     ufo "^1.6.2"
     vue-component-meta "^3.2.2"
 
-nuxt-og-image@^6.3.1:
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.3.1.tgz#d391f05044a0cc086d25b12e8ac9e1d964532ff9"
-  integrity sha512-QRwUaCcluCpJ8k9BVZAaaL9OINL/8WSVXoVzoQNHNqZRN+ajhsRrWkCaiEOoNhlScq7b9mSSqD9cCQeiKica/Q==
+nuxt-og-image@^6.3.2:
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.3.2.tgz#ab9895946f984e0a689d7dcead52555cfecd8f16"
+  integrity sha512-dXxoOhJor/Nkm3/30gZcB5/IWtF5DtJmwSlHK/eB5UgLYmWQlWILm28zmt94ODCvfY6LHcokVzvMFF96Q9MJPA==
   dependencies:
     "@clack/prompts" "^1.1.0"
     "@nuxt/devtools-kit" "^3.2.4"
