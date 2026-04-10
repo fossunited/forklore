@@ -1,0 +1,61 @@
+{
+  "username": "paul-tharun",
+  "full_name": "Tharun Paul",
+  "photo": "/images/paul-tharun_photo.jpg",
+  "designation": "Lead Data Engineer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/paul-tharun"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/tharun-paul"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Gopie",
+      "project_link": "https://github.com/factly/gopie",
+      "website_link": "https://gopie.ai/",
+      "logo": "/images/paul-tharun_gopie.svg",
+      "short_description": "Data Analysis, Web APIs, AI Readiness, as easy as pie",
+      "description": "Analyze data in natural language. GoPie is an open-source platform for natural-language data exploration that turns datasets into blazing-fast, AI-ready database with auto-generated APIs. No technical expertise required."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Use Gopie, Give Feedback and PRs are welcome. "
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Gopie enables low-tech/no-tech users to analyze and draw insights from their data with Natural Language. It enables users to build data driven applications by exposing the database as high performance REST Apis. "
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Ship first, get feedback and iterate, do not wait for perfection."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Being able to build things that solve problems is like a superpower and with great power comes great responsibility. Gopie is our little effort in being good stewards of this power. "
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=qbGZDEFHBmc"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "The entire prompts folder, chat-server/app/workflow/prompts"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Bug reports without reproducible steps. "
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🤓 - Geek"
+    }
+  ],
+  "created_on": "2026-04-10T17:37:25.270256+05:30"
+}

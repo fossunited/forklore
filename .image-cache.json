@@ -550,5 +550,13 @@
   "https://raw.githubusercontent.com/surge-downloader/Surge/main/assets/logo.png": {
     "hash": "b89bc97a467b5ea4a6292d4a097b93ec3c43f8e6bb33b4ceb6932305aae4937a",
     "filename": "junaid2005p_surge.png"
+  },
+  "https://factlymedia.com/teamMembers/DataEng/Tharun.jpg": {
+    "hash": "d9fff905c1fec24680282823dce9a4416c3d2003ce41db3dfc4182624a84a104",
+    "filename": "paul-tharun_photo.jpg"
+  },
+  "https://gopie.ai/images/logo.svg": {
+    "hash": "b0a19581a6e7b6ed2a7c4a4dbccbe685a41ddb0e0bbbd8e74d566ccbb24f1b05",
+    "filename": "paul-tharun_gopie.svg"
   }
 }
