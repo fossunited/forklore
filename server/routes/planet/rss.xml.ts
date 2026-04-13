@@ -42,7 +42,6 @@ export default defineEventHandler(async (event) => {
       author: [{ name: post.author || name, link: `${BASE_URL}/maintainers/${username}` }],
       category: (post.tags || []).map((t: string) => ({ name: t })),
       ...(post.image && { image: post.image }),
-      ...(post.image && { enclosure: { url: post.image, type: "image/jpeg", length: 0 } }),
     });
   }
 

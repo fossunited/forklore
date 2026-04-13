@@ -65,6 +65,9 @@ export default defineNuxtConfig({
     "/maintainers": {
       redirect: "/",
     },
+    "/planet/rss": {
+      redirect: "/planet/rss.xml",
+    },
   },
   fonts: {
     families: [
