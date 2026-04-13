@@ -1,0 +1,65 @@
+{
+  "username": "anandbagmar",
+  "full_name": "Anand Bagmar",
+  "photo": "/images/anandbagmar_photo.jpg",
+  "designation": "Software Quality Evangelist",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/anandbagmar"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/anandbagmar/"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://x.com/BagmarAnand"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Teswiz",
+      "project_link": "https://github.com/znsio/teswiz",
+      "website_link": "https://teswiz.com/",
+      "logo": "/images/anandbagmar_teswiz.png",
+      "short_description": "Your Ultimate Open-Source Solution to Automate Real-User Scenarios!",
+      "description": "Cross-platform testing made easy. Automate your real-user scenarios for Android, iOS, Web, Desktop, API and beyond with one powerful tool.    Teswiz is an open-source test automation framework designed to simplify and streamline the process of testing applications across multiple platforms.    Whether you're working with Android, iOS, web applications, or API, Teswiz provides a unified interface and robust tooling to ensure your tests are reliable, maintainable, and scalable."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Raise a issue in [teswiz](https://github.com/znsio/teswiz) GitHub, or contact [Anand Bagmar](https://www.linkedin.com/in/anandbagmar/) for help or if you face issues using teswiz"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Teswiz is an open-source test automation framework designed to simplify and streamline the process of testing applications across multiple platforms. <br><br>Whether you're working with Android, iOS, web applications, or API, Teswiz provides a unified interface and robust tooling to ensure your tests are reliable, maintainable, and scalable."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "`git commit` && `git push`"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "It started mainly to avoid reinventing the wheel for myself. In the process, if it can help others, that is even better!"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Don't Stop Believin'"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Wish there was only one!"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": ""
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "😅"
+    }
+  ],
+  "created_on": "2026-04-13T15:36:07.877803+05:30"
+}
