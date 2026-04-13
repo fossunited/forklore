@@ -558,5 +558,13 @@
   "https://gopie.ai/images/logo.svg": {
     "hash": "b0a19581a6e7b6ed2a7c4a4dbccbe685a41ddb0e0bbbd8e74d566ccbb24f1b05",
     "filename": "paul-tharun_gopie.svg"
+  },
+  "https://github.com/anandbagmar/anandbagmar.github.io/blob/master/assets/img/Anand_profile.jpg": {
+    "hash": "e46a5562783dbedd297acb4eb0f01e9b14ff4774952ceaa7f03834b0ad80f312",
+    "filename": "anandbagmar_photo.jpg"
+  },
+  "https://teswiz.com/wp-content/uploads/2024/09/Teswiz-logo-400x113-1-300x85.png": {
+    "hash": "533072845b446813624dc29a9610cddadb5a5e40b25cbcc0222d4236e3252411",
+    "filename": "anandbagmar_teswiz.png"
   }
 }
