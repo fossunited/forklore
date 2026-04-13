@@ -7,7 +7,7 @@ export default defineEventHandler(async (event) => {
     id: "https://forklore.in/",
     link: "https://forklore.in/",
     language: "en",
-    feedLinks: { rss: "https://forklore.in/rss" },
+    feedLinks: { rss: "https://forklore.in/rss.xml" },
     author: { name: "Forklore", link: "https://forklore.in/" },
     copyright: `All rights reserved ${new Date().getFullYear()}, Forklore`,
   });

@@ -27,8 +27,8 @@ export default defineNuxtConfig({
       },
       link: [
         { rel: "icon", type: "image/x-icon", href: "/favicon.svg" },
-        {rel: "alternate", type: "application/rss+xml", href: "/rss", title: "Forklore RSS Feed",},
-        {rel: "alternate", type: "application/rss+xml", href: "/planet/rss", title: "Planet Forklore Feed",},
+        {rel: "alternate", type: "application/rss+xml", href: "/rss.xml", title: "Forklore RSS Feed",},
+        {rel: "alternate", type: "application/rss+xml", href: "/planet/rss.xml", title: "Planet Forklore Feed",},
       ],
     },
   },
@@ -44,7 +44,8 @@ export default defineNuxtConfig({
     },
     prerender: {
       crawlLinks: true,
-      routes: ["/rss", "/", "/planet", "/planet/rss"],
+      concurrency: 6,
+      routes: ["/rss.xml", "/", "/planet", "/planet/rss.xml"],
       failOnError: false,
       ignore: [
         // Relative URLs in post HTML content get followed by crawlLinks

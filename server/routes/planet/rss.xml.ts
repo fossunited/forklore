@@ -10,7 +10,7 @@ export default defineEventHandler(async (event) => {
     id: `${BASE_URL}/planet`,
     link: `${BASE_URL}/planet`,
     language: "en",
-    feedLinks: { rss: `${BASE_URL}/planet/rss` },
+    feedLinks: { rss: `${BASE_URL}/planet/rss.xml` },
     author: { name: "Forklore", link: BASE_URL },
     copyright: `All rights reserved ${new Date().getFullYear()}, Forklore`,
     updated: new Date(),
