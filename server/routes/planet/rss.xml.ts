@@ -31,7 +31,7 @@ export default defineEventHandler(async (event) => {
       new Date(b.post.pubDate).getTime() - new Date(a.post.pubDate).getTime(),
   );
 
-  for (const { name, username, post } of allEntries) {
+  for (const { name, username, post } of allEntries.slice(0, 50)) {
     feed.addItem({
       title: post.title,
       id: post.link || post.guid || post.slug,
@@ -41,7 +41,6 @@ export default defineEventHandler(async (event) => {
       date: new Date(post.pubDate),
       author: [{ name: post.author || name, link: `${BASE_URL}/maintainers/${username}` }],
       category: (post.tags || []).map((t: string) => ({ name: t })),
-      ...(post.image && { image: post.image }),
     });
   }
 

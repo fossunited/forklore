@@ -155,11 +155,6 @@ async function main() {
           item.summary ||
           (item as any).description ||
           "";
-        const image =
-          item.enclosure?.url ||
-          (item as any).mediaContent?.$.url ||
-          (item as any).mediaThumbnail?.$.url ||
-          undefined;
         const author =
           (item as any).dcCreator ||
           (item as any).creator ||
@@ -177,7 +172,6 @@ async function main() {
           existing.content = cleanContent(fullContent, item.link || "");
           existing.contentSnippet = item.contentSnippet || existing.contentSnippet;
           existing.tags = tags.length ? tags : existing.tags;
-          if (image) existing.image = image;
           if (author) existing.author = author;
           updatedCount++;
           continue;
@@ -200,7 +194,6 @@ async function main() {
           pubDate: item.pubDate || item.isoDate || new Date().toISOString(),
           content: cleanContent(fullContent, item.link || ""),
           contentSnippet: item.contentSnippet || "",
-          ...(image && { image }),
           ...(author && { author }),
           tags,
         });
