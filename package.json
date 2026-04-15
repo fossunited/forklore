@@ -21,7 +21,7 @@
     "feed": "^5.2.0",
     "minisearch": "^7.2.0",
     "nuxt": "^4.4.2",
-    "nuxt-og-image": "^6.3.2",
+    "nuxt-og-image": "^6.4.2",
     "tailwindcss": "^4.2.2",
     "rss": "^1.2.2",
     "rss-parser": "^3.13.0",
