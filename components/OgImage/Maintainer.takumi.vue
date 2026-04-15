@@ -21,12 +21,12 @@ defineProps<{
     />
 
     <!-- Content Overlay -->
-    <div class="absolute inset-0 flex flex-col justify-between p-26 mr-8">
+    <div class="absolute inset-0 flex flex-col justify-between p-26 mr-8 font-['Geist_Mono']">
       <!-- Maintainer Info -->
       <div class="flex gap-8 items-center justify-end">
-        <div class="flex flex-col items-end gap-10 mr-5 font-['Geist_Mono']">
+        <div class="flex flex-col items-end gap-10 mr-5">
           <h1
-            class="text-[50px] font-bold text-[#CFF2DA] text-right tracking-[2px]"
+            class="text-[50px] font-semibold text-[#CFF2DA] text-right tracking-[2px]"
           >
             {{ maintainer.full_name }}
           </h1>
@@ -69,7 +69,7 @@ defineProps<{
               :alt="project.name"
               class="w-full h-full object-contain p-2"
             />
-            <span v-else class="text-2xl font-bold text-[#18222a]">
+            <span v-else class="text-2xl font-semibold text-[#18222a]">
               {{ project.name.charAt(0) }}
             </span>
           </div>
