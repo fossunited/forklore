@@ -1,0 +1,121 @@
+{
+  "username": "VishnuSanal",
+  "full_name": "Vishnu Sanal T",
+  "photo": "/images/VishnuSanal_photo.jpg",
+  "designation": "Android Developer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/VishnuSanal"
+    },
+    {
+      "label": "Codeberg",
+      "link": "https://codeberg.org/VishnuSanal"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://fosstodon.org/@VishnuSanal"
+    },
+    {
+      "label": "Web",
+      "link": "https://vishnusanal.github.io/"
+    },
+    {
+      "label": "Gitlab",
+      "link": "https://gitlab.com/VishnuSanal"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://twitter.com/VishnuSanalT"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/vishnu-sanal-t/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Amaze File Manager",
+      "project_link": "https://github.com/TeamAmaze/AmazeFileManager",
+      "website_link": "https://f-droid.org/packages/com.amaze.filemanager/",
+      "logo": "/images/VishnuSanal_amaze_file_manager.png",
+      "short_description": "Material design file manager for Android",
+      "description": "Simple and attractive Material Design file manager for Android"
+    },
+    {
+      "name": "WhatsApp Cleaner",
+      "project_link": "https://github.com/VishnuSanal/WhatsAppCleaner/",
+      "website_link": "https://f-droid.org/packages/com.vishnu.whatsappcleaner/",
+      "logo": "/images/VishnuSanal_whatsapp_cleaner.png",
+      "short_description": "Cleaner for WhatsApp - Clean Redundant Media and Files from Storage",
+      "description": "Did you know that WhatsApp is cluttering your phone with unnecessary media, old"
+    },
+    {
+      "name": "RemindMe!",
+      "project_link": "https://github.com/VishnuSanal/RemindMe",
+      "website_link": "https://f-droid.org/packages/com.vishnu.remindme/",
+      "logo": "/images/VishnuSanal_remindme.png",
+      "short_description": "Set alarms for a specific date in the future (alarm, not a reminder!)",
+      "description": "Have you found yourself in a situation where you wanted a *strong* reminder to something someday in the future?!"
+    },
+    {
+      "name": "Prav",
+      "project_link": "https://codeberg.org/prav/prav",
+      "website_link": "https://f-droid.org/packages/app.prav.client/",
+      "logo": "/images/VishnuSanal_prav.png",
+      "short_description": "A user-friendly XMPP messenger for everyone with a focus on privacy and freedom",
+      "description": "Whether you want to text your friends and family, or to make calls, Prav app makes it easy for you. It provides convenient onboarding and user-friendly interface. It is based on XMPP protocol, so users can talk to any other XMPP users all over the world, without being locked-in to a service."
+    },
+    {
+      "name": "DialogMusicPlayer",
+      "project_link": "https://github.com/VishnuSanal/DialogMusicPlayer",
+      "website_link": "https://f-droid.org/packages/phone.vishnu.dialogmusicplayer",
+      "logo": "/images/VishnuSanal_dialogmusicplayer.png",
+      "short_description": "A simple and minimal music player dialog :)",
+      "description": "The stock music player on my phone needed unnecessary permissions! So, I created one on my own :D"
+    },
+    {
+      "name": "Quotes Status Creator",
+      "project_link": "https://github.com/VishnuSanal/Quotes",
+      "website_link": "https://f-droid.org/packages/phone.vishnu.quotes/",
+      "logo": "/images/VishnuSanal_quotes_status_creator.png",
+      "short_description": "Quotes Status Creator lets you share quotations as status images on social media",
+      "description": "Quotes Status Creator lets you share quotations as images on social media"
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "https://buymeacoffee.com/vishnusanal"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "I contribute to / maintain some native android open source projects including a file manager, and some utility applications."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "It takes time! Be patient, all these works count in on you someday, keep going! :)"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Joy of building stuff, thank you notes that make my day, and TBH for validation and self esteem boost too somedays (trust me this is more often than you think)! ;)"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=Oextk-If8HQ&themeRefresh=1"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Almost all of it TBF 🫠🌝"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Collaboration over unhealthhy completition / rigour felt appealing."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🧘🏽‍♀️"
+    }
+  ],
+  "created_on": "2026-04-18T14:42:27.492443+05:30"
+}
