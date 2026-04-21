@@ -25,16 +25,24 @@
       "logo": "",
       "description": "Remember taking things apart as a kid? A mechanical clock, a radio—you could see the gears, trace the wires, understand cause and effect. It sparked curiosity. Crack open a modern smartphone and you see black chips—powerful, but opaque. Agents feel the same today.<br><br>Standard Agent is the mechanical radio of agent libraries—open it up and actually learn how it works. It’s a tiny, open source library with a composable core and plug‑in components, proving a simple point: LLMs are hard, tooling is hard, but the glue code doesn’t have to be. You can write an agent in a few hundred lines and truly understand it.<br><br><strong>The Three Design Principles</strong><ul><li>Deliberately simple: No black box, no magic. It should be faster to read the code than the docs, and you can see every decision the agent makes.</li><li>Fully composable: Swap any part—LLM, tools, memory, reasoning strategy. Mix-and-match like LEGO. No framework lock‑in.</li><li>Open source: Read it, modify it, deploy it, fork it—or replace it. Apache 2.0, by design.</li></ul><strong>What You Get</strong><ul><li>Four swappable parts: LLM (brain), Reasoner (thinking style), Memory (notepad), Tools (actions)</li><li>Single‑file reference reasoners (e.g., ReACT, ReWOO) you can inspect, compare, and customize</li><li>First‑class observability: structured logging and optional OpenTelemetry exports (e.g., to Langfuse)</li></ul><strong>Who It’s For</strong><br>Builders who value transparency over abstraction: researchers, tinkerers, and teams who want a readable reasoning loop they can understand, measure, and modify—without fighting a framework.<br><br><strong>Mission &amp; Goals</strong><br>The mission is to demystify agents: make the internals transparent, the pieces composable, and experimentation fast. The goals are a thriving, community‑driven reference library of reasoning strategies, tool providers (MCP, local scripts, remote APIs), and memory backends (e.g., Redis, vector stores)—with patterns that emerge organically, not enforced by a framework. Apache 2.0 licensed, no lock‑in, and welcoming to contributors. Small enough to understand, powerful enough to use, open enough to hack.",
       "short_description": "The mechanical radio of agent libraries—deliberately simple, fully composable, open source."
+    },
+    {
+      "name": "Ormah",
+      "project_link": "https://github.com/r-spade/ormah",
+      "website_link": "https://www.ormah.me",
+      "logo": "/images/rishikeshchirammelajit_ormah.png",
+      "description": "Ormah is a local-first, portable, collective memory layer for AI agents, built around involuntary recall. Agents should not have to remember to remember. Ormah works in the background, learning from ongoing work so relevant memory can surface when it matters.<br><br>In real life, memory does not work like search. When something in front of you connects to something you already know, the memory surfaces on its own. You do not stop and decide to remember.<br><br>Ormah is built around that idea. Instead of waiting for an agent to ask for context, Ormah looks at what is happening and whispers the right memory before the agent processes the next prompt, so it starts with the context, preferences, constraints, and hints that matter.<br><br>That is what makes Ormah feel like memory instead of search. Search waits to be asked. Memory shows up when it matters.<br><br><strong>What It Provides</strong><ul><li>Involuntary recall through whisper: relevant memories arrive before the next response.</li><li>Deliberate recall through hybrid search over local memory.</li><li>Memory capture from sessions, transcripts, and markdown sources.</li><li>Self-maintaining graph maintenance: linking related memories, detecting contradictions, tracking evolution of belief, merging duplicates, consolidating overlap, and decaying stale context.</li><li>Agent-agnostic surfaces: CLI, MCP tools, HTTP API, hooks, and a graph UI.</li></ul><strong>Ownership</strong><br>Your memory has always been yours. Ormah helps keep it that way. Local. Private. Portable. Yours to keep. Yours to move.",
+      "short_description": "Local-first, portable, self-maintaining memory for AI agents."
     }
   ],
   "form": [
     {
       "question": "How to support",
-      "response": "<br>- Contribute: new reasoners (LATS, ToT, Plan-Act), tool providers (MCP/local/your APIs), memory backends (Redis/vector).<br>- Improve docs/examples and prompt quality per model.<br>- Fork, extend—even replace: it’s Apache‑2.0. Swap any component, ship your own flavor, or replace the reasoner entirely. If it helps others, open a PR."
+      "response": "All ideas and PRs are welcome."
     },
     {
       "question": "A small brief about your project",
-      "response": "Tries to be mechanical radio of agent libraries—deliberately simple, fully composable, open source. Tries to demystify agent and encourage tinkering."
+      "response": "Ormah means memory or remembrance in my mother tongue. The project is built around that idea: memory should surface when it matters, without the agent having to explicitly ask for it."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
