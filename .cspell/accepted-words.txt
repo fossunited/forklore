@@ -1,4 +1,5 @@
 Codeberg
+Codex
 Commoning
 Connexions
 FOSS
@@ -15,11 +16,13 @@ Langfuse
 Libredesk
 Magento
 Mahna
+MCP
 Maxun
 NASSCOM
 NCBI
 Nuxt
 OISF
+Ormah
 Poorna
 Projekt
 Pysradb
