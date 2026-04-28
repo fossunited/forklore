@@ -2964,7 +2964,7 @@
     "@vue/compiler-core" "3.5.33"
     "@vue/shared" "3.5.33"
 
-"@vue/compiler-sfc@3.5.33", "@vue/compiler-sfc@^3.5.22", "@vue/compiler-sfc@^3.5.32":
+"@vue/compiler-sfc@3.5.33", "@vue/compiler-sfc@^3.5.22", "@vue/compiler-sfc@^3.5.33":
   version "3.5.33"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.5.33.tgz#647b0337dbef6e3da042576f5663ff327f635f78"
   integrity sha512-UTUvRO9cY+rROrx/pvN9P5Z7FgA6QGfokUCfhQE4EnmUj3rVnK+CHI0LsEO1pg+I7//iRYMUfcNcCPe7tg0CoA==
@@ -3580,6 +3580,11 @@ citty@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/citty/-/citty-0.2.1.tgz#1b150777a3357b7b92e173fff38ea0d6ad2d08da"
   integrity sha512-kEV95lFBhQgtogAPlQfJJ0WGVSokvLr/UEoFPiKKOXF7pl98HfUVUD0ejsuTCld/9xH9vogSywZ5KqHzXrZpqg==
+
+citty@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/citty/-/citty-0.2.2.tgz#92d3f7d13868a730ab06c420bb10bded06cf259f"
+  integrity sha512-+6vJA3L98yv+IdfKGZHBNiGW5KHn22e/JwID0Strsz8h4S/csAu/OuICwxrg44k5MRiZHWIo8XXuJgQTriRP4w==
 
 clean-git-ref@^2.0.1:
   version "2.0.1"
@@ -6495,14 +6500,14 @@ nuxt-component-meta@0.17.2:
     ufo "^1.6.2"
     vue-component-meta "^3.2.2"
 
-nuxt-og-image@^6.4.5:
-  version "6.4.5"
-  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.4.5.tgz#3cd2d01cab951a0dc06b4b922ded555ca58f2516"
-  integrity sha512-hGdNrx91b9H6Xh+c9S89y87sv8WJkOL02mHf/gacNUJ4RodQEk/8VNr3zgxU1xJ+JDITqmRGRmhxXCeODXUidA==
+nuxt-og-image@^6.4.8:
+  version "6.4.8"
+  resolved "https://registry.yarnpkg.com/nuxt-og-image/-/nuxt-og-image-6.4.8.tgz#242f6fc1477de2ce0f649f4093114a4fa1947dcd"
+  integrity sha512-bg6wi7sTRWigf6ZhhaV5IDpyN6BAAaZoi91J7bbe+KkKXOVq6x1H753oQsFPtaFmW5KwmO3Ap53Kio9955QVVg==
   dependencies:
     "@clack/prompts" "^1.2.0"
     "@nuxt/kit" "^4.4.2"
-    "@vue/compiler-sfc" "^3.5.32"
+    "@vue/compiler-sfc" "^3.5.33"
     chrome-launcher "^1.2.1"
     consola "^3.4.2"
     culori "^4.0.2"
@@ -6515,7 +6520,7 @@ nuxt-og-image@^6.4.5:
     mocked-exports "^0.1.1"
     nuxt-site-config "^4.0.8"
     nuxtseo-shared "^5.1.3"
-    nypm "^0.6.5"
+    nypm "^0.6.6"
     ofetch "^1.5.1"
     ohash "^2.0.11"
     oxc-parser "^0.127.0"
@@ -6636,14 +6641,14 @@ nuxtseo-shared@^5.1.2, nuxtseo-shared@^5.1.3:
     std-env "^4.0.0"
     ufo "^1.6.3"
 
-nypm@^0.6.0, nypm@^0.6.5:
-  version "0.6.5"
-  resolved "https://registry.yarnpkg.com/nypm/-/nypm-0.6.5.tgz#5edd97310ee468fa3306b9ef5fe82b8ef6605b57"
-  integrity sha512-K6AJy1GMVyfyMXRVB88700BJqNUkByijGJM8kEHpLdcAt+vSQAVfkWWHYzuRXHSY6xA2sNc5RjTj0p9rE2izVQ==
+nypm@^0.6.0, nypm@^0.6.5, nypm@^0.6.6:
+  version "0.6.6"
+  resolved "https://registry.yarnpkg.com/nypm/-/nypm-0.6.6.tgz#431ee4560126ebaa377376f0e168640336ee8920"
+  integrity sha512-vRyr0r4cbBapw07Xw8xrj9Teq3o7MUD35rSaTcanDbW+aK2XHDgJFiU6ZTj2GBw7Q12ysdsyFss+Vdz4hQ0Y6Q==
   dependencies:
-    citty "^0.2.0"
+    citty "^0.2.2"
     pathe "^2.0.3"
-    tinyexec "^1.0.2"
+    tinyexec "^1.1.1"
 
 obug@^2.1.1:
   version "2.1.1"
