@@ -49,6 +49,7 @@ LABEL_NORMALIZATION = {
     "web": "Web",
     "x": "X",
     "reddit": "Reddit",
+    "medium": "Medium",
     # Mixed case variants
     "Github": "GitHub",
     "Gitlab": "GitLab",
@@ -65,7 +66,7 @@ LABEL_NORMALIZATION = {
     "mail": "Email",
     "X/Twitter": "X",
     "Twitter/X": "X",
-    "YouTube": "Youtube"
+    "YouTube": "Youtube",
 }
 
 # Valid labels as per schema

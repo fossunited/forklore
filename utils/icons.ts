@@ -12,6 +12,7 @@ import Substack from "~/components/icons/Substack.vue";
 import Reddit from "~/components/icons/Reddit.vue";
 import Youtube from "~/components/icons/Youtube.vue";
 import RSS from "~/components/icons/RSS.vue";
+import Medium from "~/components/icons/Medium.vue";
 
 const icons = {
   web: WebIcon,
@@ -29,7 +30,8 @@ const icons = {
   "arrow-up-right": ArrowUpRight,
   substack: Substack,
   youtube: Youtube,
-  rss: RSS
+  rss: RSS,
+  medium: Medium,
 } as const;
 
 type IconMap = typeof icons;
