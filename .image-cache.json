@@ -566,5 +566,13 @@
   "https://teswiz.com/wp-content/uploads/2024/09/Teswiz-logo-400x113-1-300x85.png": {
     "hash": "533072845b446813624dc29a9610cddadb5a5e40b25cbcc0222d4236e3252411",
     "filename": "anandbagmar_teswiz.png"
+  },
+  "https://avatars.githubusercontent.com/u/135348086?v=4.jpg": {
+    "hash": "d53564337d0b68faf966e3be1459dd1e64ca5dfe11895e95c05a25d2b06997dd",
+    "filename": "hardikgoyal2003_photo.jpg"
+  },
+  "https://raw.githubusercontent.com/oppia/oppia/refs/heads/develop/assets/images/logo/48x48_logo_mint.svg": {
+    "hash": "82893868d7a752ce003a7ad429b1114b6716be0075e1721867a79ac5805c1170",
+    "filename": "hardikgoyal2003_oppia_foundation.svg"
   }
 }
