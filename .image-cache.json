@@ -574,5 +574,21 @@
   "https://raw.githubusercontent.com/oppia/oppia/refs/heads/develop/assets/images/logo/48x48_logo_mint.svg": {
     "hash": "82893868d7a752ce003a7ad429b1114b6716be0075e1721867a79ac5805c1170",
     "filename": "hardikgoyal2003_oppia_foundation.svg"
+  },
+  "https://theofdn.org/wp-content/uploads/2026/04/Chapakala19-poster.svg": {
+    "hash": "6f31c62c692f110879de73aa87de242cc7846841fbb03f03a60cc990e7120921",
+    "filename": "psubhashish_chapakala_19.svg"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/0/07/Wikimedia-Futures-Lab-26-Portraits-27.jpg": {
+    "hash": "d42fced631599241286f9ffc0967060ed88c94cb5a9c0767513e7bdcc526e52b",
+    "filename": "psubhashish_photo.jpg"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/6/66/OpenSpeaksSubtitler-logo.svg": {
+    "hash": "cf1040d37f9be01d7faf42decaa1e1e597dbbbacd3db98a2566ded4c81e173c9",
+    "filename": "psubhashish_openspeaks_subtitler.svg"
+  },
+  "https://upload.wikimedia.org/wikipedia/commons/2/2e/OpenSpeaks_logo.svg": {
+    "hash": "b56c77729820caef96c7e37f780f7b37bdb6bf5f741fc7c9fcc921d79e4e46eb",
+    "filename": "psubhashish_openspeaks_tools_suite.svg"
   }
 }
