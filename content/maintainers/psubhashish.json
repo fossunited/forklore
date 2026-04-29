@@ -1,0 +1,77 @@
+{
+  "username": "psubhashish",
+  "full_name": "Subhashish Panigrahi",
+  "photo": "/images/psubhashish_photo.jpg",
+  "designation": "Language archivist and openness steward",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/psubhashish"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://mastodon.org/subhapa"
+    }
+  ],
+  "projects": [
+    {
+      "name": "OpenSpeaks Subtitler",
+      "project_link": "https://gitlab.wikimedia.org/toolforge-repos/subtitler",
+      "website_link": "https://meta.wikimedia.org/wiki/OpenSpeaks/Tools/Subtitler",
+      "logo": "/images/psubhashish_openspeaks_subtitler.svg",
+      "short_description": "linear audio/video subtitle editor",
+      "description": "Subtitles are key to accessibility, translation, and fundamental access. OpenSpeaks Subtitler helps transcribe audio/video files, and export as popular subtitle formats (e.g. SRT/VTT). One can also fetch audio, video and subtitle files from Wikimedia Commons, edit/translate the subtitles, and export them."
+    },
+    {
+      "name": "Chapakala 19",
+      "project_link": "https://github.com/ofdn/Chapakala/tree/main/19",
+      "website_link": "https://theofdn.org/activities/type/",
+      "logo": "/images/psubhashish_chapakala_19.svg",
+      "short_description": "revival of a 19th-century typeface in Odia (then Oriya) script",
+      "description": "Chapakala 19 revives a nineteenth‑century workhorse Odia letterpress typeface used in printed books, including work from the Orissa Mission Press in Cuttack (est. 1838). This Open Font License (OFL)-licensed typeface focuses on the fonts used for body text rather than display styles, and follows the shapes and _juktakshara_ (conjunct)s found in books printed between roughly 1810 and 1875. The font is built as a Unicode‑based OpenType family and is designed for reading, historical reprints and OCR training on scanned Odia books."
+    },
+    {
+      "name": "OpenSpeaks Tools Suite",
+      "project_link": "https://github.com/openspeaks",
+      "website_link": "https://meta.wikimedia.org/wiki/OpenSpeaks/Tools",
+      "logo": "/images/psubhashish_openspeaks_tools_suite.svg",
+      "short_description": "OpenSpeaks Tools suite serves primarily language documenters and archivists who are preserving low-resourced languages.",
+      "description": "OpenSpeaks Tools includes tools such as Subtitler (subtitle editor), Media Metadata Viewer (inspects audio/video properties and compress files for sharing/editing), Media Duration Calculator (batch calculates total media duration of audio and video files inside folders for project planning/budgeting), Multimedia Organizer (organises, categorises, tags, and batch-renames video, audio and image files inside a folder using structured naming conventions), and Wikimedia Commons Metadata Generator (generates ready-to-paste Wikimedia Commons template wiki-code for audio and video)."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "We need help with developing/improving these tools. Please [connect](https://meta.wikimedia.org/wiki/Talk:OpenSpeaks/Tools) if interested."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "OpenSpeaks tools are to help language archivists document and archive low-resourced languages. "
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Don't be shy to share your work in progress with the larger community. You never know where the help will come from."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "While low-resourced language documenters and archivists know their communities' needs better, there aren't often enough tools and educational resources available to support their work. We also use these tools every day. That's what we are building and maintaining these tools. "
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=r8xOPZxAvWU"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "Detailed documentation of now-dated prototype we ended up creating out of excitement!"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "Evil corporation asks the community to code for free and makes millions off of that."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🫂💙"
+    }
+  ],
+  "created_on": "2026-04-29T11:02:19.906685+05:30"
+}
