@@ -14,7 +14,7 @@ defineProps(["maintainer"]);
       class="p-4 md:p-8 flex gap-4 items-center bg-tertiary-light dark:bg-tertiary-dark"
     >
       <MaintainerImage :maintainer="maintainer" />
-      <div class="flex flex-col">
+      <div class="flex flex-col min-w-0">
         <h4 class="font-bold">{{ maintainer.full_name }}</h4>
         <MDC :value="maintainer.designation" />
       </div>

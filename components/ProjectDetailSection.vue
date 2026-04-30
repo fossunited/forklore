@@ -5,7 +5,7 @@ defineProps(["project"]);
 </script>
 
 <template>
-  <div class="p-8 flex flex-col gap-6 items-start">
+  <div class="p-8 flex flex-col gap-6 items-start min-w-0 w-full">
     <ProjectLogo :project="project" />
     <h2 class="text-xl font-bold">{{ project.name }}</h2>
     <MDC

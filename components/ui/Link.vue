@@ -30,7 +30,7 @@ defineProps({
 
 <template>
   <a
-    :class="`btn-${variant} text-sm flex items-center gap-2`"
+    :class="`btn-${variant} text-sm flex items-center gap-2 min-w-0 max-w-full`"
     :href="link"
     target="_blank"
   >
@@ -38,11 +38,11 @@ defineProps({
       <component
         v-if="preIcon"
         :is="iconMapper(preIcon)"
-        class="w-5 h-5"
+        class="shrink-0 w-5 h-5"
       ></component>
     </slot>
     <slot>
-      {{ label }}
+      <span class="truncate">{{ label }}</span>
     </slot>
     <slot name="post-icon">
       <component

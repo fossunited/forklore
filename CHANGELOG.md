@@ -2,6 +2,18 @@
 
 > maintainers are in ascending order (older at top)
 
+## April 2026
+We've about `74 maintainers` at this point.
+
+### Maintainers (7)
+- [Sonal Goyal @@ Zingg.AI](https://forklore.in/maintainers/sonalgoyal)
+- [Junaid Islam @ Surge](https://forklore.in/maintainers/junaid2005p/)
+- [Tharun Paul @ Gopie](https://forklore.in/maintainers/paul-tharun)
+- [Anand Bagmar @ Teswiz](https://forklore.in/maintainers/anandbagmar)
+- [Vishnu Sanal @ Amaze FM](https://forklore.in/maintainers/vishnusanal)
+- [Hardik Goyal @ Oppia](https://forklore.in/maintainers/hardikgoyal2003)
+- [Subhashish Panigrahi @ Wikimedia](https://forklore.in/maintainers/psubhashish)
+
 ## March 2026
 
 ### Maintainers
