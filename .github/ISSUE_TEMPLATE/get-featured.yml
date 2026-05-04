@@ -61,9 +61,11 @@ body:
     attributes:
       label: Socials
       description: "One per line. Supported: web, rss, github, gitlab, codeberg, mastodon, bluesky, substack, medium, twitter, linkedin, reddit"
-      placeholder: |
+      value: |
         GitHub: https://github.com/yourusername
+        Codeberg: https://codeberg.org/username
         Mastodon: https://fosstodon.org/@yourhandle
+        Web: https://im-awesome.in/
         RSS: https://your-blog.com/rss.xml
 
   - type: markdown
@@ -74,8 +76,8 @@ body:
     id: projects
     attributes:
       label: Projects
-      description: "Add one or more projects using the format below. Repeat the block for each project."
-      placeholder: |
+      description: "Add one or more projects. Repeat the block for each project."
+      value: |
         project:
         - name: Project Name
         - project_link: https://github.com/user/repo
