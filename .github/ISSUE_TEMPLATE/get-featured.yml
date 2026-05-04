@@ -1,0 +1,142 @@
+name: Get featured
+description: FOSS maintainer profile submission
+title: "[MAINT] Your Name @ Project"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Want to submit this as a PR directly?** That reduces our intervention time!
+
+        1. Save this issue as `username.md`
+        2. Clone the repo or download `parse-maintainer.py`
+        3. Run: `python parse_maintainer.py username.md > <username>.json`
+        4. Open a PR adding the JSON to `/content/maintainers/<username>.json`
+
+        Use your GitHub username as the filename for uniqueness.
+
+  - type: checkboxes
+    id: opt_ins
+    attributes:
+      label: Opt-ins
+      options:
+        - label: Add me to the maintainer community mailing group
+        - label: I have an RSS feed and want to join [Planet Forklore](https://forklore.in/planet)
+
+  - type: markdown
+    attributes:
+      value: "## Your Details"
+
+  - type: input
+    id: username
+    attributes:
+      label: GitHub Username
+      placeholder: your-github-username
+    validations:
+      required: true
+
+  - type: input
+    id: full_name
+    attributes:
+      label: Full Name
+      placeholder: Your Full Name
+    validations:
+      required: true
+
+  - type: input
+    id: photo
+    attributes:
+      label: Photo URL
+      placeholder: https://your-photo-url.com/image.jpg
+    validations:
+      required: true
+
+  - type: input
+    id: designation
+    attributes:
+      label: Designation / Role
+      placeholder: Your Role or Title
+
+  - type: textarea
+    id: socials
+    attributes:
+      label: Socials
+      description: "One per line. Supported: web, rss, github, gitlab, codeberg, mastodon, bluesky, substack, medium, twitter, linkedin, reddit"
+      placeholder: |
+        GitHub: https://github.com/yourusername
+        Mastodon: https://fosstodon.org/@yourhandle
+        RSS: https://your-blog.com/rss.xml
+
+  - type: markdown
+    attributes:
+      value: "## Projects"
+
+  - type: textarea
+    id: projects
+    attributes:
+      label: Projects
+      description: "Add one or more projects using the format below. Repeat the block for each project."
+      placeholder: |
+        project:
+        - name: Project Name
+        - project_link: https://github.com/user/repo
+        - website_link: https://yourproject.com
+        - logo: https://yourproject.com/logo.svg
+        - short_description: Brief one-liner about the project
+        - description: Longer description.
+            Indent continuation lines with 4 spaces.
+
+        project:
+        - name: Another Project
+        - project_link: https://github.com/user/repo2
+        - website_link: https://example.com
+        - logo: https://example.com/logo.png
+        - short_description: Another brief description
+        - description: Another longer description
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: "## Questions"
+
+  - type: textarea
+    id: how_to_support
+    attributes:
+      label: How can people support your project?
+
+  - type: textarea
+    id: brief_about_project
+    attributes:
+      label: A small brief about your project
+
+  - type: textarea
+    id: lesson
+    attributes:
+      label: One FOSS maintainer lesson for your younger self
+
+  - type: textarea
+    id: why_maintain
+    attributes:
+      label: Why do you do it? Why do you bother maintaining a FOSS project?
+
+  - type: textarea
+    id: theme_song
+    attributes:
+      label: If your repo had a theme song, what would it be?
+      description: YouTube/Spotify link or just the song name
+
+  - type: textarea
+    id: set_on_fire
+    attributes:
+      label: Which file in your project would you most like to set on fire?
+
+  - type: textarea
+    id: villain_origin
+    attributes:
+      label: What's your open-source villain origin story?
+
+  - type: input
+    id: emoji
+    attributes:
+      label: One emoji that conveys what it's like to be a FOSS maintainer
+      placeholder: "e.g. 🔥 🧠 💀 😅"
