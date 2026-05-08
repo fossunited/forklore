@@ -33,16 +33,24 @@
       "logo": "/images/mujeebcpy_poorna.svg",
       "description": "Poorna is an extended Inscript/Remington keyboard layout which is available in Windows, GNU/Linux, macOS, Android, iOS and Web. It contains all Malayalam Unicode Characters. Poorna Inscript is available by default in current Gnu/Linux systems and Keyman. and Poorna Remington is available in ibus m17n and Keyman. The core Malayalam Unicode block currently defines 118 distinct encoded character points. A significant shortcoming of most existing Malayalam keyboard layouts, including standard InScript and Remington methods, is their inability to access the complete character set. While basic Malayalam characters and numerals are typically present, users lack a fluid method to input critical characters like archaic letters, which are indispensable for historical linguistic research and documentation of ancient texts. Poorna is designed to eliminate this gap by being the first layout to offer comprehensive, integrated support for all 118 encoded Malayalam characters. It intelligently expands upon the familiar InScript/Remington layouts by mapping the entire extended character set to the 3rd and 4th levels of the keyboard, accessible via the Right Alt key and the Right Alt + Shift combination. Crucially, Poorna also ensures the essential formatting control characters, the Zero Width Joiner (ZWJ) and Zero Width Non-Joiner (ZWNJ), are placed in a familiar, convenient position consistent with the InScript 1 standard, allowing for precise control over consonant conjuncts and ligatures. This thoughtful extension provides a single, cohesive solution for both everyday typing and advanced research needs. Users can immediately experience the full functionality through a readily available <a href=\"https://poornaweb.smc.org.in/\">web-based</a> version Poorna is a group project by SMC Read more in Malayalam <a href=\"https://blog.smc.org.in/poorna-malayalam-keyboard-release/\">smc blog</a>.",
       "short_description": "Malayalam Extended Inscript/Remington Keyboard"
-    }
+    },
+    {
+  "name": "Subtitle Studio",
+  "project_link": "https://github.com/Msoneofficial/SubtitleStudio",
+  "website_link": "https://studio.malayalamsubtitles.org/",
+  "logo": "/images/mujeebcpy_subtitle_studio.png",
+  "short_description": "a free, cross-platform subtitle creation and translation tool",
+  "description": "Subtitle Studio is a fully free and open-source application designed for creating, editing and translating subtitles across major platforms. Unlike many existing tools that are limited to desktop environments, it aims to provide a consistent cross-platform experience. The application includes features such as video loading, audio waveform visualization, dual subtitle support, custom dictionaries, marking and commenting tools, project saving, subtitle extraction and AI-assisted explanations, making it suitable for both beginners and advanced subtitle workflows."
+  }
   ],
   "form": [
     {
       "question": "How to support",
-      "response": "This project comes under smc. so you can use smc channels for support.<br><a href=\"https://smc.org.in/en/contact/\">https://smc.org.in/en/contact/</a>"
+      "response": "Poorna comes under smc. so you can use smc channels for support.<br><a href=\"https://smc.org.in/en/contact/\">https://smc.org.in/en/contact/</a><br>To support subtitle studio, you can contribute to the repo or sponsor server for syncing feature. contact me throuhgh socials for that."
     },
     {
       "question": "A small brief about your project",
-      "response": "Poorna Ensure to type all Malayalam unicode encoded characters in two layouts. Inscript and Remington."
+      "response": "Poorna Ensure to type all Malayalam unicode encoded characters in two layouts. Inscript and Remington.<br>Subtitle Studio is a free and open-source, cross-platform tool for creating, editing, and translating subtitles."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
