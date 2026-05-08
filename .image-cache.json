@@ -590,5 +590,13 @@
   "https://upload.wikimedia.org/wikipedia/commons/2/2e/OpenSpeaks_logo.svg": {
     "hash": "b56c77729820caef96c7e37f780f7b37bdb6bf5f741fc7c9fcc921d79e4e46eb",
     "filename": "psubhashish_openspeaks_tools_suite.svg"
+  },
+  "https://pranaykotas.com/images/Pranay-official.jpeg": {
+    "hash": "b60ea6ec9413d21037cb14cab93f2c42af6171565fb45b1d2f2b8591fd773049",
+    "filename": "pranaykotas_photo.jpeg"
+  },
+  "https://pranaykotas.github.io/public-policy-frameworks/favicon.png": {
+    "hash": "163aee4259f004bb1408cbe59b48ef3619eb5051a3143ff76551b1048b9b42fd",
+    "filename": "pranaykotas_frameworks_for_public_policy.png"
   }
 }
