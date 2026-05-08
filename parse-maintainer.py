@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
+"""GitHub issue form submission → maintainer JSON"""
 
-"""Convert maintainer issue markdown to JSON"""
-
-import os
-import sys
-import json
-import re
-import subprocess
+import json, os, re, subprocess, sys
 from datetime import datetime
 from pathlib import Path
 
-REQUIRED_QUESTIONS = [
+QUESTIONS = [
     "How to support",
     "A small brief about your project",
     "One FOSS maintainer lesson for your younger self",
@@ -22,139 +17,84 @@ REQUIRED_QUESTIONS = [
 ]
 
 LABEL_MAP = {
-    "github": "GitHub",
-    "Github": "GitHub",
-    "gitlab": "GitLab",
-    "Gitlab": "GitLab",
-    "codeberg": "Codeberg",
-    "bitbucket": "BitBucket",
-    "Bitbucket": "BitBucket",
-    "linkedin": "LinkedIn",
-    "Linkedin": "LinkedIn",
-    "mastodon": "Mastodon",
-    "bluesky": "Bluesky",
-    "substack": "Substack",
-    "discourse": "Discourse",
-    "twitter": "Twitter",
-    "email": "Email",
-    "mail": "Email",
-    "Mail": "Email",
-    "rss": "RSS",
-    "web": "Web",
-    "website": "Web",
-    "Website": "Web",
-    "blog": "Web",
-    "Blog": "Web",
-    "x": "X",
-    "X/Twitter": "X",
-    "Twitter/X": "X",
-    "reddit": "Reddit",
-    "medium": "Medium",
-    "youtube": "Youtube",
-    "YouTube": "Youtube",
+    "github": "GitHub", "Github": "GitHub", "gitlab": "GitLab", "Gitlab": "GitLab",
+    "codeberg": "Codeberg", "bitbucket": "BitBucket", "linkedin": "LinkedIn",
+    "Linkedin": "LinkedIn", "mastodon": "Mastodon", "bluesky": "Bluesky",
+    "substack": "Substack", "twitter": "Twitter", "rss": "RSS",
+    "web": "Web", "website": "Web", "blog": "Web", "reddit": "Reddit",
+    "medium": "Medium", "youtube": "Youtube", "YouTube": "Youtube", "email": "Email",
 }
 
+PROJ_FIELDS = ("name", "project_link", "website_link", "logo", "short_description", "description")
 
-def parse_issue(md):
-    md = re.sub(r"<!--.*?-->", "", md, flags=re.DOTALL)
 
-    data = {
-        "username": "",
-        "full_name": "",
-        "photo": "",
-        "designation": "",
-        "socials": [],
-        "projects": [],
-        "form": [],
+def sections(md):
+    parts = re.split(r"^### (.+)$", md, flags=re.MULTILINE)
+    return {parts[i].strip(): parts[i+1].strip() for i in range(1, len(parts), 2) if i+1 < len(parts)}
+
+
+def parse_socials(text):
+    result = []
+    for line in text.splitlines():
+        line = line.lstrip("- ").strip()
+        if ":" in line and not line.startswith("#"):
+            label, _, link = line.partition(":")
+            if link := link.strip():
+                result.append({"label": LABEL_MAP.get(label.strip(), label.strip()), "link": link})
+    return result
+
+
+def parse_projects(text):
+    projects = []
+    for block in re.findall(r"project:\s*\n((?:^- .+\n?)+)", text, re.MULTILINE):
+        proj = {f: "" for f in PROJ_FIELDS}
+        for line in block.splitlines():
+            if line.startswith("- "):
+                key, _, val = line[2:].partition(":")
+                if key.strip() in proj:
+                    proj[key.strip()] = val.strip()
+        if proj["name"]:
+            projects.append(proj)
+    return projects
+
+
+def parse(md):
+    s = sections(md)
+    return {
+        "username": s.get("GitHub Username", ""),
+        "full_name": s.get("Full Name", ""),
+        "photo": s.get("Photo URL", ""),
+        "designation": s.get("Designation / Role", ""),
+        "socials": parse_socials(s.get("Socials", "")),
+        "projects": parse_projects(s.get("Projects", "")),
+        "form": [{"question": q, "response": s.get(q, "").replace("\n", "<br>")} for q in QUESTIONS],
         "created_on": datetime.now().astimezone().isoformat(),
     }
-
-    for field in ["username", "full_name", "photo", "designation"]:
-        m = re.search(
-            rf"\*\*{field}:\*\*\s*(.+?)(?=\n\*\*|\n---|\Z)",
-            md,
-            re.IGNORECASE | re.DOTALL,
-        )
-        if m:
-            data[field] = m.group(1).strip()
-
-    socials_m = re.search(r"\*\*socials:\*\*\s*\n((?:^- .+\n?)+)", md, re.MULTILINE)
-    if socials_m:
-        for line in socials_m.group(1).strip().split("\n"):
-            if ":" in line:
-                line = line.lstrip("- ").strip()
-                label, link = line.split(":", 1)
-                label = label.strip()
-                normalized = LABEL_MAP.get(label, label)
-                data["socials"].append({"label": normalized, "link": link.strip()})
-
-    for block in re.findall(
-        r"\*\*project:\*\*\s*\n((?:^- .+(?:\n(?:    .+)?)*\n?)+)", md, re.MULTILINE
-    ):
-        project = {
-            "name": "",
-            "project_link": "",
-            "website_link": "",
-            "logo": "",
-            "short_description": "",
-            "description": "",
-        }
-        for field in project:
-            m = re.search(
-                rf"^- {field}:\s*(.+?)(?=\n- |\Z)", block, re.MULTILINE | re.DOTALL
-            )
-            if m:
-                value = re.sub(r"\n\s{4}", "\n", m.group(1).strip())
-                project[field] = value.strip()
-        if project["name"]:
-            data["projects"].append(project)
-
-    questions_m = re.search(r"## Questions(.+)", md, re.DOTALL)
-    if questions_m:
-        parsed = {}
-        for q, r in re.findall(
-            r"\*\*(.+?):\*\*\s*\n(.+?)(?=\n\*\*|\Z)", questions_m.group(1), re.DOTALL
-        ):
-            parsed[q.strip().rstrip(":")] = r.rstrip("\n").replace("\n", "<br>")
-        for req_q in REQUIRED_QUESTIONS:
-            if req_q not in parsed:
-                print(f"Warning: Missing question: '{req_q}'", file=sys.stderr)
-            data["form"].append({"question": req_q, "response": parsed.get(req_q, "")})
-
-    return data
 
 
 if __name__ == "__main__":
     if os.getenv("CI") == "true":
         sys.exit(0)
-
-    if len(sys.argv) < 2 or sys.argv[1] == "--help":
+    if len(sys.argv) < 2:
         print("Usage: python parse-maintainer.py <input.md>")
         sys.exit(1)
 
-    md = Path(sys.argv[1]).read_text(encoding="utf-8")
-    result = parse_issue(md)
-
-    username = result.get("username") or "output"
-    output_file = f"content/maintainers/{username}.json"
-    json_output = json.dumps(result, indent=2, ensure_ascii=False)
-
-    Path(output_file).write_text(json_output + "\n", encoding="utf-8")
-    print(json_output)
+    result = parse(Path(sys.argv[1]).read_text(encoding="utf-8"))
+    username = result["username"] or "output"
+    out = f"content/maintainers/{username}.json"
+    Path(out).write_text(json.dumps(result, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print(json.dumps(result, indent=2, ensure_ascii=False))
 
     try:
-        subprocess.run(
-            ["check-jsonschema", "--schemafile", "maintainer.schema.json", output_file],
-            check=True,
-        )
-        print(f"✓ Validation passed. Saved to {output_file}", file=sys.stderr)
+        subprocess.run(["check-jsonschema", "--schemafile", "maintainer.schema.json", out], check=True)
+        print(f"✓ saved to {out}", file=sys.stderr)
     except subprocess.CalledProcessError:
-        print("✗ Validation failed. Fix errors above and re-run.", file=sys.stderr)
+        print("✗ schema validation failed", file=sys.stderr)
         sys.exit(1)
     except FileNotFoundError:
-        print("[WARN] check-jsonschema not found, skipping validation", file=sys.stderr)
+        print("[WARN] check-jsonschema not found", file=sys.stderr)
 
     try:
         subprocess.run(["python3", "sync-image.py", f"{username}.json"], check=True)
     except subprocess.CalledProcessError as e:
-        print(f"[WARN] Image sync failed: {e}", file=sys.stderr)
+        print(f"[WARN] image sync failed: {e}", file=sys.stderr)

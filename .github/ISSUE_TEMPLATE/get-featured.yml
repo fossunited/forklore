@@ -76,7 +76,7 @@ body:
     id: projects
     attributes:
       label: Projects
-      description: "Add one or more projects. Repeat the block for each project."
+      description: "One block per project. Each field on its own line starting with `- `."
       value: |
         project:
         - name: Project Name
@@ -84,8 +84,7 @@ body:
         - website_link: https://yourproject.com
         - logo: https://yourproject.com/logo.svg
         - short_description: Brief one-liner about the project
-        - description: Longer description.
-            Indent continuation lines with 4 spaces.
+        - description: Longer description here
 
         project:
         - name: Another Project
@@ -104,41 +103,57 @@ body:
   - type: textarea
     id: how_to_support
     attributes:
-      label: How can people support your project?
+      label: How to support
+    validations:
+      required: true
 
   - type: textarea
     id: brief_about_project
     attributes:
       label: A small brief about your project
+    validations:
+      required: true
 
   - type: textarea
     id: lesson
     attributes:
       label: One FOSS maintainer lesson for your younger self
+    validations:
+      required: true
 
   - type: textarea
     id: why_maintain
     attributes:
       label: Why do you do it? Why do you bother maintaining a FOSS project?
+    validations:
+      required: true
 
   - type: textarea
     id: theme_song
     attributes:
       label: If your repo had a theme song, what would it be?
       description: YouTube/Spotify link or just the song name
+    validations:
+      required: true
 
   - type: textarea
     id: set_on_fire
     attributes:
       label: Which file in your project would you most like to set on fire?
+    validations:
+      required: true
 
   - type: textarea
     id: villain_origin
     attributes:
       label: What's your open-source villain origin story?
+    validations:
+      required: true
 
   - type: input
     id: emoji
     attributes:
-      label: One emoji that conveys what it's like to be a FOSS maintainer
+      label: If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
       placeholder: "e.g. 🔥 🧠 💀 😅"
+    validations:
+      required: true
