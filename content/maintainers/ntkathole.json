@@ -26,7 +26,7 @@
   "form": [
     {
       "question": "How to support",
-      "response": "- Contribute features, bug fixes, or performance improvements and bench-marking (especially around offline/online store integrations, scalability, and infra).<br>- Improve documentation.<br>- Share feedback from production deployments.<br>- Help review PRs (this is very valuable)."
+      "response": "- Contribute features, bug fixes, or performance improvements and bench-marking (especially around offline/online store integrations, scalability, and infra).\n- Improve documentation.\n- Share feedback from production deployments.\n- Help review PRs (this is very valuable)."
     },
     {
       "question": "A small brief about your project",
@@ -38,11 +38,11 @@
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": "Because ML infrastructure shouldn’t be reinvented in every company.<br>Feast solves a real, recurring problem and building it in the open means better ideas, broader adoption, and real impact across teams and industries."
+      "response": "Because ML infrastructure shouldn’t be reinvented in every company.\nFeast solves a real, recurring problem and building it in the open means better ideas, broader adoption, and real impact across teams and industries."
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "Harder, Better, Faster, Stronger<br>(It’s basically what every feature pipeline is trying to become.)"
+      "response": "Harder, Better, Faster, Stronger\n(It’s basically what every feature pipeline is trying to become.)"
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
