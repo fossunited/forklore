@@ -598,5 +598,13 @@
   "https://pranaykotas.github.io/public-policy-frameworks/favicon.png": {
     "hash": "163aee4259f004bb1408cbe59b48ef3619eb5051a3143ff76551b1048b9b42fd",
     "filename": "pranaykotas_frameworks_for_public_policy.png"
+  },
+  "https://github.com/ntkathole/ntkathole/blob/6495c65caf62e873af7e7e73d122df7e43ca2b3b/profile_nikhil.jpg": {
+    "hash": "f0afedd15430d164d1e936aa37c0d4fe9d897d18141ed148b28eb54f2cf45387",
+    "filename": "ntkathole_photo.jpg"
+  },
+  "https://artwork.lfaidata.foundation/projects/feast/stacked/color/feast-stacked-color.svg": {
+    "hash": "944e28f4fa282857609c9e43e4a4dfc2c2a1f56eb551505f4a15e594c1666e2a",
+    "filename": "ntkathole_feast.svg"
   }
 }

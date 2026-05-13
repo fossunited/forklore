@@ -67,7 +67,7 @@ def parse(md):
         "designation": s.get("Designation / Role", ""),
         "socials": parse_socials(s.get("Socials", "")),
         "projects": parse_projects(s.get("Projects", "")),
-        "form": [{"question": q, "response": s.get(q, "").replace("\n", "<br>")} for q in QUESTIONS],
+        "form": [{"question": q, "response": s.get(q, "")} for q in QUESTIONS],
         "created_on": datetime.now().astimezone().isoformat(),
     }
 
