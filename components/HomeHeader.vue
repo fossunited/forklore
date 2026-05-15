@@ -20,34 +20,39 @@ const getLogoPath = computed(() => {
 </script>
 
 <template>
-  <div class="px-8 pt-10 md:pt-30 pb-8 border-custom-b space-y-6">
-    <div class="flex items-center gap-4">
-      <img :src="getLogoPath" alt="forklore logo" class="h-10" />
+  <header>
+    <div class="px-8 pt-10 md:pt-30 pb-8 border-custom-b space-y-6">
+      <div class="flex items-center gap-4">
+        <img :src="getLogoPath" alt="Forklore" class="h-10" />
+      </div>
+      <div class="flex flex-col sm:flex-row justify-between">
+        <p>
+          by
+          <a href="https://fossunited.org" class="font-bold link"
+            >FOSS United</a
+          >
+        </p>
+        <span
+          class="text-md font-bold"
+          v-if="maintainerCount > 0"
+          aria-live="polite"
+        >
+          {{ maintainerCount }}
+          {{ maintainerCount === 1 ? "maintainer" : "maintainers" }}
+        </span>
+      </div>
     </div>
-    <div class="flex flex-col sm:flex-row justify-between">
-      <p>
-        by
-        <a href="https://fossunited.org" class="font-bold link">FOSS United</a>
+    <div class="px-4 md:px-8 py-12 border-custom-b flex flex-col gap-4">
+      <p class="font-semibold">
+        Like a slam book, but with fewer crushes and more commits
       </p>
-
-      <span class="text-md font-bold" v-if="maintainerCount > 0">
-        {{ maintainerCount }}
-        {{ maintainerCount === 1 ? "maintainer" : "maintainers" }}
-      </span>
+      <p>
+        Forklore brings you confessions, quirks, and the occasional rant from
+        India's open source keepers.
+      </p>
+      <nuxt-link to="/planet" class="btn-outline text-sm font-bold w-fit">
+        Read Planet <span aria-hidden="true">→</span>
+      </nuxt-link>
     </div>
-  </div>
-  <div class="px-4 md:px-8 py-12 border-custom-b">
-    <p class="font-semibold">
-      Like a slam book, but with fewer crushes and more commits
-    </p>
-    <br />
-    <p>
-      Forklore brings you confessions, quirks, and the occasional rant from
-      India's open source keepers.
-    </p>
-    <br />
-    <nuxt-link to="/planet" class="btn-outline text-sm font-bold">
-      Read Planet →
-    </nuxt-link>
-  </div>
+  </header>
 </template>
