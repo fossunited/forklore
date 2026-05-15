@@ -606,5 +606,17 @@
   "https://artwork.lfaidata.foundation/projects/feast/stacked/color/feast-stacked-color.svg": {
     "hash": "944e28f4fa282857609c9e43e4a4dfc2c2a1f56eb551505f4a15e594c1666e2a",
     "filename": "ntkathole_feast.svg"
+  },
+  "https://factlymedia.com/teamMembers/Applications/Harsha.jpg": {
+    "hash": "7ab7de89c31bb90b86a97b1f9c3b957f41dd1cd164960433a26f15496f009ade",
+    "filename": "shreeharsha-factly_photo.jpg"
+  },
+  "https://dega.factlylabs.com/img/logo.svg": {
+    "hash": "c5fb1b5a3bf5daf6c3fd6d099069ab160255b7a21f107657b1d799249959552c",
+    "filename": "shreeharsha-factly_dega.svg"
+  },
+  "https://factlymedia.com/products_color/Kavach.png": {
+    "hash": "9c58108cbdd91fbd74a56c4f2cf681cdd66afa777916d36e8e68de782656b3a3",
+    "filename": "shreeharsha-factly_kavach.png"
   }
 }
