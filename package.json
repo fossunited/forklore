@@ -20,7 +20,7 @@
     "better-sqlite3": "^12.10.0",
     "feed": "^5.2.1",
     "minisearch": "^7.2.0",
-    "nuxt": "^4.4.5",
+    "nuxt": "^4.4.6",
     "nuxt-og-image": "^6.5.0",
     "tailwindcss": "^4.2.4",
     "rss": "^1.2.2",
