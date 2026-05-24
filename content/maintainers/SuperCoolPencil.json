@@ -1,0 +1,69 @@
+{
+  "username": "SuperCoolPencil",
+  "full_name": "Meet Mehta",
+  "photo": "/images/SuperCoolPencil_photo.png",
+  "designation": "Student",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/SuperCoolPencil"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/meet-m-mehta"
+    },
+    {
+      "label": "X",
+      "link": "https://x.com/SuperCoolPen"
+    },
+    {
+      "label": "Reddit",
+      "link": "https://www.reddit.com/user/SuperCoolPencil"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Surge",
+      "project_link": "https://github.com/SurgeDM/Surge",
+      "website_link": "https://surgedm.github.io/",
+      "logo": "/images/SuperCoolPencil_surge.png",
+      "short_description": "Terminal-first Download Manager",
+      "description": "Surge is a high-performance, open-source download manager built for power users, combining multi-connection and multi-mirror acceleration, smart chunking, failover handling, resumable downloads, and live progress tracking for much faster and more reliable file transfers. It also offers a polished terminal UI, headless server mode, CLI automation, and browser extension support, making it easy to manage downloads interactively or integrate them into automated workflows."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Star the repo, open issues, submit PRs, or spread the word. If you want to go further, you can sponsor us via GitHub Sponsors — every bit helps keep the project alive and growing."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "Surge is a concurrent download manager written in Go that achieves 1.38x higher throughput than aria2c by chunk-splitting across up to 32 parallel connections. It runs as a background daemon with a token-protected HTTP API, a real-time Bubble Tea TUI, and a browser extension — all funneling into a single centralized engine."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Ship something broken early rather than something perfect never. The feedback you get from real users in week one is worth more than six months of solo over-engineering. Also Reddit is a goldmine for getting your project out there"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I wanted a download manager that was actually fast and didn't get in my way — so I built one. Turns out building it taught me more about Go, concurrency, and systems programming than anything else I've done. That loop of building → breaking → fixing is so addictive. Plus, there is a community of like minded people out there who are building cool stuff, and you can be a part of it too."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Thunderstruck - AC/DC"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "internal/tui/ - This was never meant to be used by real users, and it shows."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I was 9 when my old laptop just couldn't play games anymore on Windows. Nuked my drive a couple of times, installed Ubuntu 16.04, and never looked back. That's when I realised software could be whatever I want it to be. And that's exactly what I've been doing ever since."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🫪"
+    }
+  ],
+  "created_on": "2026-05-24T22:49:54+05:30"
+}

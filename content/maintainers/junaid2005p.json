@@ -20,11 +20,11 @@
   "projects": [
     {
       "name": "Surge",
-      "project_link": "https://github.com/surge-downloader/Surge",
-      "website_link": "https://surge-downloader.github.io/surge-website/",
+      "project_link": "https://github.com/SurgeDM/Surge",
+      "website_link": "https://surgedm.github.io/",
       "logo": "/images/junaid2005p_surge.png",
-      "short_description": "TUI Download Manager",
-      "description": "Longer description that can span multiple lines.\nSurge is a download manager that runs in local TUI, remote TUI, and headless daemon modes."
+      "short_description": "Terminal-first Download Manager",
+      "description": "Surge is a high-performance, open-source download manager built for power users, combining multi-connection and multi-mirror acceleration, smart chunking, failover handling, resumable downloads, and live progress tracking for much faster and more reliable file transfers. It also offers a polished terminal UI, headless server mode, CLI automation, and browser extension support, making it easy to manage downloads interactively or integrate them into automated workflows."
     }
   ],
   "form": [
