@@ -99,8 +99,7 @@
           "logo": {
             "type": "string",
             "description": "URL to the project logo",
-            "format": "uri",
-            "pattern": "^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico|avif)$"
+            "pattern": "^$|^(https?://.+|/images/.+)\\.(jpg|jpeg|png|gif|svg|webp|bmp|ico|avif)$"
           },
           "description": {
             "type": "string",
