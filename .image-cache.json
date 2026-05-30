@@ -634,5 +634,9 @@
   "https://giis.co.in/profile.jpg": {
     "hash": "8240479a1f90836283dc7d901af7299809ab577ea724039bf29f806ae1cf3d99",
     "filename": "lakshmipathi_photo.jpg"
+  },
+  "https://github.com/dalmia.png": {
+    "hash": "8bbca58d0703b8347babb74a03521d94d912b45a37d7982d32fe36419f7e44a7",
+    "filename": "dalmia_photo.png"
   }
 }
