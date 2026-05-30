@@ -2,7 +2,7 @@
   "username": "dalmia",
   "full_name": "Aman Dalmia",
   "photo": "/images/dalmia_photo.png",
-  "designation": "Maintainer, Calibrate @ ARTPARK",
+  "designation": "AI engineer @ agency.fund & artpark.in",
   "socials": [
     {
       "label": "GitHub",
@@ -10,56 +10,80 @@
     },
     {
       "label": "LinkedIn",
-      "link": "https://www.linkedin.com/in/dalmiaaman"
+      "link": "https://www.linkedin.com/in/aman-dalmia"
     },
     {
       "label": "Web",
-      "link": "https://dalmia.github.io"
+      "link": "https://amandalmia.com"
+    },
+    {
+      "label": "Substack",
+      "link": "https://substack.com/@amandalmia"
+    },
+    {
+      "label": "Medium",
+      "link": "https://amandalmia18.medium.com/"
     }
   ],
   "projects": [
     {
       "name": "Calibrate",
-      "project_link": "https://github.com/ARTPARK-SAHAI-ORG/calibrate",
+      "project_link": "https://linktr.ee/calibrate_agent",
       "website_link": "https://calibrate.artpark.ai",
-      "logo": "",
-      "short_description": "An AI agent evaluation platform that helps non-profits test their entire agent stack",
-      "description": "Calibrate is a CLI and platform for evaluating AI agents, built for non-profits. It moves teams from slow, manual testing to a fast, automated, and repeatable process across the whole agent stack — LLM text-to-text quality and tool-calling, human-aligned LLM judges, speech-to-text and text-to-speech benchmarking across 10+ Indic languages, and realistic persona-driven simulations to surface failure modes. It is built on top of pipecat."
+      "logo": "/images/dalmia_calibrate.svg",
+      "short_description": "AI agent evaluation tool for non-profits",
+      "description": "Most AI evaluation platforms are either too expensive, closed source or super hard to use for non-engineers. Calibrate aims to democratize AI agent evaluation and empower more people to easily evaluate their AI agents. Calibrate helps you find the best speech-to-text model, text-to-speech model, and LLM for your use case, automate evaluation using LLM judges, align them with human feedback and simulate conversations with your agent to surface failure modes before deployment."
+    },
+    {
+      "name": "SensAI",
+      "project_link": "https://linktr.ee/sens_ai",
+      "website_link": "https://sensai.hyperverge.org/",
+      "logo": "/images/dalmia_sensai.svg",
+      "short_description": "AI-powered LMS for teachers and learners",
+      "description": "SensAI is an AI-powered LMS that automates assessments for educators and gives personalized, real-time coaching to every learner using the socratic method to help them learn by doing, at their own pace. Originally built for the educators and learners of [HyperVerge Academy](https://academy.hyperverge.org/)."
+    },
+    {
+      "name": "Plio",
+      "project_link": "https://linktr.ee/learnplio",
+      "website_link": "https://plio.in/",
+      "logo": "/images/dalmia_plio.svg",
+      "short_description": "Convert youtube videos into interactive lessons",
+      "description": "Plio helps educators convert passive youtube videos into interactive lessons by inserting questions in the middle to increase student engagement and gather rich data on how students are learning to help them improve how they teach. Originally built for the teachers and students of [Avanti Fellows](https://avantifellows.org/)."
     }
   ],
   "form": [
     {
       "question": "How to support",
-      "response": "Star and contribute on GitHub: https://github.com/ARTPARK-SAHAI-ORG/calibrate — try it on your own agent stack, file issues, and help expand language and provider coverage."
+      "response": "- Help spread the word\n- If it solves your problem, try it out and report bugs/give feedback/contribute code\n- Help keep our documentation and demo videos up to date\n- Refer us to relevant events/communities where this might be useful"
     },
     {
       "question": "A small brief about your project",
-      "response": "Calibrate is an open-source AI agent evaluation platform for non-profits. It benchmarks LLMs, STT, and TTS providers, builds human-aligned LLM judges, and runs realistic conversation simulations so teams can ship reliable voice and text agents — with first-class support for Indic languages."
+      "response": "Most AI evaluation platforms are either too expensive, closed source or super hard to use for non-engineers. Calibrate aims to democratize AI agent evaluation and empower more people to easily evaluate their AI agents. Calibrate helps you find the best speech-to-text model, text-to-speech model, and LLM for your use case, automate evaluation using LLM judges, align them with human feedback and simulate conversations with your agent to surface failure modes before deployment."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
-      "response": "Ship early and let real users shape the roadmap. The feedback from someone actually depending on your tool is worth more than weeks of polishing in private."
+      "response": "Talk more about what you have built. Spreading the word does not have to mean \"bad marketing\". There are people out there who might genuinely benefit from what you have built. As much as you enjoy building, you will enjoy it even more with people actually using it. Give talks, write blog posts, tell people what you have built and why. People want to hear your story. Don't be too shy or worry about taking up space!"
     },
     {
       "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
-      "response": "Building evaluation infrastructure in the open means non-profits with limited budgets can ship trustworthy AI for the communities they serve. Maintaining it openly is how that impact compounds beyond any single team."
+      "response": "I love building tools that help propagate the benefits of technology to people it wouldn't reach by default. Open-source is the best way for doing that since there is no monetary incentive attached. I love freedom and the ethos of open-source bleeds into my identity. I have benefitted so much from it and want to pass on the same to others who might benefit from my work."
     },
     {
       "question": "If your repo had a theme song, what would it be?",
-      "response": "Eye of the Tiger by Survivor"
+      "response": "Chak lein de - Kailash Kher (Chandni Chowk to China)"
     },
     {
       "question": "Which file in your project would you most like to set on fire?",
-      "response": "The provider config glue code — every new STT/TTS integration leaves its fingerprints there."
+      "response": ""
     },
     {
       "question": "What's your open-source villain origin story?",
-      "response": "I kept re-running the same brittle, manual agent tests by hand and rage-built an automated evaluator so I'd never have to do it again."
+      "response": "I was just starting my journey in Machine Learning about a decade back. I love learning by doing and came across scikit-learn, the famous ML package, when I was looking for ways to get hands-on. I randomly picked up issues and probably asked a lot of dumb questions. But the maintainers were kind enough to help me with my doubts and guide me. Soon, after a lot of struggle, I made my first contribution. The idea of something I built getting shipped and run by millions of people across the world felt super cool and left a deep impression on me. The random act of kindness from strangers across the world who don't share anything except a passion that drives them to spend their time and energy on a shared vision, free of monetary incentives, primarily to help others, cemented open-source as an identity I wanted to imbibe."
     },
     {
       "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
-      "response": "🔥"
+      "response": "🥷"
     }
   ],
-  "created_on": "2026-05-30T12:58:33.646508+05:30"
+  "created_on": "2026-05-30T14:26:19.545038+05:30"
 }
