@@ -2822,66 +2822,66 @@
     "@tailwindcss/oxide" "4.3.0"
     tailwindcss "4.3.0"
 
-"@takumi-rs/core-darwin-arm64@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-darwin-arm64/-/core-darwin-arm64-1.5.1.tgz#097fac9343d30be27515f2477075f3616724e392"
-  integrity sha512-b7gZxZFX+64Gip6ypY/9oLf9qhw0+s1MZavnt+mggXjzSAJiBmIqVmlpuB8HolYyYwuR3+bclG0/Ma1W63qdRA==
+"@takumi-rs/core-darwin-arm64@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-darwin-arm64/-/core-darwin-arm64-1.6.0.tgz#53e8f3eb9fc6b95b42c821ae9057a04202515b81"
+  integrity sha512-Ib5W+lE3M8kN6oJixDozVHBSp9wZVm64z3yHGqPO3hdnCoaozAsM8YfQbZL61ESWrnLzutBJtwFHD3jSZ+3ilA==
 
-"@takumi-rs/core-darwin-x64@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-darwin-x64/-/core-darwin-x64-1.5.1.tgz#24fabc4601ca5345bdaef4f1d277f754ade841f7"
-  integrity sha512-r65+N+Ttkf5xvKRzPnXXPZ4opDK6HnM/pHs/PZaEIE7HqKxscYeiUpwIwXaIwLsXT7OPSlTrBeQjkExfnlmj4Q==
+"@takumi-rs/core-darwin-x64@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-darwin-x64/-/core-darwin-x64-1.6.0.tgz#5e6dbd6ee09421ff4eb37f8390072bee74666295"
+  integrity sha512-CmvPOafon70xNcbmocDEJK18ONCeck3oBENdVriP8hQxPVJA8qwtObFxLBzbkEFtQIW3PzeFM24UYmUnba9OVg==
 
-"@takumi-rs/core-linux-arm64-gnu@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.5.1.tgz#ca8460cb0cfc28cf03f78470f98fabb379a755c7"
-  integrity sha512-UyNajYHAEcMFA/DtAeX1zrWzajwUwFXo+hHuTUAjgbBCIFUAXNHkh92L0XMelyr7Yaj0uogdscvKWA/wGlKliw==
+"@takumi-rs/core-linux-arm64-gnu@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-arm64-gnu/-/core-linux-arm64-gnu-1.6.0.tgz#0a3c47ce026cb3a096444d54c1ef807e902e4385"
+  integrity sha512-sMcAiBPMnuECsxyUP3xF89yC7WCatUTcMYuAJ1nWgkY1QZ86oimuitlukCV2a6Wi011aOou02ALgf6SucDn8Rw==
 
-"@takumi-rs/core-linux-arm64-musl@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-arm64-musl/-/core-linux-arm64-musl-1.5.1.tgz#5dacd895f3e05f70594c0b7993e5985b101f245f"
-  integrity sha512-+G7Qin3Wu1sDycdOYHA4hJiZeCTUSW6+gx9ZZnkFY3wYCFAteJacKoJq5f4OfxcNrnaXIsTOHdObEQwiid7raw==
+"@takumi-rs/core-linux-arm64-musl@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-arm64-musl/-/core-linux-arm64-musl-1.6.0.tgz#0b118721eb4ecab120cc188d4151b2aeeb25b40c"
+  integrity sha512-G1llacEnQ37XXz4a8/CIzXCczp+s9Cz2diOEOTPUlID4/wWwNL8DRel3lP4NA7y7H7lsWB+C8KLz0by3T/icgg==
 
-"@takumi-rs/core-linux-x64-gnu@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-x64-gnu/-/core-linux-x64-gnu-1.5.1.tgz#bf1f5e2cb61950a5255b97b41844d4bfce6ec2a1"
-  integrity sha512-KqcKcOpxN4dm8kusKQmZ1lHrYExYchorjZ8911DWOFv4MCdv/LB3A5bM5othPeFeWo8EaSiWprIhQeTLUc2iZQ==
+"@takumi-rs/core-linux-x64-gnu@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-x64-gnu/-/core-linux-x64-gnu-1.6.0.tgz#b7b38ec4ec7555816c9a0adae73353d604a67d36"
+  integrity sha512-e6LQXzHii9RIWbQGLlDilLzyrTo4UrPAAA+/MVTcrgH3LE2AXlCMSRddFDQoPzlrElNSK7afS0OqOU3ZlF3biQ==
 
-"@takumi-rs/core-linux-x64-musl@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-x64-musl/-/core-linux-x64-musl-1.5.1.tgz#a732411806ef6658cd8c7e2e7aeb8b9df68c0e2e"
-  integrity sha512-WvxQcHXzHEsraDKtxn7K8LPBQlVrKPOn5IA7R7fKR4pT1jO3v5HKttFaH+Prt4HhGKKq63eggOh1lbFAQqj84w==
+"@takumi-rs/core-linux-x64-musl@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-linux-x64-musl/-/core-linux-x64-musl-1.6.0.tgz#7706ed9bb5c93e8b8f55ebb00b86f409975c6d64"
+  integrity sha512-pDGU7dBdYvhYlS1BGd+AIHs18EklT+jHMvWoOq0Qcm0SYbejYkuzj3H8iQyzAhnWhjWWwK3DPLHArNWNTsQYLw==
 
-"@takumi-rs/core-win32-arm64-msvc@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-win32-arm64-msvc/-/core-win32-arm64-msvc-1.5.1.tgz#0b8efd36df822e4ed149b03892685eb831cb3a18"
-  integrity sha512-MXB0xRg3gmSdVzoMVzDLg+RpFe+aaNRq3GadNvlxuPbG/f5LVCu5J5PQK6vEFLvQqGOKntX+9NvUvg1/dVMHhg==
+"@takumi-rs/core-win32-arm64-msvc@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-win32-arm64-msvc/-/core-win32-arm64-msvc-1.6.0.tgz#5246ac86fc2eeadc71218bea7a1f22a1b281d914"
+  integrity sha512-WCtl6+fKM0jqojm5Q+UjGBg9Kk5kdDwNYLrW4p1TU/H73XJ73h7fNNe46EnwBarnV5VIG2ReLGusm6tDq1xwXw==
 
-"@takumi-rs/core-win32-x64-msvc@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core-win32-x64-msvc/-/core-win32-x64-msvc-1.5.1.tgz#57f6205dac82920c8a65cb809177d02957b92e6a"
-  integrity sha512-b0qb1+z4l98DxufvvETCV177BRfoPGwuoVtFuCaKCgvQgg5xzCTMWlMLNUZwSOEG/qqUR9yWJbngupBD+djJGA==
+"@takumi-rs/core-win32-x64-msvc@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core-win32-x64-msvc/-/core-win32-x64-msvc-1.6.0.tgz#ec43f282f439160375591d9443583772381e3c06"
+  integrity sha512-fOmQrTz8MtcNA85zJpwFEzag5Iej9Q/VFIQcOyTxFGfE1Oyl2rwBQE0XGYU2JVD8h00d6RWZdllgRfvlJwalzg==
 
-"@takumi-rs/core@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/core/-/core-1.5.1.tgz#91ebe812f20f93ad3b3e3e4e930609c0ef5cfc3a"
-  integrity sha512-h3qKkTz+c7938kZIv/Vpt8dWDaZtMvNYFMSMU0miQpgXFYWQalRfqW+fzUb0SxAm33N4t+Mh3H3p+Bpvmpz/JQ==
+"@takumi-rs/core@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/core/-/core-1.6.0.tgz#6e32b92db3e42d07cf1f3a7a0631cf15a74180a5"
+  integrity sha512-U98BRuHhDtAojGP+NBZYWL53Fkt9rBAK9bOgh8MkbR5QKOQ6bObgoZj1TnwFePc57nLOU33DCgzBncse6RLPUA==
   dependencies:
-    "@takumi-rs/helpers" "1.5.1"
+    "@takumi-rs/helpers" "1.6.0"
   optionalDependencies:
-    "@takumi-rs/core-darwin-arm64" "1.5.1"
-    "@takumi-rs/core-darwin-x64" "1.5.1"
-    "@takumi-rs/core-linux-arm64-gnu" "1.5.1"
-    "@takumi-rs/core-linux-arm64-musl" "1.5.1"
-    "@takumi-rs/core-linux-x64-gnu" "1.5.1"
-    "@takumi-rs/core-linux-x64-musl" "1.5.1"
-    "@takumi-rs/core-win32-arm64-msvc" "1.5.1"
-    "@takumi-rs/core-win32-x64-msvc" "1.5.1"
+    "@takumi-rs/core-darwin-arm64" "1.6.0"
+    "@takumi-rs/core-darwin-x64" "1.6.0"
+    "@takumi-rs/core-linux-arm64-gnu" "1.6.0"
+    "@takumi-rs/core-linux-arm64-musl" "1.6.0"
+    "@takumi-rs/core-linux-x64-gnu" "1.6.0"
+    "@takumi-rs/core-linux-x64-musl" "1.6.0"
+    "@takumi-rs/core-win32-arm64-msvc" "1.6.0"
+    "@takumi-rs/core-win32-x64-msvc" "1.6.0"
 
-"@takumi-rs/helpers@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@takumi-rs/helpers/-/helpers-1.5.1.tgz#ca35ccc82dc65efa9ccbb56107a4bd58fc8829fd"
-  integrity sha512-t0UcUoqwJciEFVEgVh0eSp8KQog/fzviFcGFp2Yy91oUCDcs8hFGzH/lw7oGpt6Ipsdp0XyOUtmyP+M/JSLAUw==
+"@takumi-rs/helpers@1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@takumi-rs/helpers/-/helpers-1.6.0.tgz#20d09a39e006553a6f6f8b9b432d73822f33ba4e"
+  integrity sha512-pjNmUhh1sfqWoyCHRAd0eMciFaDCUYis7FTAb8+XZgNGC3FNJ0b+6hWpnj5zMuP8xrAUoq61FNgj2kGt+B5TRg==
 
 "@tybys/wasm-util@^0.10.1":
   version "0.10.1"
