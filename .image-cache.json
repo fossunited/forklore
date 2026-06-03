@@ -634,5 +634,21 @@
   "https://giis.co.in/profile.jpg": {
     "hash": "8240479a1f90836283dc7d901af7299809ab577ea724039bf29f806ae1cf3d99",
     "filename": "lakshmipathi_photo.jpg"
+  },
+  "https://github.com/dalmia.png": {
+    "hash": "8bbca58d0703b8347babb74a03521d94d912b45a37d7982d32fe36419f7e44a7",
+    "filename": "dalmia_photo.png"
+  },
+  "https://calibrate.artpark.ai/logo.svg": {
+    "hash": "7efbd4b2d6078189bf5629c455b33011bd588bebbe99aa65041efae40c6a5b5d",
+    "filename": "dalmia_calibrate.svg"
+  },
+  "https://sensai.hyperverge.org/images/sensai-logo-light.svg": {
+    "hash": "ec291296745416033a01b4241dce33065ee7bf9612a390699a8f22310a863a95",
+    "filename": "dalmia_sensai.svg"
+  },
+  "https://plio-assets.s3.ap-south-1.amazonaws.com/images/logo.svg": {
+    "hash": "1c064a3a978d922bc171021ddcef08b0892e68de3452e9e4dee3d2fc076f8534",
+    "filename": "dalmia_plio.svg"
   }
 }
