@@ -1,0 +1,89 @@
+{
+  "username": "tejasprasad2008-afk",
+  "full_name": "Tejas Prasad",
+  "photo": "/images/tejasprasad2008-afk_photo.html",
+  "designation": "Student Developer",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/tejasprasad2008-afk"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/tejas-prasad-a8b891334/"
+    },
+    {
+      "label": "Twitter",
+      "link": "https://x.com/Tishieboi"
+    }
+  ],
+  "projects": [
+    {
+      "name": "TraceTree",
+      "project_link": "https://github.com/tejasprasad2008-afk/TraceTree",
+      "website_link": "",
+      "logo": "",
+      "short_description": "Runtime behavioral analysis tool for detecting software supply chain attacks.",
+      "description": "TraceTree monitors execution paths and dependencies to identify suspicious behavior and improve visibility into software supply chains."
+    },
+    {
+      "name": "Switchboard",
+      "project_link": "https://github.com/tejasprasad2008-afk/Switchboard",
+      "website_link": "",
+      "logo": "",
+      "short_description": "Intelligent MCP routing server for AI coding agents.",
+      "description": "Switchboard dynamically routes requests across models and providers to optimize cost, latency, and performance."
+    },
+    {
+      "name": "Tabib (طبيب)",
+      "project_link": "https://github.com/tejasprasad2008-afk/Tabib",
+      "website_link": "",
+      "logo": "",
+      "short_description": "Privacy-first decentralized medical triage system.",
+      "description": "Tabib uses local AI models to provide medical guidance while preserving user privacy and reducing dependence on centralized infrastructure."
+    },
+    {
+      "name": "EvidenceChain",
+      "project_link": "https://github.com/tejasprasad2008-afk/EvidenceChain",
+      "website_link": "",
+      "logo": "",
+      "short_description": "Autonomous forensic investigation agent.",
+      "description": "EvidenceChain assists digital investigations with self-correction capabilities and support for SANS SIFT workflows."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Star the repositories, report bugs, open issues, suggest improvements, or contribute code and documentation."
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "I build tools that improve transparency, privacy, and security."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Ship imperfect things. Waiting for perfection means nobody gets to use or improve your work."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "Because knowledge compounds when shared."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "Messy - Lola Young"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "The configuration files."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I wrote a research paper on API vulnerabilities and needed tools that didn't exist, so I built them myself."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "💁"
+    }
+  ],
+  "created_on": "2026-06-11T22:38:36.767918+05:30"
+}
