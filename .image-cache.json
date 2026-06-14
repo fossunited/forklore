@@ -650,5 +650,13 @@
   "https://plio-assets.s3.ap-south-1.amazonaws.com/images/logo.svg": {
     "hash": "1c064a3a978d922bc171021ddcef08b0892e68de3452e9e4dee3d2fc076f8534",
     "filename": "dalmia_plio.svg"
+  },
+  "https://github.com/princerajpoot20.png": {
+    "hash": "68c0c12759a791ac5c324ff2cd2b95016db392b162ea80bc02679fd4acf51293",
+    "filename": "princerajpoot20_photo.png"
+  },
+  "https://github.com/asyncapi.png": {
+    "hash": "1f821aa409ab2c8f68adc74be78c071cc757aa0b0a8d3ac4b488e7498251d48f",
+    "filename": "princerajpoot20_asyncapi_website.png"
   }
 }
