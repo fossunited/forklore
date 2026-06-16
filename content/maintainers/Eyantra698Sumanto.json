@@ -1,0 +1,77 @@
+{
+  "username": "Eyantra698Sumanto",
+  "full_name": "Sumanto Kar",
+  "photo": "/images/Eyantra698Sumanto_photo.jpg",
+  "designation": "Assist. Project Manager, IIT Bombay",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/Eyantra698Sumanto"
+    },
+    {
+      "label": "Mastodon",
+      "link": "https://fosstodon.org/sumantokar"
+    },
+    {
+      "label": "Web",
+      "link": "https://homepages.iitb.ac.in/~sumantokar/"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/sumanto-kar-0424391a9/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "eSim",
+      "project_link": "https://github.com/fossee/esim",
+      "website_link": "https://esim.fossee.in",
+      "logo": "/images/Eyantra698Sumanto_esim.svg",
+      "short_description": "An Open Source Electronic Design Automation Tool developed by FOSSEE, IIT Bombay",
+      "description": "eSim (previously known as Oscad / FreeEDA) is a free/libre and open-source EDA tool for circuit design, simulation, analysis, and PCB design. It is an integrated tool built using free/libre and open-source software such as [KiCad](https://www.kicad.org/), [Ngspice](http://ngspice.sourceforge.net/), [GHDL](http://ghdl.free.fr/), [OpenModelica,](https://www.openmodelica.org/) [Verilator](https://www.veripool.org/verilator/), [Makerchip](https://www.makerchip.com/), and [SkyWater SKY130 P](https://skywater-pdk.rtfd.io/)[DK](https://skywater-pdk.rtfd.io/). eSim is released under [GNU General Public License](https://www.gnu.org/licenses/gpl-3.0.en.html)."
+    },
+    {
+      "name": "eSim on CLoud",
+      "project_link": "https://github.com/fossee/esim-cloud",
+      "website_link": "https://simulations.fossee.in/eda/",
+      "logo": "/images/Eyantra698Sumanto_esim.svg",
+      "short_description": "An Open Source Electronic Design Automation Tool on Cloud",
+      "description": "The Cloud Online Version of the [eSim](https://esim.fossee.in) Tool."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "Travel, Contributors, Outreach, and what not!"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "FOSSEE (Free/Libre and Open Source Software for Education) project promotes the use of FLOSS tools in academia and research. The FOSSEE project is part of the National Mission on Education through Information and Communication Technology (ICT), Ministry of Education (MoE), Government of India. Below is the list of projects which are promoted by FOSSEE."
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Empathizing with contributors!"
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "It's my hobby, job and everything!!! Just like FOSSing!!!"
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "\"We Built This City\" – Starship"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "https://github.com/FOSSEE/eSim/blob/master/src/maker/NgVeri.py"
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I wanted students to have access to a free EDA tool. Next thing I knew, I was debugging SPICE models, packaging releases, answering support emails, and explaining why 'it works on my machine' is not a valid test plan."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🔥 😎 🤯"
+    }
+  ],
+  "created_on": "2026-06-16T12:40:31.356224+05:30"
+}
