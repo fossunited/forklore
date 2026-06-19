@@ -658,5 +658,13 @@
   "https://static.fossee.in/esim/logos/eSim_logo.svg": {
     "hash": "24ad6fcd6a448e48c4c2bc80a4ba0879a9ba6b64a6c35e99ab39f290da6525c7",
     "filename": "Eyantra698Sumanto_esim.svg"
+  },
+  "https://assets.pjay.in/pj.jpeg": {
+    "hash": "452eba0b6e9072f8572f3e7d405600152f6f7b97bfdb4a25c8ea7e2127665481",
+    "filename": "priyanshujain_photo.jpeg"
+  },
+  "https://priyanshujain.github.io/sanderling/_assets/sanderling.jpeg": {
+    "hash": "ab6214a8c529f9f5b72f55d6732a76e730695cfcb3de184a3d52105c4c8fe49b",
+    "filename": "priyanshujain_sanderling.jpeg"
   }
 }
