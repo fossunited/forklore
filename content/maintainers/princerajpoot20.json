@@ -2,7 +2,7 @@
   "username": "princerajpoot20",
   "full_name": "Prince Rajpoot",
   "photo": "/images/princerajpoot20_photo.png",
-  "designation": "Software Engineer at WatchGuard | Maintainer & TSC Member at AsyncAPI",
+  "designation": "Software Engineer at WatchGuard | Maintainer & TSC Member at AsyncAPI (part of Linux Foundation)",
   "socials": [
     {
       "label": "GitHub",
@@ -24,7 +24,7 @@
       "website_link": "https://www.asyncapi.com",
       "logo": "/images/princerajpoot20_asyncapi_website.png",
       "short_description": "The official website and documentation platform for AsyncAPI.",
-      "description": "The AsyncAPI website is the central platform for documentation, tooling, community resources, blogs, and contributor onboarding for AsyncAPI. The project focuses on improving developer experience, accessibility, contributor workflows, and documentation."
+      "description": "The AsyncAPI website is the central platform for documentation, tooling, community resources, blogs, and contributor onboarding for AsyncAPI (part of Linux Foundation). The project focuses on improving developer experience, accessibility, contributor workflows, and documentation."
     },
     {
       "name": "AsyncAPI Parser JS",
@@ -54,11 +54,11 @@
   "form": [
     {
       "question": "How to support",
-      "response": "You can support AsyncAPI by contributing to repositories, helping with community discussions, and supporting the initiative financially through Open Collective. Community support in the form of mentorship, onboarding help, and contributor guidance also plays an important role in sustaining the ecosystem.\n\nMore details on sponsorship: https://opencollective.com/asyncapi#category-CONTRIBUTE"
+      "response": "You can support AsyncAPI (part of Linux Foundation) by contributing to repositories, helping with community discussions, and supporting the initiative financially through Open Collective. Community support in the form of mentorship, onboarding help, and contributor guidance also plays an important role in sustaining the ecosystem.\n\nMore details on sponsorship: https://opencollective.com/asyncapi#category-CONTRIBUTE"
     },
     {
       "question": "A small brief about your project",
-      "response": "AsyncAPI is an open source initiative focused on building specifications, tooling, and documentation for event-driven architectures. It helps developers design, document, and manage asynchronous APIs and event-driven systems consistently across different technologies and platforms."
+      "response": "AsyncAPI — part of the Linux Foundation — is an open source initiative focused on building specifications, tooling, and documentation for event-driven architectures. It helps developers design, document, and manage asynchronous APIs and event-driven systems consistently across different technologies and platforms."
     },
     {
       "question": "One FOSS maintainer lesson for your younger self",
