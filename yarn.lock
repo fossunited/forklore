@@ -1572,7 +1572,7 @@
     unplugin "^3.0.0"
     unstorage "^1.17.4"
 
-"@nuxt/kit@4.4.8", "@nuxt/kit@^4.2.1", "@nuxt/kit@^4.2.2", "@nuxt/kit@^4.4.2", "@nuxt/kit@^4.4.5", "@nuxt/kit@^4.4.8":
+"@nuxt/kit@4.4.8", "@nuxt/kit@^4.2.2", "@nuxt/kit@^4.4.2", "@nuxt/kit@^4.4.5", "@nuxt/kit@^4.4.6", "@nuxt/kit@^4.4.8":
   version "4.4.8"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-4.4.8.tgz#19e583f8e29c5363fd41f6f25995d2ae00611096"
   integrity sha512-ZUlZ5iYfyfJFDPluhn6ZxFWcsuxWbLnZBc8w3MAROcQ4lYfZ+qFpALBLSNlpc0zhOa++33EE+5PEbOAdVIY+dw==
@@ -1687,16 +1687,16 @@
     vite-plugin-checker "^0.14.1"
     vue-bundle-renderer "^2.2.0"
 
-"@nuxtjs/color-mode@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/color-mode/-/color-mode-4.0.0.tgz#3ea831606c8c20455cec3171430fa7ab39a714a8"
-  integrity sha512-xyaVR/TPLdMuRa2VOgH6b75jvmFEsn9QKL6ISldaAw38ooFJfWY1ts2F3ye43wcT/goCbcuvPuskF2f8yUZhlw==
+"@nuxtjs/color-mode@4.0.1":
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/color-mode/-/color-mode-4.0.1.tgz#fd06ba8dac561278ec62261267fce95651260bf6"
+  integrity sha512-eiA7hWXi5zNHaYKyJFCGF6i0wFZtuvR7KDXZ6jiSvwxjCpRFwphrw0MOSmNfArTSSsT1wpW+/2H92cejeVfUlg==
   dependencies:
-    "@nuxt/kit" "^4.2.1"
+    "@nuxt/kit" "^4.4.6"
     exsolve "^1.0.8"
     pathe "^2.0.3"
-    pkg-types "^2.3.0"
-    semver "^7.7.3"
+    pkg-types "^2.3.1"
+    semver "^7.8.1"
 
 "@nuxtjs/mdc@^0.22.0":
   version "0.22.0"
@@ -7997,7 +7997,7 @@ semver@^6.3.1:
   resolved "https://registry.npmjs.org/semver/-/semver-6.3.1.tgz"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.3.5, semver@^7.5.3, semver@^7.7.3, semver@^7.7.4, semver@^7.8.0, semver@^7.8.1:
+semver@^7.3.5, semver@^7.5.3, semver@^7.7.4, semver@^7.8.0, semver@^7.8.1:
   version "7.8.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.8.1.tgz#bf4970b5e70fda0686363cc18bfe8805d5ed957e"
   integrity sha512-rkVq3IXh+4FDGch+KwzX3aV9W3kO54GyEgpvBzSyctDA6Xtd7RJQV1xmXbeQp5v7+VzLOfVqiutSE6GICgPFvg==
