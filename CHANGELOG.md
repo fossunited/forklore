@@ -2,6 +2,26 @@
 
 > maintainers are in ascending order (older at top)
 
+## June 2026
+
+### Maintainers (4)
+
+- [Aman Dalmia @ Calibrate](https://forklore.in/maintainers/dalmia)
+- [Sumanto Kar @ FOSSEE IIT Bombay](https://forklore.in/maintainers/Eyantra698Sumanto)
+- [Priyanshu Jain @ okcredit](https://forklore.in/maintainers/priyanshujain)
+- [Prince Rajpoot @ AsyncAPI](https://forklore.in/maintainers/princerajpoot20)
+
+## May 2026
+
+### Maintainers (6)
+
+- [Pranay Kotasthane @ takshashila](https://forklore.in/maintainers/pranaykotas)
+- [Nikhil Kothale @ redhat](https://forklore.in/maintainers/ntkathole)
+- [Shree harsha @factly/gopie](https://forklore.in/maintainers/shreeharsha-factly)
+- [Vashnav Sabari @ comchan](https://forklore.in/maintainers/Vaishnav-Sabari-Girish)
+- [Meet Mehta @ Surge](https://forklore.in/maintainers/SuperCoolPencil)
+- [Lakshmipathi @ webminal.org](https://forklore.in/maintainers/lakshmipathi)
+
 ## April 2026
 We've about `74 maintainers` at this point.
 
