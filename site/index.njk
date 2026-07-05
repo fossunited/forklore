@@ -1,0 +1,59 @@
+---
+layout: base.njk
+title: Forklore
+description: Confessions, quirks, and occasional rants from India's open source keepers.
+---
+
+<section class="hero">
+  <div class="home-logo-row">
+    <img src="/logo/logo_light.svg" alt="Forklore" class="home-logo" data-theme-logo>
+  </div>
+  <div class="home-meta">
+    <p>
+      by
+      <a href="https://fossunited.org">FOSS United</a>
+    </p>
+    <p class="count">
+      {{ collections.maintainers.length }}
+      {% if collections.maintainers.length == 1 %}maintainer{% else %}maintainers{% endif %}
+    </p>
+  </div>
+</section>
+
+<section class="intro">
+  <p class="intro-strong">Like a slam book, but with fewer crushes and more commits</p>
+  <p>
+    Forklore brings you confessions, quirks, and the occasional rant from
+    India's open source keepers.
+  </p>
+  <a href="/planet/" class="button outline intro-button">
+    Read Planet <span aria-hidden="true">→</span>
+  </a>
+</section>
+
+<section class="directory-controls" aria-label="Maintainer filters">
+  <div class="search-sort">
+    <label class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input data-search-input type="search" placeholder="Search" autocomplete="off">
+      <kbd data-shortcut-label>ctrl+k</kbd>
+    </label>
+    <select data-sort-select aria-label="Sort maintainers">
+      <option value="a-z">A → Z</option>
+      <option value="z-a">Z → A</option>
+      <option value="newest" selected>Newest</option>
+      <option value="oldest">Oldest</option>
+    </select>
+  </div>
+  <div class="control-actions">
+    <button class="button subtle" type="button" data-surprise>Surprise Me</button>
+    <a href="/commit-emoji/" class="button subtle">Commit to Emoji</a>
+  </div>
+</section>
+
+<section class="maintainer-list" aria-label="Maintainers">
+  {% for maintainer in collections.maintainers %}
+    {% include "maintainer-card.njk" %}
+  {% endfor %}
+  <p class="empty-state" data-empty-state hidden>No Maintainers Found</p>
+</section>

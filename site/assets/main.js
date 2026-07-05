@@ -1,0 +1,90 @@
+(function () {
+  const root = document.documentElement;
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+  const logos = document.querySelectorAll("[data-theme-logo]");
+
+  function setTheme(theme) {
+    const isLight = theme === "light";
+    root.classList.toggle("light-mode", isLight);
+    root.classList.toggle("dark-mode", !isLight);
+    localStorage.setItem("forklore-theme", isLight ? "light" : "dark");
+    logos.forEach((logo) => {
+      logo.setAttribute("src", isLight ? "/logo/logo_dark.svg" : "/logo/logo_light.svg");
+    });
+    if (themeToggle) {
+      themeToggle.textContent = isLight ? "☾" : "☀";
+      themeToggle.setAttribute(
+        "aria-label",
+        isLight ? "Switch to Dark Mode" : "Switch to Light Mode",
+      );
+    }
+  }
+
+  setTheme(localStorage.getItem("forklore-theme") || "dark");
+  themeToggle?.addEventListener("click", () => {
+    setTheme(root.classList.contains("light-mode") ? "dark" : "light");
+  });
+
+  const searchInput = document.querySelector("[data-search-input]");
+  const sortSelect = document.querySelector("[data-sort-select]");
+  const list = document.querySelector(".maintainer-list");
+  const emptyState = document.querySelector("[data-empty-state]");
+  const shortcutLabel = document.querySelector("[data-shortcut-label]");
+
+  if (shortcutLabel && /Mac|iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+    shortcutLabel.textContent = "⌘+k";
+  }
+
+  function cards() {
+    return Array.from(document.querySelectorAll("[data-maintainer-card]"));
+  }
+
+  function applyDirectoryState() {
+    if (!list) return;
+    const query = (searchInput?.value || "").trim().toLowerCase();
+    const sorted = cards().sort((a, b) => {
+      const mode = sortSelect?.value || "newest";
+      if (mode === "a-z") return a.dataset.name.localeCompare(b.dataset.name);
+      if (mode === "z-a") return b.dataset.name.localeCompare(a.dataset.name);
+      const aDate = new Date(a.dataset.created || 0).getTime();
+      const bDate = new Date(b.dataset.created || 0).getTime();
+      return mode === "oldest" ? aDate - bDate : bDate - aDate;
+    });
+
+    let visible = 0;
+    sorted.forEach((card) => {
+      const haystack = `${card.dataset.name} ${card.dataset.username} ${card.dataset.projects}`.toLowerCase();
+      const match = !query || haystack.includes(query);
+      card.hidden = !match;
+      if (match) visible += 1;
+      list.insertBefore(card, emptyState || null);
+    });
+
+    if (emptyState) emptyState.hidden = visible !== 0;
+  }
+
+  searchInput?.addEventListener("input", applyDirectoryState);
+  sortSelect?.addEventListener("change", applyDirectoryState);
+  applyDirectoryState();
+
+  document.addEventListener("keydown", (event) => {
+    const target = event.target;
+    const isTyping =
+      target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement;
+    if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
+      event.preventDefault();
+      searchInput?.focus();
+    }
+    if (!isTyping && event.key === "/") {
+      event.preventDefault();
+      searchInput?.focus();
+    }
+  });
+
+  document.querySelector("[data-surprise]")?.addEventListener("click", () => {
+    const visibleCards = cards().filter((card) => !card.hidden);
+    const card = visibleCards[Math.floor(Math.random() * visibleCards.length)];
+    const href = card?.querySelector(".card-hit")?.getAttribute("href");
+    if (href) window.location.href = href;
+  });
+})();

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" class="dark-mode">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if full_name %}{{ full_name }} | Forklore{% else %}{{ title or site.title }}{% endif %}</title>
+    <meta
+      name="description"
+      content="{% if full_name %}Get to know {{ full_name }} and their work.{% else %}{{ description or site.description }}{% endif %}"
+    >
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script>
+      const storedTheme = localStorage.getItem("forklore-theme");
+      if (storedTheme === "light") {
+        document.documentElement.classList.remove("dark-mode");
+        document.documentElement.classList.add("light-mode");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="/" aria-label="Forklore home">
+          <img src="/logo/logo_light.svg" alt="Forklore" class="brand-mark" data-theme-logo>
+        </a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href="https://github.com/fossunited/forklore/blob/develop/GET_FEATURED.md">Get featured</a>
+          <a href="https://fossunited.org/grants">FOSS United Grants</a>
+          <a href="https://forum.fossunited.org/c/maintainers/">Discussion Forum</a>
+        </nav>
+        <button class="button solid theme-toggle" type="button" data-theme-toggle aria-label="Switch to Light Mode">
+          ☀
+        </button>
+      </header>
+      <main>
+        {{ content | safe }}
+      </main>
+    </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-copy">
+          <p>
+            Built and Maintained by
+            <a href="https://fossunited.org">FOSS United</a>
+          </p>
+          <div class="footer-links">
+            <a href="https://github.com/fossunited/forklore">Contribute</a>
+            <a href="https://forum.fossunited.org/c/maintainers/">Forum</a>
+            <a href="/rss.xml">RSS</a>
+          </div>
+          <a href="mailto:foundation@fossunited.org">foundation@fossunited.org</a>
+        </div>
+        <img src="/logo/unitedbyfoss_dark.svg" alt="United By FOSS" class="footer-logo">
+      </div>
+    </footer>
+    <script src="/assets/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<article
+  class="maintainer-card"
+  data-maintainer-card
+  data-name="{{ maintainer.data.full_name }}"
+  data-username="{{ maintainer.data.username }}"
+  data-projects="{% for project in maintainer.data.projects %}{{ project.name }} {% endfor %}"
+  data-created="{{ maintainer.data.created_on | dateISO }}"
+>
+  <a class="card-hit" href="{{ maintainer.url }}" aria-label="Read {{ maintainer.data.full_name }}'s profile"></a>
+  <header class="maintainer-card-header">
+    <img
+      src="{{ maintainer.data.photo or '/maintainer_photo_light.svg' }}"
+      alt="Photo of {{ maintainer.data.full_name }}"
+      class="avatar"
+      loading="lazy"
+    >
+    <div>
+      <h2>{{ maintainer.data.full_name }}</h2>
+      <p>{{ maintainer.data.designation }}</p>
+    </div>
+  </header>
+  <div
+    class="project-strip{% if maintainer.data.projects.length > 1 %} project-strip-grid{% endif %}{% if maintainer.data.projects.length % 2 == 1 %} project-strip-odd{% endif %}"
+    aria-label="Projects"
+  >
+    {% for project in maintainer.data.projects %}
+      <div class="project-summary">
+        {% if project.logo %}
+          <img src="{{ project.logo }}" alt="Logo of {{ project.name }}" loading="lazy">
+        {% endif %}
+        <div>
+          <h3>{{ project.name }}</h3>
+          {% if project.project_link %}
+            <a class="button subtle card-source" href="{{ project.project_link }}">
+              View Source <span aria-hidden="true">↗</span>
+            </a>
+          {% endif %}
+          <p>{{ project.short_description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    {% if maintainer.data.projects.length > 1 and maintainer.data.projects.length % 2 == 1 %}
+      <div class="project-summary project-summary-empty" aria-hidden="true"></div>
+    {% endif %}
+  </div>
+</article>

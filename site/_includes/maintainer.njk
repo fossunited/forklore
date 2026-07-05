@@ -1,0 +1,50 @@
+---
+layout: base.njk
+---
+
+<article class="profile-layout">
+  <section class="profile-main" aria-label="Projects">
+    {% for project in projects %}
+      {% include "project-card.njk" %}
+    {% endfor %}
+  </section>
+
+  <aside class="profile-aside" aria-label="Maintainer details">
+    <div class="profile-panel">
+      <div class="profile-card">
+        <img
+          src="{{ photo or '/maintainer_photo_light.svg' }}"
+          alt="Photo of {{ full_name }}"
+          class="avatar large"
+        >
+        <div>
+          <p class="eyebrow">@{{ username }}</p>
+          <h1>{{ full_name }}</h1>
+          <p>{{ designation }}</p>
+        </div>
+      </div>
+
+      <nav class="social-list" aria-label="Social links">
+        {% for social in socials %}
+          <a href="{{ social.link }}" aria-label="{{ social.label | socialLabel }} (opens in new tab)">
+            {{ social.label | socialLabel }}
+          </a>
+        {% endfor %}
+      </nav>
+
+      {% set hasRss = false %}
+      {% for social in socials %}
+        {% if (social.label | socialLabel) == "RSS" %}
+          {% set hasRss = true %}
+        {% endif %}
+      {% endfor %}
+      {% if hasRss %}
+        <a class="button outline planet-link" href="/planet/{{ username }}/">View posts on Planet</a>
+      {% endif %}
+    </div>
+
+    <div class="story-content">
+      {{ content | safe }}
+    </div>
+  </aside>
+</article>

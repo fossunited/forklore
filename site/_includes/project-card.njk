@@ -1,0 +1,19 @@
+<article class="project-card">
+  {% if project.logo %}
+    <img src="{{ project.logo }}" alt="Logo of {{ project.name }}" class="project-logo" loading="lazy">
+  {% else %}
+    <div class="project-logo project-logo-fallback">{{ project.name | first }}</div>
+  {% endif %}
+  <div class="project-copy">
+    <h3>{{ project.name }}</h3>
+    <p>{{ project.description or project.short_description }}</p>
+    <div class="button-row">
+      {% if project.project_link %}
+        <a class="button solid" href="{{ project.project_link }}">View Source <span aria-hidden="true">↗</span></a>
+      {% endif %}
+      {% if project.website_link %}
+        <a class="button outline" href="{{ project.website_link }}">Website</a>
+      {% endif %}
+    </div>
+  </div>
+</article>

@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Commit to Emoji
+description: Maintainers grouped by their open-source emoji.
+---
+
+<section class="emoji-page">
+  <h1>Commit to Emoji</h1>
+  <div class="emoji-grid">
+    {% for maintainer in collections.maintainers %}
+      {% set emoji = maintainer.templateContent | firstEmoji %}
+      {% if emoji %}
+        <a href="{{ maintainer.url }}" class="emoji-card" aria-label="{{ maintainer.data.full_name }}">
+          <span>{{ emoji }}</span>
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
+</section>
