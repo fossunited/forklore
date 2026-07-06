@@ -4765,10 +4765,10 @@ fdir@^6.5.0:
   resolved "https://registry.yarnpkg.com/fdir/-/fdir-6.5.0.tgz#ed2ab967a331ade62f18d077dae192684d50d350"
   integrity sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==
 
-feed@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/feed/-/feed-5.2.1.tgz#9522d98fac185b1f2ea72d7f16e1395da8449a91"
-  integrity sha512-jTynzYPWs9ALjro0GW8j7sv9y7cJBeOdD4Y88kVqYy/eyusIX3g+499JiTDIlD9Ge/unebx57T4Uzo6vpYvMtA==
+feed@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/feed/-/feed-6.0.0.tgz#79162bc4904f2753b7a70e9470fa465a832297f7"
+  integrity sha512-rvFOF1POce0ijAKy3tZN5T8PuprgIit/VbMyXJWcoYwcMOTSIJ7NqZb8DTLPJr77yiEO27kidm/fw0kcSIV+ww==
   dependencies:
     xml-js "^1.6.11"
 
