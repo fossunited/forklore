@@ -19,10 +19,21 @@ const SOCIAL_LABELS = {
   youtube: "Youtube",
 };
 
+function markdownInline(value) {
+  return String(value || "")
+    .replace(
+      /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+      '<a href="$2">$1</a>',
+    )
+    .replace(/<br\s*\/?>/gi, "<br>");
+}
+
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "public/images": "images" });
   eleventyConfig.addPassthroughCopy({ "public/logo": "logo" });
   eleventyConfig.addPassthroughCopy({ "public/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({ "public/og_image_main.png": "og_image_main.png" });
+  eleventyConfig.addPassthroughCopy({ "public/og_maintainer_bg.png": "og_maintainer_bg.png" });
   eleventyConfig.addPassthroughCopy({
     "public/maintainer_photo_light.svg": "maintainer_photo_light.svg",
   });
@@ -50,6 +61,8 @@ export default function (eleventyConfig) {
     const value = new Date(date);
     return Number.isNaN(value.getTime()) ? "" : value.toISOString();
   });
+
+  eleventyConfig.addFilter("markdownInline", markdownInline);
 
   eleventyConfig.addFilter("year", (date) => {
     const value = new Date(date);

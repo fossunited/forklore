@@ -5,13 +5,8 @@ on:
   push:
     branches:
       - develop
-  workflow_run:
-    workflows: ["Refresh Planet Feeds"]
-    types: [completed]
-    branches: [develop]
 jobs:
   build:
-    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,13 +15,14 @@ jobs:
         with:
           node-version: '22.18.0'
           cache: 'yarn'
+          cache-dependency-path: site/yarn.lock
 
-      - run: yarn install
-      - run: yarn generate
+      - run: yarn --cwd site install --frozen-lockfile
+      - run: yarn --cwd site build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./_site
   # Deployment job
   deploy:
     # Add a dependency to the build job

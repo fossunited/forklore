@@ -1,38 +1,12 @@
 {
-  "name": "nuxt-app",
+  "name": "forklore",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "cspell": "cspell .",
-    "planet:refresh": "node scripts/refresh-planet.ts"
-  },
-  "dependencies": {
-    "@nuxt/content": "^3.14.0",
-    "@nuxt/fonts": "0.14.0",
-    "@nuxtjs/color-mode": "4.0.1",
-    "@tailwindcss/vite": "^4.3.1",
-    "@takumi-rs/core": "^1.8.7",
-    "better-sqlite3": "^12.11.1",
-    "feed": "^5.2.1",
-    "minisearch": "^7.2.0",
-    "nuxt": "^4.4.8",
-    "nuxt-og-image": "^6.6.0",
-    "tailwindcss": "^4.2.4",
-    "rss": "^1.2.2",
-    "rss-parser": "^3.13.0",
-    "vue": "^3.5.38",
-    "vue-router": "^5.1.0",
-    "yarn": "^1.22.22"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.20",
-    "@types/rss": "^0.0.32",
-    "cspell": "^10.0.0"
+    "build": "yarn --cwd site build",
+    "dev": "yarn --cwd site serve",
+    "generate": "yarn --cwd site build",
+    "serve": "yarn --cwd site serve"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
