@@ -1,0 +1,58 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/Schefflera-Arboricola/
+username: "Schefflera-Arboricola"
+full_name: "Aditi Juneja"
+photo: "/images/Schefflera-Arboricola_photo.png"
+designation: "Contributing to Scientific open-source"
+created_on: "2025-06-04T17:02:44+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/Schefflera-Arboricola"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/aditi-juneja-940838204/"
+projects:
+  - name: "nx-parallel"
+    project_link: "https://github.com/networkx/nx-parallel"
+    website_link: "https://github.com/networkx/nx-parallel"
+    logo: "/images/Schefflera-Arboricola_nx-parallel.svg"
+    short_description: "Network Analysis in Python"
+    description: |-
+      NetworkX is a Python package for the creation, manipulation, and study of the structure, dynamics, and functions of complex networks.
+  - name: "networkx"
+    project_link: "https://github.com/networkx/networkx"
+    website_link: "https://networkx.org/"
+    logo: "/images/Schefflera-Arboricola_networkx.svg"
+    short_description: "A networkx backend that uses joblib to run graph algorithms in parallel."
+    description: |-
+      nx-parallel is a NetworkX backend that uses joblib for parallelization. This project aims to provide parallelized implementations of various NetworkX functions to improve performance
+---
+
+## How to support
+
+You can contribute to the projects by using them and giving feedback, resolving issues, fixing bugs, getting involved in the discussions. And you can also contribute financially as a GitHub sponsor: <a href='https://github.com/networkx'>https://github.com/networkx</a> . You can also hire me so that I can donate the time I spend on looking for opportunities into nx-parallel and networkx instead :)
+
+## A small brief about your project
+
+nx-parallel is a backend for NetworkX, a widely used pure-Python library for graph analysis. While NetworkX includes hundreds of useful algorithms (like TSP, PageRank, Dijkstra’s shortest paths, etc.) it can get really slow on large graphs since it runs on a single CPU core. nx-parallel accelerates these algorithms using joblib, running them in parallel across multiple CPU cores, threads, or nodes—depending on the parallel backend. To use it as a backend, simply pass backend="parallel" to supported NetworkX functions (e.g. nx.all_pairs_dijkstra(G, backend="parallel")), or input a nxp.ParallelGraph object instead of nx.Graph, or set the environment variable NETWORKX_BACKEND_PRIORITY="parallel".
+
+## One FOSS maintainer lesson for your younger self
+
+Concentrate more on the "why"s instead of "how"s, and don't burn yourself out-- take breaks!
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+I get to learn new things, work with nice people and I like working on something that's useful to people, and helping in making it better. Also, I just don't want this project(nx-parallel) to be abandoned and archived someday -- I want to build a sustainable community of users, contributors and maintainers around it :)
+
+## If your repo had a theme song, what would it be?
+
+Bach's Prelude in C Major
+
+## Which file in your project would you most like to set on fire?
+
+Timing script: <a href='https://github.com/networkx/nx-parallel/blob/main/timing/timing_all_functions.py'>https://github.com/networkx/nx-parallel/blob/main/timing/timing_all_functions.py</a>
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🐣

@@ -1,0 +1,57 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/agriyakhetarpal/
+username: "agriyakhetarpal"
+full_name: "Agriya Khetarpal"
+photo: ""
+designation: "Software Engineer"
+created_on: "2025-06-04T16:06:02+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/agriyakhetarpal"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/agriyakhetarpal/"
+  - label: "Web"
+    link: "https://agriyakhetarp.al/"
+projects:
+  - name: "pyodide"
+    project_link: "https://github.com/pyodide/pyodide"
+    website_link: "https://pyodide.org/en/stable/"
+    logo: "/images/agriyakhetarpal_pyodide.png"
+    short_description: "Pyodide is a Python distribution for the browser and Node.js based on WebAssembly"
+    description: |-
+      Pyodide makes it possible to install and run Python packages in the browser with micropip. Any pure Python package with a wheel available on PyPI is supported. Many packages with C extensions have also been ported for use with Pyodide. These include many general-purpose packages such as regex, pyyaml, lxml and scientific Python packages including numpy, pandas, scipy, matplotlib, and scikit-learn.
+---
+
+## How to support
+
+Contributions for code, docs, community examples, and design work are welcome! 🤗 Also, if you have the privilege to contribute financially, please consider donating to us on our OpenCollective page at <a href='https://opencollective.com/pyodide'>https://opencollective.com/pyodide</a> or via GitHub Sponsors at <a href='https://github.com/sponsors/pyodide'>https://github.com/sponsors/pyodide</a>
+
+## A small brief about your project
+
+Pyodide is an open-source, MPL-licensed Python distribution for the browser and Node.js based on WebAssembly/Emscripten. It brings a port of CPython and the Scientific Python stack for web browsers, and provides a robust foreign function interface (FFI) between JavaScript and Python that allows data interchange between both languages. It also comes with a standards-compliant build system for cross-compiling Python packages into WebAssembly wheels, and an array of more than 290 packages and system-level libraries, and an in-browser package manager, micropip, to install and use them in WebAssembly runtimes.
+
+## One FOSS maintainer lesson for your younger self
+
+The reward of delayed gratification: sustainability matters much more than initial excitement; it is imperative to design contributing guidelines, your personal boundaries, and think about funding decisions from early days, as if your project will be successful up to a decade later – because if it does, you will be grateful for working on those structures early on.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+Maintaining open-source software gives me a chance to contribute to something bigger than myself. I get to create a difference to digital heritage that future programmers can study, learn from, and build upon. The collaborative aspect also keeps me engaged, as I get to interact with people all over the world whom I would never meet or have met otherwise!
+
+## If your repo had a theme song, what would it be?
+
+Transylvania by Iron Maiden
+
+## Which file in your project would you most like to set on fire?
+
+The EIGHTEEN patches we currently use to compile SciPy to WebAssembly ;)
+
+## What's your open-source villain origin story?
+
+I realised I've become a villain ever since the day I've had more power closing issues with the "won't fix" label than any comic book crook will ever have! :P
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🎩

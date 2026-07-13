@@ -1,0 +1,79 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/nsh07/
+username: "nsh07"
+full_name: "Nishant Mishra"
+photo: "/images/nsh07_photo.png"
+designation: "Student"
+created_on: "2026-01-19T12:09:02.229950+05:30"
+socials:
+  - label: "Web"
+    link: "https://nsh07.github.io"
+  - label: "GitHub"
+    link: "https://github.com/nsh07"
+  - label: "GitLab"
+    link: "https://gitlab.com/nsh07"
+  - label: "Twitter"
+    link: "https://x.com/nsh_zero7"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/nsh07/"
+  - label: "Reddit"
+    link: "https://www.reddit.com/user/nsh07/"
+projects:
+  - name: "Tomato"
+    project_link: "https://github.com/nsh07/Tomato"
+    website_link: "https://f-droid.org/packages/org.nsh07.pomodoro/"
+    logo: "/images/nsh07_tomato.png"
+    short_description: "Minimalist, data-oriented pomodoro timer for Android"
+    description: |-
+      Tomato is a minimalist, data-oriented pomodoro timer app for Android with deep insights about your productivity
+  - name: "Wikireader"
+    project_link: "https://github.com/nsh07/WikiReader"
+    website_link: "https://github.com/nsh07/WikiReader"
+    logo: "/images/nsh07_wikireader.png"
+    short_description: "Android app for reading Wikipedia pages distraction-free"
+    description: |-
+      A lightweight Android app for reading Wikipedia articles distraction-free. Supports light mode, dark mode, Material You dynamic colors and 300+ Wikipedia languages
+  - name: "SimplyGraph"
+    project_link: "https://github.com/nsh07/SimplyGraph"
+    website_link: "https://github.com/nsh07/SimplyGraph"
+    logo: "/images/nsh07_simplygraph.png"
+    short_description: "A graphing calculator for Android"
+    description: |-
+      SimplyGraph is a simple, fast graphing calculator for Android with support for explicit functions, implicit relations, polar functions and parametric relations
+---
+
+## How to support
+
+You can support me on BuyMeACoffee at https://coff.ee/nsh07 and on GitHub Sponsors at https://github.com/sponsors/nsh07 . Or, you can contribute code or translations on my projects.
+
+## A small brief about your project
+
+- Tomato: Minimalist, data-oriented pomodoro timer for Android
+- Wikireader: Android app for reading Wikipedia pages distraction-free
+- SimplyGraph: A graphing calculator for Android
+
+## One FOSS maintainer lesson for your younger self
+
+Learn Git/VCS in general, in-depth. It will save you a lot of time later.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+FOSS has helped me a lot in my computer and programming journey. Writing and maintaining FOSS projects is my way of giving back to the open-source community what it has provided me with.
+
+## If your repo had a theme song, what would it be?
+
+[Daft Punk - Voyager](https://youtu.be/INbgG9M0WYE?si=WKUNdLX1jpvmDV-0), I'm Just vibing along
+
+## Which file in your project would you most like to set on fire?
+
+README.md
+
+## What's your open-source villain origin story?
+
+I fixed a typo in [btop](https://github.com/aristocratos/btop), and now I'm in their contributor list 😈
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+✏️

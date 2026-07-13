@@ -24,29 +24,26 @@ projects:
     website_link: "https://endoflife.date/"
     logo: "/images/captn3m0_endoflife.date.png"
     short_description: "Informative site with EoL dates of everything"
-    description: "End-of-life (EOL) and support information is often hard to track, or very badly presented. endoflife.date documents EOL dates and support lifecycles for various products."
+    description: |-
+      End-of-life (EOL) and support information is often hard to track, or very badly presented. endoflife.date documents EOL dates and support lifecycles for various products.
   - name: "blr.today"
     project_link: "https://github.com/blr-today"
     website_link: "https://blr.today/"
     logo: "/images/captn3m0_blr.today.png"
     short_description: "This is an open-source semi-curated event calendar for Bangalore."
-    description: "blr.today is an open-source project by Nemo that curates events happening in Bangalore.\n\nIt curates events from multiple sources, cleans them up, then curates them further by tagging them nicely, and makes all event data available as calendars you can subscribe to."
+    description: |-
+      blr.today is an open-source project by Nemo that curates events happening in Bangalore.
+      
+      It curates events from multiple sources, cleans them up, then curates them further by tagging them nicely, and makes all event data available as calendars you can subscribe to.
 ---
 
 ## How to support
 
-1. You can help us by adding a new product - <a href='https://endoflife.date/contribute'>https://endoflife.date/contribute</a>
- 2. You can sponsor us via Open Collective or GitHub Sponsors at <a href='https://github.com/sponsors/endoflife-date'>https://github.com/sponsors/endoflife-date</a> or <a href='https://opencollective.com/endoflife-date'>https://opencollective.com/endoflife-date</a>
- 3. Tell us if your organization is using the endoflife.date data or APIs - <a href='https://github.com/endoflife-date/endoflife.date/wiki/Known-Users.'>https://github.com/endoflife-date/endoflife.date/wiki/Known-Users.</a> Drop us a mail at nemo@endoflife.date
+1. You can help us by adding a new product - <a href='https://endoflife.date/contribute'>https://endoflife.date/contribute</a><br> 2. You can sponsor us via Open Collective or GitHub Sponsors at <a href='https://github.com/sponsors/endoflife-date'>https://github.com/sponsors/endoflife-date</a> or <a href='https://opencollective.com/endoflife-date'>https://opencollective.com/endoflife-date</a><br> 3. Tell us if your organization is using the endoflife.date data or APIs - <a href='https://github.com/endoflife-date/endoflife.date/wiki/Known-Users.'>https://github.com/endoflife-date/endoflife.date/wiki/Known-Users.</a> Drop us a mail at nemo@endoflife.date
 
 ## A small brief about your project
 
-endoflife.date is an informational website that tracks support cycles and release schedules of over 340 products.
-
- Not all product websites can easily answer the question: "How long is this product supported?".
- We track it, and showcase exact dates along with a concise summary of the release policy.
-
- The complete website is open-source, and we are always working to make it better. We have been doing this since 2019, as a collective effort involving over 500 contributors
+endoflife.date is an informational website that tracks support cycles and release schedules of over 340 products.<br><br> Not all product websites can easily answer the question: "How long is this product supported?".<br> We track it, and showcase exact dates along with a concise summary of the release policy.<br><br> The complete website is open-source, and we are always working to make it better. We have been doing this since 2019, as a collective effort involving over 500 contributors
 
 ## One FOSS maintainer lesson for your younger self
 
@@ -58,20 +55,7 @@ Because Aaron Swartz would have loved it.
 
 ## Which file in your project would you most like to set on fire?
 
-/products/omnissa-horizon.
-
-Broadcom recently acquired VMWare, but this acquisition did not include the VMWare End-User Computing division, which made a product called VMWare Horizon. This division was sold to a private equity firm called KKR, which renamed it to Omnissa. Since we track Horizon, I added this 600 word text to the page:
-> After [Broadcom's acquisition of VMWare](<a href='https://investors.broadcom.com/news-releases/news-release-details/broadcom-completes-acquisition-vmware'>https://investors.broadcom.com/news-releases/news-release-details/broadcom-completes-acquisition-vmware</a>),
-> Broadcom [divested the End-User Computing Division
-> (which includes Horizon) to KKR](<a href='https://media.kkr.com/news-details/?news_id=48701629-ae4d-4d88-b1a9-90a438c6bf6c'>https://media.kkr.com/news-details/?news_id=48701629-ae4d-4d88-b1a9-90a438c6bf6c</a>)
-> and branded it as [Omnissa](<a href='https://www.omnissa.com/introducing-omnissa-the-former-vmware-end-user-computing-business/'>https://www.omnissa.com/introducing-omnissa-the-former-vmware-end-user-computing-business/</a>) as part of the restructuring - which is still in process.
-> Omnissa and Broadcom have entered into [a reseller agreement enabling EUC to offer the "combined offering"](<a href='https://www.omnissa.com/setting-the-record-straight-euc-to-continue-to-offer-horizon-with-vsphere-and-vsan/'>https://www.omnissa.com/setting-the-record-straight-euc-to-continue-to-offer-horizon-with-vsphere-and-vsan/</a>)
-> versions of Horizon SaaS and Horizon Term SKUs with vSphere Foundation for VDI. This
-> [combined offering](<a href='https://kb.omnissa.com/s/article/14804'>https://kb.omnissa.com/s/article/14804</a>) will be available
-> in both Named User and Concurrent User license metrics and for 1-, 3-, and 5-year terms.
-> EUC has no plans to increase Horizon list prices beyond normal annual adjustments.
-
-Writing the above 600 words took me roughly 3 hours, because neither of the companies involved (VMWare, KKR, Omnissa, Broadcom) make it easy to get the above information. I wouldn't still set on fire though, because this information needs to be more accessible.
+/products/omnissa-horizon.<br><br>Broadcom recently acquired VMWare, but this acquisition did not include the VMWare End-User Computing division, which made a product called VMWare Horizon. This division was sold to a private equity firm called KKR, which renamed it to Omnissa. Since we track Horizon, I added this 600 word text to the page:<br>> After [Broadcom's acquisition of VMWare](<a href='https://investors.broadcom.com/news-releases/news-release-details/broadcom-completes-acquisition-vmware'>https://investors.broadcom.com/news-releases/news-release-details/broadcom-completes-acquisition-vmware</a>),<br>> Broadcom [divested the End-User Computing Division<br>> (which includes Horizon) to KKR](<a href='https://media.kkr.com/news-details/?news_id=48701629-ae4d-4d88-b1a9-90a438c6bf6c'>https://media.kkr.com/news-details/?news_id=48701629-ae4d-4d88-b1a9-90a438c6bf6c</a>)<br>> and branded it as [Omnissa](<a href='https://www.omnissa.com/introducing-omnissa-the-former-vmware-end-user-computing-business/'>https://www.omnissa.com/introducing-omnissa-the-former-vmware-end-user-computing-business/</a>) as part of the restructuring - which is still in process.<br>> Omnissa and Broadcom have entered into [a reseller agreement enabling EUC to offer the "combined offering"](<a href='https://www.omnissa.com/setting-the-record-straight-euc-to-continue-to-offer-horizon-with-vsphere-and-vsan/'>https://www.omnissa.com/setting-the-record-straight-euc-to-continue-to-offer-horizon-with-vsphere-and-vsan/</a>)<br>> versions of Horizon SaaS and Horizon Term SKUs with vSphere Foundation for VDI. This<br>> [combined offering](<a href='https://kb.omnissa.com/s/article/14804'>https://kb.omnissa.com/s/article/14804</a>) will be available<br>> in both Named User and Concurrent User license metrics and for 1-, 3-, and 5-year terms.<br>> EUC has no plans to increase Horizon list prices beyond normal annual adjustments.<br><br><br>Writing the above 600 words took me roughly 3 hours, because neither of the companies involved (VMWare, KKR, Omnissa, Broadcom) make it easy to get the above information. I wouldn't still set on fire though, because this information needs to be more accessible.
 
 ## What's your open-source villain origin story?
 

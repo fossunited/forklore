@@ -20,7 +20,7 @@ layout: base.njk
         <div>
           <p class="eyebrow">@{{ username }}</p>
           <h1>{{ full_name }}</h1>
-          <p>{{ designation }}</p>
+          <p>{{ designation | markdownInline | safe }}</p>
         </div>
       </div>
 
@@ -32,15 +32,6 @@ layout: base.njk
         {% endfor %}
       </nav>
 
-      {% set hasRss = false %}
-      {% for social in socials %}
-        {% if (social.label | socialLabel) == "RSS" %}
-          {% set hasRss = true %}
-        {% endif %}
-      {% endfor %}
-      {% if hasRss %}
-        <a class="button outline planet-link" href="/planet/{{ username }}/">View posts on Planet</a>
-      {% endif %}
     </div>
 
     <div class="story-content">

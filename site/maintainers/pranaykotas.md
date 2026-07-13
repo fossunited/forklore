@@ -1,0 +1,91 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/pranaykotas/
+username: "pranaykotas"
+full_name: "Pranay Kotasthane"
+photo: "/images/pranaykotas_photo.jpeg"
+designation: "Deputy Director at Takshashila Institution"
+created_on: "2026-05-08T16:50:44.033075+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/pranaykotas"
+  - label: "Substack"
+    link: "https://substack.com/@pranaykotas"
+  - label: "Twitter"
+    link: "https://x.com/pranaykotas"
+  - label: "Web"
+    link: "https://pranaykotas.com"
+  - label: "LinkedIn"
+    link: "https://linkedin.com/in/pranaykotas"
+  - label: "RSS"
+    link: "https://pranaykotas.com/blog/index.xml"
+projects:
+  - name: "Indian Public Policy Directory"
+    project_link: "https://github.com/pranaykotas/IndianPublicPolicy"
+    website_link: "https://aipublicpolicy.org"
+    logo: ""
+    short_description: "A searchable directory of AI tools, dashboards, and projects built for Indian public policy."
+    description: |-
+      A curated, searchable directory of AI-powered tools, data dashboards, and open-source projects relevant to Indian public policy.
+  - name: "India Semiconductor Manufacturing Tracker"
+    project_link: "https://github.com/pranaykotas/india-semiconductor-tracker"
+    website_link: "https://fabs.pranaykotas.com"
+    logo: ""
+    short_description: "Tracking fabs, ATMP facilities, and compound semiconductor units under the India Semiconductor Mission."
+    description: |-
+      A live tracker of semiconductor manufacturing investments in India covering fabrication plants, ATMP facilities, and compound semiconductor units under the India Semiconductor Mission.
+  - name: "Parliament Committee Watch"
+    project_link: "https://github.com/pranaykotas/parliamentwatch"
+    website_link: "https://parliamentcommittee.streamlit.app"
+    logo: ""
+    short_description: "Track and search Indian Parliamentary Committee reports from sansad.in."
+    description: |-
+      A Streamlit app that aggregates and makes searchable the reports published by Indian Parliamentary Standing and Select Committees on sansad.in.
+  - name: "Frameworks for Public Policy"
+    project_link: "https://github.com/pranaykotas/public-policy-frameworks"
+    website_link: "https://frameworks.pranaykotas.com"
+    logo: "/images/pranaykotas_frameworks_for_public_policy.png"
+    short_description: "99 public policy frameworks explained — browse by category or describe a problem to find the most relevant one."
+    description: |-
+      A reference site for public policy frameworks drawn from 300+ editions of Anticipating the Unintended, a newsletter on Indian public policy.
+  - name: "China-US Rhetoric Tracker"
+    project_link: "https://github.com/pranaykotas/china-us-rhetoric"
+    website_link: "https://china-us-rhetoric.pranaykotas.com"
+    logo: ""
+    short_description: "Tracking People's Daily rhetoric toward the US, visualized over time."
+    description: |-
+      A data visualization project tracking how People's Daily has covered the United States over time. Useful for analysts studying shifts in Chinese foreign policy signalling.
+---
+
+## How to support
+
+1. Add projects to the AI for Public Policy directory on aipublicpolicy.org<br>2. Contribute PRs<br>3. Fork and improve the projects
+
+## A small brief about your project
+
+I am building tools using LLMs to improve public policy discourse in India
+
+## One FOSS maintainer lesson for your younger self
+
+Production is better than perfection.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+Because it's fun! It's a frictionless way of being useful.
+
+## If your repo had a theme song, what would it be?
+
+Ye Jo Des Hai Tera - _Swades_
+
+## Which file in your project would you most like to set on fire?
+
+To see people use the parliamentwatch repo to access the excellent parliament standing committee reports, and ask tough questions of the executive based on them.
+
+## What's your open-source villain origin story?
+
+I No Understand Question ;p
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🇮🇳

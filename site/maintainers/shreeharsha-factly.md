@@ -1,0 +1,74 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/shreeharsha-factly/
+username: "shreeharsha-factly"
+full_name: "Shree Harsha"
+photo: "/images/shreeharsha-factly_photo.jpg"
+designation: "Lead Engineer"
+created_on: "2026-05-15T19:49:51.299593+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/shreeharsha-factly"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/shree-harsha-048725123/"
+projects:
+  - name: "GoPie"
+    project_link: "https://github.com/factly/gopie"
+    website_link: "https://gopie.ai"
+    logo: "/images/paul-tharun_gopie.svg"
+    short_description: "Convert datasets into AI-ready databases with auto-generated APIs, conversational analytics, and visualizations."
+    description: |-
+      Analyze data in natural language. GoPie is an open-source platform for natural-language data exploration that turns datasets into blazing-fast, AI-ready database with auto-generated APIs. No technical expertise required.
+  - name: "Dega"
+    project_link: "https://github.com/factly/dega"
+    website_link: "https://dega.factlylabs.com"
+    logo: "/images/shreeharsha-factly_dega.svg"
+    short_description: "Dega is a lightweight, scalable & high performant open-source publishing platform."
+    description: |-
+      Dega is an open-source publishing platform built for modern newsrooms, fact-checking organizations, and digital publishers.
+  - name: "Kavach"
+    project_link: "https://github.com/factly/kavach"
+    website_link: "https://kavach.factlylabs.com"
+    logo: "/images/shreeharsha-factly_kavach.png"
+    short_description: "Identity platform built on Ory stack, which natively manages security for multiple applications within the organisation."
+    description: |-
+      Kavach stands as a robust open source identity and access management solution, designed for lightweight yet powerful organizational, user, and permission management.
+---
+
+## How to support
+
+Explore our projects, and if you find any issues, have suggestions, or see areas for improvement, feel free to raise an issue. If you’re interested in contributing, PRs are always welcome.
+
+## A small brief about your project
+
+GoPie is an open-source platform that helps people analyze datasets using natural language instead of technical queries. It transforms raw data into AI-ready databases with auto-generated APIs and enables users to visualize data and draw meaningful insights without technical expertise.
+
+Kavach is an open-source identity and access management solution that helps organizations securely manage users, permissions, organizations, applications, and space access with multitenancy support.
+
+Dega is an open-source publishing platform built for modern newsrooms, fact-checking organizations, and digital publishers to manage scalable websites with built-in publishing best practices.
+
+## One FOSS maintainer lesson for your younger self
+
+Solve today’s problems clearly while keeping the system adaptable for tomorrow
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+A lot of my learning came from working on open-source projects. Projects like GoPie, Dega, and Kavach focus on solving different problems while making technology easier for non-technical users whether it’s dataset analysis through natural language, publishing platforms, or organization and access management.
+Open source has been both a learning experience and a way for me to give back to the community.
+
+## If your repo had a theme song, what would it be?
+
+https://www.youtube.com/watch?v=-oNALG-kVwY
+
+## Which file in your project would you most like to set on fire?
+
+Managing auth and no-auth mode across GoPie.
+
+## What's your open-source villain origin story?
+
+Setting up projects that had little to no proper documentation.
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+😅

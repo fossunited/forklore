@@ -22,7 +22,8 @@ projects:
     website_link: "https://prav.app/"
     logo: "/images/ravidwivedi_prav.png"
     short_description: "Prav is a messaging service which can be used to exchange messages, audio/video calls, files, images and videos over the Internet. Inspired by the Quicksy app, Prav provides the convenience of registering with a phone number."
-    description: "Popular messaging apps only allow you to talk to users using the same app. However, Prav allows you to talk to all the users on the same network even if they use other apps like Quicksy, Monocles Chat, Dino, Gajim, Monal, and many more. In other words, Prav has no vendor lock-in. Lastly, Prav is a cooperative (in the process of registration) which allows anyone to become a member and vote on decisions, such as the privacy policy or what features should be added."
+    description: |-
+      Popular messaging apps only allow you to talk to users using the same app. However, Prav allows you to talk to all the users on the same network even if they use other apps like Quicksy, Monocles Chat, Dino, Gajim, Monal, and many more. In other words, Prav has no vendor lock-in. Lastly, Prav is a cooperative (in the process of registration) which allows anyone to become a member and vote on decisions, such as the privacy policy or what features should be added.
 ---
 
 ## How to support
@@ -44,6 +45,14 @@ I think Prav project is doing what no other project is doing - mass adoption of 
 ## If your repo had a theme song, what would it be?
 
 Frolic by Luciano Michelini
+
+## Which file in your project would you most like to set on fire?
+
+
+
+## What's your open-source villain origin story?
+
+
 
 ## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
 

@@ -1,7 +1,10 @@
 (function () {
   const root = document.documentElement;
   const themeToggle = document.querySelector("[data-theme-toggle]");
+  const lightIcon = document.querySelector("[data-theme-icon-light]");
+  const darkIcon = document.querySelector("[data-theme-icon-dark]");
   const logos = document.querySelectorAll("[data-theme-logo]");
+  const footerLogo = document.querySelector("[data-footer-logo]");
 
   function setTheme(theme) {
     const isLight = theme === "light";
@@ -11,8 +14,13 @@
     logos.forEach((logo) => {
       logo.setAttribute("src", isLight ? "/logo/logo_dark.svg" : "/logo/logo_light.svg");
     });
+    footerLogo?.setAttribute(
+      "src",
+      isLight ? "/logo/unitedbyfoss_light.svg" : "/logo/unitedbyfoss_dark.svg",
+    );
     if (themeToggle) {
-      themeToggle.textContent = isLight ? "☾" : "☀";
+      if (lightIcon) lightIcon.hidden = isLight;
+      if (darkIcon) darkIcon.hidden = !isLight;
       themeToggle.setAttribute(
         "aria-label",
         isLight ? "Switch to Dark Mode" : "Switch to Light Mode",
@@ -86,5 +94,9 @@
     const card = visibleCards[Math.floor(Math.random() * visibleCards.length)];
     const href = card?.querySelector(".card-hit")?.getAttribute("href");
     if (href) window.location.href = href;
+  });
+
+  document.querySelector("[data-scroll-top]")?.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 })();

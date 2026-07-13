@@ -1,0 +1,59 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/avikalpg/
+username: "avikalpg"
+full_name: "Avikalp Kumar Gupta"
+photo: "/images/avikalpg_photo.jpg"
+designation: "Founder, Vibinex Code Review"
+created_on: "2025-06-19T19:27:18+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/avikalpg"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/avikalp-gupta"
+  - label: "Mastodon"
+    link: "https://defcon.social/@avikalp"
+  - label: "Web"
+    link: "https://avikalpg.github.io/"
+projects:
+  - name: "Vibinex Code Review"
+    project_link: "https://github.com/vibinex/vibinex"
+    website_link: "https://vibinex.com/"
+    logo: "/images/avikalpg_vibinex_code_review.png"
+    short_description: "Vibinex modifies the UX for code-hosting websites like GitHub and Bitbucket to make it easier to perform high-quality code reviews. If you spend a significant part of your day reviewing pull requests, try our tool out."
+    description: |-
+      Vibinex modifies the UX for code-hosting websites like GitHub and Bitbucket to make it easier to perform high-quality code reviews. If you spend a significant part of your day reviewing pull requests, try our tool out.
+---
+
+## How to support
+
+To easiest way to support our work is by starring all our repositories on GitHub, and if you work at a software company where code reviews are taken seriously, ask your leaders to book a demo with us using the link on the website.  Here are the links to all of our repositories:</br> 1. Parent: <a href='https://github.com/vibinex/vibinex'>https://github.com/vibinex/vibinex</a> </br> 2. Website and backend: <a href='https://github.com/vibinex/vibinex-server'>https://github.com/vibinex/vibinex-server</a> </br> 3. Docker & GitHub App: <a href='https://github.com/vibinex/vibi-dpu'>https://github.com/vibinex/vibi-dpu</a> </br> 4. Chrome Extension: <a href='https://github.com/vibinex/chrome-extension'>https://github.com/vibinex/chrome-extension</a>  Here is the link to book a demo with the founder: <a href='https://calendly.com/avikalp-gupta/30min'>https://calendly.com/avikalp-gupta/30min</a>
+
+## A small brief about your project
+
+Vibinex is an add-on to GitHub Pull Requests that focuses on improving the experience of the reviewer. It acknowledges that human oversight is necessary in production software and provides features that actually help a reviewer understand the code faster:</br> 1. DiffGraph: a visual diff of the dependency graph that helps you navigate through the changes with ease </br> 2. PR Diff Personalization: highlighting of the parts of the pull request that the reviewer is familiar with to make understanding of changes easier </br> 3. Automatic code-owners: a comment on the PR showing the list of people who would be relevant as reviewers, based on their past contributions.  Unlike most other tools that perform code analysis and provide feedback on code quality, Vibinex understands that the ultimate blocker for a pull request is always a manual approval, that would only be accelerated if you make their job easier.
+
+## One FOSS maintainer lesson for your younger self
+
+Make it easy for people to help you. And go out more often to talk about what you are building. No one will care about your awesome project if they never knew about its existence.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+I am driven by a future of developer experience that makes it extremely easy to build and maintain high-quality software. And in my own work, which involves building & maintaining high-quality software, I try to solve my own problems with these projects.
+
+## If your repo had a theme song, what would it be?
+
+It would be Ludwig van Beethoven's "Moonlight Sonata". It is simple, yet powerful. Subtle, yet captivating. Orthodox, yet pervasive.  You can use it as focus music to help you do your work a lot better. But when you close your eyes and just focus on the music, you will feel inspired.
+
+## Which file in your project would you most like to set on fire?
+
+I think it would be the docs/index.tsx file. No matter how many times I revamp it, it never seems to do its job correctly.
+
+## What's your open-source villain origin story?
+
+Three years into my career, I had genuinely fallen in love with reviewing pull requests. For every new project, PRs gave me a fast, insightful way to understand how the system worked — and it quickly became the fastest way I learned real-world software engineering.  At one point, I was reviewing so many PRs that new joiners just assumed I was the tech lead. They’d come to me with questions even when they knew I wasn’t.  But as my days got busier, I started reviewing fewer PRs. It wasn’t that I stopped caring — just that it took a lot of time and effort to do it right. Then came the breaking point: I was debugging a critical issue in a module I owned — something that should’ve been impossible. After hours of digging, I found the culprit: someone had changed my code… and commented out my tests.  That day, I swore I wouldn’t let anyone sneak changes into my code again — CODE OWNER or not. If staying on top of code reviews meant I needed a better tool, then so be it. I’d build it myself.
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+😅 My passion drives me, but all the work needed to maintain it drives me crazy.

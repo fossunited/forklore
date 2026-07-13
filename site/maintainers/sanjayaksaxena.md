@@ -1,0 +1,64 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/sanjayaksaxena/
+username: "sanjayaksaxena"
+full_name: "Sanjaya Kumar Saxena"
+photo: "/images/sanjayaksaxena_photo.jpg"
+designation: ""
+created_on: "2025-07-23T17:43:31+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/sanjayaksaxena"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/sanjayaksaxena/"
+  - label: "Web"
+    link: "https://winkjs.org/"
+projects:
+  - name: "winkNLP"
+    project_link: "https://github.com/winkjs/wink-nlp"
+    website_link: "https://winkjs.org/wink-nlp/"
+    logo: "/images/sanjayaksaxena_winknlp.png"
+    short_description: "Developer friendly Natural Language Processing"
+    description: |-
+      WinkNLP is a JavaScript library for Natural Language Processing (NLP). Designed specifically to make development of NLP applications easier and faster, winkNLP is optimized for the right balance of performance and accuracy.
+  - name: "winkComposer"
+    project_link: "https://github.com/winkjs/wink-composer"
+    website_link: "https://winkjs.org/wink-composer/"
+    logo: "/images/sanjayaksaxena_winkcomposer.png"
+    short_description: "Composable Streaming Intelligence."
+    description: |-
+      WinkComposer is an upcoming open-source framework that makes building streaming intelligence playfully simple. Connect intuitive nodes, experiment freely, perfect it in an iteration or two. From edge-ready AI algorithms to built-in resilience, everything you need for production comes standard.
+---
+
+## How to support
+
+Jump into winkNLP, join discussions on winkComposer—composable streaming intelligence, contribute, star, or sponsor our work! Currently bootstrapping through consulting, so sponsorships would be a great help.
+
+## A small brief about your project
+
+I maintain winkNLP—a dependency-free NLP library with ~2M downloads and a NASSCOM AI Game Changer award. Now we're building winkComposer: a low-code framework for real-time streaming analytics. Developers compose lightweight nodes via declarative APIs to build pipelines—from anomaly detection to condition monitoring—transforming continuous data streams into actionable insights with statistical methods, narrow AI, knowledge graphs, and LLM-driven reasoning. Enterprise-grade streaming intelligence that runs anywhere from cloud to Raspberry Pi.
+
+## One FOSS maintainer lesson for your younger self
+
+Embrace openness, uphold rigorous standards, and trust the community. High standards aren't barriers; they inspire trust and attract contributors who share your values. I discovered open source in my late 50s and I'm still building at the age of 64—it is never too late to start!
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+It's all about freedom with responsibility. My builder instinct thrives in the freedom to create transparent solutions, while my maintainer mindset embraces the responsibility to ensure they're reliable and secure. When winkNLP hit over 1.5 million downloads—with IIT Delhi using it in research on STEM education for visually impaired children, Harvard for LLM orchestration, Amazon for Lakechain—I felt the deep satisfaction of achieving that perfect balance!
+
+## If your repo had a theme song, what would it be?
+
+"Chak De India"—it perfectly captures our spirit of taking on challenges with a small, determined team and proving that with the right approach, you can scale greater heights. We're not just building tools—we are living the dream that quality, passion, and uncompromising standards can make our own mark and change the game entirely.
+
+## Which file in your project would you most like to set on fire?
+
+The automaton.js file in winkNLP that's keeping our test coverage at 99.87% instead of a perfect 100%!
+
+## What's your open-source villain origin story?
+
+Decades building proprietary systems until presenting NLP work at leading conferences in my late 50s hit me with: "Why keep innovations locked in academic papers?" That question flipped everything. Prateek, Rachna, and I—who co-founded Graype Systems together—went from closed source to AGPLv3 to MIT, learning that real openness means trusting the community, not restricting it.
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+⚖️ - The balance emoji captures my core philosophy: freedom with responsibility. It's funny how emojis have become our story: Graype Systems—the organization I co-founded—has adopted the Unicode character for the grapes emoji 🍇, winkJS draws from the wink emoji 😉, and each tells part of our journey!

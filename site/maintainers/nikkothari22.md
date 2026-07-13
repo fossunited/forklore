@@ -1,0 +1,64 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/nikkothari22/
+username: "nikkothari22"
+full_name: "Nikhil Kothari"
+photo: "/images/nikkothari22_photo.jpg"
+designation: "Founder, CEO at The Commit Company"
+created_on: "2025-11-17T15:17:56+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/nikkothari22"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/nikkothari22"
+  - label: "X"
+    link: "https://x.com/nik_kothari22"
+projects:
+  - name: "Raven"
+    project_link: "https://github.com/The-Commit-Company/raven"
+    website_link: "https://www.ravenchat.ai"
+    logo: "/images/nikkothari22_raven.png"
+    short_description: "Enterprise-first team messaging platform that seamlessly integrates with your ERP."
+    description: |-
+      Raven is an open-source messaging platform that brings your team's conversations and information into one centralized place, enhancing collaboration and productivity. Raven helps you build AI Agents to offload boring repetitive tasks to agents via a chat interface.
+  - name: "Mint"
+    project_link: "https://github.com/The-Commit-Company/mint"
+    website_link: "https://cloud.frappe.io/marketplace/apps/mint"
+    logo: "/images/nikkothari22_mint.webp"
+    short_description: "Bank reconciliation made simple for ERPNext"
+    description: |-
+      Mint is an open-source tool to help users of [ERPNext](https://frappe.io/erpnext) reconcile their bank account and credit card statements easily with a slick UX, automation rules, and more. ---
+---
+
+## How to support
+
+Use our products, be vocal about bugs and contribute by creating issues and help us by writing some documentation (all managed via GitHub).
+
+## A small brief about your project
+
+Our projects help users in the Frappe ecosystem run their businesses/operations better.
+
+## One FOSS maintainer lesson for your younger self
+
+Don't build everything and anything that people want you to build. It's still your own product and you decide what to build - even though it's open source.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+Because I find it fun. I don't think of maintaining these projects as "maintaining a FOSS Project". I like building products and these products just happen to be open source.
+
+## If your repo had a theme song, what would it be?
+
+Was recently introduced to the song ["Gold Steps" by Neck Deep](https://www.youtube.com/watch?v=tlO-KOvpPOw&list=RDtlO-KOvpPOw&start_radio=1) - seems apt.
+
+## Which file in your project would you most like to set on fire?
+
+`ChatStream.tsx`
+
+## What's your open-source villain origin story?
+
+My first contribution to Frappe Framework was a spelling correction from "Submiting" to "Submitting": https://github.com/frappe/frappe/pull/16638. Yes, I am a stickler for good grammar.
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+💀

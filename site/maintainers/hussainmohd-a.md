@@ -1,0 +1,71 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/hussainmohd-a/
+username: "hussainmohd-a"
+full_name: "Mohammed Hussain"
+photo: "/images/hussainmohd-a_photo.png"
+designation: "Developer"
+created_on: "2025-12-05T15:57:47+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/hussainmohd-a"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/hussainmohda"
+  - label: "Mastodon"
+    link: "https://mastodon.social/@hussainmohd"
+projects:
+  - name: "Rethink DNS + Firewall"
+    project_link: "https://github.com/celzero/rethink-app"
+    website_link: "https://rethinkdns.com/app"
+    logo: "/images/hussainmohd-a_rethink_dns_+_firewall.png"
+    short_description: "Network security app for Android"
+    description: |-
+      A [WireGuard](https://github.com/wireguard/wireguard-go) client, an [OpenSnitch](https://github.com/evilsocket/opensnitch)-inspired firewall and network monitor + a [pi-hole](https://github.com/pi-hole/pi-hole)-inspired DNS over HTTPS, DNS over TLS, DNSCrypt client with blocklists..
+  - name: "Firestack"
+    project_link: "https://github.com/celzero/firestack"
+    website_link: "https://rethinkdns.com/app"
+    logo: "/images/hussainmohd-a_firestack.png"
+    short_description: "Userspace network filter and proxifier."
+    description: |-
+      Firestack is a userspace TCP/UDP monitor, firewall, DNS resolver, and WireGuard client for Android. [gVisor/netstack](https://gvisor.dev/docs/user_guide/networking/) provides a SOCKS-like interface for TCP and UDP over a TUN device. Firestack supports DNS-over-HTTPS, DNS-over-TLS, Oblivious DNS-over-HTTPS, DNS over WireGuard / SOCKS5 / Tor, DNSCrypt, and plain old DNS upstreams.
+  - name: "Serverless DNS"
+    project_link: "https://github.com/serverless-dns/serverless-dns"
+    website_link: "https://rethinkdns.com/configure"
+    logo: "/images/hussainmohd-a_serverless_dns.png"
+    short_description: "The RethinkDNS resolver that deploys to Cloudflare Workers, Deno Deploy, Fastly, and Fly.io."
+    description: |-
+      Serverless DNS is a Pi-Hole esque [content-blocking](https://github.com/serverless-dns/blocklists), serverless, stub DNS-over-HTTPS (DoH) and DNS-over-TLS (DoT) resolver. Runs out-of-the-box on [Cloudflare Workers](https://workers.dev/), [Deno Deploy](https://deno.com/deploy), [Fastly Compute@Edge](https://www.fastly.com/products/edge-compute), and [Fly.io](https://fly.io/). Free tiers of all these services should be enough to cover 10 to 20 devices worth of DNS traffic per month.
+---
+
+## How to support
+
+If UI/UX is your strength, you are very welcome to jump in reworking fragment layouts, cleaning up XML, improving/adding animations, adding Material You touches, refining typography, fixing visual inconsistencies, or proposing cleaner navigation flows. All good design ideas make a big difference.<br><br>If you're good with content and multimedia, then I'd really like your help with audio/video/text docs, guides, and tutorials for the Rethink DNS + Firewall app.<br><br>If you are too busy to spend all that time, but still want to contribute, please consider sponsoring: https://svc.rethinkdns.com/r/sponsor<br>
+
+## A small brief about your project
+
+Anti-censorship & anti-surveillance tools for 3 billion Android users.<br>
+
+## One FOSS maintainer lesson for your younger self
+
+Every release fixes bugs and creates new ones. The circle of life.<br>
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+Because someone out there relies on it, and that's enough.<br>
+
+## If your repo had a theme song, what would it be?
+
+https://www.youtube.com/watch?v=GaUvFt6F0j8<br>
+
+## Which file in your project would you most like to set on fire?
+
+BraveVpnService.kt - I open it only when the stars align and logs are kind.<br>
+
+## What's your open-source villain origin story?
+
+My co-founder had an inspiring idea. I just stepped in… and never stepped out.<br>
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🤝<br>

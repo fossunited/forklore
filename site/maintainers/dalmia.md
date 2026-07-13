@@ -24,19 +24,22 @@ projects:
     website_link: "https://calibrate.artpark.ai"
     logo: "/images/dalmia_calibrate.svg"
     short_description: "AI agent evaluation tool for non-profits"
-    description: "Most AI evaluation platforms are either too expensive, closed source or super hard to use for non-engineers. Most non-profits have very limited or no engineering capacity. Calibrate aims to democratize AI agent evaluation and empower more people to easily evaluate their AI agents. Calibrate helps you find the best speech-to-text model, text-to-speech model, and LLM for your use case, automate evaluation using LLM judges, align them with human feedback and simulate conversations with your agent to surface failure modes before deployment."
+    description: |-
+      Most AI evaluation platforms are either too expensive, closed source or super hard to use for non-engineers. Most non-profits have very limited or no engineering capacity. Calibrate aims to democratize AI agent evaluation and empower more people to easily evaluate their AI agents. Calibrate helps you find the best speech-to-text model, text-to-speech model, and LLM for your use case, automate evaluation using LLM judges, align them with human feedback and simulate conversations with your agent to surface failure modes before deployment.
   - name: "SensAI"
     project_link: "https://linktr.ee/sens_ai"
     website_link: "https://sensai.hyperverge.org/"
     logo: "/images/dalmia_sensai.svg"
     short_description: "AI-powered LMS for teachers and learners"
-    description: "SensAI is an AI-powered LMS that automates assessments for educators and gives personalized, real-time coaching to every learner using the socratic method to help them learn by doing, at their own pace. Originally built for the educators and learners of [HyperVerge Academy](https://academy.hyperverge.org/)."
+    description: |-
+      SensAI is an AI-powered LMS that automates assessments for educators and gives personalized, real-time coaching to every learner using the socratic method to help them learn by doing, at their own pace. Originally built for the educators and learners of [HyperVerge Academy](https://academy.hyperverge.org/).
   - name: "Plio"
     project_link: "https://linktr.ee/learnplio"
     website_link: "https://plio.in/"
     logo: "/images/dalmia_plio.svg"
     short_description: "Convert youtube videos into interactive lessons"
-    description: "Plio helps educators convert passive youtube videos into interactive lessons by inserting questions in the middle to increase student engagement and gather rich data on how students are learning to help them improve how they teach. Originally built for the teachers and students of [Avanti Fellows](https://avantifellows.org/)."
+    description: |-
+      Plio helps educators convert passive youtube videos into interactive lessons by inserting questions in the middle to increase student engagement and gather rich data on how students are learning to help them improve how they teach. Originally built for the teachers and students of [Avanti Fellows](https://avantifellows.org/).
 ---
 
 ## How to support
@@ -61,6 +64,10 @@ I love building tools that help propagate the benefits of technology to people i
 ## If your repo had a theme song, what would it be?
 
 Chak lein de - Kailash Kher (Chandni Chowk to China)
+
+## Which file in your project would you most like to set on fire?
+
+
 
 ## What's your open-source villain origin story?
 

@@ -1,0 +1,59 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/kayceesrk/
+username: "kayceesrk"
+full_name: "KC Sivaramakrishnan"
+photo: "/images/kayceesrk_photo.jpg"
+designation: "CS Prof @ IITM, CTO @ Tarides"
+created_on: "2025-06-05T07:53:26+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/kayceesrk"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/kc-sivaramakrishnan-25061a14/"
+  - label: "Web"
+    link: "https://kcsrk.info/"
+  - label: "RSS"
+    link: "https://kcsrk.info/atom.xml"
+projects:
+  - name: "OCaml"
+    project_link: "https://github.com/ocaml/ocaml"
+    website_link: "https://ocaml.org/"
+    logo: "/images/kayceesrk_ocaml.svg"
+    short_description: "An industrial-strength functional programming language with an emphasis on expressiveness and safety"
+    description: |-
+      OCaml is a functional, statically-typed programming language from the ML family, offering a powerful module system extending that of Standard ML and a feature-rich, class-based object system.
+---
+
+## How to support
+
+Please contribute to the compiler [1] and the wider ecosystem [2,3,4]. [1] <a href='https://github.com/ocaml/ocaml/blob/trunk/CONTRIBUTING.md'>https://github.com/ocaml/ocaml/blob/trunk/CONTRIBUTING.md</a> [2] <a href='https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md'>https://github.com/ocaml/ocaml.org/blob/main/CONTRIBUTING.md</a> [3] <a href='https://discuss.ocaml.org/t/call-for-volunteers-to-help-maintain-the-opam-repository/16476'>https://discuss.ocaml.org/t/call-for-volunteers-to-help-maintain-the-opam-repository/16476</a> [4] <a href='https://github.com/ocaml/opam-repository/blob/master/CONTRIBUTING.md'>https://github.com/ocaml/opam-repository/blob/master/CONTRIBUTING.md</a>
+
+## A small brief about your project
+
+OCaml is a powerful, expressive, and statically typed functional programming language that combines functional, imperative, and object-oriented paradigms. It features a sophisticated type system with type inference, making code both concise and safe, and its performance rivals that of C in many cases, thanks to its native code compiler. OCaml is particularly strong in areas like language tooling, formal verification, and systems programming, with robust support for abstraction and modularity. It powers industrial-scale software at companies like Jane Street and is the foundation of projects like the Coq proof assistant, the Tezos blockchain, and the MirageOS unikernel framework. For developers seeking reliability, maintainability, and strong compile-time guarantees, OCaml offers a mature ecosystem and a pragmatic functional programming experience.
+
+## One FOSS maintainer lesson for your younger self
+
+When I started, I thought being a good maintainer meant writing clever code and fixing bugs quickly. Sure, that was necessary. But over time, I learned that the real work is communication, empathy, mentorship, setting boundaries, and building a community that can sustain the project without burning anyone out. The code is the easy part—people are the challenge and the reward.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+I do it because it’s one of the rare ways in software where ideas, craft, and community come together meaningfully. Open-source gave me a platform early in my career, and maintaining projects now feels like returning the favour — making room for others, especially those exploring programming languages or systems work from unconventional paths. What keeps me going is when someone says, “I learned something because of this,” or when a small improvement sparks a bigger contribution elsewhere.
+
+## If your repo had a theme song, what would it be?
+
+"My Shot" from Hamilton. Feels like OCaml’s anthem—it’s not just Hamilton’s big moment, but also his crew stepping up, full of ideas and fire. Like that group of bold thinkers, the OCaml community is full of people who care about building well, thinking clearly, and making their shot count. It’s not the loudest language out there, but it’s for folks who want to do something meaningful with code, together.
+
+## Which file in your project would you most like to set on fire?
+
+
+
+## What's your open-source villain origin story?
+
+
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🌱 You plant, you nurture, others grow with it.

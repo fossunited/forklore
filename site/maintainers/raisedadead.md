@@ -1,0 +1,66 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/raisedadead/
+username: "raisedadead"
+full_name: "Mrugesh Mohapatra"
+photo: "/images/raisedadead_photo.png"
+designation: "Principal Maintainer—Cloud Infrastructure & Open Source at freeCodeCamp.org"
+created_on: "2025-06-23T19:57:28+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/raisedadead"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/mrugeshm/"
+  - label: "Web"
+    link: "https://mrugesh.dev/"
+  - label: "X/Twitter"
+    link: "https://x.com/raisedadead"
+projects:
+  - name: "freeCodeCamp"
+    project_link: "https://github.com/freeCodeCamp/freeCodeCamp"
+    website_link: "https://www.freecodecamp.org/"
+    logo: "/images/raisedadead_freecodecamp.jpg"
+    short_description: "Free coding education platform with interactive curriculum"
+    description: |-
+      freeCodeCamp.org is a friendly community where you can learn to code for free. It is run by a donor-supported 501(c)(3) nonprofit to help millions of busy adults transition into tech. Our full-stack web development and machine learning curriculum is completely free and self-paced.
+  - name: "astro-loader-hashnode"
+    project_link: "https://github.com/raisedadead/astro-loader-hashnode"
+    website_link: "https://npmjs.com/package/astro-loader-hashnode"
+    logo: ""
+    short_description: "Astro Content Layer plugin for Hashnode"
+    description: |-
+      A Content Layer API plugin for Astro that adds support for fetching content from Hashnode, including articles, tags, and authors. It allows developers to easily integrate Hashnode content into their Astro projects.
+---
+
+## How to support
+
+You can support freeCodeCamp.org by donating to our nonprofit organization at <a href='https://freecodecamp.org/donate.'>https://freecodecamp.org/donate.</a> Your contributions help us maintain and improve the platform, ensuring that we can continue to provide free coding education to millions of people around the world. You can also support me directly by sponsoring my work on GitHub at <a href='https://github.com/sponsors/raisedadead.'>https://github.com/sponsors/raisedadead.</a>
+
+## A small brief about your project
+
+freeCodeCamp's code base is a large, open-source project that provides a comprehensive curriculum for learning Programming, Mathematics, English and more. It includes interactive coding challenges, projects, and a supportive community where learners can ask questions and share their progress. The platform is designed to be accessible to everyone, regardless of their background or prior experience.
+
+## One FOSS maintainer lesson for your younger self
+
+Start small, focus on one thing at a time, and don't be afraid to ask for help.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+Education should be free, and I'm stubborn enough to spend my nights making sure it stays that way.
+
+## If your repo had a theme song, what would it be?
+
+
+
+## Which file in your project would you most like to set on fire?
+
+Markdown files, because git is not a good tool for content management.
+
+## What's your open-source villain origin story?
+
+The idea of collaborating with humans thousands of kilometers away, whom I have not met IRL, probably never will – but still being able to just trust with feedback and opinions is liberating. Got into a traditional CS degree, and job—discovered Three.js and freeCodeCamp in 2015 as part of skilling up for the day job. I was hooked. Quit corporate life to do FOSS and education full-time. Never looked back.
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🦉

@@ -1,0 +1,78 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/srinivasanTarget/
+username: "srinivasanTarget"
+full_name: "Srinivasan Sekar"
+photo: "/images/srinivasanTarget_photo.jpg"
+designation: "Director of Engineering @LambdaTest"
+created_on: "2025-06-05T14:58:25+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/srinivasanTarget"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/srinivasan-sekar/"
+  - label: "Web"
+    link: "https://srini.codes/"
+projects:
+  - name: "Appium"
+    project_link: "https://github.com/appium/appium"
+    website_link: "http://appium.io/"
+    logo: "/images/srinivasanTarget_appium.png"
+    short_description: "Appium is an open-source project and ecosystem of related software, designed to facilitate UI automation of many app platforms, including mobile (iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, Windows), TV (Roku, tvOS, Android TV, Samsung), and more!"
+    description: |-
+      Appium is an open-source project and ecosystem of related software, designed to facilitate UI automation of many app platforms, including mobile (iOS, Android, Tizen), browser (Chrome, Firefox, Safari), desktop (macOS, Windows), TV (Roku, tvOS, Android TV, Samsung), and more!
+  - name: "Appium device farm"
+    project_link: "https://github.com/AppiumTestDistribution/appium-device-farm"
+    website_link: "https://devicefarm.org/"
+    logo: "/images/srinivasanTarget_appium_device_farm.jpg"
+    short_description: "Appium 2.0 plugin designed to manage and create driver sessions on available devices."
+    description: |-
+      Appium 2.0 plugin designed to manage and create driver sessions on available devices.
+  - name: "WebDriverAgent MCP Server"
+    project_link: "https://github.com/AppiumTestDistribution/mcp-webdriveragent"
+    website_link: ""
+    logo: "/images/srinivasanTarget_webdriveragent_mcp_server.png"
+    short_description: "Model Context Protocol (MCP) server that provides tools for building and signing WebDriverAgent for iOS."
+    description: |-
+      Model Context Protocol (MCP) server that provides tools for building and signing WebDriverAgent for iOS.
+  - name: "MCP Appium Gestures"
+    project_link: "https://github.com/AppiumTestDistribution/mcp-appium-gestures"
+    website_link: ""
+    logo: ""
+    short_description: "Model Context Protocol (MCP) server providing resources and tools for Appium mobile gestures using Actions API."
+    description: |-
+      Model Context Protocol (MCP) server providing resources and tools for Appium mobile gestures using Actions API.
+---
+
+## How to support
+
+Welcome any potential first-time contributors who are curious, love open source, and have a passion to contribute to the community. Other means of contributions are also welcome through our GitHub sponsors (<a href='https://github.com/sponsors/AppiumTestDistribution'>https://github.com/sponsors/AppiumTestDistribution</a>) and via open-collective (<a href='https://opencollective.com/appium-device-farm'>https://opencollective.com/appium-device-farm</a>).
+
+## A small brief about your project
+
+Appium Device-farm is a powerful plugin designed specifically to manage and streamline the creation of driver sessions for connected devices, including Android and iOS real devices, emulators, and simulators. This plugin extends the capabilities of Appium, making it easier for developers and testers to automate testing processes across a wide range of device types, ensuring that applications function smoothly in diverse environments. mcp-webdriveragent – Model Context Protocol (MCP) server that provides tools for building and signing WebDriverAgent for iOS. mcp-appium-gestures – Model Context Protocol (MCP) server providing resources and tools for Appium mobile gestures using Actions API.
+
+## One FOSS maintainer lesson for your younger self
+
+Document everything not for others, but for your future self, who will have absolutely no memory of why that clever hack in line 42 exists.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+The satisfaction of building something that others find useful. Also, nothing beats the thrill of a stranger fixing a bug you've been stuck on for weeks with a simple solution you never considered.
+
+## If your repo had a theme song, what would it be?
+
+Fix You' by Coldplay. We spend our entire day doing that.
+
+## Which file in your project would you most like to set on fire?
+
+
+
+## What's your open-source villain origin story?
+
+
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🧩 - Every contribution is a piece of the puzzle, and somehow they all fit together to create something greater than the sum of its parts.

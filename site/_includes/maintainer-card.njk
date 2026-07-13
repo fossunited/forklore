@@ -16,7 +16,7 @@
     >
     <div>
       <h2>{{ maintainer.data.full_name }}</h2>
-      <p>{{ maintainer.data.designation }}</p>
+      <p>{{ maintainer.data.designation | markdownInline | safe }}</p>
     </div>
   </header>
   <div
@@ -35,7 +35,7 @@
               View Source <span aria-hidden="true">↗</span>
             </a>
           {% endif %}
-          <p>{{ project.short_description }}</p>
+          <p>{{ project.short_description | markdownInline | safe }}</p>
         </div>
       </div>
     {% endfor %}

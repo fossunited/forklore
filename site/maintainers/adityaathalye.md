@@ -22,25 +22,29 @@ projects:
     website_link: "https://www.evalapply.org/posts/shite-the-static-sites-from-shell-part-1/"
     logo: "/images/adityaathalye_shite.png"
     short_description: "The little hot-reloadin' static site maker from shell."
-    description: "shite's job is to help me make my website (https://evalapply.org). Thus, shite's scope, (mis)feature set, polish will always be production-grade, where production is 'works on my machine(s)' :)"
+    description: |-
+      shite's job is to help me make my website (https://evalapply.org). Thus, shite's scope, (mis)feature set, polish will always be production-grade, where production is 'works on my machine(s)' :)
   - name: "Clojure 'Multiproject'"
     project_link: "https://github.com/adityaathalye/clojure-multiproject-example/"
     website_link: "https://www.evalapply.org/tags/web_development/"
     logo: "/images/adityaathalye_clojure_'multiproject'.png"
     short_description: "Layout and tooling to conveniently develop many Clojure projects in a single source repo."
-    description: "See the 'Concept' section in the README. Basically, 'multiproject' addresses my own specific requirements; viz. indie and hobby SaaS apps of my own; RAD for outcomes-driven customers (like me) who want long-lived, stable software; and to benefit from the Clojure ecosystem's creativity, reach, stewardship, and software stability. Polylith (https://polylith.gitbook.io/) is the (far) more sophisticated alternative to my approach."
+    description: |-
+      See the 'Concept' section in the README. Basically, 'multiproject' addresses my own specific requirements; viz. indie and hobby SaaS apps of my own; RAD for outcomes-driven customers (like me) who want long-lived, stable software; and to benefit from the Clojure ecosystem's creativity, reach, stewardship, and software stability. Polylith (https://polylith.gitbook.io/) is the (far) more sophisticated alternative to my approach.
   - name: "Clojure By Example"
     project_link: "https://github.com/adityaathalye/clojure-by-example"
     website_link: "https://www.evalapply.org/tags/clojure"
     logo: "/images/adityaathalye_clojure_by_example.png"
     short_description: "Workshop for programmers who are new to Clojure."
-    description: "This workshop aims to get your brain and fingers accustomed to just enough of the Clojure programming language to start doing useful things with it. In other words, 'What could one do with just a little bit of Clojure?'."
+    description: |-
+      This workshop aims to get your brain and fingers accustomed to just enough of the Clojure programming language to start doing useful things with it. In other words, 'What could one do with just a little bit of Clojure?'.
   - name: "usermanager-first-principles"
     project_link: "https://github.com/adityaathalye/usermanager-first-principles"
     website_link: "https://www.evalapply.org/posts/clojure-web-app-from-scratch/"
     logo: "/images/adityaathalye_usermanager-first-principles.png"
     short_description: "A 'from first principles' variant of 'usermanager-example', the tutorial Clojure web application by Sean Corfield."
-    description: "Sean's original 'User Manager' example project and its variants (including this one), aim to demystify 'How to construct a Clojure web application using only libraries?'. 'Composition over inheritance', 'Libraries over frameworks', and 'Data orientation' feature prominently in the Clojure world's canonical mental model of programming, including programming the web. Absent some of these key intuitions, even experienced developers who are new to Clojure tend to struggle to build apps using libraries. The 'User Manager' collective of demos aim to address this specific challenge."
+    description: |-
+      Sean's original 'User Manager' example project and its variants (including this one), aim to demystify 'How to construct a Clojure web application using only libraries?'. 'Composition over inheritance', 'Libraries over frameworks', and 'Data orientation' feature prominently in the Clojure world's canonical mental model of programming, including programming the web. Absent some of these key intuitions, even experienced developers who are new to Clojure tend to struggle to build apps using libraries. The 'User Manager' collective of demos aim to address this specific challenge.
 ---
 
 ## How to support

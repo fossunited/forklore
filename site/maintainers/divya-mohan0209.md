@@ -1,0 +1,51 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/divya-mohan0209/
+username: "divya-mohan0209"
+full_name: "Divya Mohan"
+photo: "/images/divya-mohan0209_photo.png"
+designation: "Principal Tech Advocate"
+created_on: "2025-06-03T18:02:32+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/divya-mohan0209"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/divya-mohan0209/"
+  - label: "Web"
+    link: "https://divyamohan.com/"
+  - label: "RSS"
+    link: "https://www.divyamohan.com/rss"
+projects:
+  - name: "Kubernetes"
+    project_link: "https://github.com/kubernetes"
+    website_link: "https://kubernetes.io/"
+    logo: "/images/divya-mohan0209_kubernetes.png"
+    short_description: "Production-Grade Container Scheduling and Management"
+    description: |-
+      Kubernetes, also known as K8s, is an open source system for automating deployment, scaling, and management of containerized applications.
+---
+
+## How to support
+
+We're always looking out for technical and non-technical contributors to help us with project sustenance and continuity. If contributing to the open source ecosystem is on your radar, please reach out to us & we'd be glad to point you to the relevant resources.
+
+## A small brief about your project
+
+Kubernetes - Open source system for automating deployment, scaling, and management of containerized applications. Currently housed under the CNCF.
+
+## One FOSS maintainer lesson for your younger self
+
+Bias for action, always. It took me a while to recognize this, but it has always held me in good stead as a contributor and a maintainer thereafter.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+As someone who worked in a corporate setup earlier, I found it hard to understand why certain things in my tool or framework were how they were, especially since a significant portion of most applications we use depend on open source. While maintaining open source projects offers me that perspective, it is my aim to raise awareness of how this is done through the platforms/avenues I have access to so that we can collectively do it better and help build technology that's truly representative of the people it serves.
+
+## If your repo had a theme song, what would it be?
+
+While open source already has its theme song by Richard Stallman, The Free Software Song, I think Imagine by John Lennon speaks to the ethos of open source being a borderless, collaborative ecosystem.
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+It'd be a custom emoji referring to the this is fine meme by web comic artist, KC Green. Reference: <a href='https://x.com/kcgreenn/status/1613583689870446592?s=20'>https://x.com/kcgreenn/status/1613583689870446592?s=20</a>&t=YFqCjDn2I-3uLks9Ba4rew

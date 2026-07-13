@@ -1,0 +1,57 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/prasunanand/
+username: "prasunanand"
+full_name: "Prasun Anand"
+photo: "/images/prasunanand_photo.jpg"
+designation: "Building Zasper"
+created_on: "2025-06-03T15:56:10+05:30"
+socials:
+  - label: "GitHub"
+    link: "https://github.com/prasunanand"
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/prasunanand/"
+  - label: "Web"
+    link: "https://prasunanand.github.io/"
+projects:
+  - name: "Zasper"
+    project_link: "https://github.com/zasper-io/zasper"
+    website_link: "https://zasper.io/"
+    logo: "/images/prasunanand_zasper.svg"
+    short_description: "High Performance IDE for Jupyter Notebooks"
+    description: |-
+      Zasper is an open-source High Performance IDE for working with Jupyter notebooks. It’s built from scratch to be blazing fast, highly concurrent, low on resource usage, crash-resistant, even under heavy loads. It is cross-platform - fully supported on macOS & Linux with limited support on Windows — for the best experience, use via WSL
+---
+
+## How to support
+
+GitHub Sponsors @ <a href='https://github.com/sponsors/prasunanand'>https://github.com/sponsors/prasunanand</a>
+
+## A small brief about your project
+
+Zasper is a High Performance IDE for Jupyter Notebooks. It provides a minimal memory footprint, exceptional speed, and the ability to handle numerous concurrent connections. Its architecture thrives under load, delivering better throughput and stability at scale.
+
+## One FOSS maintainer lesson for your younger self
+
+Do not get distracted by the bigger picture. Be opinionated. Be focused on small things. Welcome feedback but protect your project's vision.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+I like building things that last and make someone’s day 10x smoother. It’s art, it’s engineering, and it’s legacy — all tangled together. <br><br> Open source lets me:<br>* Share my work without a gatekeeper, It helps me punch above my weight. <br>* Learn from real-world feedback. <br>* Build in public, with strangers who become friends<br>* See code I wrote powering tools across the world<br><br>What makes me keep going ?<br><br>* Github stars<br>* Pride in the work<br>* Curiosity to keep leveling up<br>* Gratitude when someone contributes back<br>* Stubbornness to not let the thing rot
+
+## If your repo had a theme song, what would it be?
+
+Tokyo Drift (Fast & Furious)
+
+## Which file in your project would you most like to set on fire?
+
+The release file. Something always breaks - <a href='https://github.com/zasper-io/zasper/blob/main/.github/workflows/release.yml'>https://github.com/zasper-io/zasper/blob/main/.github/workflows/release.yml</a>
+
+## What's your open-source villain origin story?
+
+I don't have one. My interactions with OSS community have been mostly nice. Someone becomes a villain when they don't acknowledge the efforts of others which inspired their current craft.
+
+## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
+
+🤹🏼

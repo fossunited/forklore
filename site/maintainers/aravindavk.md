@@ -22,46 +22,48 @@ projects:
     website_link: "https://github.com/aravindavk/chitra-d"
     logo: "/images/aravindavk_chitra.png"
     short_description: "2D graphics library"
-    description: "Chitra (Chitra means Drawing in Kannada language) is a 2D graphics library that lets you write simple https://dlang.org/[D] code to generate 2D graphics. WIP Lua bindings helps to integrate Chitra with other programming languages very easily. This is based on Cairo graphics and Pango libraries. The syntax is inspired by Drawbot (https://www.drawbot.com) and Processing (https://processing.org). The library is not only limited to D language apps, but it can be used with other programming languages or CLI using the Lua bindings. Lua bindings, curve support, and many other feature development work is in progress."
+    description: |-
+      Chitra (Chitra means Drawing in Kannada language) is a 2D graphics library that lets you write simple https://dlang.org/[D] code to generate 2D graphics. WIP Lua bindings helps to integrate Chitra with other programming languages very easily. This is based on Cairo graphics and Pango libraries. The syntax is inspired by Drawbot (https://www.drawbot.com) and Processing (https://processing.org). The library is not only limited to D language apps, but it can be used with other programming languages or CLI using the Lua bindings. Lua bindings, curve support, and many other feature development work is in progress.
   - name: "Sanka"
     project_link: "https://github.com/aravindavk/kannada"
     website_link: "https://aravindavk.in/sanka"
     logo: "/images/aravindavk_sanka.png"
     short_description: "Kannada language tools and encoding converter."
-    description: "Collection of tools to analyze the Kannada language text and encoding conversions. ASCII to Unicode Conversion tool is used by many organizations, and government offices and it is also used in the Alar dictionary from Zerodha (ASCII to Unicode project link mentioned in https://zerodha.tech/blog/alar-the-making-of-an-open-source-dictionary). This project also focuses on developing/maintaining fonts for the Kannada language."
+    description: |-
+      Collection of tools to analyze the Kannada language text and encoding conversions. ASCII to Unicode Conversion tool is used by many organizations, and government offices and it is also used in the Alar dictionary from Zerodha (ASCII to Unicode project link mentioned in https://zerodha.tech/blog/alar-the-making-of-an-open-source-dictionary). This project also focuses on developing/maintaining fonts for the Kannada language.
   - name: "Dataframes (D)"
     project_link: "https://github.com/aravindavk/dataframes-d"
     website_link: "https://github.com/aravindavk/dataframes-d"
     logo: "/images/aravindavk_dataframes_(d).png"
     short_description: "DataFrame for D programming language"
-    description: "This project aims to provide DataFrame to D programming similar to Python Pandas. DataFrame library helps organizations to use D programming language for analysing financial market data or other data sources."
+    description: |-
+      This project aims to provide DataFrame to D programming similar to Python Pandas. DataFrame library helps organizations to use D programming language for analysing financial market data or other data sources.
   - name: "Binnacle"
     project_link: "https://github.com/aravindavk/binnacle-python"
     website_link: "https://github.com/aravindavk/binnacle-python"
     logo: "/images/aravindavk_binnacle.png"
     short_description: "A simple imperative tool for Tests and Infra automation."
-    description: "Binnacle is a simple imperative tool for infrastructure and test automation. Its modern, intuitive syntax helps the admins or test case writers to get started in minutes. Use this for testing ReST APIs, command line applications or others. Binnacle also helps to write easy scripts to deploy applications or other server automation."
+    description: |-
+      Binnacle is a simple imperative tool for infrastructure and test automation. Its modern, intuitive syntax helps the admins or test case writers to get started in minutes. Use this for testing ReST APIs, command line applications or others. Binnacle also helps to write easy scripts to deploy applications or other server automation.
   - name: "Gluster Metrics Exporter"
     project_link: "https://github.com/kadalu/gluster-metrics-exporter"
     website_link: "https://github.com/kadalu/gluster-metrics-exporter"
     logo: "/images/aravindavk_gluster_metrics_exporter.png"
     short_description: "Lightweight and efficient Prometheus(and JSON) exporter for Gluster metrics."
-    description: "[GlusterFS](https://github.com/gluster/glusterfs) is a software defined distributed storage that can scale to several petabytes. Gluster Metrics exporter project exports the metrics in Prometheus and JSON format."
+    description: |-
+      [GlusterFS](https://github.com/gluster/glusterfs) is a software defined distributed storage that can scale to several petabytes. Gluster Metrics exporter project exports the metrics in Prometheus and JSON format.
   - name: "Gdash"
     project_link: "https://github.com/kadalu/gdash"
     website_link: "https://github.com/kadalu/gdash"
     logo: "/images/aravindavk_gdash.png"
     short_description: "Lightweight GlusterFS dashboard."
-    description: "Lightweight dashboard to view the status of the [GlusterFS](https://github.com/gluster/glusterfs) cluster."
+    description: |-
+      Lightweight dashboard to view the status of the [GlusterFS](https://github.com/gluster/glusterfs) cluster.
 ---
 
 ## How to support
 
-You can use the projects and share with others, report bugs or request for new features. PRs are welcome.
-
-If you use any of these projects or are interested in helping these projects, a contribution would mean A LOT to me. With your help, continuing my work can be sustainable. Thanks in advance.
-
-[Sponsor](https://github.com/sponsors/aravindavk)
+You can use the projects and share with others, report bugs or request for new features. PRs are welcome.<br><br>If you use any of these projects or are interested in helping these projects, a contribution would mean A LOT to me. With your help, continuing my work can be sustainable. Thanks in advance.<br><br>[Sponsor](https://github.com/sponsors/aravindavk)
 
 ## A small brief about your project
 

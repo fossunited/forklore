@@ -1,0 +1,55 @@
+---
+layout: maintainer.njk
+tags: maintainer
+permalink: /maintainers/ayushmaanBora/
+username: "ayushmaanBora"
+full_name: "Ayushmaan Bora"
+photo: "/images/ayushmaanBora_photo.jpg"
+designation: "CEO & Co Founder"
+created_on: "2025-11-17T12:57:55+05:30"
+socials:
+  - label: "LinkedIn"
+    link: "https://www.linkedin.com/in/ayushmaan-bora-4b2806278/"
+  - label: "GitHub"
+    link: "https://github.com/ayushmaanBora"
+projects:
+  - name: "XenevaOS"
+    project_link: "https://github.com/manaskamal/XenevaOS"
+    website_link: "https://getxeneva.com/"
+    logo: "/images/ayushmaanBora_xenevaos.png"
+    short_description: "An Open Source Operating System written with a Custom kernel from Scratch."
+    description: |-
+      XenevaOS is an XR Native Open Source Operating System built on top of a custom kernel written from scratch. The kernel architecture has been designed with modern applications in mind such as XR(AR/VR), Robotics etc. The kernel currently has support for both x86_64 and ARM architecture and we have future plans for RISC-V implementation as well. The main motive of our custom kernel is to derive most optimal performance from minimal hardware resources thus laying an emphasis on efficiency.
+---
+
+## How to support
+
+For direct financial donations, our Paypal account is linked in the Readme.md file. If you'd like to support us in other ways, please get in contact with us through our mail - hi@getxeneva.com
+
+## A small brief about your project
+
+An XR(AR/VR) native Operating System built with a custom kernel that focuses on efficiency and optimization for XR devices.
+
+## One FOSS maintainer lesson for your younger self
+
+Good Code Practice ! To always keep the code clean, readable and functional by being straight to the point.
+
+## Why do you do it? Why do you bother maintaining a FOSS project?
+
+We started out of hobby and passion. Then we found real world problems which our project could be a solution of.
+
+## If your repo had a theme song, what would it be?
+
+Stairway to Heaven by Led Zepplin.
+
+## Which file in your project would you most like to set on fire?
+
+Every file is precious ❤️
+
+## What's your open-source villain origin story?
+
+Perhaps the negative comments saying our project is impractical.
+
+## If you had to use one emoji to convey what it's like to be a FOSS maintainer, what would it be?
+
+🥹

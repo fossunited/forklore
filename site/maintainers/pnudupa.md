@@ -22,7 +22,8 @@ projects:
     website_link: "https://www.scrite.io/"
     logo: "/images/pnudupa_scrite.png"
     short_description: "Multilingual Screenwriting App for Mac and PC"
-    description: "Scrite is open-source multi-lingual screenwriting app, that lets you write your films better. With support for industry standard formatting, visual mapping of screenplay structures, elaborate research & note-taking features and a comprehensive set of pre-production reports, Scrite is a great place to start writing your next screenplay, or even import & continue working on your existing ones."
+    description: |-
+      Scrite is open-source multi-lingual screenwriting app, that lets you write your films better. With support for industry standard formatting, visual mapping of screenplay structures, elaborate research & note-taking features and a comprehensive set of pre-production reports, Scrite is a great place to start writing your next screenplay, or even import & continue working on your existing ones.
 ---
 
 ## How to support

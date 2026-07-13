@@ -20,25 +20,27 @@ projects:
     website_link: "https://safedep.io"
     logo: "/images/abhisek_vet.svg"
     short_description: "Protect against malicious open source packages"
-    description: "vet is an open source software supply chain security tool built for developers and security engineers for enforcing policy driven guardrails against risky open source packages. vet has a built-in code analysis engine to identify risky open source packages that actually impacts an application. vet leverage SafeDep's malicious package scanning infrastructure to provide near real-time protection against malicious open source packages."
+    description: |-
+      vet is an open source software supply chain security tool built for developers and security engineers for enforcing policy driven guardrails against risky open source packages. vet has a built-in code analysis engine to identify risky open source packages that actually impacts an application. vet leverage SafeDep's malicious package scanning infrastructure to provide near real-time protection against malicious open source packages.
   - name: "pmg"
     project_link: "https://github.com/safedep/pmg"
     website_link: "https://safedep.io"
     logo: "/images/abhisek_pmg.svg"
     short_description: "PMG protects developers from getting hacked due to malicious open source packages."
-    description: "Package Manager Guard (PMG) wraps popular package managers such as npm, pnpm, yarn, pip and more to proactively detect and prevent installation of malicious open source packages in developer machines."
+    description: |-
+      Package Manager Guard (PMG) wraps popular package managers such as npm, pnpm, yarn, pip and more to proactively detect and prevent installation of malicious open source packages in developer machines.
   - name: "xbom"
     project_link: "https://github.com/safedep/xbom"
     website_link: "https://safedep.io"
     logo: "/images/abhisek_xbom.svg"
     short_description: "xBOM builds AI, Crypto and more usage inventory (bill of materials) for a code repository through static code analysis."
-    description: "xBOM is designed to build contextual bill of materials for a given software through static code analysis. While software composition analysis (SCA) tools build SBOM for 3rd party OSS usage in an application, xBOM augments them with information about AI / Crypto / SaaS BOM."
+    description: |-
+      xBOM is designed to build contextual bill of materials for a given software through static code analysis. While software composition analysis (SCA) tools build SBOM for 3rd party OSS usage in an application, xBOM augments them with information about AI / Crypto / SaaS BOM.
 ---
 
 ## How to support
 
-Advocate the need for safeguarding the open source software supply chain.
-Driving adoption among OSS maintainers, contributing code, documentation and roadmap.
+Advocate the need for safeguarding the open source software supply chain.<br>Driving adoption among OSS maintainers, contributing code, documentation and roadmap.
 
 ## A small brief about your project
 
