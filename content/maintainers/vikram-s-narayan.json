@@ -1,0 +1,61 @@
+{
+  "username": "vikram-s-narayan",
+  "full_name": "Vikramaditya Narayan",
+  "photo": "/images/vikram-s-narayan_photo.jpg",
+  "designation": "Creator, OWASP Precogly",
+  "socials": [
+    {
+      "label": "GitHub",
+      "link": "https://github.com/vikram-s-narayan"
+    },
+    {
+      "label": "LinkedIn",
+      "link": "https://www.linkedin.com/in/vikramadityanarayan/"
+    }
+  ],
+  "projects": [
+    {
+      "name": "OWASP Precogly",
+      "project_link": "https://github.com/precogly/precogly",
+      "website_link": "https://precogly.org",
+      "logo": "/images/vikram-s-narayan_precogly-logo.jpeg",
+      "short_description": "OWASP Precogly is a threat modeling tool for AI (and Humans)",
+      "description": "Threat modeling is a critical activity in industries like banking, healthcare and OT/ICS. Doing it right creates a safer, more resilient world. Precogly lowers the barrier to entry with an open-source alternative to commercial threat modeling tools. In addition, Precogly is strongly opinionated when it comes to AI. It emphasizes human collaboration and the journey of understanding so that risks can be properly evaluated and mitigated."
+    }
+  ],
+  "form": [
+    {
+      "question": "How to support",
+      "response": "1. Share Precogly with your security team. They'll appreciate having a free, open source threat modeling platform 🙂.\n2. Raise an issue\n3. Make a PR (we have lots of newbie friendly issues!)"
+    },
+    {
+      "question": "A small brief about your project",
+      "response": "OWASP Precogly is an open-source threat modeling platform that helps security teams collaboratively create, analyze, and maintain threat models. It combines reusable threat libraries, risk analysis, and AI assistance to make threat modeling faster, more consistent, and accessible to developers and security engineers alike.\n\nhttps://www.youtube.com/watch?v=5sSuZOAtyn4"
+    },
+    {
+      "question": "One FOSS maintainer lesson for your younger self",
+      "response": "Documentation is a feature. Your future self will thank you."
+    },
+    {
+      "question": "Why do you do it? Why do you bother maintaining a FOSS project?",
+      "response": "I want threat modeling to become a routine engineering practice rather than an expert-only activity. Open source lets the community shape that future together."
+    },
+    {
+      "question": "If your repo had a theme song, what would it be?",
+      "response": "https://www.youtube.com/watch?v=AVN7SJkNOR0"
+    },
+    {
+      "question": "Which file in your project would you most like to set on fire?",
+      "response": "[README.md](https://github.com/precogly/precogly/blob/main/README.md). It has a habit of becoming outdated the moment I finish editing it."
+    },
+    {
+      "question": "What's your open-source villain origin story?",
+      "response": "I like to think of this as a superhero story 🙂. I wanted to build something that genuinely makes the world a little safer. Precogly is my attempt."
+    },
+    {
+      "question": "If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?",
+      "response": "🦉"
+    }
+  ],
+  "created_on": "2026-07-13T11:05:28.107975+05:30"
+}
