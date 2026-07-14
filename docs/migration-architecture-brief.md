@@ -1,8 +1,8 @@
-# Forklore Migration Architecture Brief
+# Forklore Architecture Brief
 
 ## Premise
 
-Forklore is not just a directory. It is a browsable archive of maintainer stories, projects, posts, and small pieces of personality. The migration should reduce dependency churn without flattening the experience into static HTML-only pages.
+Forklore is not just a directory. It is a browsable archive of maintainer stories, projects, posts, and small pieces of personality. The migration from Nuxt to Eleventy reduces dependency churn without flattening the experience into static HTML-only pages.
 
 ## Goals
 
@@ -12,11 +12,9 @@ Forklore is not just a directory. It is a browsable archive of maintainer storie
 - Keep generated routes static and GitHub Pages friendly.
 - Reduce recurring maintenance from framework upgrades, generated feed commits, and schema drift.
 
-## Recommended Direction
+## Architecture
 
-Use a dead-simple static site generator for the public site, with Markdown/frontmatter as the maintainer authoring format.
-
-Current spike candidate: Eleventy.
+The public site is a static Eleventy build with Markdown/frontmatter as the maintainer authoring format.
 
 Rationale:
 
@@ -27,11 +25,11 @@ Rationale:
 - The landing page can still be interactive through small progressive-enhancement scripts.
 - The dependency surface is much smaller than Nuxt plus Nuxt Content plus Nitro.
 
-Eleventy is preferred for the spike because Forklore does not need an application framework to ship the baseline experience. Astro is strong when a site benefits from component islands, framework-specific components, or mixed rendering strategies, but those strengths also keep the project closer to the frontend-framework upgrade cycle this migration is trying to reduce. Forklore's baseline requirement is data-in, static-pages-out, with a small amount of plain JavaScript for search, filters, theme switching, and exploratory UI. Eleventy fits that shape with fewer moving pieces: no Vite app layer, no client framework, no hydration model, and a build pipeline that is easy to debug or replace.
+Forklore does not need an application framework to ship the baseline experience. Astro is strong when a site benefits from component islands, framework-specific components, or mixed rendering strategies, but those strengths also keep the project closer to the frontend-framework upgrade cycle this migration removes. Forklore's requirement is data-in, static-pages-out, with a small amount of plain JavaScript for search, filters, theme switching, and exploratory UI. Eleventy fits that shape with fewer moving pieces: no Vite app layer, no client framework, no hydration model, and a build pipeline that is easy to debug or replace.
 
-Hugo is attractive for raw speed and a single-binary distribution story, but it would move the team into Go template conventions and make the current JavaScript normalization path less direct. That tradeoff can be worth it for a mostly prose site, but Forklore still needs custom transforms for maintainers, projects, feeds, search records, and generated profile pages. Eleventy keeps those transforms in ordinary JavaScript while staying far lighter than the current Nuxt stack. Zola has a similar single-binary advantage, but per-maintainer pages from structured content would still need extra generation or content-shaping work, which becomes another maintenance surface.
+Hugo is attractive for raw speed and a single-binary distribution story, but it would move the team into Go template conventions and make the current JavaScript normalization path less direct. Eleventy keeps those transforms in ordinary JavaScript while staying far lighter than the previous Nuxt stack. Zola has a similar single-binary advantage, but per-maintainer pages from structured content would still need extra generation or content-shaping work, which becomes another maintenance surface.
 
-The decision is not that Eleventy is universally better than Astro, Hugo, or Zola. It is the smallest practical step for this repo: enough templating and data-pipeline flexibility to model Forklore correctly, without keeping a full application framework for a site that should be static by default.
+Eleventy is the smallest practical step for this repo: enough templating and data-pipeline flexibility to model Forklore correctly, without keeping a full application framework for a site that should be static by default.
 
 ## Content Model
 
@@ -53,22 +51,14 @@ Frontmatter owns structured fields:
 
 Markdown body owns long-form answers and story content.
 
-GitHub issue automation can still generate or update these files later. The important shift is that humans reviewing a PR can read and edit the file without fighting JSON escaping.
+GitHub issue automation can generate or update these files. The important shift is that humans reviewing a PR can read and edit the file without fighting JSON escaping.
 
 ## Maintainer Addition Automation
 
 The target workflow should be hands-off after the initial migration without making the source format hostile to humans.
 
-Short term:
-
-- Keep the existing JSON content as the source while the spike proves rendering parity.
-- Generate Markdown/frontmatter into the static site from the current JSON records.
-- Validate that generated maintainer pages and project lists match the current Nuxt output.
-
-Migration target:
-
 - Store maintainers as Markdown/frontmatter in `content/maintainers/<username>.md`.
-- Keep a schema validator for required fields, social links, project links, image paths, and RSS URLs.
+- Keep a framework-independent validator for required fields, social links, project links, image paths, and RSS URLs.
 - Use GitHub issue forms or a small contribution template to collect submissions.
 - Let a GitHub Action convert approved issue/PR input into a maintainer Markdown file.
 - Open or update a PR with the generated file, image checks, and validation results.
@@ -91,34 +81,34 @@ All prototype branches should consume the same generated data artifacts:
 - Preserve public routes for the maintainer site:
   - `/`
   - `/maintainers/:username`
-- Defer Planet routes until after the stack migration and redesign:
+- Preserve Planet routes in Eleventy:
   - `/planet`
   - `/planet/:username`
   - `/planet/:username/:slug`
   - `/planet/rss.xml`
-- Do not commit recurring Planet refresh output unless explicitly curated.
+- Keep the existing weekly Planet refresh model because this feature was already operating as recurring content.
 - Keep images local, but add size validation and optimization checks.
 - Treat the maintainer schema as a single source of truth and validate Markdown frontmatter against it.
 
 ## Planet Strategy
 
-Planet remains part of the architecture, but it should not block the maintainer-page migration.
+Planet remains part of the architecture and is rendered by Eleventy from committed feed snapshots.
 
 - Maintainer RSS URLs live in maintainer frontmatter.
 - Planet posts are machine-fetched content, not human-authored content.
-- A later phase should fetch feeds during deploy or through a scheduled action.
-- Generated Planet cache should either be deploy-only or committed through explicit review PRs, not recurring unreviewed churn.
-- Existing Planet routes should be preserved when the Planet phase starts.
+- `.github/workflows/refresh-planet.yml` runs weekly and on demand.
+- `yarn planet:refresh` updates `content/planet/*.json`.
+- Eleventy renders `/planet`, author pages, post pages, and `/planet/rss.xml` from those snapshots.
 
-Going forward, Planet should use the same data-pipeline principle as maintainers: stable authored metadata, generated volatile content. Maintainers should own their RSS/feed URL in frontmatter. The build or a scheduled GitHub Action can fetch those feeds, normalize post metadata, and produce a temporary cache for pages such as `/planet`, `/planet/:username`, and `/planet/:username/:slug`. If the team wants feed snapshots committed for reliability, the action should open a grouped review PR instead of pushing frequent noisy commits directly to the main branch.
+Planet uses the same data-pipeline principle as maintainers: stable authored metadata, generated volatile content. Maintainers own their RSS/feed URL in frontmatter. The scheduled GitHub Action fetches those feeds, normalizes post metadata, and commits grouped updates to `content/planet` only when there are actual content changes. The `lastFetched` timestamp in each feed file is only updated when new or updated posts are found, which avoids noisy weekly bot commits when feeds have not changed.
 
-The Planet phase should avoid pulling the site back toward an app framework. Feed fetching, RSS generation, tag indexes, pagination, and search records can all be generated ahead of time. The runtime page can remain static HTML with light client-side filtering where needed. That keeps Planet functional without reintroducing the dependency and deployment complexity this migration removes.
+Feed fetching, RSS generation, tag indexes, and search records are all generated ahead of time. The runtime page is static HTML with light client-side filtering. That keeps Planet functional without reintroducing the dependency and deployment complexity the migration removed.
 
 ## Dependency Burden Reduction
 
-The current maintenance pressure is mostly structural, not caused by individual packages. A framework app brings a larger graph: Nuxt, Vue, Nitro, Nuxt Content, Vite-related packages, rendering adapters, and transitive dependencies that need routine patching even when the product surface does not change.
+The previous maintenance pressure was mostly structural, not caused by individual packages. The Nuxt app brought a larger graph: Nuxt, Vue, Nitro, Nuxt Content, Vite-related packages, rendering adapters, and ~487 transitive packages that needed routine patching even when the product surface did not change.
 
-The static migration reduces that burden by:
+The static architecture reduces that burden by:
 
 - Moving the public site to pre-rendered HTML, CSS, and small plain JavaScript files.
 - Removing the need for a runtime application framework for the baseline site.
@@ -130,113 +120,74 @@ The goal is not zero dependencies. The goal is a dependency graph proportionate 
 
 ## Considerations
 
-### Generated Maintainer Files
-
-The spike currently generates Eleventy maintainer pages from the existing JSON records. That is useful for proving parity, but generated Markdown should not become the long-term source of truth if it duplicates the same content elsewhere.
-
-Spike choice:
-
-- Commit the generated `site/maintainers/*.md` files for the migration spike.
-- Keep existing `content/maintainers/*.json` as the canonical source during the spike.
-- Keep the generator script in the Eleventy build so committed Markdown remains reproducible from the current source data.
-- Treat `site/maintainers/*.md` as transition artifacts, not the final authoring location.
-
-Final state:
+### Maintainer Files
 
 - `content/maintainers/*.md` becomes the canonical authored source.
 - Eleventy reads those files directly.
 - Build output remains generated and uncommitted.
-- The JSON-to-`site/maintainers` generator is removed once the content move is complete.
+- The JSON-to-Markdown transition generator has been removed.
+- `parse-maintainer.py` writes Markdown/frontmatter from saved issue forms.
+- `.github/workflows/maintainer-from-issue.yml` can create a PR from an approved issue.
 
-This lets the current PR show the full generated Eleventy content in review without forcing the source-of-truth migration into the same step. Later, the source move can be a simple, deliberate commit: move generated Markdown into `content/maintainers`, update Eleventy input paths, remove duplicated JSON, and delete the transition generator.
+This avoids a duplicated source of truth while keeping maintainer submissions reviewable as one readable file per maintainer.
 
-### Planet Port
+### Planet
 
-The current root site refreshes Planet through `.github/workflows/refresh-planet.yml`, runs `yarn planet:refresh`, and commits updated `content/planet/` JSON back to the repository. That works, but it creates recurring bot churn for data that is inherently generated.
+`.github/workflows/refresh-planet.yml` runs weekly and on demand. It runs `yarn planet:refresh`, which fetches RSS feeds from maintainer frontmatter, and commits updated `content/planet/*.json` snapshots only when feed content has changed. The `lastFetched` field in each file is only updated when new or updated posts are found.
 
-Best migration choice:
-
-- Do not block the stack replacement on Planet parity.
-- Remove Planet buttons and links from the temporary main website.
-- Preserve the route and data model plan now.
-- Port Planet in a second phase using generated static pages.
-- Prefer deploy-time or scheduled cache generation over direct weekly commits.
-- If committed snapshots are required, use grouped review PRs instead of direct bot pushes.
+Eleventy renders `/planet/`, `/planet/:username/`, `/planet/:username/:slug/`, and `/planet/rss.xml` from those snapshots. Feed fetching is outside the Eleventy render path so normal builds remain deterministic.
 
 ### Validation
 
-The root site currently validates maintainer JSON through `maintainer.schema.json`, pre-commit, and Nuxt Content's zod schema in `content.config.ts`.
+Validation is independent of the rendering framework. `scripts/validate-maintainers.mjs` checks required fields, duplicate usernames, route safety, image/logo paths, social links, project links, and RSS URLs. The build runs validation before Eleventy render.
 
-Best migration choice:
-
-- Keep validation independent of the rendering framework.
-- Validate Markdown frontmatter with a small script in CI.
-- Check required fields, duplicate usernames, route safety, image/logo paths, social links, project links, and RSS URLs.
-- Keep validation close to the content model so future SSG changes do not require rewriting the rules.
-
-This keeps the safety of the current schema flow without tying validation to Nuxt.
+This replaces the previous approach of `maintainer.schema.json`, pre-commit JSON schema checks, and Nuxt Content's zod schema in `content.config.ts`. Keeping validation close to the content model means future SSG changes do not require rewriting the rules.
 
 ### OG Image Preview
 
-The root Nuxt site currently uses `nuxt-og-image` with a Takumi renderer for dynamic maintainer social preview images. The global fallback image is `public/og_image_main.png`, while maintainer previews use `components/OgImage/Maintainer.takumi.vue` and `public/og_maintainer_bg.png`.
+OpenGraph and Twitter meta tags are set in the Eleventy base layout. `scripts/generate-og-images.mjs` creates static SVG OG images during build. The fallback image is `/og/index.svg`; maintainer pages use `/og/maintainers/<username>.svg` with page-specific titles and descriptions.
 
-Migration status:
+This replaces the previous `nuxt-og-image` + Takumi renderer approach. If PNG previews become necessary for platform compatibility, add a build-time SVG-to-PNG renderer rather than a runtime framework dependency.
 
-- Basic OpenGraph and Twitter meta tags are restored in the Eleventy base layout.
-- `https://forklore.in/og_image_main.png` is used as the fallback image for all Eleventy pages.
-- Maintainer pages use page-specific titles and descriptions.
-- Defer dynamic per-maintainer OG image generation until after the static migration is stable.
-- If dynamic images are still required, generate them at build time rather than adding a runtime framework dependency.
+### Deployment
 
-This restores social sharing previews without immediately reintroducing the Nuxt/Takumi OG-image dependency surface.
+`.github/workflows/pages.yml` builds the Eleventy site on push to `develop` and publishes `_site` to GitHub Pages.
 
-### Deployment Cutover
+- Root `package.json` scripts (`build`, `dev`, `generate`) are thin wrappers around `yarn --cwd site` for developer ergonomics.
+- Dependencies live exclusively in `site/package.json` and `site/yarn.lock`. The root has no `node_modules` or lockfile.
+- Dependabot tracks `site/` only.
+- The old Nuxt source exists only in git history for reference.
 
-The root deployment previously ran `yarn generate` and published Nuxt's `dist` directory through GitHub Pages.
+## Current Stack
 
-Current migration choice:
+The production path:
 
-- Switch the Pages workflow to build the Eleventy site.
-- Publish `site/_site` instead of `dist`.
-- Keep root package scripts as wrappers around `site` commands for developer ergonomics.
-- Move Dependabot tracking from `/` to `/site`.
-- Remove root Nuxt dependencies from the active root package and lockfile.
-- Keep old Nuxt source files temporarily only as reference until the replacement has settled.
-
-This makes Eleventy the temporary production path while keeping the old Nuxt implementation available for quick visual reference during review.
-
-## Spike Scope
-
-The first implementation should prove:
-
-- Markdown/frontmatter can represent current maintainer data.
-- A landing page can list maintainers and projects.
-- A detail page can render profile, image, socials, project buttons, and long-form body content.
-- The GitHub Pages workflow can publish the Eleventy output directly.
-- The active dependency surface is reduced to the Eleventy package under `site/`.
-
-The temporary production path is:
-
-- `yarn generate` delegates to `yarn --cwd site build`.
+- `yarn build` (or `yarn generate`) delegates to `yarn --cwd site build`.
+- Build runs maintainer validation, generates OG SVG images, then runs Eleventy.
+- Eleventy reads maintainer Markdown directly from `content/maintainers` and planet snapshots from `content/planet`.
 - GitHub Pages publishes `_site`.
-- Eleventy generates maintainer markdown from the current JSON data before build.
-- `_site/` remains ignored locally and is only used as the deployment artifact.
+- `_site/` is gitignored and only used as the deployment artifact.
+- Fonts (Geist Mono, Inter) are self-hosted as woff2 files under `site/assets/fonts/`.
+- Social link icons use inline SVG (Tabler Icons) via the `social-icon.njk` include.
+- A custom 404 page is generated at `_site/404.html` for GitHub Pages.
 
-## Visual Parity Requirement
+The active dependency surface is three packages under `site/`: `@11ty/eleventy`, `js-yaml`, `rss-parser`.
 
-The migration baseline should look like the current Nuxt site before design exploration starts.
+## Visual Parity
 
-The Eleventy spike should preserve:
+The current site preserves the previous Nuxt site's look:
 
-- Dark default palette.
-- Centered `max-w-screen-md` style shell.
-- Two-pixel dashed borders and dividers.
-- Current header links.
-- Current home intro copy, with Planet CTA removed for now.
-- Maintainer cards with profile header and project sections.
-- Maintainer detail pages with project column and maintainer/story column.
+- Dark default palette with light mode toggle.
+- Centered `max-width: 768px` shell with dashed 2px borders.
+- Same header links (Get Featured, FOSS United Grants, Discussion Forum).
+- Planet CTA in the homepage intro section, not the header.
+- Maintainer cards with profile header and project grid.
+- Maintainer detail pages with project column and story column.
+- Search with keyboard shortcut, sort controls, Surprise Me and Commit to Emoji buttons.
+- Scroll-to-top button.
+- Social link icons matching the old Tabler Icon set.
 
-Intentional redesign work belongs on later `design/*` branches, not the migration branch.
+Intentional redesign work belongs on `design/*` branches.
 
 ## Prototype Branches
 
