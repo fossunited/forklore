@@ -9,10 +9,12 @@ body:
 
         1. Save this issue as `username.md`
         2. Clone the repo or download `parse-maintainer.py`
-        3. Run: `python parse_maintainer.py username.md > <username>.json`
-        4. Open a PR adding the JSON to `/content/maintainers/<username>.json`
+        3. Run: `python3 parse-maintainer.py username.md`
+        4. Run: `yarn validate:maintainers`
+        5. Open a PR adding the Markdown and downloaded images
 
-        Use your GitHub username as the filename for uniqueness.
+        The parser writes `/content/maintainers/<username>.md` and syncs remote images into `/public/images`.
+        Maintainers can also submit the issue normally; repo maintainers can add the `maintainer-approved` label to generate a PR automatically.
 
   - type: checkboxes
     id: opt_ins
@@ -20,7 +22,7 @@ body:
       label: Opt-ins
       options:
         - label: Add me to the maintainer community mailing group
-        - label: I have an RSS feed and want to join [Planet Forklore](https://forklore.in/planet)
+        - label: I have an RSS feed and want to join Planet Forklore
 
   - type: markdown
     attributes:

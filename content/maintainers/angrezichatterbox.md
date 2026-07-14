@@ -1,8 +1,8 @@
 ---
 layout: maintainer.njk
 tags: maintainer
-permalink: /maintainers/@angrezichatterbox/
-username: "@angrezichatterbox"
+permalink: /maintainers/angrezichatterbox/
+username: "angrezichatterbox"
 full_name: "Gautham Mohanraj"
 photo: "/images/angrezichatterbox_photo.jpg"
 designation: "Mentor [@amfoss](https://github.com/amfoss)"

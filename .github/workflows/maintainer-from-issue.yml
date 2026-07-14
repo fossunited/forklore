@@ -1,0 +1,74 @@
+name: Maintainer from issue
+
+on:
+  issues:
+    types: [labeled]
+  workflow_dispatch:
+    inputs:
+      issue_number:
+        description: GitHub issue number to convert
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  issues: read
+  pull-requests: write
+
+jobs:
+  convert:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'maintainer-approved'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Install site dependencies
+        run: yarn --cwd site install --frozen-lockfile
+
+      - name: Install parser dependencies
+        run: python3 -m pip install requests
+
+      - name: Resolve issue number
+        id: issue
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "number=${{ inputs.issue_number }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "number=${{ github.event.issue.number }}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch issue body
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue view "${{ steps.issue.outputs.number }}" --json body --jq .body > /tmp/maintainer-issue.md
+
+      - name: Convert issue to maintainer Markdown
+        run: python3 parse-maintainer.py /tmp/maintainer-issue.md
+
+      - name: Validate and build
+        run: yarn build
+
+      - name: Create pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="maintainer/issue-${{ steps.issue.outputs.number }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add content/maintainers public/images .image-cache.json
+          git commit -m "Add maintainer from issue #${{ steps.issue.outputs.number }}"
+          git push --set-upstream origin "$branch"
+          gh pr create \
+            --title "Add maintainer from issue #${{ steps.issue.outputs.number }}" \
+            --body "Generated from #${{ steps.issue.outputs.number }} using the maintainer issue workflow." \
+            --base "${{ github.event.repository.default_branch }}" \
+            --head "$branch"
