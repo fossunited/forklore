@@ -1,0 +1,38 @@
+name: Refresh Planet
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.18.0
+          cache: yarn
+          cache-dependency-path: site/yarn.lock
+
+      - run: corepack enable
+      - run: yarn --cwd site install --frozen-lockfile
+      - run: yarn planet:refresh
+      - run: yarn build
+
+      - name: Commit Planet updates
+        run: |
+          if git diff --quiet -- content/planet; then
+            echo "No Planet updates."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/planet
+          git commit -m "Refresh Planet feeds"
+          git push

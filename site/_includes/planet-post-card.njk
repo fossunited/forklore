@@ -1,0 +1,35 @@
+<article
+  class="planet-post"
+  data-planet-post
+  data-title="{{ post.title | lower }}"
+  data-snippet="{{ post.contentSnippet | lower }}"
+  data-tags="{{ (post.tags or []) | join('|||') | lower }}"
+>
+  <div class="planet-post-title">
+    <a href="/planet/{{ post.maintainerUsername }}/{{ post.slug }}/">{{ post.title }}</a>
+  </div>
+  <div class="planet-post-body">
+    <div class="planet-post-meta">
+      <a href="/planet/{{ post.maintainerUsername }}/" class="planet-author-inline">
+        <img src="{{ post.maintainerPhoto or '/maintainer_photo_light.svg' }}" alt="" class="avatar tiny">
+        {{ post.maintainerName }}
+      </a>
+      <span>·</span>
+      <time datetime="{{ post.pubDate | dateISO }}">{{ post.pubDate | formatDate }}</time>
+    </div>
+    {% if post.tags.length %}
+      <div class="planet-tags">
+        {% for tag in post.tags | take(6) %}
+          <button type="button" data-planet-tag="{{ tag }}">{{ tag }}</button>
+        {% endfor %}
+      </div>
+    {% endif %}
+    {% if post.contentSnippet %}
+      <p>{{ post.contentSnippet | truncate(280) }}</p>
+    {% endif %}
+    <div class="button-row">
+      <a href="/planet/{{ post.maintainerUsername }}/{{ post.slug }}/" class="button subtle">Read more →</a>
+      <a href="{{ post.link }}" class="button subtle">Original ↗</a>
+    </div>
+  </div>
+</article>

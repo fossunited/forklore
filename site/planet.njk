@@ -1,0 +1,50 @@
+---
+layout: base.njk
+title: Planet Forklore
+description: Aggregated blog posts from India's open source maintainers.
+permalink: /planet/
+---
+
+<section class="planet-hero">
+  <h1>Planet Forklore</h1>
+  <p>Aggregated blog posts from India's open source maintainers.</p>
+  <div class="planet-stats">
+    <span>{{ planet.authors.length }} maintainers</span>
+    <span>·</span>
+    <span>{{ planet.totalPosts }} posts</span>
+  </div>
+  <a href="/planet/rss.xml" class="button solid">Subscribe to RSS</a>
+</section>
+
+<section class="planet-controls" aria-label="Planet filters">
+  <label class="search-box planet-search">
+    <span aria-hidden="true">⌕</span>
+    <input data-planet-search type="search" placeholder="Search posts" autocomplete="off">
+  </label>
+  <details>
+    <summary>Filter by author or tag</summary>
+    <div class="planet-filter-group">
+      <h2>By Author</h2>
+      <div class="planet-filter-list">
+        {% for author in planet.authors %}
+          <a href="/planet/{{ author.username }}/" class="button subtle">{{ author.name }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="planet-filter-group">
+      <h2>By Tag</h2>
+      <div class="planet-filter-list">
+        {% for tag in planet.tags %}
+          <button class="button subtle" type="button" data-planet-tag="{{ tag.name }}">{{ tag.name }} <span>({{ tag.count }})</span></button>
+        {% endfor %}
+      </div>
+    </div>
+  </details>
+</section>
+
+<section class="planet-posts" aria-label="Planet posts">
+  {% for post in planet.posts %}
+    {% include "planet-post-card.njk" %}
+  {% endfor %}
+  <p class="empty-state" data-planet-empty hidden>No posts found</p>
+</section>

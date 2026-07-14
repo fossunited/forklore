@@ -1,0 +1,21 @@
+---
+permalink: /planet/rss.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Planet Forklore - Aggregated Blog Posts</title>
+    <link>https://forklore.in/planet/</link>
+    <description>Aggregated blog posts from India's open source maintainers.</description>
+    {% for post in planet.posts | take(50) %}
+      <item>
+        <title>{{ post.title | xmlEscape }}</title>
+        <link>{{ post.link | xmlEscape }}</link>
+        <guid>{{ (post.guid or post.link or post.slug) | xmlEscape }}</guid>
+        <description>{{ post.contentSnippet | xmlEscape }}</description>
+        <pubDate>{{ post.pubDate | xmlEscape }}</pubDate>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>

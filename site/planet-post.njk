@@ -1,0 +1,38 @@
+---
+layout: base.njk
+pagination:
+  data: planet.posts
+  size: 1
+  alias: post
+permalink: /planet/{{ post.maintainerUsername }}/{{ post.slug }}/
+eleventyComputed:
+  title: "{{ post.title }} | Planet Forklore"
+  description: "{{ post.contentSnippet | truncate(160) }}"
+---
+
+<article class="planet-detail">
+  <header class="planet-hero">
+    <a href="/planet/{{ post.maintainerUsername }}/" class="planet-back">← {{ post.maintainerName }}'s posts</a>
+    <h1>{{ post.title }}</h1>
+    <div class="planet-post-meta">
+      <a href="/maintainers/{{ post.maintainerUsername }}/" class="planet-author-inline">
+        <img src="{{ post.maintainerPhoto or '/maintainer_photo_light.svg' }}" alt="" class="avatar tiny">
+        {{ post.maintainerName }}
+      </a>
+      <span>·</span>
+      <time datetime="{{ post.pubDate | dateISO }}">{{ post.pubDate | formatDate }}</time>
+    </div>
+    {% if post.tags.length %}
+      <div class="planet-tags">
+        {% for tag in post.tags %}
+          <a href="/planet/?tag={{ tag }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <a href="{{ post.link }}" class="button solid">View Original ↗</a>
+  </header>
+
+  <div class="planet-content">
+    {{ post.content | safe }}
+  </div>
+</article>

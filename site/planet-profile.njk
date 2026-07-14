@@ -1,0 +1,46 @@
+---
+layout: base.njk
+pagination:
+  data: planet.authors
+  size: 1
+  alias: author
+permalink: /planet/{{ author.username }}/
+eleventyComputed:
+  title: "{{ author.name }} · Planet Forklore"
+  description: "Blog posts by {{ author.name }} on Planet Forklore."
+---
+
+{% set posts = planet.posts | whereUsername(author.username) %}
+{% set tags = posts | tagsForPosts %}
+
+<section class="planet-hero">
+  <a href="/planet/" class="planet-back">← All Posts</a>
+  <div class="planet-author-heading">
+    <img src="{{ author.photo or '/maintainer_photo_light.svg' }}" alt="Photo of {{ author.name }}" class="avatar">
+    <div>
+      <h1>{{ author.name }}</h1>
+      <p>{{ posts.length }} posts on Planet Forklore</p>
+    </div>
+  </div>
+  <div class="button-row">
+    <a href="/maintainers/{{ author.username }}/" class="button subtle">View Profile →</a>
+    <a href="{{ author.feedUrl }}" class="button solid">RSS</a>
+  </div>
+</section>
+
+{% if tags.length %}
+  <section class="planet-controls" aria-label="Planet author filters">
+    <div class="planet-filter-list">
+      {% for tag in tags %}
+        <button class="button subtle" type="button" data-planet-tag="{{ tag.name }}">{{ tag.name }} <span>({{ tag.count }})</span></button>
+      {% endfor %}
+    </div>
+  </section>
+{% endif %}
+
+<section class="planet-posts" aria-label="Posts by {{ author.name }}">
+  {% for post in posts %}
+    {% include "planet-post-card.njk" %}
+  {% endfor %}
+  <p class="empty-state" data-planet-empty hidden>No posts found</p>
+</section>
