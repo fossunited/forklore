@@ -1,11 +1,9 @@
-# Nuxt dev/build outputs
+# Build outputs
 .output
 .data
-.nuxt
-.nitro
 .cache
-dist
 _site
+public/og/
 
 # Node dependencies
 node_modules

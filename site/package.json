@@ -3,11 +3,16 @@
   "type": "module",
   "scripts": {
     "clean": "cd .. && node scripts/clean-site-output.mjs",
-    "content:maintainers": "cd .. && node scripts/generate-site-maintainers.mjs",
-    "build": "yarn clean && yarn content:maintainers && cd .. && site/node_modules/.bin/eleventy",
-    "serve": "yarn clean && yarn content:maintainers && cd .. && site/node_modules/.bin/eleventy --serve"
+    "og": "cd .. && node scripts/generate-og-images.mjs",
+    "planet:refresh": "cd .. && node scripts/refresh-planet.mjs",
+    "build": "cd .. && yarn validate:maintainers && cd site && yarn clean && yarn og && cd .. && site/node_modules/.bin/eleventy",
+    "serve": "yarn clean && yarn og && cd .. && site/node_modules/.bin/eleventy --serve --port=3000"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6"
+    "@11ty/eleventy": "^3.1.6",
+    "js-yaml": "^4.3.0"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
   }
 }

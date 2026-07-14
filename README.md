@@ -2,7 +2,7 @@
     <img src=".github/github_logo.png" />
     <h1>Forklore</h1>
 
-**Website for Forklore, built on Nuxt**
+**Website for Forklore, built with Eleventy**
 
 </div>
 
@@ -12,10 +12,7 @@ Forklore is a data-driven open-source website featuring stories from maintainers
 
 ### Planet
 
-- [Planet Forklore](https://forklore.in/planet "Planet Forklore") was introduced on March 27, 2026, to aggregate all maintainers' blog posts into a [Planet](https://en.wikipedia.org/wiki/Comparison_of_feed_aggregators "Planet Feed Aggregator").
-- If you are a maintainer and would like to be part of it, then please submit the "RSS" field in the Issue template to get featured.
-
-Implementation is based on [Planet Ubuntu's Terra](https://github.com/Ubuntu-Community-Team/terra/).
+Planet Forklore is restored at `/planet/` as statically generated pages from committed feed snapshots. A weekly workflow refreshes maintainer RSS feeds and commits updated `content/planet/*.json` data when posts change.
 
 ## Social Media Campaign
 
@@ -44,6 +41,12 @@ Looking to get featured? Refer to [this document](/GET_FEATURED.md).
 To get started with local development, follow these steps:
 
 - Clone this repository
-- Open this directory in a terminal, and run `yarn install`
+- Open this directory in a terminal, and run `yarn --cwd site install`
 - Start the development server by running `yarn run dev`
 - The website should start running at `http://localhost:3000`
+
+### Maintainer Content
+
+- Validate maintainer records with `yarn validate:maintainers`
+- Convert a saved GitHub issue form with `yarn content:from-issue username.md`
+- Generate social preview images with `yarn og`

@@ -1,0 +1,90 @@
+@media (max-width: 760px) {
+  .page-shell {
+    border: 0;
+  }
+
+  .site-header,
+  .profile-layout,
+  .project-card,
+  .home-meta {
+    display: block;
+  }
+
+  .site-nav {
+    margin-top: 1rem;
+    justify-content: flex-start;
+  }
+
+  .theme-toggle {
+    margin-top: 1rem;
+  }
+
+  .directory-controls {
+    align-items: flex-start;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-right: 2rem;
+  }
+
+  .search-sort,
+  .control-actions {
+    margin-top: 0;
+  }
+
+  .search-box {
+    width: 300px;
+    max-width: 55vw;
+  }
+
+  .search-sort select {
+    width: auto;
+  }
+
+  .control-actions .button {
+    flex: 0 0 auto;
+    justify-content: center;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .profile-main {
+    border-right: 0;
+  }
+
+  .project-logo {
+    margin-bottom: 1rem;
+  }
+
+  .project-strip-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-summary,
+  .project-summary:nth-child(even),
+  .project-summary:nth-child(n + 3) {
+    border-left: 0;
+    border-top: 2px dashed var(--line);
+  }
+
+  .project-summary:first-child {
+    border-top: 0;
+  }
+
+  .project-strip-grid.project-strip-odd::after {
+    display: none;
+  }
+
+  .emoji-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .footer-inner {
+    padding-inline: 1rem;
+  }
+
+  .planet-post,
+  .planet-filter-list {
+    display: grid;
+  }
+}

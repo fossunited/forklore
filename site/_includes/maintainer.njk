@@ -27,7 +27,9 @@ layout: base.njk
       <nav class="social-list" aria-label="Social links">
         {% for social in socials %}
           <a href="{{ social.link }}" aria-label="{{ social.label | socialLabel }} (opens in new tab)">
-            {{ social.label | socialLabel }}
+            {%- set label = social.label -%}
+            {%- include "social-icon.njk" -%}
+            <span class="social-label">{{ social.label | socialLabel }}</span>
           </a>
         {% endfor %}
       </nav>

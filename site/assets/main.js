@@ -99,4 +99,80 @@
   document.querySelector("[data-scroll-top]")?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  const planetSearch = document.querySelector("[data-planet-search]");
+  const planetEmpty = document.querySelector("[data-planet-empty]");
+  const hasPlanetPosts = Boolean(document.querySelector("[data-planet-post]"));
+
+  function planetPosts() {
+    return Array.from(document.querySelectorAll("[data-planet-post]"));
+  }
+
+  function normalize(value) {
+    return String(value || "").trim().toLowerCase();
+  }
+
+  function setPlanetTag(tag) {
+    const params = new URLSearchParams(window.location.search);
+    const nextTag = normalize(tag);
+    const activeTag = normalize(params.get("tag"));
+    if (nextTag && nextTag !== activeTag) params.set("tag", tag);
+    else params.delete("tag");
+    const query = params.toString();
+    history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
+    applyPlanetState();
+  }
+
+  function syncPlanetTags(activeTag) {
+    document.querySelectorAll("[data-planet-tag]").forEach((button) => {
+      const selected = normalize(button.dataset.planetTag) === activeTag;
+      button.classList.toggle("is-active", selected);
+      button.setAttribute("aria-pressed", selected ? "true" : "false");
+    });
+  }
+
+  function applyPlanetState() {
+    const params = new URLSearchParams(window.location.search);
+    const activeTag = normalize(params.get("tag"));
+    const query = normalize(planetSearch?.value || params.get("search"));
+    let visible = 0;
+
+    planetPosts().forEach((post) => {
+      const haystack = normalize(`${post.dataset.title} ${post.dataset.snippet}`);
+      const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
+      const matchesSearch = !query || haystack.includes(query);
+      const matchesTag = !activeTag || tags.includes(activeTag);
+      const match = matchesSearch && matchesTag;
+      post.hidden = !match;
+      if (match) visible += 1;
+    });
+
+    syncPlanetTags(activeTag);
+    if (planetEmpty) planetEmpty.hidden = visible !== 0;
+  }
+
+  planetSearch?.addEventListener("input", () => {
+    const params = new URLSearchParams(window.location.search);
+    if (planetSearch.value) params.set("search", planetSearch.value);
+    else params.delete("search");
+    const query = params.toString();
+    history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
+    applyPlanetState();
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof Element)) return;
+    const tagButton = target.closest("[data-planet-tag]");
+    if (!tagButton) return;
+    event.preventDefault();
+    setPlanetTag(tagButton.dataset.planetTag);
+  });
+
+  if (hasPlanetPosts) {
+    if (planetSearch) {
+      planetSearch.value = new URLSearchParams(window.location.search).get("search") || "";
+    }
+    applyPlanetState();
+  }
 })();

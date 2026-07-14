@@ -10,19 +10,21 @@
     >
     {% set pageTitle %}{% if full_name %}{{ full_name }} | Forklore{% else %}{{ title or site.title }}{% endif %}{% endset %}
     {% set pageDescription %}{% if full_name %}Get to know {{ full_name }} and their work.{% else %}{{ description or site.description }}{% endif %}{% endset %}
+    {% set pageImage %}{% if username %}{{ site.url }}/og/maintainers/{{ username }}.svg{% else %}{{ site.url }}/og/index.svg{% endif %}{% endset %}
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Forklore">
     <meta property="og:title" content="{{ pageTitle }}">
     <meta property="og:description" content="{{ pageDescription }}">
-    <meta property="og:image" content="{{ site.url }}/og_image_main.png">
+    <meta property="og:image" content="{{ pageImage }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:type" content="image/svg+xml">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ pageTitle }}">
     <meta name="twitter:description" content="{{ pageDescription }}">
-    <meta name="twitter:image" content="{{ site.url }}/og_image_main.png">
+    <meta name="twitter:image" content="{{ pageImage }}">
     <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
     <link rel="stylesheet" href="/assets/main.css">
     <script>
       const storedTheme = localStorage.getItem("forklore-theme");

@@ -29,9 +29,20 @@ function markdownInline(value) {
 }
 
 export default function (eleventyConfig) {
+  eleventyConfig.ignores.add("README.md");
+  eleventyConfig.ignores.add("CHANGELOG.md");
+  eleventyConfig.ignores.add("GET_FEATURED.md");
+  eleventyConfig.ignores.add("docs/**");
+  eleventyConfig.ignores.add("site/assets/**");
+  eleventyConfig.ignores.add("site/_includes/**");
+  eleventyConfig.ignores.add("site/_data/**");
+  eleventyConfig.ignores.add("node_modules/**");
+  eleventyConfig.ignores.add("site/node_modules/**");
+
   eleventyConfig.addPassthroughCopy({ "public/images": "images" });
   eleventyConfig.addPassthroughCopy({ "public/logo": "logo" });
   eleventyConfig.addPassthroughCopy({ "public/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({ "public/og": "og" });
   eleventyConfig.addPassthroughCopy({ "public/og_image_main.png": "og_image_main.png" });
   eleventyConfig.addPassthroughCopy({ "public/og_maintainer_bg.png": "og_maintainer_bg.png" });
   eleventyConfig.addPassthroughCopy({
@@ -62,6 +73,49 @@ export default function (eleventyConfig) {
     return Number.isNaN(value.getTime()) ? "" : value.toISOString();
   });
 
+  eleventyConfig.addFilter("formatDate", (date) => {
+    const value = new Date(date);
+    if (Number.isNaN(value.getTime())) return "";
+    return value.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  });
+
+  eleventyConfig.addFilter("truncate", (value, length = 240) => {
+    const text = String(value || "").replace(/\s+/g, " ").trim();
+    return text.length > length ? `${text.slice(0, length - 1)}…` : text;
+  });
+
+  eleventyConfig.addFilter("take", (items, length = 10) =>
+    Array.isArray(items) ? items.slice(0, length) : [],
+  );
+
+  eleventyConfig.addFilter("whereUsername", (posts, username) =>
+    Array.isArray(posts)
+      ? posts.filter((post) => String(post.maintainerUsername).toLowerCase() === String(username).toLowerCase())
+      : [],
+  );
+
+  eleventyConfig.addFilter("tagsForPosts", (posts) => {
+    const counts = new Map();
+    for (const post of Array.isArray(posts) ? posts : []) {
+      for (const tag of post.tags || []) counts.set(tag, (counts.get(tag) || 0) + 1);
+    }
+    return [...counts.entries()]
+      .map(([name, count]) => ({ name, count }))
+      .sort((a, b) => b.count - a.count);
+  });
+
+  eleventyConfig.addFilter("xmlEscape", (value) =>
+    String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;"),
+  );
+
   eleventyConfig.addFilter("markdownInline", markdownInline);
 
   eleventyConfig.addFilter("year", (date) => {
@@ -82,11 +136,17 @@ export default function (eleventyConfig) {
     return "";
   });
 
+  eleventyConfig.addFilter("rssSocials", (socials) =>
+    Array.isArray(socials)
+      ? socials.filter((social) => String(social.label || "").trim().toLowerCase() === "rss")
+      : [],
+  );
+
   return {
     dir: {
-      input: "site",
-      includes: "_includes",
-      data: "_data",
+      input: ".",
+      includes: "site/_includes",
+      data: "site/_data",
       output: "_site",
     },
     markdownTemplateEngine: "njk",
