@@ -35,9 +35,19 @@
 
   const hamburger = document.querySelector("[data-hamburger]");
   const siteNav = document.getElementById("site-nav");
-  hamburger?.addEventListener("click", () => {
-    const open = siteNav.classList.toggle("open");
-    hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  const navOverlay = document.getElementById("nav-overlay");
+
+  function toggleNav(forceClose) {
+    const open = forceClose ? false : !siteNav.classList.contains("open");
+    siteNav.classList.toggle("open", open);
+    navOverlay?.classList.toggle("open", open);
+    hamburger?.setAttribute("aria-expanded", open ? "true" : "false");
+  }
+
+  hamburger?.addEventListener("click", () => toggleNav());
+  navOverlay?.addEventListener("click", () => toggleNav(true));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && siteNav?.classList.contains("open")) toggleNav(true);
   });
 
   const searchInput = document.querySelector("[data-search-input]");

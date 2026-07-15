@@ -13,32 +13,55 @@
     display: flex;
   }
 
+  .header-right {
+    gap: 0.5rem;
+  }
+
   .site-nav {
-    display: none;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: min(280px, 75vw);
+    height: 100vh;
     flex-direction: column;
     align-items: flex-start;
     gap: 0;
-    margin-top: 0.75rem;
-    border-top: 2px dashed var(--line);
-    padding-top: 0.75rem;
+    padding: 1.5rem;
+    background: var(--bg);
+    border-left: 2px dashed var(--line);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
+    transform: translateX(100%);
+    transition: transform 0.25s ease;
+    overflow-y: auto;
   }
 
   .site-nav.open {
     display: flex;
+    transform: translateX(0);
   }
 
   .site-nav a {
     display: block;
     width: 100%;
-    padding: 0.6rem 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 0.9rem;
   }
 
-  .header-right {
-    gap: 0.5rem;
+  .nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.4);
   }
 
-  /* ── Maintainer detail: profile first, then projects ── */
+  .nav-overlay.open {
+    display: block;
+  }
+
+  /* ── Maintainer detail: profile first, then projects, then questions ── */
   .profile-layout {
     display: flex;
     flex-direction: column-reverse;
@@ -116,6 +139,16 @@
     white-space: nowrap;
   }
 
+  /* ── Maintainer cards ── */
+  .maintainer-list {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .maintainer-card {
+    overflow: hidden;
+  }
+
   /* ── Emoji grid ── */
   .emoji-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -128,14 +161,6 @@
   }
 
   /* ── Planet ── */
-  .planet-posts {
-    grid-template-columns: 1fr;
-  }
-
-  .planet-post:nth-child(odd) {
-    border-right: 0;
-  }
-
   .planet-post,
   .planet-filter-list {
     display: grid;
@@ -153,6 +178,19 @@
   }
 
   .maintainer-list {
-    padding: 0.5rem;
+    padding: 0.75rem;
+    gap: 1rem;
+  }
+
+  .maintainer-card-header,
+  .profile-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .control-actions .button {
+    font-size: 0.75rem;
+    padding: 0.4rem;
   }
 }

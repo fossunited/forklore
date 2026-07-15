@@ -211,7 +211,6 @@
 
 .planet-posts {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
   gap: 0;
   padding: 0;
 }
@@ -221,7 +220,7 @@
 }
 
 .planet-hero {
-  border-bottom: 2px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
   background: var(--panel);
 }
 
@@ -231,7 +230,7 @@
 }
 
 .planet-controls {
-  border-bottom: 2px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
 }
 
 .planet-hero h1,
@@ -285,12 +284,9 @@
 
 .planet-post {
   display: grid;
-  border-bottom: 2px dashed var(--line);
+  border-bottom: 1px dashed var(--line);
 }
 
-.planet-post:nth-child(odd) {
-  border-right: 2px dashed var(--line);
-}
 
 .planet-post-title {
   padding: 1.5rem;
@@ -464,4 +460,24 @@
   max-width: 100%;
   height: auto;
   margin: 1rem 0;
+}
+
+.planet-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  border-top: 1px dashed var(--line);
+}
+
+.planet-page-count {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.planet-pagination [aria-disabled="true"] {
+  opacity: 0.35;
+  cursor: default;
+  pointer-events: none;
 }
