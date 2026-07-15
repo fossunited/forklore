@@ -3,52 +3,58 @@
     border: 0;
   }
 
-  .site-header,
-  .profile-layout,
-  .project-card,
-  .home-meta {
-    display: block;
+  /* ── Hamburger nav ── */
+  .site-header {
+    flex-wrap: wrap;
+    padding: 1.25rem;
+  }
+
+  .hamburger {
+    display: flex;
   }
 
   .site-nav {
-    margin-top: 1rem;
-    justify-content: flex-start;
-  }
-
-  .theme-toggle {
-    margin-top: 1rem;
-  }
-
-  .directory-controls {
+    display: none;
+    width: 100%;
+    flex-direction: column;
     align-items: flex-start;
-    gap: 0.75rem;
-    overflow-x: auto;
-    padding-right: 2rem;
+    gap: 0;
+    margin-top: 0.75rem;
+    border-top: 2px dashed var(--line);
+    padding-top: 0.75rem;
   }
 
-  .search-sort,
-  .control-actions {
-    margin-top: 0;
+  .site-nav.open {
+    display: flex;
   }
 
-  .search-box {
-    width: 300px;
-    max-width: 55vw;
+  .site-nav a {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0;
   }
 
-  .search-sort select {
-    width: auto;
+  .header-right {
+    gap: 0.5rem;
   }
 
-  .control-actions .button {
-    flex: 0 0 auto;
-    justify-content: center;
-    width: auto;
-    white-space: nowrap;
+  /* ── Maintainer detail: profile first, then projects ── */
+  .profile-layout {
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .profile-main {
     border-right: 0;
+  }
+
+  .profile-aside {
+    border-bottom: 2px dashed var(--line);
+  }
+
+  /* ── Project cards ── */
+  .project-card {
+    display: block;
   }
 
   .project-logo {
@@ -74,17 +80,79 @@
     display: none;
   }
 
+  /* ── Directory controls wrapping ── */
+  .directory-controls {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    overflow-x: visible;
+    padding-right: 0;
+  }
+
+  .search-sort {
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  .search-box {
+    width: 100%;
+    max-width: none;
+  }
+
+  .search-sort select {
+    width: auto;
+  }
+
+  .control-actions {
+    flex-wrap: wrap;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  .control-actions .button {
+    flex: 0 0 auto;
+    justify-content: center;
+    width: auto;
+    white-space: nowrap;
+  }
+
+  /* ── Emoji grid ── */
   .emoji-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.75rem;
   }
 
+  /* ── Footer ── */
   .footer-inner {
     padding-inline: 1rem;
+  }
+
+  /* ── Planet ── */
+  .planet-posts {
+    grid-template-columns: 1fr;
+  }
+
+  .planet-post:nth-child(odd) {
+    border-right: 0;
   }
 
   .planet-post,
   .planet-filter-list {
     display: grid;
+  }
+}
+
+/* ── Extra-small screens ── */
+@media (max-width: 380px) {
+  .site-header {
+    padding: 1rem;
+  }
+
+  .brand-mark {
+    width: 6rem;
+  }
+
+  .maintainer-list {
+    padding: 0.5rem;
   }
 }

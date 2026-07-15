@@ -211,8 +211,13 @@
 
 .planet-posts {
   display: grid;
-  gap: 1.5rem;
-  padding-block: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  padding: 0;
+}
+
+.planet-posts .empty-state {
+  grid-column: 1 / -1;
 }
 
 .planet-hero {
@@ -280,12 +285,16 @@
 
 .planet-post {
   display: grid;
+  border-bottom: 2px dashed var(--line);
+}
+
+.planet-post:nth-child(odd) {
+  border-right: 2px dashed var(--line);
 }
 
 .planet-post-title {
   padding: 1.5rem;
   background: var(--panel);
-  border-bottom: 2px dashed var(--line);
 }
 
 .planet-post-title a {

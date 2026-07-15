@@ -13,6 +13,7 @@
     "js-yaml": "^4.3.0"
   },
   "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "rss-parser": "^3.13.0"
   }
 }

@@ -33,6 +33,13 @@
     setTheme(root.classList.contains("light-mode") ? "dark" : "light");
   });
 
+  const hamburger = document.querySelector("[data-hamburger]");
+  const siteNav = document.getElementById("site-nav");
+  hamburger?.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("open");
+    hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
   const searchInput = document.querySelector("[data-search-input]");
   const sortSelect = document.querySelector("[data-sort-select]");
   const list = document.querySelector(".maintainer-list");
