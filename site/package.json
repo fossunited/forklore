@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.6",
-    "js-yaml": "^4.3.0"
+    "js-yaml": "^5.2.1"
   },
   "dependencies": {
     "rss-parser": "^3.13.0"
