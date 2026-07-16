@@ -26,8 +26,9 @@
     height: 100vh;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     gap: 0;
-    padding: 1.5rem;
+    padding: 2rem;
     background: var(--bg);
     border-left: 2px dashed var(--line);
     box-shadow: -4px 0 24px rgba(0, 0, 0, 0.3);
@@ -44,9 +45,9 @@
   .site-nav a {
     display: block;
     width: 100%;
-    padding: 0.75rem 0;
+    padding: 1rem 0;
     border-bottom: 1px dashed var(--line);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .nav-overlay {

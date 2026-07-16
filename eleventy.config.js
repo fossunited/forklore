@@ -25,6 +25,10 @@ function markdownInline(value) {
       /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
       '<a href="$2">$1</a>',
     )
+    .replace(
+      /(?<!="|'>)(https?:\/\/[^\s<)]+)/g,
+      '<a href="$1">$1</a>',
+    )
     .replace(/<br\s*\/?>/gi, "<br>");
 }
 
@@ -117,6 +121,10 @@ export default function (eleventyConfig) {
   );
 
   eleventyConfig.addFilter("markdownInline", markdownInline);
+
+  eleventyConfig.amendLibrary("md", (md) => {
+    md.set({ linkify: true });
+  });
 
   eleventyConfig.addFilter("year", (date) => {
     const value = new Date(date);
