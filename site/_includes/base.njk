@@ -8,7 +8,25 @@
       name="description"
       content="{% if full_name %}Get to know {{ full_name }} and their work.{% else %}{{ description or site.description }}{% endif %}"
     >
+    {% set pageTitle %}{% if full_name %}{{ full_name }} | Forklore{% else %}{{ title or site.title }}{% endif %}{% endset %}
+    {% set pageDescription %}{% if full_name %}Get to know {{ full_name }} and their work.{% else %}{{ description or site.description }}{% endif %}{% endset %}
+    {% set pageImage %}{% if username %}{{ site.url }}/og/maintainers/{{ username }}.png{% else %}{{ site.url }}/og/index.png{% endif %}{% endset %}
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Forklore">
+    <meta property="og:title" content="{{ pageTitle }}">
+    <meta property="og:description" content="{{ pageDescription }}">
+    <meta property="og:image" content="{{ pageImage }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ pageTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription }}">
+    <meta name="twitter:image" content="{{ pageImage }}">
     <link rel="icon" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" href="/rss.xml" title="Forklore RSS Feed">
+    <link rel="alternate" type="application/rss+xml" href="/planet/rss.xml" title="Planet Forklore Feed">
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
     <link rel="stylesheet" href="/assets/main.css">
     <script>
       const storedTheme = localStorage.getItem("forklore-theme");
@@ -24,16 +42,41 @@
         <a class="brand" href="/" aria-label="Forklore home">
           <img src="/logo/logo_light.svg" alt="Forklore" class="brand-mark" data-theme-logo>
         </a>
-        <nav class="site-nav" aria-label="Primary">
-          <a href="/projects/">Projects</a>
-          <a href="https://github.com/fossunited/forklore/blob/develop/GET_FEATURED.md">Get featured</a>
-          <a href="https://fossunited.org/grants">FOSS United Grants</a>
-          <a href="https://forum.fossunited.org/c/maintainers/">Discussion Forum</a>
-        </nav>
-        <button class="button solid theme-toggle" type="button" data-theme-toggle aria-label="Switch to Light Mode">
-          ☀
-        </button>
+        <div class="header-right">
+          <nav class="site-nav" aria-label="Primary" id="site-nav">
+            <a href="/projects/">Projects</a>
+            <a href="https://github.com/fossunited/forklore/blob/develop/GET_FEATURED.md">Get featured</a>
+            <a href="https://fossunited.org/grants">FOSS United Grants</a>
+            <a href="https://forum.fossunited.org/c/maintainers/">Discussion Forum</a>
+          </nav>
+          <button class="button solid theme-toggle" type="button" data-theme-toggle aria-label="Switch to Light Mode">
+            <svg data-theme-icon-light xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 19a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" />
+              <path d="M18.313 16.91l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.218 -1.567l.102 .07z" />
+              <path d="M7.007 16.993a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" />
+              <path d="M4 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" />
+              <path d="M21 11a1 1 0 0 1 .117 1.993l-.117 .007h-1a1 1 0 0 1 -.117 -1.993l.117 -.007h1z" />
+              <path d="M6.213 4.81l.094 .083l.7 .7a1 1 0 0 1 -1.32 1.497l-.094 -.083l-.7 -.7a1 1 0 0 1 1.217 -1.567l.102 .07z" />
+              <path d="M19.107 4.893a1 1 0 0 1 .083 1.32l-.083 .094l-.7 .7a1 1 0 0 1 -1.497 -1.32l.083 -.094l.7 -.7a1 1 0 0 1 1.414 0z" />
+              <path d="M12 2a1 1 0 0 1 .993 .883l.007 .117v1a1 1 0 0 1 -1.993 .117l-.007 -.117v-1a1 1 0 0 1 1 -1z" />
+              <path d="M12 7a5 5 0 1 1 -4.995 5.217l-.005 -.217l.005 -.217a5 5 0 0 1 4.995 -4.783z" />
+            </svg>
+            <svg data-theme-icon-dark hidden xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 1.992a10 10 0 1 0 9.236 13.838c.341 -.82 -.476 -1.644 -1.298 -1.31a6.5 6.5 0 0 1 -6.864 -10.787l.077 -.08c.551 -.63 .113 -1.653 -.758 -1.653h-.266l-.068 -.006l-.06 -.002z" />
+            </svg>
+          </button>
+          <button class="hamburger" type="button" data-hamburger aria-label="Toggle navigation" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"/>
+              <line x1="3" y1="12" x2="21" y2="12"/>
+              <line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+          </button>
+        </div>
       </header>
+      <div class="nav-overlay" id="nav-overlay"></div>
       <main>
         {{ content | safe }}
       </main>
@@ -46,15 +89,27 @@
             <a href="https://fossunited.org">FOSS United</a>
           </p>
           <div class="footer-links">
-            <a href="https://github.com/fossunited/forklore">Contribute</a>
-            <a href="https://forum.fossunited.org/c/maintainers/">Forum</a>
-            <a href="/rss.xml">RSS</a>
+            <a href="https://github.com/fossunited/forklore">
+              <span class="footer-icon" aria-hidden="true">GH</span>
+              Contribute
+            </a>
+            <a href="https://forum.fossunited.org/c/maintainers/">
+              <span class="footer-icon" aria-hidden="true">◎</span>
+              Forum
+            </a>
+            <a href="/rss.xml">
+              <span class="footer-icon" aria-hidden="true">RSS</span>
+              Feed
+            </a>
           </div>
-          <a href="mailto:foundation@fossunited.org">foundation@fossunited.org</a>
+          <a href="mailto:maintainers@fossunited.org">maintainers@fossunited.org</a>
         </div>
-        <img src="/logo/unitedbyfoss_dark.svg" alt="United By FOSS" class="footer-logo">
+        <img src="/logo/unitedbyfoss_dark.svg" alt="United By FOSS" class="footer-logo" data-footer-logo>
       </div>
     </footer>
+    <button class="scroll-top" type="button" data-scroll-top aria-label="Scroll to top">
+      ↑
+    </button>
     <script src="/assets/main.js"></script>
   </body>
 </html>
