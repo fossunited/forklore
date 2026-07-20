@@ -19,36 +19,10 @@ const SOCIAL_LABELS = {
   youtube: "Youtube",
 };
 
-function markdownInline(value) {
-  return String(value || "")
-    .replace(
-      /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
-      '<a href="$2">$1</a>',
-    )
-    .replace(
-      /(?<!="|'>)(https?:\/\/[^\s<)]+)/g,
-      '<a href="$1">$1</a>',
-    )
-    .replace(/<br\s*\/?>/gi, "<br>");
-}
-
 export default function (eleventyConfig) {
-  eleventyConfig.ignores.add("README.md");
-  eleventyConfig.ignores.add("CHANGELOG.md");
-  eleventyConfig.ignores.add("GET_FEATURED.md");
-  eleventyConfig.ignores.add("docs/**");
-  eleventyConfig.ignores.add("site/assets/**");
-  eleventyConfig.ignores.add("site/_includes/**");
-  eleventyConfig.ignores.add("site/_data/**");
-  eleventyConfig.ignores.add("node_modules/**");
-  eleventyConfig.ignores.add("site/node_modules/**");
-
   eleventyConfig.addPassthroughCopy({ "public/images": "images" });
   eleventyConfig.addPassthroughCopy({ "public/logo": "logo" });
   eleventyConfig.addPassthroughCopy({ "public/favicon.svg": "favicon.svg" });
-  eleventyConfig.addPassthroughCopy({ "public/og": "og" });
-  eleventyConfig.addPassthroughCopy({ "public/og_image_main.png": "og_image_main.png" });
-  eleventyConfig.addPassthroughCopy({ "public/og_maintainer_bg.png": "og_maintainer_bg.png" });
   eleventyConfig.addPassthroughCopy({
     "public/maintainer_photo_light.svg": "maintainer_photo_light.svg",
   });
@@ -67,21 +41,24 @@ export default function (eleventyConfig) {
       ),
   );
 
-  eleventyConfig.addFilter("shortLabel", (project) => {
-    if (!project) return "";
-    if (project.project_link) {
-      try {
-        const parts = new URL(project.project_link).pathname
-          .replace(/\/$/, "")
-          .split("/")
-          .filter(Boolean);
-        if (parts.length) return parts[parts.length - 1];
-      } catch {
-        // fall through to project name
-      }
-    }
-    return project.name || "";
-  });
+  eleventyConfig.addCollection("projects", (collectionApi) =>
+    collectionApi
+      .getFilteredByTag("maintainer")
+      .flatMap((maintainer) =>
+        (maintainer.data.projects || []).map((project) => ({
+          ...project,
+          maintainer: {
+            name: maintainer.data.full_name,
+            username: maintainer.data.username,
+            photo: maintainer.data.photo,
+            url: maintainer.url,
+            designation: maintainer.data.designation,
+          },
+          created_on: maintainer.data.created_on,
+        })),
+      )
+      .sort((a, b) => a.name.localeCompare(b.name)),
+  );
 
   eleventyConfig.addFilter("socialLabel", (label) => {
     if (!label) return "Web";
@@ -91,93 +68,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("dateISO", (date) => {
     const value = new Date(date);
     return Number.isNaN(value.getTime()) ? "" : value.toISOString();
-  });
-
-  eleventyConfig.addFilter("formatDate", (date) => {
-    const value = new Date(date);
-    if (Number.isNaN(value.getTime())) return "";
-    return value.toLocaleDateString("en-IN", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  });
-
-  eleventyConfig.addFilter("truncate", (value, length = 240) => {
-    const text = String(value || "").replace(/\s+/g, " ").trim();
-    return text.length > length ? `${text.slice(0, length - 1)}…` : text;
-  });
-
-  eleventyConfig.addFilter("take", (items, length = 10) =>
-    Array.isArray(items) ? items.slice(0, length) : [],
-  );
-
-  eleventyConfig.addFilter("whereUsername", (posts, username) =>
-    Array.isArray(posts)
-      ? posts.filter((post) => String(post.maintainerUsername).toLowerCase() === String(username).toLowerCase())
-      : [],
-  );
-
-  eleventyConfig.addFilter("tagsForPosts", (posts) => {
-    const counts = new Map();
-    for (const post of Array.isArray(posts) ? posts : []) {
-      for (const tag of post.tags || []) counts.set(tag, (counts.get(tag) || 0) + 1);
-    }
-    return [...counts.entries()]
-      .map(([name, count]) => ({ name, count }))
-      .sort((a, b) => b.count - a.count);
-  });
-
-  eleventyConfig.addFilter("qaList", (html) => {
-    const src = String(html || "");
-    const sections = src.split(/<h2[^>]*>/i).slice(1);
-    if (!sections.length) return src;
-    // Mirror the old Nuxt feed: question in <strong>, answer below, and a
-    // trailing <br> after each item so answer and next question keep a gap.
-    // Skip questions that have no answer.
-    const items = sections
-      .map((section) => {
-        const end = section.indexOf("</h2>");
-        const question = (end >= 0 ? section.slice(0, end) : section).trim();
-        const answer = (end >= 0 ? section.slice(end + 5) : "").trim();
-        if (!answer.replace(/<[^>]*>/g, "").trim()) return "";
-        return `<li><strong>${question}</strong><br>${answer}</li><br>`;
-      })
-      .filter(Boolean);
-    if (!items.length) return "";
-    return `<ul>${items.join("")}</ul>`;
-  });
-
-  // Remove question headings (h2) that have no answer content following them.
-  eleventyConfig.addFilter("dropEmptyQA", (html) =>
-    String(html || "").replace(
-      /<h2[^>]*>[\s\S]*?<\/h2>([\s\S]*?)(?=<h2[^>]*>|$)/gi,
-      (match, answer) =>
-        answer.replace(/<[^>]*>/g, "").trim() === "" ? "" : match,
-    ),
-  );
-
-  eleventyConfig.addFilter("cdata", (value) =>
-    `<![CDATA[${String(value || "").replace(/]]>/g, "]]]]><![CDATA[>")}]]>`,
-  );
-
-  eleventyConfig.addFilter("rfc822", (date) => {
-    const value = new Date(date);
-    return Number.isNaN(value.getTime()) ? "" : value.toUTCString();
-  });
-
-  eleventyConfig.addFilter("xmlEscape", (value) =>
-    String(value || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;"),
-  );
-
-  eleventyConfig.addFilter("markdownInline", markdownInline);
-
-  eleventyConfig.amendLibrary("md", (md) => {
-    md.set({ linkify: true });
   });
 
   eleventyConfig.addFilter("year", (date) => {
@@ -198,17 +88,11 @@ export default function (eleventyConfig) {
     return "";
   });
 
-  eleventyConfig.addFilter("rssSocials", (socials) =>
-    Array.isArray(socials)
-      ? socials.filter((social) => String(social.label || "").trim().toLowerCase() === "rss")
-      : [],
-  );
-
   return {
     dir: {
-      input: ".",
-      includes: "site/_includes",
-      data: "site/_data",
+      input: "site",
+      includes: "_includes",
+      data: "_data",
       output: "_site",
     },
     markdownTemplateEngine: "njk",
