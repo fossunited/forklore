@@ -67,6 +67,25 @@ export default function (eleventyConfig) {
       ),
   );
 
+  eleventyConfig.addCollection("projects", (collectionApi) =>
+    collectionApi
+      .getFilteredByTag("maintainer")
+      .flatMap((maintainer) =>
+        (maintainer.data.projects || []).map((project) => ({
+          ...project,
+          maintainer: {
+            name: maintainer.data.full_name,
+            username: maintainer.data.username,
+            photo: maintainer.data.photo,
+            url: maintainer.url,
+            designation: maintainer.data.designation,
+          },
+          created_on: maintainer.data.created_on,
+        })),
+      )
+      .sort((a, b) => a.name.localeCompare(b.name)),
+  );
+
   eleventyConfig.addFilter("shortLabel", (project) => {
     if (!project) return "";
     if (project.project_link) {
