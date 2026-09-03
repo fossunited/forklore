@@ -2,6 +2,8 @@
 import os
 import re
 import json
+import socket
+import ipaddress
 import hashlib
 import requests
 import argparse
@@ -50,7 +52,26 @@ def resolve_url(url):
     return url
 
 
+def is_safe_url(url):
+    """Reject non-http(s) schemes and URLs that resolve to internal/private addresses."""
+    parsed = urlparse(url)
+    if parsed.scheme not in ("http", "https") or not parsed.hostname:
+        return False
+    try:
+        addrs = socket.getaddrinfo(parsed.hostname, None)
+    except socket.gaierror:
+        return False
+    for family, _, _, _, sockaddr in addrs:
+        ip = ipaddress.ip_address(sockaddr[0])
+        if ip.is_private or ip.is_loopback or ip.is_link_local or ip.is_reserved or ip.is_multicast:
+            return False
+    return True
+
+
 def download(url):
+    if not is_safe_url(url):
+        print(f"[ERROR] {url}: blocked (unsafe scheme or internal address)")
+        return None, None
     try:
         r = requests.get(url, headers=HEADERS, timeout=15)
         r.raise_for_status()
