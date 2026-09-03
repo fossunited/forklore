@@ -47,7 +47,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "public/logo": "logo" });
   eleventyConfig.addPassthroughCopy({ "public/favicon.svg": "favicon.svg" });
   eleventyConfig.addPassthroughCopy({ "public/favicon.ico": "favicon.ico" });
-  eleventyConfig.addPassthroughCopy({ "public/favicon-32.png": "favicon-32.png" });
+  eleventyConfig.addPassthroughCopy({ "public/apple-touch-icon.png": "apple-touch-icon.png" });
   eleventyConfig.addPassthroughCopy({ "public/og": "og" });
   eleventyConfig.addPassthroughCopy({ "public/og_image_main.png": "og_image_main.png" });
   eleventyConfig.addPassthroughCopy({ "public/og_maintainer_bg.png": "og_maintainer_bg.png" });
