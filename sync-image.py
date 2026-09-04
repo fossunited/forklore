@@ -2,10 +2,12 @@
 import os
 import re
 import json
+import socket
+import ipaddress
 import hashlib
 import requests
 import argparse
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 from pathlib import Path
 from mimetypes import guess_extension
 
@@ -16,18 +18,12 @@ MAX_SIZE_KB = 500
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; forklore-image-sync/1.0)"}
 
-Path(IMAGES_DIR).mkdir(parents=True, exist_ok=True)
-
-parser = argparse.ArgumentParser(description="Sync remote images to local storage")
-parser.add_argument("json_file", nargs="?", help="Specific JSON file in content/maintainers/")
-parser.add_argument("--debug", action="store_true")
-args = parser.parse_args()
-
-cache = json.loads(Path(CACHE_FILE).read_text()) if Path(CACHE_FILE).exists() else {}
+args = None
+cache = {}
 
 
 def log(msg):
-    if args.debug:
+    if args and args.debug:
         print(msg)
 
 
@@ -50,14 +46,44 @@ def resolve_url(url):
     return url
 
 
-def download(url):
+def is_safe_url(url):
+    """Reject non-https schemes and URLs that resolve to non-public addresses."""
+    parsed = urlparse(url)
+    if parsed.scheme != "https" or not parsed.hostname:
+        return False
     try:
-        r = requests.get(url, headers=HEADERS, timeout=15)
-        r.raise_for_status()
-        return r.content, r.headers.get("Content-Type", "")
-    except Exception as e:
-        print(f"[ERROR] {url}: {e}")
-        return None, None
+        addrs = socket.getaddrinfo(parsed.hostname, None)
+    except socket.gaierror:
+        return False
+    for family, _, _, _, sockaddr in addrs:
+        ip = ipaddress.ip_address(sockaddr[0])
+        if not ip.is_global:
+            return False
+    return True
+
+
+def download(url, max_redirects=5):
+    """Fetch url, revalidating is_safe_url() on every redirect hop before following it."""
+    for _ in range(max_redirects + 1):
+        if not is_safe_url(url):
+            print(f"[ERROR] {url}: blocked (unsafe scheme or internal address)")
+            return None, None
+        try:
+            r = requests.get(url, headers=HEADERS, timeout=15, allow_redirects=False)
+            if r.is_redirect:
+                location = r.headers.get("Location")
+                if not location:
+                    print(f"[ERROR] {url}: redirect with no Location header")
+                    return None, None
+                url = urljoin(url, location)
+                continue
+            r.raise_for_status()
+            return r.content, r.headers.get("Content-Type", "")
+        except Exception as e:
+            print(f"[ERROR] {url}: {e}")
+            return None, None
+    print(f"[ERROR] {url}: too many redirects")
+    return None, None
 
 
 def warn_size(filepath):
@@ -130,12 +156,28 @@ def process_json(file):
         print(f"[DONE] {file}")
 
 
-files = [args.json_file] if args.json_file else [f for f in os.listdir(DATA_DIR) if f.endswith(".json")]
-for f in files:
-    if not f.endswith(".json"):
-        print("[ERROR] Need .json file")
-    else:
-        process_json(f)
+def main():
+    global args, cache
 
-Path(CACHE_FILE).write_text(json.dumps(cache, indent=2))
-print("[OK] Done.")
+    Path(IMAGES_DIR).mkdir(parents=True, exist_ok=True)
+
+    parser = argparse.ArgumentParser(description="Sync remote images to local storage")
+    parser.add_argument("json_file", nargs="?", help="Specific JSON file in content/maintainers/")
+    parser.add_argument("--debug", action="store_true")
+    args = parser.parse_args()
+
+    cache = json.loads(Path(CACHE_FILE).read_text()) if Path(CACHE_FILE).exists() else {}
+
+    files = [args.json_file] if args.json_file else [f for f in os.listdir(DATA_DIR) if f.endswith(".json")]
+    for f in files:
+        if not f.endswith(".json"):
+            print("[ERROR] Need .json file")
+        else:
+            process_json(f)
+
+    Path(CACHE_FILE).write_text(json.dumps(cache, indent=2))
+    print("[OK] Done.")
+
+
+if __name__ == "__main__":
+    main()
