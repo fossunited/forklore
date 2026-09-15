@@ -1,0 +1,32 @@
+<article
+  class="project-wall-card"
+  data-project-card
+  data-name="{{ project.name | escape }}"
+  data-maintainer="{{ project.maintainer.name | escape }}"
+  data-username="{{ project.maintainer.username | escape }}"
+  data-description="{{ (project.description or project.short_description) | escape }}"
+  data-created="{{ project.created_on | dateISO }}"
+  data-url="{{ project.website_link or project.project_link or project.maintainer.url }}"
+  data-source="{{ project.project_link }}"
+  data-website="{{ project.website_link }}"
+  data-logo="{{ project.logo }}"
+  data-maintainer-url="{{ project.maintainer.url }}"
+  data-maintainer-photo="{{ project.maintainer.photo or '/maintainer_photo_light.svg' }}"
+>
+  <a class="project-tile-hit" href="{{ project.website_link or project.project_link or project.maintainer.url }}">
+    <span class="project-tile-logo" aria-hidden="true">
+      {% if project.logo %}
+        <img src="{{ project.logo }}" alt="" loading="lazy">
+      {% else %}
+        {{ project.name | first }}
+      {% endif %}
+    </span>
+    <span class="project-tile-copy">
+      <span class="project-tile-name">{{ project.name }}</span>
+      <span class="project-tile-maintainer">by {{ project.maintainer.name }}</span>
+    </span>
+  </a>
+  <a class="project-tile-person" href="{{ project.maintainer.url }}" aria-label="Open {{ project.maintainer.name }} profile">
+    <img src="{{ project.maintainer.photo or '/maintainer_photo_light.svg' }}" alt="" loading="lazy">
+  </a>
+</article>
