@@ -128,14 +128,113 @@
 
   const planetSearch = document.querySelector("[data-planet-search]");
   const planetEmpty = document.querySelector("[data-planet-empty]");
+  const planetPostsContainer = document.querySelector("[data-planet-posts-container]");
+  const planetPagination = document.querySelector("[data-planet-pagination]");
   const hasPlanetPosts = Boolean(document.querySelector("[data-planet-post]"));
 
-  function planetPosts() {
-    return Array.from(document.querySelectorAll("[data-planet-post]"));
+  let allPlanetPosts = null;
+  let planetFetchPromise = null;
+  const initialPlanetHtml = planetPostsContainer ? planetPostsContainer.innerHTML : "";
+
+  function escapeHtml(value) {
+    return String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
   }
 
   function normalize(value) {
     return String(value || "").trim().toLowerCase();
+  }
+
+  function formatPostDate(dateStr) {
+    const value = new Date(dateStr);
+    if (Number.isNaN(value.getTime())) return "";
+    return value.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  }
+
+  function renderDynamicPlanetCard(post) {
+    const title = escapeHtml(post.title || "Untitled");
+    const username = escapeHtml(post.maintainerUsername || "");
+    const authorName = escapeHtml(post.maintainerName || "");
+    const photo = escapeHtml(post.maintainerPhoto || "/maintainer_photo_light.svg");
+    const slug = escapeHtml(post.slug || "");
+    const pubDate = escapeHtml(post.pubDate || "");
+    const dateFormatted = formatPostDate(post.pubDate);
+    const snippet = escapeHtml(post.contentSnippet || "");
+    const link = escapeHtml(post.link || "");
+    const tags = Array.isArray(post.tags) ? post.tags : [];
+
+    const tagsHtml = tags.length
+      ? `<div class="planet-tags">${tags
+          .slice(0, 6)
+          .map((tag) => `<button type="button" data-planet-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`)
+          .join("")}</div>`
+      : "";
+
+    const linkHtml = link
+      ? `<a href="${link}" class="button subtle" target="_blank" rel="noopener noreferrer">Original ↗</a>`
+      : "";
+
+    return `
+<article
+  class="planet-post"
+  data-planet-post
+  data-title="${title.toLowerCase()}"
+  data-snippet="${snippet.toLowerCase()}"
+  data-tags="${tags.map((t) => escapeHtml(t).toLowerCase()).join("|||")}"
+>
+  <div class="planet-post-title">
+    <a href="/planet/${username}/${slug}/">${title}</a>
+  </div>
+  <div class="planet-post-body">
+    <div class="planet-post-meta">
+      <a href="/planet/${username}/" class="planet-author-inline">
+        <img src="${photo}" alt="" class="avatar tiny">
+        ${authorName}
+      </a>
+      <span>·</span>
+      <time datetime="${pubDate}">${dateFormatted}</time>
+    </div>
+    ${tagsHtml}
+    ${snippet ? `<p>${snippet}</p>` : ""}
+    <div class="button-row">
+      <a href="/planet/${username}/${slug}/" class="button subtle">Read more →</a>
+      ${linkHtml}
+    </div>
+  </div>
+</article>`;
+  }
+
+  function loadPlanetPosts() {
+    if (allPlanetPosts) return Promise.resolve(allPlanetPosts);
+    if (planetFetchPromise) return planetFetchPromise;
+
+    planetFetchPromise = fetch("/planet/posts.json")
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((posts) => {
+        allPlanetPosts = posts;
+        return posts;
+      })
+      .catch((err) => {
+        console.error("Failed to load /planet/posts.json:", err);
+        return null;
+      });
+
+    return planetFetchPromise;
+  }
+
+  function planetPosts() {
+    return Array.from(document.querySelectorAll("[data-planet-post]"));
   }
 
   function setPlanetTag(tag) {
@@ -157,12 +256,60 @@
     });
   }
 
-  function applyPlanetState() {
+  async function applyPlanetState() {
     const params = new URLSearchParams(window.location.search);
     const activeTag = normalize(params.get("tag"));
     const query = normalize(planetSearch?.value || params.get("search"));
-    let visible = 0;
+    const isFiltered = Boolean(activeTag || query);
 
+    syncPlanetTags(activeTag);
+
+    // Global Planet view with dynamic catalog support
+    if (planetPostsContainer) {
+      if (!isFiltered) {
+        planetPostsContainer.innerHTML = initialPlanetHtml;
+        if (planetPagination) planetPagination.hidden = false;
+        if (planetEmpty) planetEmpty.hidden = true;
+        return;
+      }
+
+      if (planetPagination) planetPagination.hidden = true;
+
+      const posts = await loadPlanetPosts();
+      if (!posts) {
+        // Fallback to DOM filtering if JSON fetch fails
+        let visible = 0;
+        planetPosts().forEach((post) => {
+          const haystack = normalize(`${post.dataset.title} ${post.dataset.snippet}`);
+          const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
+          const match = (!query || haystack.includes(query)) && (!activeTag || tags.includes(activeTag));
+          post.hidden = !match;
+          if (match) visible += 1;
+        });
+        if (planetEmpty) planetEmpty.hidden = visible !== 0;
+        return;
+      }
+
+      const filtered = posts.filter((post) => {
+        const haystack = normalize(`${post.title} ${post.contentSnippet} ${post.maintainerName}`);
+        const tags = (post.tags || []).map((t) => normalize(t));
+        const matchesSearch = !query || haystack.includes(query);
+        const matchesTag = !activeTag || tags.includes(activeTag);
+        return matchesSearch && matchesTag;
+      });
+
+      if (filtered.length === 0) {
+        planetPostsContainer.innerHTML = "";
+        if (planetEmpty) planetEmpty.hidden = false;
+      } else {
+        planetPostsContainer.innerHTML = filtered.map(renderDynamicPlanetCard).join("");
+        if (planetEmpty) planetEmpty.hidden = true;
+      }
+      return;
+    }
+
+    // Author profile page / fallback DOM filtering
+    let visible = 0;
     planetPosts().forEach((post) => {
       const haystack = normalize(`${post.dataset.title} ${post.dataset.snippet}`);
       const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
@@ -173,9 +320,14 @@
       if (match) visible += 1;
     });
 
-    syncPlanetTags(activeTag);
     if (planetEmpty) planetEmpty.hidden = visible !== 0;
   }
+
+  // Preload JSON on interaction
+  planetSearch?.addEventListener("focus", loadPlanetPosts, { once: true });
+  document.querySelectorAll("[data-planet-tag]").forEach((btn) => {
+    btn.addEventListener("mouseenter", loadPlanetPosts, { once: true });
+  });
 
   planetSearch?.addEventListener("input", () => {
     const params = new URLSearchParams(window.location.search);
@@ -193,6 +345,13 @@
     if (!tagButton) return;
     event.preventDefault();
     setPlanetTag(tagButton.dataset.planetTag);
+  });
+
+  window.addEventListener("popstate", () => {
+    if (planetSearch) {
+      planetSearch.value = new URLSearchParams(window.location.search).get("search") || "";
+    }
+    applyPlanetState();
   });
 
   if (hasPlanetPosts) {
