@@ -1,0 +1,57 @@
+---
+layout: base.njk
+title: Projects | Forklore
+description: Browse projects maintained by people featured on Forklore.
+permalink: /projects/
+---
+
+<section class="hero projects-hero">
+  <div class="wall-hero-grid">
+    <div>
+      <p class="eyebrow">Project index</p>
+      <h1>projects_</h1>
+      <p class="hero-note">
+        A denser view of the work behind Forklore. Hover a project to inspect
+        links and the maintainer behind it.
+      </p>
+    </div>
+    <div class="wall-hero-card" aria-label="Project summary">
+      <span class="wall-count">{{ collections.projects.length }}</span>
+      <span>projects from {{ collections.maintainers.length }} maintainers</span>
+    </div>
+  </div>
+</section>
+
+<section class="directory-controls project-controls" aria-label="Project filters">
+  <div class="search-sort">
+    <label class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input data-search-input type="search" placeholder="Search projects" autocomplete="off">
+      <kbd data-shortcut-label>ctrl+k</kbd>
+    </label>
+    <select data-sort-select aria-label="Sort projects">
+      <option value="a-z" selected>A → Z</option>
+      <option value="z-a">Z → A</option>
+      <option value="newest">Newest maintainer</option>
+      <option value="oldest">Oldest maintainer</option>
+    </select>
+  </div>
+  <div class="control-actions">
+    <a href="/" class="button subtle">Maintainer Wall</a>
+    <button class="button subtle" type="button" data-surprise>Surprise Me</button>
+  </div>
+</section>
+
+<section class="project-wall-list" data-directory-list data-directory="projects" aria-label="Projects">
+  {% for project in collections.projects %}
+    {% include "project-wall-card.njk" %}
+  {% endfor %}
+  <p class="empty-state" data-empty-state hidden>No Projects Found</p>
+</section>
+
+<aside class="wall-preview-panel project-preview-panel" data-project-preview aria-live="polite" aria-label="Project preview">
+  <p class="eyebrow">Project preview</p>
+  <div class="wall-preview-empty">
+    Hover a project to see links and maintainer context.
+  </div>
+</aside>
