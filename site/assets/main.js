@@ -192,6 +192,7 @@
   class="planet-post"
   data-planet-post
   data-title="${title.toLowerCase()}"
+  data-author="${authorName.toLowerCase()}"
   data-snippet="${snippet.toLowerCase()}"
   data-tags="${tags.map((t) => escapeHtml(t).toLowerCase()).join("|||")}"
 >
@@ -291,7 +292,7 @@
         // Fallback to DOM filtering if JSON fetch fails
         let visible = 0;
         planetPosts().forEach((post) => {
-          const haystack = normalize(`${post.dataset.title} ${post.dataset.snippet}`);
+          const haystack = normalize(`${post.dataset.title} ${post.dataset.author} ${post.dataset.snippet}`);
           const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
           const match = (!query || haystack.includes(query)) && (!activeTag || tags.includes(activeTag));
           post.hidden = !match;
@@ -322,7 +323,7 @@
     // Author profile page / fallback DOM filtering
     let visible = 0;
     planetPosts().forEach((post) => {
-      const haystack = normalize(`${post.dataset.title} ${post.dataset.snippet}`);
+      const haystack = normalize(`${post.dataset.title} ${post.dataset.author} ${post.dataset.snippet}`);
       const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
       const matchesSearch = !query || haystack.includes(query);
       const matchesTag = !activeTag || tags.includes(activeTag);
