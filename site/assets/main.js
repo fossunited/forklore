@@ -149,6 +149,11 @@
     return String(value || "").trim().toLowerCase();
   }
 
+  function formatPostDateISO(dateStr) {
+    const value = new Date(dateStr);
+    return Number.isNaN(value.getTime()) ? "" : value.toISOString();
+  }
+
   function formatPostDate(dateStr) {
     const value = new Date(dateStr);
     if (Number.isNaN(value.getTime())) return "";
@@ -165,7 +170,7 @@
     const authorName = escapeHtml(post.maintainerName || "");
     const photo = escapeHtml(post.maintainerPhoto || "/maintainer_photo_light.svg");
     const slug = escapeHtml(post.slug || "");
-    const pubDate = escapeHtml(post.pubDate || "");
+    const dateISO = escapeHtml(formatPostDateISO(post.pubDate));
     const dateFormatted = formatPostDate(post.pubDate);
     const snippet = escapeHtml(post.contentSnippet || "");
     const link = escapeHtml(post.link || "");
@@ -200,7 +205,7 @@
         ${authorName}
       </a>
       <span>·</span>
-      <time datetime="${pubDate}">${dateFormatted}</time>
+      <time datetime="${dateISO}">${dateFormatted}</time>
     </div>
     ${tagsHtml}
     ${snippet ? `<p>${snippet}</p>` : ""}
