@@ -256,7 +256,10 @@
     });
   }
 
+  let planetStateGeneration = 0;
+
   async function applyPlanetState() {
+    const currentGen = ++planetStateGeneration;
     const params = new URLSearchParams(window.location.search);
     const activeTag = normalize(params.get("tag"));
     const query = normalize(planetSearch?.value || params.get("search"));
@@ -276,6 +279,9 @@
       if (planetPagination) planetPagination.hidden = true;
 
       const posts = await loadPlanetPosts();
+      // If a newer search/tag change was initiated while awaiting, ignore this stale execution
+      if (currentGen !== planetStateGeneration) return;
+
       if (!posts) {
         // Fallback to DOM filtering if JSON fetch fails
         let visible = 0;
