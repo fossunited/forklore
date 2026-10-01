@@ -49,7 +49,7 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
   </details>
 </section>
 
-<section class="planet-posts" aria-label="Planet posts">
+<section class="planet-posts" aria-label="Planet posts" data-planet-posts-container>
   {% for post in pagePosts %}
     {% include "planet-post-card.njk" %}
   {% endfor %}
@@ -57,7 +57,7 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
 </section>
 
 {% if pagination.href.previous or pagination.href.next %}
-<nav class="planet-pagination" aria-label="Page navigation">
+<nav class="planet-pagination" aria-label="Page navigation" data-planet-pagination>
   {% if pagination.href.previous %}
     <a href="{{ pagination.href.previous }}" class="button subtle">← Newer</a>
   {% else %}
