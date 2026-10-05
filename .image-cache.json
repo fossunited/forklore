@@ -674,5 +674,13 @@
   "https://priyanshujain.github.io/sanderling/_assets/sanderling.jpeg": {
     "hash": "ab6214a8c529f9f5b72f55d6732a76e730695cfcb3de184a3d52105c4c8fe49b",
     "filename": "priyanshujain_sanderling.jpeg"
+  },
+  "https://thunders.website/myimage.jpeg": {
+    "hash": "6c33645b16a99eebfd3eb5b288a45827c7c14881d83dda1109e629a270867f6b",
+    "filename": "thunder-coding_photo.jpeg"
+  },
+  "https://avatars.githubusercontent.com/u/8104776?s=200&v=4": {
+    "hash": "d57ed221f146d5bd6307e309673e04908e65beeca8b11ccbe12d83a6ab0ac7db",
+    "filename": "thunder-coding_termux.png"
   }
 }
