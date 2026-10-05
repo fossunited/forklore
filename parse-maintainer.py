@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """GitHub issue form submission → maintainer JSON"""
 
-import json, os, re, subprocess, sys
+import json, os, re, subprocess, sys, uuid
 from datetime import datetime
 from pathlib import Path
 
@@ -113,6 +113,23 @@ def parse_projects(text):
     return projects
 
 
+def project_list_label(projects):
+    names = [p["name"] for p in projects if p.get("name")]
+    if len(names) > 1:
+        return ", ".join(names[:-1]) + f" & {names[-1]}"
+    return names[0] if names else ""
+
+
+def write_github_output(values):
+    gh_output = os.getenv("GITHUB_OUTPUT")
+    if not gh_output:
+        return
+    with open(gh_output, "a", encoding="utf-8") as fh:
+        for name, value in values.items():
+            delimiter = f"ghadelimiter_{uuid.uuid4().hex}"
+            fh.write(f"{name}<<{delimiter}\n{value}\n{delimiter}\n")
+
+
 def parse(md):
     s = sections(md)
     return {
@@ -128,8 +145,6 @@ def parse(md):
 
 
 if __name__ == "__main__":
-    if os.getenv("CI") == "true":
-        sys.exit(0)
     if len(sys.argv) < 2:
         print("Usage: python parse-maintainer.py <input.md>")
         sys.exit(1)
@@ -151,6 +166,12 @@ if __name__ == "__main__":
 
     out.write_text(render_markdown(result), encoding="utf-8")
     print(render_markdown(result))
+
+    write_github_output({
+        "username": username,
+        "full_name": result.get("full_name", ""),
+        "project_list": project_list_label(result.get("projects", [])),
+    })
 
     try:
         subprocess.run(["yarn", "validate:maintainers"], check=True)
