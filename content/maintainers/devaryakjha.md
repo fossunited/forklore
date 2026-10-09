@@ -52,6 +52,10 @@ Don't try to perfect everything before you share it. No matter how carefully you
 
 I love coding, and it brings me joy to build things that can be useful to other people. I maintain open source for the love of the game.
 
+## Which file in your project would you most like to set on fire?
+
+If I had to pick, Tagflow's `component_registry.dart`. A lot of rendering behavior lives in that one file. I'd rather split it up than actually burn it.
+
 ## If you had to use one emoji to convey what it is like to be a FOSS maintainer, what would it be?
 
 😌
