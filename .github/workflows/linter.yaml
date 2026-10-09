@@ -22,6 +22,13 @@ jobs:
         with:
           python-version: '3.10'
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install site dependencies
+        run: yarn --cwd site install --frozen-lockfile
+
       - name: Install pre-commit
         run: |
           python -m pip install --upgrade pip
