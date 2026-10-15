@@ -13,24 +13,24 @@ socials:
   - label: "Codeberg"
     link: "https://codeberg.org/Vaishnav-Sabari-Girish/"
   - label: "Mastodon"
-    link: "https://elk.zone/defcon.social/@vaishnav"
+    link: "https://elk.zone/mastodon.social/@vaishnavs"
   - label: "Web"
-    link: "https://vaishnav-sabari-girish.github.io"
+    link: "https://vaishnavs.is-a.dev"
 projects:
+  - name: "miru"
+    project_link: "https://codeberg.org/Vaishnav-Sabari-Girish/miru"
+    website_link: "https://blog.vaishnavs.is-a.dev/miru/"
+    logo: "/images/Vashnav-Sabari-Girish_miru.png"
+    short_description: "Wayland-native zooming daemon"
+    description: |-
+     Miru is a Wayland-native zooming daemon for `wl-roots` based compositors (`niri`, `hyprland`, `mangowm` etc). Apart from zooming in/out it also allows for annotations, cursor highlighting, exporting the current view as an image. It also has a config-file based workflow and uses a basic `config.toml` file which is auto-generated on the first run. It is also keyboard centric and tries to use the keyboard as much as possible over the mouse. 
   - name: "ComChan"
     project_link: "https://github.com/Vaishnav-Sabari-Girish/ComChan"
-    website_link: "https://github.com/Vaishnav-Sabari-Girish/ComChan"
+    website_link: "https://blog.vaishnavs.is-a.dev/comchan/"
     logo: "/images/Vashnav-Sabari-Girish_comchan.png"
     short_description: "A Blazingly Fast Minimal Serial Monitor with serial plottter TUI and more"
     description: |-
       ComChan is a blazingly fast minimal serial monitor built in Rust for embedded and hardware developers, featuring a terminal-first workflow with real-time serial plotting, hex dump modes, logging, CSV export, auto port detection, and low-latency serial communication for boards like ESP32, STM32, RP2040, Arduino, and Teensy — designed as a lightweight alternative to bloated GUI serial tools while still providing powerful debugging and telemetry analysis capabilities.
-  - name: "NextStd"
-    project_link: "https://github.com/NextStd/nextstd"
-    website_link: "https://nextstd.github.io/"
-    logo: "/images/Vashnav-Sabari-Girish_nextstd.png"
-    short_description: "Working toward a safer standard library for the next generation"
-    description: |-
-      NextStd is an experimental effort to explore safer, well-defined, and modern alternatives to traditional C standard library components. The project focuses on correctness, explicit behavior, and performance, while remaining practical for real-world systems and embedded use.
 ---
 
 ## How to support
