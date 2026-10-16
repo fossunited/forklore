@@ -5,46 +5,72 @@
   data-username="{{ maintainer.data.username }}"
   data-projects="{% for project in maintainer.data.projects %}{{ project.name }} {% endfor %}"
   data-created="{{ maintainer.data.created_on | dateISO }}"
+  data-url="{{ maintainer.url }}"
+  data-photo="{{ maintainer.data.photo or '/maintainer_photo_light.svg' }}"
+  data-designation="{{ maintainer.data.designation }}"
 >
-  <a class="card-hit" href="{{ maintainer.url }}" aria-label="Read {{ maintainer.data.full_name }}'s profile"></a>
   <header class="maintainer-card-header">
-    <img
-      src="{{ maintainer.data.photo or '/maintainer_photo_light.svg' }}"
-      alt="Photo of {{ maintainer.data.full_name }}"
-      class="avatar"
-      loading="lazy"
-    >
-    <div>
+    <div class="portrait-orbit">
+      <img
+        src="{{ maintainer.data.photo or '/maintainer_photo_light.svg' }}"
+        alt="Photo of {{ maintainer.data.full_name }}"
+        class="avatar"
+        loading="lazy"
+      >
+      <span class="orbit-track" aria-hidden="true">
+      {% for project in maintainer.data.projects %}
+        <span
+          class="orbit-logo"
+          data-project-logo
+          data-project-name="{{ project.name }}"
+          data-project-description="{{ project.short_description }}"
+          data-project-image="{{ project.logo }}"
+        >
+          {% if project.logo %}
+            <img src="{{ project.logo }}" alt="" loading="lazy">
+          {% else %}
+            {{ project.name | first }}
+          {% endif %}
+        </span>
+      {% endfor %}
+      </span>
+    </div>
+    <div class="caption-block">
       <h2>{{ maintainer.data.full_name }}</h2>
-      <p>{{ maintainer.data.designation | markdownInline | safe }}</p>
+      <p>{{ maintainer.data.designation }}</p>
     </div>
   </header>
-  <div
-    class="project-strip{% if maintainer.data.projects.length > 1 %} project-strip-grid{% endif %}{% if maintainer.data.projects.length % 2 == 1 %} project-strip-odd{% endif %}"
-    aria-label="Projects"
-  >
-    {% for project in maintainer.data.projects %}
-      <div class="project-summary">
-        {% if project.logo %}
-          <img src="{{ project.logo }}" alt="Logo of {{ project.name }}" loading="lazy">
-        {% else %}
-          <div class="project-summary-logo-fallback" role="img" aria-label="Logo of {{ project.name }}">
-            <span>{{ project | shortLabel }}</span>
-          </div>
-        {% endif %}
-        <div>
-          <h3>{{ project.name }}</h3>
-          {% if project.project_link %}
-            <a class="button subtle card-source" href="{{ project.project_link }}">
-              View Source <span aria-hidden="true">↗</span>
-            </a>
-          {% endif %}
-          <p>{{ project.short_description | markdownInline | safe }}</p>
-        </div>
-      </div>
-    {% endfor %}
-    {% if maintainer.data.projects.length > 1 and maintainer.data.projects.length % 2 == 1 %}
-      <div class="project-summary project-summary-empty" aria-hidden="true"></div>
-    {% endif %}
+  <div class="wall-card-meta" aria-hidden="true">
+    <span>@{{ maintainer.data.username }}</span>
+    <span>{{ maintainer.data.projects.length }} {% if maintainer.data.projects.length == 1 %}project{% else %}projects{% endif %}</span>
   </div>
+  <details class="project-reveal" aria-label="Project preview">
+    <summary>
+      <span>Preview projects</span>
+      <span aria-hidden="true">+</span>
+    </summary>
+    <div class="project-strip" aria-label="Projects">
+      {% for project in maintainer.data.projects %}
+        <div class="project-summary">
+          <div>
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.short_description }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </details>
+  <a class="profile-link" href="{{ maintainer.url }}">
+    Open profile <span aria-hidden="true">→</span>
+  </a>
+  <input
+    class="card-slide"
+    id="card-slide-{{ maintainer.data.username }}"
+    data-card-slide
+    type="range"
+    min="0"
+    max="130"
+    value="0"
+    aria-label="Scroll preview for {{ maintainer.data.full_name }}; keep sliding past the end to open profile"
+  >
 </article>
