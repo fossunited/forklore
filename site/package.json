@@ -9,7 +9,7 @@
     "serve": "yarn clean && yarn og && cd .. && site/node_modules/.bin/eleventy --serve --port=3000"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy": "^3.1.7",
     "js-yaml": "^5.5.0"
   },
   "dependencies": {
