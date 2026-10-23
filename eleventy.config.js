@@ -206,6 +206,25 @@ export default function (eleventyConfig) {
       : [],
   );
 
+  eleventyConfig.addFilter("postsJson", (posts) => {
+    const list = (Array.isArray(posts) ? posts : []).map((post) => ({
+      slug: post.slug,
+      title: post.title || "Untitled",
+      maintainerUsername: post.maintainerUsername,
+      maintainerName: post.maintainerName,
+      maintainerPhoto: post.maintainerPhoto || "/maintainer_photo_light.svg",
+      pubDate: post.pubDate,
+      tags: post.tags || [],
+      contentSnippet: post.contentSnippet
+        ? post.contentSnippet.length > 280
+          ? `${post.contentSnippet.slice(0, 279)}…`
+          : post.contentSnippet
+        : "",
+      link: post.link || "",
+    }));
+    return JSON.stringify(list);
+  });
+
   return {
     dir: {
       input: ".",
