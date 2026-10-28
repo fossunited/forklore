@@ -52,7 +52,9 @@
 
   const searchInput = document.querySelector("[data-search-input]");
   const sortSelect = document.querySelector("[data-sort-select]");
-  const list = document.querySelector(".maintainer-list");
+  const list = document.querySelector("[data-directory-list]") || document.querySelector(".maintainer-list");
+  const directoryType = list?.dataset.directory || "maintainers";
+  const cardSelector = directoryType === "projects" ? "[data-project-card]" : "[data-maintainer-card]";
   const emptyState = document.querySelector("[data-empty-state]");
   const shortcutLabel = document.querySelector("[data-shortcut-label]");
 
@@ -61,7 +63,234 @@
   }
 
   function cards() {
-    return Array.from(document.querySelectorAll("[data-maintainer-card]"));
+    return Array.from(document.querySelectorAll(cardSelector));
+  }
+
+  function layoutOrbitLogos() {
+    cards().forEach((card) => {
+      const logos = Array.from(card.querySelectorAll("[data-project-logo]"));
+      const count = logos.length;
+      if (!count) return;
+      const size = Math.max(17, Math.min(24, 31 - count * 1.4));
+      const radius = Math.max(52, Math.min(68, 50 + count * 2.7));
+      logos.forEach((logo, index) => {
+        const angle = -90 + (360 / count) * index;
+        logo.style.setProperty("--orbit-angle", `${angle}deg`);
+        logo.style.setProperty("--orbit-radius", `${radius}px`);
+        logo.style.setProperty("--orbit-logo-size", `${size}px`);
+      });
+    });
+  }
+
+  function resetCardSliders() {
+    cards().forEach((card) => {
+      card.classList.remove("has-scrollable-preview", "is-opening");
+      const slider = card.querySelector("[data-card-slide]");
+      if (!slider) return;
+      slider.value = 0;
+      slider.disabled = true;
+    });
+    document.querySelector("[data-wall-preview]")?.classList.remove("is-opening");
+  }
+
+  function updateSliderAvailability(card, panel) {
+    cards().forEach((otherCard) => {
+      if (otherCard === card) return;
+      otherCard.classList.remove("has-scrollable-preview", "is-opening");
+      const otherSlider = otherCard.querySelector("[data-card-slide]");
+      if (!otherSlider) return;
+      otherSlider.value = 0;
+      otherSlider.disabled = true;
+    });
+    window.requestAnimationFrame(() => {
+      const slider = card.querySelector("[data-card-slide]");
+      if (!slider) return;
+      const canScroll = panel.scrollHeight > panel.clientHeight + 2;
+      card.classList.toggle("has-scrollable-preview", canScroll);
+      slider.disabled = !canScroll;
+      if (!canScroll) slider.value = 0;
+    });
+  }
+
+  function updatePreview(card) {
+    const panel = document.querySelector("[data-wall-preview]");
+    if (!panel || !card) return;
+    const projects = Array.from(card.querySelectorAll("[data-project-logo]"));
+    const profileUrl = card.dataset.url || "#";
+    panel.innerHTML = `
+      <p class="eyebrow">Preview</p>
+      <div class="wall-preview-header">
+        <img src="${card.dataset.photo || "/maintainer_photo_light.svg"}" alt="">
+        <div>
+          <h2>${card.dataset.name || ""}</h2>
+          <p>${card.dataset.designation || ""}</p>
+        </div>
+      </div>
+      ${projects
+        .map(
+          (project) => `
+            <article class="wall-preview-project">
+              <span class="wall-preview-project-logo" aria-hidden="true">
+                ${
+                  project.dataset.projectImage
+                    ? `<img src="${project.dataset.projectImage}" alt="">`
+                    : `${(project.dataset.projectName || "?").charAt(0)}`
+                }
+              </span>
+              <div>
+                <h3>${project.dataset.projectName || ""}</h3>
+                <p>${project.dataset.projectDescription || ""}</p>
+              </div>
+            </article>
+          `,
+        )
+        .join("")}
+      <a class="button solid" href="${profileUrl}">Open profile →</a>
+    `;
+    panel.classList.add("is-visible");
+    updateSliderAvailability(card, panel);
+  }
+
+  function bindCardSliders() {
+    const panel = document.querySelector("[data-wall-preview]");
+    if (!panel) return;
+    const openThreshold = 130;
+    let isNavigating = false;
+    cards().forEach((card) => {
+      const slider = card.querySelector("[data-card-slide]");
+      if (!slider) return;
+      slider.disabled = true;
+      slider.addEventListener("input", (event) => {
+        if (isNavigating) return;
+        updatePreview(card);
+        const value = Number(event.currentTarget.value);
+        const scrollable = panel.scrollHeight - panel.clientHeight;
+        panel.scrollTop = scrollable * Math.min(value, 100) / 100;
+        if (value >= openThreshold && card.dataset.url) {
+          isNavigating = true;
+          card.classList.add("is-opening");
+          panel.classList.add("is-opening");
+          window.setTimeout(() => {
+            window.location.href = card.dataset.url;
+          }, 260);
+        }
+      });
+      slider.addEventListener("change", (event) => {
+        if (Number(event.currentTarget.value) < openThreshold) {
+          event.currentTarget.value = 0;
+          card.classList.remove("is-opening");
+          panel.classList.remove("is-opening");
+        }
+      });
+    });
+  }
+
+  function bindPreviewPanel() {
+    const panel = document.querySelector("[data-wall-preview]");
+    if (!panel) return;
+    let closeTimer;
+    const cancelClose = () => {
+      window.clearTimeout(closeTimer);
+    };
+    const closePreview = () => {
+      panel.classList.remove("is-visible");
+    };
+    const scheduleClose = () => {
+      cancelClose();
+      closeTimer = window.setTimeout(closePreview, 120);
+    };
+    cards().forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        cancelClose();
+        updatePreview(card);
+      });
+      card.addEventListener("focusin", () => updatePreview(card));
+      card.addEventListener("mouseleave", scheduleClose);
+      card.addEventListener("focusout", (event) => {
+        if (!card.contains(event.relatedTarget) && !panel.contains(event.relatedTarget)) scheduleClose();
+      });
+      card.addEventListener("click", (event) => {
+        if (window.matchMedia("(min-width: 900px)").matches && event.target.closest("summary")) {
+          event.preventDefault();
+          updatePreview(card);
+        }
+      });
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closePreview();
+      }
+    });
+    panel.addEventListener("mouseenter", cancelClose);
+    panel.addEventListener("focusin", cancelClose);
+    panel.addEventListener("mouseleave", closePreview);
+    panel.addEventListener("focusout", (event) => {
+      if (!panel.contains(event.relatedTarget)) scheduleClose();
+    });
+  }
+
+  function bindProjectPreviewPanel() {
+    const panel = document.querySelector("[data-project-preview]");
+    if (!panel) return;
+    let closeTimer;
+    const cancelClose = () => window.clearTimeout(closeTimer);
+    const closePreview = () => panel.classList.remove("is-visible");
+    const scheduleClose = () => {
+      cancelClose();
+      closeTimer = window.setTimeout(closePreview, 120);
+    };
+    const updateProjectPreview = (card) => {
+      const sourceUrl = card.dataset.source;
+      const websiteUrl = card.dataset.website;
+      const primaryUrl = card.dataset.url || "#";
+      panel.innerHTML = `
+        <p class="eyebrow">Project preview</p>
+        <div class="project-preview-header">
+          <span class="project-preview-logo" aria-hidden="true">
+            ${
+              card.dataset.logo
+                ? `<img src="${card.dataset.logo}" alt="">`
+                : `${(card.dataset.name || "?").charAt(0)}`
+            }
+          </span>
+          <div>
+            <h2>${card.dataset.name || ""}</h2>
+            <p>${card.dataset.description || ""}</p>
+          </div>
+        </div>
+        <a class="project-preview-maintainer" href="${card.dataset.maintainerUrl || "#"}">
+          <img src="${card.dataset.maintainerPhoto || "/maintainer_photo_light.svg"}" alt="">
+          <span>
+            <strong>${card.dataset.maintainer || ""}</strong>
+            <small>@${card.dataset.username || ""}</small>
+          </span>
+        </a>
+        <div class="button-row project-preview-actions">
+          <a class="button solid" href="${primaryUrl}">Open project →</a>
+          ${sourceUrl ? `<a class="button subtle" href="${sourceUrl}">Source ↗</a>` : ""}
+          ${websiteUrl ? `<a class="button subtle" href="${websiteUrl}">Website ↗</a>` : ""}
+        </div>
+      `;
+      panel.classList.add("is-visible");
+    };
+
+    cards().forEach((card) => {
+      card.addEventListener("mouseenter", () => {
+        cancelClose();
+        updateProjectPreview(card);
+      });
+      card.addEventListener("focusin", () => updateProjectPreview(card));
+      card.addEventListener("mouseleave", scheduleClose);
+      card.addEventListener("focusout", (event) => {
+        if (!card.contains(event.relatedTarget) && !panel.contains(event.relatedTarget)) scheduleClose();
+      });
+    });
+    panel.addEventListener("mouseenter", cancelClose);
+    panel.addEventListener("focusin", cancelClose);
+    panel.addEventListener("mouseleave", closePreview);
+    panel.addEventListener("focusout", (event) => {
+      if (!panel.contains(event.relatedTarget)) scheduleClose();
+    });
   }
 
   function applyDirectoryState() {
@@ -78,7 +307,10 @@
 
     let visible = 0;
     sorted.forEach((card) => {
-      const haystack = `${card.dataset.name} ${card.dataset.username} ${card.dataset.projects}`.toLowerCase();
+      const haystack =
+        directoryType === "projects"
+          ? `${card.dataset.name} ${card.dataset.maintainer} ${card.dataset.username} ${card.dataset.description}`.toLowerCase()
+          : `${card.dataset.name} ${card.dataset.username} ${card.dataset.projects}`.toLowerCase();
       const match = !query || haystack.includes(query);
       card.hidden = !match;
       if (match) visible += 1;
@@ -91,6 +323,15 @@
   searchInput?.addEventListener("input", applyDirectoryState);
   sortSelect?.addEventListener("change", applyDirectoryState);
   applyDirectoryState();
+  if (directoryType === "maintainers") {
+    layoutOrbitLogos();
+    resetCardSliders();
+    bindPreviewPanel();
+    bindCardSliders();
+    window.addEventListener("pageshow", resetCardSliders);
+  } else {
+    bindProjectPreviewPanel();
+  }
 
   document.addEventListener("keydown", (event) => {
     const target = event.target;
@@ -109,7 +350,10 @@
   document.querySelector("[data-surprise]")?.addEventListener("click", () => {
     const visibleCards = cards().filter((card) => !card.hidden);
     const card = visibleCards[Math.floor(Math.random() * visibleCards.length)];
-    const href = card?.querySelector(".card-hit")?.getAttribute("href");
+    const href =
+      card?.dataset.url ||
+      card?.querySelector(".profile-link")?.getAttribute("href") ||
+      card?.querySelector(".project-tile-hit")?.getAttribute("href");
     if (href) window.location.href = href;
   });
 
