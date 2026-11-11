@@ -682,5 +682,13 @@
   "https://avatars.githubusercontent.com/u/8104776?s=200&v=4": {
     "hash": "d57ed221f146d5bd6307e309673e04908e65beeca8b11ccbe12d83a6ab0ac7db",
     "filename": "thunder-coding_termux.png"
+  },
+  "https://github.com/xevrion.png": {
+    "hash": "c90f081f1143fe2d3535a5625538ed90c91f9519caf62f83b70fe846a6f4b135",
+    "filename": "xevrion_photo.png"
+  },
+  "https://hatchzip.dev/favicon.svg": {
+    "hash": "bad8c83c7bb7d4e90d140de1551f78598cf02aa24033793dfa0d6e31ee22830e",
+    "filename": "xevrion_hatchzip.svg"
   }
 }
