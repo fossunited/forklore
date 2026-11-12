@@ -8,36 +8,29 @@ layout: base.njk
       {% include "project-card.njk" %}
     {% endfor %}
   </section>
-
   <aside class="profile-aside" aria-label="Maintainer details">
     <div class="profile-panel">
       <div class="profile-card">
-        <img
-          src="{{ photo or '/maintainer_photo_light.svg' }}"
-          alt="Photo of {{ full_name }}"
-          class="avatar large"
-        >
+        <img src="{{ photo or '/maintainer_photo_light.svg' }}"
+             alt="Photo of {{ full_name }}"
+             class="avatar large">
         <div>
           <p class="eyebrow">@{{ username }}</p>
           <h1>{{ full_name }}</h1>
           <p>{{ designation | markdownInline | safe }}</p>
         </div>
       </div>
-
       <nav class="social-list" aria-label="Social links">
         {% for social in socials %}
-          <a href="{{ social.link }}" aria-label="{{ social.label | socialLabel }} (opens in new tab)">
+          <a href="{{ social.link }}"
+             aria-label="{{ social.label | socialLabel }}: {{ social | socialHandle }} (opens in new tab)">
             {%- set label = social.label -%}
             {%- include "social-icon.njk" -%}
-            <span class="social-label">{{ social.label | socialLabel }}</span>
+            <span class="social-label">{{ social | socialHandle }}</span>
           </a>
         {% endfor %}
       </nav>
-
     </div>
-
-    <div class="story-content">
-      {{ content | dropEmptyQA | safe }}
-    </div>
+    <div class="story-content">{{ content | dropEmptyQA | safe }}</div>
   </aside>
 </article>

@@ -85,6 +85,24 @@ export default function (eleventyConfig) {
     return project.name || "";
   });
 
+  // Short, friendly label for a social link: the handle/slug for profile links
+  // (last path segment, e.g. github.com/tachyons :: tachyons), or the bare
+  // hostname for web/blog/feed links (e.g. https://aryak.dev/ :: aryak.dev).
+  eleventyConfig.addFilter("socialHandle", (social) => {
+    if (!social) return "";
+    const label = String(social.label || "").trim().toLowerCase();
+    const hostOnly = new Set(["web", "website", "blog", "rss"]);
+    try {
+      const url = new URL(social.link);
+      const host = url.hostname.replace(/^www\./, "");
+      const parts = url.pathname.replace(/\/$/, "").split("/").filter(Boolean);
+      if (!hostOnly.has(label) && parts.length) return parts[parts.length - 1];
+      return host;
+    } catch {
+      return social.label || "";
+    }
+  });
+
   eleventyConfig.addFilter("socialLabel", (label) => {
     if (!label) return "Web";
     return SOCIAL_LABELS[String(label).trim().toLowerCase()] || label;
