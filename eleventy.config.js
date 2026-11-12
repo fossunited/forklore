@@ -91,7 +91,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("socialHandle", (social) => {
     if (!social) return "";
     const label = String(social.label || "").trim().toLowerCase();
-    const hostOnly = new Set(["web", "website", "blog", "rss", "substack"]);
+    const hostOnly = new Set(["web", "website", "blog", "rss"]);
     try {
       const url = new URL(social.link);
       const host = url.hostname.replace(/^www\./, "");
