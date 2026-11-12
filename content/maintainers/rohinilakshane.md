@@ -14,18 +14,20 @@ socials:
     link: "https://mastodon.social/@rohini"
   - label: "Web"
     link: "https://about.me/rohini"
-  - label: "RSS"
+  - label: "Bluesky"
     link: "https://bsky.app/profile/aldebaran14.bsky.social"
   - label: "Medium"
     link: "https://medium.com/@aarohini"
 projects:
-  - name: "Not one specific project. Open-knowledge infrastructure: Wikimedia contributions, source preservation and research repositories"
+  - name: "Open-knowledge infrastructure"
     project_link: ""
     website_link: ""
     logo: ""
-    short_description: ""
+    short_description: "Maintaining the knowledge commons through reference repair, source preservation, metadata, accessible publications, open licensing and contributions to Wikimedia projects."
     description: |-
-      ""
+      I think of open-knowledge sources as infrastructure. Wikipedia articles, Wikimedia Commons collections, Wikidata records, citation archives, datasets and research repositories allow people to preserve, verify, discover and reuse knowledge. Their usefulness depends on continuous maintenance.
+      My work includes repairing references, archiving sources, copyediting, categorisation, and editorial review. I contribute photographs, recordings and documents to Wikimedia Commons, and create and improve Wikidata records connecting people, publications, institutions, languages, and collections. Creating and expanding women's biographical items on Wikidata is a major area of my contributions in the past few years. I also serve as a pending changes reviewer and event coordinator on English Wikipedia...
+        [read more](https://github.com/fossunited/forklore/issues/433)
 ---
 
 ## How to support
