@@ -59,10 +59,10 @@
   resolved "https://registry.yarnpkg.com/@11ty/eleventy-utils/-/eleventy-utils-2.0.7.tgz#40fa604864d64e98412f4f068a34379b471beddd"
   integrity sha512-6QE+duqSQ0GY9rENXYb4iPR4AYGdrFpqnmi59tFp9VrleOl0QSh8VlBr2yd6dlhkdtj7904poZW5PvGr9cMiJQ==
 
-"@11ty/eleventy@^3.1.7":
-  version "3.1.7"
-  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-3.1.7.tgz#2e46f13176ff0085c538d6bec66296701f7024f6"
-  integrity sha512-ioyq2V884tmKDxVH80OPq5cCn4IJqfV4p2BzznxNDn7o7LbA/g5RDl7zYLk5B/TUgoFyLO+dFbIawBWpAHxlyA==
+"@11ty/eleventy@^3.1.8":
+  version "3.1.8"
+  resolved "https://registry.yarnpkg.com/@11ty/eleventy/-/eleventy-3.1.8.tgz#3364261ff607d2a91a441191edadbf1a0e9df11f"
+  integrity sha512-nzwVWco4TBETroX7yARBtHlX8P1TWfqHZtQKc5LQ4vyBSbE8dw8lA5gsMWs9VpWqWoLdfnHCLl/r8hT8qOFvwg==
   dependencies:
     "@11ty/chokidar-with-glob-support" "^1.1.0"
     "@11ty/dependency-tree" "^4.0.2"
@@ -72,7 +72,7 @@
     "@11ty/eleventy-utils" "^2.0.7"
     "@11ty/lodash-custom" "^4.17.21"
     "@11ty/posthtml-urls" "^1.0.3"
-    "@11ty/recursive-copy" "^4.0.4"
+    "@11ty/recursive-copy" "^4.0.6"
     "@sindresorhus/slugify" "^2.2.1"
     bcp-47-normalize "^2.3.0"
     debug "^4.4.3"
@@ -85,11 +85,11 @@
     kleur "^4.1.5"
     liquidjs "^10.30.0"
     luxon "^3.7.2"
-    markdown-it "^14.2.0"
+    markdown-it "^14.3.3"
     minimist "^1.2.8"
     moo "0.5.2"
     node-retrieve-globals "^6.0.1"
-    nunjucks "npm:@11ty/nunjucks@^3.3.0"
+    nunjucks "^3.2.4"
     picomatch "^4.0.7"
     please-upgrade-node "^3.2.0"
     posthtml "^0.16.7"
@@ -113,14 +113,14 @@
     list-to-array "^1.1.0"
     parse-srcset "^1.0.2"
 
-"@11ty/recursive-copy@^4.0.4":
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/@11ty/recursive-copy/-/recursive-copy-4.0.4.tgz#1655eaf0846a0b803fbe061cf9288c4a804b4219"
-  integrity sha512-oI7m8pa7/IAU/3lqRU9vjBbs20iKFo7x+1K9kT3aVira6scc1X9MjBdgLCHzLJeJ7iB6wydioA+kr9/qPnvmlQ==
+"@11ty/recursive-copy@^4.0.6":
+  version "4.0.6"
+  resolved "https://registry.yarnpkg.com/@11ty/recursive-copy/-/recursive-copy-4.0.6.tgz#610f993482551f3c8fc596c9131bb71bf2d28bb7"
+  integrity sha512-+mdqG79jXufZnY0nD/ZWOsT7i8lxqXRtaO0TotpV4fD3qrHlPonEz2izTsbENAlzpsq5+QpwuHnH4RZoalx44g==
   dependencies:
+    brace-expansion "^1.1.21"
     errno "^1.0.0"
     junk "^3.1.0"
-    minimatch "^3.1.5"
     slash "^3.0.0"
 
 "@sindresorhus/slugify@^2.2.1":
@@ -197,10 +197,10 @@ bcp-47@^2.0.0:
     is-alphanumerical "^2.0.0"
     is-decimal "^2.0.0"
 
-brace-expansion@^1.1.7:
-  version "1.1.15"
-  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.15.tgz#a6d90d54067236e5f42570a3b7378d594d9b7738"
-  integrity sha512-EwOCDEex4quD37XhqM3omwtMoJjr//isUZz1JopUNWms+4Z2ViyM/k1YIRePpoVNnQhENnxtFjLaxNHrT7xIUg==
+brace-expansion@^1.1.21:
+  version "1.1.22"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.22.tgz#82f87655acd0bae5c8a717bb0a81573e43ab42c0"
+  integrity sha512-CKLDTuSsN0+r1ThM0WkzzBI7dnPI6xEGfa/JnVYIK9JNBA1N1NyPwXVHor//NKD/y3sDxp764sZdLhFK7pH8XQ==
   dependencies:
     balanced-match "^1.0.0"
     concat-map "0.0.1"
@@ -507,10 +507,10 @@ luxon@^3.7.2:
   resolved "https://registry.yarnpkg.com/luxon/-/luxon-3.7.2.tgz#d697e48f478553cca187a0f8436aff468e3ba0ba"
   integrity sha512-vtEhXh/gNjI9Yg1u4jX/0YVPMvxzHuGgCm6tC5kZyb08yjGWGnqAjGJvcXbqQR2P3MyMEFnRbpcdFS6PBcLqew==
 
-markdown-it@^14.2.0:
-  version "14.3.0"
-  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-14.3.0.tgz#8542fa5506e3530f7e2b08dc3885630135c5620e"
-  integrity sha512-RCEsPjR+sr0x+AuYp601tKTkgFG4YEPLCzHST3cQ/fhlJkqAkz1L2/Qbp1j9qw5SBwQHFBoW8+hoN5xssOF0Tw==
+markdown-it@^14.3.3:
+  version "14.3.3"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-14.3.3.tgz#15e6e145d20b1499a7b323bb14e21062690132d8"
+  integrity sha512-L//tDAkjTjJCU6pBUSBTgs3Kg4InVaZuUZog/b6V12UKhcDQ7S78877ibbCanRExwPuYP1CZD7Gd2dxSy1GXRg==
   dependencies:
     argparse "^2.0.1"
     entities "^4.5.0"
@@ -540,13 +540,6 @@ mime@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/mime/-/mime-3.0.0.tgz#b374550dca3a0c18443b0c950a6a58f1931cf7a7"
   integrity sha512-jSCU7/VB1loIWBZe14aEYHU/+1UMEHoaO7qxCOVJOw9GgH72VAWppxNcjU+x9a2k3GSIBXNKxXQFqRvvZ7vr3A==
-
-minimatch@^3.1.5:
-  version "3.1.5"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.5.tgz#580c88f8d5445f2bd6aa8f3cadefa0de79fbd69e"
-  integrity sha512-VgjWUsnnT6n+NUk6eZq77zeFdpW2LWDzP6zFGrCbHXiYNul5Dzqk2HHQ5uFH2DNW5Xbp8+jVzaeNt94ssEEl4w==
-  dependencies:
-    brace-expansion "^1.1.7"
 
 minimist@^1.2.8:
   version "1.2.8"
@@ -592,10 +585,10 @@ normalize-path@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
 
-"nunjucks@npm:@11ty/nunjucks@^3.3.0":
-  version "3.3.0"
-  resolved "https://registry.yarnpkg.com/@11ty/nunjucks/-/nunjucks-3.3.0.tgz#7ec5a7674f9705c6c779b4e39d1178859a0bd61a"
-  integrity sha512-kmMWFLcTMVeniw5G/pYV/uvPL/rN3Nm4WjRtkL9gZoXYh4cbME09ubVTHVJFr/G/h6wR89qJ8jULVqYJ4HI3yg==
+nunjucks@^3.2.4:
+  version "3.2.4"
+  resolved "https://registry.yarnpkg.com/nunjucks/-/nunjucks-3.2.4.tgz#f0878eef528ce7b0aa35d67cc6898635fd74649e"
+  integrity sha512-26XRV6BhkgK0VOxfbU5cQI+ICFUtMLixv1noZn1tGU38kQH5A5nmmbk/O45xdyBhD1esk47nKrY0mvQpZIhRjQ==
   dependencies:
     a-sync-waterfall "^1.0.0"
     asap "^2.0.3"
