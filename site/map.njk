@@ -1,0 +1,877 @@
+---
+layout: base.njk
+title: Where are the Maintainers? | Forklore
+permalink: /map/
+eleventyExcludeFromCollections: true
+---
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<style>
+.page-shell:has(.map-page) {
+  width: min(100%, 1100px);
+}
+.map-page {
+  margin: 0 -2px;
+  display: flex;
+  flex-direction: column;
+  border-left: 2px dashed var(--line);
+  border-right: 2px dashed var(--line);
+}
+
+/* ── Map container ── */
+.map-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+#indiaMap {
+  width: 100%;
+  height: calc(100vh - 80px);
+  min-height: 420px;
+}
+
+/* ── Floating title ── */
+.map-hero {
+  position: absolute;
+  top: 1.75rem;
+  left: 1.25rem;
+  z-index: 600;
+  pointer-events: none;
+}
+.map-hero > * { pointer-events: auto; }
+.map-title {
+  font-family: var(--mono);
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding: 0.6rem 0.9rem;
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-bottom: 4px solid var(--button-bg);
+}
+.map-title .accent { color: var(--button-bg); }
+
+/* ── Stats ── */
+.map-stats {
+  position: absolute;
+  top: 1.75rem;
+  right: 1.25rem;
+  z-index: 600;
+  display: flex;
+  gap: 0;
+}
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.45rem 0.75rem;
+  background: color-mix(in srgb, var(--button-bg), var(--bg) 88%);
+  border: 2px solid var(--text);
+  border-right: 0;
+}
+.stat-card:last-child { border-right: 2px solid var(--text); }
+.stat-card:first-child { border-left: 2px solid var(--text); }
+.stat-num {
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--button-bg);
+}
+.stat-label {
+  font-size: 0.55rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.15rem;
+}
+
+/* ── Leaderboard ── */
+.lb-float {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 1.25rem;
+  z-index: 600;
+  width: 230px;
+  max-height: 280px;
+  overflow-y: auto;
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-left: 4px solid var(--button-bg);
+}
+.lb-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px dashed var(--line);
+  background: color-mix(in srgb, var(--button-bg), var(--bg) 88%);
+}
+.lb-header h3 {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  font-weight: 700;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+.lb-header span {
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  color: var(--button-bg);
+}
+.lb-list { padding: 0.4rem; }
+.lb-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.4rem;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.lb-item:hover { background: color-mix(in srgb, var(--button-bg), var(--bg) 88%); }
+.lb-rank {
+  font-family: var(--mono);
+  font-weight: 700;
+  width: 0.9rem;
+  flex-shrink: 0;
+  font-size: 0.6rem;
+  color: var(--button-bg);
+}
+.lb-city { flex: 1; font-weight: 600; font-size: 0.68rem; }
+.lb-bar-wrap {
+  flex: 1;
+  height: 3px;
+  background: var(--panel);
+  overflow: hidden;
+}
+.lb-fill {
+  height: 100%;
+  background: var(--button-bg);
+  width: 0;
+  transition: width 0.8s ease;
+}
+.lb-count {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  color: var(--button-bg);
+  font-weight: 700;
+  width: 1rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+/* ── Hover card ── */
+.hover-card {
+  position: absolute;
+  z-index: 700;
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-top: 3px solid var(--button-bg);
+  padding: 0.6rem 0.75rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.12s;
+  max-width: 220px;
+}
+.hover-card.visible { opacity: 1; }
+.hover-card-city {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin: 0 0 0.3rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px dashed var(--line);
+}
+.hover-card-people {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.hover-card-person {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+}
+.hover-card-person img {
+  width: 18px; height: 18px;
+  border: 1px solid var(--text);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.hover-card-person .hcp-placeholder {
+  width: 18px; height: 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.hover-card-name { font-weight: 600; }
+.hover-card-more {
+  font-size: 0.58rem;
+  color: var(--muted);
+  font-family: var(--mono);
+  margin-top: 0.1rem;
+}
+
+/* ── Side panel ── */
+.map-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+.map-overlay.open { display: block; }
+.map-panel {
+  position: fixed;
+  top: 0; right: 0;
+  width: min(340px, 85vw);
+  height: 100vh;
+  background: var(--bg);
+  border-left: 3px solid var(--button-bg);
+  transform: translateX(100%);
+  transition: transform 0.2s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+.map-panel.open { transform: translateX(0); }
+
+.panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.6rem 1rem;
+  border-bottom: 2px solid var(--text);
+  background: color-mix(in srgb, var(--button-bg), var(--bg) 88%);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.panel-close {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 1px solid var(--text);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  width: 1.5rem; height: 1.5rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+.panel-close:hover { background: var(--text); color: var(--bg); }
+.panel-breadcrumb {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+.panel-body { padding: 1rem; }
+
+.panel-photo {
+  width: 48px; height: 48px;
+  border: 2px solid var(--text);
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+.panel-name {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+.panel-designation {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0.1rem 0 0;
+  font-family: var(--sans);
+}
+.panel-city-badge {
+  display: inline-block;
+  background: var(--button-bg);
+  color: var(--button-text);
+  font-size: 0.58rem;
+  font-weight: 700;
+  font-family: var(--mono);
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--text);
+  margin-top: 0.4rem;
+}
+.panel-section-title {
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin: 0.8rem 0 0.35rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px dashed var(--line);
+}
+.panel-project {
+  padding: 0.4rem 0.5rem;
+  border-left: 3px solid var(--button-bg);
+  background: var(--panel);
+  margin-bottom: 0.25rem;
+}
+.panel-project-name { font-weight: 700; font-size: 0.78rem; }
+.panel-project-desc { font-size: 0.7rem; color: var(--muted); margin: 0.1rem 0 0; line-height: 1.4; font-family: var(--sans); }
+.panel-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  padding: 0.4rem 0.8rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-family: var(--mono);
+  border: 2px solid var(--text);
+}
+.panel-link:hover { background: var(--text); color: var(--bg); }
+
+/* ── Panel city list ── */
+.panel-city-title {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+.panel-city-count {
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin: 0.1rem 0 0.6rem;
+  font-family: var(--mono);
+}
+.city-person-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px dashed var(--line);
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.city-person-row:last-of-type { border-bottom: 0; }
+.city-person-row:hover { background: color-mix(in srgb, var(--button-bg), var(--bg) 88%); }
+.city-person-photo {
+  width: 28px; height: 28px;
+  border: 1px solid var(--text);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.city-person-placeholder {
+  width: 28px; height: 28px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  flex-shrink: 0;
+}
+.city-person-info { min-width: 0; flex: 1; }
+.city-person-name { font-weight: 700; font-size: 0.78rem; }
+.city-person-role {
+  font-size: 0.65rem;
+  color: var(--muted);
+  font-family: var(--sans);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.city-person-arrow { font-size: 0.65rem; color: var(--muted); }
+
+/* ── Back link in profile view ── */
+.back-to-city {
+  font-size: 0.65rem;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--mono);
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 0.1rem;
+}
+.back-to-city:hover { color: var(--text); border-color: var(--text); }
+
+/* ── Bottom CTA ── */
+.map-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.5rem 1.75rem;
+  background: color-mix(in srgb, var(--button-bg), var(--bg) 88%);
+  border-top: 2px solid var(--button-bg);
+}
+.map-cta-text {
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  margin: 0;
+}
+.map-cta-text strong { color: var(--button-bg); }
+.map-cta-text span { color: var(--muted); font-size: 0.75rem; }
+.map-cta-btn {
+  flex-shrink: 0;
+  padding: 0.6rem 1.1rem;
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: 2px solid var(--text);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+.map-cta-btn:hover { background: var(--text); color: var(--bg); }
+.unlisted-drawer {
+  display: none;
+  padding: 1.1rem 1.5rem 1.25rem;
+  background: var(--panel);
+  border-top: 1px dashed var(--line);
+}
+.unlisted-drawer.open { display: block; }
+.no-location-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.no-loc-chip {
+  display: inline-block;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--line);
+  font-size: 0.7rem;
+  font-family: var(--mono);
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.1s;
+}
+.no-loc-chip:hover {
+  border-color: var(--button-bg);
+  color: var(--button-bg);
+  background: color-mix(in srgb, var(--button-bg), transparent 90%);
+}
+
+/* ── Leaflet overrides ── */
+.leaflet-container { background: color-mix(in srgb, var(--button-bg), var(--bg) 95%) !important; }
+.leaflet-control-zoom {
+  border: 2px solid var(--text) !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  overflow: hidden;
+}
+.leaflet-control-zoom a {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+  border-bottom: 1px solid var(--line) !important;
+  font-weight: 700;
+  width: 26px !important; height: 26px !important; line-height: 26px !important;
+  font-size: 14px !important;
+}
+.leaflet-control-zoom a:last-child { border-bottom: none !important; }
+.leaflet-control-attribution { display: none !important; }
+
+/* ── Responsive ── */
+@media (max-width: 700px) {
+  .map-page { margin: 0 -0.5rem; }
+  .map-stats { top: auto; bottom: 4rem; right: 0.5rem; flex-direction: column; }
+  .stat-card { padding: 0.3rem 0.4rem; border-right: 2px solid var(--text); }
+  .stat-card:last-child { border-bottom: 2px solid var(--text); }
+  .stat-num { font-size: 0.85rem; }
+  .lb-float { width: 160px; bottom: 0.5rem; left: 0.5rem; max-height: 180px; }
+  .lb-header { padding: 0.35rem 0.4rem; }
+  .lb-header h3 { font-size: 0.5rem; }
+  .lb-list { padding: 0.2rem; }
+  .lb-item { font-size: 0.6rem; padding: 0.15rem 0.2rem; }
+  .map-title { font-size: 0.8rem; padding: 0.3rem 0.5rem; }
+  .hover-card { display: none !important; }
+  .map-cta { flex-direction: column; align-items: flex-start; padding: 0.65rem 0.75rem; }
+  .unlisted-drawer { padding: 0.5rem 0.75rem 0.75rem; }
+  #indiaMap { height: calc(100vh - 60px); min-height: 350px; }
+}
+</style>
+
+<div class="map-page">
+  <div class="map-wrap">
+    <div class="map-hero">
+      <h1 class="map-title">Where are the <span class="accent">Maintainers?</span></h1>
+    </div>
+
+    <div class="map-stats">
+      <div class="stat-card">
+        <span class="stat-num" id="pinned-count">0</span>
+        <span class="stat-label">Pinned</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="city-count">0</span>
+        <span class="stat-label">Cities</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">{{ collections.maintainer | length }}</span>
+        <span class="stat-label">Total</span>
+      </div>
+    </div>
+
+    <div id="indiaMap"></div>
+
+    <div class="lb-float">
+      <div class="lb-header">
+        <h3>City leaderboard</h3>
+        <span id="lb-total"></span>
+      </div>
+      <div class="lb-list" id="lbList"></div>
+    </div>
+
+    <div class="hover-card" id="hoverCard">
+      <div class="hover-card-city" id="hoverCardCity"></div>
+      <div class="hover-card-people" id="hoverCardPeople"></div>
+    </div>
+
+    <div class="map-overlay" id="map-overlay"></div>
+    <div class="map-panel" id="map-panel">
+      <div class="panel-top">
+        <span class="panel-breadcrumb" id="panel-breadcrumb">City</span>
+        <button class="panel-close" id="panel-close" aria-label="Close panel">&times;</button>
+      </div>
+      <div class="panel-body" id="panel-content"></div>
+    </div>
+  </div>
+
+  <div class="map-cta">
+    <p class="map-cta-text">
+      <strong>Don't see your profile?</strong>
+      <span> — add your city to your GitHub profile</span>
+    </p>
+    <button class="map-cta-btn" id="show-unlisted">See who's not on the map</button>
+  </div>
+  <div class="unlisted-drawer" id="unlisted-drawer">
+    <div class="no-location-grid" id="no-location-grid"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+(function() {
+  const CITIES = {
+    'Bangalore':  { lat: 12.97, lng: 77.59 },
+    'Bengaluru':  { lat: 12.97, lng: 77.59 },
+    'Mumbai':     { lat: 19.07, lng: 72.87 },
+    'New Delhi':  { lat: 28.61, lng: 77.20 },
+    'Pune':       { lat: 18.52, lng: 73.85 },
+    'Hyderabad':  { lat: 17.38, lng: 78.48 },
+    'Chennai':    { lat: 13.08, lng: 80.27 },
+    'Kolkata':    { lat: 22.57, lng: 88.36 },
+    'Kochi':      { lat: 9.93,  lng: 76.26 },
+    'Kerala':     { lat: 10.10, lng: 76.35 },
+    'Kannur':     { lat: 11.87, lng: 75.37 },
+    'Guwahati':   { lat: 26.14, lng: 91.74 },
+    'Noida':      { lat: 28.57, lng: 77.32 },
+    'Shivamogga': { lat: 13.93, lng: 75.57 },
+  };
+
+  const LOCATIONS = {
+    'abhinavxd': 'Bangalore', 'aravindavk': 'Shivamogga', 'arjxn-py': 'New Delhi',
+    'agriyakhetarpal': 'New Delhi', 'bodhish': 'Kochi', 'knadh': 'Bengaluru',
+    'kovidgoyal': 'Mumbai', 'netchampfaris': 'Mumbai', 'raisedadead': 'Bengaluru',
+    'amhsirak': 'Mumbai', 'anandbagmar': 'Pune', 'AyanSinhaMahapatra': 'Bangalore',
+    'ayushmaanBora': 'Bengaluru', 'BodduSriPavan-111': 'Hyderabad', 'dalmia': 'Bengaluru',
+    'Eyantra698Sumanto': 'Mumbai', 'helloanoop': 'Bangalore', 'junaid2005p': 'Guwahati',
+    'kayceesrk': 'Chennai', 'nikkothari22': 'Mumbai', 'liyasthomas': 'Kerala',
+    'marketcalls': 'Bangalore', 'mr-karan': 'Bangalore', 'pnudupa': 'Bengaluru',
+    'nsh07': 'Kolkata', 'ntkathole': 'Pune', 'omshivaprakash': 'Bangalore',
+    'pateljannat': 'Mumbai', 'ramyaragupathy': 'Bangalore', 'prasunanand': 'Hyderabad',
+    'priyanshujain': 'Bangalore', 'shikhamis11': 'Bangalore', 'tachyons': 'Kannur',
+    'sanjayaksaxena': 'Noida', 'pranaykotas': 'Bengaluru', 'abhisek': 'Bangalore',
+    'inashivb': 'Bangalore', 'shijithkjayan': 'Kochi', 'SuperCoolPencil': 'Mumbai',
+  };
+
+  const allMaintainers = [
+    {%- for m in collections.maintainer %}
+    {
+      username: {{ m.data.username | dump | safe }},
+      full_name: {{ m.data.full_name | dump | safe }},
+      photo: {{ m.data.photo | dump | safe }},
+      designation: {{ (m.data.designation or "") | dump | safe }},
+      url: {{ m.url | dump | safe }},
+      projects: [
+        {%- for p in m.data.projects %}
+        { name: {{ p.name | dump | safe }}, short_description: {{ (p.short_description or "") | dump | safe }} },
+        {%- endfor %}
+      ]
+    },
+    {%- endfor %}
+  ];
+
+  function canonCity(c) {
+    if (c === 'Bengaluru') return 'Bangalore';
+    if (c === 'Kerala') return 'Kochi area';
+    return c;
+  }
+
+  function esc(s) {
+    if (!s) return '';
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  const cityGroups = {};
+  const located = [], unlocated = [];
+
+  allMaintainers.forEach(m => {
+    const city = LOCATIONS[m.username];
+    if (city && CITIES[city]) {
+      m.city = city;
+      m.canonCity = canonCity(city);
+      located.push(m);
+      const key = canonCity(city);
+      if (!cityGroups[key]) cityGroups[key] = { city: key, coords: CITIES[city], people: [] };
+      cityGroups[key].people.push(m);
+    } else {
+      unlocated.push(m);
+    }
+  });
+
+  const sortedCities = Object.values(cityGroups).sort((a, b) => b.people.length - a.people.length);
+  const maxCount = sortedCities[0] ? sortedCities[0].people.length : 1;
+
+  document.getElementById('pinned-count').textContent = located.length;
+  document.getElementById('city-count').textContent = sortedCities.length;
+  document.getElementById('lb-total').textContent = located.length + ' pinned';
+
+  // ── Leaderboard ──
+  const lbList = document.getElementById('lbList');
+  sortedCities.forEach((g, i) => {
+    const pct = Math.round((g.people.length / maxCount) * 100);
+    const item = document.createElement('div');
+    item.className = 'lb-item';
+    item.innerHTML =
+      '<span class="lb-rank">' + (i + 1) + '</span>' +
+      '<span class="lb-city">' + esc(g.city) + '</span>' +
+      '<div class="lb-bar-wrap"><div class="lb-fill" data-w="' + pct + '"></div></div>' +
+      '<span class="lb-count">' + g.people.length + '</span>';
+    item.addEventListener('click', () => {
+      map.flyTo([g.coords.lat, g.coords.lng], 7, { duration: 0.6 });
+      showCityPanel(g);
+    });
+    lbList.appendChild(item);
+  });
+
+  setTimeout(() => {
+    document.querySelectorAll('.lb-fill').forEach(b => { b.style.width = b.dataset.w + '%'; });
+  }, 300);
+
+  // ── Leaflet — locked to India ──
+  const indiaBounds = L.latLngBounds([5, 65], [38, 100]);
+  const isDark = document.documentElement.classList.contains('dark-mode');
+  const tileUrl = isDark
+    ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+
+  const map = L.map('indiaMap', {
+    center: [22, 80],
+    zoom: 5,
+    zoomControl: false,
+    scrollWheelZoom: true,
+    attributionControl: false,
+    minZoom: 4,
+    maxZoom: 10,
+    maxBounds: indiaBounds,
+    maxBoundsViscosity: 1.0,
+  });
+
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
+  L.tileLayer(tileUrl, { subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+
+  const themeBtn = document.querySelector('[data-theme-toggle]');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+      setTimeout(() => {
+        const nowDark = document.documentElement.classList.contains('dark-mode');
+        const url = nowDark
+          ? 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png'
+          : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png';
+        map.eachLayer(l => { if (l instanceof L.TileLayer) map.removeLayer(l); });
+        L.tileLayer(url, { subdomains: 'abcd', maxZoom: 19 }).addTo(map);
+      }, 100);
+    });
+  }
+
+  // ── Hover card ──
+  const hoverCard = document.getElementById('hoverCard');
+  const hoverCardCity = document.getElementById('hoverCardCity');
+  const hoverCardPeople = document.getElementById('hoverCardPeople');
+  let hoverTimeout = null;
+
+  function showHoverCard(g, e) {
+    hoverCardCity.textContent = g.city + ' · ' + g.people.length;
+    hoverCardPeople.innerHTML = '';
+    g.people.slice(0, 3).forEach(m => {
+      const div = document.createElement('div');
+      div.className = 'hover-card-person';
+      div.innerHTML =
+        (m.photo
+          ? '<img src="' + esc(m.photo) + '" alt="">'
+          : '<div class="hcp-placeholder"></div>') +
+        '<span class="hover-card-name">' + esc(m.full_name) + '</span>';
+      hoverCardPeople.appendChild(div);
+    });
+    if (g.people.length > 3) {
+      const more = document.createElement('div');
+      more.className = 'hover-card-more';
+      more.textContent = '+' + (g.people.length - 3) + ' more';
+      hoverCardPeople.appendChild(more);
+    }
+
+    const mapRect = document.getElementById('indiaMap').getBoundingClientRect();
+    let left = e.clientX - mapRect.left + 14;
+    let top = e.clientY - mapRect.top - 8;
+    if (left + 220 > mapRect.width) left = e.clientX - mapRect.left - 230;
+    if (top + 140 > mapRect.height) top = mapRect.height - 150;
+    if (top < 0) top = 8;
+    hoverCard.style.left = left + 'px';
+    hoverCard.style.top = top + 'px';
+    hoverCard.classList.add('visible');
+  }
+
+  function hideHoverCard() { hoverCard.classList.remove('visible'); }
+
+  // ── Markers ──
+  const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--button-bg').trim() || '#cff2da';
+  const strokeColor = isDark ? '#cff2da' : '#18222a';
+
+  sortedCities.forEach((g) => {
+    const count = g.people.length;
+    const radius = Math.max(10, Math.min(22, count * 2 + 7));
+
+    const circle = L.circleMarker([g.coords.lat, g.coords.lng], {
+      radius,
+      fillColor: accentColor,
+      color: strokeColor,
+      weight: 2,
+      fillOpacity: 0.75,
+    }).addTo(map);
+
+    const icon = L.divIcon({
+      className: '',
+      html: '<div style="font-family:var(--mono);font-size:10px;font-weight:700;color:#18222a;text-align:center;line-height:1;pointer-events:none">' + count + '</div>',
+      iconSize: [16, 12],
+      iconAnchor: [8, 6],
+    });
+    L.marker([g.coords.lat, g.coords.lng], { icon, interactive: false }).addTo(map);
+
+    circle.on('mouseover', function(e) {
+      clearTimeout(hoverTimeout);
+      this.setStyle({ fillOpacity: 1, weight: 3 });
+      showHoverCard(g, e.originalEvent);
+    });
+    circle.on('mousemove', function(e) { showHoverCard(g, e.originalEvent); });
+    circle.on('mouseout', function() {
+      this.setStyle({ fillOpacity: 0.75, weight: 2 });
+      hoverTimeout = setTimeout(hideHoverCard, 120);
+    });
+    circle.on('click', () => showCityPanel(g));
+  });
+
+  // ── Panels ──
+  const breadcrumb = document.getElementById('panel-breadcrumb');
+
+  function showCityPanel(g) {
+    hideHoverCard();
+    const panel = document.getElementById('map-panel');
+    const overlay = document.getElementById('map-overlay');
+    const content = document.getElementById('panel-content');
+    breadcrumb.textContent = g.city;
+
+    let html = '<h2 class="panel-city-title">' + esc(g.city) + '</h2>' +
+      '<p class="panel-city-count">' + g.people.length + ' maintainer' + (g.people.length > 1 ? 's' : '') + '</p>';
+
+    g.people.forEach(m => {
+      html += '<div class="city-person-row" data-username="' + esc(m.username) + '">' +
+        (m.photo
+          ? '<img class="city-person-photo" src="' + esc(m.photo) + '" alt="">'
+          : '<div class="city-person-placeholder"></div>') +
+        '<div class="city-person-info">' +
+          '<div class="city-person-name">' + esc(m.full_name) + '</div>' +
+          (m.designation ? '<div class="city-person-role">' + esc(m.designation) + '</div>' : '') +
+        '</div>' +
+        '<span class="city-person-arrow">&rarr;</span>' +
+      '</div>';
+    });
+
+    content.innerHTML = html;
+    content.querySelectorAll('.city-person-row').forEach(row => {
+      row.addEventListener('click', () => {
+        const m = g.people.find(p => p.username === row.dataset.username);
+        if (m) openProfilePanel(m);
+      });
+    });
+    panel.classList.add('open');
+    overlay.classList.add('open');
+  }
+
+  function openProfilePanel(m) {
+    const content = document.getElementById('panel-content');
+    breadcrumb.textContent = m.full_name;
+
+    let projectsHtml = '';
+    if (m.projects && m.projects.length) {
+      projectsHtml = '<div class="panel-section-title">Projects</div>';
+      m.projects.forEach(p => {
+        projectsHtml += '<div class="panel-project">' +
+          '<div class="panel-project-name">' + esc(p.name) + '</div>' +
+          (p.short_description ? '<p class="panel-project-desc">' + esc(p.short_description) + '</p>' : '') +
+        '</div>';
+      });
+    }
+
+    content.innerHTML =
+      '<span class="back-to-city">&larr; back to city</span>' +
+      (m.photo ? '<img class="panel-photo" src="' + esc(m.photo) + '" alt="' + esc(m.full_name) + '">' : '') +
+      '<h2 class="panel-name">' + esc(m.full_name) + '</h2>' +
+      (m.designation ? '<p class="panel-designation">' + esc(m.designation) + '</p>' : '') +
+      (m.canonCity ? '<div class="panel-city-badge">' + esc(m.canonCity) + '</div>' : '') +
+      projectsHtml +
+      '<a class="panel-link" href="' + esc(m.url) + '">Open profile &rarr;</a>';
+
+    const backBtn = content.querySelector('.back-to-city');
+    if (backBtn) {
+      const cityKey = m.canonCity;
+      backBtn.addEventListener('click', () => {
+        const g = cityGroups[cityKey];
+        if (g) showCityPanel(g);
+      });
+    }
+  }
+
+  function closePanel() {
+    document.getElementById('map-panel').classList.remove('open');
+    document.getElementById('map-overlay').classList.remove('open');
+  }
+
+  document.getElementById('panel-close').addEventListener('click', closePanel);
+  document.getElementById('map-overlay').addEventListener('click', closePanel);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });
+
+  // ── Unlisted drawer ──
+  const noLocGrid = document.getElementById('no-location-grid');
+  const unlistedDrawer = document.getElementById('unlisted-drawer');
+  const showBtn = document.getElementById('show-unlisted');
+
+  unlocated.forEach(m => {
+    const a = document.createElement('a');
+    a.href = m.url;
+    a.className = 'no-loc-chip';
+    a.textContent = m.full_name || m.username;
+    noLocGrid.appendChild(a);
+  });
+
+  showBtn.addEventListener('click', () => {
+    const open = unlistedDrawer.classList.toggle('open');
+    showBtn.textContent = open ? 'Hide unlisted' : "See who's not on the map";
+  });
+})();
+</script>
