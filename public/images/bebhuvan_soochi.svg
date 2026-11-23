@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!--
+    The composition strip, at 16px: three rules of different lengths.
+    It reads as an index rather than a logo, and the blue holds up
+    against both a light and a dark browser chrome.
+  -->
+  <style>
+    .m { fill: #2a78d6 }
+    @media (prefers-color-scheme: dark) { .m { fill: #6da7ec } }
+  </style>
+  <g class="m">
+    <rect x="4" y="7"  width="24" height="4" rx="2"/>
+    <rect x="4" y="14" width="16" height="4" rx="2"/>
+    <rect x="4" y="21" width="9"  height="4" rx="2"/>
+  </g>
+</svg>
