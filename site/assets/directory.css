@@ -291,9 +291,6 @@
   margin: 3rem 0;
 }
 
-.list-empty {
-  padding-inline: clamp(1.25rem, 4vw, 2.25rem);
-}
 
 .list-pagination {
   display: flex;

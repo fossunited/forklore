@@ -53,13 +53,13 @@ permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1
     <a href="/commit-emoji/" class="button subtle">Commit to Emoji</a>
   </div>
 </section>
+<p class="search-status" data-empty-state role="status" aria-live="polite" hidden>No maintainers found</p>
 
 <section class="maintainer-list" aria-label="Maintainers" data-maintainers-container>
   {% for maintainer in pageMaintainers %}
     {% include "maintainer-card.njk" %}
   {% endfor %}
 </section>
-<p class="empty-state list-empty" data-empty-state role="status" aria-live="polite" hidden>No maintainers found</p>
 
 {% if pagination.href.previous or pagination.href.next %}
   <nav class="list-pagination" aria-label="Directory pages" data-maintainers-pagination>

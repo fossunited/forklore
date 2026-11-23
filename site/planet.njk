@@ -25,6 +25,7 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
     <span aria-hidden="true">⌕</span>
     <input data-planet-search type="search" placeholder="Search posts" autocomplete="off" aria-label="Search posts">
   </label>
+  <p class="search-status" data-planet-empty role="status" aria-live="polite" hidden>No posts found</p>
   <details>
     <summary>Filter by author or tag</summary>
     <div class="planet-filter-group">
@@ -54,7 +55,6 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
     {% include "planet-post-card.njk" %}
   {% endfor %}
 </section>
-<p class="empty-state planet-empty" data-planet-empty role="status" aria-live="polite" hidden>No posts found</p>
 
 {% if pagination.href.previous or pagination.href.next %}
 <nav class="planet-pagination" aria-label="Page navigation" data-planet-pagination>

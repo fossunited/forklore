@@ -68,6 +68,19 @@ a {
   color: inherit;
 }
 
+.search-status {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Planet's status sits inside the padded controls grid and aligns on its own;
+   the directory's is a sibling below the flex control row, so match the bar's
+   side padding. */
+.directory-controls + .search-status {
+  padding: 0.75rem clamp(1rem, 4vw, 2rem) 0;
+}
+
 .page-shell {
   width: min(100%, 48rem);
   min-height: 100vh;
