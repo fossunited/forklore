@@ -2,12 +2,16 @@
 layout: base.njk
 title: Forklore
 description: Confessions, quirks, and occasional rants from India's open source keepers.
-permalink: /
+pagination:
+  data: collections.maintainers
+  size: 12
+  alias: pageMaintainers
+permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 
 <section class="hero">
   <div class="home-logo-row">
-    <img src="/logo/logo_light.svg" alt="Forklore" class="home-logo" data-theme-logo>
+    <img src="/logo/logo_light.svg" alt="Forklore" class="home-logo" height="40" decoding="async" fetchpriority="high" data-theme-logo>
   </div>
   <div class="home-meta">
     <p>
@@ -34,7 +38,7 @@ permalink: /
   <div class="search-sort">
     <label class="search-box">
       <span aria-hidden="true">⌕</span>
-      <input data-search-input type="search" placeholder="Search" autocomplete="off">
+      <input data-search-input type="search" placeholder="Search" autocomplete="off" aria-label="Search maintainers">
       <kbd data-shortcut-label>ctrl+k</kbd>
     </label>
     <select data-sort-select aria-label="Sort maintainers">
@@ -50,9 +54,25 @@ permalink: /
   </div>
 </section>
 
-<section class="maintainer-list" aria-label="Maintainers">
-  {% for maintainer in collections.maintainers %}
+<section class="maintainer-list" aria-label="Maintainers" data-maintainers-container>
+  {% for maintainer in pageMaintainers %}
     {% include "maintainer-card.njk" %}
   {% endfor %}
-  <p class="empty-state" data-empty-state hidden>No Maintainers Found</p>
 </section>
+<p class="empty-state list-empty" data-empty-state role="status" aria-live="polite" hidden>No maintainers found</p>
+
+{% if pagination.href.previous or pagination.href.next %}
+  <nav class="list-pagination" aria-label="Directory pages" data-maintainers-pagination>
+    {% if pagination.href.previous %}
+      <a href="{{ pagination.href.previous }}" class="button subtle">← Previous</a>
+    {% else %}
+      <span class="button subtle" aria-disabled="true">← Previous</span>
+    {% endif %}
+    <span class="list-page-count">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
+    {% if pagination.href.next %}
+      <a href="{{ pagination.href.next }}" class="button subtle">Next →</a>
+    {% else %}
+      <span class="button subtle" aria-disabled="true">Next →</span>
+    {% endif %}
+  </nav>
+{% endif %}
