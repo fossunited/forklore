@@ -2,11 +2,7 @@
 layout: base.njk
 title: Forklore
 description: Confessions, quirks, and occasional rants from India's open source keepers.
-pagination:
-  data: collections.maintainers
-  size: 12
-  alias: pageMaintainers
-permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}"
+permalink: /
 ---
 
 <section class="hero">
@@ -55,24 +51,10 @@ permalink: "/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1
 </section>
 <p class="search-status" data-empty-state role="status" aria-live="polite" hidden>No maintainers found</p>
 
-<section class="maintainer-list" aria-label="Maintainers" data-maintainers-container>
-  {% for maintainer in pageMaintainers %}
+<section class="maintainer-list" aria-label="Maintainers" data-maintainers>
+  {% for maintainer in collections.maintainers %}
     {% include "maintainer-card.njk" %}
   {% endfor %}
 </section>
 
-{% if pagination.href.previous or pagination.href.next %}
-  <nav class="list-pagination" aria-label="Directory pages" data-maintainers-pagination>
-    {% if pagination.href.previous %}
-      <a href="{{ pagination.href.previous }}" class="button subtle">← Previous</a>
-    {% else %}
-      <span class="button subtle" aria-disabled="true">← Previous</span>
-    {% endif %}
-    <span class="list-page-count">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
-    {% if pagination.href.next %}
-      <a href="{{ pagination.href.next }}" class="button subtle">Next →</a>
-    {% else %}
-      <span class="button subtle" aria-disabled="true">Next →</span>
-    {% endif %}
-  </nav>
-{% endif %}
+<button class="button subtle show-more" type="button" data-maintainers-more hidden>Show more</button>

@@ -229,55 +229,6 @@ export default function (eleventyConfig) {
       : [],
   );
 
-  eleventyConfig.addFilter("postsJson", (posts) => {
-    const list = (Array.isArray(posts) ? posts : []).map((post) => ({
-      slug: post.slug,
-      title: post.title || "Untitled",
-      maintainerUsername: post.maintainerUsername,
-      maintainerName: post.maintainerName,
-      maintainerPhoto: post.maintainerPhoto || "/maintainer_photo_light.svg",
-      pubDate: post.pubDate,
-      tags: post.tags || [],
-      contentSnippet: post.contentSnippet
-        ? post.contentSnippet.length > 280
-          ? `${post.contentSnippet.slice(0, 279)}…`
-          : post.contentSnippet
-        : "",
-      link: post.link || "",
-    }));
-    return JSON.stringify(list);
-  });
-
-  // Machine-readable index of every maintainer, mirroring the fields the
-  // maintainer card renders. designation and project descriptions are
-  // pre-rendered inline HTML (build-time, trusted) so the client renderer
-  // stays in step with the server template instead of re-implementing it.
-  eleventyConfig.addFilter("maintainersJson", (items) => {
-    const list = (Array.isArray(items) ? items : []).map((item) => {
-      const data = item.data || {};
-      const projects = Array.isArray(data.projects) ? data.projects : [];
-      return {
-        full_name: data.full_name || "",
-        username: data.username || "",
-        url: item.url || "",
-        photo: data.photo || "/maintainer_photo_light.svg",
-        created_on: data.created_on || "",
-        designation: markdownInline(data.designation || ""),
-        projectsText: projects.map((project) => project.name || "").join(" "),
-        projects: projects.map((project) => ({
-          name: project.name || "",
-          logo: project.logo || "",
-          project_link: project.project_link || "",
-          shortLabel: shortLabelOf(project),
-          description: markdownInline(
-            project.short_description || project.description || "",
-          ),
-        })),
-      };
-    });
-    return JSON.stringify(list);
-  });
-
   return {
     dir: {
       input: ".",

@@ -38,9 +38,11 @@ eleventyComputed:
   </section>
 {% endif %}
 
-<section class="planet-posts" aria-label="Posts by {{ author.name }}">
+<section class="planet-posts" aria-label="Posts by {{ author.name }}" data-planet-posts>
   {% for post in posts %}
     {% include "planet-post-card.njk" %}
   {% endfor %}
-  <p class="empty-state" data-planet-empty role="status" aria-live="polite" hidden>No posts found</p>
 </section>
+<p class="search-status" data-planet-empty role="status" aria-live="polite" hidden>No posts found</p>
+
+<button class="button subtle show-more" type="button" data-planet-more hidden>Show more</button>

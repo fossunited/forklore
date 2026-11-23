@@ -74,6 +74,12 @@ a {
   color: var(--muted);
 }
 
+.show-more {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem clamp(1rem, 4vw, 2rem);
+}
+
 /* Planet's status sits inside the padded controls grid and aligns on its own;
    the directory's is a sibling below the flex control row, so match the bar's
    side padding. */

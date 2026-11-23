@@ -290,24 +290,3 @@
   text-align: center;
   margin: 3rem 0;
 }
-
-
-.list-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: clamp(1.25rem, 4vw, 2rem);
-  border-top: 1px dashed var(--line);
-}
-
-.list-page-count {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.list-pagination [aria-disabled="true"] {
-  opacity: 0.35;
-  cursor: default;
-  pointer-events: none;
-}

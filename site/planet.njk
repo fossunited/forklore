@@ -2,11 +2,7 @@
 layout: base.njk
 title: Planet Forklore
 description: Aggregated blog posts from India's open source maintainers.
-pagination:
-  data: planet.posts
-  size: 10
-  alias: pagePosts
-permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+permalink: /planet/
 ---
 
 <section class="planet-hero">
@@ -50,24 +46,10 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
   </details>
 </section>
 
-<section class="planet-posts" aria-label="Planet posts" data-planet-posts-container>
-  {% for post in pagePosts %}
+<section class="planet-posts" aria-label="Planet posts" data-planet-posts>
+  {% for post in planet.posts %}
     {% include "planet-post-card.njk" %}
   {% endfor %}
 </section>
 
-{% if pagination.href.previous or pagination.href.next %}
-<nav class="planet-pagination" aria-label="Page navigation" data-planet-pagination>
-  {% if pagination.href.previous %}
-    <a href="{{ pagination.href.previous }}" class="button subtle">← Newer</a>
-  {% else %}
-    <span class="button subtle" aria-disabled="true">← Newer</span>
-  {% endif %}
-  <span class="planet-page-count">Page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</span>
-  {% if pagination.href.next %}
-    <a href="{{ pagination.href.next }}" class="button subtle">Older →</a>
-  {% else %}
-    <span class="button subtle" aria-disabled="true">Older →</span>
-  {% endif %}
-</nav>
-{% endif %}
+<button class="button subtle show-more" type="button" data-planet-more hidden>Show more</button>

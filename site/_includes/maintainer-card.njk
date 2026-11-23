@@ -1,10 +1,9 @@
 <article
   class="maintainer-card"
-  data-maintainer-card
+  data-card
   data-name="{{ maintainer.data.full_name }}"
-  data-username="{{ maintainer.data.username }}"
-  data-projects="{% for project in maintainer.data.projects %}{{ project.name }} {% endfor %}"
   data-created="{{ maintainer.data.created_on | dateISO }}"
+  data-search="{{ maintainer.data.full_name | lower }} {{ maintainer.data.username | lower }} {% for project in maintainer.data.projects %}{{ project.name | lower }} {% endfor %}"
 >
   <a class="card-hit" href="{{ maintainer.url }}" aria-label="Read {{ maintainer.data.full_name }}'s profile"></a>
   <header class="maintainer-card-header">
