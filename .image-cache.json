@@ -694,5 +694,29 @@
   "https://avatars.githubusercontent.com/u/35625570?v=4": {
     "hash": "46dfb094cbb8f342d7e77f50136732ae5f1e379d10eb363c13b558f2eb4e2ae9",
     "filename": "rohinilakshane_photo.jpg"
+  },
+  "https://avatars.githubusercontent.com/u/21128847?v=4": {
+    "hash": "712429475c7fc11450f382541b81a426d521bbcadf8c8ee62e8692f737f93ca9",
+    "filename": "bebhuvan_photo.png"
+  },
+  "https://akshara.ink/favicon.svg": {
+    "hash": "3ff1da9f77388751246d3c1b2f82b38abab895fef99933847f1a61f2e7f25ec5",
+    "filename": "bebhuvan_project_akshara.svg"
+  },
+  "https://paperlanterns.ink/favicon.svg": {
+    "hash": "35d3c61cba570a850fc71bd819bfcba6053c10e54e03f5579c002fc65630a0a3",
+    "filename": "bebhuvan_paper_lanterns.svg"
+  },
+  "https://thisindianlife.today/favicon.svg": {
+    "hash": "95ac1fe8939a379a1b643fe38318acef0e3cf34f2f1ed3e3c131f49b9b9479c0",
+    "filename": "bebhuvan_this_indian_life.svg"
+  },
+  "https://measure.thisindianlife.today/favicon.svg": {
+    "hash": "14d1a612fffcedd9e74e33b8f59555bc65d6b71633ee7b57d20fcd7541b952f1",
+    "filename": "bebhuvan_measure_of_india.svg"
+  },
+  "https://soochi.fyi/favicon.svg": {
+    "hash": "7b8f2027f4b5c6663c98bc904b24f2000614af10d6bade024be450dcfaa89266",
+    "filename": "bebhuvan_soochi.svg"
   }
 }
