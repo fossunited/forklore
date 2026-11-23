@@ -50,47 +50,117 @@
     if (e.key === "Escape" && siteNav?.classList.contains("open")) toggleNav(true);
   });
 
-  const searchInput = document.querySelector("[data-search-input]");
-  const sortSelect = document.querySelector("[data-sort-select]");
-  const list = document.querySelector(".maintainer-list");
-  const emptyState = document.querySelector("[data-empty-state]");
-  const shortcutLabel = document.querySelector("[data-shortcut-label]");
+  // ==========================================================================
+  // Lists (maintainer directory, Planet Forklore)
+  //
+  // Every card is rendered server-side and carries a lowercased data-search
+  // haystack. Filtering just hides non-matching cards, pagination caps how many
+  // show behind a "Show more" button, and (for Planet) a tag toggles an exact
+  // match. No index fetch, no client-side card rendering.
+  // ==========================================================================
 
-  if (shortcutLabel && /Mac|iPhone|iPod|iPad/i.test(navigator.userAgent)) {
-    shortcutLabel.textContent = "⌘+k";
-  }
+  function setupList(opts) {
+    const grid = document.querySelector(opts.grid);
+    if (!grid) return;
+    const search = opts.search ? document.querySelector(opts.search) : null;
+    const sortSelect = opts.sort ? document.querySelector(opts.sort) : null;
+    const moreButton = opts.more ? document.querySelector(opts.more) : null;
+    const status = opts.status ? document.querySelector(opts.status) : null;
+    const step = opts.page || 12;
+    let shown = step;
+    let activeTag = "";
 
-  function cards() {
-    return Array.from(document.querySelectorAll("[data-maintainer-card]"));
-  }
-
-  function applyDirectoryState() {
-    if (!list) return;
-    const query = (searchInput?.value || "").trim().toLowerCase();
-    const sorted = cards().sort((a, b) => {
-      const mode = sortSelect?.value || "newest";
+    function compare(a, b, mode) {
       if (mode === "a-z") return a.dataset.name.localeCompare(b.dataset.name);
       if (mode === "z-a") return b.dataset.name.localeCompare(a.dataset.name);
       const aDate = new Date(a.dataset.created || 0).getTime();
       const bDate = new Date(b.dataset.created || 0).getTime();
       return mode === "oldest" ? aDate - bDate : bDate - aDate;
+    }
+
+    function render() {
+      const terms = (search ? search.value : "").trim().toLowerCase().split(/\s+/).filter(Boolean);
+      if (sortSelect) {
+        [...grid.querySelectorAll("[data-card]")]
+          .sort((a, b) => compare(a, b, sortSelect.value))
+          .forEach((card) => grid.appendChild(card));
+      }
+      let matched = 0;
+      grid.querySelectorAll("[data-card]").forEach((card) => {
+        const okText = terms.every((term) => card.dataset.search.includes(term));
+        const okTag = !activeTag || (card.dataset.tags || "").split("|").includes(activeTag);
+        const ok = okText && okTag;
+        card.hidden = !ok || matched >= shown;
+        if (ok) matched += 1;
+      });
+      if (moreButton) {
+        const remaining = matched - shown;
+        moreButton.hidden = remaining <= 0;
+        if (remaining > 0) {
+          moreButton.textContent = `Show ${Math.min(step, remaining)} more (${remaining} left)`;
+        }
+      }
+      if (status) {
+        if (matched === 0) {
+          status.textContent = opts.emptyText;
+          status.hidden = false;
+        } else if (terms.length || activeTag) {
+          status.textContent = `Showing ${Math.min(shown, matched)} of ${matched} ${opts.noun}`;
+          status.hidden = false;
+        } else {
+          status.hidden = true;
+        }
+      }
+    }
+
+    search?.addEventListener("input", () => {
+      shown = step;
+      render();
+    });
+    sortSelect?.addEventListener("change", render);
+    moreButton?.addEventListener("click", () => {
+      shown += step;
+      render();
     });
 
-    let visible = 0;
-    sorted.forEach((card) => {
-      const haystack = `${card.dataset.name} ${card.dataset.username} ${card.dataset.projects}`.toLowerCase();
-      const match = !query || haystack.includes(query);
-      card.hidden = !match;
-      if (match) visible += 1;
-      list.insertBefore(card, emptyState || null);
-    });
+    if (opts.tags) {
+      document.addEventListener("click", (event) => {
+        const button = event.target instanceof Element ? event.target.closest("[data-planet-tag]") : null;
+        if (!button) return;
+        event.preventDefault();
+        const tag = (button.dataset.planetTag || "").toLowerCase();
+        activeTag = activeTag === tag ? "" : tag;
+        document.querySelectorAll("[data-planet-tag]").forEach((other) => {
+          other.setAttribute(
+            "aria-pressed",
+            (other.dataset.planetTag || "").toLowerCase() === activeTag ? "true" : "false",
+          );
+        });
+        shown = step;
+        render();
+      });
+    }
 
-    if (emptyState) emptyState.hidden = visible !== 0;
+    render();
   }
 
-  searchInput?.addEventListener("input", applyDirectoryState);
-  sortSelect?.addEventListener("change", applyDirectoryState);
-  applyDirectoryState();
+  // Maintainer directory (landing page)
+  setupList({
+    grid: "[data-maintainers]",
+    search: "[data-search-input]",
+    sort: "[data-sort-select]",
+    more: "[data-maintainers-more]",
+    status: "[data-empty-state]",
+    page: 12,
+    noun: "maintainers",
+    emptyText: "No maintainers found",
+  });
+
+  const searchInput = document.querySelector("[data-search-input]");
+  const shortcutLabel = document.querySelector("[data-shortcut-label]");
+  if (shortcutLabel && /Mac|iPhone|iPod|iPad/i.test(navigator.userAgent)) {
+    shortcutLabel.textContent = "⌘+k";
+  }
 
   document.addEventListener("keydown", (event) => {
     const target = event.target;
@@ -107,12 +177,25 @@
   });
 
   document.querySelector("[data-surprise]")?.addEventListener("click", () => {
-    const visibleCards = cards().filter((card) => !card.hidden);
-    const card = visibleCards[Math.floor(Math.random() * visibleCards.length)];
+    const cards = document.querySelectorAll("[data-maintainers] [data-card]");
+    const card = cards[Math.floor(Math.random() * cards.length)];
     const href = card?.querySelector(".card-hit")?.getAttribute("href");
     if (href) window.location.href = href;
   });
 
+  // Planet Forklore (global feed and author profile pages)
+  setupList({
+    grid: "[data-planet-posts]",
+    search: "[data-planet-search]",
+    more: "[data-planet-more]",
+    status: "[data-planet-empty]",
+    tags: true,
+    page: 10,
+    noun: "posts",
+    emptyText: "No posts found",
+  });
+
+  // Scroll to top
   const scrollTopBtn = document.querySelector("[data-scroll-top]");
   if (scrollTopBtn) {
     const toggleScrollTop = () => {
@@ -124,81 +207,5 @@
     scrollTopBtn.addEventListener("click", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
-  }
-
-  const planetSearch = document.querySelector("[data-planet-search]");
-  const planetEmpty = document.querySelector("[data-planet-empty]");
-  const hasPlanetPosts = Boolean(document.querySelector("[data-planet-post]"));
-
-  function planetPosts() {
-    return Array.from(document.querySelectorAll("[data-planet-post]"));
-  }
-
-  function normalize(value) {
-    return String(value || "").trim().toLowerCase();
-  }
-
-  function setPlanetTag(tag) {
-    const params = new URLSearchParams(window.location.search);
-    const nextTag = normalize(tag);
-    const activeTag = normalize(params.get("tag"));
-    if (nextTag && nextTag !== activeTag) params.set("tag", tag);
-    else params.delete("tag");
-    const query = params.toString();
-    history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
-    applyPlanetState();
-  }
-
-  function syncPlanetTags(activeTag) {
-    document.querySelectorAll("[data-planet-tag]").forEach((button) => {
-      const selected = normalize(button.dataset.planetTag) === activeTag;
-      button.classList.toggle("is-active", selected);
-      button.setAttribute("aria-pressed", selected ? "true" : "false");
-    });
-  }
-
-  function applyPlanetState() {
-    const params = new URLSearchParams(window.location.search);
-    const activeTag = normalize(params.get("tag"));
-    const query = normalize(planetSearch?.value || params.get("search"));
-    let visible = 0;
-
-    planetPosts().forEach((post) => {
-      const haystack = normalize(`${post.dataset.title} ${post.dataset.snippet}`);
-      const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
-      const matchesSearch = !query || haystack.includes(query);
-      const matchesTag = !activeTag || tags.includes(activeTag);
-      const match = matchesSearch && matchesTag;
-      post.hidden = !match;
-      if (match) visible += 1;
-    });
-
-    syncPlanetTags(activeTag);
-    if (planetEmpty) planetEmpty.hidden = visible !== 0;
-  }
-
-  planetSearch?.addEventListener("input", () => {
-    const params = new URLSearchParams(window.location.search);
-    if (planetSearch.value) params.set("search", planetSearch.value);
-    else params.delete("search");
-    const query = params.toString();
-    history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
-    applyPlanetState();
-  });
-
-  document.addEventListener("click", (event) => {
-    const target = event.target;
-    if (!(target instanceof Element)) return;
-    const tagButton = target.closest("[data-planet-tag]");
-    if (!tagButton) return;
-    event.preventDefault();
-    setPlanetTag(tagButton.dataset.planetTag);
-  });
-
-  if (hasPlanetPosts) {
-    if (planetSearch) {
-      planetSearch.value = new URLSearchParams(window.location.search).get("search") || "";
-    }
-    applyPlanetState();
   }
 })();

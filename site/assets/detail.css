@@ -256,10 +256,6 @@
   padding: 0;
 }
 
-.planet-posts .empty-state {
-  grid-column: 1 / -1;
-}
-
 .planet-hero {
   border-bottom: 1px dashed var(--line);
   background: var(--panel);
@@ -339,6 +335,10 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   border-bottom: 1px dashed var(--line);
+  /* Skip layout/paint for off-screen cards so the full feed stays cheap to
+     render; the browser remembers each card's real height after first paint. */
+  content-visibility: auto;
+  contain-intrinsic-size: auto 320px;
 }
 
 
@@ -529,22 +529,3 @@
   max-width: 100%;
 }
 
-.planet-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.5rem 2rem;
-  border-top: 1px dashed var(--line);
-}
-
-.planet-page-count {
-  font-size: 0.85rem;
-  color: var(--muted);
-}
-
-.planet-pagination [aria-disabled="true"] {
-  opacity: 0.35;
-  cursor: default;
-  pointer-events: none;
-}

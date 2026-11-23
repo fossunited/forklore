@@ -1,3 +1,18 @@
+/* Native cross-document transitions for multi-page navigation. Browsers that
+   do not support it simply navigate as before; motion is dropped for users who
+   ask for reduced motion. */
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
 :root {
   --primary-dark: #18222a;
   --primary-light: #fafafa;
@@ -33,6 +48,13 @@
   display: none !important;
 }
 
+html {
+  /* Always reserve the scrollbar gutter so the centred page-shell does not
+     shift its dashed borders when results change the page height and toggle
+     the vertical scrollbar. */
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -46,8 +68,27 @@ a {
   color: inherit;
 }
 
+.search-status {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.show-more {
+  display: block;
+  width: fit-content;
+  margin: 1.5rem clamp(1rem, 4vw, 2rem);
+}
+
+/* Planet's status sits inside the padded controls grid and aligns on its own;
+   the directory's is a sibling below the flex control row, so match the bar's
+   side padding. */
+.directory-controls + .search-status {
+  padding: 0.75rem clamp(1rem, 4vw, 2rem) 0;
+}
+
 .page-shell {
-  width: min(100%, 768px);
+  width: min(100%, 48rem);
   min-height: 100vh;
   margin: 0 auto;
   border-left: 2px dashed var(--line);

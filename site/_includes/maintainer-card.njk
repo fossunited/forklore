@@ -1,10 +1,9 @@
 <article
   class="maintainer-card"
-  data-maintainer-card
+  data-card
   data-name="{{ maintainer.data.full_name }}"
-  data-username="{{ maintainer.data.username }}"
-  data-projects="{% for project in maintainer.data.projects %}{{ project.name }} {% endfor %}"
   data-created="{{ maintainer.data.created_on | dateISO }}"
+  data-search="{{ maintainer.data.full_name | lower }} {{ maintainer.data.username | lower }} {% for project in maintainer.data.projects %}{{ project.name | lower }} {% endfor %}"
 >
   <a class="card-hit" href="{{ maintainer.url }}" aria-label="Read {{ maintainer.data.full_name }}'s profile"></a>
   <header class="maintainer-card-header">
@@ -12,7 +11,10 @@
       src="{{ maintainer.data.photo or '/maintainer_photo_light.svg' }}"
       alt="Photo of {{ maintainer.data.full_name }}"
       class="avatar"
+      width="56"
+      height="56"
       loading="lazy"
+      decoding="async"
     >
     <div>
       <h2>{{ maintainer.data.full_name }}</h2>
@@ -26,7 +28,7 @@
     {% for project in maintainer.data.projects %}
       <div class="project-summary">
         {% if project.logo %}
-          <img src="{{ project.logo }}" alt="Logo of {{ project.name }}" loading="lazy">
+          <img src="{{ project.logo }}" alt="Logo of {{ project.name }}" loading="lazy" decoding="async">
         {% else %}
           <div class="project-summary-logo-fallback" role="img" aria-label="Logo of {{ project.name }}">
             <span>{{ project | shortLabel }}</span>

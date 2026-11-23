@@ -16,7 +16,7 @@ eleventyComputed:
 <section class="planet-hero">
   <a href="/planet/" class="planet-back">← All Posts</a>
   <div class="planet-author-heading">
-    <img src="{{ author.photo or '/maintainer_photo_light.svg' }}" alt="Photo of {{ author.name }}" class="avatar">
+    <img src="{{ author.photo or '/maintainer_photo_light.svg' }}" alt="Photo of {{ author.name }}" class="avatar" width="56" height="56" decoding="async">
     <div>
       <h1>{{ author.name }}</h1>
       <p>{{ posts.length }} posts on Planet Forklore</p>
@@ -38,9 +38,11 @@ eleventyComputed:
   </section>
 {% endif %}
 
-<section class="planet-posts" aria-label="Posts by {{ author.name }}">
+<section class="planet-posts" aria-label="Posts by {{ author.name }}" data-planet-posts>
   {% for post in posts %}
     {% include "planet-post-card.njk" %}
   {% endfor %}
-  <p class="empty-state" data-planet-empty hidden>No posts found</p>
 </section>
+<p class="search-status" data-planet-empty role="status" aria-live="polite" hidden>No posts found</p>
+
+<button class="button subtle show-more" type="button" data-planet-more hidden>Show more</button>

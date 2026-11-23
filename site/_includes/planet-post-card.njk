@@ -1,9 +1,8 @@
 <article
   class="planet-post"
-  data-planet-post
-  data-title="{{ post.title | lower }}"
-  data-snippet="{{ post.contentSnippet | lower }}"
-  data-tags="{{ (post.tags or []) | join('|||') | lower }}"
+  data-card
+  data-tags="{{ (post.tags or []) | join('|') | lower }}"
+  data-search="{{ post.title | lower }} {{ post.maintainerName | lower }} {{ post.contentSnippet | lower }} {{ (post.tags or []) | join(' ') | lower }}"
 >
   <div class="planet-post-title">
     <a href="/planet/{{ post.maintainerUsername }}/{{ post.slug }}/">{{ post.title }}</a>
@@ -11,7 +10,7 @@
   <div class="planet-post-body">
     <div class="planet-post-meta">
       <a href="/planet/{{ post.maintainerUsername }}/" class="planet-author-inline">
-        <img src="{{ post.maintainerPhoto or '/maintainer_photo_light.svg' }}" alt="" class="avatar tiny">
+        <img src="{{ post.maintainerPhoto or '/maintainer_photo_light.svg' }}" alt="" class="avatar tiny" width="24" height="24" loading="lazy" decoding="async">
         {{ post.maintainerName }}
       </a>
       <span>·</span>

@@ -32,6 +32,25 @@ function markdownInline(value) {
     .replace(/<br\s*\/?>/gi, "<br>");
 }
 
+// Last path segment of a project's link (e.g. github.com/org/tool :: tool),
+// falling back to the project name. Shared by the shortLabel filter and the
+// maintainers JSON index so the client renderer matches the server markup.
+function shortLabelOf(project) {
+  if (!project) return "";
+  if (project.project_link) {
+    try {
+      const parts = new URL(project.project_link).pathname
+        .replace(/\/$/, "")
+        .split("/")
+        .filter(Boolean);
+      if (parts.length) return parts[parts.length - 1];
+    } catch {
+      // fall through to project name
+    }
+  }
+  return project.name || "";
+}
+
 export default function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("CHANGELOG.md");
@@ -69,21 +88,7 @@ export default function (eleventyConfig) {
       ),
   );
 
-  eleventyConfig.addFilter("shortLabel", (project) => {
-    if (!project) return "";
-    if (project.project_link) {
-      try {
-        const parts = new URL(project.project_link).pathname
-          .replace(/\/$/, "")
-          .split("/")
-          .filter(Boolean);
-        if (parts.length) return parts[parts.length - 1];
-      } catch {
-        // fall through to project name
-      }
-    }
-    return project.name || "";
-  });
+  eleventyConfig.addFilter("shortLabel", (project) => shortLabelOf(project));
 
   // Short, friendly label for a social link: the handle/slug for profile links
   // (last path segment, e.g. github.com/tachyons :: tachyons), or the bare
