@@ -53,8 +53,8 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
   {% for post in pagePosts %}
     {% include "planet-post-card.njk" %}
   {% endfor %}
-  <p class="empty-state" data-planet-empty hidden>No posts found</p>
 </section>
+<p class="empty-state planet-empty" data-planet-empty role="status" aria-live="polite" hidden>No posts found</p>
 
 {% if pagination.href.previous or pagination.href.next %}
 <nav class="planet-pagination" aria-label="Page navigation" data-planet-pagination>

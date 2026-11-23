@@ -256,8 +256,8 @@
   padding: 0;
 }
 
-.planet-posts .empty-state {
-  grid-column: 1 / -1;
+.planet-empty {
+  padding-inline: clamp(1.25rem, 4vw, 2.25rem);
 }
 
 .planet-hero {

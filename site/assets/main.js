@@ -282,14 +282,16 @@
         return;
       }
 
-      if (planetPagination) planetPagination.hidden = true;
-
       const posts = await loadPlanetPosts();
       // If a newer search/tag change was initiated while awaiting, ignore this stale execution
       if (currentGen !== planetStateGeneration) return;
 
+      // Index unavailable: degrade to filtering the server-rendered page only.
+      // Keep pagination visible and say so, so an empty result is not mistaken
+      // for "nothing matches across the whole archive".
       if (!posts) {
-        // Fallback to DOM filtering if JSON fetch fails
+        planetPostsContainer.innerHTML = initialPlanetHtml;
+        if (planetPagination) planetPagination.hidden = false;
         let visible = 0;
         planetPosts().forEach((post) => {
           const haystack = normalize(`${post.dataset.title} ${post.dataset.author} ${post.dataset.snippet}`);
@@ -298,7 +300,12 @@
           post.hidden = !match;
           if (match) visible += 1;
         });
-        if (planetEmpty) planetEmpty.hidden = visible !== 0;
+        if (planetEmpty) {
+          planetEmpty.textContent = visible
+            ? ""
+            : "Could not load the full archive. Showing matches from this page only.";
+          planetEmpty.hidden = visible !== 0;
+        }
         return;
       }
 
@@ -310,9 +317,15 @@
         return matchesSearch && matchesTag;
       });
 
+      // Full catalog is in hand, so the static pagination no longer applies.
+      if (planetPagination) planetPagination.hidden = true;
+
       if (filtered.length === 0) {
         planetPostsContainer.innerHTML = "";
-        if (planetEmpty) planetEmpty.hidden = false;
+        if (planetEmpty) {
+          planetEmpty.textContent = "No posts found";
+          planetEmpty.hidden = false;
+        }
       } else {
         planetPostsContainer.innerHTML = filtered.map(renderDynamicPlanetCard).join("");
         if (planetEmpty) planetEmpty.hidden = true;
