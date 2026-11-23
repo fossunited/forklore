@@ -56,7 +56,7 @@
   // Both the maintainer directory and Planet Forklore are long, server
   // paginated lists. Search/sort/tag filtering has to reach every item, not
   // just the ones rendered on the current page, so each list publishes a JSON
-  // index (/maintainers.json, /planet/posts.json). The default (unfiltered)
+  // index (/maintainers/cards.json, /planet/posts.json). The default (unfiltered)
   // view keeps the server-rendered cards and pager for fast first paint, SEO
   // and no-JS; the first time a filter is applied the index is fetched once
   // and the full matching set is rendered in place.
@@ -343,7 +343,7 @@
     sortSelect: dirSort,
     pager: dirPager,
     emptyEl: dirEmpty,
-    indexUrl: "/maintainers.json",
+    indexUrl: "/maintainers/cards.json",
     cardSelector: "[data-maintainer-card]",
     defaultSort: "newest",
     render: renderMaintainerCard,
