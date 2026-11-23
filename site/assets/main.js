@@ -75,6 +75,14 @@
       .trim()
       .toLowerCase();
 
+  // Orderless, whitespace-tokenised match
+  function matchesQuery(haystack, query) {
+    const terms = normalize(query).split(/\s+/).filter(Boolean);
+    if (!terms.length) return true;
+    const hay = normalize(haystack);
+    return terms.every((term) => hay.includes(term));
+  }
+
   const indexCache = new Map();
   function fetchIndex(url) {
     if (indexCache.has(url)) return indexCache.get(url);
@@ -177,7 +185,7 @@
       container.querySelectorAll(cardSelector).forEach((card) => {
         const haystack = normalize(domHaystack ? domHaystack(card) : card.textContent);
         const tags = domTags ? domTags(card) : [];
-        const match = (!query || haystack.includes(query)) && (!tag || tags.includes(tag));
+        const match = matchesQuery(haystack, query) && (!tag || tags.includes(tag));
         card.hidden = !match;
         if (match) visible += 1;
       });
@@ -208,7 +216,7 @@
       }
 
       let results = data.filter((item) => {
-        const okQuery = !query || normalize(itemText(item)).includes(query);
+        const okQuery = matchesQuery(itemText(item), query);
         const okTag = !tag || (itemTags ? itemTags(item).map(normalize).includes(tag) : true);
         return okQuery && okTag;
       });
@@ -472,7 +480,7 @@
         `${card.dataset.title} ${card.dataset.author} ${card.dataset.snippet}`,
       );
       const tags = normalize(card.dataset.tags).split("|||").filter(Boolean);
-      const match = (!query || haystack.includes(query)) && (!tag || tags.includes(tag));
+      const match = matchesQuery(haystack, query) && (!tag || tags.includes(tag));
       card.hidden = !match;
       if (match) visible += 1;
     });
