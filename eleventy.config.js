@@ -55,6 +55,7 @@ export default function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("CHANGELOG.md");
   eleventyConfig.ignores.add("GET_FEATURED.md");
+  eleventyConfig.ignores.add("content/sample.md");
   eleventyConfig.ignores.add("docs/**");
   eleventyConfig.ignores.add("site/assets/**");
   eleventyConfig.ignores.add("site/_includes/**");
