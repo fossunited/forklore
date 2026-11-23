@@ -23,7 +23,7 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
 <section class="planet-controls" aria-label="Planet filters">
   <label class="search-box planet-search">
     <span aria-hidden="true">⌕</span>
-    <input data-planet-search type="search" placeholder="Search posts" autocomplete="off">
+    <input data-planet-search type="search" placeholder="Search posts" autocomplete="off" aria-label="Search posts">
   </label>
   <details>
     <summary>Filter by author or tag</summary>
@@ -32,7 +32,7 @@ permalink: "/planet/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber +
       <div class="planet-filter-list">
         {% for author in planet.authors %}
           <a href="/planet/{{ author.username }}/" class="button subtle">
-            <img src="{{ author.photo or '/maintainer_photo_light.svg' }}" alt="" class="avatar tiny">
+            <img src="{{ author.photo or '/maintainer_photo_light.svg' }}" alt="" class="avatar tiny" width="24" height="24" loading="lazy" decoding="async">
             {{ author.name }}
           </a>
         {% endfor %}

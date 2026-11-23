@@ -1,3 +1,18 @@
+/* Native cross-document transitions for multi-page navigation. Browsers that
+   do not support it simply navigate as before; motion is dropped for users who
+   ask for reduced motion. */
+@view-transition {
+  navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+}
+
 :root {
   --primary-dark: #18222a;
   --primary-light: #fafafa;
