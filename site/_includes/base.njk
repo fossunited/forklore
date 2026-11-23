@@ -11,11 +11,20 @@
     {% set pageTitle %}{% if full_name %}{{ full_name }} | Forklore{% else %}{{ title or site.title }}{% endif %}{% endset %}
     {% set pageDescription %}{% if full_name %}Get to know {{ full_name }} and their work.{% else %}{{ description or site.description }}{% endif %}{% endset %}
     {% set pageImage %}{% if username %}{{ site.url }}/og/maintainers/{{ username }}.png{% else %}{{ site.url }}/og/index.png{% endif %}{% endset %}
-    <meta property="og:type" content="website">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#18222a">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafafa">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <!-- Resource hints: open the analytics connection early, fetch the body font the parser won't find on its own. -->
+    <link rel="preconnect" href="https://analytics.fossunited.org" crossorigin>
+    <link rel="preload" href="/assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Open Graph: the four required tags plus the ones worth having. -->
+    <meta property="og:type" content="{% if full_name %}profile{% else %}website{% endif %}">
     <meta property="og:site_name" content="Forklore">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:title" content="{{ pageTitle }}">
     <meta property="og:description" content="{{ pageDescription }}">
     <meta property="og:image" content="{{ pageImage }}">
+    <meta property="og:image:alt" content="{{ pageTitle }}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:type" content="image/png">
@@ -30,6 +39,36 @@
     <link rel="alternate" type="application/rss+xml" href="/planet/rss.xml" title="Planet Forklore Feed">
     <link rel="stylesheet" href="/assets/fonts/fonts.css">
     <link rel="stylesheet" href="/assets/main.css">
+    <!-- JSON-LD: structured data the crawler reads straight from the HTML. It does not execute. -->
+    {% if full_name %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": {{ full_name | dump | safe }},
+        "url": "{{ site.url }}{{ page.url }}",
+        "image": "{{ pageImage }}"{% if designation %},
+        "jobTitle": {{ designation | dump | safe }}{% endif %}
+      }
+    }
+    </script>
+    {% else %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Forklore",
+      "url": "{{ site.url }}/",
+      "description": {{ (description or site.description) | dump | safe }}
+    }
+    </script>
+    {% endif %}
+    <!-- Speculation rules: prefetch same-origin pages on hover for instant navigation. Ignored where unsupported. -->
+    <script type="speculationrules">
+    { "prefetch": [{ "where": { "href_matches": "/*" }, "eagerness": "moderate" }] }
+    </script>
     <script defer src="https://analytics.fossunited.org/script.js" data-website-id="01af9b2b-6b7f-44e6-ab83-377bb415b0f3"></script>
     <script>
       const storedTheme = localStorage.getItem("forklore-theme");
@@ -45,7 +84,7 @@
         {% set isPlanet = page.url and "/planet" in page.url %}
         <a class="brand" href="{{ "/planet/" if isPlanet else "/" }}" aria-label="{{ "Planet Forklore" if isPlanet else "Forklore home" }}">
           {% if isPlanet %}<span class="brand-planet">Planet</span>{% endif %}
-          <img src="/logo/logo_light.svg" alt="Forklore" class="brand-mark" data-theme-logo>
+          <img src="/logo/logo_light.svg" alt="Forklore" class="brand-mark" width="128" height="40" decoding="async" data-theme-logo>
         </a>
         <div class="header-right">
           <nav class="site-nav" aria-label="Primary" id="site-nav">
@@ -108,7 +147,7 @@
           </div>
           <a href="mailto:maintainers@fossunited.org">maintainers@fossunited.org</a>
         </div>
-        <img src="/logo/unitedbyfoss_dark.svg" alt="United By FOSS" class="footer-logo" data-footer-logo>
+        <img src="/logo/unitedbyfoss_dark.svg" alt="United By FOSS" class="footer-logo" width="48" height="48" loading="lazy" decoding="async" data-footer-logo>
       </div>
     </footer>
     <button class="scroll-top" type="button" data-scroll-top aria-label="Scroll to top">
