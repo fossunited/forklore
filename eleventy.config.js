@@ -32,6 +32,25 @@ function markdownInline(value) {
     .replace(/<br\s*\/?>/gi, "<br>");
 }
 
+// Last path segment of a project's link (e.g. github.com/org/tool :: tool),
+// falling back to the project name. Shared by the shortLabel filter and the
+// maintainers JSON index so the client renderer matches the server markup.
+function shortLabelOf(project) {
+  if (!project) return "";
+  if (project.project_link) {
+    try {
+      const parts = new URL(project.project_link).pathname
+        .replace(/\/$/, "")
+        .split("/")
+        .filter(Boolean);
+      if (parts.length) return parts[parts.length - 1];
+    } catch {
+      // fall through to project name
+    }
+  }
+  return project.name || "";
+}
+
 export default function (eleventyConfig) {
   eleventyConfig.ignores.add("README.md");
   eleventyConfig.ignores.add("CHANGELOG.md");
@@ -69,21 +88,7 @@ export default function (eleventyConfig) {
       ),
   );
 
-  eleventyConfig.addFilter("shortLabel", (project) => {
-    if (!project) return "";
-    if (project.project_link) {
-      try {
-        const parts = new URL(project.project_link).pathname
-          .replace(/\/$/, "")
-          .split("/")
-          .filter(Boolean);
-        if (parts.length) return parts[parts.length - 1];
-      } catch {
-        // fall through to project name
-      }
-    }
-    return project.name || "";
-  });
+  eleventyConfig.addFilter("shortLabel", (project) => shortLabelOf(project));
 
   // Short, friendly label for a social link: the handle/slug for profile links
   // (last path segment, e.g. github.com/tachyons :: tachyons), or the bare
@@ -240,6 +245,36 @@ export default function (eleventyConfig) {
         : "",
       link: post.link || "",
     }));
+    return JSON.stringify(list);
+  });
+
+  // Machine-readable index of every maintainer, mirroring the fields the
+  // maintainer card renders. designation and project descriptions are
+  // pre-rendered inline HTML (build-time, trusted) so the client renderer
+  // stays in step with the server template instead of re-implementing it.
+  eleventyConfig.addFilter("maintainersJson", (items) => {
+    const list = (Array.isArray(items) ? items : []).map((item) => {
+      const data = item.data || {};
+      const projects = Array.isArray(data.projects) ? data.projects : [];
+      return {
+        full_name: data.full_name || "",
+        username: data.username || "",
+        url: item.url || "",
+        photo: data.photo || "/maintainer_photo_light.svg",
+        created_on: data.created_on || "",
+        designation: markdownInline(data.designation || ""),
+        projectsText: projects.map((project) => project.name || "").join(" "),
+        projects: projects.map((project) => ({
+          name: project.name || "",
+          logo: project.logo || "",
+          project_link: project.project_link || "",
+          shortLabel: shortLabelOf(project),
+          description: markdownInline(
+            project.short_description || project.description || "",
+          ),
+        })),
+      };
+    });
     return JSON.stringify(list);
   });
 
