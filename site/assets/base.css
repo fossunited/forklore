@@ -48,6 +48,13 @@
   display: none !important;
 }
 
+html {
+  /* Always reserve the scrollbar gutter so the centred page-shell does not
+     shift its dashed borders when results change the page height and toggle
+     the vertical scrollbar. */
+  scrollbar-gutter: stable;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -62,7 +69,7 @@ a {
 }
 
 .page-shell {
-  width: min(100%, 768px);
+  width: min(100%, 48rem);
   min-height: 100vh;
   margin: 0 auto;
   border-left: 2px dashed var(--line);

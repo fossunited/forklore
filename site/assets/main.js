@@ -132,6 +132,8 @@
       domTags,
       defaultSort = "",
       syncUrl = false,
+      resultCap = 50,
+      noun = "results",
       emptyText = "No results found",
       fallbackText = "Could not load the full list. Showing matches from this page only.",
     } = cfg;
@@ -222,14 +224,25 @@
       });
       if (compare && sort) results = results.slice().sort(compare(sort));
 
-      // Full catalog is in hand, so the static pager no longer applies.
+      // Full catalog is in hand, so the static pager no longer applies. Cap the
+      // rendered matches so a broad query cannot balloon the page; the status
+      // line invites narrowing when there are more matches than the cap.
       if (pager) pager.hidden = true;
       if (!results.length) {
         container.innerHTML = "";
         status(emptyText);
       } else {
-        container.innerHTML = results.map(render).join("");
-        status("");
+        container.innerHTML = results.slice(0, resultCap).map(render).join("");
+        // Feedback: count on a real query/tag filter (not a plain re-sort), and
+        // the narrowing hint when the matches exceed the render cap.
+        const matches = results.length;
+        let message = "";
+        if (matches > resultCap) {
+          message = `Showing first ${resultCap} of ${matches} ${noun}. Keep typing to narrow.`;
+        } else if (query || tag) {
+          message = `Showing ${matches} of ${data.length} ${noun}.`;
+        }
+        status(message);
       }
     }
 
@@ -364,6 +377,7 @@
       const bDate = new Date(b.created_on || 0).getTime();
       return mode === "oldest" ? aDate - bDate : bDate - aDate;
     },
+    noun: "maintainers",
     emptyText: "No maintainers found",
     fallbackText: "Could not load the full directory. Showing matches from this page only.",
   });
@@ -452,6 +466,7 @@
           `${card.dataset.title} ${card.dataset.author} ${card.dataset.snippet}`,
         domTags: (card) => normalize(card.dataset.tags).split("|||").filter(Boolean),
         syncUrl: true,
+        noun: "posts",
         emptyText: "No posts found",
         fallbackText: "Could not load the full archive. Showing matches from this page only.",
       })
