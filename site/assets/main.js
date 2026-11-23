@@ -50,68 +50,356 @@
     if (e.key === "Escape" && siteNav?.classList.contains("open")) toggleNav(true);
   });
 
-  const searchInput = document.querySelector("[data-search-input]");
-  const sortSelect = document.querySelector("[data-sort-select]");
-  const list = document.querySelector(".maintainer-list");
-  const emptyState = document.querySelector("[data-empty-state]");
+  // ==========================================================================
+  // Shared list utilities
+  //
+  // Both the maintainer directory and Planet Forklore are long, server
+  // paginated lists. Search/sort/tag filtering has to reach every item, not
+  // just the ones rendered on the current page, so each list publishes a JSON
+  // index (/maintainers.json, /planet/posts.json). The default (unfiltered)
+  // view keeps the server-rendered cards and pager for fast first paint, SEO
+  // and no-JS; the first time a filter is applied the index is fetched once
+  // and the full matching set is rendered in place.
+  // ==========================================================================
+
+  const escapeHtml = (value) =>
+    String(value || "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+
+  const normalize = (value) =>
+    String(value || "")
+      .trim()
+      .toLowerCase();
+
+  const indexCache = new Map();
+  function fetchIndex(url) {
+    if (indexCache.has(url)) return indexCache.get(url);
+    const request = fetch(url)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .catch((err) => {
+        console.error(`Failed to load ${url}:`, err);
+        return null;
+      });
+    indexCache.set(url, request);
+    return request;
+  }
+
+  function formatDateISO(value) {
+    const date = new Date(value);
+    return Number.isNaN(date.getTime()) ? "" : date.toISOString();
+  }
+
+  function formatDate(value) {
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return "";
+    return date.toLocaleDateString("en-IN", {
+      day: "numeric",
+      month: "short",
+      year: "numeric",
+    });
+  }
+
+  function createIndexedList(cfg) {
+    const container = cfg.container;
+    if (!container) return null;
+    const {
+      searchInput,
+      sortSelect,
+      pager,
+      emptyEl,
+      indexUrl,
+      cardSelector,
+      render,
+      itemText,
+      itemTags,
+      compare,
+      domHaystack,
+      domTags,
+      defaultSort = "",
+      syncUrl = false,
+      emptyText = "No results found",
+      fallbackText = "Could not load the full list. Showing matches from this page only.",
+    } = cfg;
+    const initialHtml = container.innerHTML;
+    let generation = 0;
+
+    function readState() {
+      const params = new URLSearchParams(window.location.search);
+      const query = normalize(
+        syncUrl
+          ? searchInput
+            ? searchInput.value
+            : params.get("search")
+          : searchInput
+            ? searchInput.value
+            : "",
+      );
+      const tag = itemTags ? normalize(params.get("tag")) : "";
+      const sort = sortSelect ? sortSelect.value || defaultSort : defaultSort;
+      return {
+        query,
+        tag,
+        sort,
+        isDefault: !query && !tag && sort === defaultSort,
+      };
+    }
+
+    function syncTags(tag) {
+      if (!itemTags) return;
+      document.querySelectorAll("[data-planet-tag]").forEach((button) => {
+        const on = normalize(button.dataset.planetTag) === tag;
+        button.classList.toggle("is-active", on);
+        button.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    }
+
+    function status(text) {
+      if (!emptyEl) return;
+      emptyEl.textContent = text;
+      emptyEl.hidden = !text;
+    }
+
+    function showDefault() {
+      container.innerHTML = initialHtml;
+      if (pager) pager.hidden = false;
+      status("");
+    }
+
+    function filterDom(query, tag) {
+      let visible = 0;
+      container.querySelectorAll(cardSelector).forEach((card) => {
+        const haystack = normalize(domHaystack ? domHaystack(card) : card.textContent);
+        const tags = domTags ? domTags(card) : [];
+        const match = (!query || haystack.includes(query)) && (!tag || tags.includes(tag));
+        card.hidden = !match;
+        if (match) visible += 1;
+      });
+      return visible;
+    }
+
+    async function apply() {
+      const current = ++generation;
+      const { query, tag, sort, isDefault } = readState();
+      syncTags(tag);
+
+      if (isDefault) {
+        showDefault();
+        return;
+      }
+
+      const data = await fetchIndex(indexUrl);
+      // A newer filter change may have started while awaiting; drop stale runs.
+      if (current !== generation) return;
+
+      // Index unavailable: degrade to the server-rendered page, keep the pager,
+      // and say so, so an empty result is not read as "nothing matches anywhere".
+      if (!data) {
+        showDefault();
+        const visible = filterDom(query, tag);
+        status(visible ? "" : fallbackText);
+        return;
+      }
+
+      let results = data.filter((item) => {
+        const okQuery = !query || normalize(itemText(item)).includes(query);
+        const okTag = !tag || (itemTags ? itemTags(item).map(normalize).includes(tag) : true);
+        return okQuery && okTag;
+      });
+      if (compare && sort) results = results.slice().sort(compare(sort));
+
+      // Full catalog is in hand, so the static pager no longer applies.
+      if (pager) pager.hidden = true;
+      if (!results.length) {
+        container.innerHTML = "";
+        status(emptyText);
+      } else {
+        container.innerHTML = results.map(render).join("");
+        status("");
+      }
+    }
+
+    return { apply, preload: () => fetchIndex(indexUrl) };
+  }
+
+  // ---- card renderers (kept in step with the Nunjucks card partials) ----
+
+  function renderPlanetCard(post) {
+    const title = escapeHtml(post.title || "Untitled");
+    const username = escapeHtml(post.maintainerUsername || "");
+    const authorName = escapeHtml(post.maintainerName || "");
+    const photo = escapeHtml(post.maintainerPhoto || "/maintainer_photo_light.svg");
+    const slug = escapeHtml(post.slug || "");
+    const dateISO = escapeHtml(formatDateISO(post.pubDate));
+    const dateText = formatDate(post.pubDate);
+    const snippet = escapeHtml(post.contentSnippet || "");
+    const link = escapeHtml(post.link || "");
+    const tags = Array.isArray(post.tags) ? post.tags : [];
+
+    const tagsHtml = tags.length
+      ? `<div class="planet-tags">${tags
+          .slice(0, 6)
+          .map(
+            (tag) =>
+              `<button type="button" data-planet-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`,
+          )
+          .join("")}</div>`
+      : "";
+    const originHtml = link
+      ? `<a href="${link}" class="button subtle">Original <span aria-hidden="true">↗</span></a>`
+      : "";
+
+    return `<article class="planet-post" data-planet-post data-title="${title.toLowerCase()}" data-author="${authorName.toLowerCase()}" data-snippet="${snippet.toLowerCase()}" data-tags="${tags
+      .map((tag) => escapeHtml(tag).toLowerCase())
+      .join("|||")}">
+  <div class="planet-post-title"><a href="/planet/${username}/${slug}/">${title}</a></div>
+  <div class="planet-post-body">
+    <div class="planet-post-meta">
+      <a href="/planet/${username}/" class="planet-author-inline"><img src="${photo}" alt="" class="avatar tiny" width="24" height="24" loading="lazy" decoding="async">${authorName}</a>
+      <span>·</span>
+      <time datetime="${dateISO}">${dateText}</time>
+    </div>
+    ${tagsHtml}
+    ${snippet ? `<p>${snippet}</p>` : ""}
+    <div class="button-row">
+      <a href="/planet/${username}/${slug}/" class="button subtle">Read more →</a>
+      ${originHtml}
+    </div>
+  </div>
+</article>`;
+  }
+
+  function renderMaintainerCard(maintainer) {
+    const name = escapeHtml(maintainer.full_name || "");
+    const username = escapeHtml(maintainer.username || "");
+    const url = escapeHtml(maintainer.url || "");
+    const photo = escapeHtml(maintainer.photo || "/maintainer_photo_light.svg");
+    const created = escapeHtml(maintainer.created_on || "");
+    const projectsText = escapeHtml(maintainer.projectsText || "");
+    const projects = Array.isArray(maintainer.projects) ? maintainer.projects : [];
+    const multi = projects.length > 1;
+    const odd = projects.length % 2 === 1;
+    const stripClass =
+      "project-strip" +
+      (multi ? " project-strip-grid" : "") +
+      (multi && odd ? " project-strip-odd" : "");
+
+    const projectHtml = projects
+      .map((project) => {
+        const projectName = escapeHtml(project.name || "");
+        const logo = project.logo
+          ? `<img src="${escapeHtml(project.logo)}" alt="Logo of ${projectName}" loading="lazy" decoding="async">`
+          : `<div class="project-summary-logo-fallback" role="img" aria-label="Logo of ${projectName}"><span>${escapeHtml(project.shortLabel || "")}</span></div>`;
+        const source = project.project_link
+          ? `<a class="button subtle card-source" href="${escapeHtml(project.project_link)}">View Source <span aria-hidden="true">↗</span></a>`
+          : "";
+        // description is build-time rendered inline HTML (trusted).
+        return `<div class="project-summary">${logo}<div><h3>${projectName}</h3>${source}<p>${project.description || ""}</p></div></div>`;
+      })
+      .join("");
+    const filler =
+      multi && odd
+        ? `<div class="project-summary project-summary-empty" aria-hidden="true"></div>`
+        : "";
+
+    // designation is build-time rendered inline HTML (trusted).
+    return `<article class="maintainer-card" data-maintainer-card data-name="${name}" data-username="${username}" data-projects="${projectsText}" data-created="${created}">
+  <a class="card-hit" href="${url}" aria-label="Read ${name}'s profile"></a>
+  <header class="maintainer-card-header">
+    <img src="${photo}" alt="Photo of ${name}" class="avatar" width="56" height="56" loading="lazy" decoding="async">
+    <div>
+      <h2>${name}</h2>
+      <p>${maintainer.designation || ""}</p>
+    </div>
+  </header>
+  <div class="${stripClass}" aria-label="Projects">${projectHtml}${filler}</div>
+</article>`;
+  }
+
+  // ==========================================================================
+  // Maintainer directory (landing page)
+  // ==========================================================================
+
+  const dirSearch = document.querySelector("[data-search-input]");
+  const dirSort = document.querySelector("[data-sort-select]");
+  const dirContainer = document.querySelector("[data-maintainers-container]");
+  const dirPager = document.querySelector("[data-maintainers-pagination]");
+  const dirEmpty = document.querySelector("[data-empty-state]");
   const shortcutLabel = document.querySelector("[data-shortcut-label]");
 
   if (shortcutLabel && /Mac|iPhone|iPod|iPad/i.test(navigator.userAgent)) {
     shortcutLabel.textContent = "⌘+k";
   }
 
-  function cards() {
-    return Array.from(document.querySelectorAll("[data-maintainer-card]"));
-  }
-
-  function applyDirectoryState() {
-    if (!list) return;
-    const query = (searchInput?.value || "").trim().toLowerCase();
-    const sorted = cards().sort((a, b) => {
-      const mode = sortSelect?.value || "newest";
-      if (mode === "a-z") return a.dataset.name.localeCompare(b.dataset.name);
-      if (mode === "z-a") return b.dataset.name.localeCompare(a.dataset.name);
-      const aDate = new Date(a.dataset.created || 0).getTime();
-      const bDate = new Date(b.dataset.created || 0).getTime();
+  const directory = createIndexedList({
+    container: dirContainer,
+    searchInput: dirSearch,
+    sortSelect: dirSort,
+    pager: dirPager,
+    emptyEl: dirEmpty,
+    indexUrl: "/maintainers.json",
+    cardSelector: "[data-maintainer-card]",
+    defaultSort: "newest",
+    render: renderMaintainerCard,
+    itemText: (m) => `${m.full_name} ${m.username} ${m.projectsText}`,
+    domHaystack: (card) => `${card.dataset.name} ${card.dataset.username} ${card.dataset.projects}`,
+    compare: (mode) => (a, b) => {
+      if (mode === "a-z") return a.full_name.localeCompare(b.full_name);
+      if (mode === "z-a") return b.full_name.localeCompare(a.full_name);
+      const aDate = new Date(a.created_on || 0).getTime();
+      const bDate = new Date(b.created_on || 0).getTime();
       return mode === "oldest" ? aDate - bDate : bDate - aDate;
-    });
+    },
+    emptyText: "No maintainers found",
+    fallbackText: "Could not load the full directory. Showing matches from this page only.",
+  });
 
-    let visible = 0;
-    sorted.forEach((card) => {
-      const haystack = `${card.dataset.name} ${card.dataset.username} ${card.dataset.projects}`.toLowerCase();
-      const match = !query || haystack.includes(query);
-      card.hidden = !match;
-      if (match) visible += 1;
-      list.insertBefore(card, emptyState || null);
-    });
-
-    if (emptyState) emptyState.hidden = visible !== 0;
+  if (directory) {
+    dirSearch?.addEventListener("input", directory.apply);
+    dirSort?.addEventListener("change", directory.apply);
+    dirSearch?.addEventListener("focus", directory.preload, { once: true });
+    directory.apply();
   }
-
-  searchInput?.addEventListener("input", applyDirectoryState);
-  sortSelect?.addEventListener("change", applyDirectoryState);
-  applyDirectoryState();
 
   document.addEventListener("keydown", (event) => {
     const target = event.target;
-    const isTyping =
-      target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement;
+    const isTyping = target instanceof HTMLInputElement || target instanceof HTMLTextAreaElement;
     if ((event.metaKey || event.ctrlKey) && event.key.toLowerCase() === "k") {
       event.preventDefault();
-      searchInput?.focus();
+      dirSearch?.focus();
     }
     if (!isTyping && event.key === "/") {
       event.preventDefault();
-      searchInput?.focus();
+      dirSearch?.focus();
     }
   });
 
-  document.querySelector("[data-surprise]")?.addEventListener("click", () => {
-    const visibleCards = cards().filter((card) => !card.hidden);
-    const card = visibleCards[Math.floor(Math.random() * visibleCards.length)];
-    const href = card?.querySelector(".card-hit")?.getAttribute("href");
+  document.querySelector("[data-surprise]")?.addEventListener("click", async () => {
+    let href = "";
+    const data = directory ? await directory.preload() : null;
+    if (Array.isArray(data) && data.length) {
+      const pick = data[Math.floor(Math.random() * data.length)];
+      href = pick && pick.url ? pick.url : "";
+    }
+    if (!href) {
+      const cards = Array.from(document.querySelectorAll("[data-maintainer-card]")).filter(
+        (card) => !card.hidden,
+      );
+      const card = cards[Math.floor(Math.random() * cards.length)];
+      href = card?.querySelector(".card-hit")?.getAttribute("href") || "";
+    }
     if (href) window.location.href = href;
   });
+
+  // ==========================================================================
+  // Scroll to top
+  // ==========================================================================
 
   const scrollTopBtn = document.querySelector("[data-scroll-top]");
   if (scrollTopBtn) {
@@ -126,263 +414,114 @@
     });
   }
 
+  // ==========================================================================
+  // Planet Forklore
+  //
+  // The global /planet/ view uses the shared controller against the index.
+  // Author profile pages (/planet/:user/) render all of one author's posts on
+  // a single page with no catalog container, so there we just filter the posts
+  // already in the DOM by the active tag.
+  // ==========================================================================
+
   const planetSearch = document.querySelector("[data-planet-search]");
+  const planetContainer = document.querySelector("[data-planet-posts-container]");
+  const planetPager = document.querySelector("[data-planet-pagination]");
   const planetEmpty = document.querySelector("[data-planet-empty]");
-  const planetPostsContainer = document.querySelector("[data-planet-posts-container]");
-  const planetPagination = document.querySelector("[data-planet-pagination]");
   const hasPlanetPosts = Boolean(document.querySelector("[data-planet-post]"));
 
-  let allPlanetPosts = null;
-  let planetFetchPromise = null;
-  const initialPlanetHtml = planetPostsContainer ? planetPostsContainer.innerHTML : "";
-
-  function escapeHtml(value) {
-    return String(value || "")
-      .replace(/&/g, "&amp;")
-      .replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
-      .replace(/'/g, "&#39;");
-  }
-
-  function normalize(value) {
-    return String(value || "").trim().toLowerCase();
-  }
-
-  function formatPostDateISO(dateStr) {
-    const value = new Date(dateStr);
-    return Number.isNaN(value.getTime()) ? "" : value.toISOString();
-  }
-
-  function formatPostDate(dateStr) {
-    const value = new Date(dateStr);
-    if (Number.isNaN(value.getTime())) return "";
-    return value.toLocaleDateString("en-IN", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-    });
-  }
-
-  function renderDynamicPlanetCard(post) {
-    const title = escapeHtml(post.title || "Untitled");
-    const username = escapeHtml(post.maintainerUsername || "");
-    const authorName = escapeHtml(post.maintainerName || "");
-    const photo = escapeHtml(post.maintainerPhoto || "/maintainer_photo_light.svg");
-    const slug = escapeHtml(post.slug || "");
-    const dateISO = escapeHtml(formatPostDateISO(post.pubDate));
-    const dateFormatted = formatPostDate(post.pubDate);
-    const snippet = escapeHtml(post.contentSnippet || "");
-    const link = escapeHtml(post.link || "");
-    const tags = Array.isArray(post.tags) ? post.tags : [];
-
-    const tagsHtml = tags.length
-      ? `<div class="planet-tags">${tags
-          .slice(0, 6)
-          .map((tag) => `<button type="button" data-planet-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`)
-          .join("")}</div>`
-      : "";
-
-    const linkHtml = link
-      ? `<a href="${link}" class="button subtle" target="_blank" rel="noopener noreferrer">Original ↗</a>`
-      : "";
-
-    return `
-<article
-  class="planet-post"
-  data-planet-post
-  data-title="${title.toLowerCase()}"
-  data-author="${authorName.toLowerCase()}"
-  data-snippet="${snippet.toLowerCase()}"
-  data-tags="${tags.map((t) => escapeHtml(t).toLowerCase()).join("|||")}"
->
-  <div class="planet-post-title">
-    <a href="/planet/${username}/${slug}/">${title}</a>
-  </div>
-  <div class="planet-post-body">
-    <div class="planet-post-meta">
-      <a href="/planet/${username}/" class="planet-author-inline">
-        <img src="${photo}" alt="" class="avatar tiny">
-        ${authorName}
-      </a>
-      <span>·</span>
-      <time datetime="${dateISO}">${dateFormatted}</time>
-    </div>
-    ${tagsHtml}
-    ${snippet ? `<p>${snippet}</p>` : ""}
-    <div class="button-row">
-      <a href="/planet/${username}/${slug}/" class="button subtle">Read more →</a>
-      ${linkHtml}
-    </div>
-  </div>
-</article>`;
-  }
-
-  function loadPlanetPosts() {
-    if (allPlanetPosts) return Promise.resolve(allPlanetPosts);
-    if (planetFetchPromise) return planetFetchPromise;
-
-    planetFetchPromise = fetch("/planet/posts.json")
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
+  const planet = planetContainer
+    ? createIndexedList({
+        container: planetContainer,
+        searchInput: planetSearch,
+        pager: planetPager,
+        emptyEl: planetEmpty,
+        indexUrl: "/planet/posts.json",
+        cardSelector: "[data-planet-post]",
+        render: renderPlanetCard,
+        itemText: (p) => `${p.title} ${p.contentSnippet} ${p.maintainerName}`,
+        itemTags: (p) => p.tags || [],
+        domHaystack: (card) =>
+          `${card.dataset.title} ${card.dataset.author} ${card.dataset.snippet}`,
+        domTags: (card) => normalize(card.dataset.tags).split("|||").filter(Boolean),
+        syncUrl: true,
+        emptyText: "No posts found",
+        fallbackText: "Could not load the full archive. Showing matches from this page only.",
       })
-      .then((posts) => {
-        allPlanetPosts = posts;
-        return posts;
-      })
-      .catch((err) => {
-        console.error("Failed to load /planet/posts.json:", err);
-        return null;
-      });
+    : null;
 
-    return planetFetchPromise;
-  }
-
-  function planetPosts() {
-    return Array.from(document.querySelectorAll("[data-planet-post]"));
-  }
-
-  function setPlanetTag(tag) {
+  function setParam(key, value) {
     const params = new URLSearchParams(window.location.search);
-    const nextTag = normalize(tag);
-    const activeTag = normalize(params.get("tag"));
-    if (nextTag && nextTag !== activeTag) params.set("tag", tag);
-    else params.delete("tag");
+    if (value) params.set(key, value);
+    else params.delete(key);
     const query = params.toString();
     history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
-    applyPlanetState();
   }
 
-  function syncPlanetTags(activeTag) {
-    document.querySelectorAll("[data-planet-tag]").forEach((button) => {
-      const selected = normalize(button.dataset.planetTag) === activeTag;
-      button.classList.toggle("is-active", selected);
-      button.setAttribute("aria-pressed", selected ? "true" : "false");
-    });
-  }
-
-  let planetStateGeneration = 0;
-
-  async function applyPlanetState() {
-    const currentGen = ++planetStateGeneration;
+  function applyAuthorFilter() {
     const params = new URLSearchParams(window.location.search);
-    const activeTag = normalize(params.get("tag"));
-    const query = normalize(planetSearch?.value || params.get("search"));
-    const isFiltered = Boolean(activeTag || query);
-
-    syncPlanetTags(activeTag);
-
-    // Global Planet view with dynamic catalog support
-    if (planetPostsContainer) {
-      if (!isFiltered) {
-        planetPostsContainer.innerHTML = initialPlanetHtml;
-        if (planetPagination) planetPagination.hidden = false;
-        if (planetEmpty) planetEmpty.hidden = true;
-        return;
-      }
-
-      const posts = await loadPlanetPosts();
-      // If a newer search/tag change was initiated while awaiting, ignore this stale execution
-      if (currentGen !== planetStateGeneration) return;
-
-      // Index unavailable: degrade to filtering the server-rendered page only.
-      // Keep pagination visible and say so, so an empty result is not mistaken
-      // for "nothing matches across the whole archive".
-      if (!posts) {
-        planetPostsContainer.innerHTML = initialPlanetHtml;
-        if (planetPagination) planetPagination.hidden = false;
-        let visible = 0;
-        planetPosts().forEach((post) => {
-          const haystack = normalize(`${post.dataset.title} ${post.dataset.author} ${post.dataset.snippet}`);
-          const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
-          const match = (!query || haystack.includes(query)) && (!activeTag || tags.includes(activeTag));
-          post.hidden = !match;
-          if (match) visible += 1;
-        });
-        if (planetEmpty) {
-          planetEmpty.textContent = visible
-            ? ""
-            : "Could not load the full archive. Showing matches from this page only.";
-          planetEmpty.hidden = visible !== 0;
-        }
-        return;
-      }
-
-      const filtered = posts.filter((post) => {
-        const haystack = normalize(`${post.title} ${post.contentSnippet} ${post.maintainerName}`);
-        const tags = (post.tags || []).map((t) => normalize(t));
-        const matchesSearch = !query || haystack.includes(query);
-        const matchesTag = !activeTag || tags.includes(activeTag);
-        return matchesSearch && matchesTag;
-      });
-
-      // Full catalog is in hand, so the static pagination no longer applies.
-      if (planetPagination) planetPagination.hidden = true;
-
-      if (filtered.length === 0) {
-        planetPostsContainer.innerHTML = "";
-        if (planetEmpty) {
-          planetEmpty.textContent = "No posts found";
-          planetEmpty.hidden = false;
-        }
-      } else {
-        planetPostsContainer.innerHTML = filtered.map(renderDynamicPlanetCard).join("");
-        if (planetEmpty) planetEmpty.hidden = true;
-      }
-      return;
-    }
-
-    // Author profile page / fallback DOM filtering
+    const tag = normalize(params.get("tag"));
+    const query = normalize(planetSearch ? planetSearch.value : params.get("search"));
+    document.querySelectorAll("[data-planet-tag]").forEach((button) => {
+      const on = normalize(button.dataset.planetTag) === tag;
+      button.classList.toggle("is-active", on);
+      button.setAttribute("aria-pressed", on ? "true" : "false");
+    });
     let visible = 0;
-    planetPosts().forEach((post) => {
-      const haystack = normalize(`${post.dataset.title} ${post.dataset.author} ${post.dataset.snippet}`);
-      const tags = normalize(post.dataset.tags).split("|||").filter(Boolean);
-      const matchesSearch = !query || haystack.includes(query);
-      const matchesTag = !activeTag || tags.includes(activeTag);
-      const match = matchesSearch && matchesTag;
-      post.hidden = !match;
+    document.querySelectorAll("[data-planet-post]").forEach((card) => {
+      const haystack = normalize(
+        `${card.dataset.title} ${card.dataset.author} ${card.dataset.snippet}`,
+      );
+      const tags = normalize(card.dataset.tags).split("|||").filter(Boolean);
+      const match = (!query || haystack.includes(query)) && (!tag || tags.includes(tag));
+      card.hidden = !match;
       if (match) visible += 1;
     });
-
-    if (planetEmpty) planetEmpty.hidden = visible !== 0;
+    if (planetEmpty) {
+      planetEmpty.textContent = visible ? "" : "No posts found";
+      planetEmpty.hidden = visible !== 0;
+    }
   }
 
-  // Preload JSON on interaction
-  planetSearch?.addEventListener("focus", loadPlanetPosts, { once: true });
-  document.querySelectorAll("[data-planet-tag]").forEach((btn) => {
-    btn.addEventListener("mouseenter", loadPlanetPosts, { once: true });
-  });
+  function applyPlanet() {
+    if (planet) planet.apply();
+    else if (hasPlanetPosts) applyAuthorFilter();
+  }
 
-  planetSearch?.addEventListener("input", () => {
-    const params = new URLSearchParams(window.location.search);
-    if (planetSearch.value) params.set("search", planetSearch.value);
-    else params.delete("search");
-    const query = params.toString();
-    history.replaceState(null, "", `${window.location.pathname}${query ? `?${query}` : ""}`);
-    applyPlanetState();
-  });
+  if (planet || hasPlanetPosts) {
+    if (planet) {
+      planetSearch?.addEventListener("focus", planet.preload, { once: true });
+      document.querySelectorAll("[data-planet-tag]").forEach((button) => {
+        button.addEventListener("mouseenter", planet.preload, { once: true });
+      });
+    }
 
-  document.addEventListener("click", (event) => {
-    const target = event.target;
-    if (!(target instanceof Element)) return;
-    const tagButton = target.closest("[data-planet-tag]");
-    if (!tagButton) return;
-    event.preventDefault();
-    setPlanetTag(tagButton.dataset.planetTag);
-  });
+    planetSearch?.addEventListener("input", () => {
+      setParam("search", planetSearch.value);
+      applyPlanet();
+    });
 
-  window.addEventListener("popstate", () => {
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      const button = target.closest("[data-planet-tag]");
+      if (!button) return;
+      event.preventDefault();
+      const next = normalize(button.dataset.planetTag);
+      const current = normalize(new URLSearchParams(window.location.search).get("tag"));
+      setParam("tag", next && next !== current ? button.dataset.planetTag : "");
+      applyPlanet();
+    });
+
+    window.addEventListener("popstate", () => {
+      if (planetSearch) {
+        planetSearch.value = new URLSearchParams(window.location.search).get("search") || "";
+      }
+      applyPlanet();
+    });
+
     if (planetSearch) {
       planetSearch.value = new URLSearchParams(window.location.search).get("search") || "";
     }
-    applyPlanetState();
-  });
-
-  if (hasPlanetPosts) {
-    if (planetSearch) {
-      planetSearch.value = new URLSearchParams(window.location.search).get("search") || "";
-    }
-    applyPlanetState();
+    applyPlanet();
   }
 })();
